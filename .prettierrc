@@ -1,0 +1,4 @@
+# .prettierrc
+printWidth: 100
+jsxBracketSameLine: true
+arrowParens: "always"

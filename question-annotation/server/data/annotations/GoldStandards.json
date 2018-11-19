@@ -1,0 +1,5 @@
+{
+  "nlpLabels": ["same", "synononym", "paraphrase", "expertise"],
+  "additionalLabels": ["example", "false", "redundant", "none"],
+  "questions": []
+}

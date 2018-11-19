@@ -1,0 +1,4 @@
+# dependencies
+/node_modules
+/data/questions
+npm-debug.log*

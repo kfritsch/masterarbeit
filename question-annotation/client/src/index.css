@@ -1,0 +1,165 @@
+html,
+body,
+body > div {
+  height: 100vh;
+  margin: 0;
+  font-size: 85%;
+  font-family: "Ubuntu", Helvetica, sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+#survey-label {
+  padding: 0.2em !important;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  height: 100vh;
+}
+
+.flex-container > div {
+  margin: 10px;
+  padding: 20px;
+  flex: 10;
+}
+
+.flex--content {
+  align-content: space-around;
+  height: 100vh;
+}
+
+.part1 {
+  color: #ff0000;
+}
+.part2 {
+  color: #0000a0;
+}
+.boxed-green {
+  border: 3px solid green;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.boxed-red {
+  border: 3px solid red;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.boxed-blue {
+  border: 3px solid blue;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.app-container {
+  // margin-left: 6vw;
+  // margin-right: 6vw;
+  // margin-top: 5vh;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  /* height: 100%; */
+  background-color: #ffffff;
+  background-image: url("./45-degree-fabric-dark.png");
+  background-repeat: repeat-xy;
+}
+
+.app-header {
+  height: 8vh;
+  margin: 2vh 20vw;
+  border-radius: 0.28571429rem;
+}
+
+.annotation-container {
+  margin-top: 3vh !important;
+  margin-left: 4vw !important;
+  margin-right: 4vw !important;
+  margin-bottom: 2vh !important;
+  background-color: white;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.student-answer-container {
+  margin-top: 5vh !important;
+  margin-left: 5vw !important;
+  margin-right: 5vw !important;
+  margin-bottom: 2vh !important;
+}
+
+.annotation-label {
+  border-width: 4px !important;
+  border-style: solid !important;
+  background-color: white !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  box-shadow: 0px 0px 0px 100px #ffffff inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+  background-color: #ffffff !important;
+}
+
+.survey-label {
+  padding: 0.2em !important;
+}
+
+.white-font {
+  color: #f2eee2;
+}
+
+.clt,
+.clt ul,
+.clt li {
+  position: relative;
+  text-align: left;
+}
+
+.clt ul {
+  list-style: none;
+  padding-left: 32px;
+}
+
+.clt li::before,
+.clt li::after {
+  content: "";
+  position: absolute;
+  left: -12px;
+}
+
+.clt li::before {
+  border-top: 1px solid #000;
+  top: 9px;
+  width: 8px;
+  height: 0;
+}
+
+.clt li::after {
+  border-left: 1px solid #000;
+  height: 100%;
+  width: 0px;
+  top: 2px;
+}
+
+.clt ul > li:last-child::after {
+  height: 8px;
+}
