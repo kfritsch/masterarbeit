@@ -1,7 +1,8 @@
 import React from "react";
 
 import { Message, Label, Segment, Button } from "semantic-ui-react";
-import AnswerMarkup from "./AnswerMarkup";
+//import AnswerMarkup from "./schema-one/AnswerMarkup";
+import AnswerMarkupSchemaTwo from "./schema-two/AnswerMarkupSchemaTwo";
 import Tree from "react-d3-tree";
 
 export default class QuestionAnnotation extends React.Component {
@@ -76,9 +77,9 @@ export default class QuestionAnnotation extends React.Component {
         <Message style={{ backgroundColor: "#eff0f6" }}>
           <Message.Header style={{ paddingBottom: "0.5em" }}>
             <Label
-              size="large"
-              attached="top right"
-              style={{ backgroundColor: "#66AB8C", color: "#F2EEE2" }}>
+              size="medium"
+              attached="top left"
+              style={{ backgroundColor: "#66AB8C", color: "#F2EEE2", marginBottom: "6px" }}>
               {activeQuestion.type}
             </Label>
             {"Frage " + (qIdx + 1) + "/" + questionCount}
@@ -86,20 +87,24 @@ export default class QuestionAnnotation extends React.Component {
           <div>{activeQuestion.text}</div>
           <Button
             onClick={() => this.setState({ questionToggle: !questionToggle })}
-            style={{ marginTop: "6px", backgroundColor: "#66AB8C", color: "#F2EEE2" }}
-            content="View Tree"
-            size="tiny"
+            className="tree-button"
+            icon="code branch"
+            size="mini"
           />
         </Message>
         {questionToggle && questionTree && this.renderReactTree(questionTree)}
         <Message style={{ backgroundColor: "#eff0f6" }}>
           <Message.Header style={{ paddingBottom: "0.5em" }}>Musterantwort</Message.Header>
-          <AnswerMarkup answer={activeQuestion.referenceAnswer} colors={this.state.colors} />
+          <AnswerMarkupSchemaTwo
+            refAnswer={true}
+            answer={activeQuestion.referenceAnswer}
+            colors={this.state.colors}
+          />
           <Button
             onClick={() => this.setState({ answerToggle: !answerToggle })}
-            style={{ marginTop: "6px", backgroundColor: "#66AB8C", color: "#F2EEE2" }}
-            content="View Tree"
-            size="tiny"
+            className="tree-button"
+            icon="code branch"
+            size="mini"
           />
         </Message>
         {answerToggle && referenceAnswerTree && this.renderReactTree(referenceAnswerTree)}

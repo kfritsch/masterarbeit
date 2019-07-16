@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test xmlns="urn:vips:test:v1.0" id="test-7230" type="practice"
+      start="2018-12-05T12:00:00+01:00"
+                end="2018-12-05T12:00:00+01:00"
+            >
+    <title>
+        Lineare Datenstrukturen    </title>
+    <description>
+            </description>
+        <exercises>
+                            <exercise id="exercise-50557" feedback="true">
+            <title>
+                Definition Datenstruktur    </title>
+            <description>
+                Was ist eine Datenstruktur und wozu dient sie?     </description>
+                    <hint>
+                    Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+        Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+                <items>
+                <item type="text-area">
+                    <answers>
+                                        <answer score="1">
+                                          Eine Datenstruktur ist eine Form der Speicherung, Organisation und Verwaltung von Daten. Dabei ist das Ziel bestimmte Operationen auf den Daten effizient durchführen zu können.              </answer>
+                    </answers>
+                                        </item>
+            </items>
+      </exercise>
+                          <exercise id="exercise-50557" feedback="true">
+          <title>
+              Spezifikation und Implementierung    </title>
+          <description>
+              Wo besteht der Unterscheid zwischen der Spezifikation und der Implementierung eines Datentypen?    </description>
+                  <hint>
+                  Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+      Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+              <items>
+              <item type="text-area">
+                  <answers>
+                                      <answer score="1">
+                          Die Spezifikation ist eine präzise Definition vom Verhalten des Datentyps. Die Implementierung ist die konkrete Umsetzung der Spezifikation eines Datentypen in einer spezifischen Programmiersprache.               </answer>
+                  </answers>
+                                      </item>
+          </items>
+      </exercise>
+                    <exercise id="exercise-50556" feedback="true">
+    <title>
+        Liste    </title>
+    <description>
+        Was sind die Vorgaben für den Datentypen Liste?   </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Eine Liste soll es ermöglichen einer Reihenfolge von Werten an beliebiger Stelle Werte hinzuzufügen oder zu entfernen. Außerdem soll die aktuelle Reihenfolge durchlaufen werden können.               </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50557" feedback="true">
+    <title>
+        Queue   </title>
+    <description>
+        Was sind die Vorgaben für den Datentypen Queue?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Ein Queue soll eine Sequenz von Elementen verwalten, bei welchem neue Elemente nur hinten angehängt werden können, und nur das vorderste Element  abgenommen werden kann.                 </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50558" feedback="true">
+    <title>
+        Stack    </title>
+    <description>
+        Was sind die Vorgaben für den Datentypen Stack?  </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Ein Stack soll eine Sequenz von Elementen verwalten, bei welchem neue Elemente nur oben drauf abgelegt werden können, und nur das oberste Element abgenommen werden kann.              </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+            </exercises>
+</test>

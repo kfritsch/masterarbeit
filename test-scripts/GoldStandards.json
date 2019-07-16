@@ -2,41 +2,53 @@
   "questions": [
     {
       "id": "3",
-      "title": "Überladene Methode",
-      "text": "Was ist eine überladene Methode?",
+      "title": "\u00dcberladene Methode",
+      "text": "Was ist eine \u00fcberladene Methode?",
       "type": "definition",
-      "referenceAnswer":
-        "Das sind Methoden einer Klasse mit denselben Namen. Ihre Signaturen unterscheiden sich anhand unterschiedlicher Parameter.",
+      "referenceAnswer": {
+        "text":
+          "Das sind Methoden einer Klasse mit denselben Namen. Ihre Signaturen unterscheiden sich anhand unterschiedlicher Parameter.",
+        "answerCategory": "correct",
+        "assignedWeights": {
+          "Klasse": 0.2,
+          "denselb": 0.9,
+          "Name": 0.9,
+          "Signatur": 0.3,
+          "unterscheiden": 0.3,
+          "unterschiedlich": 0.7,
+          "Parameter": 0.7
+        }
+      },
       "answersAnnotation": [
         {
           "text":
-            "Das sind Methoden mit denselben Namen aber unterschiedliche Signatur. Zum Beispiel: public double berechneZeitInStunden(int minuten){.....} public double berechneZeitInStunden(int sekunden){....} Rückgabewert ist egal. Hat den Vorteil das es Benutzerfreundlicher ist.",
+            "Das sind Methoden mit denselben Namen aber unterschiedliche Signatur. Zum Beispiel: public double berechneZeitInStunden(int minuten){.....} public double berechneZeitInStunden(int sekunden){....} R\u00fcckgabewert ist egal. Hat den Vorteil das es Benutzerfreundlicher ist.",
           "aspects": [],
           "id": "1",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Das sind Methoden mit denselben Namen aber unterschiedlicher Signatur. Der Rückgabewert ist egal. Es hat den Vorteil, dass es benutzerfreundlicher ist."
+            "Das sind Methoden mit denselben Namen aber unterschiedlicher Signatur. Der R\u00fcckgabewert ist egal. Es hat den Vorteil, dass es benutzerfreundlicher ist."
         },
         {
           "text":
-            "eine überladene Methode ist, wenn man mehrere Konstruktoren mit unterschiedlichen Parametern definiert.",
+            "eine \u00fcberladene Methode ist, wenn man mehrere Konstruktoren mit unterschiedlichen Parametern definiert.",
           "aspects": [],
           "id": "2",
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Eine Methode ist überladen, wenn man mehrere Konstruktoren mit unterschiedlichen Parametern definiert."
+            "Eine Methode ist \u00fcberladen, wenn man mehrere Konstruktoren mit unterschiedlichen Parametern definiert."
         },
         {
           "text":
-            "eine überladene Methode wurde mehr als einmal in einer Klasse implementiert, jedoch müssen die Parameter-Übergaben verschieden einzigartig sein, der rückgabetype kann \"\"belibig sein\"\" der methoden-name muss gleich sein. Ein Beispiel: public class Test { public int getOutput() { return 0; } //überladene Methode public int getOutput(int mode){ return 0; } //auch überladen public String getOutput(int mode, String prefix){ return prefix+mode; } }",
+            "eine \u00fcberladene Methode wurde mehr als einmal in einer Klasse implementiert, jedoch m\u00fcssen die Parameter-\u00dcbergaben verschieden einzigartig sein, der r\u00fcckgabetype kann \"\"belibig sein\"\" der methoden-name muss gleich sein. Ein Beispiel: public class Test { public int getOutput() { return 0; } //\u00fcberladene Methode public int getOutput(int mode){ return 0; } //auch \u00fcberladen public String getOutput(int mode, String prefix){ return prefix+mode; } }",
           "aspects": [],
           "id": "3",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Eine überladene Methode wurde mehr als einmal in einer Klasse implementiert, jedoch müssen die Parameterübergaben verschieden einzigartig sein. Der Rückgabetype kann belibig sein. Der Methodenname muss gleich sein."
+            "Eine \u00fcberladene Methode wurde mehr als einmal in einer Klasse implementiert, jedoch m\u00fcssen die Parameter\u00fcbergaben verschieden einzigartig sein. Der R\u00fcckgabetype kann belibig sein. Der Methodenname muss gleich sein."
         },
         {
           "text": "-",
@@ -48,13 +60,13 @@
         },
         {
           "text":
-            "Man überlädt eine Methode damit der Rückgabe wert eine schöne lesbare Zahl ist und nicht irgendein code den man nicht entziffern kann.",
+            "Man \u00fcberl\u00e4dt eine Methode damit der R\u00fcckgabe wert eine sch\u00f6ne lesbare Zahl ist und nicht irgendein code den man nicht entziffern kann.",
           "aspects": [],
           "id": "5",
           "points": 0,
           "answerCategory": "guessing",
           "correctionOrComment":
-            "Man überlädt eine Methode, damit der Rückgabewert eine schöne, lesbare Zahl ist und nicht irgendein Code, den man nicht entziffern kann."
+            "Man \u00fcberl\u00e4dt eine Methode, damit der R\u00fcckgabewert eine sch\u00f6ne, lesbare Zahl ist und nicht irgendein Code, den man nicht entziffern kann."
         },
         {
           "text": "eine methode die die auf alle objekte zugreift",
@@ -66,13 +78,13 @@
         },
         {
           "text":
-            "eine Methode aus die von mehreren klassen benutzt wird und somit immer wieder überschrieben wird",
+            "eine Methode aus die von mehreren klassen benutzt wird und somit immer wieder \u00fcberschrieben wird",
           "aspects": [],
           "id": "7",
           "points": 0,
           "answerCategory": "guessing",
           "correctionOrComment":
-            "Das ist eine Methode, die von mehreren Klassen benutzt wird und somit immer wieder überschrieben wird."
+            "Das ist eine Methode, die von mehreren Klassen benutzt wird und somit immer wieder \u00fcberschrieben wird."
         },
         {
           "text": "es ist eine methode die false ausgibt",
@@ -80,27 +92,27 @@
           "id": "8",
           "points": 0,
           "answerCategory": "guessing",
-          "correctionOrComment": "Es ist eine Methode, die 'false' ausgibt."
+          "correctionOrComment": "Es ist eine Methode, die false ausgibt."
         },
         {
           "text":
-            "Eine Methode, die in der Basisklasse sowie in abgeleiteten Klassen gleichnamig auftritt und unterschiedliche Rückgabewerte liefert.",
+            "Eine Methode, die in der Basisklasse sowie in abgeleiteten Klassen gleichnamig auftritt und unterschiedliche R\u00fcckgabewerte liefert.",
           "aspects": [],
           "id": "9",
           "points": 0,
           "answerCategory": "concept_mix-up",
           "correctionOrComment":
-            "Das ist eine Methode, die in der Basisklasse sowie in abgeleiteten Klassen gleichnamig auftritt und unterschiedliche Rückgabewerte liefert."
+            "Das ist eine Methode, die in der Basisklasse sowie in abgeleiteten Klassen gleichnamig auftritt und unterschiedliche R\u00fcckgabewerte liefert."
         },
         {
           "text":
-            "Zwei Methoden mit dem selben namen bezeichnet man als Überladen. Deshalb müssen sie sich immer in der Signatur (Parameterliste, Typen) unterscheiden.",
+            "Zwei Methoden mit dem selben namen bezeichnet man als \u00dcberladen. Deshalb m\u00fcssen sie sich immer in der Signatur (Parameterliste, Typen) unterscheiden.",
           "aspects": [],
           "id": "10",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Zwei Methoden mit dem selben Namen bezeichnet man als überladen. Deshalb müssen sie sich immer in der Signatur (Parameterliste, Typen) unterscheiden."
+            "Zwei Methoden mit dem selben Namen bezeichnet man als \u00fcberladen. Deshalb m\u00fcssen sie sich immer in der Signatur (Parameterliste, Typen) unterscheiden."
         },
         {
           "text": "Wenn der Speicher der Methoden nicht ausreicht.",
@@ -109,15 +121,15 @@
           "points": 0,
           "answerCategory": "guessing",
           "correctionOrComment":
-            "Wenn der Speicher der Methoden nicht ausreicht, sind sie überladen."
+            "Wenn der Speicher der Methoden nicht ausreicht, sind sie \u00fcberladen."
         },
         {
-          "text": "die mit parametern überladen ist",
+          "text": "die mit parametern \u00fcberladen ist",
           "aspects": [],
           "id": "12",
           "points": 0,
           "answerCategory": "guessing",
-          "correctionOrComment": "Das ist ein Methode, die mit Parametern überladen ist."
+          "correctionOrComment": "Das ist ein Methode, die mit Parametern \u00fcberladen ist."
         },
         {
           "text": "wenn zuviele variablen deklariert sind, aber nicht alles benutzt werden",
@@ -155,91 +167,92 @@
         },
         {
           "text":
-            "eine überladene Methode hat denselben Namen wie eine andere Methode, jedoch andere Parameter. Z.B. bei Konstruktoren: Klasse(){} Klasse(Obj o){} Klasse(Person p, int alter){} durch die Überladung kann sich der \"\"User\"\" aussuchen, welche Methode er nutzen will (z.B. Klasse k = new Klasse(); oder Klasse k2 = new Klasse(anton);",
+            "eine \u00fcberladene Methode hat denselben Namen wie eine andere Methode, jedoch andere Parameter. Z.B. bei Konstruktoren: Klasse(){} Klasse(Obj o){} Klasse(Person p, int alter){} durch die \u00dcberladung kann sich der \"\"User\"\" aussuchen, welche Methode er nutzen will (z.B. Klasse k = new Klasse(); oder Klasse k2 = new Klasse(anton);",
           "aspects": [],
           "id": "17",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Eine überladene Methode hat denselben Namen wie eine andere Methode, jedoch andere Parameter. Durch die Überladung kann sich der 'User' aussuchen, welche Methode er nutzen will."
+            "Eine \u00fcberladene Methode hat denselben Namen wie eine andere Methode, jedoch andere Parameter. Durch die \u00dcberladung kann sich der User aussuchen, welche Methode er nutzen will."
         },
         {
-          "text": "Eine Methode die zu viele Methoden implementiert hat und unübersichtlich ist.",
+          "text":
+            "Eine Methode die zu viele Methoden implementiert hat und un\u00fcbersichtlich ist.",
           "aspects": [],
           "id": "18",
           "points": 0,
           "answerCategory": "guessing",
           "correctionOrComment":
-            "Das ist eine Methode, die zu viele Methoden implementiert hat und unübersichtlich ist."
+            "Das ist eine Methode, die zu viele Methoden implementiert hat und un\u00fcbersichtlich ist."
         },
         {
           "text":
-            "Eine überladene Methode ist wenn 2 Methoen den selben namen haben, sie müsen sich durch Parammeter-leiste und Signatur unerscheiden",
+            "Eine \u00fcberladene Methode ist wenn 2 Methoen den selben namen haben, sie m\u00fcsen sich durch Parammeter-leiste und Signatur unerscheiden",
           "aspects": [],
           "id": "19",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Eine Methode ist überladen, wenn 2 Methoden den selben Namen haben. Sie müssen sich durch Parameterliste und Signatur unerscheiden."
+            "Eine Methode ist \u00fcberladen, wenn 2 Methoden den selben Namen haben. Sie m\u00fcssen sich durch Parameterliste und Signatur unerscheiden."
         },
         {
           "text":
-            "Eine überladene Methode ist eine definierte Methode, die durch eine neue Implementation der selben Methode eine neue Bedeutung bekommt. z.B. die vom Object definierte Methode toString(). Wird sie in einer Klasse neu geschrieben gilt sie als überladen.",
+            "Eine \u00fcberladene Methode ist eine definierte Methode, die durch eine neue Implementation der selben Methode eine neue Bedeutung bekommt. z.B. die vom Object definierte Methode toString(). Wird sie in einer Klasse neu geschrieben gilt sie als \u00fcberladen.",
           "aspects": [],
           "id": "20",
           "points": 0,
           "answerCategory": "concept_mix-up",
           "correctionOrComment":
-            "Eine überladene Methode ist eine definierte Methode, die durch eine neue Implementation derselben Methode eine neue Bedeutung bekommt. Wird sie in einer Klasse neu geschrieben gilt sie als überladen."
+            "Eine \u00fcberladene Methode ist eine definierte Methode, die durch eine neue Implementation derselben Methode eine neue Bedeutung bekommt. Wird sie in einer Klasse neu geschrieben gilt sie als \u00fcberladen."
         },
         {
           "text":
-            "Eine überladene Methode ist eine Methode die sowohl in der Basisklasse als auch in der abgeleitenden Klasse initialisiert wird, dies bedeutet die Methode wird 2 x mit dem gleichen namen initialisiert kann aber einen anderen Inhalt besitzen. Man erkennt erst welche Methode man benutzt beim auslesen.",
+            "Eine \u00fcberladene Methode ist eine Methode die sowohl in der Basisklasse als auch in der abgeleitenden Klasse initialisiert wird, dies bedeutet die Methode wird 2 x mit dem gleichen namen initialisiert kann aber einen anderen Inhalt besitzen. Man erkennt erst welche Methode man benutzt beim auslesen.",
           "aspects": [],
           "id": "21",
           "points": 0,
           "answerCategory": "concept_mix-up",
           "correctionOrComment":
-            "Eine überladene Methode ist eine Methode, die sowohl in der Basisklasse als auch in der abgeleitenden Klasse initialisiert wird. Dies bedeutet, die Methode wird 2 mal mit dem gleichen Namen initialisiert, kann aber einen anderen Inhalt besitzen. Man erkennt erst beim Auslesen, welche Methode man benutzt."
+            "Eine \u00fcberladene Methode ist eine Methode, die sowohl in der Basisklasse als auch in der abgeleitenden Klasse initialisiert wird. Dies bedeutet, die Methode wird 2 mal mit dem gleichen Namen initialisiert, kann aber einen anderen Inhalt besitzen. Man erkennt erst beim Auslesen, welche Methode man benutzt."
         },
         {
           "text":
-            "Eine überladene Methode ist eine Methoe die eine Methode mit dem selben Namen an der momentanen Stelle ändert allerdings nicht die Methode mit dem selben Namen an der ursprünglichen Stelle.",
+            "Eine \u00fcberladene Methode ist eine Methoe die eine Methode mit dem selben Namen an der momentanen Stelle \u00e4ndert allerdings nicht die Methode mit dem selben Namen an der urspr\u00fcnglichen Stelle.",
           "aspects": [],
           "id": "22",
           "points": 0,
           "answerCategory": "concept_mix-up",
           "correctionOrComment":
-            "Eine überladene Methode ist eine Methode, die eine Methode mit demselben Namen an der momentanen Stelle ändert, allerdings nicht die Methode mit dem selben Namen an der ursprünglichen Stelle."
+            "Eine \u00fcberladene Methode ist eine Methode, die eine Methode mit demselben Namen an der momentanen Stelle \u00e4ndert, allerdings nicht die Methode mit dem selben Namen an der urspr\u00fcnglichen Stelle."
         },
         {
-          "text": "Wenn eine Methode sehr häufig wiederholt geschrieben wird.",
+          "text": "Wenn eine Methode sehr h\u00e4ufig wiederholt geschrieben wird.",
           "aspects": [],
           "id": "23",
           "points": 0,
           "answerCategory": "guessing",
           "correctionOrComment":
-            "Das ist, wenn eine Methode sehr häufig wiederholt geschrieben wird."
+            "Das ist, wenn eine Methode sehr h\u00e4ufig wiederholt geschrieben wird."
         },
         {
           "text":
-            "wenn 2 methoden den selben Namen haben sind sie überladen. die methoden müssen sich jedoch durch die Parameter, typ undsignatur unterscheiden um zu funktionieren.",
+            "wenn 2 methoden den selben Namen haben sind sie \u00fcberladen. die methoden m\u00fcssen sich jedoch durch die Parameter, typ undsignatur unterscheiden um zu funktionieren.",
           "aspects": [],
           "id": "24",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Wenn 2 Methoden denselben Namen haben, sind sie überladen. Die Methoden müssen sich jedoch durch die Parameter (Typ und Signatur) unterscheiden um zu funktionieren."
+            "Wenn 2 Methoden denselben Namen haben, sind sie \u00fcberladen. Die Methoden m\u00fcssen sich jedoch durch die Parameter (Typ und Signatur) unterscheiden um zu funktionieren."
         },
         {
           "text":
-            "Eine Methode die einen zu großen Wert aufnehmen muss für den sie nicht festgelegt ist.",
+            "Eine Methode die einen zu gro\u00dfen Wert aufnehmen muss f\u00fcr den sie nicht festgelegt ist.",
           "aspects": [],
           "id": "25",
           "points": 0,
           "answerCategory": "guessing",
           "correctionOrComment":
-            "Das ist eine Methode, die einen zu großen Wert aufnehmen muss, für den sie nicht festgelegt ist."
+            "Das ist eine Methode, die einen zu gro\u00dfen Wert aufnehmen muss, f\u00fcr den sie nicht festgelegt ist."
         },
         {
           "text": "Wenn zwei Methoden den selben Namen haben, aber unterschiedliche Parameter",
@@ -252,33 +265,33 @@
         },
         {
           "text":
-            "Eine überladene Methode ist eine Methode, der beim Aufruf Parameter übergeben werden.",
+            "Eine \u00fcberladene Methode ist eine Methode, der beim Aufruf Parameter \u00fcbergeben werden.",
           "aspects": [],
           "id": "27",
           "points": 0,
           "answerCategory": "guessing",
           "correctionOrComment":
-            "Eine überladene Methode ist eine Methode, der beim Aufruf Parameter übergeben werden."
+            "Eine \u00fcberladene Methode ist eine Methode, der beim Aufruf Parameter \u00fcbergeben werden."
         },
         {
           "text":
-            "Eine uberladene methode ist eine Methode, die den Name von eine bereits existierende methode trägt",
+            "Eine uberladene methode ist eine Methode, die den Name von eine bereits existierende methode tr\u00e4gt",
           "aspects": [],
           "id": "28",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Eine überladene Methode ist eine Methode, die den Name von einer bereits existierenden Methode trägt."
+            "Eine \u00fcberladene Methode ist eine Methode, die den Name von einer bereits existierenden Methode tr\u00e4gt."
         },
         {
           "text":
-            "Eine überladene Methode ist wenn man z.B. eine abgeleitete Klasse einer Basisklasse hat, diese Methode der Basisklasse aber nicht für die Ableitung \"\"passt\"\", kann man eine weitere Methode schreiben, oder mehrere wenn man möchte!",
+            "Eine \u00fcberladene Methode ist wenn man z.B. eine abgeleitete Klasse einer Basisklasse hat, diese Methode der Basisklasse aber nicht f\u00fcr die Ableitung \"\"passt\"\", kann man eine weitere Methode schreiben, oder mehrere wenn man m\u00f6chte!",
           "aspects": [],
           "id": "29",
           "points": 0,
           "answerCategory": "concept_mix-up",
           "correctionOrComment":
-            "Eine Methode ist überladen, wenn man beispielsweise eine abgeleitete Klasse einer Basisklasse hat. Wenn eine Methode der Basisklasse nicht für die Ableitung passt, kann man eine oder mehrere weitere Methode schreiben, wenn man möchte!"
+            "Eine Methode ist \u00fcberladen, wenn man beispielsweise eine abgeleitete Klasse einer Basisklasse hat. Wenn eine Methode der Basisklasse nicht f\u00fcr die Ableitung passt, kann man eine oder mehrere weitere Methode schreiben, wenn man m\u00f6chte!"
         },
         {
           "text": "to string methode",
@@ -290,13 +303,13 @@
         },
         {
           "text":
-            "eine überladene Methode ist eine Methode die in einer anderen Klasse überschriben werden kann.",
+            "eine \u00fcberladene Methode ist eine Methode die in einer anderen Klasse \u00fcberschriben werden kann.",
           "aspects": [],
           "id": "31",
           "points": 0,
           "answerCategory": "concept_mix-up",
           "correctionOrComment":
-            "Eine überladene Methode ist eine Methode, die in einer anderen Klasse überschrieben werden kann."
+            "Eine \u00fcberladene Methode ist eine Methode, die in einer anderen Klasse \u00fcberschrieben werden kann."
         },
         {
           "text": "Ein Methode, die es mehrmals gibt.(Gleicher Name)",
@@ -328,23 +341,23 @@
         },
         {
           "text":
-            "Überladene methoden sind zwei verschiedene methoden,, die aber mit verschiedenen Parameter und Typen defineirt sind. (2 verschiedene Methoden, aber verschiedene Parameter und Typen)",
+            "\u00dcberladene methoden sind zwei verschiedene methoden,, die aber mit verschiedenen Parameter und Typen defineirt sind. (2 verschiedene Methoden, aber verschiedene Parameter und Typen)",
           "aspects": [],
           "id": "35",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Überladene Methoden sind zwei verschiedene Methoden, die aber mit verschiedenen Parametern und Typen definiert sind."
+            "\u00dcberladene Methoden sind zwei verschiedene Methoden, die aber mit verschiedenen Parametern und Typen definiert sind."
         },
         {
           "text":
-            "Wenn zwei verschiedene Methoden den selben Namen haben, heißen sie überladen. Sie müssen sich durch Parameterliste und - Typen) unterscheiden.",
+            "Wenn zwei verschiedene Methoden den selben Namen haben, hei\u00dfen sie \u00fcberladen. Sie m\u00fcssen sich durch Parameterliste und - Typen) unterscheiden.",
           "aspects": [],
           "id": "36",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Wenn zwei verschiedene Methoden den selben Namen haben, heißen sie überladen. Sie müssen sich durch die Parameterliste und -typen unterscheiden."
+            "Wenn zwei verschiedene Methoden den selben Namen haben, hei\u00dfen sie \u00fcberladen. Sie m\u00fcssen sich durch die Parameterliste und -typen unterscheiden."
         },
         {
           "text":
@@ -358,42 +371,42 @@
         },
         {
           "text":
-            "Eine überladene Methode ist eine bereits vorhandene Methode die vom Ersteller an das aktuelle Projekt angepasst wird.",
+            "Eine \u00fcberladene Methode ist eine bereits vorhandene Methode die vom Ersteller an das aktuelle Projekt angepasst wird.",
           "aspects": [],
           "id": "38",
           "points": 0,
           "answerCategory": "concept_mix-up",
           "correctionOrComment":
-            "Eine überladene Methode ist eine bereits vorhandene Methode, die vom Ersteller an das aktuelle Projekt angepasst wird."
+            "Eine \u00fcberladene Methode ist eine bereits vorhandene Methode, die vom Ersteller an das aktuelle Projekt angepasst wird."
         },
         {
-          "text": "Eine Methode, welche mehrere verschiedene Werte übergeben kann",
+          "text": "Eine Methode, welche mehrere verschiedene Werte \u00fcbergeben kann",
           "aspects": [],
           "id": "39",
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Das ist eine Methode, welche mehrere verschiedene Werte übergeben kann."
+            "Das ist eine Methode, welche mehrere verschiedene Werte \u00fcbergeben kann."
         },
         {
           "text":
-            "Eine überladene Methode ist eine selbsterstellte Supermethode. Wie zum beispiel ein selbstgeschriebener Konstruktor der den Standart Konstruktor erstetzt.",
+            "Eine \u00fcberladene Methode ist eine selbsterstellte Supermethode. Wie zum beispiel ein selbstgeschriebener Konstruktor der den Standart Konstruktor erstetzt.",
           "aspects": [],
           "id": "40",
           "points": 0,
           "answerCategory": "concept_mix-up",
           "correctionOrComment":
-            "Eine überladene Methode ist eine selbsterstellte Supermethode beispielsweise ein selbstgeschriebener Konstruktor, der den Standartkonstruktor erstetzt."
+            "Eine \u00fcberladene Methode ist eine selbsterstellte Supermethode beispielsweise ein selbstgeschriebener Konstruktor, der den Standartkonstruktor erstetzt."
         },
         {
           "text":
-            "Als überladen bezeichnet man eine Methode, die den selben Namen hat, wie eine andere, aber andere Parameter erwartet.",
+            "Als \u00fcberladen bezeichnet man eine Methode, die den selben Namen hat, wie eine andere, aber andere Parameter erwartet.",
           "aspects": [],
           "id": "41",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Als überladen bezeichnet man eine Methode, die den selben Namen hat, wie eine andere, aber andere Parameter erwartet."
+            "Als \u00fcberladen bezeichnet man eine Methode, die den selben Namen hat, wie eine andere, aber andere Parameter erwartet."
         },
         {
           "text":
@@ -415,61 +428,61 @@
             "Das ist eine Methode, die den selben Namen und die selbe Funktion hat."
         },
         {
-          "text": "Eine Methode die nichts zurückgeben kann.",
+          "text": "Eine Methode die nichts zur\u00fcckgeben kann.",
           "aspects": [],
           "id": "44",
           "points": 0,
           "answerCategory": "guessing",
-          "correctionOrComment": "Das ist eine Methode, die nichts zurückgeben kann."
+          "correctionOrComment": "Das ist eine Methode, die nichts zur\u00fcckgeben kann."
         },
         {
           "text":
-            "Haben zwei verschiedene Methoden denselben Namen heißen Sie überladen. Sie unterscheiden sich durch ihre Parameter. Sie sorgen für Benutzerfreundlichkeit.",
+            "Haben zwei verschiedene Methoden denselben Namen hei\u00dfen Sie \u00fcberladen. Sie unterscheiden sich durch ihre Parameter. Sie sorgen f\u00fcr Benutzerfreundlichkeit.",
           "aspects": [],
           "id": "45",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Haben zwei verschiedene Methoden denselben Namen, heißen sie überladen. Sie unterscheiden sich durch ihre Parameter. Sie sorgen für Benutzerfreundlichkeit."
+            "Haben zwei verschiedene Methoden denselben Namen, hei\u00dfen sie \u00fcberladen. Sie unterscheiden sich durch ihre Parameter. Sie sorgen f\u00fcr Benutzerfreundlichkeit."
         },
         {
           "text":
-            "Eine Methode, die sich nur ihrer Signatur (Parameterleiste und -typen) von einer anderen Methode unterscheidet, z.B. kann der Konstruktor einer Klasse überladen werden, indem er jeweils eine unterschiedliche Anzahl an Variablen und/oder verschiedene Typen entgegennimmt.",
+            "Eine Methode, die sich nur ihrer Signatur (Parameterleiste und -typen) von einer anderen Methode unterscheidet, z.B. kann der Konstruktor einer Klasse \u00fcberladen werden, indem er jeweils eine unterschiedliche Anzahl an Variablen und/oder verschiedene Typen entgegennimmt.",
           "aspects": [],
           "id": "46",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Das ist eine Methode, die sich nur anhand ihrer Signatur (Parameterliste und -typen) von einer anderen Methode unterscheidet. Beispielsweise kann der Konstruktor einer Klasse überladen werden, indem er jeweils eine unterschiedliche Anzahl an Variablen oder verschiedene Typen entgegennimmt."
+            "Das ist eine Methode, die sich nur anhand ihrer Signatur (Parameterliste und -typen) von einer anderen Methode unterscheidet. Beispielsweise kann der Konstruktor einer Klasse \u00fcberladen werden, indem er jeweils eine unterschiedliche Anzahl an Variablen oder verschiedene Typen entgegennimmt."
         },
         {
           "text":
-            "Eine überladene Methode ist eine Methode die den selben Namen hat wie eine oder mehrere Methoden und die je nach EIngabewert aufgerufen wird. So kann es sein das bei einer Eingabe eine andere Methode des selben Namens wie bei einer anderen Eingabe aufgerufen wird. So ist es möglich mit \"\"derselben\"\" Methode verschiedene EIngabetypen anzusprechen.",
+            "Eine \u00fcberladene Methode ist eine Methode die den selben Namen hat wie eine oder mehrere Methoden und die je nach EIngabewert aufgerufen wird. So kann es sein das bei einer Eingabe eine andere Methode des selben Namens wie bei einer anderen Eingabe aufgerufen wird. So ist es m\u00f6glich mit \"\"derselben\"\" Methode verschiedene EIngabetypen anzusprechen.",
           "aspects": [],
           "id": "47",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Eine überladene Methode ist eine Methode, die den selben Namen hat, wie eine oder mehrere Methoden und die je nach Eingabewert aufgerufen wird. So kann es sein, dass bei einer Eingabe eine andere Methode des selben Namens, wie bei einer anderen Eingabe aufgerufen wird. So ist es möglich mit derselben Methode verschiedene Eingabetypen anzusprechen."
+            "Eine \u00fcberladene Methode ist eine Methode, die den selben Namen hat, wie eine oder mehrere Methoden und die je nach Eingabewert aufgerufen wird. So kann es sein, dass bei einer Eingabe eine andere Methode des selben Namens, wie bei einer anderen Eingabe aufgerufen wird. So ist es m\u00f6glich mit derselben Methode verschiedene Eingabetypen anzusprechen."
         },
         {
           "text":
-            "Eine Methode ist überladen, wenn mindestens eine weitere Methode mit dem selben Namen aber einer anderen Signatur vorliegt.",
+            "Eine Methode ist \u00fcberladen, wenn mindestens eine weitere Methode mit dem selben Namen aber einer anderen Signatur vorliegt.",
           "aspects": [],
           "id": "48",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Eine Methode ist überladen, wenn mindestens eine weitere Methode mit dem selben Namen aber einer anderen Signatur vorliegt."
+            "Eine Methode ist \u00fcberladen, wenn mindestens eine weitere Methode mit dem selben Namen aber einer anderen Signatur vorliegt."
         },
         {
-          "text": "Eine überladene Methode ist eine Methode die andere Methoden aufruft.",
+          "text": "Eine \u00fcberladene Methode ist eine Methode die andere Methoden aufruft.",
           "aspects": [],
           "id": "49",
           "points": 0,
           "answerCategory": "guessing",
           "correctionOrComment":
-            "Eine überladene Methode ist eine Methode, die andere Methoden aufruft."
+            "Eine \u00fcberladene Methode ist eine Methode, die andere Methoden aufruft."
         },
         {
           "text": "-",
@@ -481,63 +494,63 @@
         },
         {
           "text":
-            "Überlade Methoden sind Methoden die einander überschreiben können z.B. \"\"+\"\".",
+            "\u00dcberlade Methoden sind Methoden die einander \u00fcberschreiben k\u00f6nnen z.B. \"\"+\"\".",
           "aspects": [],
           "id": "51",
           "points": 0,
           "answerCategory": "concept_mix-up",
           "correctionOrComment":
-            "Überlade Methoden sind Methoden, die einander überschreiben können."
+            "\u00dcberlade Methoden sind Methoden, die einander \u00fcberschreiben k\u00f6nnen."
         },
         {
           "text":
-            "Eine Methode die es schonmal gibt. Also mit dem gleichen Namen. Mit der Methode kann man dann mehrere Sachen machen (sie überschreiben sich nicht).",
+            "Eine Methode die es schonmal gibt. Also mit dem gleichen Namen. Mit der Methode kann man dann mehrere Sachen machen (sie \u00fcberschreiben sich nicht).",
           "aspects": [],
           "id": "52",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Das ist eine Methode, die es schonmal gibt, also mit dem gleichen Namen. Mit der Methode kann man dann mehrere Sachen machen. Sie überschreiben sich nicht."
+            "Das ist eine Methode, die es schonmal gibt, also mit dem gleichen Namen. Mit der Methode kann man dann mehrere Sachen machen. Sie \u00fcberschreiben sich nicht."
         },
         {
           "text":
-            "eine überladene methode ist eine methode die aus einer basisklasse abgeleitet ist und in der der abgeleitetetn klasse überschrieben wird beispiellsweise hat jede klasse die methode toString(), da alle klassen von Object abgeleitet sind, um eine lesbare ausgabe zu erhalten muss die methode toString in der abgeleiteten Klasse überschrieben werden und ist dann überladen",
+            "eine \u00fcberladene methode ist eine methode die aus einer basisklasse abgeleitet ist und in der der abgeleitetetn klasse \u00fcberschrieben wird beispiellsweise hat jede klasse die methode toString(), da alle klassen von Object abgeleitet sind, um eine lesbare ausgabe zu erhalten muss die methode toString in der abgeleiteten Klasse \u00fcberschrieben werden und ist dann \u00fcberladen",
           "aspects": [],
           "id": "53",
           "points": 0,
           "answerCategory": "concept_mix-up",
           "correctionOrComment":
-            "Eine überladene Methode ist eine Methode, die aus einer Basisklasse abgeleitet ist und in der abgeleiteten Klasse überschrieben wird. Beispielsweise hat jede Klasse die Methode 'toString()', da alle Klassen von 'Object' abgeleitet sind. Um eine lesbare Ausgabe zu erhalten muss die Methode 'toString' in der abgeleiteten Klasse überschrieben werden und ist dann überladen."
+            "Eine \u00fcberladene Methode ist eine Methode, die aus einer Basisklasse abgeleitet ist und in der abgeleiteten Klasse \u00fcberschrieben wird. Beispielsweise hat jede Klasse die Methode 'toString()', da alle Klassen von Object abgeleitet sind. Um eine lesbare Ausgabe zu erhalten muss die Methode 'toString' in der abgeleiteten Klasse \u00fcberschrieben werden und ist dann \u00fcberladen."
         },
         {
           "text":
-            "Eine Methode, die das gleiche Schutzattribut, den gleichen Rückgabetyp und den gleichen Methodenname hat. Sie unterscheidet sich nur in den Übergabeparametern.",
+            "Eine Methode, die das gleiche Schutzattribut, den gleichen R\u00fcckgabetyp und den gleichen Methodenname hat. Sie unterscheidet sich nur in den \u00dcbergabeparametern.",
           "aspects": [],
           "id": "54",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Das ist eine Methode, die das gleiche Schutzattribut, den gleichen Rückgabetyp und den gleichen Methodenname hat. Sie unterscheidet sich nur in den Übergabeparametern."
+            "Das ist eine Methode, die das gleiche Schutzattribut, den gleichen R\u00fcckgabetyp und den gleichen Methodenname hat. Sie unterscheidet sich nur in den \u00dcbergabeparametern."
         },
         {
           "text":
-            "Haben zwei verschieden Methoden derselben Namen heißen sie überladen. Überladen Methoiden müssen sich durch die Signatur(Parameterliste und -typen) unterscheiden, der Rückgabewert ist egal.",
+            "Haben zwei verschieden Methoden derselben Namen hei\u00dfen sie \u00fcberladen. \u00dcberladen Methoiden m\u00fcssen sich durch die Signatur(Parameterliste und -typen) unterscheiden, der R\u00fcckgabewert ist egal.",
           "aspects": [],
           "id": "55",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Haben zwei verschieden Methoden denselben Namen, heißen sie überladen. Überladene Methoden müssen sich durch die Signatur (Parameterliste und -typen) unterscheiden. Der Rückgabewert ist egal."
+            "Haben zwei verschieden Methoden denselben Namen, hei\u00dfen sie \u00fcberladen. \u00dcberladene Methoden m\u00fcssen sich durch die Signatur (Parameterliste und -typen) unterscheiden. Der R\u00fcckgabewert ist egal."
         },
         {
           "text":
-            "wenn zwei verschiedene methoden denselben namen haben, heißen sie überladen. sie müssen sich durch die Signatur (Parameterliste und typen) unterscheiden,der Rrückgabe wert ist egal.",
+            "wenn zwei verschiedene methoden denselben namen haben, hei\u00dfen sie \u00fcberladen. sie m\u00fcssen sich durch die Signatur (Parameterliste und typen) unterscheiden,der Rr\u00fcckgabe wert ist egal.",
           "aspects": [],
           "id": "56",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Wenn zwei verschiedene Methoden denselben Namen haben, heißen sie überladen. Sie müssen sich durch die Signatur (Parameterliste und -typen) unterscheiden. Der Rrückgabewert ist egal."
+            "Wenn zwei verschiedene Methoden denselben Namen haben, hei\u00dfen sie \u00fcberladen. Sie m\u00fcssen sich durch die Signatur (Parameterliste und -typen) unterscheiden. Der Rr\u00fcckgabewert ist egal."
         },
         {
           "text": "eine Methode die",
@@ -549,23 +562,23 @@
         },
         {
           "text":
-            "wenn zwei Methoden denselben namen haben dann sind sie überladen sie müssen sich durch die signatur unterscheiden der rückgabewert ist egal",
+            "wenn zwei Methoden denselben namen haben dann sind sie \u00fcberladen sie m\u00fcssen sich durch die signatur unterscheiden der r\u00fcckgabewert ist egal",
           "aspects": [],
           "id": "58",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Wenn zwei Methoden denselben Namen haben, dann sind sie überladen. Sie müssen sich durch die Signatur unterscheiden. Der Rückgabewert ist egal."
+            "Wenn zwei Methoden denselben Namen haben, dann sind sie \u00fcberladen. Sie m\u00fcssen sich durch die Signatur unterscheiden. Der R\u00fcckgabewert ist egal."
         },
         {
           "text":
-            "Wenn zwei verschiedene Methoden denselben Namen haben, dann heißen sie überladen. Überladene Methoden müssen sich durch die Parameterliste und -typen unterscheiden.",
+            "Wenn zwei verschiedene Methoden denselben Namen haben, dann hei\u00dfen sie \u00fcberladen. \u00dcberladene Methoden m\u00fcssen sich durch die Parameterliste und -typen unterscheiden.",
           "aspects": [],
           "id": "59",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Wenn zwei verschiedene Methoden denselben Namen haben, dann heißen sie überladen. Überladene Methoden müssen sich durch die Parameterliste und -typen unterscheiden."
+            "Wenn zwei verschiedene Methoden denselben Namen haben, dann hei\u00dfen sie \u00fcberladen. \u00dcberladene Methoden m\u00fcssen sich durch die Parameterliste und -typen unterscheiden."
         },
         {
           "text": "-",
@@ -587,23 +600,23 @@
         },
         {
           "text":
-            "Wenn zwei verschiedene Methoden den selben Namen haben nennt man sie Überladen. Sie müssen sich durch die Signatur unterscheiden. Der Rückgabewert ist egal.",
+            "Wenn zwei verschiedene Methoden den selben Namen haben nennt man sie \u00dcberladen. Sie m\u00fcssen sich durch die Signatur unterscheiden. Der R\u00fcckgabewert ist egal.",
           "aspects": [],
           "id": "62",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Wenn zwei verschiedene Methoden denselben Namen haben, nennt man sie überladen. Sie müssen sich durch die Signatur unterscheiden. Der Rückgabewert ist egal."
+            "Wenn zwei verschiedene Methoden denselben Namen haben, nennt man sie \u00fcberladen. Sie m\u00fcssen sich durch die Signatur unterscheiden. Der R\u00fcckgabewert ist egal."
         },
         {
           "text":
-            "Vererbte Methode/Konstruktor die mit Override überschrieben wurde. Beispiel: Überschreibung des Standartkonstruktors.",
+            "Vererbte Methode/Konstruktor die mit Override \u00fcberschrieben wurde. Beispiel: \u00dcberschreibung des Standartkonstruktors.",
           "aspects": [],
           "id": "63",
           "points": 0,
           "answerCategory": "concept_mix-up",
           "correctionOrComment":
-            "Das sind vererbte Methoden oder Konstruktoren, die mit 'Override' überschrieben wurde."
+            "Das sind vererbte Methoden oder Konstruktoren, die mit Override \u00fcberschrieben wurde."
         },
         {
           "text":
@@ -617,33 +630,33 @@
         },
         {
           "text":
-            "Haben zwei verschiedene Methoden denselben Namen heißen sie Überladen Überladene Methoden müssen sich durch die Signatur (Parameterliste und typen) unterscheiden.",
+            "Haben zwei verschiedene Methoden denselben Namen hei\u00dfen sie \u00dcberladen \u00dcberladene Methoden m\u00fcssen sich durch die Signatur (Parameterliste und typen) unterscheiden.",
           "aspects": [],
           "id": "65",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Haben zwei verschiedene Methoden denselben Namen, heißen sie überladen. Überladene Methoden müssen sich durch die Signatur (Parameterliste und -typen) unterscheiden."
+            "Haben zwei verschiedene Methoden denselben Namen, hei\u00dfen sie \u00fcberladen. \u00dcberladene Methoden m\u00fcssen sich durch die Signatur (Parameterliste und -typen) unterscheiden."
         },
         {
           "text":
-            "Eine Methode ist überladen, wenn sie z.B. einen String erbt und diesen dann innerhalb der Methode mit einem neuen \"\"Wert\"\" überschreibt.",
+            "Eine Methode ist \u00fcberladen, wenn sie z.B. einen String erbt und diesen dann innerhalb der Methode mit einem neuen \"\"Wert\"\" \u00fcberschreibt.",
           "aspects": [],
           "id": "66",
           "points": 0,
           "answerCategory": "concept_mix-up",
           "correctionOrComment":
-            "Eine Methode ist überladen, wenn sie beispielsweise einen String erbt und diesen dann innerhalb der Methode mit einem neuen Wert überschreibt."
+            "Eine Methode ist \u00fcberladen, wenn sie beispielsweise einen String erbt und diesen dann innerhalb der Methode mit einem neuen Wert \u00fcberschreibt."
         },
         {
           "text":
-            "überladen ist eine Methode, wenn sie doppelt implementiert wurde, mit den gleichen Parametern. Die Variable wurde gleichnamig definiert.",
+            "\u00fcberladen ist eine Methode, wenn sie doppelt implementiert wurde, mit den gleichen Parametern. Die Variable wurde gleichnamig definiert.",
           "aspects": [],
           "id": "67",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Überladen ist eine Methode, wenn sie doppelt implementiert wurde, mit den gleichen Parametern. Die Variable wurde gleichnamig definiert."
+            "\u00dcberladen ist eine Methode, wenn sie doppelt implementiert wurde, mit den gleichen Parametern. Die Variable wurde gleichnamig definiert."
         },
         {
           "text": "Eine Methode in der zu viel Quellcode steht.",
@@ -655,94 +668,107 @@
         },
         {
           "text":
-            "Haben zwei verschiedene Methoden denselben Namen heißen sie überladen. Überladene Methoden müssen sich durch die Signatur (Parameterliste und -typen) unterscheiden den, der Rückgabewert ist egal.",
+            "Haben zwei verschiedene Methoden denselben Namen hei\u00dfen sie \u00fcberladen. \u00dcberladene Methoden m\u00fcssen sich durch die Signatur (Parameterliste und -typen) unterscheiden den, der R\u00fcckgabewert ist egal.",
           "aspects": [],
           "id": "69",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Haben zwei verschiedene Methoden denselben Namen, heißen sie überladen. Überladene Methoden müssen sich durch die Signatur (Parameterliste und -typen) unterscheiden. Der Rückgabewert ist egal."
+            "Haben zwei verschiedene Methoden denselben Namen, hei\u00dfen sie \u00fcberladen. \u00dcberladene Methoden m\u00fcssen sich durch die Signatur (Parameterliste und -typen) unterscheiden. Der R\u00fcckgabewert ist egal."
         },
         {
           "text":
-            "Überladene Methoden haben zwei verschiedene Methoden den selben Namen heißen sie Überladen. Überladene Methoden müssen sich durch die Signatur (Parameterliste und -typen) unterscheiden.",
+            "\u00dcberladene Methoden haben zwei verschiedene Methoden den selben Namen hei\u00dfen sie \u00dcberladen. \u00dcberladene Methoden m\u00fcssen sich durch die Signatur (Parameterliste und -typen) unterscheiden.",
           "aspects": [],
           "id": "70",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Haben zwei verschiedene Methoden denselben Namen, heißen sie überladen. Überladene Methoden müssen sich durch die Signatur (Parameterliste und -typen) unterscheiden."
+            "Haben zwei verschiedene Methoden denselben Namen, hei\u00dfen sie \u00fcberladen. \u00dcberladene Methoden m\u00fcssen sich durch die Signatur (Parameterliste und -typen) unterscheiden."
         },
         {
           "text":
-            "Bedeutet dass derselbe Methodenname mehrfach in einer Klasse verwendet werden kann. Die Anzahl der Übergabeparameter ist unterschiedlich.",
+            "Bedeutet dass derselbe Methodenname mehrfach in einer Klasse verwendet werden kann. Die Anzahl der \u00dcbergabeparameter ist unterschiedlich.",
           "aspects": [],
           "id": "71",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Es bedeutet, dass derselbe Methodenname mehrfach in einer Klasse verwendet werden kann. Die Anzahl der Übergabeparameter ist unterschiedlich."
+            "Es bedeutet, dass derselbe Methodenname mehrfach in einer Klasse verwendet werden kann. Die Anzahl der \u00dcbergabeparameter ist unterschiedlich."
         },
         {
           "text":
-            "Eine vererbte Methode die überschrieben wird damit diese verändert werden kann für die Kindklasse. Diese werden konventionell mit @Override gekennzeichnet.",
+            "Eine vererbte Methode die \u00fcberschrieben wird damit diese ver\u00e4ndert werden kann f\u00fcr die Kindklasse. Diese werden konventionell mit @Override gekennzeichnet.",
           "aspects": [],
           "id": "72",
           "points": 0,
           "answerCategory": "concept_mix-up",
           "correctionOrComment":
-            "Das ist eine vererbte Methode, die überschrieben wird damit diese verändert werden kann für die Kindklasse. Diese werden konventionell mit '@Override' gekennzeichnet."
+            "Das ist eine vererbte Methode, die \u00fcberschrieben wird damit diese ver\u00e4ndert werden kann f\u00fcr die Kindklasse. Diese werden konventionell mit Override gekennzeichnet."
         },
         {
           "text":
-            "Eine überladene Methode ist wenn die maximale Kapazität an methoden überladen wurde.",
+            "Eine \u00fcberladene Methode ist wenn die maximale Kapazit\u00e4t an methoden \u00fcberladen wurde.",
           "aspects": [],
           "id": "73",
           "points": 0,
           "answerCategory": "guessing",
           "correctionOrComment":
-            "Eine Methode ist überladen, wenn die maximale Kapazität an Methoden überladen wurde."
+            "Eine Methode ist \u00fcberladen, wenn die maximale Kapazit\u00e4t an Methoden \u00fcberladen wurde."
         }
       ]
     },
     {
       "id": "4",
-      "title": "Klassenattribute schätzen",
+      "title": "Klassenattribute Kapselung",
       "text":
-        "Sie schreiben eine Klasse Beispielklasse mit einem Feld 'wert'. Wie erreichen Sie, dass 'wert' nur innerhalb von Beispielklasse schreibbar, aber von überall aus lesbar ist?",
+        "Sie schreiben eine Klasse Beispielklasse mit einem Feld 'wert'. Wie erreichen Sie, dass 'wert' nur innerhalb von Beispielklasse schreibbar, aber von \u00fcberall aus lesbar ist?",
       "type": "procedure",
-      "referenceAnswer":
-        "Das Feld 'wert' muss mit dem Schutzattribute 'private' deklariert werden. Zusätzlich muss die Klasse eine Methode bereitstellen, die das Auslesen dieses Feldes ermöglicht.",
+      "referenceAnswer": {
+        "text":
+          "Das Feld 'wert' muss mit dem Schutzattribute private deklariert werden und die Klasse muss einen Getter für dieses Feld bereitstellen.",
+        "answerCategory": "correct",
+        "assignedWeights": {
+          "müssen": 0.7,
+          "Schutzattribut": 0.2,
+          "private": 1,
+          "deklarieren": 0.2,
+          "werden": 0.3,
+          "und": 0.5,
+          "Getter": 0.6,
+          "bereitstellen": 0.1
+        }
+      },
       "answersAnnotation": [
         {
           "text":
-            "Ich setze \"\"Wert\"\" auf private und schreibe in der Beispielklasse einen Getter. So kann \"\"Wert\"\" gelesen von überall gelesen werden udn bleibt schreibgeschützt.",
+            "Ich setze \"\"Wert\"\" auf private und schreibe in der Beispielklasse einen Getter. So kann \"\"Wert\"\" gelesen von \u00fcberall gelesen werden udn bleibt schreibgesch\u00fctzt.",
           "aspects": [],
           "id": "1",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Ich setze 'wert' auf 'private' und schreibe in der Beispielklasse einen 'Getter'. So kann 'wert' von überall gelesen werden und bleibt schreibgeschützt."
+            "Ich setze 'wert' auf private und schreibe in der Beispielklasse einen Getter. So kann 'wert' von \u00fcberall gelesen werden und bleibt schreibgesch\u00fctzt."
         },
         {
           "text":
-            "indem man mit der sogenanneten Kapselung arbeitet: wert als Private definieren und mithilfe von Getter- und Setter-methoden den Zugrif ermöglichen.",
+            "indem man mit der sogenanneten Kapselung arbeitet: wert als Private definieren und mithilfe von Getter- und Setter-methoden den Zugrif erm\u00f6glichen.",
           "aspects": [],
           "id": "2",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Indem man mit der sogenanneten Kapselung arbeitet. Man muss 'wert' als 'private' definieren und mithilfe von Getter- und Settermethoden den Zugriff ermöglichen."
+            "Indem man mit der sogenanneten Kapselung arbeitet. Man muss 'wert' als private definieren und mithilfe von Getter- und Settermethoden den Zugriff erm\u00f6glichen."
         },
         {
           "text":
-            "Mit protect. Wemm man in der Beispielsklasse\"\" protect double wert\"\" schreibt ist sie für andere Klassen sichtbar aber nicht veränderbar.",
+            "Mit protect. Wemm man in der Beispielsklasse\"\" protect double wert\"\" schreibt ist sie f\u00fcr andere Klassen sichtbar aber nicht ver\u00e4nderbar.",
           "aspects": [],
           "id": "3",
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Wenn man in der Beispielsklasse 'protected double wert' schreibt, ist sie für andere Klassen sichtbar aber nicht veränderbar."
+            "Wenn man in der Beispielsklasse protected double 'wert' schreibt, ist sie f\u00fcr andere Klassen sichtbar aber nicht ver\u00e4nderbar."
         },
         {
           "text": "privat int wert und dann durch getter und setter aufrufen.",
@@ -751,45 +777,46 @@
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Es muss als 'private int wert' initialisiert werden und kann dann durch 'Getter' und 'Setter' aufrufen werden."
+            "Es muss als private int 'wert' initialisiert werden und kann dann durch Getter und Setter aufrufen werden."
         },
         {
-          "text": "man benutzt die protected um es schützen aber lesbar zu halten",
+          "text": "man benutzt die protected um es sch\u00fctzen aber lesbar zu halten",
           "aspects": [],
           "id": "5",
           "points": 0,
           "answerCategory": "missconception",
-          "correctionOrComment": "Man benutzt 'protected' um es zu schützen aber lesbar zu halten."
+          "correctionOrComment":
+            "Man benutzt protected um es zu sch\u00fctzen aber lesbar zu halten."
         },
         {
           "text":
-            "ich lege das schutzattribut von \"\"wert\"\" auf private fest und implementiere eine getter-methode sodass von überall auf den im Feld \"\"wert\"\" hinterlegten Wert über diese methode zugegriffen werden kann.",
+            "ich lege das schutzattribut von \"\"wert\"\" auf private fest und implementiere eine getter-methode sodass von \u00fcberall auf den im Feld \"\"wert\"\" hinterlegten Wert \u00fcber diese methode zugegriffen werden kann.",
           "aspects": [],
           "id": "6",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Ich lege das Schutzattribut von 'wert' auf 'private' fest und implementiere eine Gettermethode, sodass von überall auf den im Feld 'wert' hinterlegten Wert über diese Methode zugegriffen werden kann."
+            "Ich lege das Schutzattribut von 'wert' auf private fest und implementiere eine Gettermethode, sodass von \u00fcberall auf den im Feld 'wert' hinterlegten Wert \u00fcber diese Methode zugegriffen werden kann."
         },
         {
           "text":
-            "durch eine vererbung. mit extends können dann die anderen klassen die werte übernehmen",
+            "durch eine vererbung. mit extends k\u00f6nnen dann die anderen klassen die werte \u00fcbernehmen",
           "aspects": [],
           "id": "7",
           "points": 0,
           "answerCategory": "concept_mix-up",
           "correctionOrComment":
-            "Das geht durch eine Vererbung. Mit 'extends' können dann die anderen Klassen die Werte übernehmen."
+            "Das geht durch eine Vererbung. Mit extends k\u00f6nnen dann die anderen Klassen die Werte \u00fcbernehmen."
         },
         {
           "text":
-            "Indem man innerhalb der \"\"Beispielklasse\"\" nur einen Getter für \"\"wert\"\", aber keinen Setter verwendet.",
+            "Indem man innerhalb der \"\"Beispielklasse\"\" nur einen Getter f\u00fcr \"\"wert\"\", aber keinen Setter verwendet.",
           "aspects": [],
           "id": "8",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Das geht, indem man innerhalb der Beispielklasse nur einen 'Getter' für 'wert' aber keinen 'Setter' verwendet."
+            "Das geht, indem man innerhalb der Beispielklasse nur einen Getter f\u00fcr 'wert' aber keinen Setter verwendet."
         },
         {
           "text": "ich benutze vor wert den zustazt protected",
@@ -797,7 +824,7 @@
           "id": "9",
           "points": 0,
           "answerCategory": "missconception",
-          "correctionOrComment": "Ich benutze vor 'wert' den Zusatz 'protected'."
+          "correctionOrComment": "Ich benutze vor 'wert' den Zusatz protected."
         },
         {
           "text": "protected int wert;",
@@ -805,7 +832,7 @@
           "id": "10",
           "points": 0,
           "answerCategory": "missconception",
-          "correctionOrComment": "Das geht mit 'protected int wert'."
+          "correctionOrComment": "Das geht mit protected int 'wert'."
         },
         {
           "text": "private Beispielklasse",
@@ -813,17 +840,17 @@
           "id": "11",
           "points": 0,
           "answerCategory": "missconception",
-          "correctionOrComment": "Das geht mit 'private Beispielklasse'."
+          "correctionOrComment": "Das geht mit private Beispielklasse."
         },
         {
           "text":
-            "private Typ wert; (Variable als private deklarieren, um direkten Zugriff zu vermeiden) public getWert(){return wert;} (auslesen, von überall möglich) private void setWert(Typ wert){this.wert = wert;} (schreiben, nur innerhalb der eigenen Klasse möglich)",
+            "private Typ wert; (Variable als private deklarieren, um direkten Zugriff zu vermeiden) public getWert(){return wert;} (auslesen, von \u00fcberall m\u00f6glich) private void setWert(Typ wert){this.wert = wert;} (schreiben, nur innerhalb der eigenen Klasse m\u00f6glich)",
           "aspects": [],
           "id": "12",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Man muss die Variable als 'private' deklarieren, um direkten Zugriff zu vermeiden. Ein 'public' Getter macht das  Auslesen, von überall möglich. Ein 'private'  'Setter' macht das Schreiben, nur innerhalb der eigenen Klasse möglich."
+            "Man muss die Variable als private deklarieren, um direkten Zugriff zu vermeiden. Ein public Getter macht das Auslesen, von \u00fcberall m\u00f6glich. Ein private Setter macht das Schreiben, nur innerhalb der eigenen Klasse m\u00f6glich."
         },
         {
           "text": "public static final string wert...",
@@ -831,37 +858,37 @@
           "id": "13",
           "points": 0,
           "answerCategory": "missconception",
-          "correctionOrComment": "Das geht mit 'public static final string wert'."
+          "correctionOrComment": "Das geht mit public static final string 'wert'."
         },
         {
           "text":
-            "man muss Proteced benützen damit sie von übeall lesbar ist aber nur innerhalb von Beispielklasse schreibbar ist",
+            "man muss Proteced ben\u00fctzen damit sie von \u00fcbeall lesbar ist aber nur innerhalb von Beispielklasse schreibbar ist",
           "aspects": [],
           "id": "14",
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Man muss 'proteced' benutzen, damit sie von übeall lesbar, aber nur innerhalb von Beispielklasse schreibbar ist"
+            "Man muss protected benutzen, damit sie von \u00fcbeall lesbar, aber nur innerhalb von Beispielklasse schreibbar ist"
         },
         {
           "text":
-            "Zuerst muss die Variable wert als private deklariert werden. So ist sie von außen schreibgeschützt. Um nun wert von außen lesbar zu machen muss ein Getter implementiert werden. Durch den Methodenaufruf getWert() kann nun wert ausgelesen werden aber nicht verändert werden.",
+            "Zuerst muss die Variable wert als private deklariert werden. So ist sie von au\u00dfen schreibgesch\u00fctzt. Um nun wert von au\u00dfen lesbar zu machen muss ein Getter implementiert werden. Durch den Methodenaufruf getWert() kann nun wert ausgelesen werden aber nicht ver\u00e4ndert werden.",
           "aspects": [],
           "id": "15",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Zuerst muss die Variable 'wert' als 'private' deklariert werden. So ist sie von außen schreibgeschützt. Um nun 'wert' von außen lesbar zu machen muss ein 'Getter' implementiert werden. Durch den Methodenaufruf 'getWert()' kann nun 'wert' ausgelesen werden aber nicht verändert werden."
+            "Zuerst muss die Variable 'wert' als private deklariert werden. So ist sie von au\u00dfen schreibgesch\u00fctzt. Um nun 'wert' von au\u00dfen lesbar zu machen muss ein Getter implementiert werden. Durch den Methodenaufruf 'getWert()' kann nun 'wert' ausgelesen werden aber nicht ver\u00e4ndert werden."
         },
         {
           "text":
-            "Durch das Atrribut private, schützt man Datenfelder davor das sie nur innerhalb ihrer Klasse schreibbar und sichtbar sind. Durch eine getter Methode können alle Klassen, die private geschriebene Variable lesen.",
+            "Durch das Atrribut private, sch\u00fctzt man Datenfelder davor das sie nur innerhalb ihrer Klasse schreibbar und sichtbar sind. Durch eine getter Methode k\u00f6nnen alle Klassen, die private geschriebene Variable lesen.",
           "aspects": [],
           "id": "16",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Durch das Attribut 'private', schützt man Datenfelder davor, dass sie nur innerhalb ihrer Klasse schreibbar und sichtbar sind. Durch eine 'Getter' Methode können alle Klassen, die 'private' geschriebene Variable lesen."
+            "Durch das Attribut private, sch\u00fctzt man Datenfelder davor, dass sie nur innerhalb ihrer Klasse schreibbar und sichtbar sind. Durch eine Getter Methode k\u00f6nnen alle Klassen, die private geschriebene Variable lesen."
         },
         {
           "text":
@@ -871,7 +898,7 @@
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Ich erreiche es, indem ich 'wert' auf 'private' setze und demendsprechende 'Getter' mache."
+            "Ich erreiche es, indem ich 'wert' auf private setze und dementsprechende Getter mache."
         },
         {
           "text":
@@ -881,7 +908,7 @@
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Ich setze das Feld 'wert' auf 'private' und benutze von den anderen Klassen aus 'Getter' um den Wert des Feldes 'wert' zu lesen."
+            "Ich setze das Feld 'wert' auf private und benutze von den anderen Klassen aus Getter um den Wert des Feldes 'wert' zu lesen."
         },
         {
           "text": "protected",
@@ -889,7 +916,7 @@
           "id": "19",
           "points": 0,
           "answerCategory": "missconception",
-          "correctionOrComment": "Das geht mit 'protected'."
+          "correctionOrComment": "Das geht mit protected."
         },
         {
           "text":
@@ -899,17 +926,17 @@
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Damit sie nur schreibbar innerhalb der Klasse ist, deklariert man sie mit 'private'. Lesbar machen kann man die Variable, indem man sie in eine Gettermethode steckt und diese Methode 'public' macht."
+            "Damit sie nur schreibbar innerhalb der Klasse ist, deklariert man sie mit private. Lesbar machen kann man die Variable, indem man sie in eine Gettermethode steckt und diese Methode public macht."
         },
         {
           "text":
-            "Diese feld soll mit Attribut private deklarieren werden und mit eine methode überall lesbar wird",
+            "Diese feld soll mit Attribut private deklarieren werden und mit eine methode \u00fcberall lesbar wird",
           "aspects": [],
           "id": "21",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Dieses Feld sollte mit dem Attribut 'private' deklariert werden und mit einer Gettermethode von überall lesbar gemacht werden."
+            "Dieses Feld sollte mit dem Attribut private deklariert werden und mit einer Gettermethode von \u00fcberall lesbar gemacht werden."
         },
         {
           "text":
@@ -919,35 +946,36 @@
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Das geht mit 'private int wert'. Man erstelle dann eine 'public' Gettermethode."
+            "Das geht mit private int 'wert'. Man erstelle dann eine public Gettermethode."
         },
         {
           "text":
-            "public class zahl; private int wert; public int getWert(){ return wert; mit private ermöglichen wir das man nur in der eigenen klasse zugriff hat und mit getter machen wir sie aber in den anderen klassen sichtbar.",
+            "public class zahl; private int wert; public int getWert(){ return wert; mit private erm\u00f6glichen wir das man nur in der eigenen klasse zugriff hat und mit getter machen wir sie aber in den anderen klassen sichtbar.",
           "aspects": [],
           "id": "23",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Mit 'private' ermöglichen wir, dass man nur in der eigenen Klasse Zugriff hat und mit einem 'Getter' machen wir sie aber in den anderen Klassen sichtbar."
+            "Mit private erm\u00f6glichen wir, dass man nur in der eigenen Klasse Zugriff hat und mit einem Getter machen wir sie aber in den anderen Klassen sichtbar."
         },
         {
           "text":
-            "public class Beispielklasse protected int wert; public String getWert(){ return this.wert;} Dadurch dass man nur mit dem Setter wert überschreiben kann es bzw scheibbar machen kann, benutz man hier nur einen getter.",
+            "public class Beispielklasse protected int wert; public String getWert(){ return this.wert;} Dadurch dass man nur mit dem Setter wert \u00fcberschreiben kann es bzw scheibbar machen kann, benutz man hier nur einen getter.",
           "aspects": [],
           "id": "24",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Das geht mit 'protected int wert'. Dadurch dass man nur mit dem 'Setter' 'wert' überschreiben kann, benutz man hier nur einen 'Getter'."
+            "Das geht mit protected int 'wert'. Dadurch dass man nur mit dem Setter 'wert' \u00fcberschreiben kann, benutz man hier nur einen Getter."
         },
         {
-          "text": "mit dem Präfix protected zb: protected int wert;",
+          "text": "mit dem Pr\u00e4fix protected zb: protected int wert;",
           "aspects": [],
           "id": "25",
           "points": 0,
           "answerCategory": "missconception",
-          "correctionOrComment": "Das geht mit dem Präfix 'protected', also 'protected int wert'."
+          "correctionOrComment":
+            "Das geht mit dem Pr\u00e4fix protected, also protected int 'wert'."
         },
         {
           "text": "public final wert",
@@ -955,7 +983,7 @@
           "id": "26",
           "points": 0,
           "answerCategory": "missconception",
-          "correctionOrComment": "Das geht mit 'public final wert'."
+          "correctionOrComment": "Das geht mit public final 'wert'."
         },
         {
           "text":
@@ -965,7 +993,7 @@
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Wir definieren die Variable 'wert' mit dem Zugriffsattribut protected ('protected int wert')."
+            "Wir definieren die Variable 'wert' mit dem Zugriffsattribut protected (protected int 'wert')."
         },
         {
           "text":
@@ -974,8 +1002,7 @@
           "id": "28",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment":
-            "Durch eine Gettermethode und der Wert muss 'private' gesetzt sein!"
+          "correctionOrComment": "Durch eine Gettermethode und der Wert muss private gesetzt sein!"
         },
         {
           "text": "indem ich die Klasse ableite mit extends",
@@ -991,37 +1018,37 @@
           "id": "30",
           "points": 0,
           "answerCategory": "missconception",
-          "correctionOrComment": "Das geht mit 'protected wert'."
+          "correctionOrComment": "Das geht mit protected 'wert'."
         },
         {
           "text":
-            "indem man den \"\"wert\"\" auf private setzt und ihn danach mit getter/setter aufruft. Dadurch kann man nur innerhalb der Beispielklasse den \"\"wert\"\" verändern.",
+            "indem man den \"\"wert\"\" auf private setzt und ihn danach mit getter/setter aufruft. Dadurch kann man nur innerhalb der Beispielklasse den \"\"wert\"\" ver\u00e4ndern.",
           "aspects": [],
           "id": "31",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Das geht, indem man den Wert auf 'private' setzt und ihn danach mit 'Getter' und 'Setter' aufruft. Dadurch kann man nur innerhalb der Beispielklasse den Wert verändern."
+            "Das geht, indem man den Wert auf private setzt und ihn danach mit Getter und Setter aufruft. Dadurch kann man nur innerhalb der Beispielklasse den Wert ver\u00e4ndern."
         },
         {
           "text":
-            "indem man das Feld \"\"wert\"\" als private deglariert. man kann es dann über die getterMethode aufrufen!",
+            "indem man das Feld \"\"wert\"\" als private deglariert. man kann es dann \u00fcber die getterMethode aufrufen!",
           "aspects": [],
           "id": "32",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Das geht, indem man das Feld 'wert' als 'private' deklariert. Man kann es dann über die Gettermethode aufrufen!"
+            "Das geht, indem man das Feld 'wert' als private deklariert. Man kann es dann \u00fcber die Gettermethode aufrufen!"
         },
         {
           "text":
-            "Das Feld wert ist auf private zu setzen. Durch einen getter für wert kann die Variable von außen ausgelesen werden. Das private verhindert jeden Schreibzugriff außer aus der eigenen Klasse.",
+            "Das Feld wert ist auf private zu setzen. Durch einen getter f\u00fcr wert kann die Variable von au\u00dfen ausgelesen werden. Das private verhindert jeden Schreibzugriff au\u00dfer aus der eigenen Klasse.",
           "aspects": [],
           "id": "33",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Das Feld 'wert' ist auf 'private' zu setzen. Durch einen 'Getter' für 'wert' kann die Variable von außen ausgelesen werden. Das 'private' verhindert jeden Schreibzugriff außer aus der eigenen Klasse."
+            "Das Feld 'wert' ist auf private zu setzen. Durch einen Getter f\u00fcr 'wert' kann die Variable von au\u00dfen ausgelesen werden. Das private verhindert jeden Schreibzugriff au\u00dfer aus der eigenen Klasse."
         },
         {
           "text":
@@ -1031,47 +1058,47 @@
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Man nimmt sogenannte Schutzattribute zur Hilfe. In dem Beispiel nimmt man nicht 'public' sondern 'private' und 'protected'."
+            "Man nimmt sogenannte Schutzattribute zur Hilfe. In dem Beispiel nimmt man nicht public sondern private und protected."
         },
         {
           "text":
-            "mit der get Methode. Beispielklasse ist auf private gesezt kann aber von außerhalb mit der get Methode gelesen werden",
+            "mit der get Methode. Beispielklasse ist auf private gesezt kann aber von au\u00dferhalb mit der get Methode gelesen werden",
           "aspects": [],
           "id": "35",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Das geht mit der Gettermethode. Die Beispielklasse ist auf 'private' gesezt, kann aber von außerhalb mit der Gettermethode gelesen werden."
+            "Das geht mit der Gettermethode. Die Beispielklasse ist auf private gesezt, kann aber von au\u00dferhalb mit der Gettermethode gelesen werden."
         },
         {
           "text":
-            "Indem man den dazugehörigen getter definiert aber nicht den setter, der das schreiben erlauben würde.",
+            "Indem man den dazugeh\u00f6rigen getter definiert aber nicht den setter, der das schreiben erlauben w\u00fcrde.",
           "aspects": [],
           "id": "36",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Indem man den dazugehörigen 'Getter' definiert aber nicht den 'Setter', der das schreiben erlauben würde."
+            "Indem man den dazugeh\u00f6rigen Getter definiert aber nicht den Setter, der das schreiben erlauben w\u00fcrde."
         },
         {
           "text":
-            "class Beispielklasse { private int wert; public Beispielklasse (int wert) { this.wert = wert; } public int getWert () { return wert; } private void setWert (int i) { this.wert = i; } } Wennn nur eine private set-Methode für die private Variable wert definiert wird, kann der Wert von wert nicht von außen geändert werden, sondern nur innerhalb der Klasse. Eine public get-Methode ermöglicht jedoch, dass der Wert von überall aus gelesen werden kann.",
+            "class Beispielklasse { private int wert; public Beispielklasse (int wert) { this.wert = wert; } public int getWert () { return wert; } private void setWert (int i) { this.wert = i; } } Wennn nur eine private set-Methode f\u00fcr die private Variable wert definiert wird, kann der Wert von wert nicht von au\u00dfen ge\u00e4ndert werden, sondern nur innerhalb der Klasse. Eine public get-Methode erm\u00f6glicht jedoch, dass der Wert von \u00fcberall aus gelesen werden kann.",
           "aspects": [],
           "id": "37",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Der Wert wird mit 'private int wert' deklariert. Wenn nur eine 'private' set-Methode für die 'private' Variable 'wert' definiert wird, kann der Wert von 'wert' nicht von außen geändert werden, sondern nur innerhalb der Klasse. Eine 'public' get-Methode ermöglicht jedoch, dass der Wert von überall aus gelesen werden kann."
+            "Der Wert wird mit private int 'wert' deklariert. Wenn nur eine private set-Methode f\u00fcr die private Variable 'wert' definiert wird, kann der Wert von 'wert' nicht von au\u00dfen ge\u00e4ndert werden, sondern nur innerhalb der Klasse. Eine public get-Methode erm\u00f6glicht jedoch, dass der Wert von \u00fcberall aus gelesen werden kann."
         },
         {
           "text":
-            "Es wird nur eine getter- und keine setter-Methode eingefügt. So kann zwar auf die getter-Methode zurückgegriffen und der Wert ausgelesen werden, jedoch kann nicht mithilfe der setter-Methode der Wert verändert werden.",
+            "Es wird nur eine getter- und keine setter-Methode eingef\u00fcgt. So kann zwar auf die getter-Methode zur\u00fcckgegriffen und der Wert ausgelesen werden, jedoch kann nicht mithilfe der setter-Methode der Wert ver\u00e4ndert werden.",
           "aspects": [],
           "id": "38",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Es wird nur eine getter- und keine setter-Methode eingefügt. So kann zwar auf die getter-Methode zurückgegriffen und der Wert ausgelesen werden, jedoch kann nicht mithilfe der setter-Methode der Wert verändert werden."
+            "Es wird nur eine getter- und keine setter-Methode eingef\u00fcgt. So kann zwar auf die getter-Methode zur\u00fcckgegriffen und der Wert ausgelesen werden, jedoch kann nicht mithilfe der setter-Methode der Wert ver\u00e4ndert werden."
         },
         {
           "text":
@@ -1081,17 +1108,17 @@
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Das Feld 'wert' muss 'private' und darf nicht 'final' sein. Ss muss eine get-Methode und es darf keine set-Methode vorliegen."
+            "Das Feld 'wert' muss private und darf nicht final sein. Ss muss eine get-Methode und es darf keine set-Methode vorliegen."
         },
         {
           "text":
-            "wert wird als \"\"private\"\" deklariert. danach wird ein getter gesetzt um wert von überall aus lesbar zu machen.",
+            "wert wird als \"\"private\"\" deklariert. danach wird ein getter gesetzt um wert von \u00fcberall aus lesbar zu machen.",
           "aspects": [],
           "id": "40",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "'wert' wird als 'private' deklariert. Danach wird ein Getter gesetzt um 'wert' von überall aus lesbar zu machen."
+            "'wert' wird als private deklariert. Danach wird ein Getter gesetzt um 'wert' von \u00fcberall aus lesbar zu machen."
         },
         {
           "text": "-",
@@ -1103,13 +1130,13 @@
         },
         {
           "text":
-            "Falls Wert z.B.: als int. private int wert; public int getWert() { return wert; } //Methode zum Lesen kann von überall aufgerufen werden. private int setWert(int wert) { this.wert = wert;} //methode zum Schreiben kann nur innerhalb der Klasse verwendet werden.",
+            "Falls Wert z.B.: als int. private int wert; public int getWert() { return wert; } //Methode zum Lesen kann von \u00fcberall aufgerufen werden. private int setWert(int wert) { this.wert = wert;} //methode zum Schreiben kann nur innerhalb der Klasse verwendet werden.",
           "aspects": [],
           "id": "42",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Das Feld wird als 'private int wert' deklariert. Eine 'public' getter-Methode zum Lesen kann von überall aufgerufen werden. Eine private setter-Methode zum Schreiben kann nur innerhalb der Klasse verwendet werden."
+            "Das Feld wird als private int 'wert' deklariert. Eine public getter-Methode zum Lesen kann von \u00fcberall aufgerufen werden. Eine private setter-Methode zum Schreiben kann nur innerhalb der Klasse verwendet werden."
         },
         {
           "text": "mit getter und setter",
@@ -1121,13 +1148,13 @@
         },
         {
           "text":
-            "Feld wert wird mit private deklariert, so ist es nur innerhalb von Beispielklasse lesbar und schreibbar. um es von überall lesen zu können benötigt man noch einer getter methode : public getWert(){ return this.wert; }",
+            "Feld wert wird mit private deklariert, so ist es nur innerhalb von Beispielklasse lesbar und schreibbar. um es von \u00fcberall lesen zu k\u00f6nnen ben\u00f6tigt man noch einer getter methode : public getWert(){ return this.wert; }",
           "aspects": [],
           "id": "44",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Das Feld 'wert' wird mit 'private' deklariert. So ist es nur innerhalb der Beispielklasse lesbar und schreibbar. Um es von überall lesen zu können benötigt man noch eine getter-Methode."
+            "Das Feld 'wert' wird mit private deklariert. So ist es nur innerhalb der Beispielklasse lesbar und schreibbar. Um es von \u00fcberall lesen zu k\u00f6nnen ben\u00f6tigt man noch eine getter-Methode."
         },
         {
           "text":
@@ -1137,27 +1164,27 @@
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "In der Beispielklasse die getter-Methode mit dem Schutzattribut 'private' schreiben. Die setter-Methode in der gleichen Klasse mit 'public' schreiben."
+            "In der Beispielklasse die getter-Methode mit dem Schutzattribut private schreiben. Die setter-Methode in der gleichen Klasse mit public schreiben."
         },
         {
           "text":
-            "wert ist schreibgeschutz d.h privarte. wir konnen eine getWert methode machen und dann diese methode von außen aufrufen.",
+            "wert ist schreibgeschutz d.h privarte. wir konnen eine getWert methode machen und dann diese methode von au\u00dfen aufrufen.",
           "aspects": [],
           "id": "46",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Das Feld 'wert' ist schreibgeschutz mittels 'private'. Wir konnen eine 'getWert' Methode machen und dann diese Methode von außen aufrufen."
+            "Das Feld 'wert' ist schreibgeschutz mittels private. Wir konnen eine 'getWert' Methode machen und dann diese Methode von au\u00dfen aufrufen."
         },
         {
           "text":
-            "private int wert --> dadurch ist sie nicht von außen zu ändern. public int getWert(){ return wert; die methode ist public, sodass man den wert von außen lesen kann",
+            "private int wert --> dadurch ist sie nicht von au\u00dfen zu \u00e4ndern. public int getWert(){ return wert; die methode ist public, sodass man den wert von au\u00dfen lesen kann",
           "aspects": [],
           "id": "47",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Durch 'private int wert' ist die Variable nicht von außen zu ändern. Man braucht eine 'public' 'getWert' Methode, sodass man den Wert von außen lesen kann."
+            "Durch private int 'wert' ist die Variable nicht von au\u00dfen zu \u00e4ndern. Man braucht eine public 'getWert' Methode, sodass man den Wert von au\u00dfen lesen kann."
         },
         {
           "text": "den Feld wert muss protected sein.",
@@ -1168,23 +1195,23 @@
           "correctionOrComment": "Das Feld 'wert' muss protected sein."
         },
         {
-          "text": "wert final setzen und mit public getWert() für andere lesbar machen",
+          "text": "wert final setzen und mit public getWert() f\u00fcr andere lesbar machen",
           "aspects": [],
           "id": "49",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Man muss 'wert' 'final' setzen und mit 'public' 'getWert()' für andere lesbar machen."
+            "Man muss 'wert' final setzen und mit public 'getWert()' f\u00fcr andere lesbar machen."
         },
         {
           "text":
-            "Zu erst muss das Schutzatribut \"\"private\"\" sein. Dannach kann man mit setter die Variable innerhalb der Klasse schreiben und mit getter überall zu lesen.",
+            "Zu erst muss das Schutzatribut \"\"private\"\" sein. Dannach kann man mit setter die Variable innerhalb der Klasse schreiben und mit getter \u00fcberall zu lesen.",
           "aspects": [],
           "id": "50",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Zuerst muss das Schutzattribut 'private' sein. Danach kann man mit einem Setter die Variable innerhalb der Klasse schreiben und mit einem Getter überall lesen."
+            "Zuerst muss das Schutzattribut private sein. Danach kann man mit einem Setter die Variable innerhalb der Klasse schreiben und mit einem Getter \u00fcberall lesen."
         },
         {
           "text": "mit einem Getter und keinem Setter",
@@ -1196,23 +1223,23 @@
         },
         {
           "text":
-            "Man will, dass \"\"wert\"\" schreibgeschütz auf andere abgeleitete Klassen ist. Deswegen macht man einen Konstruktoir, womit man in der Basisklasse diese Variable benutzen kann. Außerdem braucht man eine getter-methode, damit sie in anderen Klassen lesbar ist. Da privat vor \"\"wert\"\" gesetzt wird, ist es nun nur lesbar aber abgeleitet Klassen können es nicht überscxhreiben. Esa ist das Prinzip der Kapselung/ Schutz vor Überschreibung.",
+            "Man will, dass \"\"wert\"\" schreibgesch\u00fctz auf andere abgeleitete Klassen ist. Deswegen macht man einen Konstruktoir, womit man in der Basisklasse diese Variable benutzen kann. Au\u00dferdem braucht man eine getter-methode, damit sie in anderen Klassen lesbar ist. Da privat vor \"\"wert\"\" gesetzt wird, ist es nun nur lesbar aber abgeleitet Klassen k\u00f6nnen es nicht \u00fcberscxhreiben. Esa ist das Prinzip der Kapselung/ Schutz vor \u00dcberschreibung.",
           "aspects": [],
           "id": "52",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Man will, dass 'wert' schreibgeschütz auf andere abgeleitete Klassen ist. Deswegen macht man einen Konstruktoir, womit man in der Basisklasse diese Variable benutzen kann. Außerdem braucht man eine getter-Methode, damit sie in anderen Klassen lesbar ist. Da 'private' vor 'wert' gesetzt wird, ist es nun nur lesbar aber abgeleitet Klassen können es nicht überschreiben. Es ist das Prinzip der Kapselung und dem Schutz vor Überschreibung."
+            "Man will, dass 'wert' schreibgesch\u00fctz auf andere abgeleitete Klassen ist. Deswegen macht man einen Konstruktoir, womit man in der Basisklasse diese Variable benutzen kann. Au\u00dferdem braucht man eine getter-Methode, damit sie in anderen Klassen lesbar ist. Da private vor 'wert' gesetzt wird, ist es nun nur lesbar aber abgeleitet Klassen k\u00f6nnen es nicht \u00fcberschreiben. Es ist das Prinzip der Kapselung und dem Schutz vor \u00dcberschreibung."
         },
         {
           "text":
-            "Ich setzen \"\"wert\"\" private, dadurch ist es nur für die Klassse Beispielklasse schreibbar. Durch eine Getter Methode ist es überall lesbar.",
+            "Ich setzen \"\"wert\"\" private, dadurch ist es nur f\u00fcr die Klassse Beispielklasse schreibbar. Durch eine Getter Methode ist es \u00fcberall lesbar.",
           "aspects": [],
           "id": "53",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Ich setze 'wert' 'private'. Dadurch ist es nur für die Klassse Beispielklasse schreibbar. Durch eine getter-Methode ist es überall lesbar."
+            "Ich setze 'wert' private. Dadurch ist es nur f\u00fcr die Klassse Beispielklasse schreibbar. Durch eine getter-Methode ist es \u00fcberall lesbar."
         },
         {
           "text": "Mit dem Schutzattribut protected",
@@ -1220,7 +1247,7 @@
           "id": "54",
           "points": 0,
           "answerCategory": "missconception",
-          "correctionOrComment": "Das geht mit dem Schutzattribut 'protected'."
+          "correctionOrComment": "Das geht mit dem Schutzattribut protected."
         },
         {
           "text": "protected",
@@ -1228,17 +1255,17 @@
           "id": "55",
           "points": 0,
           "answerCategory": "missconception",
-          "correctionOrComment": "Das geht mit 'protected'."
+          "correctionOrComment": "Das geht mit protected."
         },
         {
           "text":
-            "Indem ich wert auf die Sichtbarkeit private lese, aber zusätzlich eine Methode getWert() implementiere (welche public ist). getWert() gibt dann die variable wert zurück (mit return) damit jeder sie auslesen kann.",
+            "Indem ich wert auf die Sichtbarkeit private lese, aber zus\u00e4tzlich eine Methode getWert() implementiere (welche public ist). getWert() gibt dann die variable wert zur\u00fcck (mit return) damit jeder sie auslesen kann.",
           "aspects": [],
           "id": "56",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Das geht, indem ich 'wert' auf die Sichtbarkeit 'private' setze, aber zusätzlich eine Methode 'getWert()' implementiere, welche 'public' ist. 'getWert()' gibt dann die Variable 'wert' zurück, damit jeder sie auslesen kann."
+            "Das geht, indem ich 'wert' auf die Sichtbarkeit private setze, aber zus\u00e4tzlich eine Methode 'getWert()' implementiere, welche public ist. 'getWert()' gibt dann die Variable 'wert' zur\u00fcck, damit jeder sie auslesen kann."
         }
       ]
     },
@@ -1246,10 +1273,26 @@
       "id": "5",
       "title": "Vererbung - Schnittstellen und abstrakte Klassen",
       "text":
-        "Sie möchten eine als 'private' deklarierte Variable und mehrere implementierte Methoden vererben. Verwenden Sie eine Schnittstelle oder eine abstrakte Klasse? Begründen Sie Ihre Antwort.",
-      "type": "choice, reason",
-      "referenceAnswer":
-        "Man muss eine abstrakte Klasse verwenden, weil Schnittstellen keine implementierten Methoden bereitstellen können.",
+        "Sie m\u00f6chten eine als private deklarierte Variable und mehrere implementierte Methoden vererben. Verwenden Sie eine Schnittstelle oder eine abstrakte Klasse? Begr\u00fcnden Sie Ihre Antwort.",
+      "type": "reason",
+      "stopwordExceptions": ["abstrakt", "Klasse", "Schnittstelle", "implementieren", "Methode"],
+      "referenceAnswer": {
+        "text":
+          "Man muss eine abstrakte Klasse verwenden, weil Schnittstellen keine implementierten Methoden bereitstellen k\u00f6nnen.",
+        "answerCategory": "correct",
+        "assignedWeights": {
+          "müssen": 0.4,
+          "abstrakt": 1,
+          "Klasse": 1,
+          "weil": 1,
+          "Schnittstelle": 0.8,
+          "keine": 0.8,
+          "implementieren": 0.8,
+          "Methode": 0.8,
+          "bereitstellen": 0.1,
+          "können": 0.6
+        }
+      },
       "answersAnnotation": [
         {
           "text":
@@ -1259,7 +1302,7 @@
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Abstrakte Klassen vererben nur implemetierte Mehtoden. Schnittstellen stellen keine implementierten Methoden bereit. Abstrakte klassen werden durch 'abstract class' deklariert."
+            "Abstrakte Klassen vererben nur implemetierte Mehtoden. Schnittstellen stellen keine implementierten Methoden bereit. Abstrakte klassen werden durch abstract class deklariert."
         },
         {
           "text":
@@ -1282,23 +1325,23 @@
         },
         {
           "text":
-            "Schnittstellen vererben keine implementierten Methoden, doch abstrakte Klassen können, wenn sie vereerbt werden implementierte Methoden vererben. Normalerweise müssen sie immer später implementiert werden.",
+            "Schnittstellen vererben keine implementierten Methoden, doch abstrakte Klassen k\u00f6nnen, wenn sie vereerbt werden implementierte Methoden vererben. Normalerweise m\u00fcssen sie immer sp\u00e4ter implementiert werden.",
           "aspects": [],
           "id": "4",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Schnittstellen vererben keine implementierten Methoden. Abstrakte Klassen können, wenn sie vereerbt werden, implementierte Methoden vererben. Normalerweise müssen sie immer später implementiert werden."
+            "Schnittstellen vererben keine implementierten Methoden. Abstrakte Klassen k\u00f6nnen, wenn sie vereerbt werden, implementierte Methoden vererben. Normalerweise m\u00fcssen sie immer sp\u00e4ter implementiert werden."
         },
         {
           "text":
-            "Basisklassen vererben nur implementierte Methoden, Schnittstellen stellen keine implementierten Methoden bereit. manche Methoden brauchen eine Implementierung gleichzeitig können manche Methoden in der Basisklasse nicht implementiert sein. eine abstrakte Klasse kann unimplementierte Methoden enthalten markiert durch abstract. dacher würde ich eine abstrakte Kalsse wählen.",
+            "Basisklassen vererben nur implementierte Methoden, Schnittstellen stellen keine implementierten Methoden bereit. manche Methoden brauchen eine Implementierung gleichzeitig k\u00f6nnen manche Methoden in der Basisklasse nicht implementiert sein. eine abstrakte Klasse kann unimplementierte Methoden enthalten markiert durch abstract. dacher w\u00fcrde ich eine abstrakte Kalsse w\u00e4hlen.",
           "aspects": [],
           "id": "5",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Basisklassen vererben nur implementierte Methoden. Schnittstellen stellen keine implementierten Methoden bereit. Manche Methoden brauchen eine Implementierung. Gleichzeitig können manche Methoden in der Basisklasse nicht implementiert sein. Eine abstrakte Klasse kann unimplementierte Methoden enthalten. Sie wird markiert durch 'abstract'. Daher würde ich eine abstrakte Klasse wählen."
+            "Basisklassen vererben nur implementierte Methoden. Schnittstellen stellen keine implementierten Methoden bereit. Manche Methoden brauchen eine Implementierung. Gleichzeitig k\u00f6nnen manche Methoden in der Basisklasse nicht implementiert sein. Eine abstrakte Klasse kann unimplementierte Methoden enthalten. Sie wird markiert durch abstract. Daher w\u00fcrde ich eine abstrakte Klasse w\u00e4hlen."
         },
         {
           "text": "-",
@@ -1367,13 +1410,13 @@
         },
         {
           "text":
-            "eine abstrakte klasse, da in einer schnittstelle die methoden nicht implementiert sein dürfen",
+            "eine abstrakte klasse, da in einer schnittstelle die methoden nicht implementiert sein d\u00fcrfen",
           "aspects": [],
           "id": "13",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Man verwendet eine abstrakte Klasse, da in einer Schnittstelle die Methoden nicht implementiert sein dürfen."
+            "Man verwendet eine abstrakte Klasse, da in einer Schnittstelle die Methoden nicht implementiert sein d\u00fcrfen."
         },
         {
           "text": "abstrakte Klasse. Weil sie private ist und sonst nicht verwendet werden kann.",
@@ -1382,26 +1425,26 @@
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Man verwendet eine abstrakte Klasse, weil sie 'private' ist und sonst nicht verwendet werden kann."
+            "Man verwendet eine abstrakte Klasse, weil sie private ist und sonst nicht verwendet werden kann."
         },
         {
           "text":
-            "Bereits implementierte Methoden können nicht mit einer abstrakten Klasse vererbt werden. Daher Schnittstelle.",
+            "Bereits implementierte Methoden k\u00f6nnen nicht mit einer abstrakten Klasse vererbt werden. Daher Schnittstelle.",
           "aspects": [],
           "id": "15",
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Bereits implementierte Methoden können nicht mit einer abstrakten Klasse vererbt werden. Daher verwendet man eine Schnittstelle."
+            "Bereits implementierte Methoden k\u00f6nnen nicht mit einer abstrakten Klasse vererbt werden. Daher verwendet man eine Schnittstelle."
         },
         {
-          "text": "eine abstrakte Klasse, da Schnittstellen keine Datenfelder zurück geben.",
+          "text": "eine abstrakte Klasse, da Schnittstellen keine Datenfelder zur\u00fcck geben.",
           "aspects": [],
           "id": "16",
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Man verwendet eine abstrakte Klasse, da Schnittstellen keine Datenfelder zurückgeben."
+            "Man verwendet eine abstrakte Klasse, da Schnittstellen keine Datenfelder zur\u00fcckgeben."
         },
         {
           "text":
@@ -1415,13 +1458,13 @@
         },
         {
           "text":
-            "Man verwendet eine abstrakte Klasse, da die Schnittstellen nur Konstanten bereitstellen können und die Methoden bei abstrakten Klassen sowohl implementiert, als auch unimplementiert sein können.",
+            "Man verwendet eine abstrakte Klasse, da die Schnittstellen nur Konstanten bereitstellen k\u00f6nnen und die Methoden bei abstrakten Klassen sowohl implementiert, als auch unimplementiert sein k\u00f6nnen.",
           "aspects": [],
           "id": "18",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Man verwendet eine abstrakte Klasse, da die Schnittstellen nur Konstanten bereitstellen können und die Methoden bei abstrakten Klassen sowohl implementiert, als auch unimplementiert sein können."
+            "Man verwendet eine abstrakte Klasse, da die Schnittstellen nur Konstanten bereitstellen k\u00f6nnen und die Methoden bei abstrakten Klassen sowohl implementiert, als auch unimplementiert sein k\u00f6nnen."
         },
         {
           "text": "Eine abstrakte Klasse, da nur diese Datenfelder vererben kann.",
@@ -1434,13 +1477,13 @@
         },
         {
           "text":
-            "Es sollte eine abstrakte Klasse verwendet werden. Die abstrakte Klasse füllt die Lücke zwischen der Basisklasse und der Schnittstelle. Mit einer Schnittstelle lassen sich außerdem keine Variablen und auch keine implementierte Methoden vererben.",
+            "Es sollte eine abstrakte Klasse verwendet werden. Die abstrakte Klasse f\u00fcllt die L\u00fccke zwischen der Basisklasse und der Schnittstelle. Mit einer Schnittstelle lassen sich au\u00dferdem keine Variablen und auch keine implementierte Methoden vererben.",
           "aspects": [],
           "id": "20",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Es sollte eine abstrakte Klasse verwendet werden. Die abstrakte Klasse füllt die Lücke zwischen der Basisklasse und der Schnittstelle. Mit einer Schnittstelle lassen sich außerdem keine Variablen und auch keine implementierte Methoden vererben."
+            "Es sollte eine abstrakte Klasse verwendet werden. Die abstrakte Klasse f\u00fcllt die L\u00fccke zwischen der Basisklasse und der Schnittstelle. Mit einer Schnittstelle lassen sich au\u00dferdem keine Variablen und auch keine implementierte Methoden vererben."
         },
         {
           "text": "Schnittstelle",
@@ -1452,33 +1495,33 @@
         },
         {
           "text":
-            "Man verwendet eine Schnittstelle da abstrakte Klassen unimplementierte methoden enthalten können.",
+            "Man verwendet eine Schnittstelle da abstrakte Klassen unimplementierte methoden enthalten k\u00f6nnen.",
           "aspects": [],
           "id": "22",
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Man verwendet eine Schnittstelle, da abstrakte Klassen unimplementierte Methoden enthalten können."
+            "Man verwendet eine Schnittstelle, da abstrakte Klassen unimplementierte Methoden enthalten k\u00f6nnen."
         },
         {
           "text":
-            "Die Verwendung einer abstrakten Klasse ist hier sinnvoller, da die bereits implementierten Methoden erhalten bleiben sollten, was bei einer Schnittstelle nicht möglich ist.",
+            "Die Verwendung einer abstrakten Klasse ist hier sinnvoller, da die bereits implementierten Methoden erhalten bleiben sollten, was bei einer Schnittstelle nicht m\u00f6glich ist.",
           "aspects": [],
           "id": "23",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Die Verwendung einer abstrakten Klasse ist hier sinnvoller, da die bereits implementierten Methoden erhalten bleiben, was bei einer Schnittstelle nicht möglich ist."
+            "Die Verwendung einer abstrakten Klasse ist hier sinnvoller, da die bereits implementierten Methoden erhalten bleiben, was bei einer Schnittstelle nicht m\u00f6glich ist."
         },
         {
           "text":
-            "Ich verwende eine abstrakte Klasse, da man in einer Schnittstelle Methoden nur deklarieren kann und noch nicht implementieren. Außerdem kann man in einer Schnittstelle nur Konstanten verwenden.",
+            "Ich verwende eine abstrakte Klasse, da man in einer Schnittstelle Methoden nur deklarieren kann und noch nicht implementieren. Au\u00dferdem kann man in einer Schnittstelle nur Konstanten verwenden.",
           "aspects": [],
           "id": "24",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Ich verwende eine abstrakte Klasse, da man in einer Schnittstelle Methoden nur deklarieren kann und noch nicht implementieren. Außerdem kann man in einer Schnittstelle nur Konstanten verwenden."
+            "Ich verwende eine abstrakte Klasse, da man in einer Schnittstelle Methoden nur deklarieren kann und noch nicht implementieren. Au\u00dferdem kann man in einer Schnittstelle nur Konstanten verwenden."
         },
         {
           "text":
@@ -1492,13 +1535,13 @@
         },
         {
           "text":
-            "Ich verwende eine abstrakte Klasse, da mit dieser problemlos Datenfelder vererbt werden können die nicht konstant sind.",
+            "Ich verwende eine abstrakte Klasse, da mit dieser problemlos Datenfelder vererbt werden k\u00f6nnen die nicht konstant sind.",
           "aspects": [],
           "id": "26",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Ich verwende eine abstrakte Klasse, da mit dieser problemlos Datenfelder vererbt werden können, die nicht konstant sind."
+            "Ich verwende eine abstrakte Klasse, da mit dieser problemlos Datenfelder vererbt werden k\u00f6nnen, die nicht konstant sind."
         },
         {
           "text":
@@ -1512,13 +1555,13 @@
         },
         {
           "text":
-            "Abstrakte Klassen. Diese Klassen sind spezielle Klassen die viele abstrakte Methoden beinhalten. Entweder abgeleitete Klassen müssen abstract sein oder die abstrakte Methoden sind in dem Fall implementiert.",
+            "Abstrakte Klassen. Diese Klassen sind spezielle Klassen die viele abstrakte Methoden beinhalten. Entweder abgeleitete Klassen m\u00fcssen abstract sein oder die abstrakte Methoden sind in dem Fall implementiert.",
           "aspects": [],
           "id": "28",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Man verwendet abstrakte Klassen. Diese Klassen sind spezielle Klassen, die viele abstrakte Methoden beinhalten. Entweder müssen abgeleitete Klassen 'abstract' sein oder die abstrakte Methoden sind in dem Fall implementiert."
+            "Man verwendet abstrakte Klassen. Diese Klassen sind spezielle Klassen, die viele abstrakte Methoden beinhalten. Entweder m\u00fcssen abgeleitete Klassen abstract sein oder die abstrakte Methoden sind in dem Fall implementiert."
         },
         {
           "text": "abstrakte Klasse",
@@ -1550,43 +1593,43 @@
         },
         {
           "text":
-            "eine anstrakte Klassse denn abtrakte Klassen können implementiere Methoden enthalten und wenn eine abtrakte Klasse abgeleitet wird, müssen die abtrakt markierten Methoden implementiert werden. um eine private deklarierte Variable zu vererben braucht man auf jeden fall getter und setter. Deshalb verwendet man eine abtrakte Klasse",
+            "eine anstrakte Klassse denn abtrakte Klassen k\u00f6nnen implementiere Methoden enthalten und wenn eine abtrakte Klasse abgeleitet wird, m\u00fcssen die abtrakt markierten Methoden implementiert werden. um eine private deklarierte Variable zu vererben braucht man auf jeden fall getter und setter. Deshalb verwendet man eine abtrakte Klasse",
           "aspects": [],
           "id": "32",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Man verwendet eine anstrakte Klassse, denn abtrakte Klassen können implementiere Methoden enthalten und wenn eine abtrakte Klasse abgeleitet wird, müssen die abtrakt markierten Methoden implementiert werden. Um eine 'private' deklarierte Variable zu vererben braucht man auf jeden fall Getter und Setter. Deshalb verwendet man eine abtrakte Klasse."
+            "Man verwendet eine anstrakte Klassse, denn abtrakte Klassen k\u00f6nnen implementiere Methoden enthalten und wenn eine abtrakte Klasse abgeleitet wird, m\u00fcssen die abtrakt markierten Methoden implementiert werden. Um eine private deklarierte Variable zu vererben braucht man auf jeden fall Getter und Setter. Deshalb verwendet man eine abtrakte Klasse."
         },
         {
           "text":
-            "eine abstrakte weil die basis klassen können datenfelder bereitstellen aber die schnittstellen nur konstanten Baisklassen vererben nur implementierte methoden. PS man kann keine konkrete objekte erzeugen.",
+            "eine abstrakte weil die basis klassen k\u00f6nnen datenfelder bereitstellen aber die schnittstellen nur konstanten Baisklassen vererben nur implementierte methoden. PS man kann keine konkrete objekte erzeugen.",
           "aspects": [],
           "id": "33",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Man verwendet eine abstrakte Klasse, weil die Basisklassen Datenfelder bereitstellen können Schnittstellen aber  nur Konstanten. Baisklassen vererben nur implementierte Methoden."
+            "Man verwendet eine abstrakte Klasse, weil die Basisklassen Datenfelder bereitstellen k\u00f6nnen Schnittstellen aber  nur Konstanten. Baisklassen vererben nur implementierte Methoden."
         },
         {
           "text":
-            "Ich verwende eine abstrakte Klasse: Impl. Methoden können verwendet werden. Bei Schnittstellen können Methoden nicht Impl.",
+            "Ich verwende eine abstrakte Klasse: Impl. Methoden k\u00f6nnen verwendet werden. Bei Schnittstellen k\u00f6nnen Methoden nicht Impl.",
           "aspects": [],
           "id": "34",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Ich verwende eine abstrakte Klasse, weil dort implementierte Methoden verwendet werden können. Bei Schnittstellen können Methoden nicht implementiert vererbt werden."
+            "Ich verwende eine abstrakte Klasse, weil dort implementierte Methoden verwendet werden k\u00f6nnen. Bei Schnittstellen k\u00f6nnen Methoden nicht implementiert vererbt werden."
         },
         {
           "text":
-            "mit Schnittstelle werden wir \"\"Implement\"\"benutzen ,weil die schnittstelle alle benötige Informationen beihaltet. Mit Abstrakte Klassen auf grund der kapselung von Intanzen.",
+            "mit Schnittstelle werden wir \"\"Implement\"\"benutzen ,weil die schnittstelle alle ben\u00f6tige Informationen beihaltet. Mit Abstrakte Klassen auf grund der kapselung von Intanzen.",
           "aspects": [],
           "id": "35",
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Wir werden Schnittstellen mit 'implements' benutzen, weil die Schnittstelle alle benötigten Informationen beinhaltet."
+            "Wir werden Schnittstellen mit implements benutzen, weil die Schnittstelle alle ben\u00f6tigten Informationen beinhaltet."
         },
         {
           "text":
@@ -1596,7 +1639,7 @@
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Ich verwende eine abstrakte Klasse, da diese implementierte Methoden enthalten darf und 'private' Variablen erlaubt sind. Selbst wenn manche Methoden mit 'abstract' gekennzeichnet sind, ist es erlaubt die abstrakte Klasse zu vererben, wenn alle mit 'abstract' gekennzeichneten Methoden implementiert sind. Wenn es eine abstrakte Methode gibt, die nicht implementiert ist, muss die abgeleitete Klasse auch 'abstract' sein, was in diesem Fall aber nicht so ist."
+            "Ich verwende eine abstrakte Klasse, da diese implementierte Methoden enthalten darf und private Variablen erlaubt sind. Selbst wenn manche Methoden mit abstract gekennzeichnet sind, ist es erlaubt die abstrakte Klasse zu vererben, wenn alle mit abstract gekennzeichneten Methoden implementiert sind. Wenn es eine abstrakte Methode gibt, die nicht implementiert ist, muss die abgeleitete Klasse auch abstract sein, was in diesem Fall aber nicht so ist."
         },
         {
           "text":
@@ -1606,17 +1649,17 @@
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Ich verwende eine abstrakte Klasse, da ich Methoden implementieren will und eine Schnittstelle keine Implementierung erlaubt. Die 'private' Variable ist auch ein Hinweis darauf, dass man auf sie mit einem Getter zugreifen muss."
+            "Ich verwende eine abstrakte Klasse, da ich Methoden implementieren will und eine Schnittstelle keine Implementierung erlaubt. Die private Variable ist auch ein Hinweis darauf, dass man auf sie mit einem Getter zugreifen muss."
         },
         {
           "text":
-            "Man verwendet dafür eine abstrakte Klasse. Da abstrakte Klassen nicht nur Mehtoden implementiern können sondern auch Datenfelder.",
+            "Man verwendet daf\u00fcr eine abstrakte Klasse. Da abstrakte Klassen nicht nur Mehtoden implementiern k\u00f6nnen sondern auch Datenfelder.",
           "aspects": [],
           "id": "38",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Man verwendet dafür eine abstrakte Klasse, da abstrakte Klassen nicht nur Mehtoden implementiern können sondern auch Datenfelder."
+            "Man verwendet daf\u00fcr eine abstrakte Klasse, da abstrakte Klassen nicht nur Mehtoden implementiern k\u00f6nnen sondern auch Datenfelder."
         },
         {
           "text":
@@ -1630,23 +1673,23 @@
         },
         {
           "text":
-            "eine abstrakte Klasse da Schnittstellen eher für das implementieren für Methoden zuständig sind.",
+            "eine abstrakte Klasse da Schnittstellen eher f\u00fcr das implementieren f\u00fcr Methoden zust\u00e4ndig sind.",
           "aspects": [],
           "id": "40",
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Man verwendet eine abstrakte Klasse, da Schnittstellen eher für das implementieren von Methoden zuständig sind."
+            "Man verwendet eine abstrakte Klasse, da Schnittstellen eher f\u00fcr das implementieren von Methoden zust\u00e4ndig sind."
         },
         {
           "text":
-            "Man nimmt eine abstrakte Klasse, da Schnittstellen nur Konstanten vererben können.",
+            "Man nimmt eine abstrakte Klasse, da Schnittstellen nur Konstanten vererben k\u00f6nnen.",
           "aspects": [],
           "id": "41",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Man nimmt eine abstrakte Klasse, da Schnittstellen nur Konstanten vererben können."
+            "Man nimmt eine abstrakte Klasse, da Schnittstellen nur Konstanten vererben k\u00f6nnen."
         },
         {
           "text": "Eine Schnittstelle, bei einer abstrakten Klasse darf man nicht inistanzieieren.",
@@ -1659,23 +1702,23 @@
         },
         {
           "text":
-            "Eine abstrakte Klasse, da Methoden in einer Schnittstelle nicht implementiert sein dürfen.",
+            "Eine abstrakte Klasse, da Methoden in einer Schnittstelle nicht implementiert sein d\u00fcrfen.",
           "aspects": [],
           "id": "43",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Man nimmt eine abstrakte Klasse, da Methoden in einer Schnittstelle nicht implementiert sein dürfen."
+            "Man nimmt eine abstrakte Klasse, da Methoden in einer Schnittstelle nicht implementiert sein d\u00fcrfen."
         },
         {
           "text":
-            "Abstrakte Klassen, denn sie können bereits implementierte Methoden beinhalten, Schnittstellen sind nicht implementiert.",
+            "Abstrakte Klassen, denn sie k\u00f6nnen bereits implementierte Methoden beinhalten, Schnittstellen sind nicht implementiert.",
           "aspects": [],
           "id": "44",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Man verwendet abstrakte Klassen, denn sie können bereits implementierte Methoden beinhalten. Methoden in Schnittstellen sind nicht implementiert."
+            "Man verwendet abstrakte Klassen, denn sie k\u00f6nnen bereits implementierte Methoden beinhalten. Methoden in Schnittstellen sind nicht implementiert."
         },
         {
           "text": "-",
@@ -1700,7 +1743,7 @@
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Man nimmt eine abstrakte Klasse, weil es um mehrere Methoden geht die 'private' seien sollen."
+            "Man nimmt eine abstrakte Klasse, weil es um mehrere Methoden geht die private seien sollen."
         },
         {
           "text": "Schnittstelle",
@@ -1718,17 +1761,17 @@
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Man nimmt eine abstrakte Klasse, weil diese auch auf 'private' deklarierte Variablen und Methoden zugreifen kann."
+            "Man nimmt eine abstrakte Klasse, weil diese auch auf private deklarierte Variablen und Methoden zugreifen kann."
         },
         {
           "text":
-            "Man verwendet eine abstrakte Klasse, da Schnittstellen keine implementierte Methoden zur Verfügung stellen.",
+            "Man verwendet eine abstrakte Klasse, da Schnittstellen keine implementierte Methoden zur Verf\u00fcgung stellen.",
           "aspects": [],
           "id": "50",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Man verwendet eine abstrakte Klasse, da Schnittstellen keine implementierten Methoden zur Verfügung stellen."
+            "Man verwendet eine abstrakte Klasse, da Schnittstellen keine implementierten Methoden zur Verf\u00fcgung stellen."
         },
         {
           "text": "-",
@@ -1748,12 +1791,12 @@
             "Man nimmt eine abstrakte Klasse, weil die Unterklassen von ihr erben."
         },
         {
-          "text": "Ich würde eine Schnittstelle benutzen.",
+          "text": "Ich w\u00fcrde eine Schnittstelle benutzen.",
           "aspects": [],
           "id": "53",
           "points": 0,
           "answerCategory": "guessing",
-          "correctionOrComment": "Ich würde eine Schnittstelle benutzen."
+          "correctionOrComment": "Ich w\u00fcrde eine Schnittstelle benutzen."
         },
         {
           "text":
@@ -1789,20 +1832,42 @@
       "id": "7",
       "title": "While-Schleife",
       "text":
-        "Wie sorgen Sie dafür, dass Ihre while-Schleife nicht endlos läuft? Nennen Sie mindestens eine Möglichkeit.",
+        "Wie sorgen Sie daf\u00fcr, dass Ihre while-Schleife nicht endlos l\u00e4uft? Nennen Sie mindestens eine M\u00f6glichkeit.",
       "type": "procedure",
-      "referenceAnswer":
-        "Man kann sicherstellen, dass die Bedingung der while-Schleife durch Veränderungen im Schleifenrumpf 'false' wird, die Schleifenausführung mittels 'break' abbrechen oder die aktuell ausgeführte Methode mit 'return' beenden.",
+      "referenceAnswer": {
+        "text":
+          "Man kann sicherstellen, dass die Bedingung der while-Schleife durch Ver\u00e4nderungen im Schleifenrumpf false wird, die Schleifenausf\u00fchrung mittels break abbrechen oder die aktuell ausgef\u00fchrte Methode mit return beenden.",
+        "answerCategory": "correct",
+        "assignedWeights": {
+          "können": 0.4,
+          "sicherstellen": 0.1,
+          "Bedingung": 0.3,
+          "Veränderung": 0.3,
+          "Schleifenrumpf": 0.3,
+          "false": 0.3,
+          "werden": 0.3,
+          "Schleifenausführung": 0.1,
+          "mittels": 0.1,
+          "break": 0.6,
+          "abbrechen": 0.4,
+          "oder": 0.5,
+          "aktuell": 0.1,
+          "ausgeführt": 0.2,
+          "Methode": 0.1,
+          "return": 0.6,
+          "beenden": 0.3
+        }
+      },
       "answersAnnotation": [
         {
           "text":
-            "man könnte die while schleife mit \"\"break\"\" unterbrechen und mit return weiterführen.",
+            "man k\u00f6nnte die while schleife mit \"\"break\"\" unterbrechen und mit return weiterf\u00fchren.",
           "aspects": [],
           "id": "1",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Man könnte die while-Schleife mit 'break' unterbrechen und mit 'return' weiterführen."
+            "Man k\u00f6nnte die while-Schleife mit break unterbrechen und mit return weiterf\u00fchren."
         },
         {
           "text": "Die Schleife kann mit \"\"break\"\" unterbrochen werden.",
@@ -1810,17 +1875,17 @@
           "id": "2",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Die Schleife kann mit 'break' unterbrochen werden."
+          "correctionOrComment": "Die Schleife kann mit break unterbrochen werden."
         },
         {
           "text":
-            "return : beendet aktuelle Methode break : verlässt Schleife an dieser Stelle continue : Programm springt zjm Schleifenkopf",
+            "return : beendet aktuelle Methode break : verl\u00e4sst Schleife an dieser Stelle continue : Programm springt zjm Schleifenkopf",
           "aspects": [],
           "id": "3",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "'return' beendet die aktuelle Methode. 'break' verlässt Schleife an dieser Stelle. Bei 'continue' springt das Programm zum Schleifenkopf."
+            "return beendet die aktuelle Methode. break verl\u00e4sst Schleife an dieser Stelle. Bei continue springt das Programm zum Schleifenkopf."
         },
         {
           "text": "break;",
@@ -1832,13 +1897,13 @@
         },
         {
           "text":
-            "Mit einem break return oder continue, damit sie entweder zum Anfang zurückgeht(break) zur Fragestellung zurückgeht (continue) oder abbricht (return).",
+            "Mit einem break return oder continue, damit sie entweder zum Anfang zur\u00fcckgeht(break) zur Fragestellung zur\u00fcckgeht (continue) oder abbricht (return).",
           "aspects": [],
           "id": "5",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Mit einem 'break', 'return' oder 'continue', damit sie entweder zum Anfang zurückgeht (break), zur Fragestellung zurückgeht (continue) oder abbricht (return)."
+            "Mit einem break, return oder continue, damit sie entweder zum Anfang zur\u00fcckgeht (break), zur Fragestellung zur\u00fcckgeht (continue) oder abbricht (return)."
         },
         {
           "text":
@@ -1848,7 +1913,7 @@
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "In der while-Schleife soll die Bedingung nich immer true ergeben. Dann ist sichergestellt dass wenn sie false wird, dass man aus dem Block rauskommt. Oder man kann am Ende des Blocks ein 'break' setzen. Dann kommt man automatisch aus der Schleife raus."
+            "In der while-Schleife soll die Bedingung nich immer true ergeben. Dann ist sichergestellt dass wenn sie false wird, dass man aus dem Block rauskommt. Oder man kann am Ende des Blocks ein break setzen. Dann kommt man automatisch aus der Schleife raus."
         },
         {
           "text":
@@ -1858,17 +1923,17 @@
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Das geht mit einer Abfrage (Bedingung), wenn  die Schleife zum Beispiel 3 mal durchlaufen soll. Dann benutzt man einfach 'break' um die Schleife zu beenden."
+            "Das geht mit einer Abfrage (Bedingung), wenn  die Schleife zum Beispiel 3 mal durchlaufen soll. Dann benutzt man einfach break um die Schleife zu beenden."
         },
         {
           "text":
-            "- Schleife verlassen mit break - Bedingung wird durch increment Operator erfüllt",
+            "- Schleife verlassen mit break - Bedingung wird durch increment Operator erf\u00fcllt",
           "aspects": [],
           "id": "8",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Die Schleife kann man verlassen mit 'break'. Die Bedingung wird durch den 'increment' Operator erfüllt."
+            "Die Schleife kann man verlassen mit break. Die Bedingung wird durch den Inkrement Operator erf\u00fcllt."
         },
         {
           "text": "return break continue",
@@ -1876,17 +1941,17 @@
           "id": "9",
           "points": 0,
           "answerCategory": "partially_correct",
-          "correctionOrComment": "Das geht mit 'return', 'break' und 'continue'."
+          "correctionOrComment": "Das geht mit return, break und continue."
         },
         {
           "text":
-            "return, beendet sie Schleife. break bringt die Schleife wieder ganz nach vorne. continue bringt die Schleife wieder zurück zu der Frage.",
+            "return, beendet sie Schleife. break bringt die Schleife wieder ganz nach vorne. continue bringt die Schleife wieder zur\u00fcck zu der Frage.",
           "aspects": [],
           "id": "10",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "'return' beendet die Schleife. 'break' bringt die Schleife wieder ganz nach vorne. 'continue' bringt die Schleife wieder zurück zu der Frage."
+            "return beendet die Schleife. break bringt die Schleife wieder ganz nach vorne. continue bringt die Schleife wieder zur\u00fcck zu der Frage."
         },
         {
           "text": "Break oder return",
@@ -1894,7 +1959,7 @@
           "id": "11",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Das geht mit 'break' oder 'return'."
+          "correctionOrComment": "Das geht mit break oder return."
         },
         {
           "text": "Die while-Schleife kann mit \"\"break\"\" unterbrochen werden.",
@@ -1902,7 +1967,7 @@
           "id": "12",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Die while-Schleife kann mit 'break' unterbrochen werden."
+          "correctionOrComment": "Die while-Schleife kann mit break unterbrochen werden."
         },
         {
           "text": "verlassen durch break",
@@ -1910,16 +1975,17 @@
           "id": "13",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Das verlassen ist durch 'break' möglich."
+          "correctionOrComment": "Das verlassen ist durch break m\u00f6glich."
         },
         {
           "text":
-            "wir können am ende \"\"Break\"\" des while schleife blocks \"\"break\"\" schreiben.",
+            "wir k\u00f6nnen am ende \"\"Break\"\" des while schleife blocks \"\"break\"\" schreiben.",
           "aspects": [],
           "id": "14",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Wir können am ende des while-Schleife Blocks 'break' schreiben."
+          "correctionOrComment":
+            "Wir k\u00f6nnen am ende des while-Schleife Blocks break schreiben."
         },
         {
           "text": "Mit break kann man eine while-Schleife unterbrechen",
@@ -1927,15 +1993,15 @@
           "id": "15",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Mit 'break' kann man eine while-Schleife unterbrechen."
+          "correctionOrComment": "Mit break kann man eine while-Schleife unterbrechen."
         },
         {
-          "text": "Es kann mit 'break' unterbrochen werden",
+          "text": "Es kann mit break unterbrochen werden",
           "aspects": [],
           "id": "16",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Es kann mit 'break' unterbrochen werden."
+          "correctionOrComment": "Es kann mit break unterbrochen werden."
         },
         {
           "text":
@@ -1945,17 +2011,17 @@
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Aus der Schleife wird mit 'break' ausgebrochen. Mit 'continue' kann man zum Schleifenkopf springen."
+            "Aus der Schleife wird mit break ausgebrochen. Mit continue kann man zum Schleifenkopf springen."
         },
         {
           "text":
-            "Um eine while-Schleife zu beenden verwendet man den Befehl break, sobald der Befehl break ausgeführt wird springt das Programm aus der while-Schleife. Alternativ könnte man auch den Befehl return verwenden, um die Schleife zu beenden müsste jedoch hinter dem reurn nichts stehen, so dass nichts ausgegeben wird",
+            "Um eine while-Schleife zu beenden verwendet man den Befehl break, sobald der Befehl break ausgef\u00fchrt wird springt das Programm aus der while-Schleife. Alternativ k\u00f6nnte man auch den Befehl return verwenden, um die Schleife zu beenden m\u00fcsste jedoch hinter dem reurn nichts stehen, so dass nichts ausgegeben wird",
           "aspects": [],
           "id": "18",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Um eine while-Schleife zu beenden verwendet man den Befehl 'break'. Sobald der Befehl 'break' ausgeführt wird, springt das Programm aus der while-Schleife. Alternativ könnte man auch den Befehl 'return' verwenden, um die Schleife zu beenden. Es müsste jedoch hinter dem return nichts stehen, sodass nichts ausgegeben wird."
+            "Um eine while-Schleife zu beenden verwendet man den Befehl break. Sobald der Befehl break ausgef\u00fchrt wird, springt das Programm aus der while-Schleife. Alternativ k\u00f6nnte man auch den Befehl return verwenden, um die Schleife zu beenden. Es m\u00fcsste jedoch hinter dem return nichts stehen, sodass nichts ausgegeben wird."
         },
         {
           "text": "break, return",
@@ -1963,7 +2029,7 @@
           "id": "19",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Das geht mit 'break' und 'return'."
+          "correctionOrComment": "Das geht mit break und return."
         },
         {
           "text":
@@ -1973,7 +2039,7 @@
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Sie wird beendet, wenn die Bedingung 'false' liefert oder wenn ein 'break' oder 'return' spezifiziert ist."
+            "Sie wird beendet, wenn die Bedingung false liefert oder wenn ein break oder return spezifiziert ist."
         },
         {
           "text": "-",
@@ -1989,27 +2055,27 @@
           "id": "22",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Das geht mit 'break' oder 'return'."
+          "correctionOrComment": "Das geht mit break oder return."
         },
         {
           "text":
-            "Nach der Zeile mit der Methode, kann der befehl break eingefügt werden. Unter diesen Umständen bricht die Schleife ab und das Programm wird nach der Schleife weiter ausgeführt.",
+            "Nach der Zeile mit der Methode, kann der befehl break eingef\u00fcgt werden. Unter diesen Umst\u00e4nden bricht die Schleife ab und das Programm wird nach der Schleife weiter ausgef\u00fchrt.",
           "aspects": [],
           "id": "23",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Nach der Zeile mit der Methode, kann der Befehl 'break' eingefügt werden. Unter diesen Umständen bricht die Schleife ab und das Programm wird nach der Schleife weiter ausgeführt."
+            "Nach der Zeile mit der Methode, kann der Befehl break eingef\u00fcgt werden. Unter diesen Umst\u00e4nden bricht die Schleife ab und das Programm wird nach der Schleife weiter ausgef\u00fchrt."
         },
         {
           "text":
-            "Mithilfe des break-Befehls kann eine Endlosschleife verlassen werden. Auch mit dem return-Befehl ist dies möglich.",
+            "Mithilfe des break-Befehls kann eine Endlosschleife verlassen werden. Auch mit dem return-Befehl ist dies m\u00f6glich.",
           "aspects": [],
           "id": "24",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Mithilfe des 'break' Befehls kann eine Endlosschleife verlassen werden. Auch mit dem 'return' Befehl ist dies möglich."
+            "Mithilfe des break Befehls kann eine Endlosschleife verlassen werden. Auch mit dem return Befehl ist dies m\u00f6glich."
         },
         {
           "text": "break Bedingung angeben z.B.(1<x) continue",
@@ -2017,17 +2083,17 @@
           "id": "25",
           "points": 0,
           "answerCategory": "partially_correct",
-          "correctionOrComment": "Das geht mittels 'break', einer Bedingung oder 'continue'."
+          "correctionOrComment": "Das geht mittels break, einer Bedingung oder continue."
         },
         {
           "text":
-            "indem man einen break hinzufügt, der ab einem bestimmten Punkt die Schleife unterbricht",
+            "indem man einen break hinzuf\u00fcgt, der ab einem bestimmten Punkt die Schleife unterbricht",
           "aspects": [],
           "id": "26",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Das geht, indem man einen 'break' hinzufügt, der ab einem bestimmten Punkt die Schleife unterbricht."
+            "Das geht, indem man einen break hinzuf\u00fcgt, der ab einem bestimmten Punkt die Schleife unterbricht."
         },
         {
           "text":
@@ -2037,7 +2103,7 @@
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Indem man 'return' mit in die Schleife einsetzt oder indem man 'break' mit in die Schleife einbaut."
+            "Indem man return mit in die Schleife einsetzt oder indem man break mit in die Schleife einbaut."
         },
         {
           "text":
@@ -2047,7 +2113,7 @@
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Das geht durch eine Abbruchbedingung im Schleifenkopf, oder durch ein 'break' innerhalb der Schleife."
+            "Das geht durch eine Abbruchbedingung im Schleifenkopf, oder durch ein break innerhalb der Schleife."
         },
         {
           "text": "mit dem Befehl: break;",
@@ -2055,7 +2121,7 @@
           "id": "29",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Das geht mit dem Befehl 'break'."
+          "correctionOrComment": "Das geht mit dem Befehl break."
         },
         {
           "text": "break oder return",
@@ -2063,17 +2129,17 @@
           "id": "30",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Das geht mittels 'break' oder 'return'."
+          "correctionOrComment": "Das geht mittels break oder return."
         },
         {
           "text":
-            "mit break oder return return gibt ein Code zurück dass die Schleife nicht mehr weiterlaufen lässt",
+            "mit break oder return return gibt ein Code zur\u00fcck dass die Schleife nicht mehr weiterlaufen l\u00e4sst",
           "aspects": [],
           "id": "31",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Mit den Befehlen 'break' oder 'return' gibt ein Code zurück, sodass die Schleife nicht mehr weiterlaufen kann."
+            "Mit den Befehlen break oder return gibt ein Code zur\u00fcck, sodass die Schleife nicht mehr weiterlaufen kann."
         },
         {
           "text": "die while schleife kann mit mit \"\"break\"\" unterbrechen.",
@@ -2081,7 +2147,7 @@
           "id": "32",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Die while-Schleife kann mit mit 'break' unterbrochen werden."
+          "correctionOrComment": "Die while-Schleife kann mit mit break unterbrochen werden."
         },
         {
           "text": "Mit einem return oder break Anweisung stoppen.",
@@ -2089,16 +2155,17 @@
           "id": "33",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Man kann sie mit einer 'return' oder 'break' Anweisung stoppen."
+          "correctionOrComment": "Man kann sie mit einer return oder break Anweisung stoppen."
         },
         {
-          "text": "return springt aus aktueller Methode bedingung wird in schleife selber geändert",
+          "text":
+            "return springt aus aktueller Methode bedingung wird in schleife selber ge\u00e4ndert",
           "aspects": [],
           "id": "34",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Mit 'return' springt das Programm aus der aktuellen Methode. Die Bedingung wird in der Schleife selber geändert."
+            "Mit return springt das Programm aus der aktuellen Methode. Die Bedingung wird in der Schleife selber ge\u00e4ndert."
         },
         {
           "text":
@@ -2108,7 +2175,7 @@
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Um aus der Schleife zu springen benutzt man 'break', oder man kann auch 'return' benutzen."
+            "Um aus der Schleife zu springen benutzt man break, oder man kann auch return benutzen."
         },
         {
           "text":
@@ -2118,17 +2185,17 @@
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Das geht, indem ich in die while-Schleife (nach dem Schleifenrumpf) einen 'break' oder 'continue' Befehl eingebe."
+            "Das geht, indem ich in die while-Schleife (nach dem Schleifenrumpf) einen break oder continue Befehl eingebe."
         },
         {
           "text":
-            "mit break oder return da return ein wert zurück gibt, wird der Code danach nicht mehr weiter gelesen und die Schleife wird beendet. zb return a;",
+            "mit break oder return da return ein wert zur\u00fcck gibt, wird der Code danach nicht mehr weiter gelesen und die Schleife wird beendet. zb return a;",
           "aspects": [],
           "id": "37",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Das geht mit 'break' oder 'return'. Da 'return' einen Wert zurückgibt, wird der Code danach nicht mehr weiter gelesen und die Schleife wird beendet."
+            "Das geht mit break oder return. Da return einen Wert zur\u00fcckgibt, wird der Code danach nicht mehr weiter gelesen und die Schleife wird beendet."
         },
         {
           "text": "break",
@@ -2136,7 +2203,7 @@
           "id": "38",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Das geht mit 'break'."
+          "correctionOrComment": "Das geht mit break."
         },
         {
           "text": "die schleiche kann man mit \"\"break\"\" etc. unterbrechen",
@@ -2144,7 +2211,7 @@
           "id": "39",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Die Schleife kann man mit 'break' unterbrechen."
+          "correctionOrComment": "Die Schleife kann man mit break unterbrechen."
         },
         {
           "text": "return, break, continue(continue springt an den Schleifenanfang)",
@@ -2153,15 +2220,15 @@
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Das geht mit 'return', 'break' oder 'continue'. Bei 'continue' springt das Programm an den Schleifenanfang."
+            "Das geht mit return, break oder continue. Bei continue springt das Programm an den Schleifenanfang."
         },
         {
-          "text": "Ich schließe die { } zu, und setze auch dazu ein break",
+          "text": "Ich schlie\u00dfe die { } zu, und setze auch dazu ein break",
           "aspects": [],
           "id": "41",
           "points": 0,
           "answerCategory": "partially_correct",
-          "correctionOrComment": "Ich schließe die Klammern zu, und setze dazu ein 'break'."
+          "correctionOrComment": "Ich schlie\u00dfe die Klammern zu, und setze dazu ein break."
         },
         {
           "text": "Indem ich break unten dazu schreibe.",
@@ -2169,17 +2236,17 @@
           "id": "42",
           "points": 0,
           "answerCategory": "partially_correct",
-          "correctionOrComment": "Das geht, indem ich 'break' unten dazu schreibe."
+          "correctionOrComment": "Das geht, indem ich break unten dazu schreibe."
         },
         {
           "text":
-            "Die Variable , die in der while Schleife abgefragt wird, muss jedes mal hochgezählt werden. BSP: x++; Andere Möglichkeit wäre es mit dem Befehl break;",
+            "Die Variable , die in der while Schleife abgefragt wird, muss jedes mal hochgez\u00e4hlt werden. BSP: x++; Andere M\u00f6glichkeit w\u00e4re es mit dem Befehl break;",
           "aspects": [],
           "id": "43",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Die Variable, die in der while-Schleife abgefragt wird, muss jedes mal hochgezählt werden. Eine andere Möglichkeit wäre es die Schleife mit dem Befehl 'break' zu beenden."
+            "Die Variable, die in der while-Schleife abgefragt wird, muss jedes mal hochgez\u00e4hlt werden. Eine andere M\u00f6glichkeit w\u00e4re es die Schleife mit dem Befehl break zu beenden."
         },
         {
           "text": "break",
@@ -2187,7 +2254,7 @@
           "id": "44",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Mit 'break' kann man eine Schleife unterbrechen."
+          "correctionOrComment": "Mit break kann man eine Schleife unterbrechen."
         },
         {
           "text": "Befehl break; benutzen",
@@ -2195,7 +2262,7 @@
           "id": "45",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Das geht, indem man den Befehl 'break' benutzt."
+          "correctionOrComment": "Das geht, indem man den Befehl break benutzt."
         },
         {
           "text":
@@ -2205,7 +2272,7 @@
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Man kann in die while-Schleife den Befehl 'break' eingeben um die Schleife zu unterbrechen."
+            "Man kann in die while-Schleife den Befehl break eingeben um die Schleife zu unterbrechen."
         },
         {
           "text":
@@ -2215,17 +2282,17 @@
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Ich nutze die 'break' Anweisung um aus der Methode zu kommen und 'continue' um wieder reinzukommen. Es geht auch die 'return' Anweisung."
+            "Ich nutze die break Anweisung um aus der Methode zu kommen und continue um wieder reinzukommen. Es geht auch die return Anweisung."
         },
         {
           "text":
-            "In der Methode \"\"while\"\" das Komando \"\"break\"\" angeben. Außerdem gibts auch die Möglichekit die Schleife bis zu einenm bestimmten Durchgang laufen zu lassen.",
+            "In der Methode \"\"while\"\" das Komando \"\"break\"\" angeben. Au\u00dferdem gibts auch die M\u00f6glichekit die Schleife bis zu einenm bestimmten Durchgang laufen zu lassen.",
           "aspects": [],
           "id": "48",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Man kann in der Methode 'while' das Kommando 'break' angeben. Außerdem gibt es auch die Möglichekit die Schleife bis zu einem bestimmten Durchgang laufen zu lassen."
+            "Man kann in der Methode while das Kommando break angeben. Au\u00dferdem gibt es auch die M\u00f6glichekit die Schleife bis zu einem bestimmten Durchgang laufen zu lassen."
         },
         {
           "text": "break;",
@@ -2233,7 +2300,7 @@
           "id": "49",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Das geht mit 'break'."
+          "correctionOrComment": "Das geht mit break."
         },
         {
           "text": "break; return;",
@@ -2241,27 +2308,27 @@
           "id": "50",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Das geht mit 'break' oder 'return'."
+          "correctionOrComment": "Das geht mit break oder return."
         },
         {
           "text":
-            "In dem man unter der Schleife einen bestimmten Befehl ausgibt. Beispiele dafür sind \"\"break;\"\" und \"\"continue;\"\"",
+            "In dem man unter der Schleife einen bestimmten Befehl ausgibt. Beispiele daf\u00fcr sind \"\"break;\"\" und \"\"continue;\"\"",
           "aspects": [],
           "id": "51",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Das geht, indem man unter der Schleife einen bestimmten Befehl ausgibt. Beispiele dafür sind 'break' und 'continue'."
+            "Das geht, indem man unter der Schleife einen bestimmten Befehl ausgibt. Beispiele daf\u00fcr sind break und continue."
         },
         {
           "text":
-            "Mit einer Bedingung wird break; oder continue; aktiviert und die while-schleife wird beendet(break;) oder an anderer stelle weitergeführt(continue;)",
+            "Mit einer Bedingung wird break; oder continue; aktiviert und die while-schleife wird beendet(break;) oder an anderer stelle weitergef\u00fchrt(continue;)",
           "aspects": [],
           "id": "52",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Mit einer Bedingung wird 'break' oder 'continue' aktiviert und die while-Schleife wird beendet ('break') oder an anderer Stelle weitergeführt ('continue')"
+            "Mit einer Bedingung wird break oder continue aktiviert und die while-Schleife wird beendet (break) oder an anderer Stelle weitergef\u00fchrt (continue)"
         },
         {
           "text": "Man kann es abrechen mit einer Bedingung der man ein Break zuweist",
@@ -2270,7 +2337,7 @@
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Man kann es mit einer Bedingung abbrechen, der man ein 'break' zuweist."
+            "Man kann es mit einer Bedingung abbrechen, der man ein break zuweist."
         },
         {
           "text": "mit Break beendet man es",
@@ -2278,7 +2345,7 @@
           "id": "54",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Mit 'break' beendet man es."
+          "correctionOrComment": "Mit break beendet man es."
         },
         {
           "text": "Um keine endlos Schleife zu haben sollte man mit \"\"break\"\" es stopen",
@@ -2287,27 +2354,27 @@
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Um keine Endlosschleife zu haben sollte man sie mit 'break' stoppen."
+            "Um keine Endlosschleife zu haben sollte man sie mit break stoppen."
         },
         {
           "text":
-            "Indem man in der while Schleife einen veränderbaren boolean Wert zuteilt bzw eine veränderbare Abfrage (i<1) z.b.: boolean bol = true; while(bol){ tuwas(); bol = false; }",
+            "Indem man in der while Schleife einen ver\u00e4nderbaren boolean Wert zuteilt bzw eine ver\u00e4nderbare Abfrage (i<1) z.b.: boolean bol = true; while(bol){ tuwas(); bol = false; }",
           "aspects": [],
           "id": "56",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Das geht, indem man in der while-Schleife einen veränderbaren 'boolean' Wert abfragt oder eine veränderbare Abfrage aufruft."
+            "Das geht, indem man in der while-Schleife einen ver\u00e4nderbaren boolean Wert abfragt oder eine ver\u00e4nderbare Abfrage aufruft."
         },
         {
           "text":
-            "1. einen counter vor der schleife iniziieren (int counter = 0;), am schleifenanfang eine abfrage einbauen (counter <= 10) und in der schleife hochzählen lassen (counter++;) 2. die schleife mit (true) auf endlos setzen. innerhalb der Schleife dann via if(){} eine inhaltlich korrekte abfrage starten. In der if-Verzweigung dann ein \"\"break;\"\" schreiben, um die Schleife zu beenden oder ein \"\"return\"\", um die komplette Methode (incl Schleife) zu beenden.",
+            "1. einen counter vor der schleife iniziieren (int counter = 0;), am schleifenanfang eine abfrage einbauen (counter <= 10) und in der schleife hochz\u00e4hlen lassen (counter++;) 2. die schleife mit (true) auf endlos setzen. innerhalb der Schleife dann via if(){} eine inhaltlich korrekte abfrage starten. In der if-Verzweigung dann ein \"\"break;\"\" schreiben, um die Schleife zu beenden oder ein \"\"return\"\", um die komplette Methode (incl Schleife) zu beenden.",
           "aspects": [],
           "id": "57",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Man kann einen Counter vor der Schleife iniziieren. Am Schleifenanfang muss man dann eine Abfrage einbauen und den Counter in der Schleife hochzählen lassen. Man kann die Schleife auch mit 'true' auf endlos setzen und dann innerhalb der Schleife in einer if-Verzweigung ein 'break' schreiben, um die Schleife zu beenden oder ein 'return' setzen, um die komplette Methode zu beenden."
+            "Man kann einen Counter vor der Schleife iniziieren. Am Schleifenanfang muss man dann eine Abfrage einbauen und den Counter in der Schleife hochz\u00e4hlen lassen. Man kann die Schleife auch mit true auf endlos setzen und dann innerhalb der Schleife in einer if-Verzweigung ein break schreiben, um die Schleife zu beenden oder ein return setzen, um die komplette Methode zu beenden."
         },
         {
           "text":
@@ -2317,7 +2384,7 @@
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Mit 'continue' kann man neu oben am schleifenkopf anfangen oder mit 'break' ganz rauszukommen."
+            "Mit continue kann man neu oben am schleifenkopf anfangen oder mit break ganz rauszukommen."
         },
         {
           "text": "mit if und else mit for schleife",
@@ -2325,7 +2392,7 @@
           "id": "59",
           "points": 0,
           "answerCategory": "missconception",
-          "correctionOrComment": "Das geht mit 'if' und 'else' und mit einer for-Schleife."
+          "correctionOrComment": "Das geht mit if und else und mit einer for-Schleife."
         },
         {
           "text": "Mit einer Bedingung, welcher ich einen break oder continue zuweise.",
@@ -2334,25 +2401,26 @@
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Es geht mit einer Bedingung, welcher ich einen 'break' oder 'continue' zuweise."
+            "Es geht mit einer Bedingung, welcher ich einen break oder continue zuweise."
         },
         {
           "text":
-            "entweder durch eine abfrage im programm die schleife mit break beenden, oder einen, in der schleife veränderten wert, in die while abfrage einbauen die zum beispiel dann Abfrage++;",
+            "entweder durch eine abfrage im programm die schleife mit break beenden, oder einen, in der schleife ver\u00e4nderten wert, in die while abfrage einbauen die zum beispiel dann Abfrage++;",
           "aspects": [],
           "id": "61",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Das geht entweder durch eine Abfrage im Programm, in welcher die Schleife mit 'break' beendet wird, oder einen in der Schleife veränderten Wert, der in der 'while' Abfrage einbaut wird."
+            "Das geht entweder durch eine Abfrage im Programm, in welcher die Schleife mit break beendet wird, oder einen in der Schleife ver\u00e4nderten Wert, der in der while Abfrage einbaut wird."
         },
         {
-          "text": "man braucht eine Bedingung dazu fügt man z.B ein break hinzu",
+          "text": "man braucht eine Bedingung dazu f\u00fcgt man z.B ein break hinzu",
           "aspects": [],
           "id": "62",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Man braucht dafür eine Bedingung und fügt man ein 'break' hinzu."
+          "correctionOrComment":
+            "Man braucht daf\u00fcr eine Bedingung und f\u00fcgt man ein break hinzu."
         },
         {
           "text": "return break / continue",
@@ -2360,17 +2428,17 @@
           "id": "63",
           "points": 0,
           "answerCategory": "partially_correct",
-          "correctionOrComment": "Das geht mit 'return', 'break' oder 'continue'."
+          "correctionOrComment": "Das geht mit return, break oder continue."
         },
         {
           "text":
-            "mann könnte die die schleife mit \"\" break\"\" unterbrechen und mit \"\"return\"\" weiterführen.",
+            "mann k\u00f6nnte die die schleife mit \"\" break\"\" unterbrechen und mit \"\"return\"\" weiterf\u00fchren.",
           "aspects": [],
           "id": "64",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Man könnte die Schleife mit 'break' unterbrechen und mit 'return' weiterführen."
+            "Man k\u00f6nnte die Schleife mit break unterbrechen und mit return weiterf\u00fchren."
         },
         {
           "text": "man kann ein break befehl einbauen",
@@ -2378,7 +2446,7 @@
           "id": "65",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Man kann einen 'break' Befehl einbauen."
+          "correctionOrComment": "Man kann einen break Befehl einbauen."
         },
         {
           "text":
@@ -2388,7 +2456,7 @@
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Mit 'continue' kommen wir an den Schleifenkopf und mit 'break' beenden wir die Schleife."
+            "Mit continue kommen wir an den Schleifenkopf und mit break beenden wir die Schleife."
         },
         {
           "text": "break;",
@@ -2396,7 +2464,7 @@
           "id": "67",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Das geht mit 'break'."
+          "correctionOrComment": "Das geht mit break."
         },
         {
           "text": "break",
@@ -2404,7 +2472,7 @@
           "id": "68",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Das geht mit 'break'."
+          "correctionOrComment": "Das geht mit break."
         },
         {
           "text": "mit \"\"break\"\" beendet man die Schleife.",
@@ -2412,26 +2480,27 @@
           "id": "69",
           "points": 0,
           "answerCategory": "correct",
-          "correctionOrComment": "Mit 'break' beendet man die Schleife."
+          "correctionOrComment": "Mit break beendet man die Schleife."
         },
         {
-          "text": "Variable in der Bedingung, die im Körper verändert wird. Beenden durch Return.",
+          "text":
+            "Variable in der Bedingung, die im K\u00f6rper ver\u00e4ndert wird. Beenden durch Return.",
           "aspects": [],
           "id": "70",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Das geht mit einer Variablen in der Bedingung, die im Körper verändert wird. Man kann sie auch durch 'return' beenden."
+            "Das geht mit einer Variablen in der Bedingung, die im K\u00f6rper ver\u00e4ndert wird. Man kann sie auch durch return beenden."
         },
         {
           "text":
-            "Man kann in der Schleife eine zeile:\"\" break;\"\" einfügen um die Schleife zu unterbrechen.",
+            "Man kann in der Schleife eine zeile:\"\" break;\"\" einf\u00fcgen um die Schleife zu unterbrechen.",
           "aspects": [],
           "id": "71",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Man kann in der Schleife eine Zeile 'break' einfügen um die Schleife zu unterbrechen."
+            "Man kann in der Schleife eine Zeile break einf\u00fcgen um die Schleife zu unterbrechen."
         },
         {
           "text": "-",
@@ -2445,11 +2514,23 @@
     },
     {
       "id": "13",
-      "text": "Erklären Sie den Zusammenhang zwischen Klassen und Objekten.",
+      "text": "Erkl\u00e4ren Sie den Zusammenhang zwischen Klassen und Objekten.",
       "title": "Zusammenhang zwischen Klassen und Objekten",
-      "type": "Erklärung",
-      "referenceAnswer":
-        "Eine Klasse ist der Bauplan für ein Objekt. Ein Objekt ist eine konkrete Instanz einer Klasse.",
+      "type": "comparison",
+      "stopwordExceptions": ["Klasse", "Objekt"],
+      "referenceAnswer": {
+        "text":
+          "Eine Klasse ist der Bauplan f\u00fcr ein Objekt. Ein Objekt ist eine konkrete Instanz einer Klasse.",
+        "answerCategory": "correct",
+        "assignedWeights": {
+          "Klasse": 1,
+          "sein": 1,
+          "Bauplan": 1,
+          "Objekt": 1,
+          "konkret": 0.3,
+          "Instanz": 1
+        }
+      },
       "answersAnnotation": [
         {
           "text":
@@ -2463,23 +2544,23 @@
         },
         {
           "text":
-            "alle objekte entstehen durch einen Bauplan. Dieser Bauplan ist die Klasse des Objektes, das Objekt ist eine Instanz der Klasse. Objekte haben ihren typ in der klasse. Die Klasseeines objektes ist für das objekt ca das selbe wie die DNA für den menschen. -sie bestimmt aussehen und eigenschaft. ist aber selbst nicht das Objekt.",
+            "alle objekte entstehen durch einen Bauplan. Dieser Bauplan ist die Klasse des Objektes, das Objekt ist eine Instanz der Klasse. Objekte haben ihren typ in der klasse. Die Klasseeines objektes ist f\u00fcr das objekt ca das selbe wie die DNA f\u00fcr den menschen. -sie bestimmt aussehen und eigenschaft. ist aber selbst nicht das Objekt.",
           "aspects": [],
           "id": "62",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Alle Objekte entstehen durch einen Bauplan. Dieser Bauplan ist die Klasse des Objektes. Das Objekt ist eine Instanz der Klasse. Objekte haben ihren Typ in der Klasse. Die Klasse eines Objektes ist für das Objekt ungefähr dasselbe, wie die DNA für den Menschen. Sie bestimmt Aussehen und Eigenschaften sind aber nicht selbst das Objekt."
+            "Alle Objekte entstehen durch einen Bauplan. Dieser Bauplan ist die Klasse des Objektes. Das Objekt ist eine Instanz der Klasse. Objekte haben ihren Typ in der Klasse. Die Klasse eines Objektes ist f\u00fcr das Objekt ungef\u00e4hr dasselbe, wie die DNA f\u00fcr den Menschen. Sie bestimmt Aussehen und Eigenschaften sind aber nicht selbst das Objekt."
         },
         {
           "text":
-            "objekt ist zum bsp ein bauplan und der Bauplan wäre in dem fall eine Klasse. Klassen sind bestimmte themen berreiche bsp auch Autos und objekt wäre in dem fall ein",
+            "objekt ist zum bsp ein bauplan und der Bauplan w\u00e4re in dem fall eine Klasse. Klassen sind bestimmte themen berreiche bsp auch Autos und objekt w\u00e4re in dem fall ein",
           "aspects": [],
           "id": "63",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Ein Objekt ist zum Beispiel ein Bauplan und der Bauplan wäre in dem Fall eine Klasse. Klassen sind bestimmte Themenbereiche."
+            "Ein Objekt ist zum Beispiel ein Bauplan und der Bauplan w\u00e4re in dem Fall eine Klasse. Klassen sind bestimmte Themenbereiche."
         },
         {
           "text":
@@ -2489,37 +2570,37 @@
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Die Klassen sind der Bauplan von Objekten. Objekte kann man sich selber zulegen, indem man sie mit 'new' neu definiert."
+            "Die Klassen sind der Bauplan von Objekten. Objekte kann man sich selber zulegen, indem man sie mit new neu definiert."
         },
         {
           "text":
-            "Die Klasse ist der Bauplan für das Objekt, heißt das Objekt ist eine Instanz der Klasse. In der Klasse wird das Gerüst aufgebaut auf das sich das Objekt bezieht und hier die Fähigkeiten definiert werden bzw. Objekte haben den Typ ihrer Klasse",
+            "Die Klasse ist der Bauplan f\u00fcr das Objekt, hei\u00dft das Objekt ist eine Instanz der Klasse. In der Klasse wird das Ger\u00fcst aufgebaut auf das sich das Objekt bezieht und hier die F\u00e4higkeiten definiert werden bzw. Objekte haben den Typ ihrer Klasse",
           "aspects": [],
           "id": "65",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Die Klasse ist der Bauplan für das Objekt. Das heißt, das Objekt ist eine Instanz der Klasse. In der Klasse wird das Gerüst aufgebaut auf das sich das Objekt bezieht und die Fähigkeiten werden definiert. Objekte haben den Typ ihrer Klasse."
+            "Die Klasse ist der Bauplan f\u00fcr das Objekt. Das hei\u00dft, das Objekt ist eine Instanz der Klasse. In der Klasse wird das Ger\u00fcst aufgebaut auf das sich das Objekt bezieht und die F\u00e4higkeiten werden definiert. Objekte haben den Typ ihrer Klasse."
         },
         {
           "text":
-            "Objekt wird durch seine Klasse definiert. Die Klasse ist der Bauplan für das Objekt. Bauplan = Klasse des Objektes und Objekt = Instanz der Klasse. Objekte haben die Typen der Klasse Code der klasse legt die Eigenschaften der Objekte fest",
+            "Objekt wird durch seine Klasse definiert. Die Klasse ist der Bauplan f\u00fcr das Objekt. Bauplan = Klasse des Objektes und Objekt = Instanz der Klasse. Objekte haben die Typen der Klasse Code der klasse legt die Eigenschaften der Objekte fest",
           "aspects": [],
           "id": "66",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Ein Objekt wird durch seine Klasse definiert. Die Klasse ist der Bauplan für das Objekt. Der Bauplan ist die Klasse des Objektes und das Objekt ist die Instanz der Klasse. Objekte haben die Typen der Klasse. Der Code der Klasse legt die Eigenschaften der Objekte fest."
+            "Ein Objekt wird durch seine Klasse definiert. Die Klasse ist der Bauplan f\u00fcr das Objekt. Der Bauplan ist die Klasse des Objektes und das Objekt ist die Instanz der Klasse. Objekte haben die Typen der Klasse. Der Code der Klasse legt die Eigenschaften der Objekte fest."
         },
         {
           "text":
-            "Die Klasse eines Objektes ist für das Objekt wie die DNA für den Menschen: Klasse bestimmt aussehen und Eigenschaften aber ist nicht selbst das Objekt. Objekte entstehen durch eine Art Bauplan. Der Bauplan ist die Klasse eines Objekts",
+            "Die Klasse eines Objektes ist f\u00fcr das Objekt wie die DNA f\u00fcr den Menschen: Klasse bestimmt aussehen und Eigenschaften aber ist nicht selbst das Objekt. Objekte entstehen durch eine Art Bauplan. Der Bauplan ist die Klasse eines Objekts",
           "aspects": [],
           "id": "67",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Die Klasse eines Objektes ist für das Objekt wie die DNA für den Menschen. Die Klasse bestimmt Aussehen und Eigenschaften aber ist nicht selbst das Objekt. Objekte entstehen durch eine Art Bauplan. Der Bauplan ist die Klasse eines Objekts."
+            "Die Klasse eines Objektes ist f\u00fcr das Objekt wie die DNA f\u00fcr den Menschen. Die Klasse bestimmt Aussehen und Eigenschaften aber ist nicht selbst das Objekt. Objekte entstehen durch eine Art Bauplan. Der Bauplan ist die Klasse eines Objekts."
         },
         {
           "text": "Klassen sind der Bauplan von Objekten. Objekte entstehen mit new.",
@@ -2527,28 +2608,27 @@
           "id": "68",
           "points": 0,
           "answerCategory": "partially_correct",
-          "correctionOrComment":
-            "Klassen sind der Bauplan von Objekten. Objekte entstehen mit 'new'."
+          "correctionOrComment": "Klassen sind der Bauplan von Objekten. Objekte entstehen mit new."
         },
         {
           "text":
-            "Die Klasse des Objektes ist für das Objekt in etwa wie die DNA beim Menschen. Sie bestimmt Aussehen und Eigenschaften des Objekts, aber die Klasse ist nicht das Objekt selbst, von jeder Klasse kann auch ein Objekt erstellt werden.",
+            "Die Klasse des Objektes ist f\u00fcr das Objekt in etwa wie die DNA beim Menschen. Sie bestimmt Aussehen und Eigenschaften des Objekts, aber die Klasse ist nicht das Objekt selbst, von jeder Klasse kann auch ein Objekt erstellt werden.",
           "aspects": [],
           "id": "69",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Die Klasse des Objektes ist für das Objekt in etwa wie die DNA beim Menschen. Sie bestimmt Aussehen und Eigenschaften des Objekts, aber die Klasse ist nicht das Objekt selbst. Von jeder Klasse kann auch ein Objekt erstellt werden."
+            "Die Klasse des Objektes ist f\u00fcr das Objekt in etwa wie die DNA beim Menschen. Sie bestimmt Aussehen und Eigenschaften des Objekts, aber die Klasse ist nicht das Objekt selbst. Von jeder Klasse kann auch ein Objekt erstellt werden."
         },
         {
           "text":
-            "Eine Klasse ist wie eine Art Bauplan für den Objekt . Ein Objekt ist ein Instanz der Klasse und enthält die Element wie in der Klasse",
+            "Eine Klasse ist wie eine Art Bauplan f\u00fcr den Objekt . Ein Objekt ist ein Instanz der Klasse und enth\u00e4lt die Element wie in der Klasse",
           "aspects": [],
           "id": "70",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Eine Klasse ist wie eine Art Bauplan für ein Objekt . Ein Objekt ist eine Instanz der Klasse und enthält die Elemente wie in der Klasse."
+            "Eine Klasse ist wie eine Art Bauplan f\u00fcr ein Objekt . Ein Objekt ist eine Instanz der Klasse und enth\u00e4lt die Elemente wie in der Klasse."
         },
         {
           "text":
@@ -2558,27 +2638,27 @@
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Eine Klasse ist wie ein Baustein für die Objekte. Alle Fähigkeiten des Objektes werden durch die Klasse definiert."
+            "Eine Klasse ist wie ein Baustein f\u00fcr die Objekte. Alle F\u00e4higkeiten des Objektes werden durch die Klasse definiert."
         },
         {
           "text":
-            "Alle Objekte entstehen durch einen Bauplan Dieser Bauplan ist die Klasse des Objektes, das Objekt ist eine Instanz der Klasse. Objekte haben den Typ ihrer Klasse Die Klasse eines Objektes ist für das Objekt in etwa dasselbe wie die DNA für den Menschen Sie besto,,t aussehen und eigenschaften ABER SIE selbst ist nicht das objekt",
+            "Alle Objekte entstehen durch einen Bauplan Dieser Bauplan ist die Klasse des Objektes, das Objekt ist eine Instanz der Klasse. Objekte haben den Typ ihrer Klasse Die Klasse eines Objektes ist f\u00fcr das Objekt in etwa dasselbe wie die DNA f\u00fcr den Menschen Sie besto,,t aussehen und eigenschaften ABER SIE selbst ist nicht das objekt",
           "aspects": [],
           "id": "72",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Alle Objekte entstehen durch einen Bauplan. Dieser Bauplan ist die Klasse des Objektes. Das Objekt ist eine Instanz der Klasse. Objekte haben den Typ ihrer Klasse. Die Klasse eines Objektes ist für das Objekt in etwa dasselbe wie die DNA für den Menschen. Sie bestimmt aussehen und Eigenschaften, aber sie selbst ist nicht das Objekt."
+            "Alle Objekte entstehen durch einen Bauplan. Dieser Bauplan ist die Klasse des Objektes. Das Objekt ist eine Instanz der Klasse. Objekte haben den Typ ihrer Klasse. Die Klasse eines Objektes ist f\u00fcr das Objekt in etwa dasselbe wie die DNA f\u00fcr den Menschen. Sie bestimmt aussehen und Eigenschaften, aber sie selbst ist nicht das Objekt."
         },
         {
           "text":
-            "Die Klasse ist übergeordnet. zum beispiel ist ein objekt eine instanz 7 eine eigenschaft der klasse.",
+            "Die Klasse ist \u00fcbergeordnet. zum beispiel ist ein objekt eine instanz 7 eine eigenschaft der klasse.",
           "aspects": [],
           "id": "73",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Die Klasse ist übergeordnet. Ein Objekt ist zum Beispiel eine Instanz. 7 ist eine Eigenschaft der Klasse."
+            "Die Klasse ist \u00fcbergeordnet. Ein Objekt ist zum Beispiel eine Instanz. 7 ist eine Eigenschaft der Klasse."
         },
         {
           "text":
@@ -2592,33 +2672,33 @@
         },
         {
           "text":
-            "Eine Klasse ist ein Bauplan für dessen Objekte. Über den Klassennamen wird das Objekt instanziiert, z.B. Auto auto = new Auto() SEMICOLON Innerhalb der runden Klammern kann man nun, sofern im Konstruktor der Klasse Auto angelegt, schon Attribute übergeben, z.B. Auto auto = new Auto(\"\"Ferrari\"\") SEMICOLON Die Klasse legt also die Eigenschaften eines Objektes fest. (Bei Frage 2 wusste ich nicht ob auf oder absteigend, da die Zeilennummern anders herum da stehen. Ich habe in Zeile 3 den ersten Schritt geschrieben, Zeile 2 den zweiten und Zeile 1 den letzten)",
+            "Eine Klasse ist ein Bauplan f\u00fcr dessen Objekte. \u00dcber den Klassennamen wird das Objekt instanziiert, z.B. Auto auto = new Auto() SEMICOLON Innerhalb der runden Klammern kann man nun, sofern im Konstruktor der Klasse Auto angelegt, schon Attribute \u00fcbergeben, z.B. Auto auto = new Auto(\"\"Ferrari\"\") SEMICOLON Die Klasse legt also die Eigenschaften eines Objektes fest. (Bei Frage 2 wusste ich nicht ob auf oder absteigend, da die Zeilennummern anders herum da stehen. Ich habe in Zeile 3 den ersten Schritt geschrieben, Zeile 2 den zweiten und Zeile 1 den letzten)",
           "aspects": [],
           "id": "75",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Eine Klasse ist ein Bauplan für dessen Objekte. Über den Klassennamen wird das Objekt instanziiert. Innerhalb der runden Klammern kann man nun sofern im Konstruktor der Klasse angelegt, schon Attribute übergeben. Die Klasse legt also die Eigenschaften eines Objektes fest."
+            "Eine Klasse ist ein Bauplan f\u00fcr dessen Objekte. \u00dcber den Klassennamen wird das Objekt instanziiert. Innerhalb der runden Klammern kann man nun sofern im Konstruktor der Klasse angelegt, schon Attribute \u00fcbergeben. Die Klasse legt also die Eigenschaften eines Objektes fest."
         },
         {
           "text":
-            "Klasse ist der Bauplan für ein Objekt. Das Objekt ist eine Instanz. Die Klasse enthält die wichtigsten \"\"Oberbegriffe\"\" für ein Objekt. Damit kann man viele Klassen anlegen und diese in einer Main-Methode zusammenfügen.",
+            "Klasse ist der Bauplan f\u00fcr ein Objekt. Das Objekt ist eine Instanz. Die Klasse enth\u00e4lt die wichtigsten \"\"Oberbegriffe\"\" f\u00fcr ein Objekt. Damit kann man viele Klassen anlegen und diese in einer Main-Methode zusammenf\u00fcgen.",
           "aspects": [],
           "id": "76",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Die Klasse ist der Bauplan für ein Objekt. Das Objekt ist eine Instanz. Die Klasse enthält die wichtigsten Oberbegriffe für ein Objekt. Damit kann man viele Klassen anlegen und diese in einer 'main' Methode zusammenfügen."
+            "Die Klasse ist der Bauplan f\u00fcr ein Objekt. Das Objekt ist eine Instanz. Die Klasse enth\u00e4lt die wichtigsten Oberbegriffe f\u00fcr ein Objekt. Damit kann man viele Klassen anlegen und diese in einer main Methode zusammenf\u00fcgen."
         },
         {
           "text":
-            "Die Klasse ist der Bauplan des Objektes. Sie enthält die Attribute/Eigenschaften des Objektes. Ein Beispiel in der realen Welt für eine Klasse wäre die DNA des Objektes Mensch.",
+            "Die Klasse ist der Bauplan des Objektes. Sie enth\u00e4lt die Attribute/Eigenschaften des Objektes. Ein Beispiel in der realen Welt f\u00fcr eine Klasse w\u00e4re die DNA des Objektes Mensch.",
           "aspects": [],
           "id": "77",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Die Klasse ist der Bauplan des Objektes. Sie enthält die Attribute und Eigenschaften des Objektes. Ein Beispiel in der realen Welt für eine Klasse wäre die DNA des Objektes Mensch."
+            "Die Klasse ist der Bauplan des Objektes. Sie enth\u00e4lt die Attribute und Eigenschaften des Objektes. Ein Beispiel in der realen Welt f\u00fcr eine Klasse w\u00e4re die DNA des Objektes Mensch."
         },
         {
           "text":
@@ -2632,13 +2712,13 @@
         },
         {
           "text":
-            "Klassen bilden eine Anleitung für Objekte. Ein Objekt ist eine Instanz einer Klasse. Eine Klasse beschreibt die Methoden die auf ein Objekt angewendet werden können.",
+            "Klassen bilden eine Anleitung f\u00fcr Objekte. Ein Objekt ist eine Instanz einer Klasse. Eine Klasse beschreibt die Methoden die auf ein Objekt angewendet werden k\u00f6nnen.",
           "aspects": [],
           "id": "79",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Klassen bilden eine Anleitung für Objekte. Ein Objekt ist eine Instanz einer Klasse. Eine Klasse beschreibt die Methoden, die auf ein Objekt angewendet werden können."
+            "Klassen bilden eine Anleitung f\u00fcr Objekte. Ein Objekt ist eine Instanz einer Klasse. Eine Klasse beschreibt die Methoden, die auf ein Objekt angewendet werden k\u00f6nnen."
         },
         {
           "text": "Die Klasse eines Objektes ist wie die DNA eines Menschen.",
@@ -2668,33 +2748,33 @@
         },
         {
           "text":
-            "Die Objekte sind Baupläne für das Programm. Die Klassen beinhalten diese Objekte und verwenden sie.",
+            "Die Objekte sind Baupl\u00e4ne f\u00fcr das Programm. Die Klassen beinhalten diese Objekte und verwenden sie.",
           "aspects": [],
           "id": "83",
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Die Objekte sind Baupläne für das Programm. Die Klassen beinhalten diese Objekte und verwenden sie."
+            "Die Objekte sind Baupl\u00e4ne f\u00fcr das Programm. Die Klassen beinhalten diese Objekte und verwenden sie."
         },
         {
           "text":
-            "Die Klasse ist der \"\"Plan\"\" für das Projekt, dort steht was mit den erstellten Projekten \"\"gemacht\"\" wird. Das heißt Sie beinhalten die Objekte und verwenden sie. Die Objekte werden erzeugt, um für eine Art mehrere Eigenschaften zu speichern, die dann in der Klasse aufgerufen werden können.",
+            "Die Klasse ist der \"\"Plan\"\" f\u00fcr das Projekt, dort steht was mit den erstellten Projekten \"\"gemacht\"\" wird. Das hei\u00dft Sie beinhalten die Objekte und verwenden sie. Die Objekte werden erzeugt, um f\u00fcr eine Art mehrere Eigenschaften zu speichern, die dann in der Klasse aufgerufen werden k\u00f6nnen.",
           "aspects": [],
           "id": "84",
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Die Klasse ist der Plan für das Projekt. Dort steht was mit den erstellten Projekten gemacht wird. Das heißt, sie beinhalten die Objekte und verwenden sie. Die Objekte werden erzeugt, um für eine Art mehrere Eigenschaften zu speichern, die dann in der Klasse aufgerufen werden können."
+            "Die Klasse ist der Plan f\u00fcr das Projekt. Dort steht was mit den erstellten Projekten gemacht wird. Das hei\u00dft, sie beinhalten die Objekte und verwenden sie. Die Objekte werden erzeugt, um f\u00fcr eine Art mehrere Eigenschaften zu speichern, die dann in der Klasse aufgerufen werden k\u00f6nnen."
         },
         {
           "text":
-            "Objekte sind Baupläne für das Programm. Die Klassen sind deren Inhalte und werden von Objekten verwendet",
+            "Objekte sind Baupl\u00e4ne f\u00fcr das Programm. Die Klassen sind deren Inhalte und werden von Objekten verwendet",
           "aspects": [],
           "id": "85",
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Objekte sind Baupläne für das Programm. Die Klassen sind deren Inhalte und werden von Objekten verwendet."
+            "Objekte sind Baupl\u00e4ne f\u00fcr das Programm. Die Klassen sind deren Inhalte und werden von Objekten verwendet."
         },
         {
           "text": "Klassen sind vordefinierte Objekte",
@@ -2716,27 +2796,27 @@
         },
         {
           "text":
-            "Die Klasse ist das Bauplan für das Objekt. Objekt ist das instanz der Klasse . Klasse bestimmt Eigenschaften des Objekts aber sie ist nicht das Objekt.",
+            "Die Klasse ist das Bauplan f\u00fcr das Objekt. Objekt ist das instanz der Klasse . Klasse bestimmt Eigenschaften des Objekts aber sie ist nicht das Objekt.",
           "aspects": [],
           "id": "88",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Die Klasse ist der Bauplan für das Objekt. Das Objekt ist die Instanz der Klasse. Eine Klasse bestimmt die Eigenschaften des Objekts, aber sie ist nicht das Objekt."
+            "Die Klasse ist der Bauplan f\u00fcr das Objekt. Das Objekt ist die Instanz der Klasse. Eine Klasse bestimmt die Eigenschaften des Objekts, aber sie ist nicht das Objekt."
         },
         {
           "text":
-            "Klasse ist ein Bauplan für Objekt Klasse definiert den Typ des Objektes Objekt ist ein Ausprägung",
+            "Klasse ist ein Bauplan f\u00fcr Objekt Klasse definiert den Typ des Objektes Objekt ist ein Auspr\u00e4gung",
           "aspects": [],
           "id": "89",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Die Klasse ist ein Bauplan für das Objekt. Eine Klasse definiert den Typ des Objektes. Das Objekt ist ein Ausprägung."
+            "Die Klasse ist ein Bauplan f\u00fcr das Objekt. Eine Klasse definiert den Typ des Objektes. Das Objekt ist ein Auspr\u00e4gung."
         },
         {
           "text":
-            "Objekte werden von Klassen definiert. Eine Klasse beschreibt die Variablen, Eigenschaften .... eines Objekts. Objekte sind Instanzen von Klassen. Die klasse wird zu Verwendung von Objekten erstellt, daher sind Objekten Plätzchen.",
+            "Objekte werden von Klassen definiert. Eine Klasse beschreibt die Variablen, Eigenschaften .... eines Objekts. Objekte sind Instanzen von Klassen. Die klasse wird zu Verwendung von Objekten erstellt, daher sind Objekten Pl\u00e4tzchen.",
           "aspects": [],
           "id": "90",
           "points": 0,
@@ -2746,13 +2826,13 @@
         },
         {
           "text":
-            "Die Klasse ist der \"\"Bauplan\"\" für das Objekt, sie definiert u.a. die Fähigkeiten des Objekts und regelt den Zugriff auf das Objekt",
+            "Die Klasse ist der \"\"Bauplan\"\" f\u00fcr das Objekt, sie definiert u.a. die F\u00e4higkeiten des Objekts und regelt den Zugriff auf das Objekt",
           "aspects": [],
           "id": "91",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Die Klasse ist der Bauplan für das Objekt. Sie definiert unter anderem die Fähigkeiten des Objekts und regelt den Zugriff auf das Objekt."
+            "Die Klasse ist der Bauplan f\u00fcr das Objekt. Sie definiert unter anderem die F\u00e4higkeiten des Objekts und regelt den Zugriff auf das Objekt."
         },
         {
           "text": "-",
@@ -2768,19 +2848,36 @@
       "id": "14",
       "text": "Was unterscheidet in JAVA Klassenvariablen von Instanzvariablen?",
       "title": "Klassen- und Instanzvariable",
-      "type": "Gegenüberstellung",
-      "referenceAnswer":
-        "Klassenvariablen existieren einmal pro Klasse, auch ohne eine konkrete Instanz. Instanzvariable existiert einmal pro Objekt.",
+      "type": "comparison",
+      "stopwordExceptions": ["Klassenvariable", "Instanzvariable"],
+      "referenceAnswer": {
+        "text":
+          "Klassenvariablen existieren einmal pro Klasse, auch ohne eine konkrete Instanz. Instanzvariablen existieren einmal pro Objekt.",
+        "answerCategory": "correct",
+        "assignedWeights": {
+          "Klassenvariable": 1,
+          "existieren": 0.7,
+          "einmal": 0.8,
+          "pro": 0.2,
+          "Klasse": 1,
+          "auch": 0.2,
+          "ohne": 0.5,
+          "konkret": 0.1,
+          "Instanz": 1,
+          "Instanzvariable": 1,
+          "Objekt": 1
+        }
+      },
       "answersAnnotation": [
         {
           "text":
-            "Klassenvariable ist für die ganze klasse bestimmte variable und die Instanzvariable ist für den jeweiligen Bereich.",
+            "Klassenvariable ist f\u00fcr die ganze klasse bestimmte variable und die Instanzvariable ist f\u00fcr den jeweiligen Bereich.",
           "aspects": [],
           "id": "93",
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Eine Klassenvariable ist eine für die ganze Klasse bestimmte Variable und die Instanzvariable ist für den jeweiligen Bereich gedacht."
+            "Eine Klassenvariable ist eine f\u00fcr die ganze Klasse bestimmte Variable und die Instanzvariable ist f\u00fcr den jeweiligen Bereich gedacht."
         },
         {
           "text":
@@ -2801,12 +2898,12 @@
           "correctionOrComment": "-"
         },
         {
-          "text": "öffentlich",
+          "text": "\u00f6ffentlich",
           "aspects": [],
           "id": "96",
           "points": 0,
           "answerCategory": "none",
-          "correctionOrComment": "öffentlich"
+          "correctionOrComment": "\u00f6ffentlich"
         },
         {
           "text": "Klassenvariable ist mit static und eine instanzvariable ist ohne static",
@@ -2815,17 +2912,17 @@
           "points": 0,
           "answerCategory": "concept_mix-up",
           "correctionOrComment":
-            "Eine Klassenvariable wird mit 'static' definiert und eine instanzvariable ohne 'static'."
+            "Eine Klassenvariable wird mit static definiert und eine instanzvariable ohne static."
         },
         {
           "text":
-            "Klassenvariablen sind für die gesamte Klasse angelegt, Instatzvariablen für das Objekt das welches erzeugt wird",
+            "Klassenvariablen sind f\u00fcr die gesamte Klasse angelegt, Instatzvariablen f\u00fcr das Objekt das welches erzeugt wird",
           "aspects": [],
           "id": "98",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Klassenvariablen sind für die gesamte Klasse angelegt und Instanzvariablen nur für das Objekt, welches erzeugt wird."
+            "Klassenvariablen sind f\u00fcr die gesamte Klasse angelegt und Instanzvariablen nur f\u00fcr das Objekt, welches erzeugt wird."
         },
         {
           "text":
@@ -2868,7 +2965,7 @@
           "id": "103",
           "points": 0,
           "answerCategory": "missconception",
-          "correctionOrComment": "Klassenvariablen sind 'public' und Instanzvariablen 'private'."
+          "correctionOrComment": "Klassenvariablen sind public und Instanzvariablen private."
         },
         {
           "text":
@@ -2882,23 +2979,23 @@
         },
         {
           "text":
-            "Klassenvariablen werden nur innerhalb der Klasse ohne modifikatoren sichtbar und benutzbar. Instanzvariablen können in mehrere Klassen benutzt werden.",
+            "Klassenvariablen werden nur innerhalb der Klasse ohne modifikatoren sichtbar und benutzbar. Instanzvariablen k\u00f6nnen in mehrere Klassen benutzt werden.",
           "aspects": [],
           "id": "105",
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Klassenvariablen werden nur innerhalb der Klasse ohne Modifikatoren sichtbar und benutzbar. Instanzvariablen können in mehrere Klassen benutzt werden."
+            "Klassenvariablen werden nur innerhalb der Klasse ohne Modifikatoren sichtbar und benutzbar. Instanzvariablen k\u00f6nnen in mehrere Klassen benutzt werden."
         },
         {
           "text":
-            "Instanzvariablen gehören zu den Objekt und statischen Variablen gehören zu der Klasse und nicht zu einzelne Objekt",
+            "Instanzvariablen geh\u00f6ren zu den Objekt und statischen Variablen geh\u00f6ren zu der Klasse und nicht zu einzelne Objekt",
           "aspects": [],
           "id": "106",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Instanzvariablen gehören zu den Objekten und statische Variablen gehören zu der Klasse und nicht zum einzelnen Objekt."
+            "Instanzvariablen geh\u00f6ren zu den Objekten und statische Variablen geh\u00f6ren zu der Klasse und nicht zum einzelnen Objekt."
         },
         {
           "text": "this",
@@ -2915,17 +3012,17 @@
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Instanzvariablen sind normale 'Strings'. Klassenvariablen haben ein 'public'."
+            "Instanzvariablen sind normale Strings. Klassenvariablen haben ein public."
         },
         {
           "text":
-            "die Klassenvariablen sind für die ganze Klasse zugreifbar, instanzvariablen nur für die Objekten.",
+            "die Klassenvariablen sind f\u00fcr die ganze Klasse zugreifbar, instanzvariablen nur f\u00fcr die Objekten.",
           "aspects": [],
           "id": "109",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Die Klassenvariablen sind für die ganze Klasse zugreifbar, Instanzvariablen nur für die Objekte."
+            "Die Klassenvariablen sind f\u00fcr die ganze Klasse zugreifbar, Instanzvariablen nur f\u00fcr die Objekte."
         },
         {
           "text": "Klassenvariablen sind nur innerhalb der Klasse sichtbar, Instanzvariablen nicht",
@@ -2938,13 +3035,13 @@
         },
         {
           "text":
-            "Eine Java Klassen Variable beschreibt eine Variable, welche nur innerhalb einer Klasse gültig ist. DIe Instanzvariable gilt für ein Objekt einer Klasse.",
+            "Eine Java Klassen Variable beschreibt eine Variable, welche nur innerhalb einer Klasse g\u00fcltig ist. DIe Instanzvariable gilt f\u00fcr ein Objekt einer Klasse.",
           "aspects": [],
           "id": "111",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Eine Java Klassenvariable beschreibt eine Variable, welche nur innerhalb einer Klasse gültig ist. DIe Instanzvariable gilt für ein Objekt einer Klasse."
+            "Eine Java Klassenvariable beschreibt eine Variable, welche nur innerhalb einer Klasse g\u00fcltig ist. DIe Instanzvariable gilt f\u00fcr ein Objekt einer Klasse."
         },
         {
           "text":
@@ -2958,23 +3055,23 @@
         },
         {
           "text":
-            "Bei Klassenvariablen ist die definition in einer Klasse mit der schlüsselwort static, aber bei Instanzvariablen ohne der schlüsselwort static",
+            "Bei Klassenvariablen ist die definition in einer Klasse mit der schl\u00fcsselwort static, aber bei Instanzvariablen ohne der schl\u00fcsselwort static",
           "aspects": [],
           "id": "113",
           "points": 0,
           "answerCategory": "concept_mix-up",
           "correctionOrComment":
-            "Bei Klassenvariablen erfolg die Definition in einer Klasse mit dem Schlüsselwort 'static', aber bei Instanzvariablen ohne das Schlüsselwort 'static'."
+            "Bei Klassenvariablen erfolg die Definition in einer Klasse mit dem Schl\u00fcsselwort static, aber bei Instanzvariablen ohne das Schl\u00fcsselwort static."
         },
         {
           "text":
-            "Klassenvariablen sind in der Klasse sichtbar, während Instanzvariablen Objekte der Klasse sind",
+            "Klassenvariablen sind in der Klasse sichtbar, w\u00e4hrend Instanzvariablen Objekte der Klasse sind",
           "aspects": [],
           "id": "114",
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Klassenvariablen sind in der Klasse sichtbar, während Instanzvariablen Objekte der Klasse sind."
+            "Klassenvariablen sind in der Klasse sichtbar, w\u00e4hrend Instanzvariablen Objekte der Klasse sind."
         },
         {
           "text":
@@ -2984,7 +3081,7 @@
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Instanzen werden immer mit 'new' definiert und Klassenvariablen werden mit 'Text ()' aufgerufen."
+            "Instanzen werden immer mit new definiert und Klassenvariablen werden mit 'Text()' aufgerufen."
         },
         {
           "text":
@@ -2998,13 +3095,13 @@
         },
         {
           "text":
-            "Intanzvariablen können für jedes Objekt unterschiedlich sein, Klassenvariablen sind für jedes Objekt gleich.",
+            "Intanzvariablen k\u00f6nnen f\u00fcr jedes Objekt unterschiedlich sein, Klassenvariablen sind f\u00fcr jedes Objekt gleich.",
           "aspects": [],
           "id": "117",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Intanzvariablen können für jedes Objekt unterschiedlich sein, Klassenvariablen sind für jedes Objekt gleich."
+            "Intanzvariablen k\u00f6nnen f\u00fcr jedes Objekt unterschiedlich sein, Klassenvariablen sind f\u00fcr jedes Objekt gleich."
         },
         {
           "text":
@@ -3014,7 +3111,7 @@
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Klassenvariablen sind mit 'static' und innerhalb der ganzen Klasse sichtbar, Instanzvariablen nur innerhalb der Methode."
+            "Klassenvariablen sind mit static und innerhalb der ganzen Klasse sichtbar, Instanzvariablen nur innerhalb der Methode."
         },
         {
           "text":
@@ -3040,8 +3137,7 @@
           "id": "121",
           "points": 0,
           "answerCategory": "missconception",
-          "correctionOrComment":
-            "Klassenvariablen sind 'public' und Instanzvariablen sind 'private'."
+          "correctionOrComment": "Klassenvariablen sind public und Instanzvariablen sind private."
         },
         {
           "text":
@@ -3055,13 +3151,13 @@
         },
         {
           "text":
-            "Instanzvariablen sind bereits initialisiert. Instanzvariablen gehören zu einem spObjekt. Bei Klassenvariablen muss dies nich der Fall sein.",
+            "Instanzvariablen sind bereits initialisiert. Instanzvariablen geh\u00f6ren zu einem spObjekt. Bei Klassenvariablen muss dies nich der Fall sein.",
           "aspects": [],
           "id": "123",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Instanzvariablen sind bereits initialisiert. Instanzvariablen gehören zu einem Objekt. Bei Klassenvariablen muss dies nicht der Fall sein."
+            "Instanzvariablen sind bereits initialisiert. Instanzvariablen geh\u00f6ren zu einem Objekt. Bei Klassenvariablen muss dies nicht der Fall sein."
         },
         {
           "text":
@@ -3071,7 +3167,7 @@
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Die beiden unterscheiden sich durch 'this'. Insatanzvariablen werden durch 'this' definiert."
+            "Die beiden unterscheiden sich durch this. Insatanzvariablen werden durch this definiert."
         },
         {
           "text":
@@ -3085,23 +3181,23 @@
         },
         {
           "text":
-            "Instanzvariablen werden den Objekten übergeben und gehören den Objekten. Die Klassenvariablen gehören der ganzen Klasse",
+            "Instanzvariablen werden den Objekten \u00fcbergeben und geh\u00f6ren den Objekten. Die Klassenvariablen geh\u00f6ren der ganzen Klasse",
           "aspects": [],
           "id": "126",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Instanzvariablen werden den Objekten übergeben und gehören den Objekten. Die Klassenvariablen gehören der ganzen Klasse."
+            "Instanzvariablen werden den Objekten \u00fcbergeben und geh\u00f6ren den Objekten. Die Klassenvariablen geh\u00f6ren der ganzen Klasse."
         },
         {
           "text":
-            "Jedes object hat seine eigene Instanzvariable unabhängig von anderen Objekten die von der selben klasse codiert wurden. klassenvariablen sind an die eigenen Klassen gebunden, die Objekte sehen die selben klassenvariablen",
+            "Jedes object hat seine eigene Instanzvariable unabh\u00e4ngig von anderen Objekten die von der selben klasse codiert wurden. klassenvariablen sind an die eigenen Klassen gebunden, die Objekte sehen die selben klassenvariablen",
           "aspects": [],
           "id": "127",
           "points": 0,
           "answerCategory": "correct",
           "correctionOrComment":
-            "Jedes Objekt hat seine eigene Instanzvariable unabhängig von anderen Objekten, die von derselben Klasse codiert wurden. Klassenvariablen sind an die eigenen Klassen gebunden. Die Objekte sehen die selben Klassenvariablen."
+            "Jedes Objekt hat seine eigene Instanzvariable unabh\u00e4ngig von anderen Objekten, die von derselben Klasse codiert wurden. Klassenvariablen sind an die eigenen Klassen gebunden. Die Objekte sehen die selben Klassenvariablen."
         },
         {
           "text":
@@ -3111,17 +3207,17 @@
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Instanzvariablen sind in einer Klasse definiert und man kann durch 'get' und 'set' auf sie zugreifen."
+            "Instanzvariablen sind in einer Klasse definiert und man kann durch get und set auf sie zugreifen."
         },
         {
           "text":
-            "Klassenvariablen sind in der Klasse überalle sichtbar. Instanzvariablen sind für die gegebene Instanz aufgerufen und danach werden sie von der garbage collection eingesammelt",
+            "Klassenvariablen sind in der Klasse \u00fcberalle sichtbar. Instanzvariablen sind f\u00fcr die gegebene Instanz aufgerufen und danach werden sie von der garbage collection eingesammelt",
           "aspects": [],
           "id": "129",
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Klassenvariablen sind in der Klasse überall sichtbar. Instanzvariablen sind für die gegebene Instanz aufgerufen und danach werden sie von dem 'garbage collector' eingesammelt."
+            "Klassenvariablen sind in der Klasse \u00fcberall sichtbar. Instanzvariablen sind f\u00fcr die gegebene Instanz aufgerufen und danach werden sie von dem garbage collector eingesammelt."
         },
         {
           "text": "-",
@@ -3141,22 +3237,22 @@
         },
         {
           "text":
-            "Instanzvariablen können nur von einzelnen Methoden genutzt werden. Klassenvaroiablen von der ganzen Klasse.",
+            "Instanzvariablen k\u00f6nnen nur von einzelnen Methoden genutzt werden. Klassenvaroiablen von der ganzen Klasse.",
           "aspects": [],
           "id": "132",
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Instanzvariablen können nur von einzelnen Methoden genutzt werden, Klassenvariablen von der ganzen Klasse."
+            "Instanzvariablen k\u00f6nnen nur von einzelnen Methoden genutzt werden, Klassenvariablen von der ganzen Klasse."
         },
         {
-          "text": "instanzvariablengehören zu den objekten werden objekten übergeben",
+          "text": "instanzvariablengeh\u00f6ren zu den objekten werden objekten \u00fcbergeben",
           "aspects": [],
           "id": "133",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Instanzvariablen gehören zu den Objekten. Sie werden Objekten übergeben."
+            "Instanzvariablen geh\u00f6ren zu den Objekten. Sie werden Objekten \u00fcbergeben."
         },
         {
           "text": "Klassenvariablen sind in der Klasse sichtbar und Instanzvariablen sind",
@@ -3175,23 +3271,24 @@
           "correctionOrComment": "Instanzvariablen sind bereits initialisiert."
         },
         {
-          "text": "Instanzvariable gehören zu den Objekt und statischen variable Klassen variable",
+          "text":
+            "Instanzvariable geh\u00f6ren zu den Objekt und statischen variable Klassen variable",
           "aspects": [],
           "id": "136",
           "points": 0,
           "answerCategory": "partially_correct",
           "correctionOrComment":
-            "Instanzvariablen gehören zu dem Objekt und statische Variablen sind Klassenvariablen."
+            "Instanzvariablen geh\u00f6ren zu dem Objekt und statische Variablen sind Klassenvariablen."
         },
         {
           "text":
-            "Instanzvariablen gehören zu den Objekten werden den Objekten übergeben. Klassenvariablen hingegen nicht sie gehrlen einer klase",
+            "Instanzvariablen geh\u00f6ren zu den Objekten werden den Objekten \u00fcbergeben. Klassenvariablen hingegen nicht sie gehrlen einer klase",
           "aspects": [],
           "id": "137",
           "points": 0,
           "answerCategory": "binary_correct",
           "correctionOrComment":
-            "Instanzvariablen gehören zu den Objekten und werden den Objekten übergeben. Klassenvariablen hingegen nicht, sie gehören einer Klasse."
+            "Instanzvariablen geh\u00f6ren zu den Objekten und werden den Objekten \u00fcbergeben. Klassenvariablen hingegen nicht, sie geh\u00f6ren einer Klasse."
         },
         {
           "text":
@@ -3221,7 +3318,7 @@
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Klassenvariablen werden in der 'main' Methode deklariert, Instanzvariablen in Konstruktoren."
+            "Klassenvariablen werden in der main Methode deklariert, Instanzvariablen in Konstruktoren."
         },
         {
           "text":
@@ -3251,7 +3348,7 @@
           "points": 0,
           "answerCategory": "missconception",
           "correctionOrComment":
-            "Instanzsvariablen sind zum Beispiel einfach 'public String' oder 'public int', und Klassenvariablen Parameter."
+            "Instanzsvariablen sind zum Beispiel einfach public String oder public int, und Klassenvariablen Parameter."
         },
         {
           "text": "this",

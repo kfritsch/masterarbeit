@@ -1,2 +1,8 @@
-/test-scripts
 /question-corpuse
+/mongodb
+/GN_V130
+/test-scripts/germanet_test_data
+/test-scripts/lib
+/test-scripts/tiger
+/test-scripts/AnnotatedGoldStandards.json
+/sdewac-gn-words.tsv

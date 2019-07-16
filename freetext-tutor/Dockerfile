@@ -4,6 +4,8 @@ RUN apt-get update -y && apt-get install -y \
         build-essential \
     && rm -rf /var/lib/apt/lists/*
 
+# RUN apt-get install mongodb
+
 WORKDIR /app
 
 ADD requirements.txt /app/requirements.txt

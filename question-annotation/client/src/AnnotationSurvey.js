@@ -1,6 +1,7 @@
 import React from "react";
 import QuestionAnnotation from "./QuestionAnnotation";
-import AnswerAnnotation from "./AnswerAnnotation";
+//import AnswerAnnotation from "./schema-one/AnswerAnnotation";
+import AnswerAnnotationSchemaTwo from "./schema-two/AnswerAnnotationSchemaTwo";
 
 import { Segment, Header, Button } from "semantic-ui-react";
 
@@ -40,7 +41,7 @@ export default class AnnotationSurvey extends React.Component {
     this.callApi()
       .then((res) => {
         var { questions, annotations } = res;
-        this.questions = questions;
+        this.questions = questions.sort((a, b) => parseInt(a.id) - parseInt(b.id));
         this.annotations = annotations;
         var qIdx = this.annotations.questions.length - 1;
         if (qIdx < 0) {
@@ -55,6 +56,9 @@ export default class AnnotationSurvey extends React.Component {
           qIdx += 1;
           annIdx = 0;
         }
+        // TODO clean
+        // qIdx = 0;
+        // annIdx = 0;
         var currentAnnotation = this.getCurrentAnnotation(qIdx, annIdx);
         this.setState({
           qIdx,
@@ -83,13 +87,11 @@ export default class AnnotationSurvey extends React.Component {
     } else {
       this.annotations.questions[qIdx].answersAnnotation[annIdx] = answerAnnotation;
     }
-    console.log(this.annotations);
     this.saveAnnotations();
     return true;
   }
 
   getDepTree = async (text) => {
-    console.log(text);
     const response = await fetch("http://localhost:5000/dep-tree", {
       method: "POST",
       headers: {
@@ -100,10 +102,7 @@ export default class AnnotationSurvey extends React.Component {
       })
     });
     const body = await response.json();
-    console.log(body);
     return body;
-    // this.setState({ responseToPost: body })
-    // console.log(activeAnswerAnnotation);
   };
 
   saveAnnotations = async () => {
@@ -117,40 +116,41 @@ export default class AnnotationSurvey extends React.Component {
       })
     });
     const body = await response.text();
-    console.log(body);
-    // this.setState({ responseToPost: body })
-    // console.log(activeAnswerAnnotation);
+    return body;
   };
 
   getCurrentAnnotation(qIdx, annIdx) {
     var activeAnswerAnnotation = this.annotations.questions[qIdx].answersAnnotation[annIdx];
     var activeAnswer = this.questions[qIdx].studentAnswers[annIdx];
+    // var emptyAspect = {
+    //   text: "",
+    //   start: 0,
+    //   end: 0,
+    //   referenceAspects: [],
+    //   nlpLabels: [],
+    //   additionalLabels: []
+    // };
+    var emptyAspectSchemaTwo = {
+      text: "",
+      elements: [],
+      referenceAspects: [],
+      nlpLabels: [],
+      additionalLabels: []
+    };
     if (!activeAnswerAnnotation) {
       activeAnswerAnnotation = {
-        text: activeAnswer.text.replace(/  +/g, " "),
-        aspects: [
-          {
-            text: "",
-            start: 0,
-            end: 0,
-            referenceAspects: [],
-            nlpLabels: [],
-            additionalLabels: []
-          }
-        ],
+        text: activeAnswer.text.replace(/\s\s+/g, " "),
+        aspects: [emptyAspectSchemaTwo],
         id: activeAnswer.id,
         points: 0,
-        correctionOrComment: ""
+        answerCategory: "",
+        correctionOrComment: activeAnswer.text.replace(/\s\s+/g, " ")
       };
     } else {
-      activeAnswerAnnotation.aspects.push({
-        text: "",
-        start: 0,
-        end: 0,
-        referenceAspects: [],
-        nlpLabels: [],
-        additionalLabels: []
-      });
+      activeAnswerAnnotation.aspects.push(emptyAspectSchemaTwo);
+      if (!("correctionOrComment" in activeAnswerAnnotation)) {
+        activeAnswerAnnotation["correctionOrComment"] = activeAnswer.text.replace(/\s\s+/g, " ");
+      }
     }
     return activeAnswerAnnotation;
   }
@@ -219,11 +219,10 @@ export default class AnnotationSurvey extends React.Component {
       lastAnnotation = annIdx === this.questions[qIdx].studentAnswers.length - 1;
       lastQuestion = qIdx === this.questions.length - 1;
     }
-
     return (
       <div className="app-container">
-        <div className="app-header">
-          <Header textAlign="center" as="h1" style={{ verticalAlign: "middle", fontSize: "3rem" }}>
+        <div className="header-container">
+          <Header className="header-text text-area" textAlign="center" as="h1">
             Question-Annotation
           </Header>
         </div>
@@ -236,7 +235,7 @@ export default class AnnotationSurvey extends React.Component {
               getColors={this.getColors}
               getDepTree={this.getDepTree}
             />
-            <AnswerAnnotation
+            <AnswerAnnotationSchemaTwo
               ref={(instance) => {
                 this.answerAnnotation = instance;
               }}

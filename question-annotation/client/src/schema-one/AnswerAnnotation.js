@@ -4,24 +4,37 @@ import { Message, Button, Dropdown, Label, Segment, Input, TextArea } from "sema
 import AnswerMarkup from "./AnswerMarkup";
 import Tree from "react-d3-tree";
 
+const ROUGH_CATEGORIES = [
+  "correct",
+  "binary_correct",
+  "partially_correct",
+  "missconception",
+  "concept_mix-up",
+  "guessing",
+  "none"
+];
+
 const SEMANTIC_NLP_LABELS = [
   { name: "same", color: "#ddcccc" },
   { name: "synonynm", color: "#af8e8e" },
   { name: "paraphrase", color: "#8c6363" },
-  { name: "expertise", color: "#663b3b" }
+  { name: "expertise", color: "#663b3b" },
+  { name: "hyponym", color: "#da7878" },
+  { name: "hypernym", color: "#983e3e" }
 ]; // On top of spellchecking, lemmatization,
 
 const ADDITIONAL_LABELS = [
-  { name: "example", color: "#c6c6c6" },
+  { name: "correct", color: "#c6c6c6" },
   { name: "false", color: "#919191" },
-  { name: "redundant", color: "#444444" },
-  { name: "none", color: "#000000" }
+  { name: "example", color: "#444444" },
+  { name: "redundant", color: "#000000" }
 ];
 
 export default class AnswerAnnotation extends React.Component {
   constructor(props) {
     super(props);
     var activeAnswer = props.activeQuestion.studentAnswers[props.annIdx];
+    activeAnswer.text = activeAnswer.text.replace(/\s\s+/g, " ");
     this.state = {
       colors: props.getColors(props.activeQuestion),
       activeAnswer,
@@ -32,11 +45,9 @@ export default class AnswerAnnotation extends React.Component {
   }
 
   componentDidMount() {
-    this.props
-      .getDepTree(this.props.activeQuestion.studentAnswers[this.props.annIdx].text)
-      .then((res) => {
-        this.setState({ studentAnswerTree: res.tree });
-      });
+    this.props.getDepTree("Das ist nicht schön.").then((res) => {
+      this.setState({ studentAnswerTree: res.tree });
+    });
   }
 
   componentDidUpdate(prevProps) {
@@ -50,6 +61,7 @@ export default class AnswerAnnotation extends React.Component {
           this.setState({ studentAnswerTree: res.tree });
         });
       var activeAnswer = this.props.activeQuestion.studentAnswers[this.props.annIdx];
+      activeAnswer.text = activeAnswer.text.replace(/\s\s+/g, " ");
       this.setState({
         colors: this.props.getColors(this.props.activeQuestion),
         activeAnswer,
@@ -64,7 +76,7 @@ export default class AnswerAnnotation extends React.Component {
     var activeQuestion = this.props.activeQuestion;
     activeAnswerAnnotation["id"] = activeAnswer["id"];
     var aspectCount = activeQuestion.referenceAnswer.aspects.length;
-    if (activeAnswerAnnotation.aspects.length > 1) {
+    if (activeAnswerAnnotation.answerCategory) {
       activeAnswerAnnotation.aspects.pop();
     } else {
       return false;
@@ -186,6 +198,12 @@ export default class AnswerAnnotation extends React.Component {
       activeAnswerAnnotation.aspects[annIndex].nlpLabels = refVals;
     }
 
+    this.setState({ activeAnswerAnnotation });
+  };
+
+  categoryDropdownChange = (e, obj) => {
+    var { activeAnswerAnnotation } = this.state;
+    activeAnswerAnnotation.answerCategory = obj.value;
     this.setState({ activeAnswerAnnotation });
   };
 
@@ -396,14 +414,12 @@ export default class AnswerAnnotation extends React.Component {
                 {"Schülerantwort " + (annIdx + 1) + "/" + activeQuestion.studentAnswers.length}
               </Message.Header>
               <AnswerMarkup answer={activeAnswerAnnotation} colors={this.state.colors} />
-              <div>
-                <Button
-                  onClick={() => this.setState({ answerToggle: !answerToggle })}
-                  style={{ marginTop: "6px", backgroundColor: "#66AB8C", color: "#F2EEE2" }}
-                  content="View Tree"
-                  size="tiny"
-                />
-              </div>
+              <Button
+                className="tree-button"
+                onClick={() => this.setState({ answerToggle: !answerToggle })}
+                icon="code branch"
+                size="mini"
+              />
             </Message>
             {answerToggle && studentAnswerTree && this.renderReactTree(studentAnswerTree)}
 
@@ -418,6 +434,24 @@ export default class AnswerAnnotation extends React.Component {
               onChange={this.handleAreaChange.bind(this)}
               value={activeAnswerAnnotation.correctionOrComment}
             />
+          </Segment>
+          <Segment textAlign="center">
+            {/* <Message textAlign="center" style={{ backgroundColor: "#eff0f6", width: "40%" }}> */}
+            <Dropdown
+              value={activeAnswerAnnotation.answerCategory}
+              placeholder="Answer Category"
+              options={ROUGH_CATEGORIES.map((cat) => {
+                return {
+                  value: cat,
+                  text: cat.replace("_", " "),
+                  key: cat
+                };
+              })}
+              button
+              onChange={this.categoryDropdownChange.bind(this)}
+              style={{ gridArea: "box2", textAlign: "center", backgroundColor: "#a5696942" }}
+            />
+            {/* </Message> */}
           </Segment>
         </Segment.Group>
       </div>

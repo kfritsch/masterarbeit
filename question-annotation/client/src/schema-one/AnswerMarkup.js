@@ -27,6 +27,9 @@ export default class AnswerMarkup extends React.Component {
   render() {
     const { text, aspects } = this.props.answer;
     var sortedAspects = JSON.parse(JSON.stringify(aspects));
+    if (sortedAspects.length === 0) {
+      return <span key={"whole"}>{text}</span>;
+    }
     function compareAspects(a, b) {
       return a.start - b.start;
     }

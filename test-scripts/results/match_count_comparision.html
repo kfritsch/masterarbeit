@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{}</title>
+</head>
+<body>
+<h2>Reference Answer Only</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>label #</th>
+      <th>label %</th>
+      <th>avg match #</th>
+      <th>avg answer length</th>
+      <th>most frequent matchs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>correct</th>
+      <td>1</td>
+      <td>0.0136986</td>
+      <td>3</td>
+      <td>47</td>
+      <td>[('klasse', 1), ('methode', 1), ('parameter', 1)]</td>
+    </tr>
+    <tr>
+      <th>binary_correct</th>
+      <td>21</td>
+      <td>0.287671</td>
+      <td>3.80952</td>
+      <td>16.381</td>
+      <td>[('methode', 21), ('name', 16), ('unterscheide...</td>
+    </tr>
+    <tr>
+      <th>partially_correct</th>
+      <td>10</td>
+      <td>0.136986</td>
+      <td>3.6</td>
+      <td>16</td>
+      <td>[('methode', 8), ('sein', 7), ('name', 4)]</td>
+    </tr>
+    <tr>
+      <th>example</th>
+      <td>1</td>
+      <td>0.0136986</td>
+      <td>5</td>
+      <td>9</td>
+      <td>[('methode', 1), ('mit', 1), ('parameter', 1)]</td>
+    </tr>
+    <tr>
+      <th>missconception</th>
+      <td>1</td>
+      <td>0.0136986</td>
+      <td>4</td>
+      <td>14</td>
+      <td>[('methode', 1), ('mit', 1), ('parameter', 1)]</td>
+    </tr>
+    <tr>
+      <th>bad_phrasing</th>
+      <td>1</td>
+      <td>0.0136986</td>
+      <td>3</td>
+      <td>11</td>
+      <td>[('klasse', 1), ('methode', 1), ('unterscheide...</td>
+    </tr>
+    <tr>
+      <th>concept_mix-up</th>
+      <td>15</td>
+      <td>0.205479</td>
+      <td>2.73333</td>
+      <td>17.6</td>
+      <td>[('methode', 14), ('sein', 11), ('klasse', 7)]</td>
+    </tr>
+    <tr>
+      <th>missed_question</th>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>guessing</th>
+      <td>14</td>
+      <td>0.191781</td>
+      <td>1.64286</td>
+      <td>6.78571</td>
+      <td>[('methode', 12), ('sein', 8), ('parameter', 2)]</td>
+    </tr>
+    <tr>
+      <th>none</th>
+      <td>9</td>
+      <td>0.123288</td>
+      <td>0.444444</td>
+      <td>2.88889</td>
+      <td>[('methode', 3), ('mit', 1), ('anhand', 0)]</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>false</th>
+      <td>40</td>
+      <td>0.547945</td>
+      <td>1.875</td>
+      <td>10.25</td>
+      <td>[('methode', 31), ('sein', 20), ('klasse', 8)]</td>
+    </tr>
+    <tr>
+      <th>&gt;= part_correct</th>
+      <td>32</td>
+      <td>0.438356</td>
+      <td>3.71875</td>
+      <td>17.2188</td>
+      <td>[('methode', 30), ('name', 20), ('sein', 17)]</td>
+    </tr>
+    <tr>
+      <th>&gt;= bin_correct</th>
+      <td>22</td>
+      <td>0.30137</td>
+      <td>3.77273</td>
+      <td>17.7727</td>
+      <td>[('methode', 22), ('name', 16), ('unterscheide...</td>
+    </tr>
+    <tr>
+      <th>total</th>
+      <td>73</td>
+      <td>1</td>
+      <td>2.72603</td>
+      <td>13.2877</td>
+      <td>[('methode', 62), ('sein', 38), ('name', 21)]</td>
+    </tr>
+  </tbody>
+</table>[('methode', 62), ('sein', 38), ('name', 21), ('mit', 17), ('unterscheiden', 17), ('selben', 14), ('klasse', 12), ('parameter', 12), ('unterschiedlich', 6), ('anhand', 0), ('signaturen', 0)]<h2>1 additional Pupil Answers</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>label #</th>
+      <th>label %</th>
+      <th>avg match #</th>
+      <th>avg answer length</th>
+      <th>most frequent matchs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>correct</th>
+      <td>1</td>
+      <td>0.0138889</td>
+      <td>3</td>
+      <td>47</td>
+      <td>[('klasse', 1), ('methode', 1), ('parameter', 1)]</td>
+    </tr>
+    <tr>
+      <th>binary_correct</th>
+      <td>20</td>
+      <td>0.277778</td>
+      <td>5.1</td>
+      <td>16.8</td>
+      <td>[('methode', 20), ('name', 16), ('haben', 14)]</td>
+    </tr>
+    <tr>
+      <th>partially_correct</th>
+      <td>10</td>
+      <td>0.138889</td>
+      <td>4.7</td>
+      <td>16</td>
+      <td>[('methode', 8), ('sein', 7), ('haben', 5)]</td>
+    </tr>
+    <tr>
+      <th>example</th>
+      <td>1</td>
+      <td>0.0138889</td>
+      <td>5</td>
+      <td>9</td>
+      <td>[('methode', 1), ('mit', 1), ('parameter', 1)]</td>
+    </tr>
+    <tr>
+      <th>missconception</th>
+      <td>1</td>
+      <td>0.0138889</td>
+      <td>4</td>
+      <td>14</td>
+      <td>[('methode', 1), ('mit', 1), ('parameter', 1)]</td>
+    </tr>
+    <tr>
+      <th>bad_phrasing</th>
+      <td>1</td>
+      <td>0.0138889</td>
+      <td>4</td>
+      <td>11</td>
+      <td>[('klasse', 1), ('methode', 1), ('selbe', 1)]</td>
+    </tr>
+    <tr>
+      <th>concept_mix-up</th>
+      <td>15</td>
+      <td>0.208333</td>
+      <td>3.2</td>
+      <td>17.6</td>
+      <td>[('methode', 14), ('sein', 11), ('klasse', 7)]</td>
+    </tr>
+    <tr>
+      <th>missed_question</th>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>guessing</th>
+      <td>14</td>
+      <td>0.194444</td>
+      <td>1.85714</td>
+      <td>6.78571</td>
+      <td>[('methode', 12), ('sein', 8), ('parameter', 2)]</td>
+    </tr>
+    <tr>
+      <th>none</th>
+      <td>9</td>
+      <td>0.125</td>
+      <td>0.444444</td>
+      <td>2.88889</td>
+      <td>[('methode', 3), ('mit', 1), ('anhand', 0)]</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>false</th>
+      <td>40</td>
+      <td>0.555556</td>
+      <td>2.15</td>
+      <td>10.25</td>
+      <td>[('methode', 31), ('sein', 20), ('klasse', 8)]</td>
+    </tr>
+    <tr>
+      <th>&gt;= part_correct</th>
+      <td>31</td>
+      <td>0.430556</td>
+      <td>4.90323</td>
+      <td>17.5161</td>
+      <td>[('methode', 29), ('name', 20), ('haben', 19)]</td>
+    </tr>
+    <tr>
+      <th>&gt;= bin_correct</th>
+      <td>21</td>
+      <td>0.291667</td>
+      <td>5</td>
+      <td>18.2381</td>
+      <td>[('methode', 21), ('name', 16), ('haben', 14)]</td>
+    </tr>
+    <tr>
+      <th>total</th>
+      <td>72</td>
+      <td>1</td>
+      <td>3.375</td>
+      <td>13.3611</td>
+      <td>[('methode', 61), ('sein', 37), ('haben', 22)]</td>
+    </tr>
+  </tbody>
+</table>[('methode', 61), ('sein', 37), ('haben', 22), ('name', 21), ('und', 18), ('mit', 17), ('unterscheiden', 17), ('selben', 13), ('klasse', 12), ('parameter', 12), ('nehmen', 6), ('unterschiedlich', 6), ('selbe', 1), ('anhand', 0), ('funktion', 0), ('signaturen', 0)]<h2>2 additional Pupil Answers</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>label #</th>
+      <th>label %</th>
+      <th>avg match #</th>
+      <th>avg answer length</th>
+      <th>most frequent matchs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>correct</th>
+      <td>1</td>
+      <td>0.0140845</td>
+      <td>4</td>
+      <td>47</td>
+      <td>[('klasse', 1), ('methode', 1), ('parameter', 1)]</td>
+    </tr>
+    <tr>
+      <th>binary_correct</th>
+      <td>19</td>
+      <td>0.267606</td>
+      <td>6.84211</td>
+      <td>16.9474</td>
+      <td>[('methode', 19), ('name', 15), ('haben', 14)]</td>
+    </tr>
+    <tr>
+      <th>partially_correct</th>
+      <td>10</td>
+      <td>0.140845</td>
+      <td>6</td>
+      <td>16</td>
+      <td>[('methode', 8), ('sein', 7), ('haben', 5)]</td>
+    </tr>
+    <tr>
+      <th>example</th>
+      <td>1</td>
+      <td>0.0140845</td>
+      <td>7</td>
+      <td>9</td>
+      <td>[('methode', 1), ('mit', 1), ('parameter', 1)]</td>
+    </tr>
+    <tr>
+      <th>missconception</th>
+      <td>1</td>
+      <td>0.0140845</td>
+      <td>6</td>
+      <td>14</td>
+      <td>[('methode', 1), ('mit', 1), ('parameter', 1)]</td>
+    </tr>
+    <tr>
+      <th>bad_phrasing</th>
+      <td>1</td>
+      <td>0.0140845</td>
+      <td>5</td>
+      <td>11</td>
+      <td>[('klasse', 1), ('methode', 1), ('selbe', 1)]</td>
+    </tr>
+    <tr>
+      <th>concept_mix-up</th>
+      <td>15</td>
+      <td>0.211268</td>
+      <td>4.4</td>
+      <td>17.6</td>
+      <td>[('methode', 14), ('sein', 11), ('überladen', ...</td>
+    </tr>
+    <tr>
+      <th>missed_question</th>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>guessing</th>
+      <td>14</td>
+      <td>0.197183</td>
+      <td>2.42857</td>
+      <td>6.78571</td>
+      <td>[('methode', 12), ('sein', 8), ('wenn', 3)]</td>
+    </tr>
+    <tr>
+      <th>none</th>
+      <td>9</td>
+      <td>0.126761</td>
+      <td>0.444444</td>
+      <td>2.88889</td>
+      <td>[('methode', 3), ('mit', 1), ('aber', 0)]</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>false</th>
+      <td>40</td>
+      <td>0.56338</td>
+      <td>2.875</td>
+      <td>10.25</td>
+      <td>[('methode', 31), ('sein', 20), ('überladen', ...</td>
+    </tr>
+    <tr>
+      <th>&gt;= part_correct</th>
+      <td>30</td>
+      <td>0.422535</td>
+      <td>6.46667</td>
+      <td>17.6333</td>
+      <td>[('methode', 28), ('haben', 19), ('name', 19)]</td>
+    </tr>
+    <tr>
+      <th>&gt;= bin_correct</th>
+      <td>20</td>
+      <td>0.28169</td>
+      <td>6.7</td>
+      <td>18.45</td>
+      <td>[('methode', 20), ('name', 15), ('überladen', ...</td>
+    </tr>
+    <tr>
+      <th>total</th>
+      <td>71</td>
+      <td>1</td>
+      <td>4.4507</td>
+      <td>13.3521</td>
+      <td>[('methode', 60), ('sein', 36), ('überladen', ...</td>
+    </tr>
+  </tbody>
+</table>[('methode', 60), ('sein', 36), ('überladen', 33), ('haben', 22), ('name', 20), ('und', 18), ('unterscheiden', 17), ('wenn', 17), ('mit', 16), ('klasse', 12), ('parameter', 12), ('selben', 12), ('signatur', 11), ('aber', 8), ('ander', 8), ('nehmen', 6), ('unterschiedlich', 6), ('selbe', 1), ('weit', 1), ('anhand', 0), ('funktion', 0), ('mindestens', 0), ('signaturen', 0), ('vorliegen', 0)]<h2>4 additional Pupil Answers</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>label #</th>
+      <th>label %</th>
+      <th>avg match #</th>
+      <th>avg answer length</th>
+      <th>most frequent matchs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>correct</th>
+      <td>1</td>
+      <td>0.0144928</td>
+      <td>9</td>
+      <td>47</td>
+      <td>[('als', 1), ('beispiel', 1), ('int', 1)]</td>
+    </tr>
+    <tr>
+      <th>binary_correct</th>
+      <td>17</td>
+      <td>0.246377</td>
+      <td>7.76471</td>
+      <td>16.2353</td>
+      <td>[('methode', 17), ('name', 13), ('haben', 12)]</td>
+    </tr>
+    <tr>
+      <th>partially_correct</th>
+      <td>10</td>
+      <td>0.144928</td>
+      <td>7.1</td>
+      <td>16</td>
+      <td>[('methode', 8), ('sein', 7), ('haben', 5)]</td>
+    </tr>
+    <tr>
+      <th>example</th>
+      <td>1</td>
+      <td>0.0144928</td>
+      <td>8</td>
+      <td>9</td>
+      <td>[('konstruktoren', 1), ('methode', 1), ('mit',...</td>
+    </tr>
+    <tr>
+      <th>missconception</th>
+      <td>1</td>
+      <td>0.0144928</td>
+      <td>6</td>
+      <td>14</td>
+      <td>[('methode', 1), ('mit', 1), ('parameter', 1)]</td>
+    </tr>
+    <tr>
+      <th>bad_phrasing</th>
+      <td>1</td>
+      <td>0.0144928</td>
+      <td>5</td>
+      <td>11</td>
+      <td>[('klasse', 1), ('methode', 1), ('selbe', 1)]</td>
+    </tr>
+    <tr>
+      <th>concept_mix-up</th>
+      <td>15</td>
+      <td>0.217391</td>
+      <td>5.8</td>
+      <td>17.6</td>
+      <td>[('methode', 14), ('sein', 11), ('überladen', ...</td>
+    </tr>
+    <tr>
+      <th>missed_question</th>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>guessing</th>
+      <td>14</td>
+      <td>0.202899</td>
+      <td>2.64286</td>
+      <td>6.78571</td>
+      <td>[('methode', 12), ('sein', 8), ('können', 3)]</td>
+    </tr>
+    <tr>
+      <th>none</th>
+      <td>9</td>
+      <td>0.130435</td>
+      <td>0.555556</td>
+      <td>2.88889</td>
+      <td>[('methode', 3), ('durch', 1), ('mit', 1)]</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>false</th>
+      <td>40</td>
+      <td>0.57971</td>
+      <td>3.5</td>
+      <td>10.25</td>
+      <td>[('methode', 31), ('sein', 20), ('überladen', ...</td>
+    </tr>
+    <tr>
+      <th>&gt;= part_correct</th>
+      <td>28</td>
+      <td>0.405797</td>
+      <td>7.57143</td>
+      <td>17.25</td>
+      <td>[('methode', 26), ('haben', 17), ('name', 17)]</td>
+    </tr>
+    <tr>
+      <th>&gt;= bin_correct</th>
+      <td>18</td>
+      <td>0.26087</td>
+      <td>7.83333</td>
+      <td>17.9444</td>
+      <td>[('methode', 18), ('name', 13), ('überladen', ...</td>
+    </tr>
+    <tr>
+      <th>total</th>
+      <td>69</td>
+      <td>1</td>
+      <td>5.21739</td>
+      <td>13.0725</td>
+      <td>[('methode', 58), ('sein', 36), ('überladen', ...</td>
+    </tr>
+  </tbody>
+</table>[('methode', 58), ('sein', 36), ('überladen', 31), ('haben', 20), ('name', 18), ('und', 18), ('unterscheiden', 17), ('wenn', 17), ('mit', 16), ('durch', 15), ('können', 14), ('klasse', 11), ('selben', 11), ('signatur', 11), ('parameter', 10), ('beispiel', 9), ('aber', 7), ('zum', 7), ('ander', 6), ('nehmen', 6), ('unterschiedlich', 6), ('als', 4), ('jedoch', 2), ('oder', 2), ('wie', 2), ('bei', 1), ('bezeichnen', 1), ('int', 1), ('konstruktoren', 1), ('selbe', 1), ('weit', 1), ('altern', 0), ('anhand', 0), ('aussuchen', 0), ('erwarten', 0), ('funktion', 0), ('klassemann', 0), ('klassenlos', 0), ('klassenperson', 0), ('kt', 0), ('mindestens', 0), ('nutzen', 0), ('signaturen', 0), ('user', 0), ('vorliegen', 0), ('wollen', 0), ('überladung', 0)]<h2>7 additional Pupil Answers</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>label #</th>
+      <th>label %</th>
+      <th>avg match #</th>
+      <th>avg answer length</th>
+      <th>most frequent matchs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>correct</th>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>binary_correct</th>
+      <td>15</td>
+      <td>0.227273</td>
+      <td>11.6</td>
+      <td>17.1333</td>
+      <td>[('methode', 15), ('haben', 11), ('name', 11)]</td>
+    </tr>
+    <tr>
+      <th>partially_correct</th>
+      <td>10</td>
+      <td>0.151515</td>
+      <td>8.7</td>
+      <td>16</td>
+      <td>[('methode', 8), ('sein', 7), ('haben', 5)]</td>
+    </tr>
+    <tr>
+      <th>example</th>
+      <td>1</td>
+      <td>0.0151515</td>
+      <td>8</td>
+      <td>9</td>
+      <td>[('konstruktoren', 1), ('methode', 1), ('mit',...</td>
+    </tr>
+    <tr>
+      <th>missconception</th>
+      <td>1</td>
+      <td>0.0151515</td>
+      <td>8</td>
+      <td>14</td>
+      <td>[('implementiert', 1), ('methode', 1), ('mit',...</td>
+    </tr>
+    <tr>
+      <th>bad_phrasing</th>
+      <td>1</td>
+      <td>0.0151515</td>
+      <td>8</td>
+      <td>11</td>
+      <td>[('in', 1), ('klasse', 1), ('methode', 1)]</td>
+    </tr>
+    <tr>
+      <th>concept_mix-up</th>
+      <td>15</td>
+      <td>0.227273</td>
+      <td>6.8</td>
+      <td>17.6</td>
+      <td>[('methode', 14), ('sein', 11), ('überladen', ...</td>
+    </tr>
+    <tr>
+      <th>missed_question</th>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>guessing</th>
+      <td>14</td>
+      <td>0.212121</td>
+      <td>3.14286</td>
+      <td>6.78571</td>
+      <td>[('methode', 12), ('sein', 8), ('können', 3)]</td>
+    </tr>
+    <tr>
+      <th>none</th>
+      <td>9</td>
+      <td>0.136364</td>
+      <td>0.888889</td>
+      <td>2.88889</td>
+      <td>[('methode', 3), ('werden', 2), ('durch', 1)]</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>false</th>
+      <td>40</td>
+      <td>0.606061</td>
+      <td>4.25</td>
+      <td>10.25</td>
+      <td>[('methode', 31), ('sein', 20), ('werden', 14)]</td>
+    </tr>
+    <tr>
+      <th>&gt;= part_correct</th>
+      <td>25</td>
+      <td>0.378788</td>
+      <td>10.44</td>
+      <td>16.68</td>
+      <td>[('methode', 23), ('haben', 16), ('name', 15)]</td>
+    </tr>
+    <tr>
+      <th>&gt;= bin_correct</th>
+      <td>15</td>
+      <td>0.227273</td>
+      <td>11.6</td>
+      <td>17.1333</td>
+      <td>[('methode', 15), ('haben', 11), ('name', 11)]</td>
+    </tr>
+    <tr>
+      <th>total</th>
+      <td>66</td>
+      <td>1</td>
+      <td>6.65152</td>
+      <td>12.6667</td>
+      <td>[('methode', 55), ('sein', 36), ('überladen', ...</td>
+    </tr>
+  </tbody>
+</table>[('methode', 55), ('sein', 36), ('überladen', 29), ('haben', 19), ('werden', 18), ('und', 17), ('mit', 16), ('name', 16), ('unterscheiden', 16), ('wenn', 16), ('durch', 14), ('können', 13), ('zwei', 12), ('signatur', 11), ('verschieden', 11), ('in', 10), ('klasse', 10), ('müssen', 10), ('selben', 10), ('parameter', 9), ('beispiel', 8), ('typus', 8), ('aber', 7), ('heiß', 7), ('parameterliste', 7), ('zum', 7), ('ander', 6), ('nehmen', 6), ('unterschiedlich', 6), ('überladene', 5), ('als', 3), ('implementiert', 2), ('methodenname', 2), ('muss', 2), ('oder', 2), ('wie', 2), ('bei', 1), ('bezeichnen', 1), ('jedoch', 1), ('konstruktoren', 1), ('mehrmals', 1), ('mein', 1), ('publik', 1), ('selbe', 1), ('strang', 1), ('verscheiden', 1), ('weit', 1), ('altern', 0), ('anhand', 0), ('aussuchen', 0), ('beliebig', 0), ('class', 0), ('einmal', 0), ('einzigartig', 0), ('erwarten', 0), ('funktion', 0), ('geroutet', 0), ('getoutput', 0), ('gleichen', 0), ('hauch', 0), ('int', 0), ('klassemann', 0), ('klassenlos', 0), ('klassenperson', 0), ('kt', 0), ('mindestens', 0), ('mode', 0), ('nutzen', 0), ('prefix', 0), ('returniere', 0), ('rückgabetype', 0), ('signaturen', 0), ('test', 0), ('user', 0), ('vorliegen', 0), ('wollen', 0), ('zeitgleich', 0), ('übergaben', 0), ('überladung', 0)]<h2>12 additional Pupil Answers</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>label #</th>
+      <th>label %</th>
+      <th>avg match #</th>
+      <th>avg answer length</th>
+      <th>most frequent matchs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>correct</th>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>binary_correct</th>
+      <td>10</td>
+      <td>0.163934</td>
+      <td>11.8</td>
+      <td>16.2</td>
+      <td>[('methode', 10), ('name', 8), ('unterscheiden...</td>
+    </tr>
+    <tr>
+      <th>partially_correct</th>
+      <td>10</td>
+      <td>0.163934</td>
+      <td>9</td>
+      <td>16</td>
+      <td>[('methode', 8), ('sein', 7), ('haben', 5)]</td>
+    </tr>
+    <tr>
+      <th>example</th>
+      <td>1</td>
+      <td>0.0163934</td>
+      <td>8</td>
+      <td>9</td>
+      <td>[('konstruktoren', 1), ('methode', 1), ('mit',...</td>
+    </tr>
+    <tr>
+      <th>missconception</th>
+      <td>1</td>
+      <td>0.0163934</td>
+      <td>8</td>
+      <td>14</td>
+      <td>[('implementiert', 1), ('methode', 1), ('mit',...</td>
+    </tr>
+    <tr>
+      <th>bad_phrasing</th>
+      <td>1</td>
+      <td>0.0163934</td>
+      <td>8</td>
+      <td>11</td>
+      <td>[('in', 1), ('klasse', 1), ('methode', 1)]</td>
+    </tr>
+    <tr>
+      <th>concept_mix-up</th>
+      <td>15</td>
+      <td>0.245902</td>
+      <td>7</td>
+      <td>17.6</td>
+      <td>[('methode', 14), ('sein', 11), ('überladen', ...</td>
+    </tr>
+    <tr>
+      <th>missed_question</th>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>guessing</th>
+      <td>14</td>
+      <td>0.229508</td>
+      <td>3.21429</td>
+      <td>6.78571</td>
+      <td>[('methode', 12), ('sein', 8), ('können', 3)]</td>
+    </tr>
+    <tr>
+      <th>none</th>
+      <td>9</td>
+      <td>0.147541</td>
+      <td>0.888889</td>
+      <td>2.88889</td>
+      <td>[('methode', 3), ('werden', 2), ('durch', 1)]</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>false</th>
+      <td>40</td>
+      <td>0.655738</td>
+      <td>4.35</td>
+      <td>10.25</td>
+      <td>[('methode', 31), ('sein', 20), ('werden', 14)]</td>
+    </tr>
+    <tr>
+      <th>&gt;= part_correct</th>
+      <td>20</td>
+      <td>0.327869</td>
+      <td>10.4</td>
+      <td>16.1</td>
+      <td>[('methode', 18), ('sein', 13), ('haben', 12)]</td>
+    </tr>
+    <tr>
+      <th>&gt;= bin_correct</th>
+      <td>10</td>
+      <td>0.163934</td>
+      <td>11.8</td>
+      <td>16.2</td>
+      <td>[('methode', 10), ('name', 8), ('unterscheiden...</td>
+    </tr>
+    <tr>
+      <th>total</th>
+      <td>61</td>
+      <td>1</td>
+      <td>6.39344</td>
+      <td>12.1475</td>
+      <td>[('methode', 50), ('sein', 34), ('überladen', ...</td>
+    </tr>
+  </tbody>
+</table>[('methode', 50), ('sein', 34), ('überladen', 25), ('werden', 17), ('haben', 15), ('und', 15), ('mit', 14), ('wenn', 14), ('name', 13), ('unterscheiden', 13), ('durch', 12), ('können', 12), ('klasse', 10), ('in', 9), ('verschieden', 9), ('beispiel', 8), ('parameter', 8), ('signatur', 8), ('zwei', 8), ('müssen', 7), ('selben', 7), ('zum', 7), ('aber', 6), ('egal', 6), ('heiß', 6), ('typus', 6), ('ander', 5), ('parameterliste', 5), ('unterschiedlich', 5), ('dann', 4), ('nehmen', 4), ('rückgabewert', 4), ('überladene', 4), ('als', 2), ('implementiert', 2), ('methodenname', 2), ('muss', 2), ('aufrufen', 1), ('immer', 1), ('jedoch', 1), ('konstruktoren', 1), ('mehrmals', 1), ('oder', 1), ('publik', 1), ('selbe', 1), ('strang', 1), ('verscheiden', 1), ('weit', 1), ('wie', 1), ('altern', 0), ('anhand', 0), ('ansprechen', 0), ('aussuchen', 0), ('bei', 0), ('beliebig', 0), ('bezeichnen', 0), ('class', 0), ('deshalb', 0), ('eingabe', 0), ('eingabetypen', 0), ('eingabewert', 0), ('einmal', 0), ('einzigartig', 0), ('erwarten', 0), ('funktion', 0), ('geroutet', 0), ('getoutput', 0), ('gleichen', 0), ('hauch', 0), ('int', 0), ('je', 0), ('klassemann', 0), ('klassenlos', 0), ('klassenperson', 0), ('kt', 0), ('mein', 0), ('mindestens', 0), ('mode', 0), ('möglich', 0), ('nach', 0), ('nutzen', 0), ('prefix', 0), ('returniere', 0), ('rückgabetype', 0), ('signaturen', 0), ('so', 0), ('test', 0), ('user', 0), ('vorliegen', 0), ('wollen', 0), ('zeitgleich', 0), ('übergaben', 0), ('überladung', 0)]</body>
+</html>

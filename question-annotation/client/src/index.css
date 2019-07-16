@@ -15,94 +15,57 @@ code {
   padding: 0.2em !important;
 }
 
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: space-around;
-  height: 100vh;
-}
-
-.flex-container > div {
-  margin: 10px;
-  padding: 20px;
-  flex: 10;
-}
-
-.flex--content {
-  align-content: space-around;
-  height: 100vh;
-}
-
-.part1 {
-  color: #ff0000;
-}
-.part2 {
-  color: #0000a0;
-}
-.boxed-green {
-  border: 3px solid green;
-  margin-left: 2px;
-  margin-right: 2px;
-  padding-left: 2px;
-  padding-right: 2px;
-}
-.boxed-red {
-  border: 3px solid red;
-  margin-left: 2px;
-  margin-right: 2px;
-  padding-left: 2px;
-  padding-right: 2px;
-}
-.boxed-blue {
-  border: 3px solid blue;
-  margin-left: 2px;
-  margin-right: 2px;
-  padding-left: 2px;
-  padding-right: 2px;
-}
-
 .app-container {
-  // margin-left: 6vw;
-  // margin-right: 6vw;
-  // margin-top: 5vh;
-  padding-left: 4vw;
-  padding-right: 4vw;
-  padding-top: 3vh;
-  padding-bottom: 3vh;
-  /* height: 100%; */
+  padding: 3vh 4vw;
   background-color: #ffffff;
   background-image: url("./45-degree-fabric-dark.png");
   background-repeat: repeat-xy;
 }
 
-.app-header {
-  height: 8vh;
-  margin: 2vh 20vw;
+.header-container {
+  margin: 3vh 4vw 0vh 4vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
   border-radius: 0.28571429rem;
+  background-color: #4d4d4d;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-areas: "box1 box2 box3";
 }
 
-.annotation-container {
-  margin-top: 3vh !important;
-  margin-left: 4vw !important;
-  margin-right: 4vw !important;
-  margin-bottom: 2vh !important;
+.header-container .text-area {
+  grid-area: box2;
+  vertical-align: middle;
+}
+
+.header-container .dropdown-area {
+  grid-area: box3;
+  text-align: center;
+}
+
+.ui.center.aligned.header.header-text {
+  color: white;
+  margin-bottom: 0;
+}
+
+.ui.segments.annotation-container {
+  margin: 0vh 4vw 3vh 4vw;
   background-color: white;
   text-align: center;
   padding-bottom: 2em;
 }
 
-.student-answer-container {
-  margin-top: 5vh !important;
-  margin-left: 5vw !important;
-  margin-right: 5vw !important;
-  margin-bottom: 2vh !important;
+.ui.segments.student-answer-container {
+  margin-top: 5vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-bottom: 2vh;
 }
 
-.annotation-label {
-  border-width: 4px !important;
-  border-style: solid !important;
-  background-color: white !important;
+.ui.circular.label.annotation-label {
+  border-width: 4px;
+  border-style: solid;
+  background-color: white;
 }
 
 input:-webkit-autofill,
@@ -127,39 +90,10 @@ select:-webkit-autofill:focus {
   color: #f2eee2;
 }
 
-.clt,
-.clt ul,
-.clt li {
-  position: relative;
-  text-align: left;
-}
-
-.clt ul {
-  list-style: none;
-  padding-left: 32px;
-}
-
-.clt li::before,
-.clt li::after {
-  content: "";
-  position: absolute;
-  left: -12px;
-}
-
-.clt li::before {
-  border-top: 1px solid #000;
-  top: 9px;
-  width: 8px;
-  height: 0;
-}
-
-.clt li::after {
-  border-left: 1px solid #000;
-  height: 100%;
-  width: 0px;
-  top: 2px;
-}
-
-.clt ul > li:last-child::after {
-  height: 8px;
+.ui.mini.icon.button.tree-button {
+  background-color: #66ab8c;
+  color: #f2eee2;
+  margin-left: auto;
+  margin-right: 0;
+  display: block;
 }

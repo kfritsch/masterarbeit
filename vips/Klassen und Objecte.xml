@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test xmlns="urn:vips:test:v1.0" id="test-7230" type="practice"
+      start="2018-12-05T12:00:00+01:00"
+                end="2018-12-05T12:00:00+01:00"
+            >
+    <title>
+        Klassen und Objekte    </title>
+    <description>
+            </description>
+        <exercises>
+                            <exercise id="exercise-50557" feedback="true">
+            <title>
+                Definition Object    </title>
+            <description>
+                Was ist ein Objekt?    </description>
+                    <hint>
+                    Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+        Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+                <items>
+                <item type="text-area">
+                    <answers>
+                                        <answer score="1">
+                                          Ein Objekt besteht aus einer Sammlung von Daten. Die Werte seiner Attribute beschreiben dessen Zustand.              </answer>
+                    </answers>
+                                        </item>
+            </items>
+      </exercise>
+                          <exercise id="exercise-50557" feedback="true">
+          <title>
+              Definition Klassen    </title>
+          <description>
+              Wozu dienen Klassen?    </description>
+                  <hint>
+                  Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+      Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+              <items>
+              <item type="text-area">
+                  <answers>
+                                      <answer score="1">
+                                        Klassen dienen zur Erstellung ähnlicher Objekte. Sie stellen den Datentyp dieser Objekte und definiert deren Attribute und Methoden.                </answer>
+                  </answers>
+                                      </item>
+          </items>
+      </exercise>
+      <exercise id="exercise-50557" feedback="true">
+<title>Definition Instanz    </title>
+<description>
+Was ist eine Instanz?    </description>
+<hint>
+Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+<items>
+<item type="text-area">
+<answers>
+                  <answer score="1">
+                    Ein Objekt, welches einer Klasse angehört, wird auch als Instanz dieser Klasse bezeichnet.                </answer>
+</answers>
+                  </item>
+</items>
+</exercise>
+                    <exercise id="exercise-50556" feedback="true">
+    <title>
+        Lokal vs Global    </title>
+    <description>
+        Erkläre den Unterschied von Klassen- und Instanzvariablen.    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                                    Klassenvariablen sind an die Klasse gebunden und Instanzvariablen an das jeweilige Object einer Instanz.
+                                  </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50557" feedback="true">
+    <title>
+        this   </title>
+    <description>
+        Wozu dient das Keyword "this" in Java?   </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Das Keyword "this" innerhalb einer Klasse stellt eine Referenz auf die aufrufende Instanz bereit.             </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50558" feedback="true">
+    <title>
+        Konstruktor    </title>
+    <description>
+        Was ist ein Konstruktor. Wozu wird er im Normalfall verwendet?   </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                                    Ein Konstruktor ist eine spezielle Operation, die ausgeführt
+                wird, wenn ein Objekt der Klasse erzeugt wird. Normalerweise dient er dazu die
+                Attribute des Objektes zu initialisieren.               </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50559" feedback="true">
+    <title>
+        Objektinstanziierung mit new    </title>
+    <description>
+        Was geschieht bei dem Befehl: "Fraction bruch = new Bruch();"  </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                                    Die Variable "bruch" bekommt die Referenz auf ein Objekt des Typen Fraktion. Anschließend wird der Konstruktor aufgerufen, welcher die Attribute des Objektes initialisiert.
+                                   </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+<exercise id="exercise-50559" feedback="true">
+<title>
+Signatur    </title>
+<description>
+Warum ist es in Java möglich mehrere Methoden mit dem selben Namen zu haben?  </description>
+<hint>
+Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+<items>
+<item type="text-area">
+<answers>
+            <answer score="1">
+                Jede Methode verfügt über eine Signatur, welche sie eindeutig identifiziert. In Java gehören zu dieser Signatur neben dem Namen auch noch die Parameter. Methoden können also den selben Namen haben sofern sich die Anzahl der Parameter oder ihre Typen unterscheiden.
+               </answer>
+</answers>
+            </item>
+</items>
+</exercise>
+
+<exercise id="exercise-50559" feedback="true">
+<title>
+Datenkapselung    </title>
+<description>
+Was versteht man unter Datenkapselung?  </description>
+<hint>
+Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+<items>
+<item type="text-area">
+<answers>
+            <answer score="1">
+                Unter Datenkapselung versteht man das Verbergen der Attribute und Methoden einer Klasse vor einem direkten Zugriff von Außen.
+               </answer>
+</answers>
+            </item>
+</items>
+</exercise>
+
+<exercise id="exercise-50559" feedback="true">
+<title>
+Datenkapselung    </title>
+<description>
+Warum ist Datenkapselung wichtig?  </description>
+<hint>
+Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+<items>
+<item type="text-area">
+<answers>
+            <answer score="1">
+                Es kann sein, dass es zu Fehlern kommt, wenn nicht bestimmte Bedingungen für den Aufruf von Methoden oder bestimmte Wertebereiche von Variablen eingehalten werden.
+               </answer>
+</answers>
+            </item>
+</items>
+</exercise>
+<exercise id="exercise-50559" feedback="true">
+<title>
+Datenkapselung umsetzen in Java   </title>
+<description>
+Wie kann der Zugriff auf Attribute von Außen in Java verhindert werden?  </description>
+<hint>
+Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+<items>
+<item type="text-area">
+<answers>
+            <answer score="1">
+                Das zu schützendes Attribut wird bei der Deklaration mit dem Schutzattribut "private" versehen.
+               </answer>
+</answers>
+            </item>
+</items>
+</exercise>
+<exercise id="exercise-50559" feedback="true">
+<title>
+Getter und Setter   </title>
+<description>
+Was sind Getter und Setter und wozu dienen sie?  </description>
+<hint>
+Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+<items>
+<item type="text-area">
+<answers>
+            <answer score="1">
+                Getter und Setter sind Bezeichnungen für Methoden, die den Zugriff auf gekapselte Attribute erlauben. Sie erlauben das kontrollierte auslesen beziehungsweise überschreiben der geschützen Attribute.
+               </answer>
+</answers>
+            </item>
+</items>
+</exercise>
+            </exercises>
+</test>
