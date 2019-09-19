@@ -92,7 +92,6 @@ export default class AnswerAnnotation extends React.Component {
         }
       }
     }
-    activeAnswerAnnotation["points"] = referenceSet.size;
     return activeAnswerAnnotation;
   }
 

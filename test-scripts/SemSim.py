@@ -1,4 +1,4 @@
-import os, csv, math, sys
+import os, csv, math, sys, re
 from os.path import join, splitext, isdir, exists, dirname, abspath
 import numpy as np
 import pandas as pd
@@ -11,10 +11,16 @@ from gensim.scripts.glove2word2vec import glove2word2vec
 from lmdb_embeddings.reader import LmdbEmbeddingsReader
 from lmdb_embeddings.exceptions import MissingWordError
 from lmdb_embeddings.writer import LmdbEmbeddingsWriter
-
-from germanet import load_germanet, Synset
+from nltk.corpus import wordnet_ic
+BROWN_IC = wordnet_ic.ic('ic-brown.dat')
+Synset = None
 
 GN_TEST_PATH = join(os.path.dirname(os.path.realpath(__file__)), "germanet_test_data")
+
+AUX = {
+    "en": ["be", "can", "could", "dare", "do", "have", "may", "might", "must", "need", "ought", "shall", "should", "will", "would"],
+    "de": ["sein", "haben", "werden", "können", "dürfen", "müssen", "sollen", "wollen", "mögen"]
+}
 
 def replace_umlaute(text):
     res = text
@@ -27,9 +33,11 @@ def replace_umlaute(text):
     res = res.replace('ß', 'ss')
     return res
 
-def saveEmbeddinigsAsLMDB(modelname):
-    path = join(SemSim.EMBEDDINGS_DIR,SemSim.MODEL_PATHS[modelname])
-    outpath = join(SemSim.EMBEDDINGS_DIR,modelname + "LMDB")
+
+
+def saveEmbeddinigsAsLMDB(modelname, lang="de"):
+    path = join(SemSim.EMBEDDINGS_DIR,lang,SemSim.MODEL_PATHS[modelname])
+    outpath = join(SemSim.EMBEDDINGS_DIR,lang,modelname + "LMDB")
     binary = splitext(SemSim.MODEL_PATHS[modelname])[1]==".model"
     model = KeyedVectors.load_word2vec_format(path, binary=binary)
     def iter_embeddings():
@@ -52,16 +60,29 @@ class SemSim(object):
     }
     VECTOR_SIZE = 300
     SYNSET_DIST_THRES = {"n":0, "v":1, "a":2}
+    MIN_IC = {"en":4}
 
-    def __init__(self, modelname, lmdb=True):
+    def __init__(self, modelname, lang="de", lmdb=True):
         self.modelname = modelname
-        self.germanet = load_germanet(host = "localhost", port = 27027, database_name = 'germanet')
-
+        self.lang = lang
+        self.aux = AUX[lang]
         self.lmdb = lmdb
-        if(lmdb):
-            self.embeddings = LmdbEmbeddingsReader(join(SemSim.EMBEDDINGS_DIR,modelname + "LMDB"))
+        self.minIC = SemSim.MIN_IC[lang]
+        global Synset
+        if(lang=="de"):
+            from germanet import load_germanet, Synset
+            self.wordNet = load_germanet(host = "localhost", port = 27027, database_name = 'germanet')
         else:
-            self.model = KeyedVectors.load_word2vec_format(join(SemSim.EMBEDDINGS_DIR, SemSim.MODEL_PATHS[modelname]), binary=splitext(SemSim.MODEL_PATHS[modelname])[1]==".model")
+            # changed jcn_similarity to jcn_distance
+            from nltk.corpus.reader.wordnet import Synset
+            from nltk.corpus import wordnet
+            self.wordNet = wordnet
+
+
+        if(lmdb):
+            self.embeddings = LmdbEmbeddingsReader(join(SemSim.EMBEDDINGS_DIR,lang,modelname + "LMDB"))
+        else:
+            self.model = KeyedVectors.load_word2vec_format(join(SemSim.EMBEDDINGS_DIR,lang, SemSim.MODEL_PATHS[modelname]), binary=splitext(SemSim.MODEL_PATHS[modelname])[1]==".model")
             self.model.init_sims(replace=True)
 
     # def setSimDF(self, question):
@@ -77,6 +98,14 @@ class SemSim(object):
     #     if(not(exists(dirname(self.vocabPath)))):
     #         os.makedirs(dirname(self.vocabPath))
     #     self.simDF.to_csv(self.vocabPath)
+    def information_content(self,synset):
+        if(hasattr(synset,"infocont")):
+            count = max(.0000000150070867666,synset.infocont)
+        else:
+            count = max(BROWN_IC[synset._pos][synset._offset]/BROWN_IC[synset._pos][0],5/BROWN_IC[synset._pos][0])
+        return -math.log(count)
+
+
     def getWordsSimilarityMatrix(self, words1, words2, asDf=False):
         simMat = np.ones((len(words1), len(words2))) * 2
         w1Vectors = [self.getWordVector(w) for w in words1]
@@ -100,6 +129,8 @@ class SemSim(object):
         return simMat
 
     def getTokenSimilarityMatrix(self, tokens1, tokens2, asDf=False, lemmaIdc=True):
+        if(len(tokens1)==0 or len(tokens2)==0):
+            return None
         simMat = np.ones((len(tokens1), len(tokens2))) * 2
         t1Vectors = [self.getTokenVector(t) for t in tokens1]
         t2Vectors = [self.getTokenVector(t) for t in tokens2]
@@ -108,8 +139,13 @@ class SemSim(object):
             for jdx,tok2 in enumerate(tokens2):
                 if(simMat[idx,jdx]!=2):
                     continue
-                if(self.isSynset(tok1, tok2)):
-                    simMat[idx,jdx] = 1
+                simpleSim = self.checkSimpleCase(tok1["lemmas"][0],tok2["lemmas"][0])
+                if(not(simpleSim is None)):
+                    simMat[idx,jdx] = simpleSim
+                    continue
+                wnSim = self.getWordNetSim(tok1, tok2)
+                if(not(wnSim is None)):
+                    simMat[idx,jdx] = wnSim
                     continue
                 vec1 = t1Vectors[idx]
                 vec2 = t2Vectors[jdx]
@@ -153,23 +189,36 @@ class SemSim(object):
         for w in words:
             vector = self.getWordVector(w)
             if(not(vector is None)):
-                wordVectors.append(wordVectors)
+                wordVectors.append(vector)
             else:
-                wordVectors.append(np.zeros(SemSim.VECTOR_SIZE, dtype=np.float64))
-        return np.sum(wordVectors, axis=0)
+                wordVectors.append(np.zeros(SemSim.VECTOR_SIZE, dtype=np.float32))
+        return np.sum(np.array(wordVectors), axis=0)
 
     def cosineSimilarity(self, v1, v2):
         return 1 - spatial.distance.cosine(v1, v2)
 
+    def checkSimpleCase(self, w1, w2):
+        if(w1==w2): return 1
+        if(not(re.search('[^a-zA-Z]', w1)is None) or not(re.search('[^a-zA-Z]', w2) is None)):
+            return int(w1 == w2)
+        if(w1 in self.aux or w2 in self.aux):
+            return 0
+        return None
+
     def getTokenSimilarity(self, token1, token2, gn=True):
-        if(gn and self.germanet and self.isSynset(token1, token2)):
-            return 1
+        simpleSim = self.checkSimpleCase(token1["lemmas"][0],token2["lemmas"][0])
+        if(not(simpleSim is None)):
+            return simpleSim
+        if(gn and self.wordNet):
+            wnSim = self.getWordNetSim(token1, token2)
+            if(not(wnSim is None)):
+                return wnSim
         vec1 = self.getTokenVector(token1)
         vec2 = self.getTokenVector(token2)
         if(vec1 is None or vec2 is None):
             return None
         else:
-            return self.cosineSimilarity(vector1, vector2)
+            return self.cosineSimilarity(vec1, vec2)
 
     def getWordSimilarity(self, word1, word2):
         vector1 = self.getWordVector(word1)
@@ -180,27 +229,57 @@ class SemSim(object):
             return self.cosineSimilarity(vector1, vector2)
 
     def getSynsets(self,token):
-        synsets = self.germanet.synsets(token["text"])
+        synsets = self.wordNet.synsets(token["text"])
         shortestPathInc = 0
         if(not(synsets)):
             for lemma in token["lemmas"]:
-                synsets += self.germanet.synsets(lemma)
+                synsets += self.wordNet.synsets(lemma)
         if(not(synsets) and "composita" in token):
             for component in token["composita"]:
-                synsets += self.germanet.synsets(component)
+                synsets += self.wordNet.synsets(component)
             shortestPathInc = 1
         return synsets, shortestPathInc
 
-    def isSynset(self, token1, token2):
-        if("slPos" in token1 and "slPos" in token2 and token1["slPos"] == token2["slPos"]):
-            synsets1, shortestPathInc1 = self.getSynsets(token1)
-            synsets2, shortestPathInc2 = self.getSynsets(token2)
-            incs = shortestPathInc1 + shortestPathInc2
+    def getLemmaRelatedSynsets(self, lemmas, relation):
+        return [relatedLemma.synset for lemma in lemmas for relatedLemma in getattr(lemma, relation, [])]
+
+    def getWordNetSim(self, tok1, tok2):
+        return None
+        # only words of specific POS are in wordnet
+        if("slPos" in tok1 and "slPos" in tok2):
+            synsets1, shortestPathInc1 = self.getSynsets(tok1)
+            synsets2, shortestPathInc2 = self.getSynsets(tok2)
+            # frewuent words are excluded
+            for tok,synsets in [(tok1,synsets1), (tok2,synsets2)]:
+                if(tok["slPos"] =="v"):
+                    ics = minInf1 = [self.information_content(synset) for synset in synsets if(synset.pos()=="v")]
+                    if(len(ics)>0 and min(ics)<self.minIC):
+                        return 0
             if(synsets1 and synsets2):
-                minSynsetsDist = np.min(np.array([Synset.shortest_path_length(ss1, ss2) + incs for ss1 in synsets1 for ss2 in synsets2]))
-                if(minSynsetsDist<=SemSim.SYNSET_DIST_THRES[token1["slPos"]]):
-                    return True
-        return False
+                lem1 = [lem for syn in synsets1 for lem in syn.lemmas]
+                lem2 = [lem for syn in synsets2 for lem in syn.lemmas]
+                for relation in ["participles", "pertainyms"]:
+                    synsets1 += self.getLemmaRelatedSynsets(lem1, relation)
+                    synsets2 += self.getLemmaRelatedSynsets(lem2, relation)
+                if(not(next(filter(set(synsets1).__contains__, synsets2), None) is None)):
+                    return 1
+                antonymSynsets1 = self.getLemmaRelatedSynsets(lem1, "antonyms")
+                antonymSynsets2 = self.getLemmaRelatedSynsets(lem2, "antonyms")
+                if(not(next(filter(set(synsets1).__contains__, antonymSynsets2), None) is None) or not(next(filter(set(antonymSynsets2).__contains__, synsets2), None) is None)):
+                    return 0
+                distances = []
+                for ss1 in synsets1:
+                    for ss2 in synsets2:
+                        if(ss1.pos()[0].lower()=="v" and ss2.pos()[0].lower()=="v"):
+                            continue
+                        dist = Synset.shortest_path_distance(ss1, ss2)
+                        if(not(dist is None)):
+                            dist = max(0, dist-min(SemSim.SYNSET_DIST_THRES[ss1.pos()[0].lower()], SemSim.SYNSET_DIST_THRES[ss2.pos()[0].lower()]))
+                            distances.append(dist)
+                minSynsetsDist = min(distances) if len(distances) > 0 else 1000
+                if(minSynsetsDist==0):
+                    return 1
+        return None
 
     def getMeanWordsEmbedding(self, words):
         wordVectors = []
@@ -222,6 +301,7 @@ def getTigerWordCount():
 
 def testSimilarityMetrics(gurFilename):
     from customGermaLemma import CustomGermaLemma
+    from germanet import load_germanet, Synset
     GERMANET = load_germanet(host = "localhost", port = 27027, database_name = 'germanet')
     semSim =SemSim("fasttext")
     germaLemmatizer = CustomGermaLemma(pickle="tiger/tiger_lemmas.pkl")
@@ -260,17 +340,16 @@ def testSimilarityMetrics(gurFilename):
         for row in csvReader:
             row[2] = float(row[2])
             simData.append(tuple(row))
-    print(len(simData))
     simData = np.core.records.array(simData, dtype=np.dtype({'formats': ['U30', 'U30', '<f8','U30', 'U30'],'names': header}))
 
     # select those words which are found in GermaNet
     wordsInGN = lambda w1, w2: bool(GERMANET.synsets(w1) and GERMANET.synsets(w2))
 
-    sim_funcs = [('lch', Synset.sim_lch,  np.max),
-                 ('res', Synset.sim_res,  np.max),
-                 ('jcn', Synset.dist_jcn, np.min),
-                 ('lin', Synset.sim_lin,  np.max),
-                 ('sp', Synset.shortest_path_length,  np.min)]
+    sim_funcs = [('lch', Synset.lch_similarity,  np.max),
+                 ('res', Synset.res_similarity,  np.max),
+                 ('jcn', Synset.jcn_distance, np.min),
+                 ('lin', Synset.lin_similarity,  np.max),
+                 ('sp', Synset.shortest_path_distance,  np.min)]
 
     targets = np.zeros(len(simData))
     scores = np.zeros((len(simData),6))
@@ -314,7 +393,7 @@ def testSimilarityMetrics(gurFilename):
             shortestPathInc += 1
 
         if(synsets1 and synsets2):
-            minSynsetsDist = np.min(np.array([Synset.shortest_path_length(ss1, ss2) + shortestPathInc for ss1 in synsets1 for ss2 in synsets2]))
+            minSynsetsDist = np.min(np.array([Synset.shortest_path_distance(ss1, ss2) + shortestPathInc for ss1 in synsets1 for ss2 in synsets2]))
             if(minSynsetsDist<=SYNSET_DIST_THRES[pos1]):
                 scores[idx,:] = 1 #- (minSynsetsDist*0.05*(minSynsetsDist>=2))
             else:
@@ -356,9 +435,11 @@ def testSimilarityMetrics(gurFilename):
 
 def wordDistance(w1, w2):
     GERMANET = load_germanet(host = "localhost", port = 27027, database_name = 'germanet')
-    return np.min(np.array([Synset.shortest_path_length(ss1, ss2) for ss1 in GERMANET.synsets(w1) for ss2 in GERMANET.synsets(w2)]))
+    return np.min(np.array([Synset.shortest_path_distance(ss1, ss2) for ss1 in GERMANET.synsets(w1) for ss2 in GERMANET.synsets(w2)]))
 
 # for gurFile in ["gur65.csv","gur350.csv","inf-gurxx.csv"]:
 #     testSimilarityMetrics(gurFile)
 
 # print(wordDistance("selbe", "gleich"))
+# semSim = SemSim(modelname="fasttext", lang="en")
+# print(semSim.getTokenSimilarity({"text":"positive","lemmas":["positive"], "slPos":"a"},{"text":"negative","lemmas":["negative"], "slPos":"a"}, gn=True))

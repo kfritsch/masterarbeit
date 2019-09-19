@@ -450,7 +450,7 @@ class Synset(object):
         return set(synset for (dist, synset) in common_hypers
                    if dist == min_dist)
 
-    def shortest_path_length(self, other):
+    def shortest_path_distance(self, other):
         '''
         Returns the length of the shortest path linking this synset with
         ``other`` via a common hypernym.  If no path exists, the
@@ -470,7 +470,7 @@ class Synset(object):
     #  Semantic similarity
     # --------------------------------------------------
 
-    def sim_lch(self, other):
+    def lch_similarity(self, other):
         '''
         Computes the Leacock-Chodorow similarity score between this synset
         and the synset ``other``.
@@ -489,7 +489,7 @@ class Synset(object):
             (path_length + 1) /
             (2. * self._germanet.max_min_depths[self.category]))
 
-    def sim_res(self, other):
+    def res_similarity(self, other):
         '''
         Computes the Resnik similarity score between this synset and the
         synset ``other``.
@@ -519,7 +519,7 @@ class Synset(object):
         # information content is the negative log
         return -math.log(least_prob)
 
-    def dist_jcn(self, other):
+    def jcn_distance(self, other):
         '''
         Computes the Jiang-Conrath semantic distance between this synset
         and the synset ``other``.
@@ -534,11 +534,11 @@ class Synset(object):
         #     return 0.
         ic1 = -math.log(ic1)
         ic2 = -math.log(ic2)
-        ic_lcs = self.sim_res(other)
+        ic_lcs = self.res_similarity(other)
         # print(ic1 + ic2 - 2. * ic_lcs)
         return ic1 + ic2 - 2. * ic_lcs
 
-    def sim_lin(self, other):
+    def lin_similarity(self, other):
         '''
         Computes the Lin similarity score between this synset and the
         synset ``other``.
@@ -553,7 +553,7 @@ class Synset(object):
         #     return 0.
         ic1 = -math.log(ic1)
         ic2 = -math.log(ic2)
-        ic_lcs = self.sim_res(other)
+        ic_lcs = self.res_similarity(other)
         return 2. * ic_lcs / (ic1 + ic2)
 
 # rename some of the fields in the MongoDB dictionary

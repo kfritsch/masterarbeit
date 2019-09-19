@@ -1,6 +1,6 @@
 def hunspellTest():
     import hunspell
-    spellchecker = hunspell.HunSpell('/usr/share/hunspell/de_DE.dic', '/usr/share/hunspell/de_DE.aff')
+    spellchecker = hunspell.HunSpell('/usr/share/hunspell/en_US.dic', '/usr/share/hunspell/en_US.aff')
     print(spellchecker.spell("?"))
     spellchecker.add("Getter")
     print(spellchecker.spell("Getter-")) # True
@@ -73,28 +73,7 @@ def spacyTest(sentence):
     nlp = spacy.load('de')
     iwnlp = spaCyIWNLP(lemmatizer_path='.lib/IWNLP.Lemmatizer_20170501.json')
     nlp.add_pipe(iwnlp)
-    # doc = nlp('Datentypen dienen zur unterschiedlichen semantischen Interpretation von binären Werten')
     doc = nlp(sentence)
-    # plot_parse_tree(doc)
-
-    # token = doc[0]
-    # for key in dir(token):
-    #     print(key)
-    # print(token.text)
-    # print(token.prob)
-    # print(token.prefix_)
-    # print(token.suffix_)
-    # print(token.ent_type_)
-    # print(token.head)
-    # print(doc.print_tree())
-    #
-    # for span in list(doc.noun_chunks):
-    #     print(span.text, span.label_, span.label_)
-
-    # span = list(doc.noun_chunks)[0]
-    # for key in dir(span):
-    #     print(key)
-    # print(span.text)
 
     nlptags = ['LEMMA', 'POS', 'TAG', 'DEP']
     words = [token.text for token in doc]
@@ -116,45 +95,21 @@ def spacyTest(sentence):
         f.write("</html>\n")
     webbrowser.open('file://' + os.path.realpath(filename))
 
-#sentence = "Der bronzene Ring würde nicht am Nagel hängen bleiben, weil der Ring nicht eisern ist."
-# sentence = "Der Mann, der mich liebte, ging zum Meer."
-# sentence = "Er hat gelogen."
-# sentence = "Die bösen Männer waren schneller als die Jungen."
-# sentence = "Ich sollte gehen. Ich bin dumm. Ich bin gelaufen. Ich gehe."
-# sentence = 'Das sind Methoden einer Klasse mit denselben Namen.'
-# sentence = 'Der Mann geht in den Park.'
-#
-# #cleanLemmaVector(sentence)
-# #stanfordCoreNLP.close()
-# coreNLPTest(sentence)
-# # nltkTest(sentence)
-# # rfTaggerTest(sentence)
-# # spacyTest(sentence)
-# # hyphenationTest(sentence)
-# from coreNlp import StanfordCoreNLP
-# stanfordCoreNLP = StanfordCoreNLP('http://localhost', port=9000)
-# pos = [x[0] for x in stanfordCoreNLP.pos_tag(sentence)]
-# res = stanfordCoreNLP.dependency_parse(sentence)
-# for tuple in res:
-#     print(tuple, pos[tuple[2]])
+def germanetTest():
+    from germanet import load_germanet, Synset
+    GERMANET = load_germanet(host = "localhost", port = 27027, database_name = 'germanet')
+    synsets = GERMANET.synsets("stark")
+    for s in synsets:
+        print(s)
+        print(s.gn_class)
+        for l in s.lemmas:
+            print(l)
+            print(l.category)
+            for r in l.rels():
+                print(r)
+        input()
+        for r in s.rels():
+            print(r)
+        input()
 
-# from stanfordcorenlp import StanfordCoreNLP
-text="Hallo Welt! Angela Merkel ist in Berlin."
-props={
-    'annotators': 'tokenize, ssplit, pos, lemma, parse, depparse',
-    'pipelineLanguage':'de',
-    'outputFormat':'json'
-}
-
-# from coreNlp import StanfordCoreNLP
-# nlp = StanfordCoreNLP(r'./lib/stanford-corenlp-full-2018-02-27', lang="en")
-# print(nlp.annotate(text, properties=props))
-# nlp.close()
-
-# from coreNlp import StanfordCoreNLP
-# nlp=StanfordCoreNLP('http://localhost', port=9000)
-# print(nlp.annotate(text, properties=props))
-
-from TokenAnnotator import TokenAnnotator
-tokenAnnotator = TokenAnnotator()
-print(tokenAnnotator.getAlignmentAnnotation(text))
+germanetTest()

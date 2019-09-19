@@ -1104,7 +1104,6 @@ def alignWords(source, target, sourceParseResult, targetParseResult):
 
 
 
-
     # align the sentence ending punctuation first
     if (sourceWords[len(source)-1] in ['.', '!'] and targetWords[len(target)-1] in ['.', '!']) or sourceWords[len(source)-1]==targetWords[len(target)-1]:
         alignments.append([len(source), len(target)])
@@ -1133,7 +1132,6 @@ def alignWords(source, target, sourceParseResult, targetParseResult):
 
 
 
-
     # align all (>=2)-gram matches with at least one content word
     commonContiguousSublists  = findAllCommonContiguousSublists(sourceWords, targetWords, True)
     for item in commonContiguousSublists:
@@ -1149,7 +1147,6 @@ def alignWords(source, target, sourceParseResult, targetParseResult):
                     sequenceAlignments.append([item[0][j]+1, item[1][j]+1])
                     sourceWordIndicesAlreadyAligned.append(item[0][j]+1)
                     targetWordIndicesAlreadyAligned.append(item[1][j]+1)
-
 
 
 
@@ -1199,7 +1196,6 @@ def alignWords(source, target, sourceParseResult, targetParseResult):
 
 
 
-
     # align named entities
     neAlignments = alignNamedEntities(source, target, sourceParseResult, targetParseResult, alignments)
     for item in neAlignments:
@@ -1218,11 +1214,9 @@ def alignWords(source, target, sourceParseResult, targetParseResult):
 
 
 
-
     # align words based on word and dependency match
     sourceDParse = dependencyParseAndPutOffsets(sourceParseResult)
     targetDParse = dependencyParseAndPutOffsets(targetParseResult)
-
 
     mainVerbAlignments = alignMainVerbs(source, target, sourceParseResult, targetParseResult, alignments)
     for item in mainVerbAlignments:
@@ -1235,6 +1229,7 @@ def alignWords(source, target, sourceParseResult, targetParseResult):
                 targetWordIndicesAlreadyAligned.append(item[1])
 
 
+
     nounAlignments = alignNouns(source, target, sourceParseResult, targetParseResult, alignments)
     for item in nounAlignments:
         if item not in alignments:
@@ -1244,6 +1239,7 @@ def alignWords(source, target, sourceParseResult, targetParseResult):
                 sourceWordIndicesAlreadyAligned.append(item[0])
             if item[1] not in targetWordIndicesAlreadyAligned:
                 targetWordIndicesAlreadyAligned.append(item[1])
+
 
     adjectiveAlignments = alignAdjectives(source, target, sourceParseResult, targetParseResult, alignments)
     for item in adjectiveAlignments:
@@ -1264,7 +1260,6 @@ def alignWords(source, target, sourceParseResult, targetParseResult):
                 sourceWordIndicesAlreadyAligned.append(item[0])
             if item[1] not in targetWordIndicesAlreadyAligned:
                 targetWordIndicesAlreadyAligned.append(item[1])
-
 
 
 
@@ -1309,6 +1304,9 @@ def alignWords(source, target, sourceParseResult, targetParseResult):
             textualNeighborhoodSimilarities[(i, j)] = evidence
 
 
+    # TODO: why are multiple indexes here
+    sourceWordIndicesBeingConsidered = list(set(sourceWordIndicesBeingConsidered))
+    targetWordIndicesBeingConsidered = list(set(targetWordIndicesBeingConsidered))
     numOfUnalignedWordsInSource = len(sourceWordIndicesBeingConsidered)
 
     # now align: find the best alignment in each iteration of the following loop and include in alignments if good enough
@@ -1351,7 +1349,6 @@ def alignWords(source, target, sourceParseResult, targetParseResult):
             sourceWordIndicesBeingConsidered.remove(bestSourceIndex)
         if bestTargetIndex in targetWordIndicesBeingConsidered:
             targetWordIndicesBeingConsidered.remove(bestTargetIndex)
-
 
 
 

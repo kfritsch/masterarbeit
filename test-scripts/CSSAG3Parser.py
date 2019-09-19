@@ -131,6 +131,27 @@ class CSSAG3Parser(object):
                             answer.remove(answerItem)
         tree.write(newXMLPath, encoding="UTF-8", xml_declaration=True)
 
+def parseSemval(xmlPath):
+    tree = ET.parse(xmlPath)
+    root = tree.getroot()
+    # go through all pages
+    questionDict = root.attrib
+    for root_obj in root:
+        if(root_obj.tag=="questionText"):
+            questionDict["text"] = root_obj.text
+        if(root_obj.tag=="referenceAnswers"):
+            questionDict["referenceAnswers"] = []
+            for refAns in root_obj:
+                questionDict["referenceAnswers"].append({"id": refAns.attrib["id"], "text":refAns.text})
+        if(root_obj.tag=="studentAnswers"):
+            questionDict["studentAnswers"] = []
+            for pupAns in root_obj:
+                questionDict["studentAnswers"].append({"id": pupAns.attrib["id"], "text":pupAns.text, "answerCategory": pupAns.attrib["accuracy"] if pupAns.attrib["accuracy"]=="correct" else "none"})
+    print(questionDict)
+    return  questionDict
+
+parseSemval(os.path.join("..","question-corpora", "SEMVAL", "training", "sciEntsBank", "EM-inv1-45b.xml"))
+
 # xmlParser = CSSAG3Parser()
 # questionDict = xmlParser.parseXml("./CSSAG 3.0/CSSAG_XML/Question1.xml")
 # print(len(questionDict["studentAnswers"]))

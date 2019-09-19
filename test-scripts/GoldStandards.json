@@ -9,7 +9,13 @@
         "text":
           "Das sind Methoden einer Klasse mit denselben Namen. Ihre Signaturen unterscheiden sich anhand unterschiedlicher Parameter.",
         "answerCategory": "correct",
+        "parts": [
+          ["sein", "Methode", "denselb", "Name"],
+          ["Signatur", "unterscheiden", "unterschiedlich", "Parameter"]
+        ],
         "assignedWeights": {
+          "sein": 0,
+          "Methode": 0,
           "Klasse": 0.2,
           "denselb": 0.9,
           "Name": 0.9,
@@ -19,7 +25,7 @@
           "Parameter": 0.7
         }
       },
-      "answersAnnotation": [
+      "studentAnswers": [
         {
           "text":
             "Das sind Methoden mit denselben Namen aber unterschiedliche Signatur. Zum Beispiel: public double berechneZeitInStunden(int minuten){.....} public double berechneZeitInStunden(int sekunden){....} R\u00fcckgabewert ist egal. Hat den Vorteil das es Benutzerfreundlicher ist.",
@@ -727,19 +733,26 @@
       "referenceAnswer": {
         "text":
           "Das Feld 'wert' muss mit dem Schutzattribute private deklariert werden und die Klasse muss einen Getter für dieses Feld bereitstellen.",
+        "parts": [
+          ["Feld", "wert", "müssen", "Schutzattribute", "private", "deklarieren", "werden"],
+          ["Klasse", "müssen", "Getter", "Feld", "bereitstellen"]
+        ],
         "answerCategory": "correct",
         "assignedWeights": {
+          "Feld": 0,
+          "wert": 0,
           "müssen": 0.7,
           "Schutzattribut": 0.2,
           "private": 1,
           "deklarieren": 0.2,
           "werden": 0.3,
           "und": 0.5,
+          "Klasse": 0,
           "Getter": 0.6,
           "bereitstellen": 0.1
         }
       },
-      "answersAnnotation": [
+      "studentAnswers": [
         {
           "text":
             "Ich setze \"\"Wert\"\" auf private und schreibe in der Beispielklasse einen Getter. So kann \"\"Wert\"\" gelesen von \u00fcberall gelesen werden udn bleibt schreibgesch\u00fctzt.",
@@ -1275,15 +1288,19 @@
       "text":
         "Sie m\u00f6chten eine als private deklarierte Variable und mehrere implementierte Methoden vererben. Verwenden Sie eine Schnittstelle oder eine abstrakte Klasse? Begr\u00fcnden Sie Ihre Antwort.",
       "type": "reason",
-      "stopwordExceptions": ["abstrakt", "Klasse", "Schnittstelle", "implementieren", "Methode"],
       "referenceAnswer": {
         "text":
           "Man muss eine abstrakte Klasse verwenden, weil Schnittstellen keine implementierten Methoden bereitstellen k\u00f6nnen.",
+        "parts": [
+          ["müssen", "abstrakte", "Klasse", "verwenden"],
+          ["weil", "Schnittstelle", "keine", "implementieren", "Methode", "bereitstellen", "können"]
+        ],
         "answerCategory": "correct",
         "assignedWeights": {
           "müssen": 0.4,
           "abstrakt": 1,
           "Klasse": 1,
+          "verwenden": 0,
           "weil": 1,
           "Schnittstelle": 0.8,
           "keine": 0.8,
@@ -1293,7 +1310,7 @@
           "können": 0.6
         }
       },
-      "answersAnnotation": [
+      "studentAnswers": [
         {
           "text":
             "Abstrakte Klassen Basisklassen vererben nur implemetierte Mehtoden, Schnittstellen stellen keine implementierten Methoden bereit Abstrakte klassen werden durch abstract class deklariert",
@@ -1837,28 +1854,42 @@
       "referenceAnswer": {
         "text":
           "Man kann sicherstellen, dass die Bedingung der while-Schleife durch Ver\u00e4nderungen im Schleifenrumpf false wird, die Schleifenausf\u00fchrung mittels break abbrechen oder die aktuell ausgef\u00fchrte Methode mit return beenden.",
+        "parts": [
+          [
+            "können",
+            "sicherstellen",
+            "Bedingung",
+            "while-Schleife",
+            "Veränderung",
+            "Schleifenrumpf",
+            "false",
+            "werden"
+          ],
+          ["Schleifenausführung", "mittels", "break", "abbrechen"],
+          ["aktuell", "ausgeführt", "Methode", "return", "beenden"]
+        ],
         "answerCategory": "correct",
         "assignedWeights": {
-          "können": 0.4,
-          "sicherstellen": 0.1,
-          "Bedingung": 0.3,
+          "können": 0,
+          "sicherstellen": 0.2,
+          "Bedingung": 1,
           "Veränderung": 0.3,
           "Schleifenrumpf": 0.3,
-          "false": 0.3,
+          "false": 1,
           "werden": 0.3,
           "Schleifenausführung": 0.1,
           "mittels": 0.1,
-          "break": 0.6,
+          "break": 1,
           "abbrechen": 0.4,
-          "oder": 0.5,
+          "oder": 0,
           "aktuell": 0.1,
-          "ausgeführt": 0.2,
-          "Methode": 0.1,
-          "return": 0.6,
+          "ausgeführt": 0.1,
+          "Methode": 0.4,
+          "return": 1,
           "beenden": 0.3
         }
       },
-      "answersAnnotation": [
+      "studentAnswers": [
         {
           "text":
             "man k\u00f6nnte die while schleife mit \"\"break\"\" unterbrechen und mit return weiterf\u00fchren.",
@@ -2521,6 +2552,10 @@
       "referenceAnswer": {
         "text":
           "Eine Klasse ist der Bauplan f\u00fcr ein Objekt. Ein Objekt ist eine konkrete Instanz einer Klasse.",
+        "parts": [
+          ["Klasse", "sein", "Bauplan", "Objekt"],
+          ["Objekt", "sein", "konkret", "Instanz", "Klasse"]
+        ],
         "answerCategory": "correct",
         "assignedWeights": {
           "Klasse": 1,
@@ -2531,7 +2566,7 @@
           "Instanz": 1
         }
       },
-      "answersAnnotation": [
+      "studentAnswers": [
         {
           "text":
             "Alle Objekte haben einen Bauplan und dieser Bauplan des Objektes ist die klasse. Objekte haben den Typ ihrer Klasse. Die Klasse eines Objekte ist wie bei uns Menschen die DNA. Die Klasse bestimmt Aussehen und Eigenschaften. Aber ist selber nicht das Objekt.",
@@ -2852,23 +2887,25 @@
       "stopwordExceptions": ["Klassenvariable", "Instanzvariable"],
       "referenceAnswer": {
         "text":
-          "Klassenvariablen existieren einmal pro Klasse, auch ohne eine konkrete Instanz. Instanzvariablen existieren einmal pro Objekt.",
+          "Klassenvariablen existieren einmal pro Klasse, unabhängig von Instanzen. Instanzvariablen existieren einmal pro Objekt.",
+        "parts": [
+          ["Klassenvariable", "existieren", "einmal", "pro", "Klasse", "unabhängig", "Instanz"],
+          ["Instanzvariable", "existieren", "einmal", "pro", "Objekt"]
+        ],
         "answerCategory": "correct",
         "assignedWeights": {
           "Klassenvariable": 1,
           "existieren": 0.7,
-          "einmal": 0.8,
+          "einmal": 1,
           "pro": 0.2,
           "Klasse": 1,
-          "auch": 0.2,
-          "ohne": 0.5,
-          "konkret": 0.1,
-          "Instanz": 1,
+          "unabhängig": 0.1,
+          "Instanz": 0.1,
           "Instanzvariable": 1,
           "Objekt": 1
         }
       },
-      "answersAnnotation": [
+      "studentAnswers": [
         {
           "text":
             "Klassenvariable ist f\u00fcr die ganze klasse bestimmte variable und die Instanzvariable ist f\u00fcr den jeweiligen Bereich.",

@@ -62,6 +62,18 @@ class StanfordCoreNLP:
                 tags.append(token['pos'])
         return list(zip(words, tags))
 
+    def pos_tag_lemma(self, sentence):
+        r_dict = self._request('pos,lemma', sentence)
+        words = []
+        tags = []
+        lemmas = []
+        for s in r_dict['sentences']:
+            for token in s['tokens']:
+                words.append(token['originalText'])
+                tags.append(token['pos'])
+                lemmas.append(token['lemma'])
+        return list(zip(words, tags, lemmas))
+
     # def ner(self, sentence):
     #     r_dict = self._request('ner', sentence)
     #     words = []

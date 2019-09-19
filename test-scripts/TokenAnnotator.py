@@ -302,7 +302,10 @@ class TokenAnnotator(object):
                 mergedToken = {
                     "text": spacyToken.text,
                     "spacyPos": spacyToken.pos_,
-                    "lemmaPos": [lemmaPos]
+                    "lemmaPos": [lemmaPos],
+                    "id":spacyToken.i,
+                    "headId":spacyToken.head.i,
+                    "dep":spacyToken.dep_
                 }
                 tokens.append(mergedToken)
                 rfTaggerText += spacyToken.text + "\n"
@@ -319,7 +322,7 @@ class TokenAnnotator(object):
             lemmaPos = STTS_UD_MAP[pos]
             if(lemmaPos == "AUX"): lemmaPos = "VERB"
             lemmaPos = self.checkPos(word, lemmaPos)
-            if(not(lemmaPos) in token["lemmaPos"]):
+            if(not(lemmaPos in token["lemmaPos"])):
                 token["lemmaPos"].append(lemmaPos)
             else:
                 token["udPos"] = lemmaPos
@@ -398,5 +401,8 @@ class TokenAnnotator(object):
                 if(token["udPos"] in set):
                     token["slPos"] = SHORT_LEMMA_POS[idx]
                     break
-            # print(token["text"],token["lemmas"])
+
+        for token in tokens:
+            token["head"] = tokens[token["headId"]]["lemmas"][0] if(tokens[token["headId"]]["id"] == token["headId"]) else print("Head Exception")
+
         return tokens

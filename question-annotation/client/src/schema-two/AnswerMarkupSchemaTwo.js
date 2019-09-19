@@ -1,6 +1,10 @@
 import React from "react";
 
 export default class AnswerMarkupSchemaTwo extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   getAspectElements(aspects) {
     var aspectElements = [];
     var elem;
@@ -8,8 +12,8 @@ export default class AnswerMarkupSchemaTwo extends React.Component {
     for (let i = 0; i < aspects.length; i++) {
       for (let j = 0; j < aspects[i].elements.length; j++) {
         elem = aspects[i].elements[j];
-        aspectElements.push({ start: true, pos: elem.start, endPos: elem.end, aIdx: i });
-        aspectElements.push({ start: false, pos: elem.end, startPos: elem.start, aIdx: i });
+        aspectElements.push({ start: true, pos: elem[0], endPos: elem[1], aIdx: i });
+        aspectElements.push({ start: false, pos: elem[1], startPos: elem[0], aIdx: i });
       }
     }
     // sort these elements at their position in the text
@@ -176,8 +180,9 @@ export default class AnswerMarkupSchemaTwo extends React.Component {
   }
 
   render() {
-    const text = this.props.answer.text;
-    const aspects = JSON.parse(JSON.stringify(this.props.answer.aspects));
+    const { answer } = this.props;
+    const text = "correctionOrComment" in answer ? answer.correctionOrComment : answer.text;
+    const aspects = JSON.parse(JSON.stringify(answer.aspects));
     !this.props.refAnswer && aspects.splice(aspects.length - 1, 1);
     // if there are no aspects return the text
     if (aspects.length === 0) {

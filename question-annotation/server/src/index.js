@@ -8,6 +8,7 @@ const HOST = "0.0.0.0";
 const BASE = process.cwd();
 
 const CLIENT_BUILD_PATH = path.join(__dirname, "../../client/build");
+const ANNOTATION_FILE = "NewAnnotation.json";
 
 // App
 const app = express();
@@ -28,7 +29,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const GOLD_STANDARD = JSON.parse(
-  fs.readFileSync(BASE + "/data/annotations/GoldStandards.json", "utf8")
+  fs.readFileSync(BASE + "/data/annotations/" + ANNOTATION_FILE, "utf8")
 );
 
 function getQuestions() {
@@ -49,7 +50,7 @@ const QUESTIONS = getQuestions();
 
 function updateGoldStandardAnnotation(questionId, annotation) {
   try {
-    var filename = BASE + "/data/annotations/GoldStandards.json";
+    var filename = BASE + "/data/annotations/" + ANNOTATION_FILE;
     var goldStandard = JSON.parse(fs.readFileSync(filename, "utf8"));
     var questionIdx = goldStandard.questions.findIndex((question) => {
       return question.id == questionId;
@@ -77,7 +78,7 @@ function updateGoldStandardAnnotation(questionId, annotation) {
 
 function saveGoldStandardAnnotation(annotations) {
   try {
-    var filename = BASE + "/data/annotations/GoldStandards.json";
+    var filename = BASE + "/data/annotations/" + ANNOTATION_FILE;
     fs.writeFileSync(filename, JSON.stringify(annotations, null, 2));
     return true;
   } catch (err) {

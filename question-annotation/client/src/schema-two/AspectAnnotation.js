@@ -4,30 +4,17 @@ import { Message, Button, Dropdown, Label, Segment, Input, TextArea } from "sema
 import AnswerMarkupSchemaTwo from "./AnswerMarkupSchemaTwo";
 import Tree from "react-d3-tree";
 
-const ROUGH_CATEGORIES = [
-  "correct",
-  "binary_correct",
-  "partially_correct",
-  "missconception",
-  "concept_mix-up",
-  "irrelevant",
-  "none"
-];
-
 const ASPECT_LABELS = [
   { name: "correct", color: "#ddcccc" },
   { name: "unprecise", color: "#8c6363" },
   { name: "contradiction", color: "#663b3b" }
 ];
 
-export default class AnswerAnnotationSchemaTwo extends React.Component {
+export default class AspectAnnotation extends React.Component {
   constructor(props) {
     super(props);
-    var activeAnswer = props.activeQuestion.studentAnswers[props.annIdx];
-    activeAnswer.text = activeAnswer.text.replace(/\s\s+/g, " ");
     this.state = {
-      activeAnswer,
-      activeAnswerAnnotation: JSON.parse(JSON.stringify(props.currentAnnotation)),
+      aspects: JSON.parse(JSON.stringify(props.currentAnnotation.aspects)),
       studentAnswerTree: null,
       answerToggle: false
     };
@@ -41,7 +28,7 @@ export default class AnswerAnnotationSchemaTwo extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getDepTree("Das ist nicht schön.").then((res) => {
+    this.props.getDepTree(this.props.currentAnnotation["correctionOrComment"]).then((res) => {
       this.setState({ studentAnswerTree: res.tree });
     });
   }
@@ -51,13 +38,9 @@ export default class AnswerAnnotationSchemaTwo extends React.Component {
       this.props.activeQuestion.id !== prevProps.activeQuestion.id ||
       this.props.annIdx !== prevProps.annIdx
     ) {
-      this.props
-        .getDepTree(this.props.activeQuestion.studentAnswers[this.props.annIdx].text)
-        .then((res) => {
-          this.setState({ studentAnswerTree: res.tree });
-        });
-      var activeAnswer = this.props.activeQuestion.studentAnswers[this.props.annIdx];
-      activeAnswer.text = activeAnswer.text.replace(/\s\s+/g, " ");
+      this.props.getDepTree(this.props.currentAnnotation["correctionOrComment"]).then((res) => {
+        this.setState({ studentAnswerTree: res.tree });
+      });
       this.colors = this.props.getColors(this.props.activeQuestion);
       this.matchingLabels = this.props.activeQuestion.referenceAnswer.aspects.map(
         (aspect, index) => {
@@ -68,55 +51,46 @@ export default class AnswerAnnotationSchemaTwo extends React.Component {
         }
       );
       this.setState({
-        activeAnswer,
-        activeAnswerAnnotation: JSON.parse(JSON.stringify(this.props.currentAnnotation))
+        aspects: JSON.parse(JSON.stringify(this.props.currentAnnotation.aspects)),
+        studentAnswerTree: null,
+        answerToggle: false
       });
     }
   }
 
   getAnswerAnnotation() {
-    var { activeAnswerAnnotation, activeAnswer } = this.state;
-    activeAnswerAnnotation["id"] = activeAnswer["id"];
-    if (!activeAnswerAnnotation.answerCategory) return false;
+    var { aspects } = this.state;
+    if (!aspects.find((aspect) => aspect.text && !aspect.referenceAspects.length > 0)) return false;
+    var activeAnswerAnnotation = JSON.parse(JSON.stringify(this.props.currentAnnotation));
+    activeAnswerAnnotation.aspects = aspects;
     activeAnswerAnnotation.aspects.pop();
     return activeAnswerAnnotation;
   }
 
-  categoryDropdownChange = (e, obj) => {
-    var { activeAnswerAnnotation } = this.state;
-    activeAnswerAnnotation.answerCategory = obj.value;
-    this.setState({ activeAnswerAnnotation });
-  };
+  handleChange = (e, obj) => {
+    var value = e.target.value;
+    var annIdx = e.target.name;
+    var { aspects } = this.state;
+    var currentAspect = aspects[annIdx];
+    currentAspect.text = value;
 
-  handleChange = (e) => {
-    var { activeAnswerAnnotation } = this.state;
-    var annotationAspects = activeAnswerAnnotation.aspects;
-    var answerText = activeAnswerAnnotation.text;
-    annotationAspects[e.target.name].text = e.target.value;
-    // Add new entry if last received a text value
-    if (annotationAspects[annotationAspects.length - 1].text) {
-      annotationAspects.push({
-        text: "",
-        elements: [],
-        referenceAspects: [],
-        label: ""
-      });
-    }
     // Mark the text if found in the referenceanswer
-    var answerParts = e.target.value.split(";;");
-    var answerPart;
-    annotationAspects[e.target.name].elements = [];
+    var answerText = this.props.currentAnnotation.correctionOrComment;
+    var answerParts = value.split(";;");
+    currentAspect.elements = [];
     for (var i = 0; i < answerParts.length; i++) {
-      answerPart = answerParts[i].trim();
+      var answerPart = answerParts[i].trim();
       var idx = answerText.indexOf(answerPart);
       if (idx >= 0) {
-        annotationAspects[e.target.name].elements.push([idx, idx + answerPart.length]);
+        currentAspect.elements.push([idx, idx + answerPart.length]);
       }
     }
-    annotationAspects[e.target.name].elements.sort((a, b) => {
+    // sort elements ascending from startpoint
+    currentAspect.elements.sort((a, b) => {
       return a[0] - b[0];
     });
-    annotationAspects.sort((a, b) => {
+    // sort aspects ascending reference aspects order
+    aspects.sort((a, b) => {
       if (a.elements.length === 0 || b.elements.length === 0) {
         return b.elements.length - a.elements.length;
       } else {
@@ -124,59 +98,54 @@ export default class AnswerAnnotationSchemaTwo extends React.Component {
       }
     });
     // Remove entry if a textfield was cleared
-    if (!e.target.value && e.target.name !== annotationAspects.length - 1) {
-      annotationAspects.splice(e.target.name, 1);
+    if (!value && annIdx !== aspects.length - 1) {
+      aspects.splice(annIdx, 1);
     }
 
-    activeAnswerAnnotation["aspects"] = annotationAspects;
-    this.setState({ activeAnswerAnnotation });
+    this.setState({ aspects });
   };
 
   matchingChange = (e, obj) => {
     var values = obj.value.map((val) => val);
-    var activeAnswerAnnotation = JSON.parse(JSON.stringify(this.state.activeAnswerAnnotation));
-    var activeQuestion = this.props.activeQuestion;
+    var aspects = JSON.parse(JSON.stringify(this.state.aspects));
     values.sort();
-    activeAnswerAnnotation.aspects[obj.annIndex].referenceAspects = values;
-    activeAnswerAnnotation.aspects.sort(
-      (aspectA, aspectB) => aspectA.referenceAspects[0] - aspectB.referenceAspects[0]
-    );
-    this.setState({ activeAnswerAnnotation });
+    aspects[obj.annIndex].referenceAspects = values;
+    if (!("label" in aspects[obj.annIndex])) aspects[obj.annIndex]["label"] = 0;
+    aspects.sort((aspectA, aspectB) => aspectA.referenceAspects[0] - aspectB.referenceAspects[0]);
+    if (aspects[aspects.length - 1].referenceAspects.length > 0) {
+      aspects.push({
+        text: "",
+        elements: [],
+        referenceAspects: []
+      });
+    }
+    this.setState({ aspects });
   };
 
   labelingChange = (e, obj) => {
     var value = obj.value;
     var annIndex = obj.annIndex;
-    var { activeAnswerAnnotation } = this.state;
-    activeAnswerAnnotation.aspects[annIndex].label = value;
-    this.setState({ activeAnswerAnnotation });
-  };
-
-  handleAreaChange = (e) => {
-    var { activeAnswerAnnotation } = this.state;
-    activeAnswerAnnotation.correctionOrComment = e.target.value;
-    this.setState({ activeAnswerAnnotation });
+    var { aspects } = this.state;
+    aspects[annIndex].label = value;
+    this.setState({ aspects });
   };
 
   deleteMatch = (e, { value }) => {
-    var { activeAnswerAnnotation } = this.state;
-    var aspects = activeAnswerAnnotation.aspects;
+    var { aspects } = this.state;
     if (aspects.length === 1) {
       aspects[0] = {
         text: "",
         elements: [],
-        referenceAspects: [],
-        label: ""
+        referenceAspects: []
       };
     } else {
       aspects.splice(value, 1);
     }
-    activeAnswerAnnotation.aspects = aspects;
-    this.setState({ activeAnswerAnnotation });
+    this.setState({ aspects });
   };
 
   renderDropdownLabel(dropDownTag, label) {
-    var color = this.state.colors[label.value];
+    var color = this.colors[label.value];
     var value = label.text.props.children;
     return {
       value: label.value,
@@ -238,8 +207,8 @@ export default class AnswerAnnotationSchemaTwo extends React.Component {
   }
 
   renderMatchings() {
-    var { activeAnswerAnnotation } = this.state;
-    return activeAnswerAnnotation.aspects.map((annotationAspect, annIndex) => {
+    var { aspects } = this.state;
+    return aspects.map((annotationAspect, annIndex) => {
       var empty = !annotationAspect.text;
       var referenceAspects = annotationAspect.referenceAspects;
       var label = annotationAspect.label;
@@ -279,7 +248,7 @@ export default class AnswerAnnotationSchemaTwo extends React.Component {
             annIndex={annIndex}
             selection
             placeholder="Select Label"
-            disabled={referenceAspects.length > 0}
+            disabled={referenceAspects.length == 0}
             defaultValue={0}
             value={annotationAspect.label}
             options={this.getDropdownOptions(ASPECT_LABELS)}
@@ -301,8 +270,9 @@ export default class AnswerAnnotationSchemaTwo extends React.Component {
   }
 
   render() {
-    var { activeAnswerAnnotation, studentAnswerTree, answerToggle } = this.state;
-    var { annIdx, activeQuestion, currentAnnotation, goldStandard, version } = this.props;
+    var { aspects, studentAnswerTree, answerToggle } = this.state;
+    var { annIdx, activeQuestion, currentAnnotation } = this.props;
+    var activeAnswerAnnotation = { ...currentAnnotation, aspects };
     return (
       <div>
         <Segment.Group className="student-answer-container">
@@ -314,7 +284,7 @@ export default class AnswerAnnotationSchemaTwo extends React.Component {
               <AnswerMarkupSchemaTwo
                 refAnswer={false}
                 answer={activeAnswerAnnotation}
-                colors={this.state.colors}
+                colors={this.colors}
               />
               <Button
                 className="tree-button"
@@ -325,40 +295,8 @@ export default class AnswerAnnotationSchemaTwo extends React.Component {
             </Message>
             {answerToggle && studentAnswerTree && this.renderReactTree(studentAnswerTree)}
 
-            {version == "aspects" && this.renderMatchings()}
+            {this.renderMatchings()}
           </Segment>
-          {goldStandard && (
-            <Segment textAlign="center">
-              <TextArea
-                rows={3}
-                style={{ width: "80%" }}
-                autoHeight
-                placeholder={goldStandard ? "Korrigierter Text " : "Kommentar"}
-                onChange={this.handleAreaChange.bind(this)}
-                value={activeAnswerAnnotation.correctionOrComment}
-              />
-            </Segment>
-          )}
-          {this.version == "whole" && (
-            <Segment textAlign="center">
-              {/* <Message textAlign="center" style={{ backgroundColor: "#eff0f6", width: "40%" }}> */}
-              <Dropdown
-                value={activeAnswerAnnotation.answerCategory}
-                placeholder="Answer Category"
-                options={ROUGH_CATEGORIES.map((cat) => {
-                  return {
-                    value: cat,
-                    text: cat.replace("_", " "),
-                    key: cat
-                  };
-                })}
-                button
-                onChange={this.categoryDropdownChange.bind(this)}
-                style={{ gridArea: "box2", textAlign: "center", backgroundColor: "#a5696942" }}
-              />
-              {/* </Message> */}
-            </Segment>
-          )}
         </Segment.Group>
       </div>
     );

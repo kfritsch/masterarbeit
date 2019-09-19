@@ -1,7 +1,9 @@
 import React from "react";
 import QuestionAnnotation from "./QuestionAnnotation";
 //import AnswerAnnotation from "./schema-one/AnswerAnnotation";
-import AnswerAnnotationSchemaTwo from "./schema-two/AnswerAnnotationSchemaTwo";
+// import AnswerAnnotationSchemaTwo from "./schema-two/AnswerAnnotationSchemaTwo";
+import AspectAnnotation from "./schema-two/AspectAnnotation";
+import RoughLabeling from "./schema-two/RoughLabeling";
 
 import { Segment, Header, Button } from "semantic-ui-react";
 
@@ -41,8 +43,10 @@ export default class AnnotationSurvey extends React.Component {
     this.callApi()
       .then((res) => {
         var { questions, annotations } = res;
+        console.log(questions, annotations);
         this.questions = questions.sort((a, b) => parseInt(a.id) - parseInt(b.id));
         this.annotations = annotations;
+        this.version = "whole";
         var qIdx = this.annotations.questions.length - 1;
         if (qIdx < 0) {
           qIdx = 0;
@@ -51,14 +55,40 @@ export default class AnnotationSurvey extends React.Component {
             answersAnnotation: []
           });
         }
-        var annIdx = this.annotations.questions[qIdx].answersAnnotation.length;
-        if (this.questions[qIdx].studentAnswers.length === annIdx) {
-          qIdx += 1;
-          annIdx = 0;
+        if (this.questions.length > this.annotations.questions.length) {
+          var annIdx = this.annotations.questions[qIdx].answersAnnotation.length;
+          if (this.questions[qIdx].studentAnswers.length === annIdx) {
+            qIdx += 1;
+            annIdx = 0;
+          }
+        } else {
+          qIdx = this.annotations.questions.findIndex(
+            (question) =>
+              !(
+                "answerCategory" in
+                question.answersAnnotation[question.answersAnnotation.length - 1]
+              )
+          );
+          if (qIdx >= 0) {
+            annIdx = this.annotations.questions[qIdx].answersAnnotation.findIndex(
+              (annotation) => !("answerCategory" in annotation)
+            );
+          } else {
+            this.version = "aspects";
+            qIdx = this.annotations.questions.findIndex(
+              (question) =>
+                !("aspects" in question.answersAnnotation[question.answersAnnotation.length - 1])
+            );
+            if (qIdx < 0) {
+              this.version = "done";
+              return;
+            }
+            annIdx = this.annotations.questions[qIdx].answersAnnotation.findIndex(
+              (annotation) => !("aspects" in annotation)
+            );
+          }
         }
-        // TODO clean
-        // qIdx = 0;
-        // annIdx = 0;
+
         var currentAnnotation = this.getCurrentAnnotation(qIdx, annIdx);
         this.setState({
           qIdx,
@@ -122,32 +152,25 @@ export default class AnnotationSurvey extends React.Component {
   getCurrentAnnotation(qIdx, annIdx) {
     var activeAnswerAnnotation = this.annotations.questions[qIdx].answersAnnotation[annIdx];
     var activeAnswer = this.questions[qIdx].studentAnswers[annIdx];
-    // var emptyAspect = {
-    //   text: "",
-    //   start: 0,
-    //   end: 0,
-    //   referenceAspects: [],
-    //   nlpLabels: [],
-    //   additionalLabels: []
-    // };
     var emptyAspectSchemaTwo = {
       text: "",
       elements: [],
-      referenceAspects: [],
-      nlpLabels: [],
-      additionalLabels: []
+      referenceAspects: []
     };
     if (!activeAnswerAnnotation) {
       activeAnswerAnnotation = {
         text: activeAnswer.text.replace(/\s\s+/g, " "),
-        aspects: [emptyAspectSchemaTwo],
         id: activeAnswer.id,
-        points: 0,
-        answerCategory: "",
         correctionOrComment: activeAnswer.text.replace(/\s\s+/g, " ")
       };
     } else {
-      activeAnswerAnnotation.aspects.push(emptyAspectSchemaTwo);
+      if (this.version == "aspects") {
+        if ("aspects" in activeAnswerAnnotation) {
+          activeAnswerAnnotation.aspects.push(emptyAspectSchemaTwo);
+        } else {
+          activeAnswerAnnotation["aspects"] = [emptyAspectSchemaTwo];
+        }
+      }
       if (!("correctionOrComment" in activeAnswerAnnotation)) {
         activeAnswerAnnotation["correctionOrComment"] = activeAnswer.text.replace(/\s\s+/g, " ");
       }
@@ -226,7 +249,11 @@ export default class AnnotationSurvey extends React.Component {
             Question-Annotation
           </Header>
         </div>
-        {this.questions && (
+        {!this.questions ? (
+          <div>Missing Questions</div>
+        ) : this.version == "done" ? (
+          <div>Done</div>
+        ) : (
           <Segment.Group className="annotation-container">
             <QuestionAnnotation
               activeQuestion={this.questions[qIdx]}
@@ -235,17 +262,28 @@ export default class AnnotationSurvey extends React.Component {
               getColors={this.getColors}
               getDepTree={this.getDepTree}
             />
-            <AnswerAnnotationSchemaTwo
-              ref={(instance) => {
-                this.answerAnnotation = instance;
-              }}
-              getColors={this.getColors}
-              getDepTree={this.getDepTree}
-              activeQuestion={this.questions[qIdx]}
-              currentAnnotation={currentAnnotation}
-              annIdx={annIdx}
-              goldStandard={true}
-            />
+            {this.version == "whole" ? (
+              <RoughLabeling
+                ref={(instance) => {
+                  this.answerAnnotation = instance;
+                }}
+                activeQuestion={this.questions[qIdx]}
+                currentAnnotation={currentAnnotation}
+                annIdx={annIdx}
+                goldStandard={false}
+              />
+            ) : (
+              <AspectAnnotation
+                ref={(instance) => {
+                  this.answerAnnotation = instance;
+                }}
+                getColors={this.getColors}
+                getDepTree={this.getDepTree}
+                activeQuestion={this.questions[qIdx]}
+                currentAnnotation={currentAnnotation}
+                annIdx={annIdx}
+              />
+            )}
             {this.state.error && <p style={{ color: "red" }}>{this.state.error}</p>}
             {annIdx === 0 ? (
               <Button
