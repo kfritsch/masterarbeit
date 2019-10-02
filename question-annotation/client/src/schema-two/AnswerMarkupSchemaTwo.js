@@ -181,6 +181,7 @@ export default class AnswerMarkupSchemaTwo extends React.Component {
 
   render() {
     const { answer } = this.props;
+    // console.log(answer);
     const text = "correctionOrComment" in answer ? answer.correctionOrComment : answer.text;
     const aspects = JSON.parse(JSON.stringify(answer.aspects));
     !this.props.refAnswer && aspects.splice(aspects.length - 1, 1);

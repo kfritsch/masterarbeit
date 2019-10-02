@@ -17,7 +17,7 @@ export default class RoughLabeling extends React.Component {
     super(props);
     this.state = {
       correctionOrComment: props.currentAnnotation.correctionOrComment,
-      answerCategory: null
+      answerCategory: props.currentAnnotation.answerCategory
     };
   }
 
@@ -28,7 +28,7 @@ export default class RoughLabeling extends React.Component {
     ) {
       this.setState({
         correctionOrComment: this.props.currentAnnotation.correctionOrComment,
-        answerCategory: null
+        answerCategory: this.props.currentAnnotation.answerCategory
       });
     }
   }
@@ -51,7 +51,7 @@ export default class RoughLabeling extends React.Component {
           <Segment textAlign="center">
             <Message style={{ backgroundColor: "#eff0f6" }}>
               <Message.Header style={{ paddingBottom: "0.5em" }}>
-                {"Schülerantwort " + (annIdx + 1) + "/" + activeQuestion.studentAnswers.length}
+                {"Schülerantwort " + (annIdx + 1) + "/" + activeQuestion.answersAnnotation.length}
               </Message.Header>
               <span key={"whole"}>{correctionOrComment}</span>
             </Message>

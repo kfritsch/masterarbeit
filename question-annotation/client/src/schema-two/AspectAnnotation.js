@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Message, Button, Dropdown, Label, Segment, Input, TextArea } from "semantic-ui-react";
+import { Message, Button, Dropdown, Label, Segment, Input } from "semantic-ui-react";
 import AnswerMarkupSchemaTwo from "./AnswerMarkupSchemaTwo";
 import Tree from "react-d3-tree";
 
@@ -60,7 +60,8 @@ export default class AspectAnnotation extends React.Component {
 
   getAnswerAnnotation() {
     var { aspects } = this.state;
-    if (!aspects.find((aspect) => aspect.text && !aspect.referenceAspects.length > 0)) return false;
+    console.log(aspects);
+    if (aspects.find((aspect) => aspect.text && !aspect.referenceAspects.length > 0)) return false;
     var activeAnswerAnnotation = JSON.parse(JSON.stringify(this.props.currentAnnotation));
     activeAnswerAnnotation.aspects = aspects;
     activeAnswerAnnotation.aspects.pop();
@@ -211,7 +212,6 @@ export default class AspectAnnotation extends React.Component {
     return aspects.map((annotationAspect, annIndex) => {
       var empty = !annotationAspect.text;
       var referenceAspects = annotationAspect.referenceAspects;
-      var label = annotationAspect.label;
       return (
         <Input
           id={"match" + annIndex}
@@ -248,7 +248,7 @@ export default class AspectAnnotation extends React.Component {
             annIndex={annIndex}
             selection
             placeholder="Select Label"
-            disabled={referenceAspects.length == 0}
+            disabled={referenceAspects.length === 0}
             defaultValue={0}
             value={annotationAspect.label}
             options={this.getDropdownOptions(ASPECT_LABELS)}

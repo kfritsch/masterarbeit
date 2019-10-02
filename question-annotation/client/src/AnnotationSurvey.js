@@ -15,8 +15,7 @@ export default class AnnotationSurvey extends React.Component {
       annIdx: 0,
       currentAnnotation: null
     };
-    this.questions = null;
-    this.annotations = null;
+    this.questionData = null;
     this.answerAnnotation = null;
   }
 
@@ -42,50 +41,35 @@ export default class AnnotationSurvey extends React.Component {
   componentDidMount() {
     this.callApi()
       .then((res) => {
-        var { questions, annotations } = res;
-        console.log(questions, annotations);
-        this.questions = questions.sort((a, b) => parseInt(a.id) - parseInt(b.id));
-        this.annotations = annotations;
+        var { questionData } = res;
+        console.log(questionData);
+        this.questionData = questionData["questions"];
         this.version = "whole";
-        var qIdx = this.annotations.questions.length - 1;
-        if (qIdx < 0) {
-          qIdx = 0;
-          this.annotations.questions.push({
-            id: this.questions[qIdx].id,
-            answersAnnotation: []
-          });
-        }
-        if (this.questions.length > this.annotations.questions.length) {
-          var annIdx = this.annotations.questions[qIdx].answersAnnotation.length;
-          if (this.questions[qIdx].studentAnswers.length === annIdx) {
-            qIdx += 1;
-            annIdx = 0;
-          }
-        } else {
-          qIdx = this.annotations.questions.findIndex(
-            (question) =>
-              !(
-                "answerCategory" in
-                question.answersAnnotation[question.answersAnnotation.length - 1]
-              )
+        var annIdx;
+        var qIdx = this.questionData.findIndex(
+          (question) =>
+            !("answerCategory" in question.answersAnnotation[question.answersAnnotation.length - 1])
+        );
+        if (qIdx >= 0) {
+          annIdx = this.questionData[qIdx].answersAnnotation.findIndex(
+            (annotation) => !("answerCategory" in annotation)
           );
-          if (qIdx >= 0) {
-            annIdx = this.annotations.questions[qIdx].answersAnnotation.findIndex(
-              (annotation) => !("answerCategory" in annotation)
-            );
-          } else {
-            this.version = "aspects";
-            qIdx = this.annotations.questions.findIndex(
-              (question) =>
-                !("aspects" in question.answersAnnotation[question.answersAnnotation.length - 1])
-            );
-            if (qIdx < 0) {
-              this.version = "done";
-              return;
-            }
-            annIdx = this.annotations.questions[qIdx].answersAnnotation.findIndex(
-              (annotation) => !("aspects" in annotation)
-            );
+        } else {
+          this.version = "aspects";
+          qIdx = this.questionData.findIndex(
+            (question) =>
+              !("aspects" in question.answersAnnotation[question.answersAnnotation.length - 1])
+          );
+          if (qIdx < 0) {
+            this.version = "done";
+            return;
+          }
+          annIdx = this.questionData[qIdx].answersAnnotation.findIndex(
+            (annotation) => !("aspects" in annotation)
+          );
+          if (annIdx < 0) {
+            this.finish();
+            annIdx = this.questionData[qIdx].answersAnnotation.length - 1;
           }
         }
 
@@ -112,10 +96,10 @@ export default class AnnotationSurvey extends React.Component {
     if (!answerAnnotation) {
       return false;
     }
-    if (this.annotations.questions[qIdx].answersAnnotation.length === annIdx) {
-      this.annotations.questions[qIdx].answersAnnotation.push(answerAnnotation);
+    if (this.questionData[qIdx].answersAnnotation.length === annIdx) {
+      this.questionData[qIdx].answersAnnotation.push(answerAnnotation);
     } else {
-      this.annotations.questions[qIdx].answersAnnotation[annIdx] = answerAnnotation;
+      this.questionData[qIdx].answersAnnotation[annIdx] = answerAnnotation;
     }
     this.saveAnnotations();
     return true;
@@ -142,7 +126,7 @@ export default class AnnotationSurvey extends React.Component {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        annotations: this.annotations
+        annotations: { questions: this.questionData }
       })
     });
     const body = await response.text();
@@ -150,30 +134,24 @@ export default class AnnotationSurvey extends React.Component {
   };
 
   getCurrentAnnotation(qIdx, annIdx) {
-    var activeAnswerAnnotation = this.annotations.questions[qIdx].answersAnnotation[annIdx];
-    var activeAnswer = this.questions[qIdx].studentAnswers[annIdx];
+    var activeAnswerAnnotation = this.questionData[qIdx].answersAnnotation[annIdx];
     var emptyAspectSchemaTwo = {
       text: "",
       elements: [],
       referenceAspects: []
     };
-    if (!activeAnswerAnnotation) {
-      activeAnswerAnnotation = {
-        text: activeAnswer.text.replace(/\s\s+/g, " "),
-        id: activeAnswer.id,
-        correctionOrComment: activeAnswer.text.replace(/\s\s+/g, " ")
-      };
-    } else {
-      if (this.version == "aspects") {
-        if ("aspects" in activeAnswerAnnotation) {
-          activeAnswerAnnotation.aspects.push(emptyAspectSchemaTwo);
-        } else {
-          activeAnswerAnnotation["aspects"] = [emptyAspectSchemaTwo];
-        }
+    if (this.version === "aspects") {
+      if ("aspects" in activeAnswerAnnotation) {
+        activeAnswerAnnotation.aspects.push(emptyAspectSchemaTwo);
+      } else {
+        activeAnswerAnnotation["aspects"] = [emptyAspectSchemaTwo];
       }
-      if (!("correctionOrComment" in activeAnswerAnnotation)) {
-        activeAnswerAnnotation["correctionOrComment"] = activeAnswer.text.replace(/\s\s+/g, " ");
-      }
+    }
+    if (!("correctionOrComment" in activeAnswerAnnotation)) {
+      activeAnswerAnnotation["correctionOrComment"] = activeAnswerAnnotation.text.replace(
+        /\s\s+/g,
+        " "
+      );
     }
     return activeAnswerAnnotation;
   }
@@ -199,12 +177,6 @@ export default class AnnotationSurvey extends React.Component {
       return;
     }
     var qIdx = this.state.qIdx + 1;
-    if (qIdx === this.annotations.questions.length) {
-      this.annotations.questions.push({
-        id: this.questions[qIdx].id,
-        answersAnnotation: []
-      });
-    }
     var annIdx = 0;
     this.setState({
       qIdx,
@@ -215,8 +187,13 @@ export default class AnnotationSurvey extends React.Component {
   }
 
   prevQuestion() {
+    var success = this.updateAnnotations();
+    if (!success) {
+      this.setState({ error: "Please annotate first!" });
+      return;
+    }
     var qIdx = this.state.qIdx - 1;
-    var annIdx = this.annotations.questions[qIdx].answersAnnotation.length - 1;
+    var annIdx = this.questionData[qIdx].answersAnnotation.length - 1;
     this.setState({
       qIdx,
       annIdx,
@@ -226,6 +203,11 @@ export default class AnnotationSurvey extends React.Component {
   }
 
   prevAnswer() {
+    var success = this.updateAnnotations();
+    if (!success) {
+      this.setState({ error: "Please annotate first!" });
+      return;
+    }
     var annIdx = this.state.annIdx - 1;
     this.setState({
       annIdx,
@@ -234,13 +216,17 @@ export default class AnnotationSurvey extends React.Component {
     });
   }
 
+  finish() {
+    alert("You are Done!");
+  }
+
   render() {
     const { qIdx, annIdx, currentAnnotation } = this.state;
     var lastAnnotation = false;
     var lastQuestion = false;
-    if (this.questions) {
-      lastAnnotation = annIdx === this.questions[qIdx].studentAnswers.length - 1;
-      lastQuestion = qIdx === this.questions.length - 1;
+    if (this.questionData) {
+      lastAnnotation = annIdx === this.questionData[qIdx].answersAnnotation.length - 1;
+      lastQuestion = qIdx === this.questionData.length - 1;
     }
     return (
       <div className="app-container">
@@ -249,25 +235,25 @@ export default class AnnotationSurvey extends React.Component {
             Question-Annotation
           </Header>
         </div>
-        {!this.questions ? (
+        {!this.questionData ? (
           <div>Missing Questions</div>
-        ) : this.version == "done" ? (
+        ) : this.version === "done" ? (
           <div>Done</div>
         ) : (
           <Segment.Group className="annotation-container">
             <QuestionAnnotation
-              activeQuestion={this.questions[qIdx]}
-              questionCount={this.questions.length}
+              activeQuestion={this.questionData[qIdx]}
+              questionCount={this.questionData.length}
               qIdx={qIdx}
               getColors={this.getColors}
               getDepTree={this.getDepTree}
             />
-            {this.version == "whole" ? (
+            {this.version === "whole" ? (
               <RoughLabeling
                 ref={(instance) => {
                   this.answerAnnotation = instance;
                 }}
-                activeQuestion={this.questions[qIdx]}
+                activeQuestion={this.questionData[qIdx]}
                 currentAnnotation={currentAnnotation}
                 annIdx={annIdx}
                 goldStandard={false}
@@ -279,7 +265,7 @@ export default class AnnotationSurvey extends React.Component {
                 }}
                 getColors={this.getColors}
                 getDepTree={this.getDepTree}
-                activeQuestion={this.questions[qIdx]}
+                activeQuestion={this.questionData[qIdx]}
                 currentAnnotation={currentAnnotation}
                 annIdx={annIdx}
               />

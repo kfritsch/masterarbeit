@@ -8,7 +8,7 @@ const HOST = "0.0.0.0";
 const BASE = process.cwd();
 
 const CLIENT_BUILD_PATH = path.join(__dirname, "../../client/build");
-const ANNOTATION_FILE = "NewAnnotation.json";
+const ANNOTATION_FILE = "VIPSGoldStandard.json";
 
 // App
 const app = express();
@@ -31,22 +31,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const GOLD_STANDARD = JSON.parse(
   fs.readFileSync(BASE + "/data/annotations/" + ANNOTATION_FILE, "utf8")
 );
-
-function getQuestions() {
-  var files = fs.readdirSync(BASE + "/data/questions/");
-  var questions = [];
-  var question;
-  for (var i = 0; i < files.length; i++) {
-    question = JSON.parse(fs.readFileSync(BASE + "/data/questions/" + files[i], "utf8"));
-    if (question.referenceAnswer.aspects) {
-      questions.push(question);
-    }
-  }
-  console.log(questions.length);
-  return questions;
-}
-
-const QUESTIONS = getQuestions();
 
 function updateGoldStandardAnnotation(questionId, annotation) {
   try {
@@ -89,7 +73,7 @@ function saveGoldStandardAnnotation(annotations) {
 
 // API
 app.get("/api/get-annotation-data", (req, res, next) => {
-  res.send({ questions: QUESTIONS, annotations: GOLD_STANDARD });
+  res.send({ questionData: GOLD_STANDARD });
 });
 app.post("/api/save-annotations", (req, res, next) => {
   // var annotations = JSON.parse(req.body.annotations);

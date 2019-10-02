@@ -164,8 +164,13 @@ class FeatureExtractor(object):
         if(len(pupTokenSet)):
             pupAns["features"]["pupAbsLen"] = len(pupWords)
             pupAns["features"]["refAbsLen"] = len(self.refWords)
+            pupAns["features"]["absLenDiff"] = len(pupWords) - len(self.refWords)
             pupAns["features"]["pupPosDist"] = self.getPosDist(pupAns["tokens"])
             pupAns["features"]["refPosDist"] = self.getPosDist(refAns["tokens"])
+            pupAns["features"]["pupNegWordCount"] = sum(["negWord" in token for token in pupAns["tokens"]])
+            pupAns["features"]["pupNegPrefixCount"] = sum(["negPrefix" in token for token in pupAns["tokens"]])
+            pupAns["features"]["refNegWordCount"] = sum(["negWord" in token for token in refAns["tokens"]])
+            pupAns["features"]["refNegPrefixCount"] = sum(["negPrefix" in token for token in refAns["tokens"]])
             # allSimDfWords = self.semSim.getTokenSimilarityMatrix(pupTokenSet, self.refTokenSet, asDf=True, lemmaIdc=False)
             # pupAns["features"]["sulAlign"] = suAlignmentScore(refAns, pupAns, self.question, allSimDfWords)[0:2]
 
@@ -182,12 +187,14 @@ class FeatureExtractor(object):
 
             pupAns["features"]["pupContentLen"] = len(pupContentToken)
             pupAns["features"]["refContentLen"] = len(self.refContentToken)
+            pupAns["features"]["contentLenDiff"] = len(pupContentToken) - len(self.refContentToken)
             pupAns["features"]["lemmaRec"] = sum([1 for lemma in self.refContentLemmas if lemma in pupContentLemmas])
             pupAns["features"]["lemmaHeadRec"] = self.getHeadRecall(pupAllContentToken, self.refAllContentToken)
             pupAns["features"]["contentRec"] = self.getContentScore(similarWordsRecall, refIdx=0, weights=False)
             pupAns["features"]["contentHeadRec"] = self.getContentHeadScore(similarWordsRecall, pupAllContentToken, self.refAllContentToken)
             pupAns["features"]["contentPrec"] = self.getContentScore(similarWordsPrecision, refIdx=2, weights=False)
             pupAns["features"]["posSimHist"] = self.getPosTagSimHist(similarWordsRecall, self.refContentPos, bins=6)
+            pupAns["features"]["simHist"] = self.getSimHist(similarWordsRecall, bins=6)
             pupAns["features"]["embDiff"] = float(np.mean(np.abs(pupEmb-refEmb)))
             pupAns["features"]["embSim"] = float(self.semSim.cosineSimilarity(pupEmb,refEmb))
             pupAns["features"]["embMQDiff"] = float(np.mean(np.abs(pupMQEmb-refMQEmb)))
@@ -218,8 +225,14 @@ class FeatureExtractor(object):
         features = {
             "pupAbsLen": 0,
             "refAbsLen": 0,
+            "absLenDiff": 0,
             "pupContentLen": 0,
             "refContentLen":0,
+            "contentLenDiff": 0,
+            "pupNegWordCount": 0,
+            "pupNegPrefixCount": 0,
+            "refNegWordCount": 0,
+            "refNegPrefixCount": 0,
             "lemmaRec": 0,
             "lemmaHeadRec": 0,
             "pupPosDist": dict.fromkeys(["AD","NOUN","VERB","CONJ","OTHER"], 0),
@@ -228,6 +241,7 @@ class FeatureExtractor(object):
             "contentHeadRec": 0,
             "contentPrec": 0,
             # "sulAlign": [0,0],
+            "simHist": [0]*bins,
             "posSimHist": {"a":[0]*bins, "n":[0]*bins, "v":[0]*bins, "o":[0]*bins},
             "embDiff": 1,
             "embSim":0,
@@ -251,7 +265,7 @@ class FeatureExtractor(object):
         return qraOverlap
 
 
-    def addPredDistBasedFeatures(self, answer, bins=6):
+    def addPredDistBasedFeatures(self, answer, vocab=False, bins=6):
         if(not("features" in answer)):
             self.extractFeatures(answer)
         answer["features"]["distWeightContent"] = 0
@@ -259,12 +273,37 @@ class FeatureExtractor(object):
         answer["features"]["posDistWeightHist"] = {"a":[0]*bins, "n":[0]*bins, "v":[0]*bins, "o":[0]*bins}
         if(not(self.vocabDistWeights)):
             self.setDistWeights()
+        if(vocab):
+            vocab = dict.fromkeys([key for key, val in self.question["vocabulary"].items() if "first" in val and sum(val["predDist"]) > 1], 0)
+            semCats = dict.fromkeys([key for key, val in self.question["semCats"].items() if "first" in val and sum(val["predDist"]) > 1], 0)
+            semCatHeads = dict.fromkeys([(semkey + "_" + headkey) for semkey, semval in self.question["semCats"].items() for headkey, headval in semval["headCats"].items() if "first" in semval and sum(headval) > 1], 0)
+            for token in answer["tokens"]:
+                lemma = token["lemmas"][0]
+                if(lemma in vocab):
+                    vocab[lemma] = 1
+                    semCat = self.question["vocabulary"][lemma]["semCat"]
+                    semCats[semCat] = 1
+                    headLemma = token["head"]
+                    if(headLemma in self.question["vocabulary"]):
+                        headLemma = self.question["vocabulary"][headLemma]["semCat"]
+                        semCatHead = semCat + "_" + headLemma
+                        if(semCatHead in semCatHeads):
+                            semCatHeads[semCatHead] = 1
+            answer["features"]["vocab"] = vocab
+            answer["features"]["semCats"] = semCats
+            answer["features"]["semCatHeads"] = semCatHeads
         if(answer["features"]["pupContentLen"]==0):
             return
         contentToken = [token for token in answer["tokens"] if(token["contentWord"])]
         answer["features"]["distWeightHeadContent"] = self.getDistWheightHeadContent(contentToken)
         answer["features"]["distWeightContent"] = sum([self.vocabDistWeights[token["lemmas"][0]][0] * self.vocabDistWeights[token["lemmas"][0]][1] for token in contentToken if token["lemmas"][0] in self.vocabDistWeights])/len(contentToken)
         answer["features"]["posDistWeightHist"] = self.getPosDistWeightHist(answer)
+
+    def computeSulAlign(self, answer):
+        refAns = self.question["referenceAnswer"]
+        pupWords, pupWordsSet, pupAllContentToken, pupTokenSet, pupContentToken, pupContentLemmas, pupContentPos = self.getAnswerInformation(answer)
+        allSimDfWords = self.semSim.getTokenSimilarityMatrix(pupTokenSet, self.refTokenSet, asDf=True, lemmaIdc=False)
+        answer["features"]["sulAlign"] = suAlignmentScore(refAns, answer, self.question, allSimDfWords)[0:2]
 
     def getDistWheightHeadContent(self, contentToken):
         scores = []
@@ -335,6 +374,13 @@ class FeatureExtractor(object):
             posTagSimHist[slPos][binIdx] += 1/len(refContentPos)
         return posTagSimHist
 
+    def getSimHist(self, similarWordsRecall, bins=6):
+        simHist = [0]*bins;
+        for sim in similarWordsRecall:
+            binIdx = math.floor(sim[1]*(bins-2))+1 if(sim[1]) else 0
+            simHist[binIdx] += 1/len(similarWordsRecall)
+        return simHist
+
     def getMaxWordsSim(self, dataFrame, sourceTokens, axis=0):
         maxIdc = dataFrame.idxmax(axis=axis)
         sourceWords = dataFrame.columns if(axis==0) else dataFrame.index
@@ -379,7 +425,7 @@ class FeatureExtractor(object):
 
         answer["alignAnn"] = self.tokenAnnotator.getAlignmentAnnotation(answer["correctionOrComment"] if("correctionOrComment" in answer) else answer["text"])
 
-    def updateVocab(self, answer, refTok=False):
+    def updateVocab(self, answer, refTok=False, allowMerge=True):
         if(not("tokens" in answer)):
             self.annotateAnswer(answer)
         for token in answer["tokens"]:
@@ -392,18 +438,20 @@ class FeatureExtractor(object):
 
             if(lemma in self.question["vocabulary"]):
                 vocab = self.question["vocabulary"][lemma]
+                vocab["count"] = vocab["count"] + 1
                 semCat = self.question["semCats"][vocab["semCat"]]
+                semCat["count"] = semCat["count"] + 1
                 if(not(headLemma in semCat["headCats"])):
                     semCat["headCats"][headLemma] = [0,0]
                 continue
-            self.question["vocabulary"][lemma] = {"predDist":[0,0], "semCat":lemma, "slPos":token["slPos"] if "slPos" in token else "o"}
+            self.question["vocabulary"][lemma] = {"predDist":[0,0], "semCat":lemma, "slPos":token["slPos"] if "slPos" in token else "o", "count": 1}
             newSemCat = {
                 "maxRefSim" : 0,
                 "mostSimRefCat" : None,
                 "catGroup": [(lemma,1)],
                 "predDist": [0,0],
                 "headCats": {headLemma:[0,0]},
-
+                "count": 1
             }
             if(refTok): newSemCat["refCat"]= True
             wn = bool(self.semSim.getSynsets(token)[0])
@@ -446,15 +494,18 @@ class FeatureExtractor(object):
                     # print(lemma,catMatches)
                     # input()
                     # the new key of a semantic group should be in wn if possible (comes before following conditions). with a simple addition the key should not change, in case of a merge the merging lemma should be key
+                    if(not(allowMerge) and len(catMatches)>=1):
+                        catMatches = [catMatches[0]]
                     if(len(catMatches)==1 or not("wn" in newSemCat)):
                         for catKey,simScore in catMatches:
                             semCat = self.question["semCats"][catKey]
-                            if("wn" in semCat):
+                            if("wn" in semCat or not(allowMerge)):
                                 semCatChanges.append(lemma)
                                 newSemCat["wn"] = True
                                 if("emb" in semCat):  newSemCat["emb"] = True
                                 newKey = catKey
                                 newSemCat["catGroup"] = [(lemma,simScore)]
+                                newSemCat["mostSimRefCat"] = lemma
                                 break
                     self.question["vocabulary"][lemma]["semCat"] = newKey
                     for catKey,simScore in catMatches:
@@ -471,6 +522,12 @@ class FeatureExtractor(object):
                             self.question["vocabulary"][entry[0]]["semCat"] = newKey
                         newSemCat["predDist"][0] += semCat["predDist"][0]
                         newSemCat["predDist"][1] += semCat["predDist"][1]
+                        newSemCat["count"] += semCat["count"]
+                        if("first" in semCat):
+                            if(not("first" in newSemCat)):
+                                newSemCat["first"] = semCat["first"]
+                            else:
+                                newSemCat["first"] = min(semCat["first"], newSemCat["first"])
                         if(semCat["maxRefSim"] > newSemCat["maxRefSim"]):
                             newSemCat["maxRefSim"] = semCat["maxRefSim"]
                             newSemCat["mostSimRefCat"] = semCat["mostSimRefCat"]
@@ -515,10 +572,14 @@ class FeatureExtractor(object):
                 continue
             lemmasCounted.append(lemma)
             vocab = self.question["vocabulary"][lemma]
+            if(not("first" in vocab)):
+                vocab["first"] = sum(self.question["classCounts"])
             semKey = vocab["semCat"]
             vocab["predDist"][pred] += 1
 
             semCat = self.question["semCats"][semKey]
+            if(not("first" in semCat)):
+                semCat["first"] = sum(self.question["classCounts"])
             semCat["predDist"][pred] += 1
 
             headLemma = token["head"]

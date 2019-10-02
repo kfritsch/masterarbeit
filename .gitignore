@@ -6,3 +6,4 @@
 /test-scripts/tiger
 /test-scripts/AnnotatedGoldStandards.json
 /sdewac-gn-words.tsv
+__pycache__/

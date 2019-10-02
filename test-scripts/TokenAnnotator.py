@@ -225,6 +225,10 @@ POS_CORRECTIONS = {
 
 SHORT_LEMMA_POS = ["n", "a", "v"]
 
+NEGATION_WORDS = ["nicht", "nein", "kein", "keine", "keiner", "keines", "keinen", "keinem", "nie", "niemanden", "niemand", "niemanden", "niemandes", "niemals", "nirgends", "nirgendwo", "nirgendwohin"]
+NEGATION_PREFIXES = ["a", "dis", "in", "ir", "un"]
+NEGATION_SUFFIX = "los"
+
 class TokenAnnotator(object):
     def __init__(self):
         self.stanfordCoreNLP = StanfordCoreNLP('http://localhost', port=9000)
@@ -372,37 +376,59 @@ class TokenAnnotator(object):
 
         # add lemmatization information
         for token in tokens:
-            found = False
-            token["lemmas"] = []
-            word = token["text"]
-            infoVocab = self.isInfoVocab(word)
-            if(infoVocab):
-                token["lemmas"] = [infoVocab]
-            else:
-                for p in reversed(token["lemmaPos"]):
-                    wordLemmas, composita = self.getPossibleLemmas(word, p, token)
-                    if(composita):
-                        token["composita"] = composita
-                    if(wordLemmas):
-                        found = True
-                        if(not("udPos") in token):
-                            token["udPos"] = p
-                        for lemma in wordLemmas:
-                            if(not(lemma in token["lemmas"])):
-                                token["lemmas"].append(lemma)
-            if(not("udPos") in token):
-                token["udPos"] = token["lemmaPos"][-1]
-            if(token["text"][0].isupper() and not(token["udPos"] in ["NOUN", "PROPN", "X"] )):
-                token["text"] = token["text"].lower()
-            if(not(found) and not(word in token["lemmas"])):
-                token["lemmas"].append(token["text"])
-            posShort = ["n", "a", "v"]
-            for idx, set in enumerate([["PROPN","NOUN"],["ADJ","ADV"],["VERB","AUX"]]):
-                if(token["udPos"] in set):
-                    token["slPos"] = SHORT_LEMMA_POS[idx]
-                    break
+            self.addLemmas(token)
+            self.lower(token)
+            self.addSlPos(token)
+            self.addNegationInfo(token)
 
         for token in tokens:
             token["head"] = tokens[token["headId"]]["lemmas"][0] if(tokens[token["headId"]]["id"] == token["headId"]) else print("Head Exception")
 
         return tokens
+
+    def addLemmas(self, token):
+        found = False
+        token["lemmas"] = []
+        word = token["text"]
+        infoVocab = self.isInfoVocab(word)
+        if(infoVocab):
+            token["lemmas"] = [infoVocab]
+        else:
+            for p in reversed(token["lemmaPos"]):
+                wordLemmas, composita = self.getPossibleLemmas(word, p, token)
+                if(composita):
+                    token["composita"] = composita
+                if(wordLemmas):
+                    found = True
+                    if(not("udPos") in token):
+                        token["udPos"] = p
+                    for lemma in wordLemmas:
+                        if(not(lemma in token["lemmas"])):
+                            token["lemmas"].append(lemma)
+        if(not(found) and not(word in token["lemmas"])):
+            token["lemmas"].append(token["text"])
+        if(not("udPos") in token):
+            token["udPos"] = token["lemmaPos"][-1]
+
+    def addNegationInfo(self, token):
+        if(token["lemmas"][0] in NEGATION_WORDS):
+            token["negWord"] = True
+            return
+        if(token["lemmas"][0].endswith(NEGATION_SUFFIX)):
+            token["negPrefix"] = True
+            return
+        for prefix in NEGATION_PREFIXES:
+            if(token["lemmas"][0].startswith(prefix) and self.getPossibleLemmas(token["lemmas"][0][len(prefix):], token["udPos"])):
+                token["negPrefix"] = True
+                return
+
+    def addSlPos(self, token):
+        for idx, set in enumerate([["PROPN","NOUN"],["ADJ","ADV"],["VERB","AUX"]]):
+            if(token["udPos"] in set):
+                token["slPos"] = SHORT_LEMMA_POS[idx]
+                return
+
+    def lower(self, token):
+        if(token["text"][0].isupper() and not(token["udPos"] in ["NOUN", "PROPN", "X"] )):
+            token["text"] = token["text"].lower()
+            token["lemmas"] = [lem.lower() for lem in token["lemmas"]]
