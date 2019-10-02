@@ -3,8 +3,6 @@ import pandas as pd
 from scipy.stats.stats import pearsonr
 import re, os, sys, json, csv, math, codecs
 from os.path import join, dirname, realpath, isdir, isfile, exists
-from TokenAnnotator import TokenAnnotator
-from TokenAnnotatorEnglish import TokenAnnotatorEnglish
 from FeatureExtractor import FeatureExtractor
 import xml.etree.ElementTree as ET
 
@@ -12,26 +10,116 @@ FILE_PATH = dirname(realpath(__file__))
 SEMVAL_PATH = join(FILE_PATH, "..", "question-corpora","SEMVAL")
 TEST_PATH = join(SEMVAL_PATH,"test")
 TRAIN_PATH = join(SEMVAL_PATH,"training")
+SEMVAL_PATHES = {
+    "T": [join(TRAIN_PATH, "beetle"),join(TRAIN_PATH, "sciEntsBank")],
+    "UA": [join(TEST_PATH,"beetle","test-unseen-answers"), join(TEST_PATH,"sciEntsBank","test-unseen-answers")],
+    "UQ": [join(TEST_PATH,"beetle","test-unseen-questions"), join(TEST_PATH,"sciEntsBank","test-unseen-questions")],
+    "UD": [join(TEST_PATH,"sciEntsBank","test-unseen-domains")],
+}
 
-def preprocessQuestionData(questionDataPath, featurePath, annotationOut=False):
-    with open(questionDataPath, "r") as f:
-        questionsAnnotation = json.load(f)
-    featureExtrator = FeatureExtractor(simMeasure="fasttext", lang="de")
-    for qIdx, question in enumerate(questionsAnnotation["questions"]):
-        print(question["title"])
-        featureExtrator.setQuestion(question)
+def generateSemvalFeatureFiles(featureFile, annFile, testSet=False, trainVocab=False):
+    if(isFile(annFile)):
+        with open(annFile, "r") as f:
+            questionData = json.load(f)
+    else:
+        questionData = getQuestionData(testSet if testSet else "T")
+
+    if(testSet=="UA"):
+        with open(join(TRAIN_PATH, trainVocab), "r") as f:
+            trainedVocab = json.load(f)
+        for qId, question in questionData.items():
+            questionVocab = trainedVocab[question["id"]]
+            questionVocab["studentAnswers"] = question["studentAnswers"]
+            question = questionVocab
+
+    featureExtrator = FeatureExtractor(simMeasure="fasttext", lang="en")
+    for qIdx, qId in enumerate(questionData.keys()):
+        question = questionData[qId]
+        print(qIdx, qId)
+        featureExtrator.setQuestion(question, resetVocabulary=not(testSet))
+        for aIdx, answer in enumerate(question["studentAnswers"]):
+            featureExtrator.updateVocab(answer, allowMerge=not(testSet))
+            if(not(testSet)): featureExtrator.updateVocabPredDist(answer, answer["answerCategory"])
+
         for aIdx, answer in enumerate(question["studentAnswers"]):
             featureExtrator.extractFeatures(answer)
-            featureExtrator.updateVocabPredDist(answer)
-            print(answer["features"])
-            sys.exit(0)
-            # if(qIdx>=2 and aIdx < len(question["studentAnswers"])-20): featureExtrator.updateVocabPredDist(answer)
-        for answer in question["studentAnswers"]:
-            featureExtrator.addPredDistBasedFeatures(answer)
-    saveFeatureCSV(questionsAnnotation, featurePath)
-    # if(annotationOut):
-    #     with open(annotationOut, "w+") as f:
-    #         json.dump(questionsAnnotation, f, indent=4)
+            if(not(testSet=="UQ")):
+                featureExtrator.addPredDistBasedFeatures(answer, vocab=True)
+            if(not("sulAlign" in answer["features"])):
+                if("sulAlign" in answer):
+                    answer["features"]["sulAlign"] = answer["sulAlign"]
+                else:
+                    featureExtrator.computeSulAlign(answer)
+
+    saveFeatureJSON({"questions":[val for key,val in questionData.items()]}, featureFile )
+    if(not(testSet)): saveTrainingVocab(trainVocab, questionData)
+    if(!isFile(annFile)): saveTokenAnnotation(annFile, questionData)
+
+def getQuestionData(dataSet):
+    dataPathes = SEMVAL_PATHES[dataSet]
+    questionFiles = []
+    for path in dataPathes:
+        for root, _, files in os.walk(path):
+            for file in files:
+                if '.xml' == file[-4:]:
+                    questionFiles.append(join(root, file))
+    questionsAnnotation = {}
+    for qIdx, file in enumerate(questionFiles):
+        question = parseSemval(file)
+        questionsAnnotation[question["id"]] = question
+    return questionsAnnotation
+
+def parseSemval(xmlPath):
+    tree = ET.parse(xmlPath)
+    root = tree.getroot()
+    # go through all pages
+    questionDict = root.attrib
+    for root_obj in root:
+        if(root_obj.tag=="questionText"):
+            questionDict["text"] = root_obj.text
+        if(root_obj.tag=="referenceAnswers"):
+            questionDict["referenceAnswers"] = []
+            for refAns in root_obj:
+                questionDict["referenceAnswers"].append({"id": refAns.attrib["id"], "text":refAns.text})
+        if(root_obj.tag=="studentAnswers"):
+            questionDict["studentAnswers"] = []
+            for pupAns in root_obj:
+                questionDict["studentAnswers"].append({"id": pupAns.attrib["id"], "text":pupAns.text, "answerCategory": pupAns.attrib["accuracy"] if pupAns.attrib["accuracy"]=="correct" else "none"})
+    questionDict["referenceAnswer"] = questionDict["referenceAnswers"][0]
+    return  questionDict
+
+def saveTokenAnnotation(annFile, questionData):
+    for qId in questionData.keys():
+        question = questionData[qId]
+        del question["semCats"]
+        del question["vocabulary"]
+        del question["classCounts"]
+        refAns = question["referenceAnswer"]
+        del refAns["alignAnn"]
+        studentAnswers = question["studentAnswers"]
+        for studentAnswer in studentAnswers:
+            del studentAnswer["alignAnn"]
+            studentAnswer["sulAlign"] = studentAnswer["features"]["sulAlign"]
+            del studentAnswer["features"]
+    with open(annFile, "w+") as f:
+        json.dump(questionData, f, indent=4)
+
+def saveTrainingVocab(trainFile, questionData):
+    questionData = JSON.parse(JSON.stringify(questionData))
+    for key,val in questionData.items():
+        del val["studentAnswers"]
+        del val["referenceAnswers"]
+    with open(join(TRAIN_PATH, trainFile), "w+") as f:
+        json.dump(questionData, f, indent=4)
+
+def saveFeatureJSON(questionsAnnotation, featurePath):
+    featureData = {}
+    for question in questionsAnnotation["questions"]:
+        featureData[question["id"]] = {}
+        for aIdx, answer in enumerate(question["studentAnswers"]):
+            featureData[question["id"]][answer["id"]] = {"label": answer["answerCategory"] == "correct", "features": answer["features"]}
+    with open(featurePath, "w+") as f:
+        json.dump(featureData, f, indent=4)
 
 def generateCSVMapping(answer, questionId):
     fields = ["qID", "aID", "label"]
@@ -65,418 +153,7 @@ def saveFeatureCSV(questionsAnnotation, featurePath):
                 values, _ = generateCSVMapping(answer, question["id"])
                 featureWriter.writerow(values)
 
-def saveFeatureJSON(questionsAnnotation, featurePath):
-    featureData = {}
-    for question in questionsAnnotation["questions"]:
-        featureData[question["id"]] = {}
-        for aIdx, answer in enumerate(question["studentAnswers"]):
-            featureData[question["id"]][answer["id"]] = {"label": answer["answerCategory"] == "correct", "features": answer["features"]}
-    with open(featurePath, "w+") as f:
-        json.dump(featureData, f, indent=4)
-
-
-def setRefWordCounts(originalAnn, processedAnn):
-    for qIdx,question in enumerate(processedAnn["questions"]):
-        refAnsAnn = question["referenceAnswer"]
-        refAnsTar = originalAnn["questions"][qIdx]["referenceAnswer"]
-        if(not("vocabulary" in question) or not("tokens" in refAnsAnn)):
-            continue
-        lemmas = [token["lemmas"][0] for token in refAnsAnn["tokens"] if(token["contentWord"])]
-        refAnsTar["compWeights"] = {}
-        totalCount = len(question["studentAnswers"]) + 1
-        for lemma in lemmas:
-            if(not(lemma in  question["vocabulary"])):
-                refAnsTar["compWeights"][lemma] = 0
-                continue
-            lemmaDist = question["vocabulary"][lemma]
-            refAnsTar["compWeights"][lemma] = lemmaDist
-
-def parseSemval(xmlPath):
-    tree = ET.parse(xmlPath)
-    root = tree.getroot()
-    # go through all pages
-    questionDict = root.attrib
-    for root_obj in root:
-        if(root_obj.tag=="questionText"):
-            questionDict["text"] = root_obj.text
-        if(root_obj.tag=="referenceAnswers"):
-            questionDict["referenceAnswers"] = []
-            for refAns in root_obj:
-                questionDict["referenceAnswers"].append({"id": refAns.attrib["id"], "text":refAns.text})
-        if(root_obj.tag=="studentAnswers"):
-            questionDict["studentAnswers"] = []
-            for pupAns in root_obj:
-                questionDict["studentAnswers"].append({"id": pupAns.attrib["id"], "text":pupAns.text, "answerCategory": pupAns.attrib["accuracy"] if pupAns.attrib["accuracy"]=="correct" else "none"})
-    questionDict["referenceAnswer"] = questionDict["referenceAnswers"][0]
-    return  questionDict
-
-def preprocessTrainingData(questions):
-    featureExtrator = FeatureExtractor(simMeasure="fasttext", lang="en")
-    for qIdx, question in enumerate(questions):
-        print(qIdx, question["id"], question["text"])
-        featureExtrator.setQuestion(question)
-        for aIdx, answer in enumerate(question["studentAnswers"]):
-            featureExtrator.extractFeatures(answer, questionDemotion=False)
-            featureExtrator.updateVocabPredDist(answer)
-        for answer in question["studentAnswers"]:
-            featureExtrator.addPredDistBasedFeatures(answer)
-    return questions
-
-def processSemvalTrainingData():
-    beetlePath = join(TRAIN_PATH, "beetle")
-    sciEntsBankPath = join(TRAIN_PATH, "sciEntsBank")
-    annFile = join(TRAIN_PATH, "trainedAnnotationsHalf.json")
-    featFile = join(TRAIN_PATH, "trainingFeaturesHalf.csv")
-
-    featureExtrator = FeatureExtractor(simMeasure="fasttext", lang="en")
-
-    questionFiles = []
-    for path in [beetlePath, sciEntsBankPath]:
-        for root, _, files in os.walk(path):
-            for file in files:
-                if '.xml' == file[-4:]:
-                    questionFiles.append(join(root, file))
-
-    if(isfile(annFile)):
-        with open(annFile, "r") as f:
-            questionsAnnotation = json.load(f)
-    else:
-        questionsAnnotation = {}
-    print("Already processed: " + str(len(questionsAnnotation.keys())))
-
-    for qIdx, file in enumerate(questionFiles):
-        question = parseSemval(file)
-        if(question["id"] in questionsAnnotation):
-            continue
-        print(qIdx, question["id"], question["text"])
-        featureExtrator.setQuestion(question)
-        for aIdx, answer in enumerate(question["studentAnswers"]):
-            featureExtrator.updateVocab(answer)
-            if(aIdx < len(question["studentAnswers"])/2):
-                featureExtrator.updateVocabPredDist(answer, answer["answerCategory"])
-
-        # print("VOCAB")
-        # for key, val in question["vocabulary"].items():
-        #     print(key, val)
-        # print()
-        print("SEMCATs")
-        for key, val in question["semCats"].items():
-            if(len(val["catGroup"])>1): print(key, val["catGroup"])
-        print()
-        print()
-        for aIdx, answer in enumerate(question["studentAnswers"]):
-            if(aIdx >= len(question["studentAnswers"])/2):
-                featureExtrator.extractFeatures(answer)
-                featureExtrator.addPredDistBasedFeatures(answer)
-        questionsAnnotation[question["id"]] = question
-        with open(annFile, "w+") as f:
-            json.dump(questionsAnnotation, f, indent=4)
-
-    questions = [val for key,val in questionsAnnotation.items()]
-    saveFeatureCSV({"questions":questions}, featFile)
-
-def processSemvalUATestData():
-    beetlePath = join(TEST_PATH, "beetle")
-    sciEntsBankPath = join(TEST_PATH, "sciEntsBank")
-    uaPathes = [join(beetlePath,"test-unseen-answers"), join(sciEntsBankPath,"test-unseen-answers")]
-
-    featFile = join(TEST_PATH, "testUAFeaturesHalf.csv")
-    annFile = join(TEST_PATH, "testUAAnnotationsHalf.json")
-    if(isfile(annFile)):
-        with open(annFile, "r") as f:
-            questionsAnnotation = json.load(f)
-    else:
-        questionsAnnotation = {}
-
-    questionFiles = []
-    for path in uaPathes:
-        for root, _, files in os.walk(path):
-            for file in files:
-                if '.xml' == file[-4:]:
-                    questionFiles.append(join(root, file))
-
-    trainAnnotations= join(TRAIN_PATH, "trainedAnnotationsHalf.json")
-    with open(trainAnnotations, "r") as f:
-        trainAnnotations = json.load(f)
-    # for key,val in trainAnnotations.items():
-    #     print(key)
-    #     print(val["text"])
-    #     print(val["referenceAnswer"]["text"])
-    #     for vocab, dist in val["vocabulary"].items():
-    #         print(vocab, dist)
-    #     input()
-
-
-    featureExtrator = FeatureExtractor(simMeasure="fasttext", lang="en")
-
-    for qIdx, file in enumerate(questionFiles):
-        testQuestion = parseSemval(file)
-        if(testQuestion["id"] in questionsAnnotation):
-            continue
-        if(not(testQuestion["id"] in trainAnnotations)):
-            print("missing: " + testQuestion["id"])
-            continue
-        question = trainAnnotations[testQuestion["id"]]
-        question["studentAnswers"] = testQuestion["studentAnswers"]
-        print(qIdx, question["id"], question["text"])
-        featureExtrator.setQuestion(question, resetVocabulary=False)
-        for aIdx, answer in enumerate(question["studentAnswers"]):
-            featureExtrator.updateVocab(answer)
-            featureExtrator.extractFeatures(answer)
-            featureExtrator.addPredDistBasedFeatures(answer)
-        questionsAnnotation[question["id"]] = question
-        with open(annFile, "w+") as f:
-            json.dump(questionsAnnotation, f, indent=4)
-
-    questions = [val for key,val in questionsAnnotation.items()]
-    saveFeatureCSV({"questions":questions}, featFile)
-
-def processSemvalUQTestData():
-    beetlePath = join(TEST_PATH, "beetle")
-    sciEntsBankPath = join(TEST_PATH, "sciEntsBank")
-    uQPathes =  [join(beetlePath,"test-unseen-questions"), join(sciEntsBankPath,"test-unseen-questions")]
-
-    featFile = join(TEST_PATH, "testUQFeatures.csv")
-    annFile = join(TEST_PATH, "testUQAnnotations.json")
-
-
-    featureExtrator = FeatureExtractor(simMeasure="fasttext", lang="en")
-
-    questionFiles = []
-    for path in uQPathes:
-        for root, _, files in os.walk(path):
-            for file in files:
-                if '.xml' == file[-4:]:
-                    questionFiles.append(join(root, file))
-
-    if(isfile(annFile)):
-        with open(annFile, "r") as f:
-            questionsAnnotation = json.load(f)
-    else:
-        questionsAnnotation = {}
-
-    for qIdx, file in enumerate(questionFiles):
-        question = parseSemval(file)
-        if(question["id"] in questionsAnnotation):
-            continue
-        print(qIdx, question["id"], question["text"])
-        featureExtrator.setQuestion(question, resetVocabulary=True)
-        for aIdx, answer in enumerate(question["studentAnswers"]):
-            featureExtrator.updateVocab(answer)
-            featureExtrator.extractFeatures(answer)
-        questionsAnnotation[question["id"]] = question
-        with open(annFile, "w+") as f:
-            json.dump(questionsAnnotation, f, indent=4)
-
-    questions = [val for key,val in questionsAnnotation.items()]
-    saveFeatureCSV({"questions":questions}, featFile)
-
-def processSemvalUDTestData():
-    sciEntsBankPath = join(TEST_PATH, "sciEntsBank")
-    uDPath =  join(sciEntsBankPath,"test-unseen-domains")
-    annFile = join(TEST_PATH, "testUDAnnotations.json")
-
-    featureExtrator = FeatureExtractor(simMeasure="fasttext", lang="en")
-
-    questionFiles = []
-    for root, _, files in os.walk(uDPath):
-        for file in files:
-            if '.xml' == file[-4:]:
-                questionFiles.append(join(root, file))
-
-    if(isfile(annFile)):
-        with open(annFile, "r") as f:
-            questionsAnnotation = json.load(f)
-    else:
-        questionsAnnotation = {}
-
-    for qIdx, file in enumerate(questionFiles):
-        question = parseSemval(file)
-        if(question["id"] in questionsAnnotation):
-            continue
-        print(qIdx, question["id"], question["text"])
-        featureExtrator.setQuestion(question, resetVocabulary=True)
-        for aIdx, answer in enumerate(question["studentAnswers"]):
-            featureExtrator.annotateAnswer(answer)
-        questionsAnnotation[question["id"]] = question
-        with open(annFile, "w+") as f:
-            json.dump(questionsAnnotation, f, indent=4)
-
-        print(qIdx, qId)#, question["id"], question["text"])
-        featureExtrator.setQuestion(question, resetVocabulary=False)
-        for aIdx, answer in enumerate(question["studentAnswers"]):
-            featureExtrator.updateVocab(answer, allowMerge=not(testSet))
-        for aIdx, answer in enumerate(question["studentAnswers"]):
-            featureExtrator.extractFeatures(answer)
-            if(not(testSet=="UQ")):
-                featureExtrator.addPredDistBasedFeatures(answer, vocab=True)
-            if("sulAlign" in answer and not("sulAlign" in answer["features"])):
-                answer["features"]["sulAlign"] = answer["sulAlign"]
-
-        if(len(simMatrix.columns)>initialSimSolumns):
-            simMatrix.to_csv(simMatPath)
-
-    questions = [val for key,val in inputAnnotation.items()]
-    saveFeatureJSON({"questions":questions}, featPath)
-
-
-def stripToTokenInfo(fromFile, toFile):
-    with open(fromFile, "r") as f:
-        questionsAnnotation = json.load(f)
-    for qId in questionsAnnotation.keys():
-        questionData = questionsAnnotation[qId]
-        del questionData["semCats"]
-        del questionData["vocabulary"]
-        del questionData["classCounts"]
-        refAns = questionData["referenceAnswer"]
-        del refAns["alignAnn"]
-        studentAnswers = questionData["studentAnswers"]
-        for studentAnswer in studentAnswers:
-            del studentAnswer["alignAnn"]
-            studentAnswer["sulAlign"] = studentAnswer["features"]["sulAlign"]
-            del studentAnswer["features"]
-    with open(toFile, "w+") as f:
-        json.dump(questionsAnnotation, f, indent=4)
-
-def featuresFromTokenAnnotation(trainFile, featureFile, testSet=False):
-    path = TEST_PATH if testSet else TRAIN_PATH
-    featPath = join(path,featureFile)
-    simMatDir = join(TRAIN_PATH,"simMatrices")
-
-    featureExtrator = FeatureExtractor(simMeasure="fasttext", lang="en")
-
-    if(testSet):
-        with open(join(TEST_PATH, "rawTest" + testSet + "TokenAnnotation.json"), "r") as f:
-            inputAnnotation = json.load(f)
-        with open(join(TRAIN_PATH, trainFile), "r") as f:
-            trainedVocab = json.load(f)
-    else:
-        with open(join(TRAIN_PATH, "rawTrainingTokenAnnotation.json"), "r") as f:
-            inputAnnotation = json.load(f)
-
-    # with open(join(TEST_PATH, "rawTestUATokenAnnotation.json"), "r") as f:
-    #     inputAnnotation = json.load(f)
-
-    for qIdx, qId in enumerate(inputAnnotation.keys()):
-        simMatPath = join(simMatDir,qId+".csv")
-        if(exists(simMatPath)):
-            simMatrix = pd.read_csv(simMatPath)
-        else:
-            simMatrix = pd.DataFrame(columns = ["WORDS"])
-        initialSimSolumns = len(simMatrix.columns)
-        simMatrix.set_index("WORDS",inplace=True)
-
-
-        question = inputAnnotation[qId]
-        if(testSet=="UA"):
-            questionVocab = trainedVocab[question["id"]]
-            questionVocab["studentAnswers"] = question["studentAnswers"]
-            question = questionVocab
-
-        print(qIdx, qId)#, question["id"], question["text"])
-        featureExtrator.setQuestion(question, resetVocabulary=not(testSet), simMatrix=simMatrix)
-        for aIdx, answer in enumerate(question["studentAnswers"]):
-            featureExtrator.updateVocab(answer, allowMerge=not(testSet))
-            if(not(testSet)): featureExtrator.updateVocabPredDist(answer, answer["answerCategory"])
-
-        for aIdx, answer in enumerate(question["studentAnswers"]):
-            featureExtrator.extractFeatures(answer)
-            if(not(testSet in ["UQ", "UD"])):
-                featureExtrator.addPredDistBasedFeatures(answer, vocab=True)
-            if("sulAlign" in answer and not("sulAlign" in answer["features"])):
-                answer["features"]["sulAlign"] = answer["sulAlign"]
-
-        if(len(simMatrix.columns)>initialSimSolumns):
-            simMatrix.to_csv(simMatPath)
-
-    questions = [val for key,val in inputAnnotation.items()]
-    saveFeatureJSON({"questions":questions}, featPath)
-
-    if(not(testSet)):
-        for key,val in inputAnnotation.items():
-            del val["studentAnswers"]
-        with open(join(TRAIN_PATH, trainFile), "w+") as f:
-            json.dump(inputAnnotation, f, indent=4)
-
-def featuresFromQuestionFiles(trainFile, featureFile, annFile, testSet=False):
-    questionData = getQuestionData(testSet if testSet else "T")
-    setPath = TEST_PATH if testSet else TRAIN_PATH
-    if(testSet):
-        with open(join(TRAIN_PATH, trainFile), "r") as f:
-            trainedVocab = json.load(f)
-
-    featureExtrator = FeatureExtractor(simMeasure="fasttext", lang="en")
-    for qIdx, qId in enumerate(questionData.keys()):
-        question = questionData[qId]
-        if(testSet=="UA"):
-            questionVocab = trainedVocab[question["id"]]
-            questionVocab["studentAnswers"] = question["studentAnswers"]
-            question = questionVocab
-
-        print(qIdx, qId)#, question["id"], question["text"])
-        featureExtrator.setQuestion(question, resetVocabulary=not(testSet))
-        for aIdx, answer in enumerate(question["studentAnswers"]):
-            featureExtrator.updateVocab(answer, allowMerge=not(testSet))
-            if(not(testSet)): featureExtrator.updateVocabPredDist(answer, answer["answerCategory"])
-
-        for aIdx, answer in enumerate(question["studentAnswers"]):
-            featureExtrator.extractFeatures(answer)
-            if(not(testSet=="UQ")):
-                featureExtrator.addPredDistBasedFeatures(answer, vocab=True)
-            if(not("sulAlign" in answer["features"])):
-                if("sulAlign" in answer):
-                    answer["features"]["sulAlign"] = answer["sulAlign"]
-                else:
-                    featureExtrator.computeSulAlign(answer)
-
-    saveFeatureJSON({"questions":[val for key,val in questionData.items()]}, join(setPath,featureFile ))
-    if(not(testSet)): saveTrainingVocab(trainFile, questionData)
-    saveTokenAnnotation(join(setPath,annFile), questionData)
-
-def saveTokenAnnotation(annFile, questionData):
-    for qId in questionData.keys():
-        question = questionData[qId]
-        del question["semCats"]
-        del question["vocabulary"]
-        del question["classCounts"]
-        refAns = question["referenceAnswer"]
-        del refAns["alignAnn"]
-        studentAnswers = question["studentAnswers"]
-        for studentAnswer in studentAnswers:
-            del studentAnswer["alignAnn"]
-            studentAnswer["sulAlign"] = studentAnswer["features"]["sulAlign"]
-            del studentAnswer["features"]
-    with open(annFile, "w+") as f:
-        json.dump(questionData, f, indent=4)
-
-def saveTrainingVocab(trainFile, questionData):
-    questionData = JSON.parse(JSON.stringify(questionData))
-    for key,val in questionData.items():
-        del val["studentAnswers"]
-        del val["referenceAnswers"]
-    with open(join(TRAIN_PATH, trainFile), "w+") as f:
-        json.dump(questionData, f, indent=4)
-
-SEMVAL_PATHES = {
-    "T": [join(TRAIN_PATH, "beetle"),join(TRAIN_PATH, "sciEntsBank")],
-    "UA": [join(TEST_PATH,"beetle","test-unseen-answers"), join(TEST_PATH,"sciEntsBank","test-unseen-answers")],
-    "UQ": [join(TEST_PATH,"beetle","test-unseen-questions"), join(TEST_PATH,"sciEntsBank","test-unseen-questions")],
-    "UD": [join(TEST_PATH,"sciEntsBank","test-unseen-domains")],
-}
-
-def getQuestionData(dataSet):
-    dataPathes = SEMVAL_PATHES[dataSet]
-    questionFiles = []
-    for path in dataPathes:
-        for root, _, files in os.walk(path):
-            for file in files:
-                if '.xml' == file[-4:]:
-                    questionFiles.append(join(root, file))
-    questionsAnnotation = {}
-    for qIdx, file in enumerate(questionFiles):
-        question = parseSemval(file)
-        questionsAnnotation[question["id"]] = question
-    return questionsAnnotation
+############################ OLD ##########################################
 
 def analyseVocabDiff():
 
@@ -537,16 +214,25 @@ def analyseVocabDiff():
         print(statsFrame)
         input()
 
+def setRefWordCounts(originalAnn, processedAnn):
+    for qIdx,question in enumerate(processedAnn["questions"]):
+        refAnsAnn = question["referenceAnswer"]
+        refAnsTar = originalAnn["questions"][qIdx]["referenceAnswer"]
+        if(not("vocabulary" in question) or not("tokens" in refAnsAnn)):
+            continue
+        lemmas = [token["lemmas"][0] for token in refAnsAnn["tokens"] if(token["contentWord"])]
+        refAnsTar["compWeights"] = {}
+        totalCount = len(question["studentAnswers"]) + 1
+        for lemma in lemmas:
+            if(not(lemma in  question["vocabulary"])):
+                refAnsTar["compWeights"][lemma] = 0
+                continue
+            lemmaDist = question["vocabulary"][lemma]
+            refAnsTar["compWeights"][lemma] = lemmaDist
 
-# featuresFromQuestionFiles("trainingVocabWithVocab.json", "testUDFeaturesWithVocab.json", "rawTestUDTokenAnnotation.json", testSet="UD")
-
-featuresFromTokenAnnotation("trainingVocabWithVocab.json", "trainingFeaturesWithVocab.json", testSet=False)
-featuresFromTokenAnnotation("trainingVocabWithVocab.json", "testUAFeaturesWithVocab.json", testSet="UA")
-featuresFromTokenAnnotation("trainingVocabWithVocab.json", "testUQFeaturesWithVocab.json", testSet="UQ")
-featuresFromTokenAnnotation("trainingVocabWithVocab.json", "testUDFeaturesWithVocab.json", testSet="UD")
-
-# stripToTokenInfo(join(TRAIN_PATH, "trainedAnnotations.json"),join(TRAIN_PATH, "rawTrainingTokenAnnotation.json"))
-# stripToTokenInfo(join(TEST_PATH, "testUAAnnotations.json"),join(TEST_PATH, "rawTestUATokenAnnotation.json"))
-# stripToTokenInfo(join(TEST_PATH, "testUQAnnotations.json"),join(TEST_PATH, "rawTestUQTokenAnnotation.json"))
-
-# preprocessQuestionData("AnnotatedGoldStandards.json", "features_unques.csv", "AnnotatedGoldStandards.json")
+if __name__ == "__main__":
+    generateSemvalFeatureFiles("trainingFeaturesWithVocab.json", join(TRAIN_PATH, "rawTrainingTokenAnnotation.json"), testSet=False, "trainingVocabWithVocab.json")
+    for testSet in ["UA","UQ", "UD"]:
+        featurePath = join(TEST_PATH, "test" + testSet + "FeaturesWithVocab.json")
+        annPath = join(TEST_PATH, "rawTest" + testSet + "TokenAnnotation.json")
+        generateSemvalFeatureFiles(featurePath, annPath, testSet, "trainingVocabWithVocab.json")
