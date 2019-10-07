@@ -1,12 +1,14 @@
 import numpy as np
 import pandas as pd
 import sys, json, csv, math
+
 from scipy.stats.stats import pearsonr
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, f1_score,   fbeta_score, roc_auc_score, mean_squared_error, cohen_kappa_score, confusion_matrix
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import RandomForestClassifier
 from xgboost import XGBClassifier
+
 from os.path import join, dirname, realpath
 FILE_PATH = dirname(realpath(__file__))
 SEMVAL_PATH = join(FILE_PATH, "..", "question-corpora","SEMVAL")
@@ -26,16 +28,23 @@ FEATURE_SETS["SHBF"] = FEATURE_SETS["SBF"] + ["semCatHeads"]
 
 def semvalEvaluation():
     featureSets = ["GF","QSF","PDF","VBF","SBF","SHBF"]
+    trainSizes = [5,10,15,20,25,30]
 
     trainData, trainQIds = loadJsonData(join(TRAIN_PATH,"trainingFeaturesWithVocab.json"))
     testUAData, _ = loadJsonData(join(TEST_PATH,"testUAFeaturesWithVocab.json"))
     testUQData, _ = loadJsonData(join(TEST_PATH,"testUQFeaturesWithVocab.json"))
     testUDData, _ = loadJsonData(join(TEST_PATH,"testUDFeaturesWithVocab.json"))
+    # trainCounts = [len(trainData[trainData[:,0]==qId]) for qId in trainQIds]
+    # testCounts = [len(testUAData[testUAData[:,0]==qId]) for qId in trainQIds]
+    # print(len(trainData)/len(trainQIds),min(trainCounts),max(trainCounts),len(testUAData)/len(trainQIds),min(testCounts),max(testCounts))
+
+    iterTrainData = [loadJsonData(join(TRAIN_PATH,"trainingFeaturesWithVocab{}.json".format(trainSize)))[0] for trainSize in trainSizes]
+    iterTestUAData = [loadJsonData(join(TEST_PATH,"testUAFeaturesWithVocab{}.json".format(trainSize)))[0] for trainSize in trainSizes]
 
     labelsUA = testUAData[:,2].astype("int")
     labelsUQ = testUQData[:,2].astype("int")
     labelsUD = testUDData[:,2].astype("int")
-    res = [([], labelsUQ, "UQ", []), ([], labelsUD, "UD", []), ([], labelsUA, "UA", []), ([], labelsUA, "UApQ", [])]
+    res = [([], labelsUQ, "UQ", []), ([], labelsUD, "UD", []), ([], labelsUA, "UA", []), ([], labelsUA, "UApQ", [])] + [([], labelsUA, "S{} FULL".format(trainSize), []) for trainSize in trainSizes] + [([], labelsUA, "S{} T{}".format(trainSize, trainSize), []) for trainSize in trainSizes]
     for fsIdx,fsKey in enumerate(featureSets):
         print(fsKey)
         featureSet = FEATURE_SETS[fsKey]
@@ -47,8 +56,16 @@ def semvalEvaluation():
         if(fsIdx<3):
             res[2][0].append(getPredictionResults(trainData, testUAData, featureSet))
             res[2][3].append(fsKey)
+            for sizeIdx, trainSize in enumerate(trainSizes):
+                res[10+sizeIdx][0].append(getPredictionResults(np.concatenate([iterTrainData[sizeIdx][iterTrainData[sizeIdx][:,0]==qId][:trainSize] for qId  in trainQIds]), iterTestUAData[sizeIdx], featureSet))
+                res[10+sizeIdx][3].append(fsKey)
+        if(fsIdx==2):
+            for sizeIdx, trainSize in enumerate(trainSizes):
+                res[4+sizeIdx][0].append(getPredictionResults(iterTrainData[sizeIdx], iterTestUAData[sizeIdx], featureSet))
+                res[4+sizeIdx][3].append(fsKey)
         res[3][0].append(getPredictionResults(trainData, testUAData, featureSet, qIds=trainQIds))
         res[3][3].append(fsKey)
+
     evalResults(res)
 
 def getPredictionResults(trainData, testData, featureSet, qIds=False):
@@ -177,8 +194,6 @@ def genUnknownQuestionDataSplit(featureData):
     testData = pd.concat([featureData.loc[qIDData==qID].iloc[-20:] if(qID in trainQIDs) else featureData.loc[qIDData==qID].iloc[20:] for qID in qIDData.unique()], axis=0)
     trainData = pd.concat([featureData.loc[qIDData==qID].iloc[:-20] for qID in trainQIDs], axis=0)
     return testData, trainData
-
-def getFeatureData(featurePath):
 
 def checkPrediction(featurePath):
     featureData = pd.read_csv(featurePath)

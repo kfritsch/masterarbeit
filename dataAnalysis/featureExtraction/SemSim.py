@@ -1,5 +1,5 @@
 import os, csv, math, sys, re
-from os.path import join, splitext, isdir, exists, dirname, abspath
+from os.path import join, splitext, isdir, exists, dirname, realpath, abspath
 import numpy as np
 import pandas as pd
 from scipy import spatial
@@ -12,6 +12,8 @@ from lmdb_embeddings.reader import LmdbEmbeddingsReader
 from lmdb_embeddings.exceptions import MissingWordError
 from lmdb_embeddings.writer import LmdbEmbeddingsWriter
 from nltk.corpus import wordnet_ic
+FILE_PATH = dirname(realpath(__file__))
+
 BROWN_IC = wordnet_ic.ic('ic-brown.dat')
 Synset = None
 
@@ -47,7 +49,7 @@ def saveEmbeddinigsAsLMDB(modelname, lang="de"):
     writer = LmdbEmbeddingsWriter(iter_embeddings()).write(outpath)
 
 class SemSim(object):
-    EMBEDDINGS_DIR = "./lib/embeddings/"
+    EMBEDDINGS_DIR = join(FILE_PATH, "lib","embeddings")
     MODEL_PATHS = {
         "glove": "glove_w2v.txt", # dims 853624 300, only lowercase
         "small": "small_w2v.model", # dims 608130 300,keep capitalized, replace umlaute
@@ -70,7 +72,7 @@ class SemSim(object):
         self.minIC = SemSim.MIN_IC[lang]
         global Synset
         if(lang=="de"):
-            from germanet import load_germanet, Synset
+            from .germanet import load_germanet, Synset
             self.wordNet = load_germanet(host = "localhost", port = 27027, database_name = 'germanet')
         else:
             # changed jcn_similarity to jcn_distance
@@ -292,7 +294,7 @@ class SemSim(object):
         return np.mean(np.array(wordVectors), axis=0)
 
 def getTigerWordCount():
-    with open(join(FILE_PATH,os.path.pardir,'sdewac-gn-words.tsv'), 'r') as csvfile:
+    with open(join(FILE_PATH,"lib",'sdewac-gn-words.tsv'), 'r') as csvfile:
         spamreader = csv.reader(csvfile, delimiter='\t')
         totalCount = 0
         for row in spamreader:

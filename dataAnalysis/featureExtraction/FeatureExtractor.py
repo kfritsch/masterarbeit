@@ -1,16 +1,18 @@
-from TokenAnnotator import TokenAnnotator
-from TokenAnnotatorEnglish import TokenAnnotatorEnglish
-from SemSim import SemSim
-from sultanAlign.align import suAlignmentScore
 import sys, math, re
 import numpy as np
 import pandas as pd
 from scipy.stats.stats import pearsonr
-from os.path import join
+from os.path import join, dirname, realpath
 import cProfile, pstats, io
-
 from nltk.corpus import wordnet_ic
 brown_ic = wordnet_ic.ic('ic-brown.dat')
+
+from .TokenAnnotator import TokenAnnotator
+from .TokenAnnotatorEnglish import TokenAnnotatorEnglish
+from .SemSim import SemSim
+from .sultanAlign.align import suAlignmentScore
+
+FILE_PATH = dirname(realpath(__file__))
 
 def replace_umlaute(text):
     res = text
@@ -55,7 +57,7 @@ class FeatureExtractor(object):
         else:
             self.tokenAnnotator = TokenAnnotatorEnglish()
         self.semSim = SemSim(modelname=simMeasure, lang=lang, lmdb=True)
-        with open(join("lib", "stopwords", lang + ".txt"), "r") as txtFile:
+        with open(join(FILE_PATH, "lib", "stopwords", lang + ".txt"), "r") as txtFile:
             self.stopwords = [line.strip() for line in txtFile]
 
     # def setSimMeasure(self, simMeasure):

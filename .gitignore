@@ -1,9 +1,9 @@
-/question-corpuse
-/mongodb
-/GN_V130
-/test-scripts/germanet_test_data
-/test-scripts/lib
-/test-scripts/tiger
-/test-scripts/AnnotatedGoldStandards.json
-/sdewac-gn-words.tsv
+/question-corpora
+/dataAnalysis/features
+/dataAnalysis/featureExtraction/tiger
+/dataAnalysis/featureExtraction/lib
+/dataAnalysis/featureExtraction/germanet_test_data
+
 __pycache__/
+node_modules/
+build/

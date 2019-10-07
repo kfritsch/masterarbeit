@@ -3,7 +3,7 @@ import pandas as pd
 from scipy.stats.stats import pearsonr
 import re, os, sys, json, csv, math, codecs
 from os.path import join, dirname, realpath, isdir, isfile, exists
-from FeatureExtractor import FeatureExtractor
+from featureExtraction.FeatureExtractor import FeatureExtractor
 import xml.etree.ElementTree as ET
 
 FILE_PATH = dirname(realpath(__file__))
@@ -17,20 +17,24 @@ SEMVAL_PATHES = {
     "UD": [join(TEST_PATH,"sciEntsBank","test-unseen-domains")],
 }
 
-def generateSemvalFeatureFiles(featureFile, annFile, testSet=False, trainVocab=False):
-    if(isFile(annFile)):
+def generateSemvalFeatureFiles(featureFile, annFile, testSet=False, vocabFile=None, trainSize=None):
+    if(isfile(annFile)):
         with open(annFile, "r") as f:
             questionData = json.load(f)
     else:
         questionData = getQuestionData(testSet if testSet else "T")
 
     if(testSet=="UA"):
-        with open(join(TRAIN_PATH, trainVocab), "r") as f:
+        with open(join(TRAIN_PATH, vocabFile), "r") as f:
             trainedVocab = json.load(f)
         for qId, question in questionData.items():
-            questionVocab = trainedVocab[question["id"]]
-            questionVocab["studentAnswers"] = question["studentAnswers"]
-            question = questionVocab
+            question["vocabulary"] = trainedVocab[question["id"]]["vocabulary"]
+            question["semCats"] = trainedVocab[question["id"]]["semCats"]
+            question["classCounts"] = trainedVocab[question["id"]]["classCounts"]
+            # questionVocab = trainedVocab[question["id"]]
+            # questionVocab["studentAnswers"] = question["studentAnswers"]
+            # question = questionVocab
+            # print(question)
 
     featureExtrator = FeatureExtractor(simMeasure="fasttext", lang="en")
     for qIdx, qId in enumerate(questionData.keys()):
@@ -38,12 +42,13 @@ def generateSemvalFeatureFiles(featureFile, annFile, testSet=False, trainVocab=F
         print(qIdx, qId)
         featureExtrator.setQuestion(question, resetVocabulary=not(testSet))
         for aIdx, answer in enumerate(question["studentAnswers"]):
-            featureExtrator.updateVocab(answer, allowMerge=not(testSet))
-            if(not(testSet)): featureExtrator.updateVocabPredDist(answer, answer["answerCategory"])
+            predUpdate = not(testSet) and (not(trainSize) or (trainSize and aIdx<trainSize))
+            featureExtrator.updateVocab(answer, allowMerge=predUpdate)
+            if(predUpdate): featureExtrator.updateVocabPredDist(answer, answer["answerCategory"])
 
         for aIdx, answer in enumerate(question["studentAnswers"]):
             featureExtrator.extractFeatures(answer)
-            if(not(testSet=="UQ")):
+            if(not(testSet in ["UQ","UD"])):
                 featureExtrator.addPredDistBasedFeatures(answer, vocab=True)
             if(not("sulAlign" in answer["features"])):
                 if("sulAlign" in answer):
@@ -52,8 +57,8 @@ def generateSemvalFeatureFiles(featureFile, annFile, testSet=False, trainVocab=F
                     featureExtrator.computeSulAlign(answer)
 
     saveFeatureJSON({"questions":[val for key,val in questionData.items()]}, featureFile )
-    if(not(testSet)): saveTrainingVocab(trainVocab, questionData)
-    if(!isFile(annFile)): saveTokenAnnotation(annFile, questionData)
+    if(not(testSet)): saveTrainingVocab(vocabFile, questionData)
+    if(not(isfile(annFile))): saveTokenAnnotation(annFile, questionData)
 
 def getQuestionData(dataSet):
     dataPathes = SEMVAL_PATHES[dataSet]
@@ -105,12 +110,15 @@ def saveTokenAnnotation(annFile, questionData):
         json.dump(questionData, f, indent=4)
 
 def saveTrainingVocab(trainFile, questionData):
-    questionData = JSON.parse(JSON.stringify(questionData))
+    vocabData = {}
     for key,val in questionData.items():
-        del val["studentAnswers"]
-        del val["referenceAnswers"]
+        vocabData[key] = {
+            "vocabulary": val["vocabulary"],
+            "semCats": val["semCats"],
+            "classCounts": val["classCounts"]
+        }
     with open(join(TRAIN_PATH, trainFile), "w+") as f:
-        json.dump(questionData, f, indent=4)
+        json.dump(vocabData, f, indent=4)
 
 def saveFeatureJSON(questionsAnnotation, featurePath):
     featureData = {}
@@ -231,8 +239,13 @@ def setRefWordCounts(originalAnn, processedAnn):
             refAnsTar["compWeights"][lemma] = lemmaDist
 
 if __name__ == "__main__":
-    generateSemvalFeatureFiles("trainingFeaturesWithVocab.json", join(TRAIN_PATH, "rawTrainingTokenAnnotation.json"), testSet=False, "trainingVocabWithVocab.json")
-    for testSet in ["UA","UQ", "UD"]:
-        featurePath = join(TEST_PATH, "test" + testSet + "FeaturesWithVocab.json")
-        annPath = join(TEST_PATH, "rawTest" + testSet + "TokenAnnotation.json")
-        generateSemvalFeatureFiles(featurePath, annPath, testSet, "trainingVocabWithVocab.json")
+    # generateSemvalFeatureFiles("trainingFeaturesWithVocab.json", join(TRAIN_PATH, "rawTrainingTokenAnnotation.json"), testSet=False, "trainingVocabWithVocab.json")
+    for trainSize in [5,10,15,20,25,30]:
+        generateSemvalFeatureFiles(join(TRAIN_PATH,"trainingFeaturesWithVocab{}.json".format(trainSize)), join(TRAIN_PATH, "rawTrainingTokenAnnotation.json"), testSet=False, vocabFile="trainingVocabWithVocab{}.json".format(trainSize),trainSize=trainSize)
+        featurePath = join(TEST_PATH, "testUAFeaturesWithVocab{}.json".format(trainSize))
+        annPath = join(TEST_PATH, "rawTestUATokenAnnotation.json")
+        generateSemvalFeatureFiles(featurePath, annPath, "UA", vocabFile="trainingVocabWithVocab{}.json".format(trainSize))
+    # for testSet in ["UA","UQ", "UD"]:
+    #     featurePath = join(TEST_PATH, "test" + testSet + "FeaturesWithVocab.json")
+    #     annPath = join(TEST_PATH, "rawTest" + testSet + "TokenAnnotation.json")
+    #     generateSemvalFeatureFiles(featurePath, annPath, testSet, "trainingVocabWithVocab.json")

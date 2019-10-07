@@ -4,7 +4,7 @@ import codecs
 import pickle
 from collections import defaultdict
 from importlib import import_module
-from customIWNLPLemmatizer import CustomIWNLPLemmatizer
+from .customIWNLPLemmatizer import CustomIWNLPLemmatizer
 
 from pyphen import Pyphen
 

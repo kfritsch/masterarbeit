@@ -2,7 +2,7 @@
 # Germalemmatizer.save_to_pickle("tiger/tiger_lemmas.pkl")
 from subprocess import check_output
 import spacy
-from coreNlp import StanfordCoreNLP
+from .coreNlp import StanfordCoreNLP
 import re
 import json
 import hunspell
@@ -12,6 +12,9 @@ import numpy as np
 import nltk
 from nltk.corpus import wordnet
 from nltk.tag import pos_tag
+from os.path import dirname, realpath, join
+
+FILE_PATH = dirname(realpath(__file__))
 
 PEN_UD_MAP = {
     "#":"SYM",
@@ -86,7 +89,7 @@ class TokenAnnotatorEnglish(object):
     def __init__(self):
         self.stanfordCoreNLP = StanfordCoreNLP('http://localhost', port=9500)
         self.spacyNLP = spacy.load('en_core_web_sm')
-        with open("infVocab.json", "r") as f:
+        with open(join(FILE_PATH,"infVocab.json"), "r") as f:
             self.infoVocab = json.load(f)
         self.spellchecker = hunspell.HunSpell('/usr/share/hunspell/en_US.dic', '/usr/share/hunspell/en_US.aff')
         self.lemmatizer = WordNetLemmatizer()
