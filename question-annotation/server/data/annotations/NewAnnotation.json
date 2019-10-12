@@ -5,25 +5,42 @@
       "title": "Überladene Methode",
       "text": "Was ist eine überladene Methode?",
       "type": "definition",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Methoden einer Klasse"
+        },
+        {
+          "text": "mit demselben Namen"
+        },
+        {
+          "text": "Die Signaturen der Methoden unterscheiden sich anhand unterschiedlicher Parameter"
+        }
+      ],
+      "referenceAnswers": [{
         "text":
           "Das sind Methoden einer Klasse mit denselben Namen. Ihre Signaturen unterscheiden sich anhand unterschiedlicher Parameter.",
         "aspects": [
           {
             "text": "Das sind Methoden einer Klasse",
-            "elements": [[0, 30]]
+            "aIdx": 0,
+            "elements": [[0, 30]],
+            "label": 0
           },
           {
             "text": "Das sind Methoden ;; mit demselben Namen",
-            "elements": [[0, 17], [31, 50]]
+            "aIdx": 1,
+            "elements": [[0, 17], [31, 50]],
+            "label": 0
           },
           {
             "text": "Ihre Signaturen unterscheiden sich anhand unterschiedlicher Parameter",
-            "elements": [[52, 121]]
+            "aIdx": 2,
+            "elements": [[52, 121]],
+            "label": 0
           }
         ]
-      },
-      "answersAnnotation": [
+      }],
+      "studentAnswers": [
         {
           "text":
             "Das sind Methoden mit denselben Namen aber unterschiedliche Signatur. Zum Beispiel: public double berechneZeitInStunden(int minuten){.....} public double berechneZeitInStunden(int sekunden){....} Rückgabewert ist egal. Hat den Vorteil das es Benutzerfreundlicher ist.",
@@ -508,22 +525,35 @@
       "text":
         "Sie schreiben eine Klasse Beispielklasse mit einem Feld 'wert'. Wie erreichen Sie, dass 'wert' nur innerhalb von Beispielklasse schreibbar, aber von überall aus lesbar ist?",
       "type": "procedure",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Das Feld 'wert' muss mit dem Schutzattribute private deklariert werden"
+        },
+        {
+          "text":
+            "Die Klasse muss eine Methode bereitstellen, die das Auslesen des Feldes 'wert' ermöglicht"
+        }
+      ],
+      "referenceAnswers": [{
         "text":
-          "Das Feld `wert` muss mit dem Schutzattribute `private` deklariert werden. Zusätzlich muss die Klasse eine Methode bereitstellen, die das Auslesen dieses Feldes ermöglicht.",
+          "Das Feld 'wert' muss mit dem Schutzattribute private deklariert werden. Zusätzlich muss die Klasse eine Methode bereitstellen, die das Auslesen dieses Feldes ermöglicht.",
         "aspects": [
           {
-            "text": "Das Feld `wert` muss mit dem Schutzattribute `private` deklariert werden",
-            "elements": [[0, 72]]
+            "text": "Das Feld 'wert' muss mit dem Schutzattribute private deklariert werden",
+            "aIdx": 0,
+            "elements": [[0, 72]],
+            "label": 0
           },
           {
             "text":
               "Zusätzlich muss die Klasse eine Methode bereitstellen, die das Auslesen dieses Feldes ermöglicht",
-            "elements": [[74, 170]]
+            "aIdx": 1,
+            "elements": [[74, 170]],
+            "label": 0
           }
         ]
-      },
-      "answersAnnotation": [
+      }],
+      "studentAnswers": [
         {
           "text":
             "Ich setze \"\"Wert\"\" auf private und schreibe in der Beispielklasse einen Getter. So kann \"\"Wert\"\" gelesen von überall gelesen werden udn bleibt schreibgeschützt.",
@@ -889,22 +919,34 @@
       "title": "Vererbung - Schnittstellen und abstrakte Klassen",
       "text":
         "Sie möchten eine als 'private' deklarierte Variable und mehrere implementierte Methoden vererben. Verwenden Sie eine Schnittstelle oder eine abstrakte Klasse? Begründen Sie Ihre Antwort.",
-      "type": "choice, reason",
-      "referenceAnswer": {
+      "type": "reason",
+      "aspects": [
+        {
+          "text": "eine abstrakte Klasse"
+        },
+        {
+          "text": "Schnittstellen können keine implementierten Methoden bereitstellen"
+        }
+      ],
+      "referenceAnswers": [{
         "text":
           "Man muss eine abstrakte Klasse verwenden, weil Schnittstellen keine implementierten Methoden bereitstellen können.",
         "aspects": [
           {
             "text": "Man muss eine abstrakte Klasse verwenden",
-            "elements": [[0, 40]]
+            "aIdx": 0,
+            "elements": [[0, 40]],
+            "label": 0
           },
           {
             "text": "weil Schnittstellen keine implementierten Methoden bereitstellen können",
-            "elements": [[42, 113]]
+            "aIdx": 1,
+            "elements": [[42, 113]],
+            "label": 0
           }
         ]
-      },
-      "answersAnnotation": [
+      }],
+      "studentAnswers": [
         {
           "text":
             "Abstrakte Klassen Basisklassen vererben nur implemetierte Mehtoden, Schnittstellen stellen keine implementierten Methoden bereit Abstrakte klassen werden durch abstract class deklariert",
@@ -1275,22 +1317,34 @@
       "id": "13",
       "text": "Erklären Sie den Zusammenhang zwischen Klassen und Objekten.",
       "title": "Zusammenhang zwischen Klassen und Objekten",
-      "type": "Erklärung",
-      "referenceAnswer": {
+      "type": "comparison",
+      "aspects": [
+        {
+          "text": "Eine Klasse ist der Bauplan für ein Objekt"
+        },
+        {
+          "text": "Ein Objekt ist eine konkrete Instanz einer Klasse"
+        }
+      ],
+      "referenceAnswers": [{
         "text":
           "Eine Klasse ist der Bauplan für ein Objekt. Ein Objekt ist eine konkrete Instanz einer Klasse.",
         "aspects": [
           {
             "text": "Eine Klasse ist der Bauplan für ein Objekt",
-            "elements": [[0, 42]]
+            "aIdx": 0,
+            "elements": [[0, 42]],
+            "label": 0
           },
           {
             "text": "Ein Objekt ist eine konkrete Instanz einer Klasse",
-            "elements": [[44, 93]]
+            "aIdx": 1,
+            "elements": [[44, 93]],
+            "label": 0
           }
         ]
-      },
-      "answersAnnotation": [
+      }],
+      "studentAnswers": [
         {
           "text":
             "Alle Objekte haben einen Bauplan und dieser Bauplan des Objektes ist die klasse. Objekte haben den Typ ihrer Klasse. Die Klasse eines Objekte ist wie bei uns Menschen die DNA. Die Klasse bestimmt Aussehen und Eigenschaften. Aber ist selber nicht das Objekt.",
@@ -1512,26 +1566,43 @@
       "id": "14",
       "text": "Was unterscheidet in JAVA Klassenvariablen von Instanzvariablen?",
       "title": "Klassen- und Instanzvariable",
-      "type": "Gegenüberstellung",
-      "referenceAnswer": {
+      "type": "comparison",
+      "aspects": [
+        {
+          "text": "Klassenvariablen existieren einmal pro Klasse"
+        },
+        {
+          "text": "Klassenvariablen existieren auch ohne eine konkrete Instanz"
+        },
+        {
+          "text": "Instanzvariable existiert einmal pro Objekt"
+        }
+      ],
+      "referenceAnswers": [{
         "text":
           "Klassenvariablen existieren einmal pro Klasse, auch ohne eine konkrete Instanz. Instanzvariable existiert einmal pro Objekt.",
         "aspects": [
           {
             "text": "Klassenvariablen existieren einmal pro Klasse",
-            "elements": [[0, 45]]
+            "aIdx": 0,
+            "elements": [[0, 45]],
+            "label": 0
           },
           {
             "text": "Klassenvariablen existieren ;; auch ohne eine konkrete Instanz",
-            "elements": [[0, 37], [47, 78]]
+            "aIdx": 1,
+            "elements": [[0, 37], [47, 78]],
+            "label": 0
           },
           {
             "text": "Instanzvariable existiert einmal pro Objekt",
-            "elements": [[80, 123]]
+            "aIdx": 2,
+            "elements": [[80, 123]],
+            "label": 0
           }
         ]
-      },
-      "answersAnnotation": [
+      }],
+      "studentAnswers": [
         {
           "text":
             "Klassenvariable ist für die ganze klasse bestimmte variable und die Instanzvariable ist für den jeweiligen Bereich.",

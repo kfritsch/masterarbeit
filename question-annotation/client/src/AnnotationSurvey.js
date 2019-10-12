@@ -1,11 +1,9 @@
 import React from "react";
 import QuestionAnnotation from "./QuestionAnnotation";
-//import AnswerAnnotation from "./schema-one/AnswerAnnotation";
-// import AnswerAnnotationSchemaTwo from "./schema-two/AnswerAnnotationSchemaTwo";
-import AspectAnnotation from "./schema-two/AspectAnnotation";
-import RoughLabeling from "./schema-two/RoughLabeling";
+import AspectAnnotation from "./AspectAnnotation";
+import RoughLabeling from "./RoughLabeling";
 
-import { Segment, Header, Button } from "semantic-ui-react";
+import { Segment, Button } from "semantic-ui-react";
 
 export default class AnnotationSurvey extends React.Component {
   constructor(props) {
@@ -24,8 +22,8 @@ export default class AnnotationSurvey extends React.Component {
     var r = 105;
     var g = 0;
     var b = 0;
-    var step = 300 / (question.referenceAnswer.aspects.length - 1);
-    for (var i = 0; i < question.referenceAnswer.aspects.length; i++) {
+    var step = 300 / (question.aspects.length - 1);
+    for (var i = 0; i < question.aspects.length; i++) {
       g = 255;
       b = 105 + i * step;
       if (b >= 255) {
@@ -42,34 +40,34 @@ export default class AnnotationSurvey extends React.Component {
     this.callApi()
       .then((res) => {
         var { questionData } = res;
-        console.log(questionData);
+        // console.log(questionData);
         this.questionData = questionData["questions"];
         this.version = "whole";
         var annIdx;
         var qIdx = this.questionData.findIndex(
           (question) =>
-            !("answerCategory" in question.answersAnnotation[question.answersAnnotation.length - 1])
+            !("answerCategory" in question.studentAnswers[question.studentAnswers.length - 1])
         );
         if (qIdx >= 0) {
-          annIdx = this.questionData[qIdx].answersAnnotation.findIndex(
+          annIdx = this.questionData[qIdx].studentAnswers.findIndex(
             (annotation) => !("answerCategory" in annotation)
           );
         } else {
           this.version = "aspects";
           qIdx = this.questionData.findIndex(
             (question) =>
-              !("aspects" in question.answersAnnotation[question.answersAnnotation.length - 1])
+              !("aspects" in question.studentAnswers[question.studentAnswers.length - 1])
           );
           if (qIdx < 0) {
             this.version = "done";
             return;
           }
-          annIdx = this.questionData[qIdx].answersAnnotation.findIndex(
+          annIdx = this.questionData[qIdx].studentAnswers.findIndex(
             (annotation) => !("aspects" in annotation)
           );
           if (annIdx < 0) {
             this.finish();
-            annIdx = this.questionData[qIdx].answersAnnotation.length - 1;
+            annIdx = this.questionData[qIdx].studentAnswers.length - 1;
           }
         }
 
@@ -96,10 +94,10 @@ export default class AnnotationSurvey extends React.Component {
     if (!answerAnnotation) {
       return false;
     }
-    if (this.questionData[qIdx].answersAnnotation.length === annIdx) {
-      this.questionData[qIdx].answersAnnotation.push(answerAnnotation);
+    if (this.questionData[qIdx].studentAnswers.length === annIdx) {
+      this.questionData[qIdx].studentAnswers.push(answerAnnotation);
     } else {
-      this.questionData[qIdx].answersAnnotation[annIdx] = answerAnnotation;
+      this.questionData[qIdx].studentAnswers[annIdx] = answerAnnotation;
     }
     this.saveAnnotations();
     return true;
@@ -134,11 +132,11 @@ export default class AnnotationSurvey extends React.Component {
   };
 
   getCurrentAnnotation(qIdx, annIdx) {
-    var activeAnswerAnnotation = this.questionData[qIdx].answersAnnotation[annIdx];
+    var activeAnswerAnnotation = this.questionData[qIdx].studentAnswers[annIdx];
     var emptyAspectSchemaTwo = {
       text: "",
       elements: [],
-      referenceAspects: []
+      aIdx: undefined
     };
     if (this.version === "aspects") {
       if ("aspects" in activeAnswerAnnotation) {
@@ -193,7 +191,7 @@ export default class AnnotationSurvey extends React.Component {
       return;
     }
     var qIdx = this.state.qIdx - 1;
-    var annIdx = this.questionData[qIdx].answersAnnotation.length - 1;
+    var annIdx = this.questionData[qIdx].studentAnswers.length - 1;
     this.setState({
       qIdx,
       annIdx,
@@ -225,16 +223,16 @@ export default class AnnotationSurvey extends React.Component {
     var lastAnnotation = false;
     var lastQuestion = false;
     if (this.questionData) {
-      lastAnnotation = annIdx === this.questionData[qIdx].answersAnnotation.length - 1;
+      lastAnnotation = annIdx === this.questionData[qIdx].studentAnswers.length - 1;
       lastQuestion = qIdx === this.questionData.length - 1;
     }
     return (
       <div className="app-container">
-        <div className="header-container">
+        {/* <div className="header-container">
           <Header className="header-text text-area" textAlign="center" as="h1">
             Question-Annotation
           </Header>
-        </div>
+        </div> */}
         {!this.questionData ? (
           <div>Missing Questions</div>
         ) : this.version === "done" ? (

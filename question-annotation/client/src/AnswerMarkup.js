@@ -1,9 +1,6 @@
 import React from "react";
 
-export default class AnswerMarkupSchemaTwo extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+export default class AnswerMarkup extends React.Component {
 
   getAspectElements(aspects) {
     var aspectElements = [];
@@ -52,55 +49,17 @@ export default class AnswerMarkupSchemaTwo extends React.Component {
     return aspectOverlaps;
   }
 
-  getAspectLineLevel(aspectOverlaps, aspects) {
-    var aspectLevels = Array.from({ length: aspects.length }, (u) => new Array());
-    // var aspectLevels = new Array(aspects.length).fill([]);
-    var levelMask;
-    var level;
-    function markOverlappingLevels(overlapId) {
-      for (let k = 0; k < aspectLevels[overlapId].length; k++) {
-        levelMask[aspectLevels[overlapId][k]] = 1;
-      }
-    }
-    for (let i = 0; i < aspectLevels.length; i++) {
-      levelMask = new Array(aspects.length).fill(0);
-      // mark the blocked levels
-      aspectOverlaps[i].forEach(markOverlappingLevels);
-      // select a level for each refAspect taking from the lowest available
-      if (this.props.refAnswer || aspects[i].referenceAspects.length === 0) {
-        level = levelMask.indexOf(0);
-        aspectLevels[i].push(level);
-        levelMask[level] = 1;
-      } else {
-        for (let j = 0; j < aspects[i].referenceAspects.length; j++) {
-          level = levelMask.indexOf(0);
-          aspectLevels[i].push(level);
-          levelMask[level] = 1;
-        }
-      }
-    }
-    return aspectLevels;
-  }
-
-  getAspectStyles(aspectLevels, aspects) {
-    var color;
-    var aspectStyles = aspectLevels.map((levels, aIdx) => {
-      return levels.map((level, refIdx) => {
-        if (this.props.refAnswer) {
-          color = this.props.colors[aIdx];
-        } else if (aspects[aIdx].referenceAspects.length === 0) {
-          color = "#ccc";
-        } else {
-          color = this.props.colors[aspects[aIdx].referenceAspects[refIdx]];
-        }
-        return (
-          "background: linear-gradient(0deg," +
-          color +
-          " 4px, white 2px, transparent 2px); padding-bottom: " +
-          (2 + level * 5) +
-          "px"
-        );
-      });
+  getAspectStyles(aspectOverlaps, aspects) {
+    var aspectStyles = aspectOverlaps.map((overlaps, aIdx) => {
+      var level = overlaps.size;
+      var color = this.props.colors[aspects[aIdx]["aIdx"]];
+      return (
+        "background: linear-gradient(0deg," +
+        color +
+        " 4px, white 2px, transparent 2px); padding-bottom: " +
+        (2 + level * 5) +
+        "px"
+      );
     });
     return aspectStyles;
   }
@@ -126,29 +85,14 @@ export default class AnswerMarkupSchemaTwo extends React.Component {
       }
       // if the Element is a start add a span with style und push it to the stack for each referenceAspect
       if (elem.start) {
-        if (this.props.refAnswer || aspects[elem.aIdx].referenceAspects.length === 0) {
-          spanString =
-            '<span style="' +
-            aspectStyles[elem.aIdx][0] +
-            '" id="' +
-            elem.aIdx +
-            '" refIndex="none">';
-          htmlString += spanString;
-          spanStack.push({ domString: spanString, id: elem.aIdx, refIndex: "none" });
-        } else {
-          for (let j = 0; j < aspects[elem.aIdx].referenceAspects.length; j++) {
-            spanString =
-              '<span style="' +
-              aspectStyles[elem.aIdx][j] +
-              '" id="' +
-              elem.aIdx +
-              '" refIndex="' +
-              j +
-              '">';
-            htmlString += spanString;
-            spanStack.push({ domString: spanString, id: elem.aIdx, refIndex: j });
-          }
-        }
+        spanString =
+          '<span style="' +
+          aspectStyles[elem.aIdx] +
+          '" id="' +
+          elem.aIdx +
+          '" refIndex="none">';
+        htmlString += spanString;
+        spanStack.push({ domString: spanString, id: elem.aIdx, refIndex: "none" });
       } else {
         // if it is an end, get the element of the finished span in the stack, close this element and all later elements, remember the later elements and add them again to the string and the stack after closing
         stackIndex = spanStack.findIndex(findStackIndex);
@@ -191,8 +135,8 @@ export default class AnswerMarkupSchemaTwo extends React.Component {
     }
     var aspectElements = this.getAspectElements(aspects);
     var aspectOverlaps = this.getOverlayingAspects(aspectElements, aspects);
-    var aspectLevels = this.getAspectLineLevel(aspectOverlaps, aspects);
-    var aspectStyles = this.getAspectStyles(aspectLevels, aspects);
+    // var aspectLevels = this.getAspectLineLevel(aspectOverlaps, aspects);
+    var aspectStyles = this.getAspectStyles(aspectOverlaps, aspects);
     // generate the HtmlString
     var htmlString = this.generateHtmlMarkupString(aspectElements, aspectStyles, aspects, text);
     return <div dangerouslySetInnerHTML={{ __html: htmlString }} />;

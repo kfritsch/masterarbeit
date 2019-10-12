@@ -298,26 +298,32 @@ class TokenAnnotator(object):
         rfTaggerText = ""
         coreNlpText = ""
         tokens = []
+        tokOffset = 0
         for sent in spacyAnn.sents:
             for spacyToken in sent:
                 lemmaPos = spacyToken.pos_ if spacyToken.pos_ != "AUX" else "VERB"
                 lemmaPos = self.checkPos(spacyToken.text, lemmaPos)
-
+                end = tokOffset + len(spacyToken.text)
                 mergedToken = {
                     "text": spacyToken.text,
                     "spacyPos": spacyToken.pos_,
                     "lemmaPos": [lemmaPos],
                     "id":spacyToken.i,
                     "headId":spacyToken.head.i,
-                    "dep":spacyToken.dep_
+                    "dep":spacyToken.dep_,
+                    "offset": tokOffset,
+                    "end": end
                 }
                 tokens.append(mergedToken)
                 rfTaggerText += spacyToken.text + "\n"
                 coreNlpText += spacyToken.text + " "
+                tokOffset = end
+                if(spacyToken.whitespace_):
+                    tokOffset += 1
             rfTaggerText += "\n"
             coreNlpText = coreNlpText[:-1] + "\n"
-        rfTaggerText = rfTaggerText[:-2]
-        coreNlpText = coreNlpText[:-2]
+        rfTaggerText = rfTaggerText[:-1]
+        coreNlpText = coreNlpText[:-1]
 
         # add coreNlp Annotation
         coreNlpAnn = self.stanfordCoreNLP.pos_tag(coreNlpText)

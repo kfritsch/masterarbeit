@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Message, Button, Dropdown, Label, Segment, Input } from "semantic-ui-react";
-import AnswerMarkupSchemaTwo from "./AnswerMarkupSchemaTwo";
+import AnswerMarkup from "./AnswerMarkup";
 import Tree from "react-d3-tree";
 
 const ASPECT_LABELS = [
@@ -19,7 +19,7 @@ export default class AspectAnnotation extends React.Component {
       answerToggle: false
     };
     this.colors = props.getColors(props.activeQuestion);
-    this.matchingLabels = props.activeQuestion.referenceAnswer.aspects.map((aspect, index) => {
+    this.matchingLabels = props.activeQuestion.aspects.map((aspect, index) => {
       return {
         name: aspect.text,
         color: this.colors[index]
@@ -42,7 +42,7 @@ export default class AspectAnnotation extends React.Component {
         this.setState({ studentAnswerTree: res.tree });
       });
       this.colors = this.props.getColors(this.props.activeQuestion);
-      this.matchingLabels = this.props.activeQuestion.referenceAnswer.aspects.map(
+      this.matchingLabels = this.props.activeQuestion.aspects.map(
         (aspect, index) => {
           return {
             name: aspect.text,
@@ -61,7 +61,7 @@ export default class AspectAnnotation extends React.Component {
   getAnswerAnnotation() {
     var { aspects } = this.state;
     console.log(aspects);
-    if (aspects.find((aspect) => aspect.text && !aspect.referenceAspects.length > 0)) return false;
+    if (aspects.find((aspect) => aspect.text && aspect.aIdx===undefined)) return false;
     var activeAnswerAnnotation = JSON.parse(JSON.stringify(this.props.currentAnnotation));
     activeAnswerAnnotation.aspects = aspects;
     activeAnswerAnnotation.aspects.pop();
@@ -107,17 +107,17 @@ export default class AspectAnnotation extends React.Component {
   };
 
   matchingChange = (e, obj) => {
-    var values = obj.value.map((val) => val);
+    var value = obj.value;
     var aspects = JSON.parse(JSON.stringify(this.state.aspects));
-    values.sort();
-    aspects[obj.annIndex].referenceAspects = values;
-    if (!("label" in aspects[obj.annIndex])) aspects[obj.annIndex]["label"] = 0;
-    aspects.sort((aspectA, aspectB) => aspectA.referenceAspects[0] - aspectB.referenceAspects[0]);
-    if (aspects[aspects.length - 1].referenceAspects.length > 0) {
+    var aspectIdx = obj.adx;
+    aspects[aspectIdx]["aIdx"] = value;
+    if (!("label" in aspects[aspectIdx])) aspects[aspectIdx]["label"] = 0;
+    aspects.sort((aspectA, aspectB) => aspectA.aIdx - aspectB.aIdx);
+    if (aspects[aspects.length - 1]["aIdx"] !== undefined) {
       aspects.push({
         text: "",
         elements: [],
-        referenceAspects: []
+        aIdx: undefined
       });
     }
     this.setState({ aspects });
@@ -125,9 +125,9 @@ export default class AspectAnnotation extends React.Component {
 
   labelingChange = (e, obj) => {
     var value = obj.value;
-    var annIndex = obj.annIndex;
+    var aspectIdx = obj.adx;
     var { aspects } = this.state;
-    aspects[annIndex].label = value;
+    aspects[aspectIdx]["label"] = value;
     this.setState({ aspects });
   };
 
@@ -137,7 +137,7 @@ export default class AspectAnnotation extends React.Component {
       aspects[0] = {
         text: "",
         elements: [],
-        referenceAspects: []
+        aIdx: undefined
       };
     } else {
       aspects.splice(value, 1);
@@ -145,14 +145,14 @@ export default class AspectAnnotation extends React.Component {
     this.setState({ aspects });
   };
 
-  renderDropdownLabel(dropDownTag, label) {
-    var color = this.colors[label.value];
-    var value = label.text.props.children;
-    return {
-      value: label.value,
-      content: this.getDropDownLabel(color, value, label.value)
-    };
-  }
+  // renderDropdownLabel(dropDownTag, label) {
+  //   var color = this.colors[label.value];
+  //   var value = label.text.props.children;
+  //   return {
+  //     value: label.value,
+  //     content: this.getDropDownLabel(color, value, label.value)
+  //   };
+  // }
 
   getDropdownOptions(options) {
     return options.map((option, index) => {
@@ -211,7 +211,7 @@ export default class AspectAnnotation extends React.Component {
     var { aspects } = this.state;
     return aspects.map((annotationAspect, annIndex) => {
       var empty = !annotationAspect.text;
-      var referenceAspects = annotationAspect.referenceAspects;
+      var aIdx = annotationAspect.aIdx;
       return (
         <Input
           id={"match" + annIndex}
@@ -229,15 +229,13 @@ export default class AspectAnnotation extends React.Component {
           <Dropdown
             id={"annDrop_" + annIndex}
             key={"annDrop_" + annIndex}
-            annIndex={annIndex}
+            adx={annIndex}
             selection
             placeholder="Select Match"
             disabled={empty}
             // defaultValue={annotationAspect.referenceAspects}
-            value={referenceAspects}
-            multiple={true}
+            value={aIdx}
             options={this.getDropdownOptions(this.matchingLabels)}
-            renderLabel={this.renderDropdownLabel.bind(this, "matching")}
             onChange={this.matchingChange.bind(this)}
             width={3}
             style={{ marginLeft: "0.5vh" }}
@@ -245,10 +243,10 @@ export default class AspectAnnotation extends React.Component {
           <Dropdown
             id={"nlpDrop_" + annIndex}
             key={"nlpDrop_" + annIndex}
-            annIndex={annIndex}
+            adx={annIndex}
             selection
             placeholder="Select Label"
-            disabled={referenceAspects.length === 0}
+            disabled={aIdx===undefined}
             defaultValue={0}
             value={annotationAspect.label}
             options={this.getDropdownOptions(ASPECT_LABELS)}
@@ -281,7 +279,7 @@ export default class AspectAnnotation extends React.Component {
               <Message.Header style={{ paddingBottom: "0.5em" }}>
                 {"Schülerantwort " + (annIdx + 1) + "/" + activeQuestion.studentAnswers.length}
               </Message.Header>
-              <AnswerMarkupSchemaTwo
+              <AnswerMarkup
                 refAnswer={false}
                 answer={activeAnswerAnnotation}
                 colors={this.colors}

@@ -1,8 +1,7 @@
 import React from "react";
 
 import { Message, Label, Segment, Button } from "semantic-ui-react";
-//import AnswerMarkup from "./schema-one/AnswerMarkup";
-import AnswerMarkupSchemaTwo from "./schema-two/AnswerMarkupSchemaTwo";
+import AnswerMarkup from "./AnswerMarkup";
 import Tree from "react-d3-tree";
 
 export default class QuestionAnnotation extends React.Component {
@@ -21,7 +20,7 @@ export default class QuestionAnnotation extends React.Component {
     this.props.getDepTree(this.props.activeQuestion.text).then((res) => {
       this.setState({ questionTree: res.tree });
     });
-    this.props.getDepTree(this.props.activeQuestion.referenceAnswer.text).then((res) => {
+    this.props.getDepTree(this.props.activeQuestion.referenceAnswers[0].text).then((res) => {
       this.setState({ referenceAnswerTree: res.tree });
     });
   }
@@ -34,7 +33,7 @@ export default class QuestionAnnotation extends React.Component {
       this.props.getDepTree(this.props.activeQuestion.text).then((res) => {
         this.setState({ questionTree: res.tree });
       });
-      this.props.getDepTree(this.props.activeQuestion.referenceAnswer.text).then((res) => {
+      this.props.getDepTree(this.props.activeQuestion.referenceAnswers[0].text).then((res) => {
         this.setState({ referenceAnswerTree: res.tree });
       });
     }
@@ -85,6 +84,26 @@ export default class QuestionAnnotation extends React.Component {
             {"Frage " + (qIdx + 1) + "/" + questionCount}
           </Message.Header>
           <div>{activeQuestion.text}</div>
+          <Message.Header style={{ padding: "0.5em 0" }}>
+            {"Aspekte"}
+          </Message.Header>
+          <div>
+
+            {activeQuestion.aspects.map((aspect, idx) => {
+              return (
+                <div style={{"padding": "0.2rem"}} key={"aspect" + idx}>
+                  <Label
+                    circular
+                    className="annotation-label"
+                    style={{
+                      borderColor: this.state.colors[idx]
+                    }}>
+                    {aspect.text}
+                  </Label>
+                </div>
+              )
+            })}
+          </div>
           <Button
             onClick={() => this.setState({ questionToggle: !questionToggle })}
             className="tree-button"
@@ -95,9 +114,9 @@ export default class QuestionAnnotation extends React.Component {
         {questionToggle && questionTree && this.renderReactTree(questionTree)}
         <Message style={{ backgroundColor: "#eff0f6" }}>
           <Message.Header style={{ paddingBottom: "0.5em" }}>Musterantwort</Message.Header>
-          <AnswerMarkupSchemaTwo
+          <AnswerMarkup
             refAnswer={true}
-            answer={activeQuestion.referenceAnswer}
+            answer={activeQuestion.referenceAnswers[0]}
             colors={this.state.colors}
           />
           <Button

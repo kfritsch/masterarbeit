@@ -14,32 +14,35 @@ FILE_PATH = dirname(realpath(__file__))
 SEMVAL_PATH = join(FILE_PATH, "..", "question-corpora","SEMVAL")
 TEST_PATH = join(SEMVAL_PATH,"test")
 TRAIN_PATH = join(SEMVAL_PATH,"training")
+SEMVAL_FEATURES_PATH = join(FILE_PATH, "features","SEMVAL")
+SEMVAL_RES_PATH = join(FILE_PATH, "results","SEMVAL")
 
 FEATURE_SETS = {}
 FEATURE_SETS["BF"] = ["lemmaRec", "lemmaHeadRec", "contentRec", "contentHeadRec", "contentPrec", "embDiff", "embSim", "embMQDiff", "embMQSim", "sulAlign"]
 FEATURE_SETS["GF"] = FEATURE_SETS["BF"] + ["absLenDiff", "contentLenDiff", "simHist"]
 FEATURE_SETS["QSF"] = FEATURE_SETS["BF"] + ["pupAbsLen", "refAbsLen", "pupContentLen", "refContentLen", "pupPosDist", "refPosDist", "posSimHist", "qRefOverlap", "qRefAnsOverlap", "pupNegWordCount", "pupNegPrefixCount", "refNegWordCount", "refNegPrefixCount"]
-FEATURE_SETS["PDF"] = FEATURE_SETS["QSF"] + ["distWeightContent", "distWeightHeadContent", "posDistWeightHist"]
+FEATURE_SETS["AF"] = FEATURE_SETS["QSF"] + ["annWContentPrec", "distWeightHeadContent", "posDistWeightHist"]
+FEATURE_SETS["PDF"] = FEATURE_SETS["QSF"] + ["distWeightContent", "annWContentRec", "annWContentHeadRec"]
 FEATURE_SETS["VBF"] = FEATURE_SETS["PDF"] + ["vocab"]
 FEATURE_SETS["SBF"] = FEATURE_SETS["PDF"] + ["semCats"]
 FEATURE_SETS["SHBF"] = FEATURE_SETS["SBF"] + ["semCatHeads"]
 
 ############## SEMVAL PREDICTION ################
 
-def semvalEvaluation():
+def semvalEvaluation(featureSetup, resFile):
     featureSets = ["GF","QSF","PDF","VBF","SBF","SHBF"]
     trainSizes = [5,10,15,20,25,30]
 
-    trainData, trainQIds = loadJsonData(join(TRAIN_PATH,"trainingFeaturesWithVocab.json"))
-    testUAData, _ = loadJsonData(join(TEST_PATH,"testUAFeaturesWithVocab.json"))
-    testUQData, _ = loadJsonData(join(TEST_PATH,"testUQFeaturesWithVocab.json"))
-    testUDData, _ = loadJsonData(join(TEST_PATH,"testUDFeaturesWithVocab.json"))
+    trainData, trainQIds = loadJsonData(join(SEMVAL_FEATURES_PATH,"train",featureSetup+".json"))
+    testUAData, _ = loadJsonData(join(SEMVAL_FEATURES_PATH,"UA",featureSetup+".json"))
+    testUQData, _ = loadJsonData(join(SEMVAL_FEATURES_PATH,"UQ",featureSetup+".json"))
+    testUDData, _ = loadJsonData(join(SEMVAL_FEATURES_PATH,"UD",featureSetup+".json"))
     # trainCounts = [len(trainData[trainData[:,0]==qId]) for qId in trainQIds]
     # testCounts = [len(testUAData[testUAData[:,0]==qId]) for qId in trainQIds]
     # print(len(trainData)/len(trainQIds),min(trainCounts),max(trainCounts),len(testUAData)/len(trainQIds),min(testCounts),max(testCounts))
 
-    iterTrainData = [loadJsonData(join(TRAIN_PATH,"trainingFeaturesWithVocab{}.json".format(trainSize)))[0] for trainSize in trainSizes]
-    iterTestUAData = [loadJsonData(join(TEST_PATH,"testUAFeaturesWithVocab{}.json".format(trainSize)))[0] for trainSize in trainSizes]
+    iterTrainData = [loadJsonData(join(SEMVAL_FEATURES_PATH,"train",featureSetup+"{}.json".format(trainSize)))[0] for trainSize in trainSizes]
+    iterTestUAData = [loadJsonData(join(SEMVAL_FEATURES_PATH,"UA",featureSetup+"{}.json".format(trainSize)))[0] for trainSize in trainSizes]
 
     labelsUA = testUAData[:,2].astype("int")
     labelsUQ = testUQData[:,2].astype("int")
@@ -66,7 +69,7 @@ def semvalEvaluation():
         res[3][0].append(getPredictionResults(trainData, testUAData, featureSet, qIds=trainQIds))
         res[3][3].append(fsKey)
 
-    evalResults(res)
+    evalResults(res, resFile)
 
 def getPredictionResults(trainData, testData, featureSet, qIds=False):
     if(not(qIds)):
@@ -92,7 +95,7 @@ def getPredictionResults(trainData, testData, featureSet, qIds=False):
             probs[testData[:,0]==qId] = proba[:,1]
         return probs
 
-def evalResults(res):
+def evalResults(res, resFile):
     metrics = ["acc", "f1",  "f0.5", "roc_auc", "rsme", "cappa", "tn", "fp", "fn", "tp", "acc_0.7", "%_0.7", "acc_0.9", "%_0.9"]
     index = []
     size = 0
@@ -128,7 +131,7 @@ def evalResults(res):
           </body>
         </html>.
     '''
-    with open('resTable.html', 'w') as f:
+    with open(resFile, 'w') as f:
         f.write(html_string.format(table=resFrame.to_html(classes='mystyle')))
 
 def loadJsonData(filepath):
@@ -304,5 +307,7 @@ def singleValueCorrelation():
         print(feature, pearsonr(columnData,labelData)[0])
 
 if __name__ == "__main__":
-    semvalEvaluation()
+    # semvalEvaluation("Vocab",join(SEMVAL_RES_PATH,"Vocab.html"))
+    semvalEvaluation("MRA",join(SEMVAL_RES_PATH,"MRA.html"))
+    semvalEvaluation("PRA",join(SEMVAL_RES_PATH,"PRA.html"))
     # checkPrediction("features_unques.csv")

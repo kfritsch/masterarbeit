@@ -1,6 +1,7 @@
 import sys, math, re
 import numpy as np
 import pandas as pd
+import copy
 from scipy.stats.stats import pearsonr
 from os.path import join, dirname, realpath
 import cProfile, pstats, io
@@ -73,31 +74,43 @@ class FeatureExtractor(object):
             self.question["stopwordExceptions"] = []
         if(not("tokens" in self.question)):
             self.annotateAnswer(self.question)
-        if(not("tokens" in self.question["referenceAnswer"])):
-            self.annotateAnswer(self.question["referenceAnswer"])
-        if("assignedWeights" in self.question["referenceAnswer"]):
-            self.setAnnWeights(self.question["referenceAnswer"])
+        if("assignedWeights" in self.question):
+            self.setAnnWeights(self.question["assignedWeights"])
             self.questionDemotion = True
         self.vocabDistWeights = None
         # self.semSim.setSimDF(self.question)
         self.questionContentLemmas = dict.fromkeys([token["lemmas"][0] for token in self.question["tokens"] if(token["contentWord"])], 0)
         self.questionFilterLemmas = {}
         if(self.questionDemotion):
-            self.questionFilterLemmas = self.question["referenceAnswer"]["assignedWeights"]
+            self.questionFilterLemmas = self.question["assignedWeights"]
 
-        self.refWords, _, self.refAllContentToken, self.refTokenSet, self.refContentToken, self.refContentLemmas, self.refContentPos = self.getAnswerInformation(self.question["referenceAnswer"])
-        self.qRefOverlap = dict.fromkeys(["a","n","v","o"], 0)
-        for token in self.refContentToken:
-            if(token["lemmas"][0] in self.questionContentLemmas):
-                self.qRefOverlap[token["slPos"] if "slPos" in token else "o"] += 1
+        if(not("vocabulary") in self.question or resetVocabulary):
+            self.resetVocabulary()
+        else:
+            columns = self.question["vocabulary"].keys()
+            data = [np.array(vocab["simScores"], dtype=np.float) for lemma, vocab in self.question["vocabulary"].items()]
+            self.simFrame = pd.DataFrame(np.array(data),index=columns, columns=columns)
 
-        if(not("vocabulary") in self.question or resetVocabulary): self.resetVocabulary()
+    def prepareReferenceAnswers(self, useCorrectAsRef=False):
+        self.referenceAnswers = self.question["referenceAnswers"]
+        if(useCorrectAsRef):
+            self.referenceAnswers += self.question["studentReferenceAnswers"]
+        self.rATSs = []
+        infoKeys = ["words", "wordsSet", "allContentToken", "tokenSet", "contentToken", "contentLemmas", "contentPos"]
+        for refAns in self.referenceAnswers:
+            if(not("tokens" in refAns)):
+                self.annotateAnswer(refAns)
+            self.rATSs.append(self.getTokenSelections(refAns))
+            qRefOverlap = dict.fromkeys(["a","n","v","o"], 0)
+            for token in self.rATSs[-1]["contentToken"]:
+                if(token["lemmas"][0] in self.questionContentLemmas):
+                    qRefOverlap[token["slPos"] if "slPos" in token else "o"] += 1
+            self.rATSs[-1]["qRefOverlap"] = qRefOverlap
 
-
-    def setAnnWeights(self, refAns):
-        meanCWW = np.mean([val for key,val in refAns["assignedWeights"].items()])
+    def setAnnWeights(self, assignedWeights):
+        meanCWW = np.mean([val for key,val in assignedWeights.items()])
         self.annWeights = {}
-        for key,val in refAns["assignedWeights"].items():
+        for key,val in assignedWeights.items():
             self.annWeights[key] = (val-meanCWW)+1
 
     def setDistWeights(self):
@@ -130,100 +143,78 @@ class FeatureExtractor(object):
         self.question["vocabulary"] = {}
         self.question["semCats"] = {}
         self.question["classCounts"] = [0,0]
-        # print(self.question["referenceAnswer"]["text"])
-        # print(self.refContentLemmas)
-        self.updateVocab(self.question["referenceAnswer"], refTok=True)
-        self.updateVocabPredDist(self.question["referenceAnswer"], "correct")
+        self.simFrame = pd.DataFrame()
+        for refAnswer in self.question["referenceAnswers"]:
+            self.updateVocab(refAnswer,refTok=True, allowMerge=True)
+            self.updateVocabPredDist(refAnswer, "correct")
 
-
-    def getAnswerInformation(self,answer):
-        words, wordsSet, allContentToken, tokenSet, contentToken, contentLemmas, contentPos = [], [], [], [], [], [], []
+    def getTokenSelections(self,answer):
+        tokenSelections = {
+            "words": [],
+            "wordsSet": [],
+            "allContentToken": [],
+            "tokenSet": [],
+            "contentToken": [],
+            "contentLemmas": [],
+            "contentPos": []
+        }
         for token in answer["tokens"]:
-            words.append(token["text"])
+            tokenSelections["words"].append(token["text"])
             tokenText = token["text"]
-            if(not(tokenText in wordsSet)):
-                wordsSet.append(tokenText)
-                tokenSet.append(token)
+            if(not(tokenText in tokenSelections["wordsSet"])):
+                tokenSelections["wordsSet"].append(tokenText)
+                tokenSelections["tokenSet"].append(token)
             lemma = token["lemmas"][0]
             if(token["contentWord"] and not(lemma in self.questionFilterLemmas and self.questionFilterLemmas[lemma]==0)):
-                allContentToken.append(token)
-                if(not(lemma in contentLemmas)):
-                    contentLemmas.append(lemma)
-                    contentToken.append(token)
-                    contentPos.append(token["udPos"])
-        return words, wordsSet, allContentToken, tokenSet, contentToken, contentLemmas, contentPos
+                tokenSelections["allContentToken"].append(token)
+                if(not(lemma in tokenSelections["contentLemmas"])):
+                    tokenSelections["contentLemmas"].append(lemma)
+                    tokenSelections["contentToken"].append(token)
+                    tokenSelections["contentPos"].append(token["udPos"])
+        return tokenSelections
 
-    def extractFeatures(self, pupAns):
+    def extractFeatures(self, pupAns, predDist, vocab=False, bins=6):
         if(not("tokens" in pupAns)):
             self.annotateAnswer(pupAns)
 
-        refAns = self.question["referenceAnswer"]
+        pATS = self.getTokenSelections(pupAns)
+        pupAns["features"] = self.getEmptyFeatureDict(predDist, vocab)
 
-        pupWords, pupWordsSet, pupAllContentToken, pupTokenSet, pupContentToken, pupContentLemmas, pupContentPos = self.getAnswerInformation(pupAns)
-        self.pupContentToken = pupContentToken
+        if(len(self.referenceAnswers)>1 and len(pATS["contentToken"]) > 0):
+            maxSim = 0
+            refIdx = 0
+            pupAnsFrame = self.simFrame.loc[pATS["contentLemmas"]]
+            for rIdx, refAns in enumerate(self.referenceAnswers):
+                if(pupAns["id"] == refAns["id"]):
+                    continue
+                rATS = self.rATSs[rIdx]
+                if(len(rATS["contentLemmas"]) > 0):
+                    contentSimDf = pupAnsFrame[rATS["contentLemmas"]]
+                    similarWordsRecall = self.getMaxWordsSim(contentSimDf,rATS["contentToken"], axis=0)
+                    sim = self.getContentScore(similarWordsRecall, refIdx=0, weights=False)
+                    if(sim>maxSim):
+                        refIdx = rIdx
+                        maxSim = sim
+        else:
+            refIdx = 0
+        refAns = self.referenceAnswers[refIdx]
+        pupAns["features"]["refAnsId"] = refAns["id"]
+        rATS = self.rATSs[refIdx]
 
-        pupAns["features"] = self.getEmptyFeatureDict()
-        if(len(pupTokenSet)):
-            pupAns["features"]["pupAbsLen"] = len(pupWords)
-            pupAns["features"]["refAbsLen"] = len(self.refWords)
-            pupAns["features"]["absLenDiff"] = len(pupWords) - len(self.refWords)
-            pupAns["features"]["pupPosDist"] = self.getPosDist(pupAns["tokens"])
-            pupAns["features"]["refPosDist"] = self.getPosDist(refAns["tokens"])
-            pupAns["features"]["pupNegWordCount"] = sum(["negWord" in token for token in pupAns["tokens"]])
-            pupAns["features"]["pupNegPrefixCount"] = sum(["negPrefix" in token for token in pupAns["tokens"]])
-            pupAns["features"]["refNegWordCount"] = sum(["negWord" in token for token in refAns["tokens"]])
-            pupAns["features"]["refNegPrefixCount"] = sum(["negPrefix" in token for token in refAns["tokens"]])
-            # allSimDfWords = self.semSim.getTokenSimilarityMatrix(pupTokenSet, self.refTokenSet, asDf=True, lemmaIdc=False)
-            # pupAns["features"]["sulAlign"] = suAlignmentScore(refAns, pupAns, self.question, allSimDfWords)[0:2]
+        pupAns["features"]["qRefOverlap"] = rATS["qRefOverlap"]
+        if(len(pATS["tokenSet"]) > 0):
+            self.addWordCountFeatures(pupAns, refAns, pATS["words"], rATS["words"])
+            self.addPosDistFeatures(pupAns, refAns)
+            self.addSentenceEmbeddingFeatures(pupAns, pATS["words"], rATS["words"])
+            self.addSulAlign(pupAns, refAns, pATS, rATS)
+        if(len(pATS["contentToken"]) > 0):
+            self.addContentSimilarityFeatures(pupAns, pATS, rATS, bins=bins)
+            if(predDist):
+                self.addPredDistBasedFeatures(pupAns, pATS, bins=bins)
+            if(vocab):
+                self.addVocabFeatures(pupAns)
 
-        if(len(self.pupContentToken) > 0):
-            # TODO: consider embedding difference rank
-            self.contentSimDf = self.semSim.getTokenSimilarityMatrix(pupContentToken, self.refContentToken, asDf=True, lemmaIdc=True)
-            similarWordsRecall = self.getMaxWordsSim(self.contentSimDf,self.refContentToken, axis=0)
-            similarWordsPrecision = self.getMaxWordsSim(self.contentSimDf,self.pupContentToken,  axis=1)
-            pupEmb = self.semSim.getSetenceEmbedding(pupWords)
-            refEmb = self.semSim.getSetenceEmbedding(self.refWords)
-            questionEmb = self.semSim.getSetenceEmbedding([token["text"] for token in self.question["tokens"]])
-            pupMQEmb = pupEmb - questionEmb
-            refMQEmb = refEmb - questionEmb
-
-            pupAns["features"]["pupContentLen"] = len(pupContentToken)
-            pupAns["features"]["refContentLen"] = len(self.refContentToken)
-            pupAns["features"]["contentLenDiff"] = len(pupContentToken) - len(self.refContentToken)
-            pupAns["features"]["lemmaRec"] = sum([1 for lemma in self.refContentLemmas if lemma in pupContentLemmas])
-            pupAns["features"]["lemmaHeadRec"] = self.getHeadRecall(pupAllContentToken, self.refAllContentToken)
-            pupAns["features"]["contentRec"] = self.getContentScore(similarWordsRecall, refIdx=0, weights=False)
-            pupAns["features"]["contentHeadRec"] = self.getContentHeadScore(similarWordsRecall, pupAllContentToken, self.refAllContentToken)
-            pupAns["features"]["contentPrec"] = self.getContentScore(similarWordsPrecision, refIdx=2, weights=False)
-            pupAns["features"]["posSimHist"] = self.getPosTagSimHist(similarWordsRecall, self.refContentPos, bins=6)
-            pupAns["features"]["simHist"] = self.getSimHist(similarWordsRecall, bins=6)
-            pupAns["features"]["embDiff"] = float(np.mean(np.abs(pupEmb-refEmb)))
-            pupAns["features"]["embSim"] = float(self.semSim.cosineSimilarity(pupEmb,refEmb))
-            pupAns["features"]["embMQDiff"] = float(np.mean(np.abs(pupMQEmb-refMQEmb)))
-            pupAns["features"]["embMQSim"] = float(self.semSim.cosineSimilarity(pupMQEmb,refMQEmb))
-            pupAns["features"]["qRefAnsOverlap"] = self.getQRefAnsOverlap(similarWordsRecall)
-            if(hasattr(self, 'annWeights')):
-                pupAns["features"]["annWContentPrec"] = self.getContentScore(similarWordsPrecision, refIdx=2, weights=True)
-                pupAns["features"]["annWContentRec"] = self.getContentScore(similarWordsRecall, refIdx=0, weights=True)
-                pupAns["features"]["annWContentHeadRec"] = self.getContentHeadScore(similarWordsRecall, pupAllContentToken, self.refAllContentToken, weights=True)
-
-
-            # "pupEmb": self.semSim.getSetenceEmbedding(pupWords),
-            # "refEmb": self.semSim.getSetenceEmbedding(refWords),
-            # "lemWtSimHist":
-    def getHeadRecall(self, pupToken, refToken):
-        lemmaHeadMatch = 0
-        for rTok in refToken:
-            refLemma = rTok["lemmas"][0]
-            for pTok in pupToken:
-                pupLemma = pTok["lemmas"][0]
-                if(refLemma == pupLemma):
-                    if(rTok["head"] ==  pTok["head"]):
-                        lemmaHeadMatch +=1
-                        break
-        return lemmaHeadMatch
-
-    def getEmptyFeatureDict(self, bins=6):
+    def getEmptyFeatureDict(self, predDist=False, vocab=False, bins=6):
         features = {
             "pupAbsLen": 0,
             "refAbsLen": 0,
@@ -249,7 +240,7 @@ class FeatureExtractor(object):
             "embSim":0,
             "embMQDiff": 1,
             "embMQSim":0,
-            "qRefOverlap": self.qRefOverlap,
+            "qRefOverlap": dict.fromkeys(["a","n","v","o"], 0),
             "qRefAnsOverlap": dict.fromkeys(["a","n","v","o"], 0)
         }
         if(hasattr(self, 'annWeights')):
@@ -257,7 +248,101 @@ class FeatureExtractor(object):
             features["annWContentRec"] = 0
         if("type" in self.question):
             features["qType"] = FeatureExtractor.QUESTION_TYPES[self.question["type"]]
+        if(predDist):
+            features["distWeightContent"] = 0
+            features["distWeightHeadContent"] = 0
+            features["posDistWeightHist"] = {"a":[0]*bins, "n":[0]*bins, "v":[0]*bins, "o":[0]*bins}
+        if(vocab):
+            features["vocab"] = dict.fromkeys([key for key, val in self.question["vocabulary"].items() if "first" in val and sum(val["predDist"]) > 1], 0)
+            features["semCats"] = dict.fromkeys([key for key, val in self.question["semCats"].items() if "first" in val and sum(val["predDist"]) > 1], 0)
+            features["semCatHeads"] = dict.fromkeys([(semkey + "_" + headkey) for semkey, semval in self.question["semCats"].items() for headkey, headval in semval["headCats"].items() if "first" in semval and sum(headval) > 1], 0)
         return features
+
+    def addWordCountFeatures(self, pupAns, refAns, pupWords, refWords):
+        pupAns["features"]["pupAbsLen"] = len(pupWords)
+        pupAns["features"]["refAbsLen"] = len(refWords)
+        pupAns["features"]["absLenDiff"] = len(pupWords) - len(refWords)
+        pupAns["features"]["pupNegWordCount"] = sum(["negWord" in token for token in pupAns["tokens"]])
+        pupAns["features"]["pupNegPrefixCount"] = sum(["negPrefix" in token for token in pupAns["tokens"]])
+        pupAns["features"]["refNegWordCount"] = sum(["negWord" in token for token in refAns["tokens"]])
+        pupAns["features"]["refNegPrefixCount"] = sum(["negPrefix" in token for token in refAns["tokens"]])
+
+    def addPosDistFeatures(self, pupAns, refAns):
+        pupAns["features"]["pupPosDist"] = self.getPosDist(pupAns["tokens"])
+        pupAns["features"]["refPosDist"] = self.getPosDist(refAns["tokens"])
+
+    def addSentenceEmbeddingFeatures(self, pupAns, pupWords, refWords):
+        pupEmb = self.semSim.getSetenceEmbedding(pupWords)
+        refEmb = self.semSim.getSetenceEmbedding(refWords)
+        questionEmb = self.semSim.getSetenceEmbedding([token["text"] for token in self.question["tokens"]])
+        pupMQEmb = pupEmb - questionEmb
+        refMQEmb = refEmb - questionEmb
+        pupAns["features"]["embDiff"] = float(np.mean(np.abs(pupEmb-refEmb)))
+        pupAns["features"]["embSim"] = float(self.semSim.cosineSimilarity(pupEmb,refEmb))
+        pupAns["features"]["embMQDiff"] = float(np.mean(np.abs(pupMQEmb-refMQEmb)))
+        pupAns["features"]["embMQSim"] = float(self.semSim.cosineSimilarity(pupMQEmb,refMQEmb))
+
+    def addContentSimilarityFeatures(self, pupAns, pATS, rATS, bins=6):
+        # TODO: consider embedding difference rank
+        # self.contentSimDf = self.semSim.getTokenSimilarityMatrix(pATS["contentToken"], rATS["contentToken"], asDf=True, lemmaIdc=True)
+        contentSimDf = self.simFrame[rATS["contentLemmas"]].loc[pATS["contentLemmas"]]
+        similarWordsRecall = self.getMaxWordsSim(contentSimDf,rATS["contentToken"], axis=0)
+        similarWordsPrecision = self.getMaxWordsSim(contentSimDf,pATS["contentToken"],  axis=1)
+
+        pupAns["features"]["pupContentLen"] = len(pATS["contentToken"])
+        pupAns["features"]["refContentLen"] = len(rATS["contentToken"])
+        pupAns["features"]["contentLenDiff"] = len(pATS["contentToken"]) - len(rATS["contentToken"])
+        pupAns["features"]["lemmaRec"] = sum([1 for lemma in rATS["contentLemmas"] if lemma in pATS["contentLemmas"]])
+        pupAns["features"]["lemmaHeadRec"] = self.getHeadRecall(pATS["allContentToken"], rATS["allContentToken"])
+        pupAns["features"]["contentRec"] = self.getContentScore(similarWordsRecall, refIdx=0, weights=False)
+        pupAns["features"]["contentHeadRec"] = self.getContentHeadScore(similarWordsRecall, pATS["allContentToken"], rATS["allContentToken"])
+        pupAns["features"]["contentPrec"] = self.getContentScore(similarWordsPrecision, refIdx=2, weights=False)
+        pupAns["features"]["posSimHist"] = self.getPosTagSimHist(similarWordsRecall, rATS["contentPos"], bins=bins)
+        pupAns["features"]["simHist"] = self.getSimHist(similarWordsRecall, bins=bins)
+        pupAns["features"]["qRefAnsOverlap"] = self.getQRefAnsOverlap(similarWordsRecall)
+        if(hasattr(self, 'annWeights')):
+            pupAns["features"]["annWContentPrec"] = self.getContentScore(similarWordsPrecision, refIdx=2, weights=True)
+            pupAns["features"]["annWContentRec"] = self.getContentScore(similarWordsRecall, refIdx=0, weights=True)
+            pupAns["features"]["annWContentHeadRec"] = self.getContentHeadScore(similarWordsRecall, pATS["allContentToken"], rATS["allContentToken"], weights=True)
+
+    def addPredDistBasedFeatures(self, answer, pATS, bins=6):
+        if(not(self.vocabDistWeights)):
+            self.setDistWeights()
+        answer["features"]["distWeightHeadContent"] = self.getDistWheightHeadContent(pATS["allContentToken"])
+        answer["features"]["distWeightContent"] = self.getDistWeightContent(answer, pATS)
+        answer["features"]["posDistWeightHist"] = self.getPosDistWeightHist(answer, bins=bins)
+
+    def addVocabFeatures(self, answer):
+        vocab = dict.fromkeys([key for key, val in self.question["vocabulary"].items() if "first" in val and sum(val["predDist"]) > 1], 0)
+        semCats = dict.fromkeys([key for key, val in self.question["semCats"].items() if "first" in val and sum(val["predDist"]) > 1], 0)
+        semCatHeads = dict.fromkeys([(semkey + "_" + headkey) for semkey, semval in self.question["semCats"].items() for headkey, headval in semval["headCats"].items() if "first" in semval and sum(headval) > 1], 0)
+        for token in answer["tokens"]:
+            lemma = token["lemmas"][0]
+            if(lemma in vocab):
+                vocab[lemma] = 1
+                semCat = self.question["vocabulary"][lemma]["semCat"]
+                semCats[semCat] = 1
+                headLemma = token["head"]
+                if(headLemma in self.question["vocabulary"]):
+                    headLemma = self.question["vocabulary"][headLemma]["semCat"]
+                    semCatHead = semCat + "_" + headLemma
+                    if(semCatHead in semCatHeads):
+                        semCatHeads[semCatHead] = 1
+        answer["features"]["vocab"] = vocab
+        answer["features"]["semCats"] = semCats
+        answer["features"]["semCatHeads"] = semCatHeads
+
+    def getHeadRecall(self, pupToken, refToken):
+        lemmaHeadMatch = 0
+        for rTok in refToken:
+            refLemma = rTok["lemmas"][0]
+            for pTok in pupToken:
+                pupLemma = pTok["lemmas"][0]
+                if(refLemma == pupLemma):
+                    if(rTok["head"] ==  pTok["head"]):
+                        lemmaHeadMatch +=1
+                        break
+        return lemmaHeadMatch
 
     def getQRefAnsOverlap(self, similarWordsRecall):
         qraOverlap = dict.fromkeys(["a","n","v","o"], 0)
@@ -266,46 +351,22 @@ class FeatureExtractor(object):
                 qraOverlap[slPos] += 1
         return qraOverlap
 
+    def addSulAlign(self, pupAns, refAns, pATS=None, rATS=None):
+        if(pATS is  None):
+            pATS = self.getTokenSelections(pupAns)
+        if(rATS is  None):
+            rATS = self.getTokenSelections(pupAns)
 
-    def addPredDistBasedFeatures(self, answer, vocab=False, bins=6):
-        if(not("features" in answer)):
-            self.extractFeatures(answer)
-        answer["features"]["distWeightContent"] = 0
-        answer["features"]["distWeightHeadContent"] = 0
-        answer["features"]["posDistWeightHist"] = {"a":[0]*bins, "n":[0]*bins, "v":[0]*bins, "o":[0]*bins}
-        if(not(self.vocabDistWeights)):
-            self.setDistWeights()
-        if(vocab):
-            vocab = dict.fromkeys([key for key, val in self.question["vocabulary"].items() if "first" in val and sum(val["predDist"]) > 1], 0)
-            semCats = dict.fromkeys([key for key, val in self.question["semCats"].items() if "first" in val and sum(val["predDist"]) > 1], 0)
-            semCatHeads = dict.fromkeys([(semkey + "_" + headkey) for semkey, semval in self.question["semCats"].items() for headkey, headval in semval["headCats"].items() if "first" in semval and sum(headval) > 1], 0)
-            for token in answer["tokens"]:
-                lemma = token["lemmas"][0]
-                if(lemma in vocab):
-                    vocab[lemma] = 1
-                    semCat = self.question["vocabulary"][lemma]["semCat"]
-                    semCats[semCat] = 1
-                    headLemma = token["head"]
-                    if(headLemma in self.question["vocabulary"]):
-                        headLemma = self.question["vocabulary"][headLemma]["semCat"]
-                        semCatHead = semCat + "_" + headLemma
-                        if(semCatHead in semCatHeads):
-                            semCatHeads[semCatHead] = 1
-            answer["features"]["vocab"] = vocab
-            answer["features"]["semCats"] = semCats
-            answer["features"]["semCatHeads"] = semCatHeads
-        if(answer["features"]["pupContentLen"]==0):
-            return
-        contentToken = [token for token in answer["tokens"] if(token["contentWord"])]
-        answer["features"]["distWeightHeadContent"] = self.getDistWheightHeadContent(contentToken)
-        answer["features"]["distWeightContent"] = sum([self.vocabDistWeights[token["lemmas"][0]][0] * self.vocabDistWeights[token["lemmas"][0]][1] for token in contentToken if token["lemmas"][0] in self.vocabDistWeights])/len(contentToken)
-        answer["features"]["posDistWeightHist"] = self.getPosDistWeightHist(answer)
+        # subSimFrame = self.simFrame[pATS["contentLemmas"]].loc[rATS["contentLemmas"]]
+        # subSimFrame.rename(columns=dict(zip(pATS["contentLemmas"],[token["text"] for token in pATS["contentToken"]])),
+        #          index=dict(zip(rATS["contentLemmas"],[token["text"] for token in rATS["contentToken"]])),
+        #          inplace=True)
 
-    def computeSulAlign(self, answer):
-        refAns = self.question["referenceAnswer"]
-        pupWords, pupWordsSet, pupAllContentToken, pupTokenSet, pupContentToken, pupContentLemmas, pupContentPos = self.getAnswerInformation(answer)
-        allSimDfWords = self.semSim.getTokenSimilarityMatrix(pupTokenSet, self.refTokenSet, asDf=True, lemmaIdc=False)
-        answer["features"]["sulAlign"] = suAlignmentScore(refAns, answer, self.question, allSimDfWords)[0:2]
+        allSimDfWords = self.semSim.getTokenSimilarityMatrix(pATS["tokenSet"], rATS["tokenSet"], asDf=True, lemmaIdc=False)
+        pupAns["features"]["sulAlign"] = suAlignmentScore(refAns, pupAns, self.question, allSimDfWords)[0:2]
+
+    def getDistWeightContent(self, answer, pATS):
+        return sum([self.vocabDistWeights[token["lemmas"][0]][0] * self.vocabDistWeights[token["lemmas"][0]][1] for token in pATS["allContentToken"] if token["lemmas"][0] in self.vocabDistWeights])/len(pATS["allContentToken"])
 
     def getDistWheightHeadContent(self, contentToken):
         scores = []
@@ -446,7 +507,7 @@ class FeatureExtractor(object):
                 if(not(headLemma in semCat["headCats"])):
                     semCat["headCats"][headLemma] = [0,0]
                 continue
-            self.question["vocabulary"][lemma] = {"predDist":[0,0], "semCat":lemma, "slPos":token["slPos"] if "slPos" in token else "o", "count": 1}
+            newVocab = {"predDist":[0,0], "semCat":lemma, "slPos":token["slPos"] if "slPos" in token else "o", "count": 1, "simScores": []}
             newSemCat = {
                 "maxRefSim" : 0,
                 "mostSimRefCat" : None,
@@ -457,28 +518,40 @@ class FeatureExtractor(object):
             }
             if(refTok): newSemCat["refCat"]= True
             wn = bool(self.semSim.getSynsets(token)[0])
-            if(wn): newSemCat["wn"]= True
+            if(wn):
+                newVocab["wn"]= True
+                newSemCat["wn"] = True
             emb = not(self.semSim.getWordVector(lemma) is None)
-            if(emb): newSemCat["emb"]= True
+            if(emb):
+                newVocab["emb"]= True
+                newSemCat["emb"] = True
             isWord = not(re.search('[a-zA-Z]', token["lemmas"][0]) is None)
-            if(not(isWord)): newSemCat["isWord"] = False
+            if(not(isWord)): newVocab["isWord"] = False
 
             if(len(self.question["semCats"].keys())==0):
                 self.question["semCats"][lemma] = newSemCat
+                self.question["vocabulary"][lemma] = newVocab
+                self.simFrame[lemma] = pd.Series(np.array(newVocab["simScores"], dtype=np.float), index=self.simFrame.index)
+                newVocab["simScores"].append(None)
+                self.simFrame.loc[lemma] = np.array(newVocab["simScores"], dtype=np.float)
                 continue
             else:
                 catMatches = []
                 maxSim = 0
 
-                for semKey, semCat in self.question["semCats"].items():
+                for vocabLemma, vocab in self.question["vocabulary"].items():
                     simScore = None
-                    simScore = self.semSim.checkSimpleCase(token["lemmas"][0], semKey)
-                    if(simScore is None and "wn" in semCat and "wn" in newSemCat and "slPos" in token):
-                        simScore = self.semSim.getWordNetSim(token, {"text":semKey,"lemmas":[semKey], "slPos":self.question["vocabulary"][semKey]["slPos"]})
-                    if(simScore is None and "emb" in semCat and "emb" in newSemCat):
-                        simScore = self.semSim.getWordSimilarity(token["lemmas"][0], semKey)
+                    simScore = self.semSim.checkSimpleCase(token["lemmas"][0], vocabLemma)
+                    if(simScore is None and "wn" in vocab and "wn" in newVocab and "slPos" in token):
+                        simScore = self.semSim.getWordNetSim(token, {"text":vocabLemma,"lemmas":[vocabLemma], "slPos":vocab["slPos"]})
+                    if(simScore is None and "emb" in vocab and "emb" in newVocab):
+                        simScore = self.semSim.getWordSimilarity(token["lemmas"][0], vocabLemma)
+                    newVocab["simScores"].append(simScore)
+                    vocab["simScores"].append(simScore)
                     if(not(simScore is None)):
-                        if(simScore > FeatureExtractor.SYN_THRES[token["slPos"] if "slPos" in token else "o"] and not("isWord" in newSemCat) and not("isWord" in semCat)):
+                        semKey = vocab["semCat"]
+                        semCat = self.question["semCats"][semKey]
+                        if(simScore > FeatureExtractor.SYN_THRES[token["slPos"] if "slPos" in token else "o"] and not("isWord" in newVocab) and not("isWord" in vocab)):
                             if(simScore>maxSim):
                                 catMatches = [[semKey,simScore]]
                                 maxSim = simScore
@@ -487,14 +560,16 @@ class FeatureExtractor(object):
                         if("refCat" in semCat and simScore>newSemCat["maxRefSim"]):
                             newSemCat["maxRefSim"] = simScore
                             newSemCat["mostSimRefCat"] = semKey
+                self.question["vocabulary"][lemma] = newVocab
+                self.simFrame[lemma] = pd.Series(np.array(newVocab["simScores"], dtype=np.float), index=self.simFrame.index)
+                newVocab["simScores"].append(None)
+                self.simFrame.loc[lemma] = np.array(newVocab["simScores"], dtype=np.float)
 
                 if(len(catMatches) == 0):
                     self.question["semCats"][lemma] = newSemCat
                 else:
                     semCatChanges = []
                     newKey = lemma
-                    # print(lemma,catMatches)
-                    # input()
                     # the new key of a semantic group should be in wn if possible (comes before following conditions). with a simple addition the key should not change, in case of a merge the merging lemma should be key
                     if(not(allowMerge) and len(catMatches)>=1):
                         catMatches = [catMatches[0]]

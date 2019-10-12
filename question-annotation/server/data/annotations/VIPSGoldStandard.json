@@ -5,11 +5,17 @@
       "id": 50714,
       "type": "definition",
       "title": "Definition Typecasting",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "die Umwandlung des Datentyps eines Wertes in einen anderen",
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Darunter versteht man die Umwandlung des Datentyps eines Wertes in einen anderen.",
         "aspects": [
           {
             "text": "die Umwandlung des Datentyps eines Wertes in einen anderen",
+            "aIdx": 0,
             "elements": [
               [
                 22,
@@ -18,7 +24,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Unter Typecasting wir die Umwandlung eines Datentyps in einen anderen verstanden.",
@@ -316,11 +322,17 @@
       "title": "Datentyp Char",
       "type": "definition",
       "simple": true,
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "einzelne Zeichen"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Der Datentyp Char repräsentiert einzelne Zeichen.",
         "aspects": [
           {
             "text": "Der Datentyp Char repräsentiert einzelne Zeichen",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -329,7 +341,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "ein beliebiges zeichen inkl, Ziffern Buchstaben sonderzeichen...",
@@ -638,11 +650,21 @@
       "id": 50715,
       "title": "Addition von Chars",
       "type": "reason",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Chars sind intern als 16 bit Binärzahlen repräsentiert",
+          "implied": true
+        },
+        {
+          "text": "Bei einer Rechenoperation mit Chars werden deren Binärwert als Integer interpretiert"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Chars sind intern als 16 bit Binärzahlen repräsentiert. Bei einer Rechenoperation mit Chars werden diese als Integer interpretiert.",
         "aspects": [
           {
             "text": "Chars sind intern als 16 bit Binärzahlen repräsentiert",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -652,6 +674,7 @@
           },
           {
             "text": "Bei einer Rechenoperation mit Chars werden diese als Integer interpretiert",
+            "aIdx": 1,
             "elements": [
               [
                 56,
@@ -660,7 +683,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "weil a und b in ziffern umgewandelt werden vgl ascii tabelle",
@@ -975,11 +998,20 @@
       "id": 50717,
       "title": "Wert von Objecten vs primitiven Datentypen",
       "type": "comparison",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Die Variable eines primitiven Datentyps speichert den Inhalt an sich"
+        },
+        {
+          "text": "Die Variable eines Strings hat als Wert eine Referenz auf den eigentlichen Inhalt im Speicher"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Die Variable eines primitiven Datentyps speichert den Inhalt an sich. Die Variable eines Strings hat als Wert eine Referenz auf den eigentlichen Inhalt im Speicher.",
         "aspects": [
           {
             "text": "Die Variable eines primitiven Datentyps speichert den Inhalt an sich",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -989,6 +1021,7 @@
           },
           {
             "text": "Die Variable eines Strings hat als Wert eine Referenz auf den eigentlichen Inhalt im Speicher",
+            "aIdx": 1,
             "elements": [
               [
                 70,
@@ -997,7 +1030,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "stringvariablen sind zeichenketten, primitive datentypen sind zifernketten",
@@ -1264,31 +1297,45 @@
       "id": 50719,
       "title": "Vergleichen von Strings",
       "type": "reason",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Der Vergleichsoperator '==' vergleicht den Wert von Variablen",
+          "implied": true
+        },
+        {
+          "text": "Strings enthalten als Wert eine Referenz auf die Zeichenkette",
+          "implied": true
+        },
+        {
+          "text": "Es werden nicht die Zeichenketten sondern die Referenz verglichen"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Der Vergleichsoperator '==' vergleicht den Wert von Variablen. Strings enthalten als Wert eine Referenz auf die Zeichenkette. Dementsprechend wird die Referenz und nicht die Zeichenkette verglichen.",
         "aspects": [
           {
             "text": "Der Vergleichsoperator '==' vergleicht den Wert von Variablen",
+            "aIdx": 0,
             "elements": [
               [
                 0,
                 61
               ]
-            ],
-            "implied": true
+            ]
           },
           {
             "text": "Strings enthalten als Wert eine Referenz auf die Zeichenkette",
+            "aIdx": 1,
             "elements": [
               [
                 63,
                 124
               ]
-            ],
-            "implied": true
+            ]
           },
           {
             "text": "Dementsprechend wird die Referenz und nicht die Zeichenkette verglichen",
+            "aIdx": 2,
             "elements": [
               [
                 126,
@@ -1297,7 +1344,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "sie verweisen auf unterschiedliche referenzen",
@@ -1600,11 +1647,21 @@
       "id": 50720,
       "title": "Wertzuweisung zwischen Strings",
       "type": "procedure",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Die Referenz wird kopiert"
+        },
+        {
+          "text": "Beide Variablen zeigen auf dieselbe Zeichenkette",
+          "implied": true
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Die Referenz wird kopiert. Anschließend zeigen beide Variablen auf dieselbe Zeichenkette.",
         "aspects": [
           {
             "text": "Die Referenz wird kopiert",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -1614,16 +1671,16 @@
           },
           {
             "text": "Anschließend zeigen beide Variablen auf dieselbe Zeichenkette",
+            "aIdx": 1,
             "elements": [
               [
                 27,
                 95
               ]
-            ],
-            "implied": true
+            ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "die referenzen werden gleich gesetzt, ändert man nun den wert der einen ndert sich die andere automatisch mit",
@@ -1820,11 +1877,20 @@
       "id": 50721,
       "title": "Keyword 'new'",
       "type": "procedure",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Das Keyword 'new' erzeugt einen leeren String im Speicher"
+        },
+        {
+          "text": "Eine Referenz auf den erzeugten Sting wird zurückgegeben"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Das Keyword 'new' erzeugt einen leeren String im Speicher und gibt anschließend die Referenz auf diesen String zurück.",
         "aspects": [
           {
             "text": "Das Keyword 'new' erzeugt einen leeren String im Speicher",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -1834,16 +1900,16 @@
           },
           {
             "text": "und gibt anschließend die Referenz auf diesen String zurück",
+            "aIdx": 1,
             "elements": [
               [
                 58,
                 117
               ]
-            ],
-            "implied": true
+            ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Es wird eine neue Referenz erstellt",
@@ -2048,11 +2114,24 @@
       "id": 50722,
       "title": "Datenstruktur Array",
       "type": "definition",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "eine Datenstruktur",
+          "implied": true
+        },
+        {
+          "text": "enhält eine Sequenz von Variablen"
+        },
+        {
+          "text": "alle Variablen müssen den gleichen Typ haben"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Ein Array ist eine Datenstruktur, die eine Sequenz von Variablen gleichen Typs enthält.",
         "aspects": [
           {
             "text": "Ein Array ist eine Datenstruktur",
+            "aIdx":0,
             "elements": [
               [
                 0,
@@ -2061,16 +2140,35 @@
             ]
           },
           {
-            "text": "die eine Sequenz von Variablen gleichen Typs enthält",
+            "text": "die eine Sequenz von Variablen ;; enthält",
+            "aIdx":1,
             "elements": [
               [
                 34,
+                64
+              ],
+              [
+                79,
+                86
+              ]
+            ]
+          },
+          {
+            "text": "die ;; Variablen gleichen Typs enthält",
+            "aIdx":2,
+            "elements": [
+              [
+                34,
+                37
+              ],
+              [
+                55,
                 86
               ]
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "ein array ist ein Feld in dem Daten gespeichert werden",
@@ -2280,11 +2378,20 @@
       "title": "Array Zugriff",
       "simple": true,
       "type": "definition",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Die einzelnen Einträge sind durchnummeriert"
+        },
+        {
+          "text": "Man kann durch die Angabe ihres Indices auf sie zugreifen"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Die einzelnen Einträge sind durchnummeriert. Man kann durch die Angabe ihres Indices auf sie zugreifen.",
         "aspects": [
           {
             "text": "Die einzelnen Einträge sind durchnummeriert",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -2294,6 +2401,7 @@
           },
           {
             "text": "Man kann durch die Angabe ihres Indices auf sie zugreifen",
+            "aIdx": 1,
             "elements": [
               [
                 45,
@@ -2302,7 +2410,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "die elemente werden mit leerzeichen oder kommata getrennt eingegeben. der zugriff erfolgt über die position, als die länge des arrays",
@@ -2491,11 +2599,17 @@
       "id": 50725,
       "title": "Definition Rechenschritt",
       "type": "definition",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "als Zeitaufwand von konstanter Größe",
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Ein einzelner Rechenschritt hat einen Zeitaufwand von konstanter Größe.",
         "aspects": [
           {
             "text": "Ein einzelner Rechenschritt hat einen Zeitaufwand von konstanter Größe",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -2504,7 +2618,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Die Rechnung wird in Abhängigkeit der Eingabegröße ausgeführt.",
@@ -2633,11 +2747,20 @@
       "id": 50726,
       "title": "Komplexität Sortieren von Strings",
       "type": "reason",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "die Länge eines Strings ist theoretisch nicht beschränkt"
+        },
+        {
+          "text": "Die Laufzeit für den Vergleich von zwei Strings ist nicht konstant wie bei Integern"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Weil die Länge eines Strings theoretisch nicht beschränkt ist. Die Laufzeit für den Vergleich von zwei Strings ist daher nicht konstant wie bei Integern.",
         "aspects": [
           {
             "text": "Weil die Länge eines Strings theoretisch nicht beschränkt ist",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -2647,6 +2770,7 @@
           },
           {
             "text": "Die Laufzeit für den Vergleich von zwei Strings ist daher nicht konstant wie bei Integern",
+            "aIdx": 1,
             "elements": [
               [
                 63,
@@ -2655,7 +2779,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "strings selber können nochmal unterschiedlich groß sein und damit unterschiedlich viele Rechenschritte brauchen",
@@ -2785,21 +2909,31 @@
       "title": "O(1)",
       "simple": true,
       "type": "definition",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Die Rechenzeit ist unabhängig von der Eingabe",
+          "implied": true
+        },
+        {
+          "text": "Der Algorithmus benötigt eine beschränkte Anzahl an Schritten"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Die Rechenzeit ist unabhängig von der Eingabe. Der Algorithmus benötigt eine beschränkte Anzahl an Schritten.",
         "aspects": [
           {
             "text": "Die Rechenzeit ist unabhängig von der Eingabe",
+            "aIdx": 0,
             "elements": [
               [
                 0,
                 45
               ]
-            ],
-            "implied": true
+            ]
           },
           {
             "text": "Der Algorithmus benötigt eine beschränkte Anzahl an Schritten",
+            "aIdx": 1,
             "elements": [
               [
                 47,
@@ -2808,7 +2942,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Das eine konstante Zeit zur Durchführung benötigt wird, unabhängig von der Eingabe",
@@ -2969,11 +3103,20 @@
       "id": 50729,
       "title": "Rechenschritte vs Sekunden",
       "type": "reason",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "unabhängig von der jeweiligen Umsetzung"
+        },
+        {
+          "text": "unabhängig von der Hardware eines Computer"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Die Angabe in Rechenschritten ist unabhängig von der jeweiligen Umsetzung und der Hardware eines Computers.",
         "aspects": [
           {
             "text": "Die Angabe in Rechenschritten ist unabhängig von der jeweiligen Umsetzung",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -2983,6 +3126,7 @@
           },
           {
             "text": "Die Angabe in Rechenschritten ist unabhängig von ;; der Hardware eines Computer",
+            "aIdx": 1,
             "elements": [
               [
                 0,
@@ -2995,7 +3139,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Sie ist unabhängig von Betriebssystem, Prozessor, Hintergrundprogrammen usw.",
@@ -3148,11 +3292,17 @@
       "id": 50730,
       "title": "Lineare Suche",
       "type": "procedure",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Jedes Element der zu durchsuchenden Menge wird der Reihe nach mit dem gesuchten Element verglichen"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Jedes Element der zu durchsuchenden Menge wird der Reihe nach mit dem gesuchten Element verglichen.",
         "aspects": [
           {
             "text": "Jedes Element der zu durchsuchenden Menge wird der Reihe nach mit dem gesuchten Element verglichen",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -3161,7 +3311,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "alle elemente werden nacheinander geprüft bis das gesuchte element gefunden ist oder keine elemente mehr übrig sind",
@@ -3318,11 +3468,20 @@
       "id": 50731,
       "title": "Binäre Suche",
       "type": "procedure",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Es wird immer nur das mittlere Element der Menge mit dem gesuchten Element verglichen"
+        },
+        {
+          "text": "Das Ergebnis des Vergleichs bestimmt die neue noch zu durchsuchende Menge"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Es wird immer nur das mittlere Element der Menge mit dem gesuchten Element verglichen. Das Ergebnis des Vergleichs bestimmt die neue noch zu durchsuchende Menge.",
         "aspects": [
           {
             "text": "Es wird immer nur das mittlere Element der Menge mit dem gesuchten Element verglichen",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -3332,6 +3491,7 @@
           },
           {
             "text": "Das Ergebnis des Vergleichs bestimmt die neue noch zu durchsuchende Menge",
+            "aIdx": 1,
             "elements": [
               [
                 87,
@@ -3340,7 +3500,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "die elemente müssen vorsortiert sein, es wird immer das mittlere element verglichen und dann in der entsprechenden hälfte weitergesucht",
@@ -3498,11 +3658,17 @@
       "title": "Kriterium für binäre Suche",
       "simple": true,
       "type": "description",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Die Menge muss sortiert sein"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Die Menge muss sortiert sein.",
         "aspects": [
           {
             "text": "Die Menge muss sortiert sein",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -3511,7 +3677,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Die Elemente müssen der größe nach sortiert sein",
@@ -3673,11 +3839,17 @@
       "title": "Vorteil der binären Suche",
       "simple": true,
       "type": "reason",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "geringere Laufzeit"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Die binäre Suche hat eine deutlich geringere Laufzeit.",
         "aspects": [
           {
             "text": "Die binäre Suche hat eine deutlich geringere Laufzeit",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -3686,7 +3858,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Sie benötigt weniger Rechenschritt und hat folglich eine kürzere Laufzeit",
@@ -3851,11 +4023,17 @@
       "id": 50807,
       "title": "Definition Operation",
       "type": "definition",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Eine Operation ist eine gruppierung von Anweisungen zu einem Ausführungskontext"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Eine Operation ist eine gruppierung von Anweisungen zu einem Ausführungskontext.",
         "aspects": [
           {
             "text": "Eine Operation ist eine gruppierung von Anweisungen zu einem Ausführungskontext",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -3864,7 +4042,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "eine Operation\\/Methode ist ein Teilprogramm das aufgerufen werden kann",
@@ -3993,11 +4171,20 @@
       "id": 50808,
       "title": "Funktion von Operationen",
       "type": "description",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Operationen können wiederverwendet werden und ersparen somit Code"
+        },
+        {
+          "text": "Sie strukturieren den Code in semantisch zusammenhängende Teilabschnitte"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Operationen können wiederverwendet werden und ersparen somit Code. Sie strukturieren den Code außerdem in semantisch zusammenhängende Teilabschnitte.",
         "aspects": [
           {
             "text": "Operationen können wiederverwendet werden und ersparen somit Code",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -4006,7 +4193,8 @@
             ]
           },
           {
-            "text": "Operationen können wiederverwendet werden und ersparen somit Code",
+            "text": "Sie strukturieren den Code außerdem in semantisch zusammenhängende Teilabschnitte",
+            "aIdx": 1,
             "elements": [
               [
                 67,
@@ -4015,7 +4203,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Das Hauptprogramm bleibt übersichtlich, da viele schritte outgesourct werden",
@@ -4148,11 +4336,24 @@
       "id": 50809,
       "title": "Signatur in Java",
       "type": "definition",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "der Name",
+        },
+        {
+          "text": "die Parameter",
+          "implied": true
+        },
+        {
+          "text": "die Parameterzahl und Reihenfolge der Typen"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Zur Signatur gehören der Name und die Parameter, insbesondere die Parameterzahl und Reihenfolge der Typen.",
         "aspects": [
           {
             "text": "Zur Signatur gehören der Name",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -4162,6 +4363,7 @@
           },
           {
             "text": "Zur Signatur gehören ;; die Parameter",
+            "aIdx": 1,
             "elements": [
               [
                 0,
@@ -4176,6 +4378,7 @@
           },
           {
             "text": "Zur Signatur gehören ;; insbesondere die Parameterzahl und Reihenfolge der Typen",
+            "aIdx": 2,
             "elements": [
               [
                 0,
@@ -4188,7 +4391,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Ein Methodenkopf",
@@ -4349,11 +4552,17 @@
       "id": 50810,
       "title": "Funktion der Signatur",
       "type": "description",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "zur eindeutigen Identifikation einer Operation"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Die Signatur dient zur eindeutigen Identifikation einer Operation.",
         "aspects": [
           {
             "text": "Die Signatur dient zur eindeutigen Identifikation einer Operation",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -4362,7 +4571,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Um verschiedene Werte auf dieser Operation ausführen zu können.",
@@ -4503,11 +4712,20 @@
       "id": 50811,
       "title": "Definition Parameter",
       "type": "definition",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "eine lokale Variable einer Operation"
+        },
+        {
+          "text": "wird beim Aufruf von außen mit einem Wert versehen"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Ein Parameter ist eine lokale Variable einer Operation, die beim Aufruf von außen mit einem Wert versehen werden kann.",
         "aspects": [
           {
             "text": "Ein Parameter ist eine lokale Variable einer Operation",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -4517,6 +4735,7 @@
           },
           {
             "text": "die beim Aufruf von außen mit einem Wert versehen werden kann",
+            "aIdx": 1,
             "elements": [
               [
                 56,
@@ -4525,7 +4744,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "eine Variable",
@@ -4666,11 +4885,17 @@
       "id": 50812,
       "title": "Definition lokale Variable",
       "type": "definition",
-      "referenceAnswer": {
-        "text": "Eine lokale Variable ist nur in einem bestimmten Kontext (Scope) definiert ist.",
+      "aspects": [
+        {
+          "text": "eine nur in einem bestimmten Kontext (Scope) definierte Variable"
+        }
+      ],
+      "referenceAnswers": [{
+        "text": "Eine lokale Variable ist nur in einem bestimmten Kontext (Scope) definiert.",
         "aspects": [
           {
-            "text": "Eine lokale Variable ist nur in einem bestimmten Kontext (Scope) definiert ist",
+            "text": "Eine lokale Variable ist nur in einem bestimmten Kontext (Scope) definiert",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -4679,7 +4904,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "eine Variable die über mehrere Methoden hinweg aufegerufen werden kann",
@@ -4828,11 +5053,17 @@
       "id": 50814,
       "title": "Definition globale Variable",
       "type": "definition",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "eine Variable, auf die von überall innerhalb eines Programms zugegriffen werden kann"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Auf eine globale Variable kann von überall innerhalb eines Programms zugegriffen werden.",
         "aspects": [
           {
             "text": "Auf eine globale Variable kann von überall innerhalb eines Programms zugegriffen werden",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -4841,7 +5072,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "variable die ber verschiedene metoden genutzt werden kann",
@@ -4986,11 +5217,20 @@
       "id": 50815,
       "title": "Grund für lokale Variablen",
       "type": "reason",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "spart Arbeitsspeicher"
+        },
+        {
+          "text": "es erlaubt die unabhängige Wiederverwendung von Variablennamen in verschiedenen Kontexten"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Das binden von Variablen an bestimmte Ausführungskontexte spart Arbeitsspeicher und es erlaubt die unabhängige Wiederverwendung von Variablennamen in verschiedenen Kontexten.",
         "aspects": [
           {
             "text": "Das binden von Variablen an bestimmte Ausführungskontexte spart Arbeitsspeicher",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -5000,6 +5240,7 @@
           },
           {
             "text": "und es erlaubt die unabhängige Wiederverwendung von Variablennamen in verschiedenen Kontexten",
+            "aIdx": 1,
             "elements": [
               [
                 80,
@@ -5008,7 +5249,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Dann würde es zu viele geben, sodass es unübersichtlich wird und zu viel Arbeitsspeicher verbraucht",
@@ -5149,11 +5390,20 @@
       "id": 50817,
       "title": "'Call by value'",
       "type": "definition",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "bei der Parameterübergabe wird die Kopie des Wertes einer Variablen übergeben"
+        },
+        {
+          "text": "Änderungen dieses Wertes innerhalb der Funktion haben keinen Effekte auf den ursprünglichen Wert"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "'Call by value' bedeutet, dass bei der Parameterübergabe die Kopie des Wertes einer Variablen übergeben wird. So haben Änderungen dieses Wertes innerhalb der Funktion keinen Effekte auf den ursprünglichen Wert.",
         "aspects": [
           {
             "text": "'Call by value' bedeutet, dass bei der Parameterübergabe die Kopie des Wertes einer Variablen übergeben wird",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -5163,6 +5413,7 @@
           },
           {
             "text": "So haben Änderungen dieses Wertes innerhalb der Funktion keinen Effekte auf den ursprünglichen Wert",
+            "aIdx": 1,
             "elements": [
               [
                 110,
@@ -5171,7 +5422,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "die Variable wird über ihren Wert definiert bsp Int, flow, long",
@@ -5308,11 +5559,20 @@
       "id": 50818,
       "title": "'Call by reference'",
       "type": "definition",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "bei der Parameterübergabe wird die Referenz auf den Wert übergeben"
+        },
+        {
+          "text": "Veränderungen des Parameters innerhalb der Operation beeinflussen auch den Wert der beim Funktionsaufruf übergebenen Variablen"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "'Call by reference' bedeutet, dass bei der Parameterübergabe eine Referenz auf einen Wert übergeben wird. So beeinflussen Veränderungen des Parameters innerhalb der Operation auch den Wert der beim Funktionsaufruf übergebenen Variablen.",
         "aspects": [
           {
             "text": "'Call by reference' bedeutet, dass bei der Parameterübergabe eine Referenz auf einen Wert übergeben wird",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -5322,6 +5582,7 @@
           },
           {
             "text": "So beeinflussen Veränderungen des Parameters innerhalb der Operation auch den Wert der beim Funktionsaufruf übergebenen Variablen",
+            "aIdx": 1,
             "elements": [
               [
                 106,
@@ -5330,7 +5591,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "bei der übergabe werden referenzen übergeben, sodass änderungen auch die ursprünglich variable betreffen",
@@ -5459,11 +5720,17 @@
       "id": 50819,
       "title": "Funktion von Paketen in Java",
       "type": "description",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "um Klassen semantisch zu gruppieren"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Pakete werden genutzt um Klassen semantisch zu gruppieren.",
         "aspects": [
           {
             "text": "Pakete werden genutzt um Klassen semantisch zu gruppieren",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -5472,7 +5739,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Damit nicht immer alles von vorne programmiert werden muss",
@@ -5589,11 +5856,20 @@
       "id": 50820,
       "title": "Paketzuordnung",
       "type": "procedure",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Die Dateien müssen im selben Verzeichnis liegen"
+        },
+        {
+          "text": "Der Dateiinhalt muss mit der Anweisung 'package <Verzeichnispfad>' dem Paket hinzugefügt werden"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Die Dateien der zum Paket zugehörigen Klassen müssen im selben Verzeichnis liegen und dem Paket mit der Anweisung 'package <Verzeichnispfad>' hinzugefügt werden.",
         "aspects": [
           {
             "text": "Die Dateien der zum Paket zugehörigen Klassen müssen im selben Verzeichnis liegen",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -5603,6 +5879,7 @@
           },
           {
             "text": "und dem Paket mit der Anweisung 'package <Verzeichnispfad>' hinzugefügt werden",
+            "aIdx": 1,
             "elements": [
               [
                 92,
@@ -5611,7 +5888,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Über den methodenkopf, public oder private bspw",
@@ -5713,11 +5990,17 @@
       "id": 50884,
       "title": "Grund fürs Sortieren",
       "type": "reason",
-      "referenceAnswer": {
-        "text": "Das durchsuchen einer sortierten Menge ist deutlich schneller.",
+      "aspects": [
+        {
+          "text": "Das Durchsuchen einer sortierten Menge ist deutlich schneller"
+        }
+      ],
+      "referenceAnswers": [{
+        "text": "Das Durchsuchen einer sortierten Menge ist deutlich schneller.",
         "aspects": [
           {
-            "text": "Das durchsuchen einer sortierten Menge ist deutlich schneller",
+            "text": "Das Durchsuchen einer sortierten Menge ist deutlich schneller",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -5726,7 +6009,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Viele andere Implementierungen sind dann wesentlich effizienter kürzer",
@@ -5891,11 +6174,17 @@
       "id": 50885,
       "title": "Idee von SelectionSort",
       "type": "description",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "iterativ das größte Element aus dem aktuellen Array auszusortieren"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Die Idee ist iterativ das größte Element aus dem aktuellen Array auszusortieren.",
         "aspects": [
           {
             "text": "Die Idee ist iterativ das größte Element aus dem aktuellen Array auszusortieren",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -5904,7 +6193,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Bei jedem druchlauf den größten\\/kleinsten wert ans ende bringen und die länge um eins verkürzen bis die länge nur noch eins ist",
@@ -6057,8 +6346,14 @@
       "id": 50886,
       "title": "Ineffizienz von SelectionSort",
       "type": "reason",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Die für die Bestimmung des größten Elementes gemachten Vergleiche werden nicht wiederverwendet"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Die für die Bestimmung des größten Elementes gemachten Vergleiche werden nicht wiederverwendet.",
+        "aIdx": 0,
         "aspects": [
           {
             "text": "Die für die Bestimmung des größten Elementes gemachten Vergleiche werden nicht wiederverwendet",
@@ -6070,7 +6365,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Es werden nur wenig der gewonnen Daten verwendet",
@@ -6227,11 +6522,17 @@
       "id": 50887,
       "title": "Sortieren von Nachbarn",
       "type": "description",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Fehlstellungen von benachbarte Elemente zu korrigieren"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Die Sortierverfahren beruhen darauf Fehlstellungen von benachbarte Elemente zu korrigieren.",
         "aspects": [
           {
             "text": "Die Sortierverfahren beruhen darauf Fehlstellungen von benachbarte Elemente zu korrigieren",
+            "aIdx":0,
             "elements": [
               [
                 0,
@@ -6240,7 +6541,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Mit jedem Tausch wird das Array etwas sortierter",
@@ -6373,11 +6674,20 @@
       "id": 50888,
       "title": "BubbleSort",
       "type": "reason",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Bei einem sortierten Array gibt es keine Fehlstellungen"
+        },
+        {
+          "text": "Das Array muss nur einmal durchlaufen werden"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Bei einem sortierten Array gibt es keine Fehlstellungen. Das Array muss deshalb nur einmal durchlaufen werden.",
         "aspects": [
           {
             "text": "Bei einem sortierten Array gibt es keine Fehlstellungen",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -6387,6 +6697,7 @@
           },
           {
             "text": "Das Array muss deshalb nur einmal durchlaufen werden",
+            "aIdx": 1,
             "elements": [
               [
                 57,
@@ -6395,7 +6706,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Best case: Schon sortiert. Nach n-1 Vergleichen ist man dann fertig.",
@@ -6528,11 +6839,27 @@
       "id": 50889,
       "title": "Idee HeapSort",
       "type": "description",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Die durch Vergleiche erlangten Informationen in einem Binärbaum zu speichern"
+        },
+        {
+          "text": "Alle Väter des Binärbaumes sind größer ist als seine Söhne"
+        },
+        {
+          "text": "Das größte Element befindet in der Wurzel",
+          "implied": true
+        },
+        {
+          "text": "Die Wurzel wird iterativ entfernt und der Baum wird wiederhergestellt"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Die Grundidee ist es die durch Vergleiche erlangten Informationen in einem Binärbaum zu speichern. Die Elemente werden so in den Baum übertragen, dass der Vater größer ist als seine Söhne. Das größte Element befindet sich somit in der Wurzel. Es wird iterativ entfernt und der Baum wird wiederhergestellt.",
         "aspects": [
           {
             "text": "Die Grundidee ist es die durch Vergleiche erlangten Informationen in einem Binärbaum zu speichern",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -6542,6 +6869,7 @@
           },
           {
             "text": "Die Elemente werden so in den Baum übertragen, dass der Vater größer ist als seine Söhne",
+            "aIdx": 1,
             "elements": [
               [
                 99,
@@ -6551,6 +6879,7 @@
           },
           {
             "text": "Das größte Element befindet sich somit in der Wurzel",
+            "aIdx": 2,
             "elements": [
               [
                 189,
@@ -6560,6 +6889,7 @@
           },
           {
             "text": "Es wird iterativ entfernt und der Baum wird wiederhergestellt",
+            "aIdx": 3,
             "elements": [
               [
                 243,
@@ -6568,7 +6898,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Möglichst viele der gewonnen Daten zu verwenden, es wird ein Binärbaum konstruiert",
@@ -6705,29 +7035,53 @@
       "id": 50890,
       "title": "Eigenschaften eines Heaps",
       "type": "description",
-      "referenceAnswer": {
-        "text": "Der größte Wert aller Knoten in jedem Teilbaum ist in dessen Wurzel. Ein Heap besitzt eine maximale Tiefe von log(n).",
+      "aspects": [
+        {
+          "text": "Jeder Vater ist größer als seine Söhne"
+        },
+        {
+          "text": "Der größte Wert ist in der Wurzel",
+          "implied": true
+        },
+        {
+          "text": "maximale Tiefe von log(n)"
+        }
+      ],
+      "referenceAnswers": [{
+        "text": "In einem Heap ist jeder Vater größer als seine Söhne, der größte Wert ist in der Wurzel und er hat maximale Tiefe von log(n).",
         "aspects": [
           {
-            "text": "Der größte Wert aller Knoten in jedem Teilbaum ist in dessen Wurzel",
+            "text": "In einem Heap ist jeder Vater größer als seine Söhne",
+            "aIdx": 0,
             "elements": [
               [
                 0,
-                97
+                52
               ]
             ]
           },
           {
-            "text": "Ein Heap besitzt eine maximale Tiefe von log(n)",
+            "text": "der größte Wert ist in der Wurzel",
+            "aIdx": 1,
             "elements": [
               [
-                99,
-                187
+                54,
+                87
+              ]
+            ]
+          },
+          {
+            "text": "er hat maximale Tiefe von log(n)",
+            "aIdx": 2,
+            "elements": [
+              [
+                92,
+                124
               ]
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "Der Vater ist größer als die Kinder",
@@ -6852,11 +7206,20 @@
       "id": 50891,
       "title": "Struktur eines Heap",
       "type": "description",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Alle Ebenen des Baumes, bis auf die letzte, müssen vollständig befüllt sein"
+        },
+        {
+          "text": "Auf der vorletzten Ebene darf maximal ein Teilbaum nicht voll besetzt sein."
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Alle Ebenen des Baumes, bis auf die letzte, müssen vollständig befüllt sein. Auf der vorletzten Ebene darf maximal ein Teilbaum nicht voll besetzt sein.",
         "aspects": [
           {
             "text": "Alle Ebenen des Baumes, bis auf die letzte, müssen vollständig befüllt sein",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -6865,7 +7228,8 @@
             ]
           },
           {
-            "text": "Auf der vorletzten Ebene darf maximal ein Teilbaum nicht voll besetzt sein.",
+            "text": "Auf der vorletzten Ebene darf maximal ein Teilbaum nicht voll besetzt sein",
+            "aIdx": 1,
             "elements": [
               [
                 77,
@@ -6874,7 +7238,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "er muss sortiert sein der größte wert in der wurzel die kleinsten in den Blätter, es muss ein binärbaum sein",
@@ -6959,11 +7323,20 @@
       "id": 50892,
       "title": "Heap reparieren",
       "type": "procedure",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Das Element in der Wurzel tauscht immer wieder die Position mit dem größeren seiner Kinder bis der Heap wiederhergestellt ist"
+        },
+        {
+          "text": "Der Binärbaum besitzt maximal log(n) Ebenen"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Das Element in der Wurzel tauscht immer wieder die Position mit dem größeren seiner Kinder bis der Heap wiederhergestellt ist. Der Binärbaum besitzt maximal log(n) Ebenen.",
         "aspects": [
           {
             "text": "Das Element in der Wurzel tauscht immer wieder die Position mit dem größeren seiner Kinder bis der Heap wiederhergestellt ist",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -6973,6 +7346,7 @@
           },
           {
             "text": "Der Binärbaum besitzt maximal log(n) Ebenen",
+            "aIdx": 1,
             "elements": [
               [
                 127,
@@ -6981,7 +7355,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "das letzte (rechteste) Blatt wird die neue Wurzel und solange nach unten getauscht bis der heap wieder sortiert ist",
@@ -7086,11 +7460,21 @@
       "id": 50893,
       "title": "Heap Initiierung",
       "type": "procedure",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Es wird in der vorletzten Ebene angefangen und in den Ebenen aufsteigend aus jedem Teilbaum des Binärbaumes ein Heap erstellt"
+        },
+        {
+          "text": "Alle Blätter des Binärbaumes sind bereits Heaps und können ausgelassen werden",
+          "implied": true
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Es wird in der vorletzten Ebene angefangen und in den Ebenen aufsteigend aus jedem Teilbaum des Binärbaumes ein Heap erstellt. Alle Blätter des Binärbaumes sind bereits Heaps und können ausgelassen werden.",
         "aspects": [
           {
             "text": "Es wird in der vorletzten Ebene angefangen und in den Ebenen aufsteigend aus jedem Teilbaum des Binärbaumes ein Heap erstellt",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -7100,6 +7484,7 @@
           },
           {
             "text": "Alle Blätter des Binärbaumes sind bereits Heaps und können ausgelassen werden",
+            "aIdx": 1,
             "elements": [
               [
                 127,
@@ -7108,7 +7493,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "die ebenen werden beginnend mit der wurzel von links nach rechts aufgefüllt",
@@ -7221,11 +7606,17 @@
       "id": 50894,
       "title": "Rekursion",
       "type": "definition",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "eine Operation, die sich selbst wieder aufruft"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Das ist eine Operation, die sich selbst wieder aufruft.",
         "aspects": [
           {
             "text": "Das ist eine Operation, die sich selbst wieder aufruft",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -7234,7 +7625,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "eine operation die immer wieder dasselbe tut bis eine bestimmte leich tzu lösende situation eintrifft",
@@ -7371,11 +7762,20 @@
       "id": 50895,
       "title": "Idee MergeSort",
       "type": "description",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Die Problemgröße wird durch das halbieren der Menge immer wieder reduziert bis das Sortieren einer Hälften trivial ist"
+        },
+        {
+          "text": "Alle sortierten Hälften werden sortiert wieder zusammengefügt"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Die Problemgröße wird durch das halbieren der Menge immer wieder zu reduzieren bis das Sortieren der Hälften trivial ist. Alle sortierten Hälften werden dann sortiert wieder zusammengefügt.",
         "aspects": [
           {
             "text": "Die Problemgröße wird durch das halbieren der Menge immer wieder zu reduzieren bis das Sortieren der Hälften trivial ist",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -7385,6 +7785,7 @@
           },
           {
             "text": "Alle sortierten Hälften werden dann sortiert wieder zusammengefügt",
+            "aIdx": 1,
             "elements": [
               [
                 122,
@@ -7393,7 +7794,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "die menge wird solange geteilt bis sie fertig sortiert ist",
@@ -7522,11 +7923,26 @@
       "id": 50896,
       "title": "Laufzeitherleitung MergeSort",
       "type": "reason",
-      "referenceAnswer": {
+      "aspects": [
+        {
+          "text": "Auf jeder Ebene des Baumes sind alle n Elemente vorhanden"
+        },
+        {
+          "text": "Beim mischen müssen auf jeder Ebene insgesamt n Elemente wieder vermischt werden"
+        },
+        {
+          "text": "Der Baum hat maximal log(n) Ebenen"
+        },
+        {
+          "text": "Es müssen log(n) mal alle n Elemente gemischt werden"
+        }
+      ],
+      "referenceAnswers": [{
         "text": "Auf jeder Ebene des Baumes sind alle n Elemente vorhanden. Beim mischen müssen also auf jeder Ebene insgesamt n Elemente wieder vermischt werden. Der Baum hat maximal log(n) Ebenen. Es müssen also log(n) mal alle n Elemente gemischt werden.",
         "aspects": [
           {
             "text": "Auf jeder Ebene des Baumes sind alle n Elemente vorhanden",
+            "aIdx": 0,
             "elements": [
               [
                 0,
@@ -7536,6 +7952,7 @@
           },
           {
             "text": "Beim mischen müssen also auf jeder Ebene insgesamt n Elemente wieder vermischt werden",
+            "aIdx": 1,
             "elements": [
               [
                 59,
@@ -7545,6 +7962,7 @@
           },
           {
             "text": "Der Baum hat maximal log(n) Ebenen",
+            "aIdx": 2,
             "elements": [
               [
                 146,
@@ -7554,6 +7972,7 @@
           },
           {
             "text": "Es müssen also log(n) mal alle n Elemente gemischt werden",
+            "aIdx": 3,
             "elements": [
               [
                 182,
@@ -7562,7 +7981,7 @@
             ]
           }
         ]
-      },
+      }],
       "answersAnnotation": [
         {
           "text": "jede ebene des binärbaums entspricht einer aufteilung der menge, da der binärbaum n*logn tiefen (max) besitzt kann auch das array nicht öfter geteilt werden",

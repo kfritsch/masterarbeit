@@ -158,8 +158,11 @@ class TokenAnnotatorEnglish(object):
         spacyAnn = self.spacyNLP(text)
         coreNlpText = ""
         tokens = []
+        tokens = []
+        tokOffset = 0
         for sent in spacyAnn.sents:
             for spacyToken in sent:
+                end = tokOffset + len(spacyToken.text)
                 mergedToken = {
                     "text": spacyToken.text,
                     "spacyPos": spacyToken.tag_,
@@ -167,8 +170,13 @@ class TokenAnnotatorEnglish(object):
                     "lemmas": [spacyToken.lemma_],
                     "id":spacyToken.i,
                     "headId":spacyToken.head.i,
-                    "dep":spacyToken.dep_
+                    "dep":spacyToken.dep_,
+                    "offset": tokOffset,
+                    "end": end
                 }
+                tokOffset = end
+                if(spacyToken.whitespace_):
+                    tokOffset += 1
                 tokens.append(mergedToken)
                 coreNlpText += spacyToken.text + " "
             coreNlpText = coreNlpText[:-1] + "\n"

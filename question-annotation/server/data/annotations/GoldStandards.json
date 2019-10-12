@@ -5,43 +5,42 @@
       "title": "Überladene Methode",
       "text": "Was ist eine überladene Methode?",
       "type": "definition",
-      "referenceAnswer": {
-        "text": "Das sind Methoden einer Klasse mit denselben Namen. Ihre Signaturen unterscheiden sich anhand unterschiedlicher Parameter.",
+      "aspects": [
+        {
+          "text": "Methoden einer Klasse"
+        },
+        {
+          "text": "mit demselben Namen"
+        },
+        {
+          "text": "Die Signaturen der Methoden unterscheiden sich anhand unterschiedlicher Parameter"
+        }
+      ],
+      "referenceAnswers": [{
+        "text":
+          "Das sind Methoden einer Klasse mit denselben Namen. Ihre Signaturen unterscheiden sich anhand unterschiedlicher Parameter.",
         "aspects": [
           {
             "text": "Das sind Methoden einer Klasse",
-            "elements": [
-              [
-                0,
-                30
-              ]
-            ]
+            "aIdx": 0,
+            "elements": [[0, 30]],
+            "label": 0
           },
           {
             "text": "Das sind Methoden ;; mit demselben Namen",
-            "elements": [
-              [
-                0,
-                17
-              ],
-              [
-                31,
-                50
-              ]
-            ]
+            "aIdx": 1,
+            "elements": [[0, 17], [31, 50]],
+            "label": 0
           },
           {
             "text": "Ihre Signaturen unterscheiden sich anhand unterschiedlicher Parameter",
-            "elements": [
-              [
-                52,
-                121
-              ]
-            ]
+            "aIdx": 2,
+            "elements": [[52, 121]],
+            "label": 0
           }
         ]
-      },
-      "answersAnnotation": [
+      }],
+      "studentAnswers": [
         {
           "text": "Das sind Methoden mit denselben Namen aber unterschiedliche Signatur. Zum Beispiel: public double berechneZeitInStunden(int minuten){.....} public double berechneZeitInStunden(int sekunden){....} Rückgabewert ist egal. Hat den Vorteil das es Benutzerfreundlicher ist.",
           "id": "1",
@@ -56,7 +55,7 @@
                   37
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -73,7 +72,7 @@
                   69
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 1
@@ -101,7 +100,7 @@
                   75
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -114,7 +113,7 @@
                   213
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -127,7 +126,7 @@
                   142
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -190,7 +189,7 @@
                   63
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -203,7 +202,7 @@
                   148
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -245,7 +244,7 @@
                   84
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 1
@@ -280,7 +279,7 @@
                   67
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -293,7 +292,7 @@
                   92
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -321,7 +320,7 @@
                   66
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -334,7 +333,7 @@
                   130
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 1
@@ -362,7 +361,7 @@
                   127
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -375,7 +374,7 @@
                   203
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -410,7 +409,7 @@
                   57
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -423,7 +422,7 @@
                   163
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 1
@@ -451,7 +450,7 @@
                   49
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -468,7 +467,7 @@
                   82
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -496,7 +495,7 @@
                   100
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -538,7 +537,7 @@
                   49
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -577,7 +576,7 @@
                   115
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -598,7 +597,7 @@
                   76
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -611,7 +610,7 @@
                   143
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -632,7 +631,7 @@
                   81
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -645,7 +644,7 @@
                   136
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -687,7 +686,7 @@
                   84
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -704,7 +703,7 @@
                   116
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -725,7 +724,7 @@
                   48
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -750,7 +749,7 @@
                   69
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -778,7 +777,7 @@
                   70
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -791,7 +790,7 @@
                   115
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -812,7 +811,7 @@
                   124
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 1
@@ -833,7 +832,7 @@
                   66
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -850,7 +849,7 @@
                   142
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 1
@@ -875,7 +874,7 @@
                   122
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -892,7 +891,7 @@
                   122
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 1
@@ -934,7 +933,7 @@
                   71
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -966,7 +965,7 @@
                   112
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -979,7 +978,7 @@
                   166
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -1000,7 +999,7 @@
                   69
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -1013,7 +1012,7 @@
                   163
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 1
@@ -1034,7 +1033,7 @@
                   75
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -1047,7 +1046,7 @@
                   153
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 1
@@ -1075,7 +1074,7 @@
                   65
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -1088,7 +1087,7 @@
                   115
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 1
@@ -1109,7 +1108,7 @@
                   80
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -1122,7 +1121,7 @@
                   163
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -1150,7 +1149,7 @@
                   38
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -1163,7 +1162,7 @@
                   91
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 1
@@ -1184,7 +1183,7 @@
                   78
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -1197,7 +1196,7 @@
                   128
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 1
@@ -1225,7 +1224,7 @@
                   46
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -1238,7 +1237,7 @@
                   139
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -1259,7 +1258,7 @@
                   70
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -1272,7 +1271,7 @@
                   164
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 1
@@ -1314,7 +1313,7 @@
                   70
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -1327,7 +1326,7 @@
                   164
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 1
@@ -1348,7 +1347,7 @@
                   70
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -1361,7 +1360,7 @@
                   164
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 1
@@ -1382,7 +1381,7 @@
                   86
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -1395,7 +1394,7 @@
                   140
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 1
@@ -1423,30 +1422,35 @@
       "title": "Klassenattribute schätzen",
       "text": "Sie schreiben eine Klasse Beispielklasse mit einem Feld 'wert'. Wie erreichen Sie, dass 'wert' nur innerhalb von Beispielklasse schreibbar, aber von überall aus lesbar ist?",
       "type": "procedure",
-      "referenceAnswer": {
-        "text": "Das Feld `wert` muss mit dem Schutzattribute `private` deklariert werden. Zusätzlich muss die Klasse eine Methode bereitstellen, die das Auslesen dieses Feldes ermöglicht.",
+      "aspects": [
+        {
+          "text": "Das Feld 'wert' muss mit dem Schutzattribute private deklariert werden"
+        },
+        {
+          "text":
+            "Die Klasse muss eine Methode bereitstellen, die das Auslesen des Feldes 'wert' ermöglicht"
+        }
+      ],
+      "referenceAnswers": [{
+        "text":
+          "Das Feld 'wert' muss mit dem Schutzattribute private deklariert werden. Zusätzlich muss die Klasse eine Methode bereitstellen, die das Auslesen dieses Feldes ermöglicht.",
         "aspects": [
           {
-            "text": "Das Feld `wert` muss mit dem Schutzattribute `private` deklariert werden",
-            "elements": [
-              [
-                0,
-                72
-              ]
-            ]
+            "text": "Das Feld 'wert' muss mit dem Schutzattribute private deklariert werden",
+            "aIdx": 0,
+            "elements": [[0, 72]],
+            "label": 0
           },
           {
-            "text": "Zusätzlich muss die Klasse eine Methode bereitstellen, die das Auslesen dieses Feldes ermöglicht",
-            "elements": [
-              [
-                74,
-                170
-              ]
-            ]
+            "text":
+              "Zusätzlich muss die Klasse eine Methode bereitstellen, die das Auslesen dieses Feldes ermöglicht",
+            "aIdx": 1,
+            "elements": [[74, 170]],
+            "label": 0
           }
         ]
-      },
-      "answersAnnotation": [
+      }],
+      "studentAnswers": [
         {
           "text": "Ich setze \"\"Wert\"\" auf private und schreibe in der Beispielklasse einen Getter. So kann \"\"Wert\"\" gelesen von überall gelesen werden udn bleibt schreibgeschützt.",
           "id": "1",
@@ -1461,7 +1465,7 @@
                   30
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -1478,7 +1482,7 @@
                   80
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -1499,7 +1503,7 @@
                   91
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -1516,7 +1520,7 @@
                   159
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 1
@@ -1537,7 +1541,7 @@
                   64
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -1558,7 +1562,7 @@
                   51
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -1575,7 +1579,7 @@
                   109
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 1
@@ -1596,7 +1600,7 @@
                   23
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -1617,7 +1621,7 @@
                   57
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -1634,7 +1638,7 @@
                   94
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -1666,7 +1670,7 @@
                   109
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -1687,7 +1691,7 @@
                   45
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -1708,7 +1712,7 @@
                   33
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -1729,7 +1733,7 @@
                   37
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -1750,7 +1754,7 @@
                   47
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -1758,7 +1762,7 @@
             {
               "text": "Ein 'public' Getter macht das Auslesen, von überall möglich",
               "elements": [],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -1779,7 +1783,7 @@
                   46
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -1800,7 +1804,7 @@
                   28
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -1821,7 +1825,7 @@
                   63
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -1834,7 +1838,7 @@
                   183
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -1855,7 +1859,7 @@
                   53
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -1868,7 +1872,7 @@
                   217
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -1889,7 +1893,7 @@
                   53
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -1906,7 +1910,7 @@
                   89
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -1927,7 +1931,7 @@
                   39
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -1944,7 +1948,7 @@
                   88
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -1965,7 +1969,7 @@
                   25
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -1986,7 +1990,7 @@
                   83
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -1999,7 +2003,7 @@
                   164
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2020,7 +2024,7 @@
                   63
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -2037,7 +2041,7 @@
                   125
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2058,7 +2062,7 @@
                   31
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -2071,7 +2075,7 @@
                   78
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2092,7 +2096,7 @@
                   77
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -2105,7 +2109,7 @@
                   152
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2126,7 +2130,7 @@
                   33
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -2139,7 +2143,7 @@
                   134
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2160,7 +2164,7 @@
                   62
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -2181,7 +2185,7 @@
                   32
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -2202,7 +2206,7 @@
                   92
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -2223,7 +2227,7 @@
                   65
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -2236,7 +2240,7 @@
                   24
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2264,7 +2268,7 @@
                   29
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -2285,7 +2289,7 @@
                   48
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -2306,7 +2310,7 @@
                   97
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -2327,7 +2331,7 @@
                   97
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2348,7 +2352,7 @@
                   60
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -2361,7 +2365,7 @@
                   110
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2382,7 +2386,7 @@
                   43
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -2395,7 +2399,7 @@
                   122
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2416,7 +2420,7 @@
                   122
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -2437,7 +2441,7 @@
                   75
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -2450,7 +2454,7 @@
                   30
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2467,7 +2471,7 @@
                   137
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 2
@@ -2488,7 +2492,7 @@
                   46
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2509,7 +2513,7 @@
                   47
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 1
@@ -2522,7 +2526,7 @@
                   321
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2543,7 +2547,7 @@
                   59
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2568,7 +2572,7 @@
                   58
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -2581,7 +2585,7 @@
                   124
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2602,7 +2606,7 @@
                   36
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -2615,7 +2619,7 @@
                   111
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2643,7 +2647,7 @@
                   47
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 1
@@ -2656,7 +2660,7 @@
                   122
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2681,7 +2685,7 @@
                   30
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -2694,7 +2698,7 @@
                   19
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2715,7 +2719,7 @@
                   45
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -2728,7 +2732,7 @@
                   184
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2749,7 +2753,7 @@
                   149
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -2762,7 +2766,7 @@
                   83
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 2
@@ -2783,7 +2787,7 @@
                   53
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 1
@@ -2796,7 +2800,7 @@
                   137
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2817,7 +2821,7 @@
                   67
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 1
@@ -2830,7 +2834,7 @@
                   154
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2851,7 +2855,7 @@
                   35
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -2872,7 +2876,7 @@
                   30
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -2889,7 +2893,7 @@
                   84
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2910,7 +2914,7 @@
                   45
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 1
@@ -2923,7 +2927,7 @@
                   123
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -2944,7 +2948,7 @@
                   158
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2965,7 +2969,7 @@
                   43
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -2986,7 +2990,7 @@
                   291
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -2999,7 +3003,7 @@
                   253
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -3020,7 +3024,7 @@
                   26
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3033,7 +3037,7 @@
                   137
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -3054,7 +3058,7 @@
                   43
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -3075,7 +3079,7 @@
                   24
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -3096,7 +3100,7 @@
                   63
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3113,7 +3117,7 @@
                   140
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -3127,30 +3131,33 @@
       "title": "Vererbung - Schnittstellen und abstrakte Klassen",
       "text": "Sie möchten eine als 'private' deklarierte Variable und mehrere implementierte Methoden vererben. Verwenden Sie eine Schnittstelle oder eine abstrakte Klasse? Begründen Sie Ihre Antwort.",
       "type": "reason",
-      "referenceAnswer": {
-        "text": "Man muss eine abstrakte Klasse verwenden, weil Schnittstellen keine implementierten Methoden bereitstellen können.",
+      "aspects": [
+        {
+          "text": "eine abstrakte Klasse"
+        },
+        {
+          "text": "Schnittstellen können keine implementierten Methoden bereitstellen"
+        }
+      ],
+      "referenceAnswers": [{
+        "text":
+          "Man muss eine abstrakte Klasse verwenden, weil Schnittstellen keine implementierten Methoden bereitstellen können.",
         "aspects": [
           {
             "text": "Man muss eine abstrakte Klasse verwenden",
-            "elements": [
-              [
-                0,
-                40
-              ]
-            ]
+            "aIdx": 0,
+            "elements": [[0, 40]],
+            "label": 0
           },
           {
             "text": "weil Schnittstellen keine implementierten Methoden bereitstellen können",
-            "elements": [
-              [
-                42,
-                113
-              ]
-            ]
+            "aIdx": 1,
+            "elements": [[42, 113]],
+            "label": 0
           }
         ]
-      },
-      "answersAnnotation": [
+      }],
+      "studentAnswers": [
         {
           "text": "Abstrakte Klassen Basisklassen vererben nur implemetierte Mehtoden, Schnittstellen stellen keine implementierten Methoden bereit Abstrakte klassen werden durch abstract class deklariert",
           "id": "1",
@@ -3165,7 +3172,7 @@
                   115
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -3186,7 +3193,7 @@
                   35
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3199,7 +3206,7 @@
                   97
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -3220,7 +3227,7 @@
                   32
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -3233,7 +3240,7 @@
                   81
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 2
@@ -3254,7 +3261,7 @@
                   54
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -3275,7 +3282,7 @@
                   385
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3288,7 +3295,7 @@
                   111
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -3316,7 +3323,7 @@
                   31
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3329,7 +3336,7 @@
                   95
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -3350,7 +3357,7 @@
                   35
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3363,7 +3370,7 @@
                   99
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -3384,7 +3391,7 @@
                   34
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3397,7 +3404,7 @@
                   107
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -3418,7 +3425,7 @@
                   32
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -3431,7 +3438,7 @@
                   87
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 2
@@ -3452,7 +3459,7 @@
                   33
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3480,7 +3487,7 @@
                   35
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3493,7 +3500,7 @@
                   107
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -3514,7 +3521,7 @@
                   35
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3535,7 +3542,7 @@
                   127
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -3548,7 +3555,7 @@
                   87
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 2
@@ -3569,7 +3576,7 @@
                   35
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3590,7 +3597,7 @@
                   145
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3603,7 +3610,7 @@
                   47
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -3624,7 +3631,7 @@
                   35
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3645,7 +3652,7 @@
                   35
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3666,7 +3673,7 @@
                   48
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3683,7 +3690,7 @@
                   243
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -3704,7 +3711,7 @@
                   31
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -3725,7 +3732,7 @@
                   32
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -3746,7 +3753,7 @@
                   58
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3759,7 +3766,7 @@
                   163
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 1
@@ -3780,7 +3787,7 @@
                   34
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3793,7 +3800,7 @@
                   125
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -3814,7 +3821,7 @@
                   35
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3835,7 +3842,7 @@
                   34
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3856,7 +3863,7 @@
                   34
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3869,7 +3876,7 @@
                   240
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -3890,7 +3897,7 @@
                   31
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3911,7 +3918,7 @@
                   35
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3932,7 +3939,7 @@
                   35
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3953,7 +3960,7 @@
                   131
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -3974,7 +3981,7 @@
                   36
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -3987,7 +3994,7 @@
                   99
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 1
@@ -4008,7 +4015,7 @@
                   35
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4029,7 +4036,7 @@
                   34
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4042,7 +4049,7 @@
                   164
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -4063,7 +4070,7 @@
                   51
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -4076,7 +4083,7 @@
                   116
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 2
@@ -4097,7 +4104,7 @@
                   34
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4110,7 +4117,7 @@
                   83
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 1
@@ -4131,7 +4138,7 @@
                   34
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4148,7 +4155,7 @@
                   124
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -4169,7 +4176,7 @@
                   41
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4190,7 +4197,7 @@
                   35
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4203,7 +4210,7 @@
                   99
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -4224,7 +4231,7 @@
                   35
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4237,7 +4244,7 @@
                   110
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 2
@@ -4258,7 +4265,7 @@
                   31
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4279,7 +4286,7 @@
                   32
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -4300,7 +4307,7 @@
                   31
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4313,7 +4320,7 @@
                   99
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -4334,7 +4341,7 @@
                   31
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4347,7 +4354,7 @@
                   144
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -4382,7 +4389,7 @@
                   31
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4403,7 +4410,7 @@
                   28
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -4424,7 +4431,7 @@
                   31
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4445,7 +4452,7 @@
                   35
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4458,7 +4465,7 @@
                   107
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -4486,7 +4493,7 @@
                   31
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4507,7 +4514,7 @@
                   37
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -4528,7 +4535,7 @@
                   31
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4541,7 +4548,7 @@
                   118
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -4562,7 +4569,7 @@
                   20
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4583,7 +4590,7 @@
                   31
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4596,31 +4603,34 @@
       "id": "13",
       "text": "Erklären Sie den Zusammenhang zwischen Klassen und Objekten.",
       "title": "Zusammenhang zwischen Klassen und Objekten",
-      "type": "reason",
-      "referenceAnswer": {
-        "text": "Eine Klasse ist der Bauplan für ein Objekt. Ein Objekt ist eine konkrete Instanz einer Klasse.",
+      "type": "comparison",
+      "aspects": [
+        {
+          "text": "Eine Klasse ist der Bauplan für ein Objekt"
+        },
+        {
+          "text": "Ein Objekt ist eine konkrete Instanz einer Klasse"
+        }
+      ],
+      "referenceAnswers": [{
+        "text":
+          "Eine Klasse ist der Bauplan für ein Objekt. Ein Objekt ist eine konkrete Instanz einer Klasse.",
         "aspects": [
           {
             "text": "Eine Klasse ist der Bauplan für ein Objekt",
-            "elements": [
-              [
-                0,
-                42
-              ]
-            ]
+            "aIdx": 0,
+            "elements": [[0, 42]],
+            "label": 0
           },
           {
             "text": "Ein Objekt ist eine konkrete Instanz einer Klasse",
-            "elements": [
-              [
-                44,
-                93
-              ]
-            ]
+            "aIdx": 1,
+            "elements": [[44, 93]],
+            "label": 0
           }
         ]
-      },
-      "answersAnnotation": [
+      }],
+      "studentAnswers": [
         {
           "text": "Alle Objekte haben einen Bauplan und dieser Bauplan des Objektes ist die klasse. Objekte haben den Typ ihrer Klasse. Die Klasse eines Objekte ist wie bei uns Menschen die DNA. Die Klasse bestimmt Aussehen und Eigenschaften. Aber ist selber nicht das Objekt.",
           "id": "61",
@@ -4635,7 +4645,7 @@
                   79
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4648,7 +4658,7 @@
                   115
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 1
@@ -4669,7 +4679,7 @@
                   86
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4682,7 +4692,7 @@
                   126
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -4703,7 +4713,7 @@
                   84
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 2
@@ -4724,7 +4734,7 @@
                   41
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4745,7 +4755,7 @@
                   41
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4758,7 +4768,7 @@
                   92
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -4779,7 +4789,7 @@
                   87
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4792,7 +4802,7 @@
                   170
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -4813,7 +4823,7 @@
                   238
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4834,7 +4844,7 @@
                   37
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4855,7 +4865,7 @@
                   129
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 1
@@ -4876,7 +4886,7 @@
                   51
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4889,7 +4899,7 @@
                   92
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -4910,7 +4920,7 @@
                   48
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 1
@@ -4923,7 +4933,7 @@
                   113
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 1
@@ -4944,7 +4954,7 @@
                   86
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -4957,7 +4967,7 @@
                   126
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -4985,7 +4995,7 @@
                   133
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -5006,7 +5016,7 @@
                   46
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -5019,7 +5029,7 @@
                   98
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 1
@@ -5040,7 +5050,7 @@
                   41
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -5053,7 +5063,7 @@
                   70
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 1
@@ -5074,7 +5084,7 @@
                   39
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -5102,7 +5112,7 @@
                   41
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -5115,7 +5125,7 @@
                   84
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -5150,7 +5160,7 @@
                   37
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -5199,7 +5209,7 @@
                   112
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -5212,7 +5222,7 @@
                   153
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -5233,7 +5243,7 @@
                   41
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -5246,7 +5256,7 @@
                   80
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -5267,7 +5277,7 @@
                   41
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -5280,7 +5290,7 @@
                   116
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -5301,7 +5311,7 @@
                   106
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -5314,7 +5324,7 @@
                   142
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -5335,7 +5345,7 @@
                   41
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -5356,43 +5366,42 @@
       "text": "Was unterscheidet in JAVA Klassenvariablen von Instanzvariablen?",
       "title": "Klassen- und Instanzvariable",
       "type": "comparison",
-      "referenceAnswer": {
-        "text": "Klassenvariablen existieren einmal pro Klasse, auch ohne eine konkrete Instanz. Instanzvariable existiert einmal pro Objekt.",
+      "aspects": [
+        {
+          "text": "Klassenvariablen existieren einmal pro Klasse"
+        },
+        {
+          "text": "Klassenvariablen existieren auch ohne eine konkrete Instanz"
+        },
+        {
+          "text": "Instanzvariable existiert einmal pro Objekt"
+        }
+      ],
+      "referenceAnswers": [{
+        "text":
+          "Klassenvariablen existieren einmal pro Klasse, auch ohne eine konkrete Instanz. Instanzvariable existiert einmal pro Objekt.",
         "aspects": [
           {
             "text": "Klassenvariablen existieren einmal pro Klasse",
-            "elements": [
-              [
-                0,
-                45
-              ]
-            ]
+            "aIdx": 0,
+            "elements": [[0, 45]],
+            "label": 0
           },
           {
             "text": "Klassenvariablen existieren ;; auch ohne eine konkrete Instanz",
-            "elements": [
-              [
-                0,
-                37
-              ],
-              [
-                47,
-                78
-              ]
-            ]
+            "aIdx": 1,
+            "elements": [[0, 37], [47, 78]],
+            "label": 0
           },
           {
             "text": "Instanzvariable existiert einmal pro Objekt",
-            "elements": [
-              [
-                80,
-                123
-              ]
-            ]
+            "aIdx": 2,
+            "elements": [[80, 123]],
+            "label": 0
           }
         ]
-      },
-      "answersAnnotation": [
+      }],
+      "studentAnswers": [
         {
           "text": "Klassenvariable ist für die ganze klasse bestimmte variable und die Instanzvariable ist für den jeweiligen Bereich.",
           "id": "93",
@@ -5407,7 +5416,7 @@
                   69
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -5456,7 +5465,7 @@
                   53
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -5469,7 +5478,7 @@
                   93
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -5490,7 +5499,7 @@
                   89
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -5553,7 +5562,7 @@
                   40
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -5566,7 +5575,7 @@
                   117
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0,
                 1
               ],
@@ -5602,7 +5611,7 @@
                   57
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -5615,7 +5624,7 @@
                   95
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -5643,7 +5652,7 @@
                   150
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -5699,7 +5708,7 @@
                   107
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -5712,7 +5721,7 @@
                   60
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -5768,7 +5777,7 @@
                   85
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -5803,7 +5812,7 @@
                   119
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -5816,7 +5825,7 @@
                   71
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -5837,7 +5846,7 @@
                   77
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -5850,7 +5859,7 @@
                   173
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 1
               ],
               "label": 0
@@ -5863,7 +5872,7 @@
                   220
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -5919,7 +5928,7 @@
                   40
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -5954,7 +5963,7 @@
                   38
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -5979,7 +5988,7 @@
                   133
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -5992,7 +6001,7 @@
                   74
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
@@ -6034,7 +6043,7 @@
                   49
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 0
               ],
               "label": 0
@@ -6047,7 +6056,7 @@
                   150
                 ]
               ],
-              "referenceAspects": [
+              "aIdx": [
                 2
               ],
               "label": 0
