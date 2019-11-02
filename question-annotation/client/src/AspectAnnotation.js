@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Message, Button, Dropdown, Label, Segment, Input } from "semantic-ui-react";
+import { Message, Button, Dropdown, Label, Segment, Input, TextArea } from "semantic-ui-react";
 import AnswerMarkup from "./AnswerMarkup";
 import Tree from "react-d3-tree";
 
@@ -15,6 +15,7 @@ export default class AspectAnnotation extends React.Component {
     super(props);
     this.state = {
       aspects: JSON.parse(JSON.stringify(props.currentAnnotation.aspects)),
+      correctionOrComment: props.currentAnnotation.correctionOrComment,
       studentAnswerTree: null,
       answerToggle: false
     };
@@ -52,6 +53,7 @@ export default class AspectAnnotation extends React.Component {
       );
       this.setState({
         aspects: JSON.parse(JSON.stringify(this.props.currentAnnotation.aspects)),
+        correctionOrComment: this.props.currentAnnotation.correctionOrComment,
         studentAnswerTree: null,
         answerToggle: false
       });
@@ -59,12 +61,13 @@ export default class AspectAnnotation extends React.Component {
   }
 
   getAnswerAnnotation() {
-    var { aspects } = this.state;
+    var { aspects, correctionOrComment } = this.state;
     console.log(aspects);
     if (aspects.find((aspect) => aspect.text && aspect.aIdx===undefined)) return false;
     var activeAnswerAnnotation = JSON.parse(JSON.stringify(this.props.currentAnnotation));
     activeAnswerAnnotation.aspects = aspects;
     activeAnswerAnnotation.aspects.pop();
+    activeAnswerAnnotation.correctionOrComment = correctionOrComment;
     return activeAnswerAnnotation;
   }
 
@@ -129,6 +132,10 @@ export default class AspectAnnotation extends React.Component {
     var { aspects } = this.state;
     aspects[aspectIdx]["label"] = value;
     this.setState({ aspects });
+  };
+
+  handleAreaChange = (e) => {
+    this.setState({ correctionOrComment: e.target.value });
   };
 
   deleteMatch = (e, { value }) => {
@@ -268,7 +275,7 @@ export default class AspectAnnotation extends React.Component {
   }
 
   render() {
-    var { aspects, studentAnswerTree, answerToggle } = this.state;
+    var { aspects, studentAnswerTree, answerToggle, correctionOrComment } = this.state;
     var { annIdx, activeQuestion, currentAnnotation } = this.props;
     var activeAnswerAnnotation = { ...currentAnnotation, aspects };
     return (
@@ -294,6 +301,16 @@ export default class AspectAnnotation extends React.Component {
             {answerToggle && studentAnswerTree && this.renderReactTree(studentAnswerTree)}
 
             {this.renderMatchings()}
+          </Segment>
+          <Segment textAlign="center">
+            <TextArea
+              rows={3}
+              style={{ width: "80%" }}
+              autoHeight
+              placeholder={"Korrigierter Text "}
+              onChange={this.handleAreaChange.bind(this)}
+              value={correctionOrComment}
+            />
           </Segment>
         </Segment.Group>
       </div>

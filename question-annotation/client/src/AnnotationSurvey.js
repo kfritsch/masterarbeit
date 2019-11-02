@@ -40,21 +40,21 @@ export default class AnnotationSurvey extends React.Component {
     this.callApi()
       .then((res) => {
         var { questionData } = res;
-        // console.log(questionData);
+        console.log(questionData);
         this.questionData = questionData["questions"];
         this.version = "whole";
         var annIdx;
-        var qIdx = this.questionData.findIndex(
-          (question) =>
-            !("answerCategory" in question.studentAnswers[question.studentAnswers.length - 1])
-        );
-        if (qIdx >= 0) {
-          annIdx = this.questionData[qIdx].studentAnswers.findIndex(
-            (annotation) => !("answerCategory" in annotation)
-          );
-        } else {
+        // var qIdx = this.questionData.findIndex(
+        //   (question) =>
+        //     !("answerCategory" in question.studentAnswers[question.studentAnswers.length - 1])
+        // );
+        // if (qIdx >= 0) {
+        //   annIdx = this.questionData[qIdx].studentAnswers.findIndex(
+        //     (annotation) => !("answerCategory" in annotation)
+        //   );
+        // } else {
           this.version = "aspects";
-          qIdx = this.questionData.findIndex(
+          var qIdx = this.questionData.findIndex(
             (question) =>
               !("aspects" in question.studentAnswers[question.studentAnswers.length - 1])
           );
@@ -69,7 +69,7 @@ export default class AnnotationSurvey extends React.Component {
             this.finish();
             annIdx = this.questionData[qIdx].studentAnswers.length - 1;
           }
-        }
+        // }
 
         var currentAnnotation = this.getCurrentAnnotation(qIdx, annIdx);
         this.setState({

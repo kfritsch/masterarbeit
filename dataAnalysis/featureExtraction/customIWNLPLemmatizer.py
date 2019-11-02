@@ -1,10 +1,13 @@
 import logging
 import json
 import io
+from os.path import dirname, realpath, join
+
+FILE_PATH = dirname(realpath(__file__))
 
 
 class CustomIWNLPLemmatizer(object):
-    def __init__(self, lemmatizer_path='IWNLP.Lemmatizer_20170501.json'):
+    def __init__(self, lemmatizer_path=join(FILE_PATH,"lib","IWNLP.Lemmatizer_20170501.json")):
         self.lemmatizer = {}
         with io.open(lemmatizer_path, encoding='utf-8') as data_file:
             raw = json.load(data_file)

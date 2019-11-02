@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Message, Label, Segment, Button } from "semantic-ui-react";
+import { Message, Label, Segment, Button, Icon } from "semantic-ui-react";
 import AnswerMarkup from "./AnswerMarkup";
 import Tree from "react-d3-tree";
 
@@ -100,6 +100,7 @@ export default class QuestionAnnotation extends React.Component {
                     }}>
                     {aspect.text}
                   </Label>
+                  {!("implied" in aspect) && <Icon name="exclamation" color="red"/>}
                 </div>
               )
             })}

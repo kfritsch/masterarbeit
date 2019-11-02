@@ -62,7 +62,7 @@ class SemSim(object):
     }
     VECTOR_SIZE = 300
     SYNSET_DIST_THRES = {"n":0, "v":1, "a":2}
-    MIN_IC = {"en":4}
+    MIN_IC = {"en":4, "de":5}
 
     def __init__(self, modelname, lang="de", lmdb=True):
         self.modelname = modelname
@@ -254,7 +254,7 @@ class SemSim(object):
             # frewuent words are excluded
             for tok,synsets in [(tok1,synsets1), (tok2,synsets2)]:
                 if(tok["slPos"] =="v"):
-                    ics = minInf1 = [self.information_content(synset) for synset in synsets if(synset.pos()=="v")]
+                    ics = [self.information_content(synset) for synset in synsets if(synset.pos()=="v")]
                     if(len(ics)>0 and min(ics)<self.minIC):
                         return 0
             if(synsets1 and synsets2):

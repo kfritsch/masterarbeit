@@ -5,9 +5,9 @@ import { Message, Dropdown, Segment, TextArea } from "semantic-ui-react";
 const ROUGH_CATEGORIES = [
   "correct",
   "binary_correct",
-  "partially_correct",
-  "missconception",
-  "concept_mix-up",
+  "partially_correct", // unprecise
+  "missconception", // contradiction
+  "concept_mix-up", // contradiction
   "irrelevant",
   "none"
 ];
@@ -51,7 +51,7 @@ export default class RoughLabeling extends React.Component {
           <Segment textAlign="center">
             <Message style={{ backgroundColor: "#eff0f6" }}>
               <Message.Header style={{ paddingBottom: "0.5em" }}>
-                {"Schülerantwort " + (annIdx + 1) + "/" + activeQuestion.answersAnnotation.length}
+                {"Schülerantwort " + (annIdx + 1) + "/" + activeQuestion.studentAnswers.length}
               </Message.Header>
               <span key={"whole"}>{correctionOrComment}</span>
             </Message>

@@ -9,7 +9,8 @@ const BASE = process.cwd();
 
 const CLIENT_BUILD_PATH = path.join(__dirname, "../../client/build");
 // const ANNOTATION_FILE = "VIPSGoldStandard.json";
-const ANNOTATION_FILE = "GoldStandardsTest.json";
+//const ANNOTATION_FILE = "GoldStandards.json";
+const ANNOTATION_FILE = "NewAnnotation.json";
 
 // App
 const app = express();

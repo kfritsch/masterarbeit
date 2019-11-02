@@ -119,19 +119,19 @@ from coreNlp import StanfordCoreNLP
 import re
 import json
 
-text = "The man went for a walk. He took a jacket with him."
-stanfordCoreNLP = StanfordCoreNLP('http://localhost', port=9500)
+text = "The big and poor man went to market."
+# stanfordCoreNLP = StanfordCoreNLP('http://localhost', port=9500)
 spacyNLP = spacy.load('en_core_web_sm')
-
-annotation = stanfordCoreNLP.annotate(text, properties={
-    'annotators': 'ssplit, depparse, ner, lemma',
-    'pipelineLanguage':'en',
-    'outputFormat':'json'
-})
-annotation = json.loads(annotation)
-for sentence in annotation["sentences"]:
-    for token in sentence["tokens"]:
-        print(token)
+#
+# annotation = stanfordCoreNLP.annotate(text, properties={
+#     'annotators': 'ssplit, depparse, ner, lemma',
+#     'pipelineLanguage':'en',
+#     'outputFormat':'json'
+# })
+# annotation = json.loads(annotation)
+# for sentence in annotation["sentences"]:
+#     for token in sentence["tokens"]:
+#         print(token)
 
 text = " ".join(text.split())
 spacyAnn = spacyNLP(text)
@@ -139,23 +139,24 @@ coreNlpText = ""
 tokOffset = 0
 for sent in spacyAnn.sents:
     for spacyToken in sent:
-        print(spacyToken.text, tokOffset, tokOffset+len(spacyToken.text))
-        tokOffset += len(spacyToken.text)
-        if(spacyToken.whitespace_):
-            tokOffset += 1
-        coreNlpText += spacyToken.text + " "
-    coreNlpText = coreNlpText[:-1] + "\n"
-coreNlpText = coreNlpText[:-1]
+        print(spacyToken.i, spacyToken.head.i, spacyToken.dep_)
+#         print(spacyToken.text, tokOffset, tokOffset+len(spacyToken.text))
+#         tokOffset += len(spacyToken.text)
+#         if(spacyToken.whitespace_):
+#             tokOffset += 1
+#         coreNlpText += spacyToken.text + " "
+#     coreNlpText = coreNlpText[:-1] + "\n"
+# coreNlpText = coreNlpText[:-1]
 
-print(coreNlpText)
-
-# add coreNlp Annotation
-coreNlpAnn = stanfordCoreNLP.annotate(text, properties={
-    'annotators': 'lemma',
-    'pipelineLanguage':'en',
-    'outputFormat':'json'
-})
-coreNlpAnn = json.loads(coreNlpAnn)
-for sentence in annotation["sentences"]:
-    for token in sentence["tokens"]:
-        print(token["originalText"], token["characterOffsetBegin"], token["characterOffsetEnd"])
+# print(coreNlpText)
+#
+# # add coreNlp Annotation
+# coreNlpAnn = stanfordCoreNLP.annotate(text, properties={
+#     'annotators': 'lemma',
+#     'pipelineLanguage':'en',
+#     'outputFormat':'json'
+# })
+# coreNlpAnn = json.loads(coreNlpAnn)
+# for sentence in annotation["sentences"]:
+#     for token in sentence["tokens"]:
+#         print(token["originalText"], token["characterOffsetBegin"], token["characterOffsetEnd"])

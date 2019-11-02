@@ -84,7 +84,7 @@ class FeatureExtractor(object):
         if(self.questionDemotion):
             self.questionFilterLemmas = self.question["assignedWeights"]
 
-        if(not("vocabulary") in self.question or resetVocabulary):
+        if(not("vocabulary" in self.question) or resetVocabulary):
             self.resetVocabulary()
         else:
             columns = self.question["vocabulary"].keys()
@@ -95,8 +95,8 @@ class FeatureExtractor(object):
         self.referenceAnswers = self.question["referenceAnswers"]
         if(useCorrectAsRef):
             self.referenceAnswers += self.question["studentReferenceAnswers"]
+
         self.rATSs = []
-        infoKeys = ["words", "wordsSet", "allContentToken", "tokenSet", "contentToken", "contentLemmas", "contentPos"]
         for refAns in self.referenceAnswers:
             if(not("tokens" in refAns)):
                 self.annotateAnswer(refAns)
@@ -135,6 +135,7 @@ class FeatureExtractor(object):
                     weight = sum(val)/sum(self.question["classCounts"])
                     posRatio = val[1]/pC if pC else 0
                     negRatio = val[0]/nC if nC else 0
+                    # TODO why worse dist
                     dist = posRatio - negRatio if(sum(val)>=FeatureExtractor.DIST_WEIGHTS_MIN) else self.semCatDistWeights[lemma]["dist"] * (sum(val)/sum(entry["predDist"]))
                     headDict[key] = [dist, weight]
                 self.semCatDistWeights[lemma]["headDistWeights"] = headDict
@@ -198,13 +199,13 @@ class FeatureExtractor(object):
         else:
             refIdx = 0
         refAns = self.referenceAnswers[refIdx]
-        pupAns["features"]["refAnsId"] = refAns["id"]
         rATS = self.rATSs[refIdx]
-
+        pupAns["refAnsId"] = refAns["id"]
+        pupAns["features"] = self.getEmptyFeatureDict(predDist, vocab)
         pupAns["features"]["qRefOverlap"] = rATS["qRefOverlap"]
+        self.addCountFeatures(pupAns, refAns, pATS, rATS)
+        self.addPosDistFeatures(pupAns, refAns)
         if(len(pATS["tokenSet"]) > 0):
-            self.addWordCountFeatures(pupAns, refAns, pATS["words"], rATS["words"])
-            self.addPosDistFeatures(pupAns, refAns)
             self.addSentenceEmbeddingFeatures(pupAns, pATS["words"], rATS["words"])
             self.addSulAlign(pupAns, refAns, pATS, rATS)
         if(len(pATS["contentToken"]) > 0):
@@ -216,31 +217,31 @@ class FeatureExtractor(object):
 
     def getEmptyFeatureDict(self, predDist=False, vocab=False, bins=6):
         features = {
-            "pupAbsLen": 0,
-            "refAbsLen": 0,
-            "absLenDiff": 0,
-            "pupContentLen": 0,
-            "refContentLen":0,
-            "contentLenDiff": 0,
-            "pupNegWordCount": 0,
-            "pupNegPrefixCount": 0,
-            "refNegWordCount": 0,
-            "refNegPrefixCount": 0,
+            # "pupAbsLen": 0,
+            # "refAbsLen": 0,
+            # "absLenDiff": 0,
+            # "pupContentLen": 0,
+            # "refContentLen":0,
+            # "contentLenDiff": 0,
+            # "pupNegWordCount": 0,
+            # "pupNegPrefixCount": 0,
+            # "refNegWordCount": 0,
+            # "refNegPrefixCount": 0,
+            # "pupPosDist": dict.fromkeys(["AD","NOUN","VERB","CONJ","OTHER"], 0),
+            # "refPosDist": dict.fromkeys(["AD","NOUN","VERB","CONJ","OTHER"], 0),
             "lemmaRec": 0,
             "lemmaHeadRec": 0,
-            "pupPosDist": dict.fromkeys(["AD","NOUN","VERB","CONJ","OTHER"], 0),
-            "refPosDist": dict.fromkeys(["AD","NOUN","VERB","CONJ","OTHER"], 0),
             "contentRec": 0,
             "contentHeadRec": 0,
             "contentPrec": 0,
-            # "sulAlign": [0,0],
+            "sulAlign": [0,0],
             "simHist": [0]*bins,
             "posSimHist": {"a":[0]*bins, "n":[0]*bins, "v":[0]*bins, "o":[0]*bins},
             "embDiff": 1,
             "embSim":0,
             "embMQDiff": 1,
             "embMQSim":0,
-            "qRefOverlap": dict.fromkeys(["a","n","v","o"], 0),
+            # "qRefOverlap": dict.fromkeys(["a","n","v","o"], 0),
             "qRefAnsOverlap": dict.fromkeys(["a","n","v","o"], 0)
         }
         if(hasattr(self, 'annWeights')):
@@ -258,10 +259,13 @@ class FeatureExtractor(object):
             features["semCatHeads"] = dict.fromkeys([(semkey + "_" + headkey) for semkey, semval in self.question["semCats"].items() for headkey, headval in semval["headCats"].items() if "first" in semval and sum(headval) > 1], 0)
         return features
 
-    def addWordCountFeatures(self, pupAns, refAns, pupWords, refWords):
-        pupAns["features"]["pupAbsLen"] = len(pupWords)
-        pupAns["features"]["refAbsLen"] = len(refWords)
-        pupAns["features"]["absLenDiff"] = len(pupWords) - len(refWords)
+    def addCountFeatures(self, pupAns, refAns, pATS, rATS):
+        pupAns["features"]["pupAbsLen"] = len(pATS["words"])
+        pupAns["features"]["refAbsLen"] = len(rATS["words"])
+        pupAns["features"]["absLenDiff"] = len(pATS["words"]) - len(rATS["words"])
+        pupAns["features"]["pupContentLen"] = len(pATS["contentToken"])
+        pupAns["features"]["refContentLen"] = len(rATS["contentToken"])
+        pupAns["features"]["contentLenDiff"] = len(pATS["contentToken"]) - len(rATS["contentToken"])
         pupAns["features"]["pupNegWordCount"] = sum(["negWord" in token for token in pupAns["tokens"]])
         pupAns["features"]["pupNegPrefixCount"] = sum(["negPrefix" in token for token in pupAns["tokens"]])
         pupAns["features"]["refNegWordCount"] = sum(["negWord" in token for token in refAns["tokens"]])
@@ -289,9 +293,6 @@ class FeatureExtractor(object):
         similarWordsRecall = self.getMaxWordsSim(contentSimDf,rATS["contentToken"], axis=0)
         similarWordsPrecision = self.getMaxWordsSim(contentSimDf,pATS["contentToken"],  axis=1)
 
-        pupAns["features"]["pupContentLen"] = len(pATS["contentToken"])
-        pupAns["features"]["refContentLen"] = len(rATS["contentToken"])
-        pupAns["features"]["contentLenDiff"] = len(pATS["contentToken"]) - len(rATS["contentToken"])
         pupAns["features"]["lemmaRec"] = sum([1 for lemma in rATS["contentLemmas"] if lemma in pATS["contentLemmas"]])
         pupAns["features"]["lemmaHeadRec"] = self.getHeadRecall(pATS["allContentToken"], rATS["allContentToken"])
         pupAns["features"]["contentRec"] = self.getContentScore(similarWordsRecall, refIdx=0, weights=False)
@@ -355,7 +356,7 @@ class FeatureExtractor(object):
         if(pATS is  None):
             pATS = self.getTokenSelections(pupAns)
         if(rATS is  None):
-            rATS = self.getTokenSelections(pupAns)
+            rATS = self.getTokenSelections(refAns)
 
         # subSimFrame = self.simFrame[pATS["contentLemmas"]].loc[rATS["contentLemmas"]]
         # subSimFrame.rename(columns=dict(zip(pATS["contentLemmas"],[token["text"] for token in pATS["contentToken"]])),
@@ -379,7 +380,8 @@ class FeatureExtractor(object):
                 if(headSemCat in self.semCatDistWeights[lemmaSemCat]["headDistWeights"]):
                     scores.append(self.semCatDistWeights[lemmaSemCat]["weight"]*self.semCatDistWeights[lemmaSemCat]["headDistWeights"][headSemCat][0])
                 else:
-                    scores.append((1/sum(self.question["classCounts"]))*(self.semCatDistWeights[lemmaSemCat]["dist"]*(1/sum(self.question["lemmaSemCat"]["predDist"]))))
+                    # TODO why these denums
+                    scores.append((1/sum(self.question["classCounts"]))*(self.semCatDistWeights[lemmaSemCat]["dist"]*(1/sum(self.question["semCat"][lemmaSemCat]["predDist"]))))
         return sum(scores)/len(contentToken)
 
     def getPosDistWeightHist(self, answer, bins=6):
@@ -637,7 +639,7 @@ class FeatureExtractor(object):
         if(not(useAnn)):
             binLabel = self.getBinaryAnswerPred(pred, threshold=threshold, updateProcedure=updateProcedure)
         else:
-            binLabel = FeatureExtractor.LABEL_DICT[pred] <= 1
+            binLabel = pred == "correct"#FeatureExtractor.LABEL_DICT[pred] <= 1
         pred = int(binLabel)
         self.question["classCounts"][pred] += 1
         lemmasCounted = []

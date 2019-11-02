@@ -7,6 +7,9 @@ import spacy
 from .coreNlp import StanfordCoreNLP
 import re
 import json
+from os.path import dirname, realpath, join
+
+FILE_PATH = dirname(realpath(__file__))
 
 RFTAGGER_UD_MAP = {
     "ADJA":"ADJ",
@@ -233,10 +236,10 @@ class TokenAnnotator(object):
     def __init__(self):
         self.stanfordCoreNLP = StanfordCoreNLP('http://localhost', port=9000)
         self.spacyNLP = spacy.load('de')
-        with open("infVocab.json", "r") as f:
+        with open(join(FILE_PATH,"infVocab.json"), "r") as f:
             self.infoVocab = json.load(f)
         # self.iwnlpLemmatizer = CustomIWNLPLemmatizer('lib/IWNLP.Lemmatizer_20170501.json')
-        self.germaLemmatizer = CustomGermaLemma(pickle="tiger/tiger_lemmas.pkl")
+        self.germaLemmatizer = CustomGermaLemma(pickle=join(FILE_PATH,"tiger","tiger_lemmas.pkl"))
 
     def checkPos(self, word, pos):
         if(word in POS_CORRECTIONS and POS_CORRECTIONS[word]!=pos):
@@ -292,7 +295,7 @@ class TokenAnnotator(object):
         if(word in self.infoVocab): return self.infoVocab[word]
         return False
 
-    def annotateText(self, text):
+    def annotateText(self, text, questionVocab={}):
         text = " ".join(text.split())
         spacyAnn = self.spacyNLP(text)
         rfTaggerText = ""
@@ -339,9 +342,9 @@ class TokenAnnotator(object):
             token["coreNlpPos"] = pos
 
         # add rfTagger Annotation
-        with open("lib/RFTagger/temp.txt", "w") as file:
+        with open(join(FILE_PATH,"lib","RFTagger","temp.txt"), "w") as file:
             file.write(rfTaggerText)
-        rfAnn = [tuple(word.split("\t")) for word in check_output(["src/rft-annotate", "-q", "lib/german.par", "temp.txt"], cwd="lib/RFTagger").decode("utf-8").split("\n") if word]
+        rfAnn = [tuple(word.split("\t")) for word in check_output(["src/rft-annotate", "-q", "lib/german.par", "temp.txt"], cwd=join(FILE_PATH,"lib","RFTagger")).decode("utf-8").split("\n") if word]
         for i,token in enumerate(tokens):
             try:
                 pair = rfAnn[i]
@@ -360,7 +363,7 @@ class TokenAnnotator(object):
                 lemmaPos = RFTAGGER_UD_MAP[posParts[0]][posParts[1]]
             else: lemmaPos = "VERB"
             lemmaPos = self.checkPos(word, lemmaPos)
-            if(not(lemmaPos) in token["lemmaPos"]):
+            if(not(lemmaPos in token["lemmaPos"])):
                 token["lemmaPos"].append(lemmaPos)
             else:
                 token["udPos"] = lemmaPos

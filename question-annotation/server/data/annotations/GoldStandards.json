@@ -16,30 +16,51 @@
           "text": "Die Signaturen der Methoden unterscheiden sich anhand unterschiedlicher Parameter"
         }
       ],
-      "referenceAnswers": [{
-        "text":
-          "Das sind Methoden einer Klasse mit denselben Namen. Ihre Signaturen unterscheiden sich anhand unterschiedlicher Parameter.",
-        "aspects": [
-          {
-            "text": "Das sind Methoden einer Klasse",
-            "aIdx": 0,
-            "elements": [[0, 30]],
-            "label": 0
-          },
-          {
-            "text": "Das sind Methoden ;; mit demselben Namen",
-            "aIdx": 1,
-            "elements": [[0, 17], [31, 50]],
-            "label": 0
-          },
-          {
-            "text": "Ihre Signaturen unterscheiden sich anhand unterschiedlicher Parameter",
-            "aIdx": 2,
-            "elements": [[52, 121]],
-            "label": 0
-          }
-        ]
-      }],
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Das sind Methoden einer Klasse mit denselben Namen. Ihre Signaturen unterscheiden sich anhand unterschiedlicher Parameter.",
+          "aspects": [
+            {
+              "text": "Das sind Methoden einer Klasse",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  30
+                ]
+              ],
+              "label": 0
+            },
+            {
+              "text": "Das sind Methoden ;; mit demselben Namen",
+              "aIdx": 1,
+              "elements": [
+                [
+                  0,
+                  17
+                ],
+                [
+                  31,
+                  50
+                ]
+              ],
+              "label": 0
+            },
+            {
+              "text": "Ihre Signaturen unterscheiden sich anhand unterschiedlicher Parameter",
+              "aIdx": 2,
+              "elements": [
+                [
+                  52,
+                  121
+                ]
+              ],
+              "label": 0
+            }
+          ]
+        }
+      ],
       "studentAnswers": [
         {
           "text": "Das sind Methoden mit denselben Namen aber unterschiedliche Signatur. Zum Beispiel: public double berechneZeitInStunden(int minuten){.....} public double berechneZeitInStunden(int sekunden){....} Rückgabewert ist egal. Hat den Vorteil das es Benutzerfreundlicher ist.",
@@ -55,9 +76,7 @@
                   37
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -72,9 +91,7 @@
                   69
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 1
             }
           ]
@@ -100,9 +117,7 @@
                   75
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -113,9 +128,7 @@
                   213
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -126,9 +139,7 @@
                   142
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -189,9 +200,7 @@
                   63
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -202,9 +211,7 @@
                   148
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -244,9 +251,7 @@
                   84
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 1
             }
           ]
@@ -279,9 +284,7 @@
                   67
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -292,9 +295,7 @@
                   92
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -320,9 +321,7 @@
                   66
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -333,9 +332,7 @@
                   130
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 1
             }
           ]
@@ -361,9 +358,7 @@
                   127
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             },
             {
@@ -374,9 +369,7 @@
                   203
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -409,9 +402,7 @@
                   57
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -422,9 +413,7 @@
                   163
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 1
             }
           ]
@@ -450,9 +439,7 @@
                   49
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -467,9 +454,7 @@
                   82
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -495,9 +480,7 @@
                   100
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -537,9 +520,7 @@
                   49
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -576,9 +557,7 @@
                   115
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -597,9 +576,7 @@
                   76
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -610,9 +587,7 @@
                   143
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -631,9 +606,7 @@
                   81
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -644,9 +617,7 @@
                   136
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -686,9 +657,7 @@
                   84
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -703,9 +672,7 @@
                   116
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -724,9 +691,7 @@
                   48
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -749,9 +714,7 @@
                   69
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -777,9 +740,7 @@
                   70
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -790,9 +751,7 @@
                   115
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -811,9 +770,7 @@
                   124
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 1
             }
           ]
@@ -832,9 +789,7 @@
                   66
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -849,9 +804,7 @@
                   142
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 1
             }
           ]
@@ -874,9 +827,7 @@
                   122
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -891,9 +842,7 @@
                   122
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 1
             }
           ]
@@ -933,9 +882,7 @@
                   71
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -965,9 +912,7 @@
                   112
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -978,9 +923,7 @@
                   166
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -999,9 +942,7 @@
                   69
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -1012,9 +953,7 @@
                   163
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 1
             }
           ]
@@ -1033,9 +972,7 @@
                   75
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -1046,9 +983,7 @@
                   153
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 1
             }
           ]
@@ -1074,9 +1009,7 @@
                   65
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -1087,9 +1020,7 @@
                   115
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 1
             }
           ]
@@ -1108,9 +1039,7 @@
                   80
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -1121,9 +1050,7 @@
                   163
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -1149,9 +1076,7 @@
                   38
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -1162,9 +1087,7 @@
                   91
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 1
             }
           ]
@@ -1183,9 +1106,7 @@
                   78
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -1196,9 +1117,7 @@
                   128
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 1
             }
           ]
@@ -1224,9 +1143,7 @@
                   46
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -1237,9 +1154,7 @@
                   139
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -1258,9 +1173,7 @@
                   70
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -1271,9 +1184,7 @@
                   164
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 1
             }
           ]
@@ -1313,9 +1224,7 @@
                   70
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -1326,9 +1235,7 @@
                   164
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 1
             }
           ]
@@ -1347,9 +1254,7 @@
                   70
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -1360,9 +1265,7 @@
                   164
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 1
             }
           ]
@@ -1381,9 +1284,7 @@
                   86
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -1394,9 +1295,7 @@
                   140
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 1
             }
           ]
@@ -1427,29 +1326,39 @@
           "text": "Das Feld 'wert' muss mit dem Schutzattribute private deklariert werden"
         },
         {
-          "text":
-            "Die Klasse muss eine Methode bereitstellen, die das Auslesen des Feldes 'wert' ermöglicht"
+          "text": "Die Klasse muss eine Methode bereitstellen, die das Auslesen des Feldes 'wert' ermöglicht"
         }
       ],
-      "referenceAnswers": [{
-        "text":
-          "Das Feld 'wert' muss mit dem Schutzattribute private deklariert werden. Zusätzlich muss die Klasse eine Methode bereitstellen, die das Auslesen dieses Feldes ermöglicht.",
-        "aspects": [
-          {
-            "text": "Das Feld 'wert' muss mit dem Schutzattribute private deklariert werden",
-            "aIdx": 0,
-            "elements": [[0, 72]],
-            "label": 0
-          },
-          {
-            "text":
-              "Zusätzlich muss die Klasse eine Methode bereitstellen, die das Auslesen dieses Feldes ermöglicht",
-            "aIdx": 1,
-            "elements": [[74, 170]],
-            "label": 0
-          }
-        ]
-      }],
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Das Feld 'wert' muss mit dem Schutzattribute private deklariert werden. Zusätzlich muss die Klasse eine Methode bereitstellen, die das Auslesen dieses Feldes ermöglicht.",
+          "aspects": [
+            {
+              "text": "Das Feld 'wert' muss mit dem Schutzattribute private deklariert werden",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  72
+                ]
+              ],
+              "label": 0
+            },
+            {
+              "text": "Zusätzlich muss die Klasse eine Methode bereitstellen, die das Auslesen dieses Feldes ermöglicht",
+              "aIdx": 1,
+              "elements": [
+                [
+                  74,
+                  170
+                ]
+              ],
+              "label": 0
+            }
+          ]
+        }
+      ],
       "studentAnswers": [
         {
           "text": "Ich setze \"\"Wert\"\" auf private und schreibe in der Beispielklasse einen Getter. So kann \"\"Wert\"\" gelesen von überall gelesen werden udn bleibt schreibgeschützt.",
@@ -1465,9 +1374,7 @@
                   30
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -1482,9 +1389,7 @@
                   80
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -1503,9 +1408,7 @@
                   91
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -1520,9 +1423,7 @@
                   159
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 1
             }
           ]
@@ -1541,9 +1442,7 @@
                   64
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -1562,9 +1461,7 @@
                   51
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -1579,9 +1476,7 @@
                   109
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 1
             }
           ]
@@ -1600,9 +1495,7 @@
                   23
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -1621,9 +1514,7 @@
                   57
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -1638,9 +1529,7 @@
                   94
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -1670,9 +1559,7 @@
                   109
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -1691,9 +1578,7 @@
                   45
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -1712,9 +1597,7 @@
                   33
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -1733,9 +1616,7 @@
                   37
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -1754,17 +1635,13 @@
                   47
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
               "text": "Ein 'public' Getter macht das Auslesen, von überall möglich",
               "elements": [],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -1783,9 +1660,7 @@
                   46
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -1804,9 +1679,7 @@
                   28
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -1825,9 +1698,7 @@
                   63
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -1838,9 +1709,7 @@
                   183
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -1859,9 +1728,7 @@
                   53
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -1872,9 +1739,7 @@
                   217
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -1893,9 +1758,7 @@
                   53
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -1910,9 +1773,7 @@
                   89
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -1931,9 +1792,7 @@
                   39
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -1948,9 +1807,7 @@
                   88
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -1969,9 +1826,7 @@
                   25
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -1990,9 +1845,7 @@
                   83
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -2003,9 +1856,7 @@
                   164
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2024,9 +1875,7 @@
                   63
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -2041,9 +1890,7 @@
                   125
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2062,9 +1909,7 @@
                   31
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -2075,9 +1920,7 @@
                   78
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2096,9 +1939,7 @@
                   77
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -2109,9 +1950,7 @@
                   152
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2130,9 +1969,7 @@
                   33
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             },
             {
@@ -2143,9 +1980,7 @@
                   134
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2164,9 +1999,7 @@
                   62
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -2185,9 +2018,7 @@
                   32
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -2206,9 +2037,7 @@
                   92
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -2227,9 +2056,7 @@
                   65
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -2240,9 +2067,7 @@
                   24
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2268,9 +2093,7 @@
                   29
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -2282,37 +2105,18 @@
           "correctionOrComment": "Das geht, indem man den Wert auf 'private' setzt und ihn danach mit 'Getter' und 'Setter' aufruft. Dadurch kann man nur innerhalb der Beispielklasse den Wert verändern.",
           "aspects": [
             {
-              "text": "Das geht, indem man den Wert auf 'private' setzt",
+              "text": "Das geht, indem man den Wert auf 'private' setzt und ihn danach mit ;; 'Setter' aufruft",
               "elements": [
                 [
                   0,
-                  48
-                ]
-              ],
-              "aIdx": [
-                0
-              ],
-              "label": 0
-            },
-            {
-              "text": "Das geht, indem man ;; ihn danach mit ;; Setter' aufruft",
-              "elements": [
-                [
-                  0,
-                  19
-                ],
-                [
-                  53,
                   67
                 ],
                 [
-                  82,
+                  81,
                   97
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             },
             {
@@ -2331,9 +2135,7 @@
                   97
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2352,9 +2154,7 @@
                   60
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -2365,9 +2165,7 @@
                   110
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2386,9 +2184,7 @@
                   43
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -2399,9 +2195,7 @@
                   122
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2420,9 +2214,7 @@
                   122
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -2441,23 +2233,8 @@
                   75
                 ]
               ],
-              "aIdx": [
-                0
-              ],
-              "label": 2
-            },
-            {
-              "text": "Das geht mit der Gettermethode",
-              "elements": [
-                [
-                  0,
-                  30
-                ]
-              ],
-              "aIdx": [
-                1
-              ],
-              "label": 0
+              "aIdx": 0,
+              "label": 1
             },
             {
               "text": "Die Beispielklasse ;; kann aber von außerhalb mit der Gettermethode gelesen werden",
@@ -2471,10 +2248,8 @@
                   137
                 ]
               ],
-              "aIdx": [
-                1
-              ],
-              "label": 2
+              "aIdx": 1,
+              "label": 1
             }
           ]
         },
@@ -2492,9 +2267,7 @@
                   46
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2513,9 +2286,7 @@
                   47
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 1
             },
             {
@@ -2526,9 +2297,7 @@
                   321
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2547,9 +2316,7 @@
                   59
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2572,9 +2339,7 @@
                   58
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -2585,9 +2350,7 @@
                   124
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2606,9 +2369,7 @@
                   36
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -2619,9 +2380,7 @@
                   111
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2647,9 +2406,7 @@
                   47
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 1
             },
             {
@@ -2660,9 +2417,7 @@
                   122
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2685,9 +2440,7 @@
                   30
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             },
             {
@@ -2698,9 +2451,7 @@
                   19
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2719,9 +2470,7 @@
                   45
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -2732,9 +2481,7 @@
                   184
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2753,9 +2500,7 @@
                   149
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             },
             {
@@ -2766,9 +2511,7 @@
                   83
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 2
             }
           ]
@@ -2787,9 +2530,7 @@
                   53
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 1
             },
             {
@@ -2800,9 +2541,7 @@
                   137
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2821,9 +2560,7 @@
                   67
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 1
             },
             {
@@ -2834,9 +2571,7 @@
                   154
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2855,9 +2590,7 @@
                   35
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -2876,9 +2609,7 @@
                   30
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             },
             {
@@ -2893,9 +2624,7 @@
                   84
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2907,29 +2636,14 @@
           "correctionOrComment": "Zuerst muss das Schutzattribut 'private' sein. Danach kann man mit einem Setter die Variable innerhalb der Klasse schreiben und mit einem Getter überall lesen.",
           "aspects": [
             {
-              "text": "Zuerst muss das Schutzattribut 'private' sein",
+              "text": "Zuerst muss das Schutzattribut 'private' sein. Danach kann man mit einem Setter die Variable innerhalb der Klasse schreiben",
               "elements": [
                 [
                   0,
-                  45
-                ]
-              ],
-              "aIdx": [
-                0
-              ],
-              "label": 1
-            },
-            {
-              "text": "Danach kann man mit einem Setter die Variable innerhalb der Klasse schreiben",
-              "elements": [
-                [
-                  47,
                   123
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             },
             {
@@ -2948,9 +2662,7 @@
                   158
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2969,9 +2681,7 @@
                   43
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -2990,9 +2700,7 @@
                   291
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -3003,9 +2711,7 @@
                   253
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -3024,9 +2730,7 @@
                   26
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -3037,9 +2741,7 @@
                   137
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -3058,9 +2760,7 @@
                   43
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -3079,9 +2779,7 @@
                   24
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -3100,9 +2798,7 @@
                   63
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -3117,9 +2813,7 @@
                   140
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -3139,24 +2833,36 @@
           "text": "Schnittstellen können keine implementierten Methoden bereitstellen"
         }
       ],
-      "referenceAnswers": [{
-        "text":
-          "Man muss eine abstrakte Klasse verwenden, weil Schnittstellen keine implementierten Methoden bereitstellen können.",
-        "aspects": [
-          {
-            "text": "Man muss eine abstrakte Klasse verwenden",
-            "aIdx": 0,
-            "elements": [[0, 40]],
-            "label": 0
-          },
-          {
-            "text": "weil Schnittstellen keine implementierten Methoden bereitstellen können",
-            "aIdx": 1,
-            "elements": [[42, 113]],
-            "label": 0
-          }
-        ]
-      }],
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Man muss eine abstrakte Klasse verwenden, weil Schnittstellen keine implementierten Methoden bereitstellen können.",
+          "aspects": [
+            {
+              "text": "Man muss eine abstrakte Klasse verwenden",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  40
+                ]
+              ],
+              "label": 0
+            },
+            {
+              "text": "weil Schnittstellen keine implementierten Methoden bereitstellen können",
+              "aIdx": 1,
+              "elements": [
+                [
+                  42,
+                  113
+                ]
+              ],
+              "label": 0
+            }
+          ]
+        }
+      ],
       "studentAnswers": [
         {
           "text": "Abstrakte Klassen Basisklassen vererben nur implemetierte Mehtoden, Schnittstellen stellen keine implementierten Methoden bereit Abstrakte klassen werden durch abstract class deklariert",
@@ -3172,9 +2878,7 @@
                   115
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -3193,9 +2897,7 @@
                   35
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -3206,9 +2908,7 @@
                   97
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -3227,9 +2927,7 @@
                   32
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             },
             {
@@ -3240,9 +2938,7 @@
                   81
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 2
             }
           ]
@@ -3261,9 +2957,7 @@
                   54
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -3282,9 +2976,7 @@
                   385
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -3295,9 +2987,7 @@
                   111
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -3323,9 +3013,7 @@
                   31
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -3336,9 +3024,7 @@
                   95
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -3357,9 +3043,7 @@
                   35
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -3370,9 +3054,7 @@
                   99
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -3391,9 +3073,7 @@
                   34
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -3404,9 +3084,7 @@
                   107
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -3425,9 +3103,7 @@
                   32
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             },
             {
@@ -3438,9 +3114,7 @@
                   87
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 2
             }
           ]
@@ -3459,9 +3133,7 @@
                   33
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -3487,9 +3159,7 @@
                   35
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -3500,9 +3170,7 @@
                   107
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -3521,9 +3189,7 @@
                   35
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -3542,9 +3208,7 @@
                   127
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             },
             {
@@ -3555,9 +3219,7 @@
                   87
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 2
             }
           ]
@@ -3576,9 +3238,7 @@
                   35
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -3597,9 +3257,7 @@
                   145
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -3610,9 +3268,7 @@
                   47
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -3631,9 +3287,7 @@
                   35
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -3652,9 +3306,7 @@
                   35
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -3673,9 +3325,7 @@
                   48
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -3690,9 +3340,7 @@
                   243
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -3711,9 +3359,7 @@
                   31
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -3732,9 +3378,7 @@
                   32
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -3753,9 +3397,7 @@
                   58
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -3766,9 +3408,7 @@
                   163
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 1
             }
           ]
@@ -3787,9 +3427,7 @@
                   34
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -3800,9 +3438,7 @@
                   125
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -3821,9 +3457,7 @@
                   35
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -3842,9 +3476,7 @@
                   34
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -3863,9 +3495,7 @@
                   34
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -3876,9 +3506,7 @@
                   240
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -3897,9 +3525,7 @@
                   31
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -3918,9 +3544,7 @@
                   35
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -3939,9 +3563,7 @@
                   35
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -3960,9 +3582,7 @@
                   131
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -3981,9 +3601,7 @@
                   36
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -3994,9 +3612,7 @@
                   99
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 1
             }
           ]
@@ -4015,9 +3631,7 @@
                   35
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -4036,9 +3650,7 @@
                   34
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -4049,9 +3661,7 @@
                   164
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -4070,9 +3680,7 @@
                   51
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             },
             {
@@ -4083,9 +3691,7 @@
                   116
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 2
             }
           ]
@@ -4104,9 +3710,7 @@
                   34
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -4117,9 +3721,7 @@
                   83
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 1
             }
           ]
@@ -4138,9 +3740,7 @@
                   34
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -4155,9 +3755,7 @@
                   124
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -4176,9 +3774,7 @@
                   41
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -4197,9 +3793,7 @@
                   35
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -4210,9 +3804,7 @@
                   99
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -4231,9 +3823,7 @@
                   35
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -4244,9 +3834,7 @@
                   110
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 2
             }
           ]
@@ -4265,9 +3853,7 @@
                   31
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -4286,9 +3872,7 @@
                   32
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -4307,9 +3891,7 @@
                   31
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -4320,9 +3902,7 @@
                   99
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -4341,9 +3921,7 @@
                   31
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -4354,9 +3932,7 @@
                   144
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -4389,9 +3965,7 @@
                   31
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -4410,9 +3984,7 @@
                   28
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -4431,9 +4003,7 @@
                   31
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -4452,9 +4022,7 @@
                   35
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -4465,9 +4033,7 @@
                   107
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -4493,9 +4059,7 @@
                   31
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -4514,9 +4078,7 @@
                   37
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -4535,9 +4097,7 @@
                   31
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -4548,9 +4108,7 @@
                   118
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -4569,9 +4127,7 @@
                   20
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -4590,9 +4146,7 @@
                   31
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -4612,24 +4166,36 @@
           "text": "Ein Objekt ist eine konkrete Instanz einer Klasse"
         }
       ],
-      "referenceAnswers": [{
-        "text":
-          "Eine Klasse ist der Bauplan für ein Objekt. Ein Objekt ist eine konkrete Instanz einer Klasse.",
-        "aspects": [
-          {
-            "text": "Eine Klasse ist der Bauplan für ein Objekt",
-            "aIdx": 0,
-            "elements": [[0, 42]],
-            "label": 0
-          },
-          {
-            "text": "Ein Objekt ist eine konkrete Instanz einer Klasse",
-            "aIdx": 1,
-            "elements": [[44, 93]],
-            "label": 0
-          }
-        ]
-      }],
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Eine Klasse ist der Bauplan für ein Objekt. Ein Objekt ist eine konkrete Instanz einer Klasse.",
+          "aspects": [
+            {
+              "text": "Eine Klasse ist der Bauplan für ein Objekt",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  42
+                ]
+              ],
+              "label": 0
+            },
+            {
+              "text": "Ein Objekt ist eine konkrete Instanz einer Klasse",
+              "aIdx": 1,
+              "elements": [
+                [
+                  44,
+                  93
+                ]
+              ],
+              "label": 0
+            }
+          ]
+        }
+      ],
       "studentAnswers": [
         {
           "text": "Alle Objekte haben einen Bauplan und dieser Bauplan des Objektes ist die klasse. Objekte haben den Typ ihrer Klasse. Die Klasse eines Objekte ist wie bei uns Menschen die DNA. Die Klasse bestimmt Aussehen und Eigenschaften. Aber ist selber nicht das Objekt.",
@@ -4645,9 +4211,7 @@
                   79
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -4658,9 +4222,7 @@
                   115
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 1
             }
           ]
@@ -4679,9 +4241,7 @@
                   86
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -4692,9 +4252,7 @@
                   126
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -4713,9 +4271,7 @@
                   84
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 2
             }
           ]
@@ -4734,9 +4290,7 @@
                   41
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -4755,9 +4309,7 @@
                   41
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -4768,9 +4320,7 @@
                   92
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -4789,9 +4339,7 @@
                   87
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -4802,9 +4350,7 @@
                   170
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -4823,9 +4369,7 @@
                   238
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -4844,9 +4388,7 @@
                   37
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -4865,9 +4407,7 @@
                   129
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 1
             }
           ]
@@ -4886,9 +4426,7 @@
                   51
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -4899,9 +4437,7 @@
                   92
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -4920,9 +4456,7 @@
                   48
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 1
             },
             {
@@ -4933,9 +4467,7 @@
                   113
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 1
             }
           ]
@@ -4954,9 +4486,7 @@
                   86
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -4967,9 +4497,7 @@
                   126
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -4995,9 +4523,7 @@
                   133
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -5016,9 +4542,7 @@
                   46
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -5029,9 +4553,7 @@
                   98
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 1
             }
           ]
@@ -5050,9 +4572,7 @@
                   41
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -5063,9 +4583,7 @@
                   70
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 1
             }
           ]
@@ -5084,9 +4602,7 @@
                   39
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -5112,9 +4628,7 @@
                   41
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -5125,9 +4639,7 @@
                   84
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -5160,9 +4672,7 @@
                   37
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -5209,9 +4719,7 @@
                   112
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -5222,9 +4730,7 @@
                   153
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -5243,9 +4749,7 @@
                   41
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -5256,9 +4760,7 @@
                   80
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -5277,9 +4779,7 @@
                   41
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -5290,9 +4790,7 @@
                   116
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -5311,9 +4809,7 @@
                   106
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -5324,9 +4820,7 @@
                   142
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -5345,9 +4839,7 @@
                   41
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -5377,30 +4869,51 @@
           "text": "Instanzvariable existiert einmal pro Objekt"
         }
       ],
-      "referenceAnswers": [{
-        "text":
-          "Klassenvariablen existieren einmal pro Klasse, auch ohne eine konkrete Instanz. Instanzvariable existiert einmal pro Objekt.",
-        "aspects": [
-          {
-            "text": "Klassenvariablen existieren einmal pro Klasse",
-            "aIdx": 0,
-            "elements": [[0, 45]],
-            "label": 0
-          },
-          {
-            "text": "Klassenvariablen existieren ;; auch ohne eine konkrete Instanz",
-            "aIdx": 1,
-            "elements": [[0, 37], [47, 78]],
-            "label": 0
-          },
-          {
-            "text": "Instanzvariable existiert einmal pro Objekt",
-            "aIdx": 2,
-            "elements": [[80, 123]],
-            "label": 0
-          }
-        ]
-      }],
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Klassenvariablen existieren einmal pro Klasse, auch ohne eine konkrete Instanz. Instanzvariable existiert einmal pro Objekt.",
+          "aspects": [
+            {
+              "text": "Klassenvariablen existieren einmal pro Klasse",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  45
+                ]
+              ],
+              "label": 0
+            },
+            {
+              "text": "Klassenvariablen existieren ;; auch ohne eine konkrete Instanz",
+              "aIdx": 1,
+              "elements": [
+                [
+                  0,
+                  37
+                ],
+                [
+                  47,
+                  78
+                ]
+              ],
+              "label": 0
+            },
+            {
+              "text": "Instanzvariable existiert einmal pro Objekt",
+              "aIdx": 2,
+              "elements": [
+                [
+                  80,
+                  123
+                ]
+              ],
+              "label": 0
+            }
+          ]
+        }
+      ],
       "studentAnswers": [
         {
           "text": "Klassenvariable ist für die ganze klasse bestimmte variable und die Instanzvariable ist für den jeweiligen Bereich.",
@@ -5416,9 +4929,7 @@
                   69
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -5465,9 +4976,7 @@
                   53
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -5478,9 +4987,7 @@
                   93
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -5499,9 +5006,7 @@
                   89
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             }
           ]
@@ -5562,23 +5067,33 @@
                   40
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             },
             {
-              "text": "statische Variablen gehören zu der Klasse und nicht zum einzelnen Objekt",
+              "text": "statische Variablen gehören zu der Klasse",
               "elements": [
                 [
                   45,
+                  86
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "statische Variablen gehören ;; nicht zum einzelnen Objekt",
+              "elements": [
+                [
+                  45,
+                  72
+                ],
+                [
+                  91,
                   117
                 ]
               ],
-              "aIdx": [
-                0,
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             }
           ]
@@ -5611,9 +5126,7 @@
                   57
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -5624,9 +5137,7 @@
                   95
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -5652,9 +5163,7 @@
                   150
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -5708,9 +5217,7 @@
                   107
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -5721,9 +5228,7 @@
                   60
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -5777,9 +5282,7 @@
                   85
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -5812,9 +5315,7 @@
                   119
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -5825,9 +5326,7 @@
                   71
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -5846,9 +5345,7 @@
                   77
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -5859,9 +5356,7 @@
                   173
                 ]
               ],
-              "aIdx": [
-                1
-              ],
+              "aIdx": 1,
               "label": 0
             },
             {
@@ -5872,9 +5367,7 @@
                   220
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -5928,9 +5421,7 @@
                   40
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -5963,9 +5454,7 @@
                   38
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -5988,9 +5477,7 @@
                   133
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -6001,9 +5488,7 @@
                   74
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -6043,9 +5528,7 @@
                   49
                 ]
               ],
-              "aIdx": [
-                0
-              ],
+              "aIdx": 0,
               "label": 0
             },
             {
@@ -6056,9 +5539,7 @@
                   150
                 ]
               ],
-              "aIdx": [
-                2
-              ],
+              "aIdx": 2,
               "label": 0
             }
           ]
@@ -6081,7 +5562,2689 @@
           "text": "this",
           "id": "144",
           "answerCategory": "none",
-          "correctionOrComment": "this"
+          "correctionOrComment": "this",
+          "aspects": []
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "title": "Swing Ablauf",
+      "text": "In einer Swing-Demo ändert sich beim Klick auf einen Button der Text auf dem Button. Wie sieht der mehrschrittige Ablauf \"\"hinter den Kulissen\"\" aus?",
+      "type": "procedure",
+      "aspects": [
+        {
+          "text": "Der Klick auf den Button erzeugt ein ActionEvent"
+        },
+        {
+          "text": "Das ActionEvent wird von einem Listener aufgefangen"
+        },
+        {
+          "text": "Der Listener ist beim Button registriert",
+          "implied": true
+        },
+        {
+          "text": "Der Listener ändert den Text"
+        }
+      ],
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Der Klick auf den Button erzeugt ein ActionEvent. Das ActionEvent wird von einem Listener aufgefangen, der beim Button registriert ist. Der Listener ändert daraufhin den Text.",
+          "aspects": [
+            {
+              "text": "Der Klick auf den Button erzeugt ein ActionEvent",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  48
+                ]
+              ],
+              "label": 0
+            },
+            {
+              "text": "Das ActionEvent wird von einem Listener aufgefangen",
+              "aIdx": 1,
+              "elements": [
+                [
+                  50,
+                  101
+                ]
+              ],
+              "label": 0
+            },
+            {
+              "text": "der beim Button registriert ist",
+              "aIdx": 2,
+              "elements": [
+                [
+                  103,
+                  134
+                ]
+              ],
+              "label": 0
+            },
+            {
+              "text": "Der Listener ändert daraufhin den Text",
+              "aIdx": 3,
+              "elements": [
+                [
+                  136,
+                  176
+                ]
+              ],
+              "label": 0
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "id": "1",
+          "text": "Bei dem Klick wird ActionListener ausgeführt. Nach dem Klick wird ActionPerformed ausgeführt",
+          "aspects": [
+            {
+              "text": "Bei dem Klick wird ActionListener ausgeführt",
+              "elements": [
+                [
+                  0,
+                  44
+                ]
+              ],
+              "aIdx": 0,
+              "label": 2
+            }
+          ],
+          "correctionOrComment": "Bei dem Klick wird ActionListener ausgeführt. Nach dem Klick wird ActionPerformed ausgeführt"
+        },
+        {
+          "id": "2",
+          "text": "Es wird nach dem Klick auf einen Button ein ActionEvent ausgeführt, damit das Programm weißt es wurde geklickt und der ActionListener führt es dann aus.",
+          "aspects": [
+            {
+              "text": "Es wird nach dem Klick auf einen Button ein ActionEvent ausgeführt",
+              "elements": [
+                [
+                  0,
+                  66
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "der ActionListener führt es dann aus",
+              "elements": [
+                [
+                  115,
+                  151
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Es wird nach dem Klick auf einen Button ein ActionEvent ausgeführt, damit das Programm weißt, es wurde geklickt, und der ActionListener führt es dann aus."
+        },
+        {
+          "id": "3",
+          "text": "Nach dem Klick wird ein ActionEvent ausgeführt.",
+          "aspects": [
+            {
+              "text": "Nach dem Klick wird ein ActionEvent ausgeführt",
+              "elements": [
+                [
+                  0,
+                  46
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Nach dem Klick wird ein ActionEvent ausgeführt."
+        },
+        {
+          "id": "4",
+          "text": "Beim Klicken entsteht ein ActionEvent und man hängt einen Listrener dran an das Objekt. Danach Checkt der Listener ob er einen Event bekommen hat und erst danach führt er seinen Code aus.",
+          "aspects": [
+            {
+              "text": "Beim Klicken entsteht ein ActionEvent",
+              "elements": [
+                [
+                  0,
+                  37
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Danach Checkt der Listener ob er einen Event bekommen",
+              "elements": [
+                [
+                  88,
+                  141
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1
+            },
+            {
+              "text": "man hängt einen Listrener dran an das Objekt",
+              "elements": [
+                [
+                  42,
+                  86
+                ]
+              ],
+              "aIdx": 2,
+              "label": 1
+            },
+            {
+              "text": "erst danach führt er seinen Code aus",
+              "elements": [
+                [
+                  150,
+                  186
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Beim Klicken entsteht ein ActionEvent und man hängt einen Listrener dran an das Objekt. Danach Checkt der Listener ob er einen Event bekommen hat und erst danach führt er seinen Code aus."
+        },
+        {
+          "id": "5",
+          "text": "Man erstellt ein Button, fügt beim code byklick ein damit bei einem klick das Programm reagiert und dann fügt man noch Variablen hinzu die der Button annehmen kann.",
+          "aspects": [],
+          "correctionOrComment": "Man erstellt ein Button, fügt beim code byklick ein damit bei einem klick das Programm reagiert und dann fügt man noch Variablen hinzu die der Button annehmen kann."
+        },
+        {
+          "id": "6",
+          "text": "1.Durch den Klick wird ein Event erzeugt. 2.Klick wird vom ActionListener bemerkt, der mit dem Button verbunden ist. 3.Dann wird die jeweilige Methode dadurch aufgerufen.",
+          "aspects": [
+            {
+              "text": "Durch den Klick wird ein Event erzeugt",
+              "elements": [
+                [
+                  2,
+                  40
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Klick wird vom ActionListener bemerkt",
+              "elements": [
+                [
+                  44,
+                  81
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": "ActionListener ;; der mit dem Button verbunden ist",
+              "elements": [
+                [
+                  59,
+                  73
+                ],
+                [
+                  83,
+                  115
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0
+            },
+            {
+              "text": "Dann wird die jeweilige Methode dadurch aufgerufen",
+              "elements": [
+                [
+                  119,
+                  169
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "1.Durch den Klick wird ein Event erzeugt. 2.Klick wird vom ActionListener bemerkt, der mit dem Button verbunden ist. 3.Dann wird die jeweilige Methode dadurch aufgerufen."
+        },
+        {
+          "id": "7",
+          "text": "Durch den Klick auf den Button wird eine Action ausgelöst. Diese Action wird von einem Listener \"\"bemerkt\"\" (umgesetzt) und dieser führt dann den Code aus, um den Text zu ändern.",
+          "aspects": [
+            {
+              "text": "Durch den Klick auf den Button wird eine Action ausgelöst",
+              "elements": [
+                [
+                  0,
+                  57
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Diese Action wird von einem Listener bemerkt",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": "dieser führt dann den Code aus, um den Text zu ändern",
+              "elements": [
+                [
+                  124,
+                  177
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Durch den Klick auf den Button wird eine Action ausgelöst. Diese Action wird von einem Listener bemerkt (umgesetzt) und dieser führt dann den Code aus, um den Text zu ändern."
+        },
+        {
+          "id": "8",
+          "text": "Man fügt dem Button einen ActionEvent ein der wiederrum einen ActionListener (Anonyme Klasse) erstellt und in ihn verändern wir das Text in dem Button mit einer setText() Methode.",
+          "aspects": [
+            {
+              "text": "Man fügt dem Button einen ActionEvent ein",
+              "elements": [
+                [
+                  0,
+                  41
+                ]
+              ],
+              "aIdx": 0,
+              "label": 2
+            },
+            {
+              "text": "der wiederrum einen ActionListener (Anonyme Klasse) erstellt ",
+              "elements": [
+                [
+                  42,
+                  102
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": "in ihm verändern wir den Text in dem Button",
+              "elements": [],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Man fügt dem Button einen ActionEvent ein der wiederrum einen ActionListener (Anonyme Klasse) erstellt und in ihm verändern wir den Text in dem Button mit einer setText() Methode."
+        },
+        {
+          "id": "9",
+          "text": "Ein Klick auf einen Button erzeugt ein ActionEvent und um auf Events zu reagieren, hängt man einen Listener an das Objekt, das Events erzeugen kann. Am Ende wenn der Listener ein Event gemeldet bekommt, führt er seinen Code aus.",
+          "aspects": [
+            {
+              "text": "Ein Klick auf einen Button erzeugt ein ActionEvent",
+              "elements": [
+                [
+                  0,
+                  50
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Am Ende wenn der Listener ein Event gemeldet bekommt",
+              "elements": [
+                [
+                  149,
+                  201
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": "um auf Events zu reagieren, hängt man einen Listener an das Objekt",
+              "elements": [
+                [
+                  55,
+                  121
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0
+            },
+            {
+              "text": "führt er seinen Code aus",
+              "elements": [
+                [
+                  203,
+                  227
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Ein Klick auf einen Button erzeugt ein ActionEvent und um auf Events zu reagieren, hängt man einen Listener an das Objekt, das Events erzeugen kann. Am Ende wenn der Listener ein Event gemeldet bekommt, führt er seinen Code aus."
+        },
+        {
+          "id": "10",
+          "text": "Beim Klick auf einen Button wird die MEin Klick auf einen Button erzeugt ein ActionEvent",
+          "aspects": [
+            {
+              "text": "Mein Klick auf einen Button erzeugt ein ActionEvent",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Mein Klick auf einen Button erzeugt ein ActionEvent"
+        },
+        {
+          "id": "11",
+          "text": "-> Key Event abfangen -> IF-Block auswerden (true/false) was wurde angeklickt -> neues Fenster anhand Ausgewerteter IF-Abfrage erstellen",
+          "aspects": [],
+          "correctionOrComment": "-> Key Event abfangen -> IF-Block auswerden (true/false) was wurde angeklickt -> neues Fenster anhand Ausgewerteter IF-Abfrage erstellen"
+        },
+        {
+          "id": "12",
+          "text": "-",
+          "aspects": [],
+          "correctionOrComment": "-"
+        },
+        {
+          "id": "13",
+          "text": "Beim Klick entsteht eine Aktion und schickt ein Signal an Listener und dies liefert die erwünschte Code. Bsp. Ok oder Weiter",
+          "aspects": [
+            {
+              "text": "Beim Klick entsteht eine Aktion ",
+              "elements": [
+                [
+                  0,
+                  31
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "schickt ein Signal an Listener",
+              "elements": [
+                [
+                  36,
+                  66
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": "dieser liefert den erwünschten Code",
+              "elements": [],
+              "aIdx": 3,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Beim Klick entsteht eine Aktion und schickt ein Signal an Listener und dieser liefert den erwünschten Code. Bsp. Ok oder Weiter"
+        },
+        {
+          "id": "14",
+          "text": "Ein Klick auf den Button erzeugt einen Action Event daraufhin hört der ActionListener den Klick bzw. die Information. Der",
+          "aspects": [
+            {
+              "text": "Ein Klick auf den Button erzeugt einen ActionEvent",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Daraufhin hört der ActionListener den Klick",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Ein Klick auf den Button erzeugt einen ActionEvent. Daraufhin hört der ActionListener den Klick"
+        },
+        {
+          "id": "15",
+          "text": "-",
+          "aspects": [],
+          "correctionOrComment": "-"
+        },
+        {
+          "id": "16",
+          "text": "wenn wir auf den Button klicken dann wird eine Action ausgelöst mit Actionlistener wird eine methode ausgeführt es wird ausgeführt was da drin programmiert wurde",
+          "aspects": [
+            {
+              "text": "Wenn wir auf den Button klicken dann wird eine Action ausgelöst",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Mit ActionListener wird eine Methode ausgeführt",
+              "elements": [],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Wenn wir auf den Button klicken dann wird eine Action ausgelöst. Mit ActionListener wird eine Methode ausgeführt. Es wird ausgeführt was da drin programmiert wurde"
+        },
+        {
+          "id": "17",
+          "text": "-",
+          "aspects": [],
+          "correctionOrComment": "-"
+        },
+        {
+          "id": "18",
+          "text": "Button drücken",
+          "aspects": [],
+          "correctionOrComment": "Button drücken"
+        },
+        {
+          "id": "19",
+          "text": "Ein Listener wartet auf einen Aufruf(Klick) des Benutzers. Beim Aufruf wird ruft der Listener eine Methode auf und lässt diese ausführen.",
+          "aspects": [
+            {
+              "text": "Ein Listener wartet auf einen Aufruf(Klick) des Benutzers",
+              "elements": [
+                [
+                  0,
+                  57
+                ]
+              ],
+              "aIdx": 2,
+              "label": 1
+            },
+            {
+              "text": "Beim Aufruf ruft der Listener eine Methode auf und lässt diese ausführen",
+              "elements": [],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Ein Listener wartet auf einen Aufruf(Klick) des Benutzers. Beim Aufruf ruft der Listener eine Methode auf und lässt diese ausführen."
+        },
+        {
+          "id": "20",
+          "text": "der Klick erezeugt ein event, welches von einem ActionListener empfangen wird. dieser ActionListener ist mit dem Button verbunden und kann dann die methode zum ändern des Buttons aufrufen ( zB seIcon())",
+          "aspects": [
+            {
+              "text": "Der Klick erezeugt ein Event",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "welches von einem ActionListener empfangen wird",
+              "elements": [
+                [
+                  30,
+                  77
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": "Dieser ActionListener ist mit dem Button verbunden ",
+              "elements": [],
+              "aIdx": 2,
+              "label": 0
+            },
+            {
+              "text": "Dieser ActionListener ;; kann dann die Methode zum Ändern des Buttons aufrufen",
+              "elements": [],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Der Klick erezeugt ein Event, welches von einem ActionListener empfangen wird. Dieser ActionListener ist mit dem Button verbunden und kann dann die Methode zum Ändern des Buttons aufrufen."
+        },
+        {
+          "id": "21",
+          "text": "-",
+          "aspects": [],
+          "correctionOrComment": "-"
+        },
+        {
+          "id": "22",
+          "text": "-ActionListener muss implementieren zum button -Methode ActionListener erstellen mit ActionPerformed und setText der veränderte Text",
+          "aspects": [],
+          "correctionOrComment": "-"
+        },
+        {
+          "id": "23",
+          "text": "Beim Klick auf einem Button wird ein Action Event ausgelöst, daß den vorhanden Text der vorher ausgegeben wurde durch den neuen Text erstetzt wird ( im Button Fenster).",
+          "aspects": [
+            {
+              "text": "Beim Klick auf einem Button wird ein ActionEvent ausgelöst",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "dass den vorhanden Text der vorher ausgegeben wurde durch den neuen Text erstetzt",
+              "elements": [],
+              "aIdx": 3,
+              "label": 2
+            }
+          ],
+          "correctionOrComment": "Beim Klick auf einem Button wird ein ActionEvent ausgelöst, dass den vorhanden Text der vorher ausgegeben wurde durch den neuen Text erstetzt."
+        },
+        {
+          "id": "24",
+          "text": "Jeder Klick erzeugt ein Event, um das Event zu verarbeiten braucht man einen Listener der dann den Code ausführt",
+          "aspects": [
+            {
+              "text": "Jeder Klick erzeugt ein Event",
+              "elements": [
+                [
+                  0,
+                  29
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "um das Event zu verarbeiten braucht man einen Listener",
+              "elements": [
+                [
+                  31,
+                  85
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": "einen Listener, der dann den Code ausführt",
+              "elements": [],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Jeder Klick erzeugt ein Event, um das Event zu verarbeiten braucht man einen Listener der dann den Code ausführt"
+        },
+        {
+          "id": "25",
+          "text": "Das Button-Objekt besitzt eine Listener-Instanz. Diese horcht auf das Klicken in Form eines ActionEvents. Wird ein Klicken registriert, ändert sich der Text.",
+          "aspects": [
+            {
+              "text": "Diese horcht auf das Klicken in Form eines ActionEvents",
+              "elements": [
+                [
+                  49,
+                  104
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Diese horcht auf das Klicken in Form eines ActionEvents",
+              "elements": [
+                [
+                  49,
+                  104
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": "Das Button-Objekt besitzt eine Listener-Instanz",
+              "elements": [
+                [
+                  0,
+                  47
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0
+            },
+            {
+              "text": "Wird ein Klicken registriert, ändert sich der Text",
+              "elements": [
+                [
+                  106,
+                  156
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Das Button-Objekt besitzt eine Listener-Instanz. Diese horcht auf das Klicken in Form eines ActionEvents. Wird ein Klicken registriert, ändert sich der Text."
+        },
+        {
+          "id": "26",
+          "text": "Der User klickt den Button und löst damit eine Action aus. Der Actionlistener wird durch den Klick aktiviert und führt somit eine Methode aus, die in seinem Rumpf steht, welche den Text auf dem Button aktualisiert und ausgibt.",
+          "aspects": [
+            {
+              "text": "Der User klickt den Button und löst damit eine Action aus",
+              "elements": [
+                [
+                  0,
+                  57
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Der ActionListener wird durch den Klick aktiviert ",
+              "elements": [],
+              "aIdx": 2,
+              "label": 0
+            },
+            {
+              "text": "Der ActionListener ;; führt somit eine Methode aus, die in seinem Rumpf steht, welche den Text auf dem Button aktualisiert",
+              "elements": [
+                [
+                  113,
+                  213
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Der User klickt den Button und löst damit eine Action aus. Der ActionListener wird durch den Klick aktiviert und führt somit eine Methode aus, die in seinem Rumpf steht, welche den Text auf dem Button aktualisiert und ausgibt."
+        },
+        {
+          "id": "27",
+          "text": "Beim Klick auf den Button handelt es sich um ein sogenanntes Action-Event. Am entsprechenden Button hängt ein sogennater Listener/ ein Listener-Objekt, welches auf den Eintritt des Events \"\"Klick\"\" \"\"wartet\"\", diesen registriert und anschließend seinen zugehörigen Code (hier ändere den Text auf dem Button) ausführt.",
+          "aspects": [
+            {
+              "text": "Beim Klick auf den Button handelt es sich um ein sogenanntes ActionEvent",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "ein sogennater Listener, welcher auf den Eintritt des KlickEvents  wartet",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": "Am entsprechenden Button hängt ein sogennater Listener",
+              "elements": [
+                [
+                  75,
+                  129
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0
+            },
+            {
+              "text": "ein sogennater Listener, welcher ;; anschließend seinen zugehörigen Code, hier ändere den Text auf dem Button, ausführt",
+              "elements": [],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Beim Klick auf den Button handelt es sich um ein sogenanntes ActionEvent. Am entsprechenden Button hängt ein sogennater Listener, welcher auf den Eintritt des KlickEvents  wartet, diesen registriert und anschließend seinen zugehörigen Code, hier ändere den Text auf dem Button, ausführt."
+        },
+        {
+          "id": "28",
+          "text": "Bevor auf den Klick reagiert werden kann muss dieser zunächst registriert und dann weitergegeben werden. Der listener erzeugt ein Action Event.",
+          "aspects": [
+            {
+              "text": "Der Listener erzeugt ein Action Event",
+              "elements": [],
+              "aIdx": 0,
+              "label": 2
+            },
+            {
+              "text": "Bevor auf den Klick reagiert werden kann muss dieser zunächst registriert und dann weitergegeben werden",
+              "elements": [
+                [
+                  0,
+                  103
+                ]
+              ],
+              "aIdx": 2,
+              "label": 2
+            }
+          ],
+          "correctionOrComment": "Bevor auf den Klick reagiert werden kann muss dieser zunächst registriert und dann weitergegeben werden. Der Listener erzeugt ein Action Event."
+        },
+        {
+          "id": "29",
+          "text": "Auf dem Button wird eine ActionList zugeordent. Diese sagt was der Button ausführen soll.",
+          "aspects": [
+            {
+              "text": "Auf dem Button wird eine ActionList zugeordent",
+              "elements": [
+                [
+                  0,
+                  46
+                ]
+              ],
+              "aIdx": 2,
+              "label": 1
+            },
+            {
+              "text": "Diese sagt was der Button ausführen soll",
+              "elements": [
+                [
+                  48,
+                  88
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Auf dem Button wird eine ActionList zugeordent. Diese sagt was der Button ausführen soll."
+        },
+        {
+          "id": "30",
+          "text": "Beim Klick auf den Button wird ein ActionEvent erzeugt. Daraufhin hängt man einen Listener an um an weitere Events wie Mausklicks usw. aufmerksam zu machen. Der Listener fängt so weitere Events ab und erzeugt so den Code.",
+          "aspects": [
+            {
+              "text": "Beim Klick auf den Button wird ein ActionEvent erzeugt",
+              "elements": [
+                [
+                  0,
+                  54
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Daraufhin hängt man einen Listener an um an weitere Events wie Mausklicks usw. aufmerksam zu machen",
+              "elements": [
+                [
+                  56,
+                  155
+                ]
+              ],
+              "aIdx": 2,
+              "label": 1
+            },
+            {
+              "text": "Der Listener fängt so weitere Events ab",
+              "elements": [
+                [
+                  157,
+                  196
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": "Der Listener ;; erzeugt so den Code",
+              "elements": [
+                [
+                  157,
+                  169
+                ],
+                [
+                  201,
+                  220
+                ]
+              ],
+              "aIdx": 3,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Beim Klick auf den Button wird ein ActionEvent erzeugt. Daraufhin hängt man einen Listener an um an weitere Events wie Mausklicks usw. aufmerksam zu machen. Der Listener fängt so weitere Events ab und erzeugt so den Code."
+        },
+        {
+          "id": "31",
+          "text": "Dem Button wird ein ActionListener zugeordnet, wird nun auf den Button geklickt, so wird die Methode des ActionListeners ausgeführt und der Text ändert sich, sofern man dies so programmiert hat.",
+          "aspects": [
+            {
+              "text": "Wird nun auf den Button geklickt, so wird die Methode des ActionListeners ausgeführt ",
+              "elements": [],
+              "aIdx": 0,
+              "label": 1
+            },
+            {
+              "text": "Wird nun auf den Button geklickt, so wird die Methode des ActionListeners ausgeführt ",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1
+            },
+            {
+              "text": "Dem Button wird ein ActionListener zugeordnet",
+              "elements": [
+                [
+                  0,
+                  45
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0
+            },
+            {
+              "text": "so wird die Methode des ActionListeners ausgeführt und der Text ändert sich, sofern man dies so programmiert hat",
+              "elements": [
+                [
+                  81,
+                  193
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Dem Button wird ein ActionListener zugeordnet. Wird nun auf den Button geklickt, so wird die Methode des ActionListeners ausgeführt und der Text ändert sich, sofern man dies so programmiert hat."
+        },
+        {
+          "id": "32",
+          "text": "1. Durch den Klick wird ein Event gestartet 2. Der Listener bemerkt dieses und leitet es weiter 3. Der Text ändert sich",
+          "aspects": [
+            {
+              "text": "Durch den Klick wird ein Event gestartet",
+              "elements": [
+                [
+                  3,
+                  43
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Der Listener bemerkt dieses",
+              "elements": [
+                [
+                  47,
+                  74
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": "Der Listener ;; leitet es weiterr. Der Text ändert sich",
+              "elements": [
+                [
+                  47,
+                  59
+                ]
+              ],
+              "aIdx": 3,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Durch den Klick wird ein Event gestartet. Der Listener bemerkt dieses und leitet es weiter. Der Text ändert sich"
+        },
+        {
+          "id": "33",
+          "text": "Button erstellen, dann zu Frame hinzufügen, ein ActionListener muss zum Buttton hinzugefügt werden und in der Methode hinschreiben was verändert werden soll mit setText()",
+          "aspects": [
+            {
+              "text": "ein ActionListener muss zum Buttton hinzugefügt werden",
+              "elements": [
+                [
+                  44,
+                  98
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0
+            },
+            {
+              "text": "in der Methode hinschreiben was verändert werden soll mit setText()",
+              "elements": [
+                [
+                  103,
+                  170
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Button erstellen, dann zu Frame hinzufügen, ein ActionListener muss zum Buttton hinzugefügt werden und in der Methode hinschreiben was verändert werden soll mit setText()"
+        },
+        {
+          "id": "34",
+          "text": "Mit dem klicken auf den Button wird ein Action Event in Gang gesetzt. Im Anschluss nimmt der ActionListener die Information auf.",
+          "aspects": [
+            {
+              "text": "Mit dem klicken auf den Button wird ein ActionEvent in Gang gesetzt",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": " Im Anschluss nimmt der ActionListener die Information auf",
+              "elements": [
+                [
+                  70,
+                  127
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Mit dem klicken auf den Button wird ein ActionEvent in Gang gesetzt. Im Anschluss nimmt der ActionListener die Information auf."
+        },
+        {
+          "id": "35",
+          "text": "beim Klicken auf dem Button,lauft der actionListener ,dann der ActionListener gibt dieser text zur Performance.aber dafür braucht Button settext.",
+          "aspects": [
+            {
+              "text": "Beim Klicken auf dem Button, lauft der ActionListener",
+              "elements": [],
+              "aIdx": 0,
+              "label": 1
+            },
+            {
+              "text": "Beim Klicken auf dem Button, lauft der ActionListener",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1
+            },
+            {
+              "text": "Der ActionListener gibt dieser dann Text zur Performance",
+              "elements": [],
+              "aIdx": 3,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Beim Klicken auf dem Button, läuft der ActionListener. Der ActionListener gibt dieser dann Text zur Performance. Aber dafür braucht der Button setText."
+        },
+        {
+          "id": "36",
+          "text": "mit einem Klich wird eine Action ausgeführt. Diese Action wird von einem listener vorgemerkt, der den Code ausführt und den Text ändert.",
+          "aspects": [
+            {
+              "text": "Mit einem Klick wird eine Action ausgeführt",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Diese Action wird von einem Listener vorgemerkt",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": "der den Code ausführt und den Text ändert",
+              "elements": [
+                [
+                  94,
+                  135
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Mit einem Klick wird eine Action ausgeführt. Diese Action wird von einem Listener vorgemerkt, der den Code ausführt und den Text ändert."
+        },
+        {
+          "id": "37",
+          "text": "Durch den Klick wird ein Event ausgeführt welches durch den \"\"ActionListener\"\" mit den Objekt \"\"Button\"\" Verbunden wird und dadurch wird die aufgerufene Methode mit den Button zugeordnet.",
+          "aspects": [
+            {
+              "text": "Durch den Klick wird ein Event ausgeführt",
+              "elements": [
+                [
+                  0,
+                  41
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "welches durch den ActionListener mit den Objekt Button verbunden wird",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": "welches durch den ActionListener mit den Objekt Button verbunden wird",
+              "elements": [],
+              "aIdx": 2,
+              "label": 1
+            },
+            {
+              "text": "dadurch wird die aufgerufene Methode mit den Button zugeordnet",
+              "elements": [
+                [
+                  124,
+                  186
+                ]
+              ],
+              "aIdx": 3,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Durch den Klick wird ein Event ausgeführt, welches durch den ActionListener mit den Objekt Button verbunden wird und dadurch wird die aufgerufene Methode mit den Button zugeordnet."
+        },
+        {
+          "id": "38",
+          "text": "BEIM kLICK AUF EINEM BUTTON WIRD EINE ACTIONEVENT ERZEUGT.",
+          "aspects": [
+            {
+              "text": "Beim Klick auf einen Button wird ein ActionEvent erzeugt",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Beim Klick auf einen Button wird ein ActionEvent erzeugt."
+        },
+        {
+          "id": "39",
+          "text": "Beim Klick auf dem Button wird eine Methode aufgerufen, den Klick wahrnimmt und den Text auf dem Button ändert",
+          "aspects": [
+            {
+              "text": "Beim Klick auf dem Button wird eine Methode aufgerufen",
+              "elements": [
+                [
+                  0,
+                  54
+                ]
+              ],
+              "aIdx": 0,
+              "label": 1
+            },
+            {
+              "text": "die den Klick wahrnimmt",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1
+            },
+            {
+              "text": "die den Text auf dem Button ändert",
+              "elements": [],
+              "aIdx": 3,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Beim Klick auf dem Button wird eine Methode aufgerufen, die den Klick wahrnimmt und den Text auf dem Button ändert"
+        },
+        {
+          "id": "40",
+          "text": "Wenn man auf dem Button klickt wird ein ActionEvent, der dann den gegebenen Befehl ausgibt, ausgeführt.",
+          "aspects": [
+            {
+              "text": "Wenn man auf dem Button klickt wird ein ActionEvent ;; ausgeführt",
+              "elements": [
+                [
+                  0,
+                  51
+                ],
+                [
+                  92,
+                  102
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "das dann den gegebenen Befehl ausgibt",
+              "elements": [],
+              "aIdx": 3,
+              "label": 2
+            }
+          ],
+          "correctionOrComment": "Wenn man auf dem Button klickt wird ein ActionEvent, das dann den gegebenen Befehl ausgibt, ausgeführt."
+        },
+        {
+          "id": "41",
+          "text": "bei klick auf button wird action event ausgelöst, wen listener event gemeldet bekommt wird code ausgeführt.",
+          "aspects": [
+            {
+              "text": "vBeim Klick auf den Button wird ein ActionEvent ausgelöst",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Wenn der Listener ein Event gemeldet bekommt",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": "wird der Code ausgeführt",
+              "elements": [],
+              "aIdx": 3,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Beim Klick auf den Button wird ein ActionEvent ausgelöst. Wenn der Listener ein Event gemeldet bekommt, wird der Code ausgeführt."
+        },
+        {
+          "id": "42",
+          "text": "button erstellen button zu frame hinzufügen ActionListener zu button hinzufügen bei actionlistener methode sagen was geändert werden soll hier: button.setText(Text der nach dem Klicken angezeigt werden soll) wenn man also auf den Button klickt wird der ActionListener \"\"wach\"\" und weiß dass geklickt wurde und somit kann man in der methode sagen was nach dem klicken verändert werden soll",
+          "aspects": [
+            {
+              "text": "Wenn man also auf den Button klickt wird der ActionListener wach",
+              "elements": [],
+              "aIdx": 0,
+              "label": 1
+            },
+            {
+              "text": "Wenn man also auf den Button klickt wird der ActionListener wach",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1
+            },
+            {
+              "text": "ActionListener zum Button hinzufügen",
+              "elements": [],
+              "aIdx": 2,
+              "label": 0
+            },
+            {
+              "text": "Der Actionlistener Methode sagen, was geändert werden soll hier, setText mit dem Text der nach dem Klicken angezeigt werden soll",
+              "elements": [],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Button erstellen. Button zum Frame hinzufügen. ActionListener zum Button hinzufügen. Der Actionlistener Methode sagen, was geändert werden soll hier, setText mit dem Text der nach dem Klicken angezeigt werden soll. Wenn man also auf den Button klickt wird der ActionListener wach und weiß dass geklickt wurde und somit kann man in der Methode sagen was nach dem Klicken verändert werden soll"
+        },
+        {
+          "id": "43",
+          "text": "um was zu ändern muss die methode Actionevent eingesetzt werden das heisst wenn mann auf den button klickt soll eine aktion geführt werden zum beispiel mit dem klick nach dem man auf klcik drauf klickt wird im hintergrund eine aktion ausgeführt und mit syso \"\"wurde geklickt\"\" ausgegeben . ich hoffe ich konnte es einigermaßen erklären :)",
+          "aspects": [
+            {
+              "text": "Um was zu ändern muss die Methode ActionEvent eingesetzt werden",
+              "elements": [],
+              "aIdx": 0,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Um was zu ändern muss die Methode ActionEvent eingesetzt werden. Das heißt, wenn man auf den Button klickt, soll eine Aktion ausgeführt werden, zum Beispiel nach dem man auf Klick drauf klickt wird im Hintergrund eine Aktion ausgeführt und mit syso 'wurde geklickt' ausgegeben. Ich hoffe ich konnte es einigermaßen erklären :)"
+        },
+        {
+          "id": "44",
+          "text": "Beim drücken des Buttons wird ein Befehl ausgeführt, der den Text des Buttons verändert. Dazu wird ein Befehl eingegeben, falls der Button gedrückt wird, ändere Button.Text",
+          "aspects": [],
+          "correctionOrComment": "Beim Drücken des Buttons wird ein Befehl ausgeführt, der den Text des Buttons verändert. Dazu wird ein Befehl eingegeben, falls der Button gedrückt wird, ändere den Button Text"
+        },
+        {
+          "id": "45",
+          "text": "Buttonojekt besitzt ein listener objekt das den zustand ändert.",
+          "aspects": [
+            {
+              "text": "Das Button Objekt besitzt ein Listener Objekt ",
+              "elements": [],
+              "aIdx": 2,
+              "label": 0
+            },
+            {
+              "text": "das den Zustand ändert",
+              "elements": [],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Das Button Objekt besitzt ein Listener Objekt, das den Zustand ändert."
+        },
+        {
+          "id": "46",
+          "text": "Der ActionListener erkennt/hört den Klick des Users. Der ActionListener wird aufgerufen, indem sich die Methode actionPerformed befindet, der dann angibt was der ActionListener bei dem Klick zu machen hat, nämlich die sogenannte setText() Funktion ausführen. Diese ändert den Text des Buttons.",
+          "aspects": [
+            {
+              "text": "Der ActionListener erkennt den Klick des Users",
+              "elements": [],
+              "aIdx": 0,
+              "label": 1
+            },
+            {
+              "text": "Der ActionListener erkennt den Klick des Users",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1
+            },
+            {
+              "text": "Der ActionListener wird aufgerufen, indem sich die Methode actionPerformed befindet, der dann angibt, was der ActionListener bei dem Klick zu machen hat, nämlich die sogenannte setText() Funktion ausführen. Diese ändert den Text des Buttons",
+              "elements": [],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Der ActionListener erkennt den Klick des Users. Der ActionListener wird aufgerufen, indem sich die Methode actionPerformed befindet, der dann angibt, was der ActionListener bei dem Klick zu machen hat, nämlich die sogenannte setText() Funktion ausführen. Diese ändert den Text des Buttons."
+        },
+        {
+          "id": "47",
+          "text": "auf dem Button ist ein Listener, der von einem Actionevent ein ActionPerformed auslöst",
+          "aspects": [
+            {
+              "text": "der von einem ActionEvent ein ActionPerformed auslöst",
+              "elements": [],
+              "aIdx": 0,
+              "label": 1
+            },
+            {
+              "text": "der von einem ActionEvent ein ActionPerformed auslöst",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1
+            },
+            {
+              "text": "Auf dem Button ist ein Listener",
+              "elements": [],
+              "aIdx": 2,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Auf dem Button ist ein Listener, der von einem ActionEvent ein ActionPerformed auslöst"
+        },
+        {
+          "id": "48",
+          "text": "-",
+          "aspects": [],
+          "correctionOrComment": "-"
+        },
+        {
+          "id": "49",
+          "text": "Durch den Mausklick bemerkt der Actionlistener im Code dieses Vorgehen. Da der Actionlistener mit einer Methode verbunden ist, wird wahrscheinlich in der Mehtode ein Code implementiert sein welcher den Text auf dem Button verändert.",
+          "aspects": [
+            {
+              "text": "Durch den Mausklick bemerkt der ActionListener im Code dieses Vorgehen",
+              "elements": [],
+              "aIdx": 0,
+              "label": 1
+            },
+            {
+              "text": "Durch den Mausklick bemerkt der ActionListener im Code dieses Vorgehen",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1
+            },
+            {
+              "text": "Da der Actionlistener mit einer Methode verbunden ist, wird wahrscheinlich in der Mehtode ein Code implementiert sein welcher den Text auf dem Button verändert",
+              "elements": [
+                [
+                  72,
+                  231
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Durch den Mausklick bemerkt der ActionListener im Code dieses Vorgehen. Da der Actionlistener mit einer Methode verbunden ist, wird wahrscheinlich in der Mehtode ein Code implementiert sein welcher den Text auf dem Button verändert."
+        },
+        {
+          "id": "50",
+          "text": "Der implementierte Actionlistener registriert das Event des Mausklicks. Dadurch wird die Methode des Actionlisteners aufgerufen und sie führt Ihren Code aus. Der Code der Methode ändert nun den Text auf dem Button.",
+          "aspects": [
+            {
+              "text": "Der implementierte ActionListener registriert das Event des Mausklicks",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Der implementierte ActionListener registriert das Event des Mausklicks",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": " Dadurch wird die Methode des Actionlisteners aufgerufen und sie führt Ihren Code aus. Der Code der Methode ändert nun den Text auf dem Button",
+              "elements": [
+                [
+                  72,
+                  213
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Der implementierte ActionListener registriert das Event des Mausklicks. Dadurch wird die Methode des Actionlisteners aufgerufen und sie führt Ihren Code aus. Der Code der Methode ändert nun den Text auf dem Button."
+        },
+        {
+          "id": "51",
+          "text": "Auf den Button zu Klicken führt eine ActionListener aus.In dem wir eine code schreiben was ausgefürht wird wenn wir Button zu klciken.",
+          "aspects": [
+            {
+              "text": "Auf den Button zu Klicken führt eine ActionListener aus",
+              "elements": [
+                [
+                  0,
+                  55
+                ]
+              ],
+              "aIdx": 0,
+              "label": 1
+            },
+            {
+              "text": "Auf den Button zu Klicken führt eine ActionListener aus",
+              "elements": [
+                [
+                  0,
+                  55
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1
+            },
+            {
+              "text": "In dem schreiben wir einen Code, der ausgefürht wird, wenn wir den Button klicken",
+              "elements": [],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Auf den Button zu klicken führt eine ActionListener aus. In dem schreiben wir einen Code, der ausgefürht wird, wenn wir den Button klicken."
+        },
+        {
+          "id": "52",
+          "text": "-",
+          "aspects": [],
+          "correctionOrComment": "-"
+        },
+        {
+          "id": "53",
+          "text": "lbl_text || btn_klick Wenn auf den btn_klick gedrückt wird, springt der entsprechende ActionListener an (meist als anonyme Klasse umgesetzt, kann jedoch auch eine eigenständige, von ActionListener abgeleitete Klasse sein). Darin wird ein ActionEvent ausgeführt, das den Text im lbl_text verändert.",
+          "aspects": [
+            {
+              "text": "Darin wird ein ActionEvent ausgeführt",
+              "elements": [
+                [
+                  223,
+                  260
+                ]
+              ],
+              "aIdx": 0,
+              "label": 2
+            },
+            {
+              "text": "Wenn auf den Button gedrückt wird, springt der entsprechende ActionListener an",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1
+            },
+            {
+              "text": "das den Text im Button verändert",
+              "elements": [],
+              "aIdx": 3,
+              "label": 2
+            }
+          ],
+          "correctionOrComment": "Wenn auf den Button gedrückt wird, springt der entsprechende ActionListener an (meist als anonyme Klasse umgesetzt, kann jedoch auch eine eigenständige, von ActionListener abgeleitete Klasse sein). Darin wird ein ActionEvent ausgeführt, das den Text im Button verändert."
+        },
+        {
+          "id": "54",
+          "text": "-button frägt ab ob er gekickt wird -beim klicken bekommt der button den befehl den text hzu ändern -der text wird geändert",
+          "aspects": [
+            {
+              "text": "Der Button fragt ab, ob er geklickt wird",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1
+            },
+            {
+              "text": "Beim klicken bekommt der Button den Befehl den Text zu ändern. Der Text wird geändert",
+              "elements": [],
+              "aIdx": 3,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Der Button fragt ab, ob er geklickt wird. Beim klicken bekommt der Button den Befehl den Text zu ändern. Der Text wird geändert"
+        },
+        {
+          "id": "55",
+          "text": "Ein Listener \"\"lauscht\"\" auf Aktivitäten des Nutzers und \"\"hört\"\" somit den Klick auf den Button. Dauraufhin wird der Actionlistener aufgerufen und die Methode actionPerformed, womit die Funktion .setText() den Text auf den Button ändert.",
+          "aspects": [
+            {
+              "text": "Dauraufhin wird der ActionListener aufgerufen",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1
+            },
+            {
+              "text": "Ein Listener lauscht auf Aktivitäten des Nutzers und hört somit den Klick auf den Button",
+              "elements": [],
+              "aIdx": 2,
+              "label": 1
+            },
+            {
+              "text": "womit die Funktion setText den Text auf dem Button ändert",
+              "elements": [],
+              "aIdx": 3,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Ein Listener lauscht auf Aktivitäten des Nutzers und hört somit den Klick auf den Button. Dauraufhin wird der ActionListener aufgerufen und die Methode actionPerformed, womit die Funktion setText den Text auf dem Button ändert."
+        },
+        {
+          "id": "56",
+          "text": "es wird mit einer actionEvent erzeugt",
+          "aspects": [
+            {
+              "text": "Es wird ein ActionEvent erzeugt",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Es wird ein ActionEvent erzeugt."
+        },
+        {
+          "id": "57",
+          "text": "Dem Button wird ein Actionevent erstellt. Dieser wird beim anklicken einem Actionlistener der an dem Event dranhängt übergeben. Das heisst beim klicken weis der Actionlistener durch die Verbindung zum Event was für eine Action er ausführen soll. Dies könnte zum beispiel setIcon sein der durch klick das Bild ändert.",
+          "aspects": [
+            {
+              "text": "der an dem Event dranhängt",
+              "elements": [
+                [
+                  90,
+                  116
+                ]
+              ],
+              "aIdx": 2,
+              "label": 2
+            },
+            {
+              "text": "Dieses wird beim anklicken einem ActionListener ;; übergeben",
+              "elements": [
+                [
+                  117,
+                  126
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": "Das heißt beim klicken weiß der ActionListener;; was für eine Action er ausführen soll",
+              "elements": [
+                [
+                  207,
+                  244
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0
+            },
+            {
+              "text": "Mit dem Button wird ein ActionEvent erstellt ",
+              "elements": [],
+              "aIdx": 0,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Mit dem Button wird ein ActionEvent erstellt. Dieses wird beim anklicken einem ActionListener, der an dem Event dranhängt, übergeben. Das heißt beim klicken weiß der ActionListener durch die Verbindung zum Event was für eine Action er ausführen soll. Dies könnte zum Beispiel setIcon sein, die durch den Klick das Bild ändert."
+        },
+        {
+          "id": "58",
+          "text": "-",
+          "aspects": [],
+          "correctionOrComment": "-"
+        },
+        {
+          "id": "59",
+          "text": "Der Klick erzeugt einen Event. Dieser Event wird vom ActionListener aufgegriffen der mit dem \"\"Button\"\"-Objekt verbunden ist, dann wird die jeweilige Methode aufgerufen, die dem Button zugewiesen wurde. zB. : setIcon()",
+          "aspects": [
+            {
+              "text": "Der Klick erzeugt einen Event",
+              "elements": [
+                [
+                  0,
+                  29
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": " Dieses Event wird vom ActionListener aufgegriffen",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": "er mit dem Button Objekt verbunden ist",
+              "elements": [],
+              "aIdx": 2,
+              "label": 0
+            },
+            {
+              "text": "Dann wird die jeweilige Methode aufgerufen, die dem Button zugewiesen wurde",
+              "elements": [],
+              "aIdx": 3,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Der Klick erzeugt einen Event. Dieses Event wird vom ActionListener aufgegriffen, der mit dem Button Objekt verbunden ist. Dann wird die jeweilige Methode aufgerufen, die dem Button zugewiesen wurde."
+        },
+        {
+          "id": "60",
+          "text": "Der Klick auf einen Button erzeugt ein Action-Event. Damit nach dem Klick irgendeine Reaktion ausgeführt wird, hängt man an das Objekt einen Listener an. Dieser Listener erzeugt dann das Event und der Code wird ausgeführt.",
+          "aspects": [
+            {
+              "text": "Der Klick auf einen Button erzeugt ein ActionEvent",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Der Klick auf einen Button erzeugt ein ActionEvent. Damit nach dem Klick irgendeine Reaktion ausgeführt wird, hängt man an das Objekt einen Listener an",
+              "elements": [],
+              "aIdx": 2,
+              "label": 0
+            },
+            {
+              "text": "Dieser Listener erzeugt dann das Event und der Code wird ausgeführt",
+              "elements": [
+                [
+                  154,
+                  221
+                ]
+              ],
+              "aIdx": 3,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Der Klick auf einen Button erzeugt ein ActionEvent. Damit nach dem Klick irgendeine Reaktion ausgeführt wird, hängt man an das Objekt einen Listener an. Dieser Listener erzeugt dann das Event und der Code wird ausgeführt."
+        },
+        {
+          "id": "61",
+          "text": "Beim Klick auf den Button wird ein event ausgelöst, dieses wird von ActionListener aufgenommen und die entsprechende methode ausgeführt.",
+          "aspects": [
+            {
+              "text": "Beim Klick auf den Button wird ein Event ausgelöst",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Dieses wird von ActionListener aufgenommen",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": " und die entsprechende Methode ausgeführt",
+              "elements": [],
+              "aIdx": 3,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Beim Klick auf den Button wird ein Event ausgelöst. Dieses wird von ActionListener aufgenommen und die entsprechende Methode ausgeführt."
+        },
+        {
+          "id": "62",
+          "text": "Durch den Klick entsteht ein \"\"Action- Event\"\". Ein \"\"Listener\"\" reagiert auf dieses \"\"Event\"\" und führt eine Aktion durch. In diesem Fall wird der Schriftzug auf den Button geändert.",
+          "aspects": [
+            {
+              "text": "Durch den Klick entsteht ein ActionEvent",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Ein Listener reagiert auf dieses Event",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": " Ein Listener ;; ührt eine Aktion durch. In diesem Fall wird der Schriftzug auf den Button geändert",
+              "elements": [
+                [
+                  100,
+                  182
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Durch den Klick entsteht ein ActionEvent. Ein Listener reagiert auf dieses Event und führt eine Aktion durch. In diesem Fall wird der Schriftzug auf den Button geändert."
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "title": "Threads Synchronisation",
+      "text": "Warum braucht man bei der Arbeit mit Threads Synchronisation?",
+      "type": "reason",
+      "aspects": [
+        {
+          "text": "Man muss vermeiden, dass verschiedene Threads gleichzeitig auf Daten oder Objekte zugreifen"
+        },
+        {
+          "text": "Sonst kann es zur Zerstörung von Werten und zu inkonsistenten Zuständen kommen"
+        }
+      ],
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Man muss vermeiden, dass verschiedene Threads gleichzeitig auf Daten oder Objekte zugreifen, weil es dadurch zur Zerstörung von Werten und zu inkonsistenten Zuständen kommen kann.",
+          "aspects": [
+            {
+              "text": "Man muss vermeiden, dass verschiedene Threads gleichzeitig auf Daten oder Objekte zugreifen",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  91
+                ]
+              ],
+              "label": 0
+            },
+            {
+              "text": "weil es dadurch zur Zerstörung von Werten und zu inkonsistenten Zuständen kommen kann",
+              "aIdx": 1,
+              "elements": [
+                [
+                  93,
+                  178
+                ]
+              ],
+              "label": 0
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "id": "1",
+          "text": "ja damit threads miteinander daten austauschen können , müssen sie auf den selben speicherbereich zugreifen. ( gemeinsamer zugriff auf daten.)",
+          "aspects": [],
+          "correctionOrComment": "Damit Threads miteinander Daten austauschen können, müssen sie auf den selben Speicherbereich zugreifen."
+        },
+        {
+          "id": "2",
+          "text": "durch Synchronisation werden die Prozesse parallel laufen. Ohne Synchronisation würde man Einen Prozess mit dem anderen Prozess überschreiben.",
+          "aspects": [],
+          "correctionOrComment": "Durch Synchronisation werden die Prozesse parallel laufen. Ohne Synchronisation würde man einen Prozess mit dem anderen Prozess überschreiben."
+        },
+        {
+          "id": "3",
+          "text": "Damit ein Deadlock vermieden werden kann bei 2 paralelen threads",
+          "aspects": [],
+          "correctionOrComment": "Damit ein Deadlock vermieden werden kann bei 2 parallelen Threads"
+        },
+        {
+          "id": "4",
+          "text": "Um Deadlocks zu meiden",
+          "aspects": [],
+          "correctionOrComment": "Um Deadlocks zu meiden"
+        },
+        {
+          "id": "5",
+          "text": "Damit die Threads Daten einfach durch überschreiben der Zieldaten austauschen können.",
+          "aspects": [],
+          "correctionOrComment": "Damit die Threads Daten einfach durch überschreiben der Zieldaten austauschen können."
+        },
+        {
+          "id": "6",
+          "text": "Da zwei Threads, die die gleiche Variable verwenden, jedoch unterschiedliche Dinge mit ihr (beispielsweise) berechnen, durcheinander geraten oder Deadlocks 'herstellen'. Um Deadlocks zu vermeiden wird 'synchronized', (ein Thread wartet auf den anderen, bis die Variable für ihn frei ist.)",
+          "aspects": [
+            {
+              "text": "Ein Thread wartet auf den anderen, bis die Variable für ihn frei ist",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Da zwei Threads, die die gleiche Variable verwenden, jedoch unterschiedliche Dinge mit ihr (beispielsweise) berechnen, durcheinander geraten oder Deadlocks 'herstellen'",
+              "elements": [
+                [
+                  0,
+                  168
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Da zwei Threads, die die gleiche Variable verwenden, jedoch unterschiedliche Dinge mit ihr (beispielsweise) berechnen, durcheinander geraten oder Deadlocks 'herstellen'. Um Deadlocks zu vermeiden wird synchronized. Ein Thread wartet auf den anderen, bis die Variable für ihn frei ist."
+        },
+        {
+          "id": "7",
+          "text": "Das wenn zwei Threads oder mehr mit den gleichen Attributen arbeiten es zu keiner überschneidung kommt und die Threads sich gegenseitig behindern. Deswegen vergibt man Synchronisation Schlüssel die die Threads brauchen um zu arbeite. Jedoch muss man afpassen das es zu keinem Big-Lock kommt.",
+          "aspects": [
+            {
+              "text": "Damit wenn zwei Threads oder mehr mit den gleichen Attributen arbeiten es zu keiner Überschneidung kommt und die Threads sich gegenseitig behindern",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Damit wenn zwei Threads oder mehr mit den gleichen Attributen arbeiten es zu keiner Überschneidung kommt und die Threads sich gegenseitig behindern. Deswegen vergibt man Synchronisation Schlüssel die die Threads brauchen um zu arbeite. Jedoch muss man afpassen das es zu keinem Big-Lock kommt."
+        },
+        {
+          "id": "8",
+          "text": "Wenn Threads parallel laufen, kann es sein, dass Änderungen nicht übernommen werden da jeder einzelne seinen Code ausführt. Damit man aber keine Daten verliert, sollte man mit synchronized() arbeiten. Dazu benutzt man auch Monitore. So können sie sich auch nicht gegenseitig in kritischen Abschnitten hindern und zu einem Deadlock führen, wenn man die Reihenfolge der Synchronisation einhält.",
+          "aspects": [
+            {
+              "text": "Wenn Threads parallel laufen, kann es sein, dass Änderungen nicht übernommen werden da jeder einzelne seinen Code ausführt. Damit man aber keine Daten verliert, sollte man mit synchronized arbeiten",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Wenn Threads parallel laufen, kann es sein, dass Änderungen nicht übernommen werden da jeder einzelne seinen Code ausführt. Damit man aber keine Daten verliert, sollte man mit synchronized arbeiten. Dazu benutzt man auch Monitore. So können sie sich auch nicht gegenseitig in kritischen Abschnitten hindern und zu einem Deadlock führen, wenn man die Reihenfolge der Synchronisation einhält."
+        },
+        {
+          "id": "9",
+          "text": "rufen sich 2 Threads gegenseitig auf welche gleiche Befehlsketten ausführen (z. B Variabne wird um 1 erhöht) sobald sie beide fertig sind wird beim Letzten Schritt des letzten Threads nicht ausgeführt dafür gibt es einen besstimmtes Beegriff dafür.",
+          "aspects": [],
+          "correctionOrComment": "Rufen sich 2 Threads gegenseitig auf, welche gleiche Befehlsketten ausführen (z. B Variabne wird um 1 erhöht), sobald sie beide fertig sind wird beim letzten Schritt des letzten Threads nichts ausgeführt. Dafür gibt es einen bestimmtes Beegriff."
+        },
+        {
+          "id": "10",
+          "text": "Das Threads in einer Multithreaded-Anwendung Daten durch einfaches überschreiben der Methoden Zieldaten austauschen können.",
+          "aspects": [],
+          "correctionOrComment": "Da Threads in einer Multithread-Anwendung Daten durch einfaches überschreiben der Methoden Zieldaten austauschen können."
+        },
+        {
+          "id": "11",
+          "text": "Um die Daten in einer Multithreaded-Anwendung überschreiben zu können ,ohne dass Damit die Datenintegrität nicht verloren gehen.Threads können Daten einfach durch überschreiben der Zieldaten austauschen Bei der Modifikation besteht die Gefahr des Lost Update, wenn Threads Daten parallel ändern.",
+          "aspects": [
+            {
+              "text": "wenn Threads Daten parallel ändern",
+              "elements": [
+                [
+                  260,
+                  294
+                ]
+              ],
+              "aIdx": 0,
+              "label": 1
+            },
+            {
+              "text": "Um die Daten in einer Multithreaded-Anwendung überschreiben zu können, ohne dass damit die Datenintegrität verloren geht ;; Bei der Modifikation besteht die Gefahr des Lost Update",
+              "elements": [
+                [
+                  203,
+                  258
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Um die Daten in einer Multithreaded-Anwendung überschreiben zu können, ohne dass damit die Datenintegrität verloren geht. Threads können Daten einfach durch überschreiben der Zieldaten austauschen Bei der Modifikation besteht die Gefahr des Lost Update, wenn Threads Daten parallel ändern."
+        },
+        {
+          "id": "12",
+          "text": "Da es ohne Synchronisation zum Verlust von Daten kommen kann bzw. Threads hin und her springen obwohl sie evt. gerade etwas berechnen.",
+          "aspects": [
+            {
+              "text": "Da es ohne Synchronisation zum Verlust von Daten kommen kann",
+              "elements": [
+                [
+                  0,
+                  60
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Da es ohne Synchronisation zum Verlust von Daten kommen kann oder Threads hin und her springen obwohl sie eventuell gerade etwas berechnen."
+        },
+        {
+          "id": "13",
+          "text": "Weil bei der Datenaustausch die Gefahr besteht das durch Lost Update Threads Daten parallel ändert.",
+          "aspects": [
+            {
+              "text": "Weil beim Datenaustausch die Gefahr besteht, dass ;; Threads Daten parallel ändern",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "durch Lost Update Threads Daten parallel ändern",
+              "elements": [],
+              "aIdx": 1,
+              "label": 2
+            }
+          ],
+          "correctionOrComment": "Weil beim Datenaustausch die Gefahr besteht, dass durch Lost Update Threads Daten parallel ändern"
+        },
+        {
+          "id": "14",
+          "text": "Weil alle Threads aktuell sein müssen, wenn ein Thread nicht aktuell ist, ist es nicht gerade einfach bzw. effektiv mit den Threads zu arbeiten. Es kann aber gut sein, dass Probleme bei der Synchronisation auftreten.",
+          "aspects": [],
+          "correctionOrComment": "Weil alle Threads aktuell sein müssen, wenn ein Thread nicht aktuell ist, ist es nicht gerade einfach bzw. effektiv mit den Threads zu arbeiten. Es kann aber gut sein, dass Probleme bei der Synchronisation auftreten."
+        },
+        {
+          "id": "15",
+          "text": "Man benötigt erst mal threads es müssen min 2 threads vorhanden sein diese müssen gestartet werden und durchlaufen werden dort können sie Daten durch überschreiben der Zieldaten einfach austauschen",
+          "aspects": [],
+          "correctionOrComment": "Man benötigt erst mal Threads. Es müssen mindestens 2 Threads vorhanden sein. Diese müssen gestartet werden und durchlaufen werden dort können sie Daten durch überschreiben der Zieldaten einfach austauschen"
+        },
+        {
+          "id": "16",
+          "text": "man braucht bei Threads eine synchronistion , denn wenn beides Threads laufen und änderungen vorgenommen werden, soll durch die synchronisation erstmal alle befehle oder Operationen der erste thread aufgeführt werden , bevor das zweite Thread den kritischen abschnitt erreicht",
+          "aspects": [
+            {
+              "text": " sollen durch die Synchronisation erstmal alle Befehle oder Operationen des ersten Threads aufgeführt werden, bevor der zweite Thread den kritischen Abschnitt erreicht",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Man braucht bei Threads eine Synchronistion, denn wenn beide Threads laufen und Änderungen vorgenommen werden, sollen durch die Synchronisation erstmal alle Befehle oder Operationen des ersten Threads aufgeführt werden, bevor der zweite Thread den kritischen Abschnitt erreicht"
+        },
+        {
+          "id": "17",
+          "text": "damit die Threads nicht nicht mit ein ander stoßen wenn ein thread ein wert benutzt und den wert verändert bekommt das andere thread nicht den gleichen wert. wir brauchen synchronisation , erst wird die erste anweisung nicht gestört durchgeführt und dann wenn er fertig ist , kann ein andere beginnen.",
+          "aspects": [
+            {
+              "text": "damit die Threads nicht aufeinander stoßen ;; Erst wird die erste Anweisung nicht gestört durchgeführt und dann wenn diese fertig ist, kann ein andere beginnen",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "wenn ein Thread ein Wert benutzt und den Wert verändert bekommt der andere Thread nicht den gleichen Wert",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Damit die Threads nicht aufeinander stoßen wenn ein Thread ein Wert benutzt und den Wert verändert bekommt der andere Thread nicht den gleichen Wert. Wir brauchen Synchronisation. Erst wird die erste Anweisung nicht gestört durchgeführt und dann wenn diese fertig ist, kann ein andere beginnen."
+        },
+        {
+          "id": "18",
+          "text": "Durch die Anwendung können sie dann die Zieldaten überschreiben und austauschen.",
+          "aspects": [],
+          "correctionOrComment": "Durch die Anwendung können sie dann die Zieldaten überschreiben und austauschen."
+        },
+        {
+          "id": "19",
+          "text": "Die Synchronisation soll verhindern, dass man beispielsweise einen Deadlock hat.Außerdem wird damit ein kritischer Abschnitt erreicht, den man korrekt programmieren soll, sodass die Threads keine Fehler erzeugen können.",
+          "aspects": [],
+          "correctionOrComment": "Die Synchronisation soll verhindern, dass man beispielsweise einen Deadlock hat. Außerdem wird damit ein kritischer Abschnitt erreicht, den man korrekt programmieren soll, sodass die Threads keine Fehler erzeugen können."
+        },
+        {
+          "id": "20",
+          "text": "bei der Modifikation bessteht die gefahr dass lost update wenn Threads Daten parallel andern",
+          "aspects": [
+            {
+              "text": "wenn Threads Daten parallel ändern",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Bei der Modifikation besteht die Gefahr dass Lost Update",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Bei der Modifikation besteht die Gefahr dass Lost Update, wenn Threads Daten parallel ändern"
+        },
+        {
+          "id": "21",
+          "text": "Weil es ansonsten passieren kann , das änderungen verloren gehen, wenn ein thread seinen kritischen pfad nicht alleine ablaufen kann. Diese gefahr besteht weil mehrere threads eines Prozesses denselben Speicher teilen.",
+          "aspects": [
+            {
+              "text": "wenn ein thread seinen kritischen pfad nicht alleine ablaufen kann",
+              "elements": [
+                [
+                  66,
+                  132
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Weil es ansonsten passieren kann , das änderungen verloren gehen",
+              "elements": [
+                [
+                  0,
+                  64
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Weil es ansonsten passieren kann , das änderungen verloren gehen, wenn ein thread seinen kritischen pfad nicht alleine ablaufen kann. Diese gefahr besteht weil mehrere threads eines Prozesses denselben Speicher teilen."
+        },
+        {
+          "id": "22",
+          "text": "-",
+          "aspects": [],
+          "correctionOrComment": "-"
+        },
+        {
+          "id": "23",
+          "text": "sodass niemals zwei Threads gleichzeitig auf eine Ressource zugreifen können.",
+          "aspects": [
+            {
+              "text": "Sodass niemals zwei Threads gleichzeitig auf eine Ressource zugreifen können.",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Sodass niemals zwei Threads gleichzeitig auf eine Ressource zugreifen können."
+        },
+        {
+          "id": "24",
+          "text": "Problem bei einem Multithread, es kann passieren das wir eine \"\"Race-Condition\"\" haben. Da die Threads unwillkürlich hin und her springen, schreiben bzw lesen sie in unterschiedlicher reihenfolge in die Daten/Speicher. Was unser Programm behindert.",
+          "aspects": [],
+          "correctionOrComment": "Das Problem bei einem Multithread ist, es kann passieren das wir eine Race-Condition haben. Da die Threads unwillkürlich hin und her springen, schreiben bzw lesen sie in unterschiedlicher reihenfolge in die Daten/Speicher. Was unser Programm behindert."
+        },
+        {
+          "id": "25",
+          "text": "Da man sonst Deadlocks (ein Thread wartet auf den anderen und umgekehrt) bekommen kann oder Einträge gehen verloren da zwei Threads gleichzeitig an etwas arbeiten.",
+          "aspects": [
+            {
+              "text": "da zwei Threads gleichzeitig an etwas arbeiten",
+              "elements": [
+                [
+                  116,
+                  162
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Einträge gehen verloren",
+              "elements": [
+                [
+                  92,
+                  115
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Da man sonst Deadlocks (ein Thread wartet auf den anderen und umgekehrt) bekommen kann oder Einträge gehen verloren da zwei Threads gleichzeitig an etwas arbeiten."
+        },
+        {
+          "id": "26",
+          "text": "Um Threds paralell laufenzulassen, und um das nicht der gleiche . Man benötigt zuerst mal Threads mindestens 2. Threads müssen gestartet werden und durchlaufen können. Synchonize wird benötigt um die 2 oder mehrer Threads als erstet komplett durchlaufenzulassen und dann, wenn der der einer der Thread durchgelaufen ist der andere wenn er auf die gleiche Methode zugreift nicht ins Gehege kommt.",
+          "aspects": [
+            {
+              "text": "wenn einer der Threads durchgelaufen ist der andere dran, wenn er auf die gleiche Methode zugreift, um nicht ins Gehege zu kommen",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Um Threds parallel laufen zulassen, und um das nicht der Gleiche . Man benötigt zuerst mal Threads, mindestens 2. Threads müssen gestartet werden und durchlaufen können. Synchonize wird benötigt um die 2 oder mehrere Threads als erstes komplett durchlaufenzulassen und dann, wenn einer der Threads durchgelaufen ist der andere dran, wenn er auf die gleiche Methode zugreift, um nicht ins Gehege zu kommen."
+        },
+        {
+          "id": "27",
+          "text": "Synchronisation bewirkt das bei der Arbeit mit mehreren Threats nur einer auf eine Methode oder ein Objekt zugreifen kann. So wird verhindert das wenn z.B. zwei Threats die gleiche Variable verändern kein Wert verloren geht.",
+          "aspects": [
+            {
+              "text": "Synchronisation bewirkt das bei der Arbeit mit mehreren Threats nur einer auf eine Methode oder ein Objekt zugreifen kann",
+              "elements": [
+                [
+                  0,
+                  121
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "So wird verhindert das wenn z.B. zwei Threats die gleiche Variable verändern kein Wert verloren geh",
+              "elements": [
+                [
+                  123,
+                  222
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Synchronisation bewirkt das bei der Arbeit mit mehreren Threats nur einer auf eine Methode oder ein Objekt zugreifen kann. So wird verhindert das wenn z.B. zwei Threats die gleiche Variable verändern kein Wert verloren geht."
+        },
+        {
+          "id": "28",
+          "text": "Mehrere Threads könnten auf dieselben Daten oder Ressourcen zugreifen. Damit dabei keine Änderung verloren geht und damit kein Deadlock entsteht, werden die kritischen Abschnitte synchronized.",
+          "aspects": [
+            {
+              "text": "Damit dabei keine Änderung verloren geht ;; werden die kritischen Abschnitte synchronized",
+              "elements": [
+                [
+                  71,
+                  111
+                ],
+                [
+                  146,
+                  191
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Mehrere Threads könnten auf dieselben Daten oder Ressourcen zugreifen. Damit dabei keine Änderung verloren geht und damit kein Deadlock entsteht, werden die kritischen Abschnitte synchronized."
+        },
+        {
+          "id": "29",
+          "text": "Um bei Kritischen Zuständen keinen Verlust von Daten oder Informationen zuzulassen, wird ein Block, der auf diese Informationen zurückgreift mit Hilfe der der Synchronisation gekennzeichnet. Wenn mehrere Threads auf die gleichen Daten zurückgreifen, kann es passieren, dass diese Daten zerstört werden. Die Synchronisation verhindert dies, in dem Sie regelt in welcher Reihenfolge die Threads zugriff haben.",
+          "aspects": [
+            {
+              "text": "Um bei Kritischen Zuständen keinen Verlust von Daten oder Informationen zuzulassen, wird ein Block, der auf diese Informationen zurückgreift mit Hilfe der der Synchronisation gekennzeichnet. Wenn mehrere Threads auf die gleichen Daten zurückgreifen, kann es passieren, dass diese Daten zerstört werden",
+              "elements": [
+                [
+                  0,
+                  301
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            },
+            {
+              "text": "Die Synchronisation verhindert dies, in dem Sie regelt in welcher Reihenfolge die Threads zugriff haben",
+              "elements": [
+                [
+                  303,
+                  406
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Um bei Kritischen Zuständen keinen Verlust von Daten oder Informationen zuzulassen, wird ein Block, der auf diese Informationen zurückgreift mit Hilfe der der Synchronisation gekennzeichnet. Wenn mehrere Threads auf die gleichen Daten zurückgreifen, kann es passieren, dass diese Daten zerstört werden. Die Synchronisation verhindert dies, in dem Sie regelt in welcher Reihenfolge die Threads zugriff haben."
+        },
+        {
+          "id": "30",
+          "text": "Damit es nicht zu einer sogenannten Racecondition kommt. Diese könnte z.B.dann auftreten, wenn zwei Threads auf dieselben Variablen zugreifen und diese verändern. Die Änderungen des einen Threads könnten dann von denen des anderen überschrieben werden (die Threads \"\"liefern sich einen Rennen\"\") und damit verloren gehen. Das Programm arbeitet dann nicht mehr wie erwartet/ gedacht. Mithilfe von Synchronisation kann dies verhindert werden, indem Code vor dem gemeinsamen Zugriff geschützt wird.",
+          "aspects": [
+            {
+              "text": "Mithilfe von Synchronisation kann dies verhindert werden, indem Code vor dem gemeinsamen Zugriff geschützt wird",
+              "elements": [
+                [
+                  383,
+                  494
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Damit es nicht zu einer sogenannten Racecondition kommt. Diese könnte z.B.dann auftreten, wenn zwei Threads auf dieselben Variablen zugreifen und diese verändern. Die Änderungen des einen Threads könnten dann von denen des anderen überschrieben werden (die Threads \"\"liefern sich einen Rennen\"\") und damit verloren gehen",
+              "elements": [
+                [
+                  0,
+                  320
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Damit es nicht zu einer sogenannten Racecondition kommt. Diese könnte z.B.dann auftreten, wenn zwei Threads auf dieselben Variablen zugreifen und diese verändern. Die Änderungen des einen Threads könnten dann von denen des anderen überschrieben werden (die Threads \"\"liefern sich einen Rennen\"\") und damit verloren gehen. Das Programm arbeitet dann nicht mehr wie erwartet/ gedacht. Mithilfe von Synchronisation kann dies verhindert werden, indem Code vor dem gemeinsamen Zugriff geschützt wird."
+        },
+        {
+          "id": "31",
+          "text": "Threads können Daten in einer Multithreaded Anwendung einfach durch überschreiben der Zieldaten austauschen. Es kommt so zu inkonsistenten Daten wenn Threads Daten zeitgleich ändern.In Java kommt das Monitorkonzept zum einsatz.",
+          "aspects": [
+            {
+              "text": "wenn Threads Daten zeitgleich ändern",
+              "elements": [
+                [
+                  145,
+                  181
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Es kommt so zu inkonsistenten Daten ",
+              "elements": [
+                [
+                  109,
+                  144
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Threads können Daten in einer Multithreaded Anwendung einfach durch überschreiben der Zieldaten austauschen. Es kommt so zu inkonsistenten Daten wenn Threads Daten zeitgleich ändern.In Java kommt das Monitorkonzept zum einsatz."
+        },
+        {
+          "id": "32",
+          "text": "das es über benutzbar ist.",
+          "aspects": [],
+          "correctionOrComment": "das es über benutzbar ist."
+        },
+        {
+          "id": "33",
+          "text": "Damit Threads auch parallel arbeiten können und weil es auch die Sicherheit steigert.",
+          "aspects": [],
+          "correctionOrComment": "Damit Threads auch parallel arbeiten können und weil es auch die Sicherheit steigert."
+        },
+        {
+          "id": "34",
+          "text": "Damit es synchron ist",
+          "aspects": [],
+          "correctionOrComment": "Damit es synchron ist"
+        },
+        {
+          "id": "35",
+          "text": "Damit mehrere Threads gleichzeitig arbeiten können, ohne das Ergebnis zu verfälschen.",
+          "aspects": [
+            {
+              "text": "Damit mehrere Threads gleichzeitig arbeiten können, ohne das Ergebnis zu verfälschen",
+              "elements": [
+                [
+                  0,
+                  84
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Damit mehrere Threads gleichzeitig arbeiten können, ohne das Ergebnis zu verfälschen."
+        },
+        {
+          "id": "36",
+          "text": "damit keine Anwesiungen verloren gehen, wenn Threads ihre Anweisungen gleichzeitig ändern.",
+          "aspects": [
+            {
+              "text": "wenn Threads ihre Anweisungen gleichzeitig ändern",
+              "elements": [
+                [
+                  40,
+                  89
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Damit keine Anweisungen verloren gehen",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Damit keine Anweisungen verloren gehen, wenn Threads ihre Anweisungen gleichzeitig ändern."
+        },
+        {
+          "id": "37",
+          "text": "Weil das sehr wichtig ist, ohne die Synchronisation würde es nicht laufen wie man es erwartet. Es gibt aber Probleme mit der Synchronisation die folgende sind: - ...... - ...... - ......",
+          "aspects": [],
+          "correctionOrComment": "Weil das sehr wichtig ist, ohne die Synchronisation würde es nicht laufen wie man es erwartet. Es gibt aber Probleme mit der Synchronisation die folgende sind"
+        },
+        {
+          "id": "38",
+          "text": "Manchmal ,wenn zwei Thread gleichzeitig und parallel laufen ,können sich überschreiben, für Korriegieren dieser Fehler und bessere Update , kann man durch Synchronisation und mit der Reihefolge arbeiten",
+          "aspects": [
+            {
+              "text": "Manchmal, wenn zwei Thread gleichzeitig und parallel laufen",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "können sie sich überschreiben",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Manchmal, wenn zwei Thread gleichzeitig und parallel laufen, können sie sich überschreiben. Zum Korriegieren dieser Fehler und bessere Update , kann man durch Synchronisation und mit der Reihefolge arbeiten"
+        },
+        {
+          "id": "39",
+          "text": "Wenn zwei oder mehrere parallel laufende Threads dasselbe Objekt ansprechen, kann es zu Problemem kommen, da beide gleichzeitig das Objekt ändern. Deswegen benutzt man Monitore, wobei die dazugehörigen Objekte in ein Monitor eingeschlossen werden. Eingekapselt werden kritische Abschnitte.",
+          "aspects": [
+            {
+              "text": "es zu Problemem kommen, da beide gleichzeitig das Objekt ändern",
+              "elements": [
+                [
+                  82,
+                  145
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "es zu Problemem kommen, da beide gleichzeitig das Objekt ändern",
+              "elements": [
+                [
+                  82,
+                  145
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Wenn zwei oder mehrere parallel laufende Threads dasselbe Objekt ansprechen, kann es zu Problemem kommen, da beide gleichzeitig das Objekt ändern. Deswegen benutzt man Monitore, wobei die dazugehörigen Objekte in ein Monitor eingeschlossen werden. Eingekapselt werden kritische Abschnitte."
+        },
+        {
+          "id": "40",
+          "text": "Die\"\"Lost\"\" Upgrade können verloren gehen wenn man die Threads daten nebeneinander ändert.",
+          "aspects": [
+            {
+              "text": "wenn die Threads Daten nebeneinander ändern",
+              "elements": [],
+              "aIdx": 0,
+              "label": 1
+            },
+            {
+              "text": "Die Lost Upgrades können verloren gehen",
+              "elements": [],
+              "aIdx": 1,
+              "label": 2
+            }
+          ],
+          "correctionOrComment": "Die Lost Upgrades können verloren gehen, wenn die Threads Daten nebeneinander ändern."
+        },
+        {
+          "id": "41",
+          "text": "Ohne Synchronisation besteht die Gefahr, Daten zu verlieren. Das kann passieren, wenn Threads parallel Daten ändern.",
+          "aspects": [
+            {
+              "text": "Das kann passieren, wenn Threads parallel Daten ändern",
+              "elements": [
+                [
+                  61,
+                  115
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Ohne Synchronisation besteht die Gefahr, Daten zu verlieren",
+              "elements": [
+                [
+                  0,
+                  59
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Ohne Synchronisation besteht die Gefahr, Daten zu verlieren. Das kann passieren, wenn Threads parallel Daten ändern."
+        },
+        {
+          "id": "42",
+          "text": "man braucht dies, so dass bei der modifikation keine Gefahr des Lost Update bestehen könnte, wenn Threads Daten parallel ändern. Und damit auch die datenintegritität behaltet werden könnte.",
+          "aspects": [
+            {
+              "text": "wenn Threads Daten parallel ändern",
+              "elements": [
+                [
+                  93,
+                  127
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Man braucht dies, so dass bei der Modifikation keine Gefahr des Lost Update bestehen könnte",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Man braucht dies, so dass bei der Modifikation keine Gefahr des Lost Update bestehen könnte, wenn Threads Daten parallel ändern. Und damit auch die Datenintegritität behaltet werden könnte."
+        },
+        {
+          "id": "43",
+          "text": "Solange nur ein Thread eine bestimme Methode aufruft, hat man die Garantie, dass der COde von der ersten bis letzten Anweisung durchlaufen wird. Bei mehreren Threads, könnte einer Threads eine Methode in einem nicht ausreichenden Zustand hinterlassen. Der Thread, der den Objektzustand vom Vorgänger übernimmt, produziert möglicherweise etwas falsches. Deshalb ist synchronisation wichtig.",
+          "aspects": [],
+          "correctionOrComment": "Solange nur ein Thread eine bestimme Methode aufruft, hat man die Garantie, dass der Code von der ersten bis zur letzten Anweisung durchlaufen wird. Bei mehreren Threads, könnte einer der Threads eine Methode in einem nicht ausreichenden Zustand hinterlassen. Der Thread, der den Objektzustand vom Vorgänger übernimmt, produziert möglicherweise etwas falsches. Deshalb ist synchronisation wichtig."
+        },
+        {
+          "id": "44",
+          "text": "damit die Threads nicht gegeneinander laufen wenn mehrere methoden aufgerufen werden. es könnte zu einem Deadlock führen wenn die Synchronisation nicht ordentlich ist.",
+          "aspects": [
+            {
+              "text": "Damit die Threads nicht gegeneinander laufen wenn mehrere Methoden aufgerufen werden",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Damit die Threads nicht gegeneinander laufen wenn mehrere Methoden aufgerufen werden. Es könnte zu einem Deadlock führen wenn die Synchronisation nicht ordentlich ist."
+        },
+        {
+          "id": "45",
+          "text": "Weil Threads die Zieldaten durch überschreiben einfach löschen können braucht man die Synchronisation Vor allem wenn die Threads paralell geändert werden Außerdem sollten Deadlocks durch Einhaltung der Reihenfolge bei der Synchronisation vermieden werden",
+          "aspects": [],
+          "correctionOrComment": "Weil Threads die Zieldaten durch überschreiben einfach löschen können braucht man die Synchronisation. Vor allem wenn die Threads paralell geändert werden. Außerdem sollten Deadlocks durch Einhaltung der Reihenfolge bei der Synchronisation vermieden werden"
+        },
+        {
+          "id": "46",
+          "text": "Wenn man mehrere Threads benutzt kann es vorkommen dass z.B. verschiedene Methoden die gleichen Variablen besitzt und darduch die Variablen \"\"überschrieben\"\" werden. Wodurch dass Ergebnis sich ändert. Nun benutzt man Syncronized, um eine Reihenfolge einzubauen, die kritische Bereiche nacheinander abarbeitet. Somit wird verhindert, dass sich die Threads gegenseitig \"\"stören\"\".",
+          "aspects": [
+            {
+              "text": "Nun benutzt man Syncronized, um eine Reihenfolge einzubauen, die kritische Bereiche nacheinander abarbeitet. Somit wird verhindert, dass sich die Threads gegenseitig stören",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Wenn man mehrere Threads benutzt kann es vorkommen dass z.B. verschiedene Methoden die gleichen Variablen besitzt und darduch die Variablen überschrieben werden",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Wenn man mehrere Threads benutzt kann es vorkommen dass z.B. verschiedene Methoden die gleichen Variablen besitzt und darduch die Variablen überschrieben werden. Wodurch dass Ergebnis sich ändert. Nun benutzt man Syncronized, um eine Reihenfolge einzubauen, die kritische Bereiche nacheinander abarbeitet. Somit wird verhindert, dass sich die Threads gegenseitig stören."
+        },
+        {
+          "id": "47",
+          "text": "Bei der modifikation betseht die gefahr das die threads gleichzeitig laufen und sich überschneiden. das heisst das die daten parallel geändert werden. zb. in einer multithreadet können daten einfach überschrieben werden",
+          "aspects": [
+            {
+              "text": "Bei der Modifikation besteht die Gefahr, dass die Threads gleichzeitig laufen und sich überschneiden",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "n einem Multithread können Daten einfach überschrieben werden",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Bei der Modifikation besteht die Gefahr, dass die Threads gleichzeitig laufen und sich überschneiden. Das heißt, dass die Daten parallel geändert werden. In einem Multithread können Daten einfach überschrieben werden"
+        },
+        {
+          "id": "48",
+          "text": "Weil Threads wenn sie zur selben Aufgabe gehören auf dieselben Resurcen zugreifen müssen. Es kann aber immer nur ein Threads die jweilige Resurce bearbeiten nicht abre beide.",
+          "aspects": [
+            {
+              "text": "Es kann aber immer nur einer der Threads die jeweilige Resourcen bearbeiten nicht aber beide.",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Weil Threads, wenn sie zur selben Aufgabe gehören auf dieselben Resourcen zugreifen müssen. Es kann aber immer nur einer der Threads die jeweilige Resourcen bearbeiten nicht aber beide."
+        },
+        {
+          "id": "49",
+          "text": "Threads in einer Mulitthreaded-Anwendung können Daten einfach durch überschreiben der Zieldaten austauschen.",
+          "aspects": [],
+          "correctionOrComment": "Threads in einer Mulitthreaded-Anwendung können Daten einfach durch überschreiben der Zieldaten austauschen."
+        },
+        {
+          "id": "50",
+          "text": "Um ein Deadlock zu vermeiden.",
+          "aspects": [],
+          "correctionOrComment": "Um ein Deadlock zu vermeiden."
+        },
+        {
+          "id": "51",
+          "text": "Um die jeweils mit einem anderen abzugleichen und das aktuelle ubdaten bei falschem synchronisieren kann ein Deadlock entstehen zum beispiel wenn ein bankkonto mit einem anderen verglichen wird.",
+          "aspects": [],
+          "correctionOrComment": "Um die jeweils mit einem anderen abzugleichen und das aktuelle updaten bei falschem synchronisieren kann ein Deadlock entstehen. zum beispiel wenn ein bankkonto mit einem anderen verglichen wird."
+        },
+        {
+          "id": "52",
+          "text": "Um Threads ein bestimmtes Objekt nach der Reihenfolge bearbeiten. Die Synchronisation wird verwendet um ein Objekt in meherere Threads zuzuordnen. Das Objekt wird in abwechselnder Reihenfolge dem jeweiligen Thread zur Verfügung gestellt um die Bearbeitung zu starten. Dient außerdem zur vermeidung von Deadlocks.",
+          "aspects": [
+            {
+              "text": "Um Threads ein bestimmtes Objekt nach der Reihenfolge bearbeiten",
+              "elements": [
+                [
+                  0,
+                  64
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Um Threads ein bestimmtes Objekt nach der Reihenfolge bearbeiten. Die Synchronisation wird verwendet um ein Objekt in meherere Threads zuzuordnen. Das Objekt wird in abwechselnder Reihenfolge dem jeweiligen Thread zur Verfügung gestellt um die Bearbeitung zu starten. Dient außerdem zur vermeidung von Deadlocks."
+        },
+        {
+          "id": "53",
+          "text": "Um die bearbeiteten Daten nicht inkonsistent zu machen. Falls Threads nicht synchronisiert werden, kann es außerdem dazu kommen, dass ein sogenanntes Lost Update auftritt.",
+          "aspects": [
+            {
+              "text": "Um die bearbeiteten Daten nicht inkonsistent zu machen ;; Falls Threads nicht synchronisiert werden, kann es außerdem dazu kommen, dass ein sogenanntes Lost Update auftritt.",
+              "elements": [
+                [
+                  0,
+                  54
+                ],
+                [
+                  56,
+                  171
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Um die bearbeiteten Daten nicht inkonsistent zu machen. Falls Threads nicht synchronisiert werden, kann es außerdem dazu kommen, dass ein sogenanntes Lost Update auftritt."
+        },
+        {
+          "id": "54",
+          "text": "weil die Daten können durch überschreiben von zieldaten ausgetauscht werden.Dann entsthet das gefahr von Lost von update Um diese fehler verhindern zu können,braucht man Synchrinisation.",
+          "aspects": [
+            {
+              "text": "Dann ensteht die Gefahr von Lost Update",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Weil die Daten können durch überschreiben von Zieldaten ausgetauscht werden. Dann ensteht die Gefahr von Lost Update. Um diese fehler verhindern zu können, braucht man Synchrinisation."
+        },
+        {
+          "id": "55",
+          "text": "Damit Fehler durch verlorene Daten ausgeschlossen werden können. Zum Beispiel wenn ein Thread bis zu einem gewissen Punkt laufen muss bevor ein anderer Thread mit dessen Daten weiterarbeiten kann.",
+          "aspects": [
+            {
+              "text": "Zum Beispiel wenn ein Thread bis zu einem gewissen Punkt laufen muss bevor ein anderer Thread mit dessen Daten weiterarbeiten kann",
+              "elements": [
+                [
+                  65,
+                  195
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Damit Fehler dadurch verlorene Daten ausgeschlossen werden können",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Damit Fehler dadurch verlorene Daten ausgeschlossen werden können. Zum Beispiel wenn ein Thread bis zu einem gewissen Punkt laufen muss bevor ein anderer Thread mit dessen Daten weiterarbeiten kann."
+        },
+        {
+          "id": "56",
+          "text": "Wenn mehrere Threads mit derselben Variablen arbeiten können sie unterschiedlich schnell fertig werden, wodurch andere Ergebnisse herauskommen. Durch die Synchronisation werden von beiden Threads genutzte Daten parallel gehalten, um Fehler zu verhindern",
+          "aspects": [
+            {
+              "text": "Durch die Synchronisation werden von beiden Threads genutzte Daten parallel gehalten",
+              "elements": [
+                [
+                  144,
+                  228
+                ]
+              ],
+              "aIdx": 0,
+              "label": 2
+            }
+          ],
+          "correctionOrComment": "Wenn mehrere Threads mit derselben Variable arbeiten können sie unterschiedlich schnell fertig werden, wodurch andere Ergebnisse herauskommen. Durch die Synchronisation werden von beiden Threads genutzte Daten parallel gehalten, um Fehler zu verhindern"
+        },
+        {
+          "id": "57",
+          "text": "Die Rheinfolge der Threads vermeidet somit das Deadlock, die abschnitte mehrer",
+          "aspects": [],
+          "correctionOrComment": "Die Rheinfolge der Threads vermeidet somit das Deadlock"
+        },
+        {
+          "id": "58",
+          "text": "Da teilweise auf gemeinsame Daten zugegriffen wird ist die Synchronisation sehr wichtig. Eine Reihenfolge des Zugriffs unterschiedlicher Threads, kann Datenverlust verhindern.",
+          "aspects": [
+            {
+              "text": " Eine Reihenfolge des Zugriffs unterschiedlicher Threads",
+              "elements": [
+                [
+                  89,
+                  144
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "kann Datenverlust verhindern",
+              "elements": [
+                [
+                  146,
+                  174
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Da teilweise auf gemeinsame Daten zugegriffen wird ist die Synchronisation sehr wichtig. Eine Reihenfolge des Zugriffs unterschiedlicher Threads, kann Datenverlust verhindern."
+        },
+        {
+          "id": "59",
+          "text": "weil sie sich wärend der läufzeit verändern können und somit ist eine Synchronisation nötig",
+          "aspects": [],
+          "correctionOrComment": "Weil sie sich während der Läufzeit verändern können und somit ist eine Synchronisation nötig"
+        },
+        {
+          "id": "60",
+          "text": "-",
+          "aspects": [],
+          "correctionOrComment": "-"
+        },
+        {
+          "id": "61",
+          "text": "für Multithreaded Anwendung und können Daten einfach durch überschreiben der Zieldaten austauschen",
+          "aspects": [],
+          "correctionOrComment": "Multithreaded Anwendungen können Daten einfach durch überschreiben der Zieldaten austauschen"
+        },
+        {
+          "id": "62",
+          "text": "um zu verhindern das Attribute oder Werte in den kritischen abschnitt kommen oder zwei Threads. Dadurch werden Threads Synchronisiert um dies zu verhindern. So nimmt der eine Threads den Wert den er braucht und gibt ihn erst frei wenn er fertig ist. Beispiel skript mit Global (w,v).",
+          "aspects": [
+            {
+              "text": "So nimmt der eine Thread den Wert, den er braucht und gibt ihn erst frei wenn er fertig ist",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Um zu verhindern das Attribute oder Werte in den kritischen Abschnitt kommen oder zwei Threads. Dadurch werden Threads Synchronisiert um dies zu verhindern. So nimmt der eine Thread den Wert, den er braucht und gibt ihn erst frei wenn er fertig ist."
+        },
+        {
+          "id": "63",
+          "text": "Damit nicht ein Thread die Daten des anderen überschreibt und um der Gefahr verlorener Daten entgegenzuwirken.",
+          "aspects": [
+            {
+              "text": "um der Gefahr verlorener Daten entgegenzuwirken",
+              "elements": [
+                [
+                  62,
+                  109
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0
+            }
+          ],
+          "correctionOrComment": "Damit nicht ein Thread die Daten des anderen überschreibt und um der Gefahr verlorener Daten entgegenzuwirken."
+        },
+        {
+          "id": "64",
+          "text": "Damit Variablen bzw deren Werte ggf nicht gleichzeitig von verschiedenen Threads überschrieben werden und es dadurch zu komplikatioinen im Programmablauf kommt.",
+          "aspects": [
+            {
+              "text": "Damit Variablen beziwhungsweise deren Werte nicht gleichzeitig von verschiedenen Threads überschrieben werden ",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "und es dadurch zu Komplikatioinen im Programmablauf kommt",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Damit Variablen beziwhungsweise deren Werte nicht gleichzeitig von verschiedenen Threads überschrieben werden und es dadurch zu Komplikatioinen im Programmablauf kommt."
+        },
+        {
+          "id": "65",
+          "text": "Da bei dem gleichzeitigen Zugriff auf die selben Daten eventuell Fehler auftreten können",
+          "aspects": [
+            {
+              "text": "Da bei dem gleichzeitigen Zugriff auf die selben Daten eventuell Fehler auftreten können",
+              "elements": [
+                [
+                  0,
+                  88
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0
+            },
+            {
+              "text": "Da bei dem gleichzeitigen Zugriff auf die selben Daten eventuell Fehler auftreten können",
+              "elements": [
+                [
+                  0,
+                  88
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1
+            }
+          ],
+          "correctionOrComment": "Da bei dem gleichzeitigen Zugriff auf die selben Daten eventuell Fehler auftreten können"
+        },
+        {
+          "id": "66",
+          "text": "Man will Deadlocks vermeiden. Das ist ein Zustand wo das Programm gestartet wird aber sich nicht beenden kann."
         }
       ]
     }

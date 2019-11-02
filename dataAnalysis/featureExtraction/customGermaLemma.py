@@ -7,6 +7,9 @@ from importlib import import_module
 from .customIWNLPLemmatizer import CustomIWNLPLemmatizer
 
 from pyphen import Pyphen
+from os.path import dirname, realpath, join
+
+FILE_PATH = dirname(realpath(__file__))
 
 
 DEFAULT_LEMMATA_PICKLE = 'data/lemmata.pickle'
@@ -65,7 +68,7 @@ class CustomGermaLemma(object):
         elif('pickle' in kwargs):
             self.load_from_pickle(kwargs['pickle'])
         self.pattern_module = import_module('pattern.de')
-        self.iwnlpLemmatizer = CustomIWNLPLemmatizer('lib/IWNLP.Lemmatizer_20170501.json')
+        self.iwnlpLemmatizer = CustomIWNLPLemmatizer(join(FILE_PATH,"lib","IWNLP.Lemmatizer_20170501.json"))
 
     def find_lemma(self, w, pos, props=None):
         # do not process empty strings

@@ -152,6 +152,8 @@ def parseSemval(xmlPath):
 
 parseSemval(os.path.join("..","question-corpora", "SEMVAL", "training", "sciEntsBank", "EM-inv1-45b.xml"))
 
-# xmlParser = CSSAG3Parser()
+xmlParser = CSSAG3Parser()
+for id in ["25","26","29","31"]:
+    xmlParser.convertToJson("Question"+id+".xml","Question"+id+".json")
 # questionDict = xmlParser.parseXml("./CSSAG 3.0/CSSAG_XML/Question1.xml")
 # print(len(questionDict["studentAnswers"]))
