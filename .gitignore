@@ -1,9 +1,9 @@
 /dataAnalysis/features
 /dataAnalysis/tokenAnnotations
 
-/dataAnalysis/results
-/dataAnalysis/featureExtraction/lib
-!*/dataAnalysis/featureExtraction/lib/readme.txt
+dataAnalysis/results
+dataAnalysis/featureExtraction/lib/*
+!dataAnalysis/featureExtraction/lib/readme.txt
 
 __pycache__/
 node_modules/
