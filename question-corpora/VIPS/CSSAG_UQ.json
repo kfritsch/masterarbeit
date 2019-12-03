@@ -1,0 +1,3121 @@
+{
+    "questions": [
+        {
+            "id": "5",
+            "title": "Vererbung - Schnittstellen und abstrakte Klassen",
+            "text": "Sie m\u00f6chten eine als 'private' deklarierte Variable und mehrere implementierte Methoden vererben. Verwenden Sie eine Schnittstelle oder eine abstrakte Klasse? Begr\u00fcnden Sie Ihre Antwort.",
+            "type": "reason",
+            "aspects": [
+                {
+                    "text": "eine abstrakte Klasse"
+                },
+                {
+                    "text": "Schnittstellen k\u00f6nnen keine implementierten Methoden bereitstellen"
+                }
+            ],
+            "assignedWeights": {
+                "m\u00fcssen": 2,
+                "abstrakt": 5,
+                "Klasse": 2,
+                "verwenden": 2,
+                "weil": 3,
+                "Schnittstelle": 0,
+                "kein": 4,
+                "implementiert": 4,
+                "Methode": 3,
+                "bereitstellen": 3,
+                "k\u00f6nnen": 2
+            },
+            "referenceAnswers": [
+                {
+                    "id": "ref1",
+                    "text": "Man muss eine abstrakte Klasse verwenden, weil Schnittstellen keine implementierten Methoden bereitstellen k\u00f6nnen.",
+                    "aspects": [
+                        {
+                            "text": "Man muss eine abstrakte Klasse verwenden",
+                            "aIdx": 0,
+                            "elements": [
+                                [
+                                    0,
+                                    40
+                                ]
+                            ],
+                            "label": 0
+                        },
+                        {
+                            "text": "weil Schnittstellen keine implementierten Methoden bereitstellen k\u00f6nnen",
+                            "aIdx": 1,
+                            "elements": [
+                                [
+                                    42,
+                                    113
+                                ]
+                            ],
+                            "label": 0
+                        }
+                    ]
+                }
+            ],
+            "studentAnswers": [
+                {
+                    "text": "Abstrakte Klassen Basisklassen vererben nur implemetierte Mehtoden, Schnittstellen stellen keine implementierten Methoden bereit Abstrakte klassen werden durch abstract class deklariert",
+                    "id": "1",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Abstrakte Klassen vererben nur implemetierte Mehtoden. Schnittstellen stellen keine implementierten Methoden bereit. Abstrakte klassen werden durch 'abstract class' deklariert.",
+                    "aspects": [
+                        {
+                            "text": "Schnittstellen stellen keine implementierten Methoden bereit",
+                            "elements": [
+                                [
+                                    55,
+                                    115
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine abstrakte Klasse, da Schnittstellen keine implemenierte Methoden bereit stellen.",
+                    "id": "2",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Man verwendet eine abstrakte Klasse, da Schnittstellen keine implemenierte Methoden bereitstellen.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    35
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "da Schnittstellen keine implemenierte Methoden bereitstellen",
+                            "elements": [
+                                [
+                                    37,
+                                    97
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine Schnittstelle, da abstrakte Klasse keine Methoden weitergeben.",
+                    "id": "3",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Man verwendet eine Schnittstelle, da abstrakte Klassen keine Methoden weitergeben.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet eine Schnittstelle",
+                            "elements": [
+                                [
+                                    0,
+                                    32
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        },
+                        {
+                            "text": "da abstrakte Klassen keine Methoden weitergeben",
+                            "elements": [
+                                [
+                                    34,
+                                    81
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "Schnittstellen vererben keine implementierten Methoden, doch abstrakte Klassen k\u00f6nnen, wenn sie vereerbt werden implementierte Methoden vererben. Normalerweise m\u00fcssen sie immer sp\u00e4ter implementiert werden.",
+                    "id": "4",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Schnittstellen vererben keine implementierten Methoden. Abstrakte Klassen k\u00f6nnen, wenn sie vereerbt werden, implementierte Methoden vererben. Normalerweise m\u00fcssen sie immer sp\u00e4ter implementiert werden.",
+                    "aspects": [
+                        {
+                            "text": "Schnittstellen vererben keine implementierten Methoden",
+                            "elements": [
+                                [
+                                    0,
+                                    54
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Basisklassen vererben nur implementierte Methoden, Schnittstellen stellen keine implementierten Methoden bereit. manche Methoden brauchen eine Implementierung gleichzeitig k\u00f6nnen manche Methoden in der Basisklasse nicht implementiert sein. eine abstrakte Klasse kann unimplementierte Methoden enthalten markiert durch abstract. dacher w\u00fcrde ich eine abstrakte Kalsse w\u00e4hlen.",
+                    "id": "5",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Basisklassen vererben nur implementierte Methoden. Schnittstellen stellen keine implementierten Methoden bereit. Manche Methoden brauchen eine Implementierung. Gleichzeitig k\u00f6nnen manche Methoden in der Basisklasse nicht implementiert sein. Eine abstrakte Klasse kann unimplementierte Methoden enthalten. Sie wird markiert durch 'abstract'. Daher w\u00fcrde ich eine abstrakte Klasse w\u00e4hlen.",
+                    "aspects": [
+                        {
+                            "text": "Daher w\u00fcrde ich eine abstrakte Klasse w\u00e4hlen",
+                            "elements": [
+                                [
+                                    341,
+                                    385
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Schnittstellen stellen keine implementierten Methoden bereit",
+                            "elements": [
+                                [
+                                    51,
+                                    111
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "-",
+                    "id": "6",
+                    "answerCategory": "none",
+                    "correctionOrComment": "-",
+                    "aspects": []
+                },
+                {
+                    "text": "Abstrakte Klasse: da Schnittstellen keine implementierten Methoden bereitstellen.",
+                    "id": "7",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Man verwendet abstrakte Klassen, da Schnittstellen keine implementierten Methoden bereitstellen.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet abstrakte Klassen",
+                            "elements": [
+                                [
+                                    0,
+                                    31
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "a Schnittstellen keine implementierten Methoden bereitstellen",
+                            "elements": [
+                                [
+                                    34,
+                                    95
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Abstrakte Klasse da Schnittstellen keine Implementierten Methoden bereit stellen.",
+                    "id": "8",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Man verwendet eine abstrakte Klasse, da Schnittstellen keine implementierten Methoden bereitstellen.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    35
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "da Schnittstellen keine implementierten Methoden bereitstellen",
+                            "elements": [
+                                [
+                                    37,
+                                    99
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "ich verwende eine abstrakte Klasse weil aus schnittstelle kann ich keine implementierte Methoden vererben.",
+                    "id": "9",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Ich verwende eine abstrakte Klasse, weil ich aus Schnittstellen keine implementierte Methoden vererben kann.",
+                    "aspects": [
+                        {
+                            "text": "Ich verwende eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    34
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "weil ich aus Schnittstellen keine implementierte Methoden vererben kann",
+                            "elements": [
+                                [
+                                    36,
+                                    107
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "eine schnittstelle, weil man die darin enthaltenen methoden vererben kann",
+                    "id": "10",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Man verwendet eine Schnittstelle, weil man die darin enthaltenen methoden vererben kann.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet eine Schnittstelle",
+                            "elements": [
+                                [
+                                    0,
+                                    32
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        },
+                        {
+                            "text": "weil man die darin enthaltenen methoden vererben kann",
+                            "elements": [
+                                [
+                                    34,
+                                    87
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "ich verwende eine abstakte Klasse, weil nur in einer abstrakte klasse darf man Variablen deklarieren.",
+                    "id": "11",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Ich verwende eine abstakte Klasse, weil man nur in einer abstrakten Klasse Variablen deklarieren darf.",
+                    "aspects": [
+                        {
+                            "text": "Ich verwende eine abstakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    33
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "",
+                    "id": "12",
+                    "answerCategory": "none",
+                    "correctionOrComment": "",
+                    "aspects": []
+                },
+                {
+                    "text": "eine abstrakte klasse, da in einer schnittstelle die methoden nicht implementiert sein d\u00fcrfen",
+                    "id": "13",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Man verwendet eine abstrakte Klasse, da in einer Schnittstelle die Methoden nicht implementiert sein d\u00fcrfen.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    35
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "da in einer Schnittstelle die Methoden nicht implementiert sein d\u00fcrfen",
+                            "elements": [
+                                [
+                                    37,
+                                    107
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "abstrakte Klasse. Weil sie private ist und sonst nicht verwendet werden kann.",
+                    "id": "14",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Man verwendet eine abstrakte Klasse, weil sie 'private' ist und sonst nicht verwendet werden kann.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    35
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Bereits implementierte Methoden k\u00f6nnen nicht mit einer abstrakten Klasse vererbt werden. Daher Schnittstelle.",
+                    "id": "15",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Bereits implementierte Methoden k\u00f6nnen nicht mit einer abstrakten Klasse vererbt werden. Daher verwendet man eine Schnittstelle.",
+                    "aspects": [
+                        {
+                            "text": "Daher verwendet man eine Schnittstelle",
+                            "elements": [
+                                [
+                                    89,
+                                    127
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        },
+                        {
+                            "text": "Bereits implementierte Methoden k\u00f6nnen nicht mit einer abstrakten Klasse vererbt werden",
+                            "elements": [
+                                [
+                                    0,
+                                    87
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "eine abstrakte Klasse, da Schnittstellen keine Datenfelder zur\u00fcck geben.",
+                    "id": "16",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Man verwendet eine abstrakte Klasse, da Schnittstellen keine Datenfelder zur\u00fcckgeben.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    35
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Da Schnittstellen keine Methoden implementieren und deren private deklarierte Variablen nicht vererbt werden, verwende man eine abstrakte Klasse.",
+                    "id": "17",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Da Schnittstellen keine Methoden implementieren und deren private deklarierte Variablen nicht vererbt werden, verwendet man eine abstrakte Klasse.",
+                    "aspects": [
+                        {
+                            "text": "verwendet man eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    110,
+                                    145
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Da Schnittstellen keine Methoden implementieren",
+                            "elements": [
+                                [
+                                    0,
+                                    47
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Man verwendet eine abstrakte Klasse, da die Schnittstellen nur Konstanten bereitstellen k\u00f6nnen und die Methoden bei abstrakten Klassen sowohl implementiert, als auch unimplementiert sein k\u00f6nnen.",
+                    "id": "18",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Man verwendet eine abstrakte Klasse, da die Schnittstellen nur Konstanten bereitstellen k\u00f6nnen und die Methoden bei abstrakten Klassen sowohl implementiert, als auch unimplementiert sein k\u00f6nnen.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    35
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine abstrakte Klasse, da nur diese Datenfelder vererben kann.",
+                    "id": "19",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Man verwendet eine abstrakte Klasse, da nur diese Datenfelder vererben kann.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    35
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Es sollte eine abstrakte Klasse verwendet werden. Die abstrakte Klasse f\u00fcllt die L\u00fccke zwischen der Basisklasse und der Schnittstelle. Mit einer Schnittstelle lassen sich au\u00dferdem keine Variablen und auch keine implementierte Methoden vererben.",
+                    "id": "20",
+                    "answerCategory": "binary_correct",
+                    "correctionOrComment": "Es sollte eine abstrakte Klasse verwendet werden. Die abstrakte Klasse f\u00fcllt die L\u00fccke zwischen der Basisklasse und der Schnittstelle. Mit einer Schnittstelle lassen sich au\u00dferdem keine Variablen und auch keine implementierte Methoden vererben.",
+                    "aspects": [
+                        {
+                            "text": "Es sollte eine abstrakte Klasse verwendet werden",
+                            "elements": [
+                                [
+                                    0,
+                                    48
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Mit einer Schnittstelle lassen sich au\u00dferdem ;; keine implementierte Methoden vererben",
+                            "elements": [
+                                [
+                                    135,
+                                    179
+                                ],
+                                [
+                                    205,
+                                    243
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Schnittstelle",
+                    "id": "21",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Man verwendet ein Schnittstelle.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet ein Schnittstelle",
+                            "elements": [
+                                [
+                                    0,
+                                    31
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "Man verwendet eine Schnittstelle da abstrakte Klassen unimplementierte methoden enthalten k\u00f6nnen.",
+                    "id": "22",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Man verwendet eine Schnittstelle, da abstrakte Klassen unimplementierte Methoden enthalten k\u00f6nnen.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet eine Schnittstelle",
+                            "elements": [
+                                [
+                                    0,
+                                    32
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "Die Verwendung einer abstrakten Klasse ist hier sinnvoller, da die bereits implementierten Methoden erhalten bleiben sollten, was bei einer Schnittstelle nicht m\u00f6glich ist.",
+                    "id": "23",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Die Verwendung einer abstrakten Klasse ist hier sinnvoller, da die bereits implementierten Methoden erhalten bleiben, was bei einer Schnittstelle nicht m\u00f6glich ist.",
+                    "aspects": [
+                        {
+                            "text": "Die Verwendung einer abstrakten Klasse ist hier sinnvoller",
+                            "elements": [
+                                [
+                                    0,
+                                    58
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "da die bereits implementierten Methoden erhalten bleiben, was bei einer Schnittstelle nicht m\u00f6glich ist",
+                            "elements": [
+                                [
+                                    60,
+                                    163
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 1
+                        }
+                    ]
+                },
+                {
+                    "text": "Ich verwende eine abstrakte Klasse, da man in einer Schnittstelle Methoden nur deklarieren kann und noch nicht implementieren. Au\u00dferdem kann man in einer Schnittstelle nur Konstanten verwenden.",
+                    "id": "24",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Ich verwende eine abstrakte Klasse, da man in einer Schnittstelle Methoden nur deklarieren kann und noch nicht implementieren. Au\u00dferdem kann man in einer Schnittstelle nur Konstanten verwenden.",
+                    "aspects": [
+                        {
+                            "text": "Ich verwende eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    34
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "da man in einer Schnittstelle Methoden nur deklarieren kann und noch nicht implementieren",
+                            "elements": [
+                                [
+                                    36,
+                                    125
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "eine abstrakte Klasse, da in einer Schnittstelle nur die Methoden deklariert werden und keine variablen.",
+                    "id": "25",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Man verwendet eine abstrakte Klasse, da in einer Schnittstelle nur die Methoden deklariert werden und keine Variablen.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    35
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Ich verwende eine abstrakte Klasse, da mit dieser problemlos Datenfelder vererbt werden k\u00f6nnen die nicht konstant sind.",
+                    "id": "26",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Ich verwende eine abstrakte Klasse, da mit dieser problemlos Datenfelder vererbt werden k\u00f6nnen, die nicht konstant sind.",
+                    "aspects": [
+                        {
+                            "text": "Ich verwende eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    34
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "ich verwende eine abstrakte Klasse, da die abstrakte Klasse Datenfelder bereitstellen kann und Schnittstellen nur konstante. Die Abstrakte Klasse veerbt implementierte Methoden. Schnittstellen stellen keine implementierte Methoden bereit.",
+                    "id": "27",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Ich verwende eine abstrakte Klasse, da die abstrakte Klasse Datenfelder bereitstellen kann und Schnittstellen nur Konstanten. Die Abstrakte Klasse vererbt implementierte Methoden. Schnittstellen stellen keine implementierten Methoden bereit.",
+                    "aspects": [
+                        {
+                            "text": "Ich verwende eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    34
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Schnittstellen stellen keine implementierten Methoden bereit",
+                            "elements": [
+                                [
+                                    180,
+                                    240
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Abstrakte Klassen. Diese Klassen sind spezielle Klassen die viele abstrakte Methoden beinhalten. Entweder abgeleitete Klassen m\u00fcssen abstract sein oder die abstrakte Methoden sind in dem Fall implementiert.",
+                    "id": "28",
+                    "answerCategory": "binary_correct",
+                    "correctionOrComment": "Man verwendet abstrakte Klassen. Diese Klassen sind spezielle Klassen, die viele abstrakte Methoden beinhalten. Entweder m\u00fcssen abgeleitete Klassen 'abstract' sein oder die abstrakte Methoden sind in dem Fall implementiert.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet abstrakte Klassen",
+                            "elements": [
+                                [
+                                    0,
+                                    31
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "abstrakte Klasse",
+                    "id": "29",
+                    "answerCategory": "guessing",
+                    "correctionOrComment": "Man verwendet eine abstrakte Klasse.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    35
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Man ver wendet eine abstrakte Klasse, weil Schnittstellen nur Konstanten breitstellen.",
+                    "id": "30",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Man verwendet eine abstrakte Klasse, weil Schnittstellen nur Konstanten breitstellen.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    35
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine Klasse kann nur eine Basisklasse haben, aber beliebige Schnittsctellen implementieren. Deshalb Schnittstelle.",
+                    "id": "31",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Eine Klasse kann nur eine Basisklasse haben, aber beliebige Schnittstellen implementieren. Deshalb verwendet man eine Schnittstelle.",
+                    "aspects": [
+                        {
+                            "text": "Deshalb verwendet man eine Schnittstelle",
+                            "elements": [
+                                [
+                                    91,
+                                    131
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "eine anstrakte Klassse denn abtrakte Klassen k\u00f6nnen implementiere Methoden enthalten und wenn eine abtrakte Klasse abgeleitet wird, m\u00fcssen die abtrakt markierten Methoden implementiert werden. um eine private deklarierte Variable zu vererben braucht man auf jeden fall getter und setter. Deshalb verwendet man eine abtrakte Klasse",
+                    "id": "32",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Man verwendet eine anstrakte Klassse, denn abtrakte Klassen k\u00f6nnen implementiere Methoden enthalten und wenn eine abtrakte Klasse abgeleitet wird, m\u00fcssen die abtrakt markierten Methoden implementiert werden. Um eine 'private' deklarierte Variable zu vererben braucht man auf jeden fall Getter und Setter. Deshalb verwendet man eine abtrakte Klasse.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet eine anstrakte Klassse",
+                            "elements": [
+                                [
+                                    0,
+                                    36
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "denn abtrakte Klassen k\u00f6nnen implementiere Methoden enthalten",
+                            "elements": [
+                                [
+                                    38,
+                                    99
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 1
+                        }
+                    ]
+                },
+                {
+                    "text": "eine abstrakte weil die basis klassen k\u00f6nnen datenfelder bereitstellen aber die schnittstellen nur konstanten Baisklassen vererben nur implementierte methoden. PS man kann keine konkrete objekte erzeugen.",
+                    "id": "33",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Man verwendet eine abstrakte Klasse, weil die Basisklassen Datenfelder bereitstellen k\u00f6nnen Schnittstellen aber  nur Konstanten. Baisklassen vererben nur implementierte Methoden.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    35
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Ich verwende eine abstrakte Klasse: Impl. Methoden k\u00f6nnen verwendet werden. Bei Schnittstellen k\u00f6nnen Methoden nicht Impl.",
+                    "id": "34",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Ich verwende eine abstrakte Klasse, weil dort implementierte Methoden verwendet werden k\u00f6nnen. Bei Schnittstellen k\u00f6nnen Methoden nicht implementiert vererbt werden.",
+                    "aspects": [
+                        {
+                            "text": "Ich verwende eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    34
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Bei Schnittstellen k\u00f6nnen Methoden nicht implementiert vererbt werden",
+                            "elements": [
+                                [
+                                    95,
+                                    164
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "mit Schnittstelle werden wir \"\"Implement\"\"benutzen ,weil die schnittstelle alle ben\u00f6tige Informationen beihaltet. Mit Abstrakte Klassen auf grund der kapselung von Intanzen.",
+                    "id": "35",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Wir werden Schnittstellen mit 'implements' benutzen, weil die Schnittstelle alle ben\u00f6tigten Informationen beinhaltet.",
+                    "aspects": [
+                        {
+                            "text": "Wir werden Schnittstellen mit 'implements' benutzen",
+                            "elements": [
+                                [
+                                    0,
+                                    51
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        },
+                        {
+                            "text": "weil die Schnittstelle alle ben\u00f6tigten Informationen beinhaltet",
+                            "elements": [
+                                [
+                                    53,
+                                    116
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "Ich verwende eine abstrakte Klasse, da diese implementierte Methoden enthalten darf und private Variablen erlaubt sind. Selbst wenn manche Methoden mit abstract gekennzeichnet sind, ist es erlaubt, die abstrakte Klasse zu vererben, wenn alle mit abstact gekennzeichneten Methoden implementiert sind. Wenn es eine abstrakte Methode gibt, die nicht implementiert ist, muss die abgeleitete Klasse auch abstract sein, was in diesem Fall aber nicht so ist.",
+                    "id": "36",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Ich verwende eine abstrakte Klasse, da diese implementierte Methoden enthalten darf und 'private' Variablen erlaubt sind. Selbst wenn manche Methoden mit 'abstract' gekennzeichnet sind, ist es erlaubt die abstrakte Klasse zu vererben, wenn alle mit 'abstract' gekennzeichneten Methoden implementiert sind. Wenn es eine abstrakte Methode gibt, die nicht implementiert ist, muss die abgeleitete Klasse auch 'abstract' sein, was in diesem Fall aber nicht so ist.",
+                    "aspects": [
+                        {
+                            "text": "Ich verwende eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    34
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "da diese implementierte Methoden enthalten darf",
+                            "elements": [
+                                [
+                                    36,
+                                    83
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 1
+                        }
+                    ]
+                },
+                {
+                    "text": "ich verwende eine Abstrakte klasse, da ich ich Methoden Implementieren will und eine schnittstelle keine Implementierung erlaubt und die private variable ist auch ein hinweis darauf, da man auf sie mit einem Getter zugreifen muss",
+                    "id": "37",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Ich verwende eine abstrakte Klasse, da ich Methoden implementieren will und eine Schnittstelle keine Implementierung erlaubt. Die 'private' Variable ist auch ein Hinweis darauf, dass man auf sie mit einem Getter zugreifen muss.",
+                    "aspects": [
+                        {
+                            "text": "Ich verwende eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    34
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "da ;; eine Schnittstelle keine Implementierung erlaubt",
+                            "elements": [
+                                [
+                                    36,
+                                    38
+                                ],
+                                [
+                                    76,
+                                    124
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Man verwendet daf\u00fcr eine abstrakte Klasse. Da abstrakte Klassen nicht nur Mehtoden implementiern k\u00f6nnen sondern auch Datenfelder.",
+                    "id": "38",
+                    "answerCategory": "binary_correct",
+                    "correctionOrComment": "Man verwendet daf\u00fcr eine abstrakte Klasse, da abstrakte Klassen nicht nur Mehtoden implementiern k\u00f6nnen sondern auch Datenfelder.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet daf\u00fcr eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    41
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Man verwendet eine abstrakte Klasse, da Schnittstellen keine implementierte Methoden bereitstellen.",
+                    "id": "39",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Man verwendet eine abstrakte Klasse, da Schnittstellen keine implementierten Methoden bereitstellen.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    35
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "da Schnittstellen keine implementierten Methoden bereitstellen",
+                            "elements": [
+                                [
+                                    37,
+                                    99
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "eine abstrakte Klasse da Schnittstellen eher f\u00fcr das implementieren f\u00fcr Methoden zust\u00e4ndig sind.",
+                    "id": "40",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Man verwendet eine abstrakte Klasse, da Schnittstellen eher f\u00fcr das implementieren von Methoden zust\u00e4ndig sind.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    35
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "da Schnittstellen eher f\u00fcr das implementieren von Methoden zust\u00e4ndig sind",
+                            "elements": [
+                                [
+                                    37,
+                                    110
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "Man nimmt eine abstrakte Klasse, da Schnittstellen nur Konstanten vererben k\u00f6nnen.",
+                    "id": "41",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Man nimmt eine abstrakte Klasse, da Schnittstellen nur Konstanten vererben k\u00f6nnen.",
+                    "aspects": [
+                        {
+                            "text": "Man nimmt eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    31
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine Schnittstelle, bei einer abstrakten Klasse darf man nicht inistanzieieren.",
+                    "id": "42",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Man verwendet eine Schnittstelle, weil man bei einer abstrakten Klasse nicht instanziieren darf.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet eine Schnittstelle",
+                            "elements": [
+                                [
+                                    0,
+                                    32
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine abstrakte Klasse, da Methoden in einer Schnittstelle nicht implementiert sein d\u00fcrfen.",
+                    "id": "43",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Man nimmt eine abstrakte Klasse, da Methoden in einer Schnittstelle nicht implementiert sein d\u00fcrfen.",
+                    "aspects": [
+                        {
+                            "text": "Man nimmt eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    31
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "da Methoden in einer Schnittstelle nicht implementiert sein d\u00fcrfen",
+                            "elements": [
+                                [
+                                    33,
+                                    99
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Abstrakte Klassen, denn sie k\u00f6nnen bereits implementierte Methoden beinhalten, Schnittstellen sind nicht implementiert.",
+                    "id": "44",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Man verwendet abstrakte Klassen, denn sie k\u00f6nnen bereits implementierte Methoden beinhalten. Methoden in Schnittstellen sind nicht implementiert.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet abstrakte Klassen",
+                            "elements": [
+                                [
+                                    0,
+                                    31
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Methoden in Schnittstellen sind nicht implementiert",
+                            "elements": [
+                                [
+                                    93,
+                                    144
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "-",
+                    "id": "45",
+                    "answerCategory": "none",
+                    "correctionOrComment": "-",
+                    "aspects": []
+                },
+                {
+                    "text": "-",
+                    "id": "46",
+                    "answerCategory": "none",
+                    "correctionOrComment": "-",
+                    "aspects": []
+                },
+                {
+                    "text": "eine abstrakte klasse weil es um merere methoden geht die private seien sollen",
+                    "id": "47",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Man nimmt eine abstrakte Klasse, weil es um mehrere Methoden geht die 'private' seien sollen.",
+                    "aspects": [
+                        {
+                            "text": "Man nimmt eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    31
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Schnittstelle",
+                    "id": "48",
+                    "answerCategory": "guessing",
+                    "correctionOrComment": "Man nimmt eine Schnittstelle.",
+                    "aspects": [
+                        {
+                            "text": "Man nimmt eine Schnittstelle",
+                            "elements": [
+                                [
+                                    0,
+                                    28
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine Abstrakte Klasse, weil diese auch auf private deklarierte Variable und Methoden zugreifen kann.",
+                    "id": "49",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Man nimmt eine abstrakte Klasse, weil diese auch auf 'private' deklarierte Variablen und Methoden zugreifen kann.",
+                    "aspects": [
+                        {
+                            "text": "Man nimmt eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    31
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Man verwendet eine abstrakte Klasse, da Schnittstellen keine implementierte Methoden zur Verf\u00fcgung stellen.",
+                    "id": "50",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Man verwendet eine abstrakte Klasse, da Schnittstellen keine implementierten Methoden zur Verf\u00fcgung stellen.",
+                    "aspects": [
+                        {
+                            "text": "Man verwendet eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    35
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "da Schnittstellen keine implementierten Methoden zur Verf\u00fcgung stellen",
+                            "elements": [
+                                [
+                                    37,
+                                    107
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "-",
+                    "id": "51",
+                    "answerCategory": "none",
+                    "correctionOrComment": "-",
+                    "aspects": []
+                },
+                {
+                    "text": "eine abstrakte Klasse weil die Unterklassen von ihr erben.",
+                    "id": "52",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Man nimmt eine abstrakte Klasse, weil die Unterklassen von ihr erben.",
+                    "aspects": [
+                        {
+                            "text": "Man nimmt eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    31
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Ich w\u00fcrde eine Schnittstelle benutzen.",
+                    "id": "53",
+                    "answerCategory": "guessing",
+                    "correctionOrComment": "Ich w\u00fcrde eine Schnittstelle benutzen.",
+                    "aspects": [
+                        {
+                            "text": "Ich w\u00fcrde eine Schnittstelle benutzen",
+                            "elements": [
+                                [
+                                    0,
+                                    37
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "eine Abstrakte, da bei der Schnittstelle man ,nach der Vererbung, die Methoden noch implementieren muss.",
+                    "id": "54",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Man nimmt eine abstrakte Klasse, da man bei der Schnittstelle die Methoden nach der Vererbung noch implementieren muss.",
+                    "aspects": [
+                        {
+                            "text": "Man nimmt eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    31
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "da man bei der Schnittstelle die Methoden nach der Vererbung noch implementieren muss",
+                            "elements": [
+                                [
+                                    33,
+                                    118
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine abstrake Klasse da die Methoden implementiert sein sollen.",
+                    "id": "55",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Eine abstrake Klasse, da die Methoden implementiert sein sollen.",
+                    "aspects": [
+                        {
+                            "text": "Eine abstrake Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    20
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Abstrakte Klasse: die privat deklarierte Variable ist nur in einer Klasse sichtbar.",
+                    "id": "56",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Man nimmt eine abstrakte Klasse, da die privat deklarierte Variable nur in einer Klasse sichtbar ist.",
+                    "aspects": [
+                        {
+                            "text": "Man nimmt eine abstrakte Klasse",
+                            "elements": [
+                                [
+                                    0,
+                                    31
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "text": "Was unterscheidet in JAVA Klassenvariablen von Instanzvariablen?",
+            "title": "Klassen- und Instanzvariable",
+            "type": "comparison",
+            "aspects": [
+                {
+                    "text": "Klassenvariablen existieren einmal pro Klasse"
+                },
+                {
+                    "text": "Klassenvariablen existieren auch ohne eine konkrete Instanz"
+                },
+                {
+                    "text": "Instanzvariable existiert einmal pro Objekt"
+                }
+            ],
+            "assignedWeights": {
+                "Klassenvariable": 2,
+                "existieren": 3,
+                "pro": 5,
+                "einmal": 5,
+                "Klasse": 4,
+                "auch": 0,
+                "ohne": 3,
+                "konkret": 4,
+                "Instanz": 5,
+                "Instanzvariable": 2,
+                "Objekt": 4
+            },
+            "referenceAnswers": [
+                {
+                    "id": "ref1",
+                    "text": "Klassenvariablen existieren einmal pro Klasse, auch ohne eine konkrete Instanz. Instanzvariable existiert einmal pro Objekt.",
+                    "aspects": [
+                        {
+                            "text": "Klassenvariablen existieren einmal pro Klasse",
+                            "aIdx": 0,
+                            "elements": [
+                                [
+                                    0,
+                                    45
+                                ]
+                            ],
+                            "label": 0
+                        },
+                        {
+                            "text": "Klassenvariablen existieren ;; auch ohne eine konkrete Instanz",
+                            "aIdx": 1,
+                            "elements": [
+                                [
+                                    0,
+                                    37
+                                ],
+                                [
+                                    47,
+                                    78
+                                ]
+                            ],
+                            "label": 0
+                        },
+                        {
+                            "text": "Instanzvariable existiert einmal pro Objekt",
+                            "aIdx": 2,
+                            "elements": [
+                                [
+                                    80,
+                                    123
+                                ]
+                            ],
+                            "label": 0
+                        }
+                    ]
+                }
+            ],
+            "studentAnswers": [
+                {
+                    "text": "Klassenvariable ist f\u00fcr die ganze klasse bestimmte variable und die Instanzvariable ist f\u00fcr den jeweiligen Bereich.",
+                    "id": "93",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Eine Klassenvariable ist eine f\u00fcr die ganze Klasse bestimmte Variable und die Instanzvariable ist f\u00fcr den jeweiligen Bereich gedacht.",
+                    "aspects": [
+                        {
+                            "text": "Eine Klassenvariable ist eine f\u00fcr die ganze Klasse bestimmte Variable",
+                            "elements": [
+                                [
+                                    0,
+                                    69
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "klassenvariablen sind in der klasse sichtbar und Instanzvariablen sind in dem Konstruktor in Parameterleiste",
+                    "id": "94",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Klassenvariablen sind in der Klasse sichtbar und Instanzvariablen sind in dem Konstruktor in der Parameterliste.",
+                    "aspects": []
+                },
+                {
+                    "text": "-",
+                    "id": "95",
+                    "answerCategory": "none",
+                    "correctionOrComment": "-",
+                    "aspects": []
+                },
+                {
+                    "text": "\u00f6ffentlich",
+                    "id": "96",
+                    "answerCategory": "none",
+                    "correctionOrComment": "\u00f6ffentlich",
+                    "aspects": []
+                },
+                {
+                    "text": "Klassenvariable ist mit static und eine instanzvariable ist ohne static",
+                    "id": "97",
+                    "answerCategory": "concept_mix-up",
+                    "correctionOrComment": "Eine Klassenvariable wird mit 'static' definiert und eine instanzvariable ohne 'static'.",
+                    "aspects": []
+                },
+                {
+                    "text": "Klassenvariablen sind f\u00fcr die gesamte Klasse angelegt, Instatzvariablen f\u00fcr das Objekt das welches erzeugt wird",
+                    "id": "98",
+                    "answerCategory": "binary_correct",
+                    "correctionOrComment": "Klassenvariablen sind f\u00fcr die gesamte Klasse angelegt und Instanzvariablen nur f\u00fcr das Objekt, welches erzeugt wird.",
+                    "aspects": [
+                        {
+                            "text": "Klassenvariablen sind f\u00fcr die gesamte Klasse angelegt",
+                            "elements": [
+                                [
+                                    0,
+                                    53
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Instanzvariablen nur f\u00fcr das Objekt",
+                            "elements": [
+                                [
+                                    58,
+                                    93
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "klassenvariablen sind innerhald einer klasse deklariert und in der ganzen klasse sichtbar und instanzvarialblen sind in einer methode deklariert und nur in dieser methode sichtbar",
+                    "id": "99",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Klassenvariablen sind innerhalb einer Klasse deklariert und in der ganzen Klasse sichtbar. Instanzvarialblen sind in einer Methode deklariert und nur in dieser Methode sichtbar.",
+                    "aspects": [
+                        {
+                            "text": "Klassenvariablen sind innerhalb einer Klasse deklariert und in der ganzen Klasse sichtbar",
+                            "elements": [
+                                [
+                                    0,
+                                    89
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "-",
+                    "id": "100",
+                    "answerCategory": "none",
+                    "correctionOrComment": "-",
+                    "aspects": []
+                },
+                {
+                    "text": "Klassenvariable nur in der Klasse, Instanzvariablen in mehreren Klassen",
+                    "id": "101",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Eine Klassenvariable gibt es nur in der Klasse und Instanzvariablen in mehreren Klassen.",
+                    "aspects": []
+                },
+                {
+                    "text": "-",
+                    "id": "102",
+                    "answerCategory": "none",
+                    "correctionOrComment": "-",
+                    "aspects": []
+                },
+                {
+                    "text": "klassenvariablen sind public und instanzvariablen private",
+                    "id": "103",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Klassenvariablen sind 'public' und Instanzvariablen 'private'.",
+                    "aspects": []
+                },
+                {
+                    "text": "Klassenvariablen definieren eine Klasse , Instanzvariablen definieren eine Methode",
+                    "id": "104",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Klassenvariablen definieren eine Klasse und Instanzvariablen definieren eine Methode.",
+                    "aspects": []
+                },
+                {
+                    "text": "Klassenvariablen werden nur innerhalb der Klasse ohne modifikatoren sichtbar und benutzbar. Instanzvariablen k\u00f6nnen in mehrere Klassen benutzt werden.",
+                    "id": "105",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Klassenvariablen werden nur innerhalb der Klasse ohne Modifikatoren sichtbar und benutzbar. Instanzvariablen k\u00f6nnen in mehrere Klassen benutzt werden.",
+                    "aspects": []
+                },
+                {
+                    "text": "Instanzvariablen geh\u00f6ren zu den Objekt und statischen Variablen geh\u00f6ren zu der Klasse und nicht zu einzelne Objekt",
+                    "id": "106",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Instanzvariablen geh\u00f6ren zu den Objekten und statische Variablen geh\u00f6ren zu der Klasse und nicht zum einzelnen Objekt.",
+                    "aspects": [
+                        {
+                            "text": "Instanzvariablen geh\u00f6ren zu den Objekten ",
+                            "elements": [
+                                [
+                                    0,
+                                    40
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        },
+                        {
+                            "text": "statische Variablen geh\u00f6ren zu der Klasse",
+                            "elements": [
+                                [
+                                    45,
+                                    86
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "statische Variablen geh\u00f6ren ;; nicht zum einzelnen Objekt",
+                            "elements": [
+                                [
+                                    45,
+                                    72
+                                ],
+                                [
+                                    91,
+                                    117
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "this",
+                    "id": "107",
+                    "answerCategory": "none",
+                    "correctionOrComment": "this",
+                    "aspects": []
+                },
+                {
+                    "text": "instanz variable sind normale strings. klassen variablen haben ein public oder",
+                    "id": "108",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Instanzvariablen sind normale 'Strings'. Klassenvariablen haben ein 'public'.",
+                    "aspects": []
+                },
+                {
+                    "text": "die Klassenvariablen sind f\u00fcr die ganze Klasse zugreifbar, instanzvariablen nur f\u00fcr die Objekten.",
+                    "id": "109",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Die Klassenvariablen sind f\u00fcr die ganze Klasse zugreifbar, Instanzvariablen nur f\u00fcr die Objekte.",
+                    "aspects": [
+                        {
+                            "text": "Die Klassenvariablen sind f\u00fcr die ganze Klasse zugreifbar",
+                            "elements": [
+                                [
+                                    0,
+                                    57
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Instanzvariablen nur f\u00fcr die Objekte",
+                            "elements": [
+                                [
+                                    59,
+                                    95
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Klassenvariablen sind nur innerhalb der Klasse sichtbar, Instanzvariablen nicht",
+                    "id": "110",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Klassenvariablen sind nur innerhalb der Klasse sichtbar, Instanzvariablen nicht.",
+                    "aspects": []
+                },
+                {
+                    "text": "Eine Java Klassen Variable beschreibt eine Variable, welche nur innerhalb einer Klasse g\u00fcltig ist. DIe Instanzvariable gilt f\u00fcr ein Objekt einer Klasse.",
+                    "id": "111",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Eine Java Klassenvariable beschreibt eine Variable, welche nur innerhalb einer Klasse g\u00fcltig ist. DIe Instanzvariable gilt f\u00fcr ein Objekt einer Klasse.",
+                    "aspects": [
+                        {
+                            "text": "DIe Instanzvariable gilt f\u00fcr ein Objekt einer Klasse",
+                            "elements": [
+                                [
+                                    98,
+                                    150
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Die Instanzvariable x wird innerhalb des Konstruktors durch den Parameter x verdeckt, daher erfolgt im ersten Konstruktor der Zugriff auf die Instanzvariable durch this.x",
+                    "id": "112",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Die Instanzvariable 'x' wird innerhalb des Konstruktors durch den Parameter 'x' verdeckt. Daher erfolgt im ersten Konstruktor der Zugriff auf die Instanzvariable durch 'this.x'.",
+                    "aspects": []
+                },
+                {
+                    "text": "Bei Klassenvariablen ist die definition in einer Klasse mit der schl\u00fcsselwort static, aber bei Instanzvariablen ohne der schl\u00fcsselwort static",
+                    "id": "113",
+                    "answerCategory": "concept_mix-up",
+                    "correctionOrComment": "Bei Klassenvariablen erfolg die Definition in einer Klasse mit dem Schl\u00fcsselwort 'static', aber bei Instanzvariablen ohne das Schl\u00fcsselwort 'static'.",
+                    "aspects": []
+                },
+                {
+                    "text": "Klassenvariablen sind in der Klasse sichtbar, w\u00e4hrend Instanzvariablen Objekte der Klasse sind",
+                    "id": "114",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Klassenvariablen sind in der Klasse sichtbar, w\u00e4hrend Instanzvariablen Objekte der Klasse sind.",
+                    "aspects": []
+                },
+                {
+                    "text": "Instanzen werden immer mit \"\"new Text ()\"\" definiert. Und Klassenvariablen werden mit \"\"Text ()\"\" aufgerufen",
+                    "id": "115",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Instanzen werden immer mit 'new' definiert und Klassenvariablen werden mit 'Text ()' aufgerufen.",
+                    "aspects": []
+                },
+                {
+                    "text": "Klassenvariablen definieren eine Klasse und Instanzvariablen sind die in einer Klasse definiert",
+                    "id": "116",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Klassenvariablen definieren eine Klasse und Instanzvariablen sind in einer Klasse definiert.",
+                    "aspects": []
+                },
+                {
+                    "text": "Intanzvariablen k\u00f6nnen f\u00fcr jedes Objekt unterschiedlich sein, Klassenvariablen sind f\u00fcr jedes Objekt gleich.",
+                    "id": "117",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Intanzvariablen k\u00f6nnen f\u00fcr jedes Objekt unterschiedlich sein, Klassenvariablen sind f\u00fcr jedes Objekt gleich.",
+                    "aspects": [
+                        {
+                            "text": "Klassenvariablen sind f\u00fcr jedes Objekt gleich",
+                            "elements": [
+                                [
+                                    62,
+                                    107
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Intanzvariablen k\u00f6nnen f\u00fcr jedes Objekt unterschiedlich sein",
+                            "elements": [
+                                [
+                                    0,
+                                    60
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Klassenvariablen sind mit static und innerhalb der ganzen Klasse sichtbar. Instanzvariablen nur innerhalb der Methode.",
+                    "id": "118",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Klassenvariablen sind mit 'static' und innerhalb der ganzen Klasse sichtbar, Instanzvariablen nur innerhalb der Methode.",
+                    "aspects": []
+                },
+                {
+                    "text": "Klassenvariablen sind nicht initialisert (Bauplan-Variablen). Instanzvariablen sind die Attribute eines Objekts. Klassenvariablen werden somit zu Instanzvariablen",
+                    "id": "119",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Klassenvariablen sind nicht initialisert. Instanzvariablen sind die Attribute eines Objekts. Klassenvariablen werden somit zu Instanzvariablen",
+                    "aspects": []
+                },
+                {
+                    "text": "-",
+                    "id": "120",
+                    "answerCategory": "none",
+                    "correctionOrComment": "-",
+                    "aspects": []
+                },
+                {
+                    "text": "klassenvariablen sind public und instanzvariablen sind private",
+                    "id": "121",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Klassenvariablen sind 'public' und Instanzvariablen sind 'private'.",
+                    "aspects": []
+                },
+                {
+                    "text": "Instanzvariablen sind auch in anderen Klassen sichtbar. Klassenvariablen nur in der eigenen Klasse.",
+                    "id": "122",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Instanzvariablen sind auch in anderen Klassen sichtbar. Klassenvariablen nur in der eigenen Klasse.",
+                    "aspects": []
+                },
+                {
+                    "text": "Instanzvariablen sind bereits initialisiert. Instanzvariablen geh\u00f6ren zu einem spObjekt. Bei Klassenvariablen muss dies nich der Fall sein.",
+                    "id": "123",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Instanzvariablen sind bereits initialisiert. Instanzvariablen geh\u00f6ren zu einem Objekt. Bei Klassenvariablen muss dies nicht der Fall sein.",
+                    "aspects": [
+                        {
+                            "text": "Instanzvariablen geh\u00f6ren zu einem Objekt",
+                            "elements": [
+                                [
+                                    45,
+                                    85
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Die beiden unterscheiden sich durch \"\"this\"\". Insatanzvariablen werden durch \"\"this\"\" definiert.",
+                    "id": "124",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Die beiden unterscheiden sich durch 'this'. Insatanzvariablen werden durch 'this' definiert.",
+                    "aspects": []
+                },
+                {
+                    "text": "Klassenvariablen nur in der eigenen Klasse genutzt, Instanzvariable in mehrern Klassen.",
+                    "id": "125",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Klassenvariablen werden nur in der eigenen Klasse genutzt, Instanzvariablen in mehreren Klassen.",
+                    "aspects": []
+                },
+                {
+                    "text": "Instanzvariablen werden den Objekten \u00fcbergeben und geh\u00f6ren den Objekten. Die Klassenvariablen geh\u00f6ren der ganzen Klasse",
+                    "id": "126",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Instanzvariablen werden den Objekten \u00fcbergeben und geh\u00f6ren den Objekten. Die Klassenvariablen geh\u00f6ren der ganzen Klasse.",
+                    "aspects": [
+                        {
+                            "text": "Die Klassenvariablen geh\u00f6ren der ganzen Klasse",
+                            "elements": [
+                                [
+                                    73,
+                                    119
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Instanzvariablen werden den Objekten \u00fcbergeben und geh\u00f6ren den Objekten",
+                            "elements": [
+                                [
+                                    0,
+                                    71
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Jedes object hat seine eigene Instanzvariable unabh\u00e4ngig von anderen Objekten die von der selben klasse codiert wurden. klassenvariablen sind an die eigenen Klassen gebunden, die Objekte sehen die selben klassenvariablen",
+                    "id": "127",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Jedes Objekt hat seine eigene Instanzvariable unabh\u00e4ngig von anderen Objekten, die von derselben Klasse codiert wurden. Klassenvariablen sind an die eigenen Klassen gebunden. Die Objekte sehen die selben Klassenvariablen.",
+                    "aspects": [
+                        {
+                            "text": "Jedes Objekt hat seine eigene Instanzvariable unabh\u00e4ngig von anderen Objekten",
+                            "elements": [
+                                [
+                                    0,
+                                    77
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Klassenvariablen sind an die eigenen Klassen gebunden",
+                            "elements": [
+                                [
+                                    120,
+                                    173
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "Die Objekte sehen die selben Klassenvariablen",
+                            "elements": [
+                                [
+                                    175,
+                                    220
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Instanzvariablen sind in einer Klasse definiert und man kann durch get und set zugreifen",
+                    "id": "128",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Instanzvariablen sind in einer Klasse definiert und man kann durch 'get' und 'set' auf sie zugreifen.",
+                    "aspects": []
+                },
+                {
+                    "text": "Klassenvariablen sind in der Klasse \u00fcberalle sichtbar. Instanzvariablen sind f\u00fcr die gegebene Instanz aufgerufen und danach werden sie von der garbage collection eingesammelt",
+                    "id": "129",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Klassenvariablen sind in der Klasse \u00fcberall sichtbar. Instanzvariablen sind f\u00fcr die gegebene Instanz aufgerufen und danach werden sie von dem 'garbage collector' eingesammelt.",
+                    "aspects": []
+                },
+                {
+                    "text": "-",
+                    "id": "130",
+                    "answerCategory": "none",
+                    "correctionOrComment": "-",
+                    "aspects": []
+                },
+                {
+                    "text": "-",
+                    "id": "131",
+                    "answerCategory": "none",
+                    "correctionOrComment": "-",
+                    "aspects": []
+                },
+                {
+                    "text": "Instanzvariablen k\u00f6nnen nur von einzelnen Methoden genutzt werden. Klassenvaroiablen von der ganzen Klasse.",
+                    "id": "132",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Instanzvariablen k\u00f6nnen nur von einzelnen Methoden genutzt werden, Klassenvariablen von der ganzen Klasse.",
+                    "aspects": []
+                },
+                {
+                    "text": "instanzvariablengeh\u00f6ren zu den objekten werden objekten \u00fcbergeben",
+                    "id": "133",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Instanzvariablen geh\u00f6ren zu den Objekten. Sie werden Objekten \u00fcbergeben.",
+                    "aspects": [
+                        {
+                            "text": "Instanzvariablen geh\u00f6ren zu den Objekten",
+                            "elements": [
+                                [
+                                    0,
+                                    40
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Klassenvariablen sind in der Klasse sichtbar und Instanzvariablen sind",
+                    "id": "134",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Klassenvariablen sind in der Klasse sichtbar.",
+                    "aspects": []
+                },
+                {
+                    "text": "Insstanzvariblen sind bereits initialisiert.",
+                    "id": "135",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Instanzvariablen sind bereits initialisiert.",
+                    "aspects": []
+                },
+                {
+                    "text": "Instanzvariable geh\u00f6ren zu den Objekt und statischen variable Klassen variable",
+                    "id": "136",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Instanzvariablen geh\u00f6ren zu dem Objekt und statische Variablen sind Klassenvariablen.",
+                    "aspects": [
+                        {
+                            "text": "Instanzvariablen geh\u00f6ren zu dem Objekt",
+                            "elements": [
+                                [
+                                    0,
+                                    38
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Instanzvariablen geh\u00f6ren zu den Objekten werden den Objekten \u00fcbergeben. Klassenvariablen hingegen nicht sie gehrlen einer klase",
+                    "id": "137",
+                    "answerCategory": "binary_correct",
+                    "correctionOrComment": "Instanzvariablen geh\u00f6ren zu den Objekten und werden den Objekten \u00fcbergeben. Klassenvariablen hingegen nicht, sie geh\u00f6ren einer Klasse.",
+                    "aspects": [
+                        {
+                            "text": "Klassenvariablen ;; geh\u00f6ren einer Klasse",
+                            "elements": [
+                                [
+                                    76,
+                                    92
+                                ],
+                                [
+                                    113,
+                                    133
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Instanzvariablen geh\u00f6ren zu den Objekten und werden den Objekten \u00fcbergeben",
+                            "elements": [
+                                [
+                                    0,
+                                    74
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Klasse definiert in einem Block und Instanzvariable wird in der Klasse definiert",
+                    "id": "138",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Eine Klasse definiert in einem Block und eine Instanzvariable wird in der Klasse definiert.",
+                    "aspects": []
+                },
+                {
+                    "text": "Klassenvariablen sind nur in der Klasse sichtbar, Instanzvariablen in mehreren Klassen",
+                    "id": "139",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Klassenvariablen sind nur in der Klasse sichtbar, Instanzvariablen in mehreren Klassen.",
+                    "aspects": []
+                },
+                {
+                    "text": "Klassenvariablen werden in der Main Methode deklariert. Instanzvariablen in Konstruktoren.",
+                    "id": "140",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Klassenvariablen werden in der 'main' Methode deklariert, Instanzvariablen in Konstruktoren.",
+                    "aspects": []
+                },
+                {
+                    "text": "Klassenvariablen sind in einer Klasse deklarierte und gegebenfalls initialisierte Variablen, dagegen sind Instanzvariablen in einem Objekt deklarierte und ggf Varibalen",
+                    "id": "141",
+                    "answerCategory": "binary_correct",
+                    "correctionOrComment": "Klassenvariablen sind in einer Klasse deklarierte und gegebenfalls initialisierte Variablen. Dagegen sind Instanzvariablen in einem Objekt deklarierte und gegebenenfalls Variablen.",
+                    "aspects": [
+                        {
+                            "text": "Klassenvariablen sind in einer Klasse deklarierte",
+                            "elements": [
+                                [
+                                    0,
+                                    49
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Dagegen sind Instanzvariablen in einem Objekt deklarierte",
+                            "elements": [
+                                [
+                                    93,
+                                    150
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Instanzvariablen sind Objekte sozusagen und Klassenvariiable sind Variable die in defr klasse sichtbar sind",
+                    "id": "142",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Instanzvariablen sind sozusagen Objekte und Klassenvariablen sind Variablen die in der Klasse sichtbar sind.",
+                    "aspects": []
+                },
+                {
+                    "text": "instanzsvariablen sind zb einfach public String, public int, und klassenvariablen computer (int variable){",
+                    "id": "143",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Instanzsvariablen sind zum Beispiel einfach 'public String' oder 'public int', und Klassenvariablen Parameter.",
+                    "aspects": []
+                },
+                {
+                    "text": "this",
+                    "id": "144",
+                    "answerCategory": "none",
+                    "correctionOrComment": "this",
+                    "aspects": []
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "title": "Threads Synchronisation",
+            "text": "Warum braucht man bei der Arbeit mit Threads Synchronisation?",
+            "type": "reason",
+            "aspects": [
+                {
+                    "text": "Man muss vermeiden, dass verschiedene Threads gleichzeitig auf Daten oder Objekte zugreifen"
+                },
+                {
+                    "text": "Sonst kann es zur Zerst\u00f6rung von Werten und zu inkonsistenten Zust\u00e4nden kommen"
+                }
+            ],
+            "assignedWeights": {
+                "m\u00fcssen": 4,
+                "vermeiden": 5,
+                "verschieden": 5,
+                "Threads": 1,
+                "gleichzeitig": 5,
+                "Daten": 5,
+                "Objekte": 2,
+                "zugreifen": 4,
+                "weil": 3,
+                "dadurch": 3,
+                "Zerst\u00f6rung": 5,
+                "Werten": 4,
+                "inkonsistent": 4,
+                "Zustand": 3,
+                "kommen": 2,
+                "k\u00f6nnen": 3
+            },
+            "referenceAnswers": [
+                {
+                    "id": "ref1",
+                    "text": "Man muss vermeiden, dass verschiedene Threads gleichzeitig auf Daten oder Objekte zugreifen, weil es dadurch zur Zerst\u00f6rung von Werten und zu inkonsistenten Zust\u00e4nden kommen kann.",
+                    "aspects": [
+                        {
+                            "text": "Man muss vermeiden, dass verschiedene Threads gleichzeitig auf Daten oder Objekte zugreifen",
+                            "aIdx": 0,
+                            "elements": [
+                                [
+                                    0,
+                                    91
+                                ]
+                            ],
+                            "label": 0
+                        },
+                        {
+                            "text": "weil es dadurch zur Zerst\u00f6rung von Werten und zu inkonsistenten Zust\u00e4nden kommen kann",
+                            "aIdx": 1,
+                            "elements": [
+                                [
+                                    93,
+                                    178
+                                ]
+                            ],
+                            "label": 0
+                        }
+                    ]
+                }
+            ],
+            "studentAnswers": [
+                {
+                    "id": "1",
+                    "text": "ja damit threads miteinander daten austauschen k\u00f6nnen , m\u00fcssen sie auf den selben speicherbereich zugreifen. ( gemeinsamer zugriff auf daten.)",
+                    "aspects": [],
+                    "correctionOrComment": "Damit Threads miteinander Daten austauschen k\u00f6nnen, m\u00fcssen sie auf den selben Speicherbereich zugreifen."
+                },
+                {
+                    "id": "2",
+                    "text": "durch Synchronisation werden die Prozesse parallel laufen. Ohne Synchronisation w\u00fcrde man Einen Prozess mit dem anderen Prozess \u00fcberschreiben.",
+                    "aspects": [],
+                    "correctionOrComment": "Durch Synchronisation werden die Prozesse parallel laufen. Ohne Synchronisation w\u00fcrde man einen Prozess mit dem anderen Prozess \u00fcberschreiben."
+                },
+                {
+                    "id": "3",
+                    "text": "Damit ein Deadlock vermieden werden kann bei 2 paralelen threads",
+                    "aspects": [],
+                    "correctionOrComment": "Damit ein Deadlock vermieden werden kann bei 2 parallelen Threads"
+                },
+                {
+                    "id": "4",
+                    "text": "Um Deadlocks zu meiden",
+                    "aspects": [],
+                    "correctionOrComment": "Um Deadlocks zu meiden"
+                },
+                {
+                    "id": "5",
+                    "text": "Damit die Threads Daten einfach durch \u00fcberschreiben der Zieldaten austauschen k\u00f6nnen.",
+                    "aspects": [],
+                    "correctionOrComment": "Damit die Threads Daten einfach durch \u00fcberschreiben der Zieldaten austauschen k\u00f6nnen."
+                },
+                {
+                    "id": "6",
+                    "text": "Da zwei Threads, die die gleiche Variable verwenden, jedoch unterschiedliche Dinge mit ihr (beispielsweise) berechnen, durcheinander geraten oder Deadlocks 'herstellen'. Um Deadlocks zu vermeiden wird 'synchronized', (ein Thread wartet auf den anderen, bis die Variable f\u00fcr ihn frei ist.)",
+                    "aspects": [
+                        {
+                            "text": "Ein Thread wartet auf den anderen, bis die Variable f\u00fcr ihn frei ist",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Da zwei Threads, die die gleiche Variable verwenden, jedoch unterschiedliche Dinge mit ihr (beispielsweise) berechnen, durcheinander geraten oder Deadlocks 'herstellen'",
+                            "elements": [
+                                [
+                                    0,
+                                    168
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 1
+                        }
+                    ],
+                    "correctionOrComment": "Da zwei Threads, die die gleiche Variable verwenden, jedoch unterschiedliche Dinge mit ihr (beispielsweise) berechnen, durcheinander geraten oder Deadlocks 'herstellen'. Um Deadlocks zu vermeiden wird synchronized. Ein Thread wartet auf den anderen, bis die Variable f\u00fcr ihn frei ist."
+                },
+                {
+                    "id": "7",
+                    "text": "Das wenn zwei Threads oder mehr mit den gleichen Attributen arbeiten es zu keiner \u00fcberschneidung kommt und die Threads sich gegenseitig behindern. Deswegen vergibt man Synchronisation Schl\u00fcssel die die Threads brauchen um zu arbeite. Jedoch muss man afpassen das es zu keinem Big-Lock kommt.",
+                    "aspects": [
+                        {
+                            "text": "Damit wenn zwei Threads oder mehr mit den gleichen Attributen arbeiten es zu keiner \u00dcberschneidung kommt und die Threads sich gegenseitig behindern",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Damit wenn zwei Threads oder mehr mit den gleichen Attributen arbeiten es zu keiner \u00dcberschneidung kommt und die Threads sich gegenseitig behindern. Deswegen vergibt man Synchronisation Schl\u00fcssel die die Threads brauchen um zu arbeite. Jedoch muss man afpassen das es zu keinem Big-Lock kommt."
+                },
+                {
+                    "id": "8",
+                    "text": "Wenn Threads parallel laufen, kann es sein, dass \u00c4nderungen nicht \u00fcbernommen werden da jeder einzelne seinen Code ausf\u00fchrt. Damit man aber keine Daten verliert, sollte man mit synchronized() arbeiten. Dazu benutzt man auch Monitore. So k\u00f6nnen sie sich auch nicht gegenseitig in kritischen Abschnitten hindern und zu einem Deadlock f\u00fchren, wenn man die Reihenfolge der Synchronisation einh\u00e4lt.",
+                    "aspects": [
+                        {
+                            "text": "Wenn Threads parallel laufen, kann es sein, dass \u00c4nderungen nicht \u00fcbernommen werden da jeder einzelne seinen Code ausf\u00fchrt. Damit man aber keine Daten verliert, sollte man mit synchronized arbeiten",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Wenn Threads parallel laufen, kann es sein, dass \u00c4nderungen nicht \u00fcbernommen werden da jeder einzelne seinen Code ausf\u00fchrt. Damit man aber keine Daten verliert, sollte man mit synchronized arbeiten. Dazu benutzt man auch Monitore. So k\u00f6nnen sie sich auch nicht gegenseitig in kritischen Abschnitten hindern und zu einem Deadlock f\u00fchren, wenn man die Reihenfolge der Synchronisation einh\u00e4lt."
+                },
+                {
+                    "id": "9",
+                    "text": "rufen sich 2 Threads gegenseitig auf welche gleiche Befehlsketten ausf\u00fchren (z. B Variabne wird um 1 erh\u00f6ht) sobald sie beide fertig sind wird beim Letzten Schritt des letzten Threads nicht ausgef\u00fchrt daf\u00fcr gibt es einen besstimmtes Beegriff daf\u00fcr.",
+                    "aspects": [],
+                    "correctionOrComment": "Rufen sich 2 Threads gegenseitig auf, welche gleiche Befehlsketten ausf\u00fchren (z. B Variabne wird um 1 erh\u00f6ht), sobald sie beide fertig sind wird beim letzten Schritt des letzten Threads nichts ausgef\u00fchrt. Daf\u00fcr gibt es einen bestimmtes Beegriff."
+                },
+                {
+                    "id": "10",
+                    "text": "Das Threads in einer Multithreaded-Anwendung Daten durch einfaches \u00fcberschreiben der Methoden Zieldaten austauschen k\u00f6nnen.",
+                    "aspects": [],
+                    "correctionOrComment": "Da Threads in einer Multithread-Anwendung Daten durch einfaches \u00fcberschreiben der Methoden Zieldaten austauschen k\u00f6nnen."
+                },
+                {
+                    "id": "11",
+                    "text": "Um die Daten in einer Multithreaded-Anwendung \u00fcberschreiben zu k\u00f6nnen ,ohne dass Damit die Datenintegrit\u00e4t nicht verloren gehen.Threads k\u00f6nnen Daten einfach durch \u00fcberschreiben der Zieldaten austauschen Bei der Modifikation besteht die Gefahr des Lost Update, wenn Threads Daten parallel \u00e4ndern.",
+                    "aspects": [
+                        {
+                            "text": "wenn Threads Daten parallel \u00e4ndern",
+                            "elements": [
+                                [
+                                    260,
+                                    294
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 1
+                        },
+                        {
+                            "text": "Um die Daten in einer Multithreaded-Anwendung \u00fcberschreiben zu k\u00f6nnen, ohne dass damit die Datenintegrit\u00e4t verloren geht ;; Bei der Modifikation besteht die Gefahr des Lost Update",
+                            "elements": [
+                                [
+                                    203,
+                                    258
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Um die Daten in einer Multithreaded-Anwendung \u00fcberschreiben zu k\u00f6nnen, ohne dass damit die Datenintegrit\u00e4t verloren geht. Threads k\u00f6nnen Daten einfach durch \u00fcberschreiben der Zieldaten austauschen Bei der Modifikation besteht die Gefahr des Lost Update, wenn Threads Daten parallel \u00e4ndern."
+                },
+                {
+                    "id": "12",
+                    "text": "Da es ohne Synchronisation zum Verlust von Daten kommen kann bzw. Threads hin und her springen obwohl sie evt. gerade etwas berechnen.",
+                    "aspects": [
+                        {
+                            "text": "Da es ohne Synchronisation zum Verlust von Daten kommen kann",
+                            "elements": [
+                                [
+                                    0,
+                                    60
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Da es ohne Synchronisation zum Verlust von Daten kommen kann oder Threads hin und her springen obwohl sie eventuell gerade etwas berechnen."
+                },
+                {
+                    "id": "13",
+                    "text": "Weil bei der Datenaustausch die Gefahr besteht das durch Lost Update Threads Daten parallel \u00e4ndert.",
+                    "aspects": [
+                        {
+                            "text": "Weil beim Datenaustausch die Gefahr besteht, dass ;; Threads Daten parallel \u00e4ndern",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "durch Lost Update Threads Daten parallel \u00e4ndern",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 2
+                        }
+                    ],
+                    "correctionOrComment": "Weil beim Datenaustausch die Gefahr besteht, dass durch Lost Update Threads Daten parallel \u00e4ndern"
+                },
+                {
+                    "id": "14",
+                    "text": "Weil alle Threads aktuell sein m\u00fcssen, wenn ein Thread nicht aktuell ist, ist es nicht gerade einfach bzw. effektiv mit den Threads zu arbeiten. Es kann aber gut sein, dass Probleme bei der Synchronisation auftreten.",
+                    "aspects": [],
+                    "correctionOrComment": "Weil alle Threads aktuell sein m\u00fcssen, wenn ein Thread nicht aktuell ist, ist es nicht gerade einfach bzw. effektiv mit den Threads zu arbeiten. Es kann aber gut sein, dass Probleme bei der Synchronisation auftreten."
+                },
+                {
+                    "id": "15",
+                    "text": "Man ben\u00f6tigt erst mal threads es m\u00fcssen min 2 threads vorhanden sein diese m\u00fcssen gestartet werden und durchlaufen werden dort k\u00f6nnen sie Daten durch \u00fcberschreiben der Zieldaten einfach austauschen",
+                    "aspects": [],
+                    "correctionOrComment": "Man ben\u00f6tigt erst mal Threads. Es m\u00fcssen mindestens 2 Threads vorhanden sein. Diese m\u00fcssen gestartet werden und durchlaufen werden dort k\u00f6nnen sie Daten durch \u00fcberschreiben der Zieldaten einfach austauschen"
+                },
+                {
+                    "id": "16",
+                    "text": "man braucht bei Threads eine synchronistion , denn wenn beides Threads laufen und \u00e4nderungen vorgenommen werden, soll durch die synchronisation erstmal alle befehle oder Operationen der erste thread aufgef\u00fchrt werden , bevor das zweite Thread den kritischen abschnitt erreicht",
+                    "aspects": [
+                        {
+                            "text": " sollen durch die Synchronisation erstmal alle Befehle oder Operationen des ersten Threads aufgef\u00fchrt werden, bevor der zweite Thread den kritischen Abschnitt erreicht",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Man braucht bei Threads eine Synchronistion, denn wenn beide Threads laufen und \u00c4nderungen vorgenommen werden, sollen durch die Synchronisation erstmal alle Befehle oder Operationen des ersten Threads aufgef\u00fchrt werden, bevor der zweite Thread den kritischen Abschnitt erreicht"
+                },
+                {
+                    "id": "17",
+                    "text": "damit die Threads nicht nicht mit ein ander sto\u00dfen wenn ein thread ein wert benutzt und den wert ver\u00e4ndert bekommt das andere thread nicht den gleichen wert. wir brauchen synchronisation , erst wird die erste anweisung nicht gest\u00f6rt durchgef\u00fchrt und dann wenn er fertig ist , kann ein andere beginnen.",
+                    "aspects": [
+                        {
+                            "text": "damit die Threads nicht aufeinander sto\u00dfen ;; Erst wird die erste Anweisung nicht gest\u00f6rt durchgef\u00fchrt und dann wenn diese fertig ist, kann ein andere beginnen",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "wenn ein Thread ein Wert benutzt und den Wert ver\u00e4ndert bekommt der andere Thread nicht den gleichen Wert",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Damit die Threads nicht aufeinander sto\u00dfen wenn ein Thread ein Wert benutzt und den Wert ver\u00e4ndert bekommt der andere Thread nicht den gleichen Wert. Wir brauchen Synchronisation. Erst wird die erste Anweisung nicht gest\u00f6rt durchgef\u00fchrt und dann wenn diese fertig ist, kann ein andere beginnen."
+                },
+                {
+                    "id": "18",
+                    "text": "Durch die Anwendung k\u00f6nnen sie dann die Zieldaten \u00fcberschreiben und austauschen.",
+                    "aspects": [],
+                    "correctionOrComment": "Durch die Anwendung k\u00f6nnen sie dann die Zieldaten \u00fcberschreiben und austauschen."
+                },
+                {
+                    "id": "19",
+                    "text": "Die Synchronisation soll verhindern, dass man beispielsweise einen Deadlock hat.Au\u00dferdem wird damit ein kritischer Abschnitt erreicht, den man korrekt programmieren soll, sodass die Threads keine Fehler erzeugen k\u00f6nnen.",
+                    "aspects": [],
+                    "correctionOrComment": "Die Synchronisation soll verhindern, dass man beispielsweise einen Deadlock hat. Au\u00dferdem wird damit ein kritischer Abschnitt erreicht, den man korrekt programmieren soll, sodass die Threads keine Fehler erzeugen k\u00f6nnen."
+                },
+                {
+                    "id": "20",
+                    "text": "bei der Modifikation bessteht die gefahr dass lost update wenn Threads Daten parallel andern",
+                    "aspects": [
+                        {
+                            "text": "wenn Threads Daten parallel \u00e4ndern",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Bei der Modifikation besteht die Gefahr dass Lost Update",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Bei der Modifikation besteht die Gefahr dass Lost Update, wenn Threads Daten parallel \u00e4ndern"
+                },
+                {
+                    "id": "21",
+                    "text": "Weil es ansonsten passieren kann , das \u00e4nderungen verloren gehen, wenn ein thread seinen kritischen pfad nicht alleine ablaufen kann. Diese gefahr besteht weil mehrere threads eines Prozesses denselben Speicher teilen.",
+                    "aspects": [
+                        {
+                            "text": "wenn ein thread seinen kritischen pfad nicht alleine ablaufen kann",
+                            "elements": [
+                                [
+                                    66,
+                                    132
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Weil es ansonsten passieren kann , das \u00e4nderungen verloren gehen",
+                            "elements": [
+                                [
+                                    0,
+                                    64
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Weil es ansonsten passieren kann , das \u00e4nderungen verloren gehen, wenn ein thread seinen kritischen pfad nicht alleine ablaufen kann. Diese gefahr besteht weil mehrere threads eines Prozesses denselben Speicher teilen."
+                },
+                {
+                    "id": "22",
+                    "text": "-",
+                    "aspects": [],
+                    "correctionOrComment": "-"
+                },
+                {
+                    "id": "23",
+                    "text": "sodass niemals zwei Threads gleichzeitig auf eine Ressource zugreifen k\u00f6nnen.",
+                    "aspects": [
+                        {
+                            "text": "Sodass niemals zwei Threads gleichzeitig auf eine Ressource zugreifen k\u00f6nnen.",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Sodass niemals zwei Threads gleichzeitig auf eine Ressource zugreifen k\u00f6nnen."
+                },
+                {
+                    "id": "24",
+                    "text": "Problem bei einem Multithread, es kann passieren das wir eine \"\"Race-Condition\"\" haben. Da die Threads unwillk\u00fcrlich hin und her springen, schreiben bzw lesen sie in unterschiedlicher reihenfolge in die Daten/Speicher. Was unser Programm behindert.",
+                    "aspects": [],
+                    "correctionOrComment": "Das Problem bei einem Multithread ist, es kann passieren das wir eine Race-Condition haben. Da die Threads unwillk\u00fcrlich hin und her springen, schreiben bzw lesen sie in unterschiedlicher reihenfolge in die Daten/Speicher. Was unser Programm behindert."
+                },
+                {
+                    "id": "25",
+                    "text": "Da man sonst Deadlocks (ein Thread wartet auf den anderen und umgekehrt) bekommen kann oder Eintr\u00e4ge gehen verloren da zwei Threads gleichzeitig an etwas arbeiten.",
+                    "aspects": [
+                        {
+                            "text": "da zwei Threads gleichzeitig an etwas arbeiten",
+                            "elements": [
+                                [
+                                    116,
+                                    162
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Eintr\u00e4ge gehen verloren",
+                            "elements": [
+                                [
+                                    92,
+                                    115
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Da man sonst Deadlocks (ein Thread wartet auf den anderen und umgekehrt) bekommen kann oder Eintr\u00e4ge gehen verloren da zwei Threads gleichzeitig an etwas arbeiten."
+                },
+                {
+                    "id": "26",
+                    "text": "Um Threds paralell laufenzulassen, und um das nicht der gleiche . Man ben\u00f6tigt zuerst mal Threads mindestens 2. Threads m\u00fcssen gestartet werden und durchlaufen k\u00f6nnen. Synchonize wird ben\u00f6tigt um die 2 oder mehrer Threads als erstet komplett durchlaufenzulassen und dann, wenn der der einer der Thread durchgelaufen ist der andere wenn er auf die gleiche Methode zugreift nicht ins Gehege kommt.",
+                    "aspects": [
+                        {
+                            "text": "wenn einer der Threads durchgelaufen ist der andere dran, wenn er auf die gleiche Methode zugreift, um nicht ins Gehege zu kommen",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Um Threds parallel laufen zulassen, und um das nicht der Gleiche . Man ben\u00f6tigt zuerst mal Threads, mindestens 2. Threads m\u00fcssen gestartet werden und durchlaufen k\u00f6nnen. Synchonize wird ben\u00f6tigt um die 2 oder mehrere Threads als erstes komplett durchlaufenzulassen und dann, wenn einer der Threads durchgelaufen ist der andere dran, wenn er auf die gleiche Methode zugreift, um nicht ins Gehege zu kommen."
+                },
+                {
+                    "id": "27",
+                    "text": "Synchronisation bewirkt das bei der Arbeit mit mehreren Threats nur einer auf eine Methode oder ein Objekt zugreifen kann. So wird verhindert das wenn z.B. zwei Threats die gleiche Variable ver\u00e4ndern kein Wert verloren geht.",
+                    "aspects": [
+                        {
+                            "text": "Synchronisation bewirkt das bei der Arbeit mit mehreren Threats nur einer auf eine Methode oder ein Objekt zugreifen kann",
+                            "elements": [
+                                [
+                                    0,
+                                    121
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "So wird verhindert das wenn z.B. zwei Threats die gleiche Variable ver\u00e4ndern kein Wert verloren geh",
+                            "elements": [
+                                [
+                                    123,
+                                    222
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Synchronisation bewirkt das bei der Arbeit mit mehreren Threats nur einer auf eine Methode oder ein Objekt zugreifen kann. So wird verhindert das wenn z.B. zwei Threats die gleiche Variable ver\u00e4ndern kein Wert verloren geht."
+                },
+                {
+                    "id": "28",
+                    "text": "Mehrere Threads k\u00f6nnten auf dieselben Daten oder Ressourcen zugreifen. Damit dabei keine \u00c4nderung verloren geht und damit kein Deadlock entsteht, werden die kritischen Abschnitte synchronized.",
+                    "aspects": [
+                        {
+                            "text": "Damit dabei keine \u00c4nderung verloren geht ;; werden die kritischen Abschnitte synchronized",
+                            "elements": [
+                                [
+                                    71,
+                                    111
+                                ],
+                                [
+                                    146,
+                                    191
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Mehrere Threads k\u00f6nnten auf dieselben Daten oder Ressourcen zugreifen. Damit dabei keine \u00c4nderung verloren geht und damit kein Deadlock entsteht, werden die kritischen Abschnitte synchronized."
+                },
+                {
+                    "id": "29",
+                    "text": "Um bei Kritischen Zust\u00e4nden keinen Verlust von Daten oder Informationen zuzulassen, wird ein Block, der auf diese Informationen zur\u00fcckgreift mit Hilfe der der Synchronisation gekennzeichnet. Wenn mehrere Threads auf die gleichen Daten zur\u00fcckgreifen, kann es passieren, dass diese Daten zerst\u00f6rt werden. Die Synchronisation verhindert dies, in dem Sie regelt in welcher Reihenfolge die Threads zugriff haben.",
+                    "aspects": [
+                        {
+                            "text": "Um bei Kritischen Zust\u00e4nden keinen Verlust von Daten oder Informationen zuzulassen, wird ein Block, der auf diese Informationen zur\u00fcckgreift mit Hilfe der der Synchronisation gekennzeichnet. Wenn mehrere Threads auf die gleichen Daten zur\u00fcckgreifen, kann es passieren, dass diese Daten zerst\u00f6rt werden",
+                            "elements": [
+                                [
+                                    0,
+                                    301
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "Die Synchronisation verhindert dies, in dem Sie regelt in welcher Reihenfolge die Threads zugriff haben",
+                            "elements": [
+                                [
+                                    303,
+                                    406
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Um bei Kritischen Zust\u00e4nden keinen Verlust von Daten oder Informationen zuzulassen, wird ein Block, der auf diese Informationen zur\u00fcckgreift mit Hilfe der der Synchronisation gekennzeichnet. Wenn mehrere Threads auf die gleichen Daten zur\u00fcckgreifen, kann es passieren, dass diese Daten zerst\u00f6rt werden. Die Synchronisation verhindert dies, in dem Sie regelt in welcher Reihenfolge die Threads zugriff haben."
+                },
+                {
+                    "id": "30",
+                    "text": "Damit es nicht zu einer sogenannten Racecondition kommt. Diese k\u00f6nnte z.B.dann auftreten, wenn zwei Threads auf dieselben Variablen zugreifen und diese ver\u00e4ndern. Die \u00c4nderungen des einen Threads k\u00f6nnten dann von denen des anderen \u00fcberschrieben werden (die Threads \"\"liefern sich einen Rennen\"\") und damit verloren gehen. Das Programm arbeitet dann nicht mehr wie erwartet/ gedacht. Mithilfe von Synchronisation kann dies verhindert werden, indem Code vor dem gemeinsamen Zugriff gesch\u00fctzt wird.",
+                    "aspects": [
+                        {
+                            "text": "Mithilfe von Synchronisation kann dies verhindert werden, indem Code vor dem gemeinsamen Zugriff gesch\u00fctzt wird",
+                            "elements": [
+                                [
+                                    383,
+                                    494
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Damit es nicht zu einer sogenannten Racecondition kommt. Diese k\u00f6nnte z.B.dann auftreten, wenn zwei Threads auf dieselben Variablen zugreifen und diese ver\u00e4ndern. Die \u00c4nderungen des einen Threads k\u00f6nnten dann von denen des anderen \u00fcberschrieben werden (die Threads \"\"liefern sich einen Rennen\"\") und damit verloren gehen",
+                            "elements": [
+                                [
+                                    0,
+                                    320
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Damit es nicht zu einer sogenannten Racecondition kommt. Diese k\u00f6nnte z.B.dann auftreten, wenn zwei Threads auf dieselben Variablen zugreifen und diese ver\u00e4ndern. Die \u00c4nderungen des einen Threads k\u00f6nnten dann von denen des anderen \u00fcberschrieben werden (die Threads \"\"liefern sich einen Rennen\"\") und damit verloren gehen. Das Programm arbeitet dann nicht mehr wie erwartet/ gedacht. Mithilfe von Synchronisation kann dies verhindert werden, indem Code vor dem gemeinsamen Zugriff gesch\u00fctzt wird."
+                },
+                {
+                    "id": "31",
+                    "text": "Threads k\u00f6nnen Daten in einer Multithreaded Anwendung einfach durch \u00fcberschreiben der Zieldaten austauschen. Es kommt so zu inkonsistenten Daten wenn Threads Daten zeitgleich \u00e4ndern.In Java kommt das Monitorkonzept zum einsatz.",
+                    "aspects": [
+                        {
+                            "text": "wenn Threads Daten zeitgleich \u00e4ndern",
+                            "elements": [
+                                [
+                                    145,
+                                    181
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Es kommt so zu inkonsistenten Daten ",
+                            "elements": [
+                                [
+                                    109,
+                                    144
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Threads k\u00f6nnen Daten in einer Multithreaded Anwendung einfach durch \u00fcberschreiben der Zieldaten austauschen. Es kommt so zu inkonsistenten Daten wenn Threads Daten zeitgleich \u00e4ndern.In Java kommt das Monitorkonzept zum einsatz."
+                },
+                {
+                    "id": "32",
+                    "text": "das es \u00fcber benutzbar ist.",
+                    "aspects": [],
+                    "correctionOrComment": "das es \u00fcber benutzbar ist."
+                },
+                {
+                    "id": "33",
+                    "text": "Damit Threads auch parallel arbeiten k\u00f6nnen und weil es auch die Sicherheit steigert.",
+                    "aspects": [],
+                    "correctionOrComment": "Damit Threads auch parallel arbeiten k\u00f6nnen und weil es auch die Sicherheit steigert."
+                },
+                {
+                    "id": "34",
+                    "text": "Damit es synchron ist",
+                    "aspects": [],
+                    "correctionOrComment": "Damit es synchron ist"
+                },
+                {
+                    "id": "35",
+                    "text": "Damit mehrere Threads gleichzeitig arbeiten k\u00f6nnen, ohne das Ergebnis zu verf\u00e4lschen.",
+                    "aspects": [
+                        {
+                            "text": "Damit mehrere Threads gleichzeitig arbeiten k\u00f6nnen, ohne das Ergebnis zu verf\u00e4lschen",
+                            "elements": [
+                                [
+                                    0,
+                                    84
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Damit mehrere Threads gleichzeitig arbeiten k\u00f6nnen, ohne das Ergebnis zu verf\u00e4lschen."
+                },
+                {
+                    "id": "36",
+                    "text": "damit keine Anwesiungen verloren gehen, wenn Threads ihre Anweisungen gleichzeitig \u00e4ndern.",
+                    "aspects": [
+                        {
+                            "text": "wenn Threads ihre Anweisungen gleichzeitig \u00e4ndern",
+                            "elements": [
+                                [
+                                    40,
+                                    89
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Damit keine Anweisungen verloren gehen",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Damit keine Anweisungen verloren gehen, wenn Threads ihre Anweisungen gleichzeitig \u00e4ndern."
+                },
+                {
+                    "id": "37",
+                    "text": "Weil das sehr wichtig ist, ohne die Synchronisation w\u00fcrde es nicht laufen wie man es erwartet. Es gibt aber Probleme mit der Synchronisation die folgende sind: - ...... - ...... - ......",
+                    "aspects": [],
+                    "correctionOrComment": "Weil das sehr wichtig ist, ohne die Synchronisation w\u00fcrde es nicht laufen wie man es erwartet. Es gibt aber Probleme mit der Synchronisation die folgende sind"
+                },
+                {
+                    "id": "38",
+                    "text": "Manchmal ,wenn zwei Thread gleichzeitig und parallel laufen ,k\u00f6nnen sich \u00fcberschreiben, f\u00fcr Korriegieren dieser Fehler und bessere Update , kann man durch Synchronisation und mit der Reihefolge arbeiten",
+                    "aspects": [
+                        {
+                            "text": "Manchmal, wenn zwei Thread gleichzeitig und parallel laufen",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "k\u00f6nnen sie sich \u00fcberschreiben",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 1
+                        }
+                    ],
+                    "correctionOrComment": "Manchmal, wenn zwei Thread gleichzeitig und parallel laufen, k\u00f6nnen sie sich \u00fcberschreiben. Zum Korriegieren dieser Fehler und bessere Update , kann man durch Synchronisation und mit der Reihefolge arbeiten"
+                },
+                {
+                    "id": "39",
+                    "text": "Wenn zwei oder mehrere parallel laufende Threads dasselbe Objekt ansprechen, kann es zu Problemem kommen, da beide gleichzeitig das Objekt \u00e4ndern. Deswegen benutzt man Monitore, wobei die dazugeh\u00f6rigen Objekte in ein Monitor eingeschlossen werden. Eingekapselt werden kritische Abschnitte.",
+                    "aspects": [
+                        {
+                            "text": "es zu Problemem kommen, da beide gleichzeitig das Objekt \u00e4ndern",
+                            "elements": [
+                                [
+                                    82,
+                                    145
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "es zu Problemem kommen, da beide gleichzeitig das Objekt \u00e4ndern",
+                            "elements": [
+                                [
+                                    82,
+                                    145
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Wenn zwei oder mehrere parallel laufende Threads dasselbe Objekt ansprechen, kann es zu Problemem kommen, da beide gleichzeitig das Objekt \u00e4ndern. Deswegen benutzt man Monitore, wobei die dazugeh\u00f6rigen Objekte in ein Monitor eingeschlossen werden. Eingekapselt werden kritische Abschnitte."
+                },
+                {
+                    "id": "40",
+                    "text": "Die\"\"Lost\"\" Upgrade k\u00f6nnen verloren gehen wenn man die Threads daten nebeneinander \u00e4ndert.",
+                    "aspects": [
+                        {
+                            "text": "wenn die Threads Daten nebeneinander \u00e4ndern",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 1
+                        },
+                        {
+                            "text": "Die Lost Upgrades k\u00f6nnen verloren gehen",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 2
+                        }
+                    ],
+                    "correctionOrComment": "Die Lost Upgrades k\u00f6nnen verloren gehen, wenn die Threads Daten nebeneinander \u00e4ndern."
+                },
+                {
+                    "id": "41",
+                    "text": "Ohne Synchronisation besteht die Gefahr, Daten zu verlieren. Das kann passieren, wenn Threads parallel Daten \u00e4ndern.",
+                    "aspects": [
+                        {
+                            "text": "Das kann passieren, wenn Threads parallel Daten \u00e4ndern",
+                            "elements": [
+                                [
+                                    61,
+                                    115
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Ohne Synchronisation besteht die Gefahr, Daten zu verlieren",
+                            "elements": [
+                                [
+                                    0,
+                                    59
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Ohne Synchronisation besteht die Gefahr, Daten zu verlieren. Das kann passieren, wenn Threads parallel Daten \u00e4ndern."
+                },
+                {
+                    "id": "42",
+                    "text": "man braucht dies, so dass bei der modifikation keine Gefahr des Lost Update bestehen k\u00f6nnte, wenn Threads Daten parallel \u00e4ndern. Und damit auch die datenintegritit\u00e4t behaltet werden k\u00f6nnte.",
+                    "aspects": [
+                        {
+                            "text": "wenn Threads Daten parallel \u00e4ndern",
+                            "elements": [
+                                [
+                                    93,
+                                    127
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Man braucht dies, so dass bei der Modifikation keine Gefahr des Lost Update bestehen k\u00f6nnte",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Man braucht dies, so dass bei der Modifikation keine Gefahr des Lost Update bestehen k\u00f6nnte, wenn Threads Daten parallel \u00e4ndern. Und damit auch die Datenintegritit\u00e4t behaltet werden k\u00f6nnte."
+                },
+                {
+                    "id": "43",
+                    "text": "Solange nur ein Thread eine bestimme Methode aufruft, hat man die Garantie, dass der COde von der ersten bis letzten Anweisung durchlaufen wird. Bei mehreren Threads, k\u00f6nnte einer Threads eine Methode in einem nicht ausreichenden Zustand hinterlassen. Der Thread, der den Objektzustand vom Vorg\u00e4nger \u00fcbernimmt, produziert m\u00f6glicherweise etwas falsches. Deshalb ist synchronisation wichtig.",
+                    "aspects": [],
+                    "correctionOrComment": "Solange nur ein Thread eine bestimme Methode aufruft, hat man die Garantie, dass der Code von der ersten bis zur letzten Anweisung durchlaufen wird. Bei mehreren Threads, k\u00f6nnte einer der Threads eine Methode in einem nicht ausreichenden Zustand hinterlassen. Der Thread, der den Objektzustand vom Vorg\u00e4nger \u00fcbernimmt, produziert m\u00f6glicherweise etwas falsches. Deshalb ist synchronisation wichtig."
+                },
+                {
+                    "id": "44",
+                    "text": "damit die Threads nicht gegeneinander laufen wenn mehrere methoden aufgerufen werden. es k\u00f6nnte zu einem Deadlock f\u00fchren wenn die Synchronisation nicht ordentlich ist.",
+                    "aspects": [
+                        {
+                            "text": "Damit die Threads nicht gegeneinander laufen wenn mehrere Methoden aufgerufen werden",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Damit die Threads nicht gegeneinander laufen wenn mehrere Methoden aufgerufen werden. Es k\u00f6nnte zu einem Deadlock f\u00fchren wenn die Synchronisation nicht ordentlich ist."
+                },
+                {
+                    "id": "45",
+                    "text": "Weil Threads die Zieldaten durch \u00fcberschreiben einfach l\u00f6schen k\u00f6nnen braucht man die Synchronisation Vor allem wenn die Threads paralell ge\u00e4ndert werden Au\u00dferdem sollten Deadlocks durch Einhaltung der Reihenfolge bei der Synchronisation vermieden werden",
+                    "aspects": [],
+                    "correctionOrComment": "Weil Threads die Zieldaten durch \u00fcberschreiben einfach l\u00f6schen k\u00f6nnen braucht man die Synchronisation. Vor allem wenn die Threads paralell ge\u00e4ndert werden. Au\u00dferdem sollten Deadlocks durch Einhaltung der Reihenfolge bei der Synchronisation vermieden werden"
+                },
+                {
+                    "id": "46",
+                    "text": "Wenn man mehrere Threads benutzt kann es vorkommen dass z.B. verschiedene Methoden die gleichen Variablen besitzt und darduch die Variablen \"\"\u00fcberschrieben\"\" werden. Wodurch dass Ergebnis sich \u00e4ndert. Nun benutzt man Syncronized, um eine Reihenfolge einzubauen, die kritische Bereiche nacheinander abarbeitet. Somit wird verhindert, dass sich die Threads gegenseitig \"\"st\u00f6ren\"\".",
+                    "aspects": [
+                        {
+                            "text": "Nun benutzt man Syncronized, um eine Reihenfolge einzubauen, die kritische Bereiche nacheinander abarbeitet. Somit wird verhindert, dass sich die Threads gegenseitig st\u00f6ren",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Wenn man mehrere Threads benutzt kann es vorkommen dass z.B. verschiedene Methoden die gleichen Variablen besitzt und darduch die Variablen \u00fcberschrieben werden",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 1
+                        }
+                    ],
+                    "correctionOrComment": "Wenn man mehrere Threads benutzt kann es vorkommen dass z.B. verschiedene Methoden die gleichen Variablen besitzt und darduch die Variablen \u00fcberschrieben werden. Wodurch dass Ergebnis sich \u00e4ndert. Nun benutzt man Syncronized, um eine Reihenfolge einzubauen, die kritische Bereiche nacheinander abarbeitet. Somit wird verhindert, dass sich die Threads gegenseitig st\u00f6ren."
+                },
+                {
+                    "id": "47",
+                    "text": "Bei der modifikation betseht die gefahr das die threads gleichzeitig laufen und sich \u00fcberschneiden. das heisst das die daten parallel ge\u00e4ndert werden. zb. in einer multithreadet k\u00f6nnen daten einfach \u00fcberschrieben werden",
+                    "aspects": [
+                        {
+                            "text": "Bei der Modifikation besteht die Gefahr, dass die Threads gleichzeitig laufen und sich \u00fcberschneiden",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "n einem Multithread k\u00f6nnen Daten einfach \u00fcberschrieben werden",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 1
+                        }
+                    ],
+                    "correctionOrComment": "Bei der Modifikation besteht die Gefahr, dass die Threads gleichzeitig laufen und sich \u00fcberschneiden. Das hei\u00dft, dass die Daten parallel ge\u00e4ndert werden. In einem Multithread k\u00f6nnen Daten einfach \u00fcberschrieben werden"
+                },
+                {
+                    "id": "48",
+                    "text": "Weil Threads wenn sie zur selben Aufgabe geh\u00f6ren auf dieselben Resurcen zugreifen m\u00fcssen. Es kann aber immer nur ein Threads die jweilige Resurce bearbeiten nicht abre beide.",
+                    "aspects": [
+                        {
+                            "text": "Es kann aber immer nur einer der Threads die jeweilige Resourcen bearbeiten nicht aber beide.",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Weil Threads, wenn sie zur selben Aufgabe geh\u00f6ren auf dieselben Resourcen zugreifen m\u00fcssen. Es kann aber immer nur einer der Threads die jeweilige Resourcen bearbeiten nicht aber beide."
+                },
+                {
+                    "id": "49",
+                    "text": "Threads in einer Mulitthreaded-Anwendung k\u00f6nnen Daten einfach durch \u00fcberschreiben der Zieldaten austauschen.",
+                    "aspects": [],
+                    "correctionOrComment": "Threads in einer Mulitthreaded-Anwendung k\u00f6nnen Daten einfach durch \u00fcberschreiben der Zieldaten austauschen."
+                },
+                {
+                    "id": "50",
+                    "text": "Um ein Deadlock zu vermeiden.",
+                    "aspects": [],
+                    "correctionOrComment": "Um ein Deadlock zu vermeiden."
+                },
+                {
+                    "id": "51",
+                    "text": "Um die jeweils mit einem anderen abzugleichen und das aktuelle ubdaten bei falschem synchronisieren kann ein Deadlock entstehen zum beispiel wenn ein bankkonto mit einem anderen verglichen wird.",
+                    "aspects": [],
+                    "correctionOrComment": "Um die jeweils mit einem anderen abzugleichen und das aktuelle updaten bei falschem synchronisieren kann ein Deadlock entstehen. zum beispiel wenn ein bankkonto mit einem anderen verglichen wird."
+                },
+                {
+                    "id": "52",
+                    "text": "Um Threads ein bestimmtes Objekt nach der Reihenfolge bearbeiten. Die Synchronisation wird verwendet um ein Objekt in meherere Threads zuzuordnen. Das Objekt wird in abwechselnder Reihenfolge dem jeweiligen Thread zur Verf\u00fcgung gestellt um die Bearbeitung zu starten. Dient au\u00dferdem zur vermeidung von Deadlocks.",
+                    "aspects": [
+                        {
+                            "text": "Um Threads ein bestimmtes Objekt nach der Reihenfolge bearbeiten",
+                            "elements": [
+                                [
+                                    0,
+                                    64
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Um Threads ein bestimmtes Objekt nach der Reihenfolge bearbeiten. Die Synchronisation wird verwendet um ein Objekt in meherere Threads zuzuordnen. Das Objekt wird in abwechselnder Reihenfolge dem jeweiligen Thread zur Verf\u00fcgung gestellt um die Bearbeitung zu starten. Dient au\u00dferdem zur vermeidung von Deadlocks."
+                },
+                {
+                    "id": "53",
+                    "text": "Um die bearbeiteten Daten nicht inkonsistent zu machen. Falls Threads nicht synchronisiert werden, kann es au\u00dferdem dazu kommen, dass ein sogenanntes Lost Update auftritt.",
+                    "aspects": [
+                        {
+                            "text": "Um die bearbeiteten Daten nicht inkonsistent zu machen ;; Falls Threads nicht synchronisiert werden, kann es au\u00dferdem dazu kommen, dass ein sogenanntes Lost Update auftritt.",
+                            "elements": [
+                                [
+                                    0,
+                                    54
+                                ],
+                                [
+                                    56,
+                                    171
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Um die bearbeiteten Daten nicht inkonsistent zu machen. Falls Threads nicht synchronisiert werden, kann es au\u00dferdem dazu kommen, dass ein sogenanntes Lost Update auftritt."
+                },
+                {
+                    "id": "54",
+                    "text": "weil die Daten k\u00f6nnen durch \u00fcberschreiben von zieldaten ausgetauscht werden.Dann entsthet das gefahr von Lost von update Um diese fehler verhindern zu k\u00f6nnen,braucht man Synchrinisation.",
+                    "aspects": [
+                        {
+                            "text": "Dann ensteht die Gefahr von Lost Update",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Weil die Daten k\u00f6nnen durch \u00fcberschreiben von Zieldaten ausgetauscht werden. Dann ensteht die Gefahr von Lost Update. Um diese fehler verhindern zu k\u00f6nnen, braucht man Synchrinisation."
+                },
+                {
+                    "id": "55",
+                    "text": "Damit Fehler durch verlorene Daten ausgeschlossen werden k\u00f6nnen. Zum Beispiel wenn ein Thread bis zu einem gewissen Punkt laufen muss bevor ein anderer Thread mit dessen Daten weiterarbeiten kann.",
+                    "aspects": [
+                        {
+                            "text": "Zum Beispiel wenn ein Thread bis zu einem gewissen Punkt laufen muss bevor ein anderer Thread mit dessen Daten weiterarbeiten kann",
+                            "elements": [
+                                [
+                                    65,
+                                    195
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Damit Fehler dadurch verlorene Daten ausgeschlossen werden k\u00f6nnen",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Damit Fehler dadurch verlorene Daten ausgeschlossen werden k\u00f6nnen. Zum Beispiel wenn ein Thread bis zu einem gewissen Punkt laufen muss bevor ein anderer Thread mit dessen Daten weiterarbeiten kann."
+                },
+                {
+                    "id": "56",
+                    "text": "Wenn mehrere Threads mit derselben Variablen arbeiten k\u00f6nnen sie unterschiedlich schnell fertig werden, wodurch andere Ergebnisse herauskommen. Durch die Synchronisation werden von beiden Threads genutzte Daten parallel gehalten, um Fehler zu verhindern",
+                    "aspects": [
+                        {
+                            "text": "Durch die Synchronisation werden von beiden Threads genutzte Daten parallel gehalten",
+                            "elements": [
+                                [
+                                    144,
+                                    228
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        }
+                    ],
+                    "correctionOrComment": "Wenn mehrere Threads mit derselben Variable arbeiten k\u00f6nnen sie unterschiedlich schnell fertig werden, wodurch andere Ergebnisse herauskommen. Durch die Synchronisation werden von beiden Threads genutzte Daten parallel gehalten, um Fehler zu verhindern"
+                },
+                {
+                    "id": "57",
+                    "text": "Die Rheinfolge der Threads vermeidet somit das Deadlock, die abschnitte mehrer",
+                    "aspects": [],
+                    "correctionOrComment": "Die Rheinfolge der Threads vermeidet somit das Deadlock"
+                },
+                {
+                    "id": "58",
+                    "text": "Da teilweise auf gemeinsame Daten zugegriffen wird ist die Synchronisation sehr wichtig. Eine Reihenfolge des Zugriffs unterschiedlicher Threads, kann Datenverlust verhindern.",
+                    "aspects": [
+                        {
+                            "text": " Eine Reihenfolge des Zugriffs unterschiedlicher Threads",
+                            "elements": [
+                                [
+                                    89,
+                                    144
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "kann Datenverlust verhindern",
+                            "elements": [
+                                [
+                                    146,
+                                    174
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Da teilweise auf gemeinsame Daten zugegriffen wird ist die Synchronisation sehr wichtig. Eine Reihenfolge des Zugriffs unterschiedlicher Threads, kann Datenverlust verhindern."
+                },
+                {
+                    "id": "59",
+                    "text": "weil sie sich w\u00e4rend der l\u00e4ufzeit ver\u00e4ndern k\u00f6nnen und somit ist eine Synchronisation n\u00f6tig",
+                    "aspects": [],
+                    "correctionOrComment": "Weil sie sich w\u00e4hrend der L\u00e4ufzeit ver\u00e4ndern k\u00f6nnen und somit ist eine Synchronisation n\u00f6tig"
+                },
+                {
+                    "id": "60",
+                    "text": "-",
+                    "aspects": [],
+                    "correctionOrComment": "-"
+                },
+                {
+                    "id": "61",
+                    "text": "f\u00fcr Multithreaded Anwendung und k\u00f6nnen Daten einfach durch \u00fcberschreiben der Zieldaten austauschen",
+                    "aspects": [],
+                    "correctionOrComment": "Multithreaded Anwendungen k\u00f6nnen Daten einfach durch \u00fcberschreiben der Zieldaten austauschen"
+                },
+                {
+                    "id": "62",
+                    "text": "um zu verhindern das Attribute oder Werte in den kritischen abschnitt kommen oder zwei Threads. Dadurch werden Threads Synchronisiert um dies zu verhindern. So nimmt der eine Threads den Wert den er braucht und gibt ihn erst frei wenn er fertig ist. Beispiel skript mit Global (w,v).",
+                    "aspects": [
+                        {
+                            "text": "So nimmt der eine Thread den Wert, den er braucht und gibt ihn erst frei wenn er fertig ist",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Um zu verhindern das Attribute oder Werte in den kritischen Abschnitt kommen oder zwei Threads. Dadurch werden Threads Synchronisiert um dies zu verhindern. So nimmt der eine Thread den Wert, den er braucht und gibt ihn erst frei wenn er fertig ist."
+                },
+                {
+                    "id": "63",
+                    "text": "Damit nicht ein Thread die Daten des anderen \u00fcberschreibt und um der Gefahr verlorener Daten entgegenzuwirken.",
+                    "aspects": [
+                        {
+                            "text": "um der Gefahr verlorener Daten entgegenzuwirken",
+                            "elements": [
+                                [
+                                    62,
+                                    109
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Damit nicht ein Thread die Daten des anderen \u00fcberschreibt und um der Gefahr verlorener Daten entgegenzuwirken."
+                },
+                {
+                    "id": "64",
+                    "text": "Damit Variablen bzw deren Werte ggf nicht gleichzeitig von verschiedenen Threads \u00fcberschrieben werden und es dadurch zu komplikatioinen im Programmablauf kommt.",
+                    "aspects": [
+                        {
+                            "text": "Damit Variablen beziwhungsweise deren Werte nicht gleichzeitig von verschiedenen Threads \u00fcberschrieben werden ",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "und es dadurch zu Komplikatioinen im Programmablauf kommt",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 1
+                        }
+                    ],
+                    "correctionOrComment": "Damit Variablen beziwhungsweise deren Werte nicht gleichzeitig von verschiedenen Threads \u00fcberschrieben werden und es dadurch zu Komplikatioinen im Programmablauf kommt."
+                },
+                {
+                    "id": "65",
+                    "text": "Da bei dem gleichzeitigen Zugriff auf die selben Daten eventuell Fehler auftreten k\u00f6nnen",
+                    "aspects": [
+                        {
+                            "text": "Da bei dem gleichzeitigen Zugriff auf die selben Daten eventuell Fehler auftreten k\u00f6nnen",
+                            "elements": [
+                                [
+                                    0,
+                                    88
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Da bei dem gleichzeitigen Zugriff auf die selben Daten eventuell Fehler auftreten k\u00f6nnen",
+                            "elements": [
+                                [
+                                    0,
+                                    88
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 1
+                        }
+                    ],
+                    "correctionOrComment": "Da bei dem gleichzeitigen Zugriff auf die selben Daten eventuell Fehler auftreten k\u00f6nnen"
+                },
+                {
+                    "id": "66",
+                    "text": "Man will Deadlocks vermeiden. Das ist ein Zustand wo das Programm gestartet wird aber sich nicht beenden kann.",
+                    "aspects": [],
+                    "correctionOrComment": "Man will Deadlocks vermeiden. Das ist ein Zustand wo das Programm gestartet wird aber sich nicht beenden kann."
+                }
+            ]
+        }
+    ]
+}

@@ -17,7 +17,7 @@ FILE_PATH = dirname(realpath(__file__))
 BROWN_IC = wordnet_ic.ic('ic-brown.dat')
 Synset = None
 
-GN_TEST_PATH = join(os.path.dirname(os.path.realpath(__file__)), "germanet_test_data")
+GN_TEST_PATH = join(os.path.dirname(os.path.realpath(__file__)), "lib" ,"germanet_test_data")
 
 AUX = {
     "en": ["be", "can", "could", "dare", "do", "have", "may", "might", "must", "need", "ought", "shall", "should", "will", "would"],
@@ -306,7 +306,7 @@ def testSimilarityMetrics(gurFilename):
     from germanet import load_germanet, Synset
     GERMANET = load_germanet(host = "localhost", port = 27027, database_name = 'germanet')
     semSim =SemSim("fasttext")
-    germaLemmatizer = CustomGermaLemma(pickle="tiger/tiger_lemmas.pkl")
+    germaLemmatizer = CustomGermaLemma(pickle="/lib/tiger/tiger_lemmas.pkl")
     GN_MAX_POS_DEPTH = {}
     for key,val in GERMANET.max_min_depths.items():
         GN_MAX_POS_DEPTH[key[0]] = val # {'adj': 11, 'nomen': 21, 'verben': 16}
@@ -336,7 +336,7 @@ def testSimilarityMetrics(gurFilename):
         return (val - minV) / (maxV -minV)
 
     simData = []
-    with open(join("germanet_test_data",gurFilename), 'r', encoding='utf-8') as csvFile:
+    with open(join("germanet_test_data","lib",gurFilename), 'r', encoding='utf-8') as csvFile:
         csvReader = csv.reader((row for row in csvFile if not row.startswith('#')), delimiter=',', quotechar='|')
         header = next(csvReader)
         for row in csvReader:

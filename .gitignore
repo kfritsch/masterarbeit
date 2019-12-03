@@ -1,11 +1,9 @@
-/question-corpora
 /dataAnalysis/features
 /dataAnalysis/tokenAnnotations
-/dataAnalysis/featureExtraction/tiger
-/dataAnalysis/featureExtraction/lib
-/dataAnalysis/featureExtraction/germanet_test_data
 
-/question-annotation/server/data/
+/dataAnalysis/results
+/dataAnalysis/featureExtraction/lib
+!*/dataAnalysis/featureExtraction/lib/readme.txt
 
 __pycache__/
 node_modules/

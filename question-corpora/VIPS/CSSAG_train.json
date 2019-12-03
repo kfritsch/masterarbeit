@@ -1,0 +1,3557 @@
+{
+    "questions": [
+        {
+            "id": "3",
+            "title": "\u00dcberladene Methode",
+            "text": "Was ist eine \u00fcberladene Methode?",
+            "type": "definition",
+            "aspects": [
+                {
+                    "text": "Methoden einer Klasse",
+                    "implied": true
+                },
+                {
+                    "text": "mit demselben Namen"
+                },
+                {
+                    "text": "Die Signaturen der Methoden unterscheiden sich anhand unterschiedlicher Parameter"
+                }
+            ],
+            "assignedWeights": {
+                "Methode": 1,
+                "Klasse": 1,
+                "denselb": 5,
+                "Signatur": 5,
+                "unterscheiden": 5,
+                "anhand": 0,
+                "unterschiedlich": 5,
+                "Parameter": 5
+            },
+            "referenceAnswers": [
+                {
+                    "id": "ref1",
+                    "text": "Das sind Methoden einer Klasse mit denselben Namen. Ihre Signaturen unterscheiden sich anhand unterschiedlicher Parameter.",
+                    "aspects": [
+                        {
+                            "text": "Das sind Methoden einer Klasse",
+                            "aIdx": 0,
+                            "elements": [
+                                [
+                                    0,
+                                    30
+                                ]
+                            ],
+                            "label": 0
+                        },
+                        {
+                            "text": "Das sind Methoden ;; mit demselben Namen",
+                            "aIdx": 1,
+                            "elements": [
+                                [
+                                    0,
+                                    17
+                                ],
+                                [
+                                    31,
+                                    50
+                                ]
+                            ],
+                            "label": 0
+                        },
+                        {
+                            "text": "Ihre Signaturen unterscheiden sich anhand unterschiedlicher Parameter",
+                            "aIdx": 2,
+                            "elements": [
+                                [
+                                    52,
+                                    121
+                                ]
+                            ],
+                            "label": 0
+                        }
+                    ]
+                }
+            ],
+            "studentAnswers": [
+                {
+                    "text": "eine \u00fcberladene Methode wurde mehr als einmal in einer Klasse implementiert, jedoch m\u00fcssen die Parameter-\u00dcbergaben verschieden einzigartig sein, der r\u00fcckgabetype kann \"\"belibig sein\"\" der methoden-name muss gleich sein. Ein Beispiel: public class Test { public int getOutput() { return 0; } //\u00fcberladene Methode public int getOutput(int mode){ return 0; } //auch \u00fcberladen public String getOutput(int mode, String prefix){ return prefix+mode; } }",
+                    "id": "3",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Eine \u00fcberladene Methode wurde mehr als einmal in einer Klasse implementiert, jedoch m\u00fcssen die Parameter\u00fcbergaben verschieden einzigartig sein. Der R\u00fcckgabetype kann belibig sein. Der Methodenname muss gleich sein.",
+                    "aspects": [
+                        {
+                            "text": "Eine \u00fcberladene Methode wurde mehr als einmal in einer Klasse implementiert",
+                            "elements": [
+                                [
+                                    0,
+                                    75
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Der Methodenname muss gleich sein",
+                            "elements": [
+                                [
+                                    180,
+                                    213
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "jedoch m\u00fcssen die Parameter\u00fcbergaben verschieden einzigartig sein",
+                            "elements": [
+                                [
+                                    77,
+                                    142
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine Methode die zu viele Methoden implementiert hat und un\u00fcbersichtlich ist.",
+                    "id": "18",
+                    "answerCategory": "guessing",
+                    "correctionOrComment": "Das ist eine Methode, die zu viele Methoden implementiert hat und un\u00fcbersichtlich ist.",
+                    "aspects": []
+                },
+                {
+                    "text": "Eine \u00fcberladene Methode ist eine definierte Methode, die durch eine neue Implementation der selben Methode eine neue Bedeutung bekommt. z.B. die vom Object definierte Methode toString(). Wird sie in einer Klasse neu geschrieben gilt sie als \u00fcberladen.",
+                    "id": "20",
+                    "answerCategory": "concept_mix-up",
+                    "correctionOrComment": "Eine \u00fcberladene Methode ist eine definierte Methode, die durch eine neue Implementation derselben Methode eine neue Bedeutung bekommt. Wird sie in einer Klasse neu geschrieben gilt sie als \u00fcberladen.",
+                    "aspects": []
+                },
+                {
+                    "text": "Eine \u00fcberladene Methode ist eine Methoe die eine Methode mit dem selben Namen an der momentanen Stelle \u00e4ndert allerdings nicht die Methode mit dem selben Namen an der urspr\u00fcnglichen Stelle.",
+                    "id": "22",
+                    "answerCategory": "concept_mix-up",
+                    "correctionOrComment": "Eine \u00fcberladene Methode ist eine Methode, die eine Methode mit demselben Namen an der momentanen Stelle \u00e4ndert, allerdings nicht die Methode mit dem selben Namen an der urspr\u00fcnglichen Stelle.",
+                    "aspects": []
+                },
+                {
+                    "text": "Wenn eine Methode sehr h\u00e4ufig wiederholt geschrieben wird.",
+                    "id": "23",
+                    "answerCategory": "guessing",
+                    "correctionOrComment": "Das ist, wenn eine Methode sehr h\u00e4ufig wiederholt geschrieben wird.",
+                    "aspects": []
+                },
+                {
+                    "text": "Eine Methode die einen zu gro\u00dfen Wert aufnehmen muss f\u00fcr den sie nicht festgelegt ist.",
+                    "id": "25",
+                    "answerCategory": "guessing",
+                    "correctionOrComment": "Das ist eine Methode, die einen zu gro\u00dfen Wert aufnehmen muss, f\u00fcr den sie nicht festgelegt ist.",
+                    "aspects": []
+                },
+                {
+                    "text": "Eine \u00fcberladene Methode ist eine Methode, der beim Aufruf Parameter \u00fcbergeben werden.",
+                    "id": "27",
+                    "answerCategory": "guessing",
+                    "correctionOrComment": "Eine \u00fcberladene Methode ist eine Methode, der beim Aufruf Parameter \u00fcbergeben werden.",
+                    "aspects": []
+                },
+                {
+                    "text": "Eine \u00fcberladene Methode ist wenn man z.B. eine abgeleitete Klasse einer Basisklasse hat, diese Methode der Basisklasse aber nicht f\u00fcr die Ableitung \"\"passt\"\", kann man eine weitere Methode schreiben, oder mehrere wenn man m\u00f6chte!",
+                    "id": "29",
+                    "answerCategory": "concept_mix-up",
+                    "correctionOrComment": "Eine Methode ist \u00fcberladen, wenn man beispielsweise eine abgeleitete Klasse einer Basisklasse hat. Wenn eine Methode der Basisklasse nicht f\u00fcr die Ableitung passt, kann man eine oder mehrere weitere Methode schreiben, wenn man m\u00f6chte!",
+                    "aspects": []
+                },
+                {
+                    "text": "to string methode",
+                    "id": "30",
+                    "answerCategory": "none",
+                    "correctionOrComment": "to string methode",
+                    "aspects": []
+                },
+                {
+                    "text": "eine \u00fcberladene Methode ist eine Methode die in einer anderen Klasse \u00fcberschriben werden kann.",
+                    "id": "31",
+                    "answerCategory": "concept_mix-up",
+                    "correctionOrComment": "Eine \u00fcberladene Methode ist eine Methode, die in einer anderen Klasse \u00fcberschrieben werden kann.",
+                    "aspects": []
+                },
+                {
+                    "text": "eine Methode wo der Standart Konstruktur durch einen/mehrere eigenen Konstruktor ersetzt wurde",
+                    "id": "33",
+                    "answerCategory": "concept_mix-up",
+                    "correctionOrComment": "Das ist eine Methode, in der der Standartkonstruktur durch einen oder mehrere eigene Konstruktoren ersetzt wurde.",
+                    "aspects": []
+                },
+                {
+                    "text": "Eine Methode, die mehrmals verwende/aufgerufen wird, mit jeweils anderem Inhalt.",
+                    "id": "34",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Das ist eine Methode, die mehrmals verwendet oder aufgerufen wird, mit jeweils anderem Inhalt.",
+                    "aspects": []
+                },
+                {
+                    "text": "\u00dcberladene methoden sind zwei verschiedene methoden,, die aber mit verschiedenen Parameter und Typen defineirt sind. (2 verschiedene Methoden, aber verschiedene Parameter und Typen)",
+                    "id": "35",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "\u00dcberladene Methoden sind zwei verschiedene Methoden, die aber mit verschiedenen Parametern und Typen definiert sind.",
+                    "aspects": [
+                        {
+                            "text": "\u00dcberladene Methoden sind ;; aber mit verschiedenen Parametern und Typen definiert sind",
+                            "elements": [
+                                [
+                                    0,
+                                    24
+                                ],
+                                [
+                                    57,
+                                    115
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Wenn zwei verschiedene Methoden den selben Namen haben, hei\u00dfen sie \u00fcberladen. Sie m\u00fcssen sich durch Parameterliste und - Typen) unterscheiden.",
+                    "id": "36",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Wenn zwei verschiedene Methoden den selben Namen haben, hei\u00dfen sie \u00fcberladen. Sie m\u00fcssen sich durch die Parameterliste und -typen unterscheiden.",
+                    "aspects": [
+                        {
+                            "text": "Wenn zwei verschiedene Methoden den selben Namen haben, hei\u00dfen sie \u00fcberladen",
+                            "elements": [
+                                [
+                                    0,
+                                    76
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "Sie m\u00fcssen sich durch die Parameterliste und -typen unterscheiden",
+                            "elements": [
+                                [
+                                    78,
+                                    143
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine \u00fcberladene Methode ist eine bereits vorhandene Methode die vom Ersteller an das aktuelle Projekt angepasst wird.",
+                    "id": "38",
+                    "answerCategory": "concept_mix-up",
+                    "correctionOrComment": "Eine \u00fcberladene Methode ist eine bereits vorhandene Methode, die vom Ersteller an das aktuelle Projekt angepasst wird.",
+                    "aspects": []
+                },
+                {
+                    "text": "Eine Methode, welche mehrere verschiedene Werte \u00fcbergeben kann",
+                    "id": "39",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Das ist eine Methode, welche mehrere verschiedene Werte \u00fcbergeben kann.",
+                    "aspects": []
+                },
+                {
+                    "text": "Eine \u00fcberladene Methode ist eine selbsterstellte Supermethode. Wie zum beispiel ein selbstgeschriebener Konstruktor der den Standart Konstruktor erstetzt.",
+                    "id": "40",
+                    "answerCategory": "concept_mix-up",
+                    "correctionOrComment": "Eine \u00fcberladene Methode ist eine selbsterstellte Supermethode beispielsweise ein selbstgeschriebener Konstruktor, der den Standartkonstruktor erstetzt.",
+                    "aspects": []
+                },
+                {
+                    "text": "Als \u00fcberladen bezeichnet man eine Methode, die den selben Namen hat, wie eine andere, aber andere Parameter erwartet.",
+                    "id": "41",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Als \u00fcberladen bezeichnet man eine Methode, die den selben Namen hat, wie eine andere, aber andere Parameter erwartet.",
+                    "aspects": [
+                        {
+                            "text": "Als \u00fcberladen bezeichnet man eine Methode, die den selben Namen hat, wie eine andere",
+                            "elements": [
+                                [
+                                    0,
+                                    84
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "eine Methode, die ;; aber andere Parameter erwartet",
+                            "elements": [
+                                [
+                                    29,
+                                    46
+                                ],
+                                [
+                                    86,
+                                    116
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "ist eine Methode, den selben namen und die selbe funktion hat",
+                    "id": "43",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Das ist eine Methode, die den selben Namen und die selbe Funktion hat.",
+                    "aspects": [
+                        {
+                            "text": "Das ist eine Methode, die den selben Namen ;; hat",
+                            "elements": [
+                                [
+                                    0,
+                                    42
+                                ],
+                                [
+                                    66,
+                                    69
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine Methode die nichts zur\u00fcckgeben kann.",
+                    "id": "44",
+                    "answerCategory": "guessing",
+                    "correctionOrComment": "Das ist eine Methode, die nichts zur\u00fcckgeben kann.",
+                    "aspects": []
+                },
+                {
+                    "text": "Haben zwei verschiedene Methoden denselben Namen hei\u00dfen Sie \u00fcberladen. Sie unterscheiden sich durch ihre Parameter. Sie sorgen f\u00fcr Benutzerfreundlichkeit.",
+                    "id": "45",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Haben zwei verschiedene Methoden denselben Namen, hei\u00dfen sie \u00fcberladen. Sie unterscheiden sich durch ihre Parameter. Sie sorgen f\u00fcr Benutzerfreundlichkeit.",
+                    "aspects": [
+                        {
+                            "text": "Haben zwei verschiedene Methoden denselben Namen, hei\u00dfen sie \u00fcberladen",
+                            "elements": [
+                                [
+                                    0,
+                                    70
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "Sie unterscheiden sich durch ihre Parameter",
+                            "elements": [
+                                [
+                                    72,
+                                    115
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine Methode, die sich nur ihrer Signatur (Parameterleiste und -typen) von einer anderen Methode unterscheidet, z.B. kann der Konstruktor einer Klasse \u00fcberladen werden, indem er jeweils eine unterschiedliche Anzahl an Variablen und/oder verschiedene Typen entgegennimmt.",
+                    "id": "46",
+                    "answerCategory": "binary_correct",
+                    "correctionOrComment": "Das ist eine Methode, die sich nur anhand ihrer Signatur (Parameterliste und -typen) von einer anderen Methode unterscheidet. Beispielsweise kann der Konstruktor einer Klasse \u00fcberladen werden, indem er jeweils eine unterschiedliche Anzahl an Variablen oder verschiedene Typen entgegennimmt.",
+                    "aspects": [
+                        {
+                            "text": "Das ist eine Methode, die sich nur anhand ihrer Signatur (Parameterliste und -typen) von einer anderen Methode unterscheidet",
+                            "elements": [
+                                [
+                                    0,
+                                    124
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 1
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine \u00fcberladene Methode ist eine Methode die den selben Namen hat wie eine oder mehrere Methoden und die je nach EIngabewert aufgerufen wird. So kann es sein das bei einer Eingabe eine andere Methode des selben Namens wie bei einer anderen Eingabe aufgerufen wird. So ist es m\u00f6glich mit \"\"derselben\"\" Methode verschiedene EIngabetypen anzusprechen.",
+                    "id": "47",
+                    "answerCategory": "binary_correct",
+                    "correctionOrComment": "Eine \u00fcberladene Methode ist eine Methode, die den selben Namen hat, wie eine oder mehrere Methoden und die je nach Eingabewert aufgerufen wird. So kann es sein, dass bei einer Eingabe eine andere Methode des selben Namens, wie bei einer anderen Eingabe aufgerufen wird. So ist es m\u00f6glich mit derselben Methode verschiedene Eingabetypen anzusprechen.",
+                    "aspects": [
+                        {
+                            "text": "Eine \u00fcberladene Methode ist eine Methode, die den selben Namen hat",
+                            "elements": [
+                                [
+                                    0,
+                                    66
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "eine Methode ;; die je nach Eingabewert aufgerufen wird",
+                            "elements": [
+                                [
+                                    28,
+                                    40
+                                ],
+                                [
+                                    103,
+                                    142
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 1
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine Methode ist \u00fcberladen, wenn mindestens eine weitere Methode mit dem selben Namen aber einer anderen Signatur vorliegt.",
+                    "id": "48",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Eine Methode ist \u00fcberladen, wenn mindestens eine weitere Methode mit dem selben Namen aber einer anderen Signatur vorliegt.",
+                    "aspects": [
+                        {
+                            "text": "Eine Methode ist \u00fcberladen, wenn mindestens eine weitere Methode mit dem selben Namen ;; vorliegt",
+                            "elements": [
+                                [
+                                    0,
+                                    85
+                                ],
+                                [
+                                    114,
+                                    122
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "wenn mindestens eine weitere Methode mit ;; einer anderen Signatur vorliegt",
+                            "elements": [
+                                [
+                                    28,
+                                    68
+                                ],
+                                [
+                                    91,
+                                    122
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 1
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine \u00fcberladene Methode ist eine Methode die andere Methoden aufruft.",
+                    "id": "49",
+                    "answerCategory": "guessing",
+                    "correctionOrComment": "Eine \u00fcberladene Methode ist eine Methode, die andere Methoden aufruft.",
+                    "aspects": []
+                },
+                {
+                    "text": "-",
+                    "id": "50",
+                    "answerCategory": "none",
+                    "correctionOrComment": "-",
+                    "aspects": []
+                },
+                {
+                    "text": "\u00dcberlade Methoden sind Methoden die einander \u00fcberschreiben k\u00f6nnen z.B. \"\"+\"\".",
+                    "id": "51",
+                    "answerCategory": "concept_mix-up",
+                    "correctionOrComment": "\u00dcberlade Methoden sind Methoden, die einander \u00fcberschreiben k\u00f6nnen.",
+                    "aspects": []
+                },
+                {
+                    "text": "Eine Methode die es schonmal gibt. Also mit dem gleichen Namen. Mit der Methode kann man dann mehrere Sachen machen (sie \u00fcberschreiben sich nicht).",
+                    "id": "52",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Das ist eine Methode, die es schonmal gibt, also mit dem gleichen Namen. Mit der Methode kann man dann mehrere Sachen machen. Sie \u00fcberschreiben sich nicht.",
+                    "aspects": [
+                        {
+                            "text": "Das ist eine Methode, die es schonmal gibt, also mit dem gleichen Namen",
+                            "elements": [
+                                [
+                                    0,
+                                    71
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "eine \u00fcberladene methode ist eine methode die aus einer basisklasse abgeleitet ist und in der der abgeleitetetn klasse \u00fcberschrieben wird beispiellsweise hat jede klasse die methode toString(), da alle klassen von Object abgeleitet sind, um eine lesbare ausgabe zu erhalten muss die methode toString in der abgeleiteten Klasse \u00fcberschrieben werden und ist dann \u00fcberladen",
+                    "id": "53",
+                    "answerCategory": "concept_mix-up",
+                    "correctionOrComment": "Eine \u00fcberladene Methode ist eine Methode, die aus einer Basisklasse abgeleitet ist und in der abgeleiteten Klasse \u00fcberschrieben wird. Beispielsweise hat jede Klasse die Methode 'toString()', da alle Klassen von 'Object' abgeleitet sind. Um eine lesbare Ausgabe zu erhalten muss die Methode 'toString' in der abgeleiteten Klasse \u00fcberschrieben werden und ist dann \u00fcberladen.",
+                    "aspects": []
+                },
+                {
+                    "text": "Eine Methode, die das gleiche Schutzattribut, den gleichen R\u00fcckgabetyp und den gleichen Methodenname hat. Sie unterscheidet sich nur in den \u00dcbergabeparametern.",
+                    "id": "54",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Das ist eine Methode, die das gleiche Schutzattribut, den gleichen R\u00fcckgabetyp und den gleichen Methodenname hat. Sie unterscheidet sich nur in den \u00dcbergabeparametern.",
+                    "aspects": [
+                        {
+                            "text": "Das ist eine Methode, die ;; den gleichen Methodenname hat",
+                            "elements": [
+                                [
+                                    0,
+                                    25
+                                ],
+                                [
+                                    83,
+                                    112
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "Sie unterscheidet sich nur in den \u00dcbergabeparametern",
+                            "elements": [
+                                [
+                                    114,
+                                    166
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Haben zwei verschieden Methoden derselben Namen hei\u00dfen sie \u00fcberladen. \u00dcberladen Methoiden m\u00fcssen sich durch die Signatur(Parameterliste und -typen) unterscheiden, der R\u00fcckgabewert ist egal.",
+                    "id": "55",
+                    "answerCategory": "binary_correct",
+                    "correctionOrComment": "Haben zwei verschieden Methoden denselben Namen, hei\u00dfen sie \u00fcberladen. \u00dcberladene Methoden m\u00fcssen sich durch die Signatur (Parameterliste und -typen) unterscheiden. Der R\u00fcckgabewert ist egal.",
+                    "aspects": [
+                        {
+                            "text": "Haben zwei verschieden Methoden denselben Namen, hei\u00dfen sie \u00fcberladen",
+                            "elements": [
+                                [
+                                    0,
+                                    69
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "\u00dcberladene Methoden m\u00fcssen sich durch die Signatur (Parameterliste und -typen) unterscheiden",
+                            "elements": [
+                                [
+                                    71,
+                                    163
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 1
+                        }
+                    ]
+                },
+                {
+                    "text": "wenn zwei verschiedene methoden denselben namen haben, hei\u00dfen sie \u00fcberladen. sie m\u00fcssen sich durch die Signatur (Parameterliste und typen) unterscheiden,der Rr\u00fcckgabe wert ist egal.",
+                    "id": "56",
+                    "answerCategory": "binary_correct",
+                    "correctionOrComment": "Wenn zwei verschiedene Methoden denselben Namen haben, hei\u00dfen sie \u00fcberladen. Sie m\u00fcssen sich durch die Signatur (Parameterliste und -typen) unterscheiden. Der Rr\u00fcckgabewert ist egal.",
+                    "aspects": [
+                        {
+                            "text": "Wenn zwei verschiedene Methoden denselben Namen haben, hei\u00dfen sie \u00fcberladen",
+                            "elements": [
+                                [
+                                    0,
+                                    75
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "Sie m\u00fcssen sich durch die Signatur (Parameterliste und -typen) unterscheiden",
+                            "elements": [
+                                [
+                                    77,
+                                    153
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 1
+                        }
+                    ]
+                },
+                {
+                    "text": "eine Methode die",
+                    "id": "57",
+                    "answerCategory": "none",
+                    "correctionOrComment": "eine Methode die",
+                    "aspects": []
+                },
+                {
+                    "text": "wenn zwei Methoden denselben namen haben dann sind sie \u00fcberladen sie m\u00fcssen sich durch die signatur unterscheiden der r\u00fcckgabewert ist egal",
+                    "id": "58",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Wenn zwei Methoden denselben Namen haben, dann sind sie \u00fcberladen. Sie m\u00fcssen sich durch die Signatur unterscheiden. Der R\u00fcckgabewert ist egal.",
+                    "aspects": [
+                        {
+                            "text": "Wenn zwei Methoden denselben Namen haben, dann sind sie \u00fcberladen",
+                            "elements": [
+                                [
+                                    0,
+                                    65
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "Sie m\u00fcssen sich durch die Signatur unterscheiden",
+                            "elements": [
+                                [
+                                    67,
+                                    115
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 1
+                        }
+                    ]
+                },
+                {
+                    "text": "Wenn zwei verschiedene Methoden denselben Namen haben, dann hei\u00dfen sie \u00fcberladen. \u00dcberladene Methoden m\u00fcssen sich durch die Parameterliste und -typen unterscheiden.",
+                    "id": "59",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Wenn zwei verschiedene Methoden denselben Namen haben, dann hei\u00dfen sie \u00fcberladen. \u00dcberladene Methoden m\u00fcssen sich durch die Parameterliste und -typen unterscheiden.",
+                    "aspects": [
+                        {
+                            "text": "Wenn zwei verschiedene Methoden denselben Namen haben, dann hei\u00dfen sie \u00fcberladen",
+                            "elements": [
+                                [
+                                    0,
+                                    80
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "\u00dcberladene Methoden m\u00fcssen sich durch die Parameterliste und -typen unterscheiden",
+                            "elements": [
+                                [
+                                    82,
+                                    163
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "-",
+                    "id": "60",
+                    "answerCategory": "none",
+                    "correctionOrComment": "-",
+                    "aspects": []
+                },
+                {
+                    "text": "Mehrere Methoden haben dieselben Namen, man kann sie durch ihre Eigenschaften entscheiden. Der Aufruf ist dabei egal.",
+                    "id": "61",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Mehrere Methoden haben dieselben Namen. Man kann sie durch ihre Eigenschaften unterscheiden. Der Aufruf ist dabei egal.",
+                    "aspects": [
+                        {
+                            "text": "Mehrere Methoden haben dieselben Namen",
+                            "elements": [
+                                [
+                                    0,
+                                    38
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "Man kann sie durch ihre Eigenschaften unterscheiden",
+                            "elements": [
+                                [
+                                    40,
+                                    91
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 1
+                        }
+                    ]
+                },
+                {
+                    "text": "Wenn zwei verschiedene Methoden den selben Namen haben nennt man sie \u00dcberladen. Sie m\u00fcssen sich durch die Signatur unterscheiden. Der R\u00fcckgabewert ist egal.",
+                    "id": "62",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Wenn zwei verschiedene Methoden denselben Namen haben, nennt man sie \u00fcberladen. Sie m\u00fcssen sich durch die Signatur unterscheiden. Der R\u00fcckgabewert ist egal.",
+                    "aspects": [
+                        {
+                            "text": "Wenn zwei verschiedene Methoden denselben Namen haben, nennt man sie \u00fcberladen",
+                            "elements": [
+                                [
+                                    0,
+                                    78
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "Sie m\u00fcssen sich durch die Signatur unterscheiden",
+                            "elements": [
+                                [
+                                    80,
+                                    128
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 1
+                        }
+                    ]
+                },
+                {
+                    "text": "Vererbte Methode/Konstruktor die mit Override \u00fcberschrieben wurde. Beispiel: \u00dcberschreibung des Standartkonstruktors.",
+                    "id": "63",
+                    "answerCategory": "concept_mix-up",
+                    "correctionOrComment": "Das sind vererbte Methoden oder Konstruktoren, die mit 'Override' \u00fcberschrieben wurde.",
+                    "aspects": []
+                },
+                {
+                    "text": "Sind Methoden mit den selben Methodennamen, der unterschied besteht aber da drin, dass die Parameteranzahl bzw. Typen sich unterscheiden.",
+                    "id": "64",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Das sind Methoden mit den selben Methodennamen. Der Unterschied besteht aber darin, dass die Parameteranzahl oder -typen sich unterscheiden.",
+                    "aspects": [
+                        {
+                            "text": "Das sind Methoden mit den selben Methodennamen",
+                            "elements": [
+                                [
+                                    0,
+                                    46
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "Der Unterschied besteht aber darin, dass die Parameteranzahl oder -typen sich unterscheiden",
+                            "elements": [
+                                [
+                                    48,
+                                    139
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Haben zwei verschiedene Methoden denselben Namen hei\u00dfen sie \u00dcberladen \u00dcberladene Methoden m\u00fcssen sich durch die Signatur (Parameterliste und typen) unterscheiden.",
+                    "id": "65",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Haben zwei verschiedene Methoden denselben Namen, hei\u00dfen sie \u00fcberladen. \u00dcberladene Methoden m\u00fcssen sich durch die Signatur (Parameterliste und -typen) unterscheiden.",
+                    "aspects": [
+                        {
+                            "text": "Haben zwei verschiedene Methoden denselben Namen, hei\u00dfen sie \u00fcberladen",
+                            "elements": [
+                                [
+                                    0,
+                                    70
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "\u00dcberladene Methoden m\u00fcssen sich durch die Signatur (Parameterliste und -typen) unterscheiden",
+                            "elements": [
+                                [
+                                    72,
+                                    164
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 1
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine Methode ist \u00fcberladen, wenn sie z.B. einen String erbt und diesen dann innerhalb der Methode mit einem neuen \"\"Wert\"\" \u00fcberschreibt.",
+                    "id": "66",
+                    "answerCategory": "concept_mix-up",
+                    "correctionOrComment": "Eine Methode ist \u00fcberladen, wenn sie beispielsweise einen String erbt und diesen dann innerhalb der Methode mit einem neuen Wert \u00fcberschreibt.",
+                    "aspects": []
+                },
+                {
+                    "text": "\u00fcberladen ist eine Methode, wenn sie doppelt implementiert wurde, mit den gleichen Parametern. Die Variable wurde gleichnamig definiert.",
+                    "id": "67",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "\u00dcberladen ist eine Methode, wenn sie doppelt implementiert wurde, mit den gleichen Parametern. Die Variable wurde gleichnamig definiert.",
+                    "aspects": []
+                },
+                {
+                    "text": "Eine Methode in der zu viel Quellcode steht.",
+                    "id": "68",
+                    "answerCategory": "guessing",
+                    "correctionOrComment": "Eine Methode in der zu viel Quellcode steht.",
+                    "aspects": []
+                },
+                {
+                    "text": "Haben zwei verschiedene Methoden denselben Namen hei\u00dfen sie \u00fcberladen. \u00dcberladene Methoden m\u00fcssen sich durch die Signatur (Parameterliste und -typen) unterscheiden den, der R\u00fcckgabewert ist egal.",
+                    "id": "69",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Haben zwei verschiedene Methoden denselben Namen, hei\u00dfen sie \u00fcberladen. \u00dcberladene Methoden m\u00fcssen sich durch die Signatur (Parameterliste und -typen) unterscheiden. Der R\u00fcckgabewert ist egal.",
+                    "aspects": [
+                        {
+                            "text": "Haben zwei verschiedene Methoden denselben Namen, hei\u00dfen sie \u00fcberladen",
+                            "elements": [
+                                [
+                                    0,
+                                    70
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "\u00dcberladene Methoden m\u00fcssen sich durch die Signatur (Parameterliste und -typen) unterscheiden",
+                            "elements": [
+                                [
+                                    72,
+                                    164
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 1
+                        }
+                    ]
+                },
+                {
+                    "text": "\u00dcberladene Methoden haben zwei verschiedene Methoden den selben Namen hei\u00dfen sie \u00dcberladen. \u00dcberladene Methoden m\u00fcssen sich durch die Signatur (Parameterliste und -typen) unterscheiden.",
+                    "id": "70",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Haben zwei verschiedene Methoden denselben Namen, hei\u00dfen sie \u00fcberladen. \u00dcberladene Methoden m\u00fcssen sich durch die Signatur (Parameterliste und -typen) unterscheiden.",
+                    "aspects": [
+                        {
+                            "text": "Haben zwei verschiedene Methoden denselben Namen, hei\u00dfen sie \u00fcberladen",
+                            "elements": [
+                                [
+                                    0,
+                                    70
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "\u00dcberladene Methoden m\u00fcssen sich durch die Signatur (Parameterliste und -typen) unterscheiden",
+                            "elements": [
+                                [
+                                    72,
+                                    164
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 1
+                        }
+                    ]
+                },
+                {
+                    "text": "Bedeutet dass derselbe Methodenname mehrfach in einer Klasse verwendet werden kann. Die Anzahl der \u00dcbergabeparameter ist unterschiedlich.",
+                    "id": "71",
+                    "answerCategory": "binary_correct",
+                    "correctionOrComment": "Es bedeutet, dass derselbe Methodenname mehrfach in einer Klasse verwendet werden kann. Die Anzahl der \u00dcbergabeparameter ist unterschiedlich.",
+                    "aspects": [
+                        {
+                            "text": "Es bedeutet, dass derselbe Methodenname mehrfach in einer Klasse verwendet werden kann",
+                            "elements": [
+                                [
+                                    0,
+                                    86
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "Die Anzahl der \u00dcbergabeparameter ist unterschiedlich",
+                            "elements": [
+                                [
+                                    88,
+                                    140
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 1
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine vererbte Methode die \u00fcberschrieben wird damit diese ver\u00e4ndert werden kann f\u00fcr die Kindklasse. Diese werden konventionell mit @Override gekennzeichnet.",
+                    "id": "72",
+                    "answerCategory": "concept_mix-up",
+                    "correctionOrComment": "Das ist eine vererbte Methode, die \u00fcberschrieben wird damit diese ver\u00e4ndert werden kann f\u00fcr die Kindklasse. Diese werden konventionell mit '@Override' gekennzeichnet.",
+                    "aspects": []
+                },
+                {
+                    "text": "Eine \u00fcberladene Methode ist wenn die maximale Kapazit\u00e4t an methoden \u00fcberladen wurde.",
+                    "id": "73",
+                    "answerCategory": "guessing",
+                    "correctionOrComment": "Eine Methode ist \u00fcberladen, wenn die maximale Kapazit\u00e4t an Methoden \u00fcberladen wurde.",
+                    "aspects": []
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "title": "Klassenattribute sch\u00e4tzen",
+            "text": "Sie schreiben eine Klasse Beispielklasse mit einem Feld 'wert'. Wie erreichen Sie, dass 'wert' nur innerhalb von Beispielklasse schreibbar, aber von \u00fcberall aus lesbar ist?",
+            "type": "procedure",
+            "aspects": [
+                {
+                    "text": "Das Feld 'wert' muss mit dem Schutzattribute private deklariert werden"
+                },
+                {
+                    "text": "Die Klasse muss eine Methode bereitstellen, die das Auslesen des Feldes 'wert' erm\u00f6glicht"
+                }
+            ],
+            "assignedWeights": {
+                "Feld": 1,
+                "'wert'": 1,
+                "m\u00fcssen": 2,
+                "Schutzattribute": 2,
+                "private": 5,
+                "deklarieren": 3,
+                "werden": 0,
+                "zus\u00e4tzlich": 2,
+                "Klasse": 1,
+                "Methode": 2,
+                "bereitstellen": 1,
+                "Auslesen": 1,
+                "erm\u00f6glichen": 1
+            },
+            "referenceAnswers": [
+                {
+                    "id": "ref1",
+                    "text": "Das Feld 'wert' muss mit dem Schutzattribute private deklariert werden. Zus\u00e4tzlich muss die Klasse eine Methode bereitstellen, die das Auslesen dieses Feldes erm\u00f6glicht.",
+                    "aspects": [
+                        {
+                            "text": "Das Feld 'wert' muss mit dem Schutzattribute private deklariert werden",
+                            "aIdx": 0,
+                            "elements": [
+                                [
+                                    0,
+                                    72
+                                ]
+                            ],
+                            "label": 0
+                        },
+                        {
+                            "text": "Zus\u00e4tzlich muss die Klasse eine Methode bereitstellen, die das Auslesen dieses Feldes erm\u00f6glicht",
+                            "aIdx": 1,
+                            "elements": [
+                                [
+                                    74,
+                                    170
+                                ]
+                            ],
+                            "label": 0
+                        }
+                    ]
+                }
+            ],
+            "studentAnswers": [
+                {
+                    "text": "privat int wert und dann durch getter und setter aufrufen.",
+                    "id": "4",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Es muss als 'private int wert' initialisiert werden und kann dann durch 'Getter' und 'Setter' aufrufen werden.",
+                    "aspects": [
+                        {
+                            "text": "Es muss als 'private int wert' initialisiert werden",
+                            "elements": [
+                                [
+                                    0,
+                                    51
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Es muss ;; dann durch 'Getter' und 'Setter' aufrufen werden",
+                            "elements": [
+                                [
+                                    0,
+                                    7
+                                ],
+                                [
+                                    61,
+                                    109
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 1
+                        }
+                    ]
+                },
+                {
+                    "text": "man muss Proteced ben\u00fctzen damit sie von \u00fcbeall lesbar ist aber nur innerhalb von Beispielklasse schreibbar ist",
+                    "id": "14",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Man muss 'proteced' benutzen, damit sie von \u00fcbeall lesbar, aber nur innerhalb von Beispielklasse schreibbar ist",
+                    "aspects": [
+                        {
+                            "text": "Man muss 'proteced' benutzen",
+                            "elements": [
+                                [
+                                    0,
+                                    28
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "protected",
+                    "id": "19",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Das geht mit 'protected'.",
+                    "aspects": [
+                        {
+                            "text": "Das geht mit 'protected'.",
+                            "elements": [
+                                [
+                                    0,
+                                    25
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "Damit sie nur schreibbar innerhalbder Klasse ist deklariert man sie mit private. Lesbar machen Kann man die Variable indem man sie in eine get-methode steckt und diese Methode public macht.",
+                    "id": "20",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Damit sie nur schreibbar innerhalb der Klasse ist, deklariert man sie mit 'private'. Lesbar machen kann man die Variable, indem man sie in eine Gettermethode steckt und diese Methode 'public' macht.",
+                    "aspects": [
+                        {
+                            "text": "deklariert man sie mit 'private'",
+                            "elements": [
+                                [
+                                    51,
+                                    83
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Lesbar machen kann man die Variable, indem man sie in eine Gettermethode steckt",
+                            "elements": [
+                                [
+                                    85,
+                                    164
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Diese feld soll mit Attribut private deklarieren werden und mit eine methode \u00fcberall lesbar wird",
+                    "id": "21",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Dieses Feld sollte mit dem Attribut 'private' deklariert werden und mit einer Gettermethode von \u00fcberall lesbar gemacht werden.",
+                    "aspects": [
+                        {
+                            "text": "Dieses Feld sollte mit dem Attribut 'private' deklariert werden ",
+                            "elements": [
+                                [
+                                    0,
+                                    63
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Dieses Feld sollte ;; mit einer Gettermethode von \u00fcberall lesbar gemacht werden",
+                            "elements": [
+                                [
+                                    0,
+                                    18
+                                ],
+                                [
+                                    68,
+                                    125
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "private (z.B. int) wert; Und erstelle dann eine Getter Methode. public int getWert() { return wert; }",
+                    "id": "22",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Das geht mit 'private int wert'. Man erstelle dann eine 'public' Gettermethode.",
+                    "aspects": [
+                        {
+                            "text": "Das geht mit 'private int wert'",
+                            "elements": [
+                                [
+                                    0,
+                                    31
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Man erstelle dann eine 'public' Gettermethode",
+                            "elements": [
+                                [
+                                    33,
+                                    78
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "public class zahl; private int wert; public int getWert(){ return wert; mit private erm\u00f6glichen wir das man nur in der eigenen klasse zugriff hat und mit getter machen wir sie aber in den anderen klassen sichtbar.",
+                    "id": "23",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Mit 'private' erm\u00f6glichen wir, dass man nur in der eigenen Klasse Zugriff hat und mit einem 'Getter' machen wir sie aber in den anderen Klassen sichtbar.",
+                    "aspects": [
+                        {
+                            "text": "Mit 'private' erm\u00f6glichen wir, dass man nur in der eigenen Klasse Zugriff hat",
+                            "elements": [
+                                [
+                                    0,
+                                    77
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "mit einem 'Getter' machen wir sie aber in den anderen Klassen sichtbar",
+                            "elements": [
+                                [
+                                    82,
+                                    152
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "mit dem Pr\u00e4fix protected zb: protected int wert;",
+                    "id": "25",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Das geht mit dem Pr\u00e4fix 'protected', also 'protected int wert'.",
+                    "aspects": [
+                        {
+                            "text": "Das geht mit dem Pr\u00e4fix 'protected', also 'protected int wert'",
+                            "elements": [
+                                [
+                                    0,
+                                    62
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "public final wert",
+                    "id": "26",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Das geht mit 'public final wert'.",
+                    "aspects": [
+                        {
+                            "text": "Das geht mit 'public final wert'",
+                            "elements": [
+                                [
+                                    0,
+                                    32
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "Wir definiert die Variable \"\"wert\"\" mit dem Zugriffatributt protected. - (protected int wert)",
+                    "id": "27",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Wir definieren die Variable 'wert' mit dem Zugriffsattribut protected ('protected int wert').",
+                    "aspects": [
+                        {
+                            "text": "Wir definieren die Variable 'wert' mit dem Zugriffsattribut protected ('protected int wert')",
+                            "elements": [
+                                [
+                                    0,
+                                    92
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "public class Beispielklasse private int wert; Durch eine getter Methode! und der wert muss private gesetzt sein!",
+                    "id": "28",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Durch eine Gettermethode und der Wert muss 'private' gesetzt sein!",
+                    "aspects": [
+                        {
+                            "text": "der Wert muss 'private' gesetzt sein",
+                            "elements": [
+                                [
+                                    29,
+                                    65
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Durch eine Gettermethode",
+                            "elements": [
+                                [
+                                    0,
+                                    24
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "indem ich die Klasse ableite mit extends",
+                    "id": "29",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Das geht, indem ich die Klasse ableite mit extends.",
+                    "aspects": []
+                },
+                {
+                    "text": "protected wert;",
+                    "id": "30",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Das geht mit 'protected wert'.",
+                    "aspects": [
+                        {
+                            "text": "Das geht mit 'protected wert'",
+                            "elements": [
+                                [
+                                    0,
+                                    29
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "indem man das Feld \"\"wert\"\" als private deglariert. man kann es dann \u00fcber die getterMethode aufrufen!",
+                    "id": "32",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Das geht, indem man das Feld 'wert' als 'private' deklariert. Man kann es dann \u00fcber die Gettermethode aufrufen!",
+                    "aspects": [
+                        {
+                            "text": "Das geht, indem man das Feld 'wert' als 'private' deklariert",
+                            "elements": [
+                                [
+                                    0,
+                                    60
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Man kann es dann \u00fcber die Gettermethode aufrufen",
+                            "elements": [
+                                [
+                                    62,
+                                    110
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Das Feld wert ist auf private zu setzen. Durch einen getter f\u00fcr wert kann die Variable von au\u00dfen ausgelesen werden. Das private verhindert jeden Schreibzugriff au\u00dfer aus der eigenen Klasse.",
+                    "id": "33",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Das Feld 'wert' ist auf 'private' zu setzen. Durch einen 'Getter' f\u00fcr 'wert' kann die Variable von au\u00dfen ausgelesen werden. Das 'private' verhindert jeden Schreibzugriff au\u00dfer aus der eigenen Klasse.",
+                    "aspects": [
+                        {
+                            "text": "Das Feld 'wert' ist auf 'private' zu setzen",
+                            "elements": [
+                                [
+                                    0,
+                                    43
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Durch einen 'Getter' f\u00fcr 'wert' kann die Variable von au\u00dfen ausgelesen werden",
+                            "elements": [
+                                [
+                                    45,
+                                    122
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Man nimmt sogenannte Schutzattribute zu Hilfe. In dem Beispiel nimmt man nicht public sondern private und protected.",
+                    "id": "34",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Man nimmt sogenannte Schutzattribute zur Hilfe. In dem Beispiel nimmt man nicht 'public' sondern 'private' und 'protected'.",
+                    "aspects": [
+                        {
+                            "text": "In dem Beispiel nimmt man nicht 'public' sondern 'private' und 'protected'",
+                            "elements": [
+                                [
+                                    48,
+                                    122
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "mit der get Methode. Beispielklasse ist auf private gesezt kann aber von au\u00dferhalb mit der get Methode gelesen werden",
+                    "id": "35",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Das geht mit der Gettermethode. Die Beispielklasse ist auf 'private' gesezt, kann aber von au\u00dferhalb mit der Gettermethode gelesen werden.",
+                    "aspects": [
+                        {
+                            "text": "Die Beispielklasse ist auf 'private' gesezt",
+                            "elements": [
+                                [
+                                    32,
+                                    75
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 1
+                        },
+                        {
+                            "text": "Die Beispielklasse ;; kann aber von au\u00dferhalb mit der Gettermethode gelesen werden",
+                            "elements": [
+                                [
+                                    32,
+                                    50
+                                ],
+                                [
+                                    77,
+                                    137
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 1
+                        }
+                    ]
+                },
+                {
+                    "text": "class Beispielklasse { private int wert; public Beispielklasse (int wert) { this.wert = wert; } public int getWert () { return wert; } private void setWert (int i) { this.wert = i; } } Wennn nur eine private set-Methode f\u00fcr die private Variable wert definiert wird, kann der Wert von wert nicht von au\u00dfen ge\u00e4ndert werden, sondern nur innerhalb der Klasse. Eine public get-Methode erm\u00f6glicht jedoch, dass der Wert von \u00fcberall aus gelesen werden kann.",
+                    "id": "37",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Der Wert wird mit 'private int wert' deklariert. Wenn nur eine 'private' set-Methode f\u00fcr die 'private' Variable 'wert' definiert wird, kann der Wert von 'wert' nicht von au\u00dfen ge\u00e4ndert werden, sondern nur innerhalb der Klasse. Eine 'public' get-Methode erm\u00f6glicht jedoch, dass der Wert von \u00fcberall aus gelesen werden kann.",
+                    "aspects": [
+                        {
+                            "text": "Der Wert wird mit 'private int wert' deklariert",
+                            "elements": [
+                                [
+                                    0,
+                                    47
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 1
+                        },
+                        {
+                            "text": "Eine 'public' get-Methode erm\u00f6glicht jedoch, dass der Wert von \u00fcberall aus gelesen werden kann",
+                            "elements": [
+                                [
+                                    227,
+                                    321
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Es wird nur eine getter- und keine setter-Methode eingef\u00fcgt. So kann zwar auf die getter-Methode zur\u00fcckgegriffen und der Wert ausgelesen werden, jedoch kann nicht mithilfe der setter-Methode der Wert ver\u00e4ndert werden.",
+                    "id": "38",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Es wird nur eine getter- und keine setter-Methode eingef\u00fcgt. So kann zwar auf die getter-Methode zur\u00fcckgegriffen und der Wert ausgelesen werden, jedoch kann nicht mithilfe der setter-Methode der Wert ver\u00e4ndert werden.",
+                    "aspects": [
+                        {
+                            "text": "Es wird nur eine getter- und keine setter-Methode eingef\u00fcgt",
+                            "elements": [
+                                [
+                                    0,
+                                    59
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Das Feld wert muss private und darf nicht final sein, es muss eine get-Methode und es darf keine set-Methode vorliegen.",
+                    "id": "39",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Das Feld 'wert' muss 'private' und darf nicht 'final' sein. Ss muss eine get-Methode und es darf keine set-Methode vorliegen.",
+                    "aspects": [
+                        {
+                            "text": "Das Feld 'wert' muss 'private' ;; sein",
+                            "elements": [
+                                [
+                                    0,
+                                    30
+                                ],
+                                [
+                                    54,
+                                    58
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Ss muss eine get-Methode und es darf keine set-Methode vorliegen",
+                            "elements": [
+                                [
+                                    60,
+                                    124
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "wert wird als \"\"private\"\" deklariert. danach wird ein getter gesetzt um wert von \u00fcberall aus lesbar zu machen.",
+                    "id": "40",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "'wert' wird als 'private' deklariert. Danach wird ein Getter gesetzt um 'wert' von \u00fcberall aus lesbar zu machen.",
+                    "aspects": [
+                        {
+                            "text": "'wert' wird als 'private' deklariert",
+                            "elements": [
+                                [
+                                    0,
+                                    36
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Danach wird ein Getter gesetzt um 'wert' von \u00fcberall aus lesbar zu machen",
+                            "elements": [
+                                [
+                                    38,
+                                    111
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "-",
+                    "id": "41",
+                    "answerCategory": "none",
+                    "correctionOrComment": "-",
+                    "aspects": []
+                },
+                {
+                    "text": "Falls Wert z.B.: als int. private int wert; public int getWert() { return wert; } //Methode zum Lesen kann von \u00fcberall aufgerufen werden. private int setWert(int wert) { this.wert = wert;} //methode zum Schreiben kann nur innerhalb der Klasse verwendet werden.",
+                    "id": "42",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Das Feld wird als 'private int wert' deklariert. Eine 'public' getter-Methode zum Lesen kann von \u00fcberall aufgerufen werden. Eine private setter-Methode zum Schreiben kann nur innerhalb der Klasse verwendet werden.",
+                    "aspects": [
+                        {
+                            "text": "Das Feld wird als 'private int wert' deklariert",
+                            "elements": [
+                                [
+                                    0,
+                                    47
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 1
+                        },
+                        {
+                            "text": "Eine 'public' getter-Methode zum Lesen kann von \u00fcberall aufgerufen werden",
+                            "elements": [
+                                [
+                                    49,
+                                    122
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "mit getter und setter",
+                    "id": "43",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Das geht mit Getter und Setter.",
+                    "aspects": [
+                        {
+                            "text": "Das geht mit  ;; Setter",
+                            "elements": [
+                                [
+                                    0,
+                                    12
+                                ],
+                                [
+                                    24,
+                                    30
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        },
+                        {
+                            "text": "Das geht mit Getter",
+                            "elements": [
+                                [
+                                    0,
+                                    19
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Feld wert wird mit private deklariert, so ist es nur innerhalb von Beispielklasse lesbar und schreibbar. um es von \u00fcberall lesen zu k\u00f6nnen ben\u00f6tigt man noch einer getter methode : public getWert(){ return this.wert; }",
+                    "id": "44",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Das Feld 'wert' wird mit 'private' deklariert. So ist es nur innerhalb der Beispielklasse lesbar und schreibbar. Um es von \u00fcberall lesen zu k\u00f6nnen ben\u00f6tigt man noch eine getter-Methode.",
+                    "aspects": [
+                        {
+                            "text": "Das Feld 'wert' wird mit 'private' deklariert",
+                            "elements": [
+                                [
+                                    0,
+                                    45
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Um es von \u00fcberall lesen zu k\u00f6nnen ben\u00f6tigt man noch eine getter-Methode",
+                            "elements": [
+                                [
+                                    113,
+                                    184
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "In der Beispielklasse die Getter-Methode mit Schutzattribut private schreiben. Die Setter-Methode in der gleichen Klasse mit public schreiben.",
+                    "id": "45",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "In der Beispielklasse die getter-Methode mit dem Schutzattribut 'private' schreiben. Die setter-Methode in der gleichen Klasse mit 'public' schreiben.",
+                    "aspects": [
+                        {
+                            "text": "Die setter-Methode in der gleichen Klasse mit 'public' schreiben",
+                            "elements": [
+                                [
+                                    85,
+                                    149
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        },
+                        {
+                            "text": "In der Beispielklasse die getter-Methode mit dem Schutzattribut 'private' schreiben",
+                            "elements": [
+                                [
+                                    0,
+                                    83
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "wert ist schreibgeschutz d.h privarte. wir konnen eine getWert methode machen und dann diese methode von au\u00dfen aufrufen.",
+                    "id": "46",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Das Feld 'wert' ist schreibgeschutz mittels 'private'. Wir konnen eine 'getWert' Methode machen und dann diese Methode von au\u00dfen aufrufen.",
+                    "aspects": [
+                        {
+                            "text": "Das Feld 'wert' ist schreibgeschutz mittels 'private'",
+                            "elements": [
+                                [
+                                    0,
+                                    53
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 1
+                        },
+                        {
+                            "text": "Wir konnen eine 'getWert' Methode machen und dann diese Methode von au\u00dfen aufrufen",
+                            "elements": [
+                                [
+                                    55,
+                                    137
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "private int wert --> dadurch ist sie nicht von au\u00dfen zu \u00e4ndern. public int getWert(){ return wert; die methode ist public, sodass man den wert von au\u00dfen lesen kann",
+                    "id": "47",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Durch 'private int wert' ist die Variable nicht von au\u00dfen zu \u00e4ndern. Man braucht eine 'public' 'getWert' Methode, sodass man den Wert von au\u00dfen lesen kann.",
+                    "aspects": [
+                        {
+                            "text": "Durch 'private int wert' ist die Variable nicht von au\u00dfen zu \u00e4ndern",
+                            "elements": [
+                                [
+                                    0,
+                                    67
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 1
+                        },
+                        {
+                            "text": "Man braucht eine 'public' 'getWert' Methode, sodass man den Wert von au\u00dfen lesen kann",
+                            "elements": [
+                                [
+                                    69,
+                                    154
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "den Feld wert muss protected sein.",
+                    "id": "48",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Das Feld 'wert' muss protected sein.",
+                    "aspects": [
+                        {
+                            "text": "Das Feld 'wert' muss protected sein",
+                            "elements": [
+                                [
+                                    0,
+                                    35
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "wert final setzen und mit public getWert() f\u00fcr andere lesbar machen",
+                    "id": "49",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Man muss 'wert' 'final' setzen und mit 'public' 'getWert()' f\u00fcr andere lesbar machen.",
+                    "aspects": [
+                        {
+                            "text": "Man muss 'wert' 'final' setzen",
+                            "elements": [
+                                [
+                                    0,
+                                    30
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        },
+                        {
+                            "text": "Man muss 'wert' ;; mit 'public' 'getWert()' f\u00fcr andere lesbar machen",
+                            "elements": [
+                                [
+                                    0,
+                                    15
+                                ],
+                                [
+                                    35,
+                                    84
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Zu erst muss das Schutzatribut \"\"private\"\" sein. Dannach kann man mit setter die Variable innerhalb der Klasse schreiben und mit getter \u00fcberall zu lesen.",
+                    "id": "50",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Zuerst muss das Schutzattribut 'private' sein. Danach kann man mit einem Setter die Variable innerhalb der Klasse schreiben und mit einem Getter \u00fcberall lesen.",
+                    "aspects": [
+                        {
+                            "text": "Zuerst muss das Schutzattribut 'private' sein. Danach kann man mit einem Setter die Variable innerhalb der Klasse schreiben",
+                            "elements": [
+                                [
+                                    0,
+                                    123
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        },
+                        {
+                            "text": "Danach kann man ;; die Variable ;; mit einem Getter \u00fcberall lesen",
+                            "elements": [
+                                [
+                                    47,
+                                    62
+                                ],
+                                [
+                                    80,
+                                    92
+                                ],
+                                [
+                                    128,
+                                    158
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "mit einem Getter und keinem Setter",
+                    "id": "51",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Das geht mit einem Getter und keinem Setter.",
+                    "aspects": [
+                        {
+                            "text": "Das geht mit einem Getter und keinem Setter",
+                            "elements": [
+                                [
+                                    0,
+                                    43
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Man will, dass \"\"wert\"\" schreibgesch\u00fctz auf andere abgeleitete Klassen ist. Deswegen macht man einen Konstruktoir, womit man in der Basisklasse diese Variable benutzen kann. Au\u00dferdem braucht man eine getter-methode, damit sie in anderen Klassen lesbar ist. Da privat vor \"\"wert\"\" gesetzt wird, ist es nun nur lesbar aber abgeleitet Klassen k\u00f6nnen es nicht \u00fcberscxhreiben. Esa ist das Prinzip der Kapselung/ Schutz vor \u00dcberschreibung.",
+                    "id": "52",
+                    "answerCategory": "binary_correct",
+                    "correctionOrComment": "Man will, dass 'wert' schreibgesch\u00fctz auf andere abgeleitete Klassen ist. Deswegen macht man einen Konstruktoir, womit man in der Basisklasse diese Variable benutzen kann. Au\u00dferdem braucht man eine getter-Methode, damit sie in anderen Klassen lesbar ist. Da 'private' vor 'wert' gesetzt wird, ist es nun nur lesbar aber abgeleitet Klassen k\u00f6nnen es nicht \u00fcberschreiben. Es ist das Prinzip der Kapselung und dem Schutz vor \u00dcberschreibung.",
+                    "aspects": [
+                        {
+                            "text": "Da 'private' vor 'wert' gesetzt wird",
+                            "elements": [
+                                [
+                                    255,
+                                    291
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Au\u00dferdem braucht man eine getter-Methode, damit sie in anderen Klassen lesbar ist",
+                            "elements": [
+                                [
+                                    172,
+                                    253
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Ich setzen \"\"wert\"\" private, dadurch ist es nur f\u00fcr die Klassse Beispielklasse schreibbar. Durch eine Getter Methode ist es \u00fcberall lesbar.",
+                    "id": "53",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Ich setze 'wert' 'private'. Dadurch ist es nur f\u00fcr die Klassse Beispielklasse schreibbar. Durch eine getter-Methode ist es \u00fcberall lesbar.",
+                    "aspects": [
+                        {
+                            "text": "Ich setze 'wert' 'private'",
+                            "elements": [
+                                [
+                                    0,
+                                    26
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Durch eine getter-Methode ist es \u00fcberall lesbar",
+                            "elements": [
+                                [
+                                    90,
+                                    137
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Mit dem Schutzattribut protected",
+                    "id": "54",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Das geht mit dem Schutzattribut 'protected'.",
+                    "aspects": [
+                        {
+                            "text": "Das geht mit dem Schutzattribut 'protected'",
+                            "elements": [
+                                [
+                                    0,
+                                    43
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "protected",
+                    "id": "55",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Das geht mit 'protected'.",
+                    "aspects": [
+                        {
+                            "text": "Das geht mit 'protected'",
+                            "elements": [
+                                [
+                                    0,
+                                    24
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "Indem ich wert auf die Sichtbarkeit private lese, aber zus\u00e4tzlich eine Methode getWert() implementiere (welche public ist). getWert() gibt dann die variable wert zur\u00fcck (mit return) damit jeder sie auslesen kann.",
+                    "id": "56",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Das geht, indem ich 'wert' auf die Sichtbarkeit 'private' setze, aber zus\u00e4tzlich eine Methode 'getWert()' implementiere, welche 'public' ist. 'getWert()' gibt dann die Variable 'wert' zur\u00fcck, damit jeder sie auslesen kann.",
+                    "aspects": [
+                        {
+                            "text": "Das geht, indem ich 'wert' auf die Sichtbarkeit 'private' setze",
+                            "elements": [
+                                [
+                                    0,
+                                    63
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Das geht, indem ich ;; aber zus\u00e4tzlich eine Methode 'getWert()' implementiere, welche 'public' ist",
+                            "elements": [
+                                [
+                                    0,
+                                    19
+                                ],
+                                [
+                                    65,
+                                    140
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "text": "Erkl\u00e4ren Sie den Zusammenhang zwischen Klassen und Objekten.",
+            "title": "Zusammenhang zwischen Klassen und Objekten",
+            "type": "comparison",
+            "aspects": [
+                {
+                    "text": "Eine Klasse ist der Bauplan f\u00fcr ein Objekt"
+                },
+                {
+                    "text": "Ein Objekt ist eine konkrete Instanz einer Klasse"
+                }
+            ],
+            "assignedWeights": {
+                "Klasse": 2,
+                "sein": 2,
+                "Bauplan": 5,
+                "Objekt": 2,
+                "konkret": 4,
+                "Instanz": 5
+            },
+            "referenceAnswers": [
+                {
+                    "id": "ref1",
+                    "text": "Eine Klasse ist der Bauplan f\u00fcr ein Objekt. Ein Objekt ist eine konkrete Instanz einer Klasse.",
+                    "aspects": [
+                        {
+                            "text": "Eine Klasse ist der Bauplan f\u00fcr ein Objekt",
+                            "aIdx": 0,
+                            "elements": [
+                                [
+                                    0,
+                                    42
+                                ]
+                            ],
+                            "label": 0
+                        },
+                        {
+                            "text": "Ein Objekt ist eine konkrete Instanz einer Klasse",
+                            "aIdx": 1,
+                            "elements": [
+                                [
+                                    44,
+                                    93
+                                ]
+                            ],
+                            "label": 0
+                        }
+                    ]
+                }
+            ],
+            "studentAnswers": [
+                {
+                    "text": "Klassen sind der Bauplan von Objekten. Objekte entstehen mit new.",
+                    "id": "68",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Klassen sind der Bauplan von Objekten. Objekte entstehen mit 'new'.",
+                    "aspects": [
+                        {
+                            "text": "Klassen sind der Bauplan von Objekten",
+                            "elements": [
+                                [
+                                    0,
+                                    37
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine Klasse ist wie eine Art Bauplan f\u00fcr den Objekt . Ein Objekt ist ein Instanz der Klasse und enth\u00e4lt die Element wie in der Klasse",
+                    "id": "70",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Eine Klasse ist wie eine Art Bauplan f\u00fcr ein Objekt . Ein Objekt ist eine Instanz der Klasse und enth\u00e4lt die Elemente wie in der Klasse.",
+                    "aspects": [
+                        {
+                            "text": "Eine Klasse ist wie eine Art Bauplan f\u00fcr ein Objekt",
+                            "elements": [
+                                [
+                                    0,
+                                    51
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Ein Objekt ist eine Instanz der Klasse",
+                            "elements": [
+                                [
+                                    54,
+                                    92
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Alle Objekte entstehen durch einen Bauplan Dieser Bauplan ist die Klasse des Objektes, das Objekt ist eine Instanz der Klasse. Objekte haben den Typ ihrer Klasse Die Klasse eines Objektes ist f\u00fcr das Objekt in etwa dasselbe wie die DNA f\u00fcr den Menschen Sie besto,,t aussehen und eigenschaften ABER SIE selbst ist nicht das objekt",
+                    "id": "72",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Alle Objekte entstehen durch einen Bauplan. Dieser Bauplan ist die Klasse des Objektes. Das Objekt ist eine Instanz der Klasse. Objekte haben den Typ ihrer Klasse. Die Klasse eines Objektes ist f\u00fcr das Objekt in etwa dasselbe wie die DNA f\u00fcr den Menschen. Sie bestimmt aussehen und Eigenschaften, aber sie selbst ist nicht das Objekt.",
+                    "aspects": [
+                        {
+                            "text": "Alle Objekte entstehen durch einen Bauplan. Dieser Bauplan ist die Klasse des Objektes",
+                            "elements": [
+                                [
+                                    0,
+                                    86
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Das Objekt ist eine Instanz der Klasse",
+                            "elements": [
+                                [
+                                    88,
+                                    126
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "In der Klasse wird der Code generiert und koppelt die Daten und die Funktion im Objekt. Somit ist die Klasse der Bauplan vom Objekt.",
+                    "id": "74",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "In der Klasse wird der Code generiert und koppelt die Daten und die Funktionen im Objekt. Somit ist die Klasse der Bauplan vom Objekt.",
+                    "aspects": [
+                        {
+                            "text": "Somit ist die Klasse der Bauplan vom Objekt",
+                            "elements": [
+                                [
+                                    90,
+                                    133
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine Klasse ist ein Bauplan f\u00fcr dessen Objekte. \u00dcber den Klassennamen wird das Objekt instanziiert, z.B. Auto auto = new Auto() SEMICOLON Innerhalb der runden Klammern kann man nun, sofern im Konstruktor der Klasse Auto angelegt, schon Attribute \u00fcbergeben, z.B. Auto auto = new Auto(\"\"Ferrari\"\") SEMICOLON Die Klasse legt also die Eigenschaften eines Objektes fest. (Bei Frage 2 wusste ich nicht ob auf oder absteigend, da die Zeilennummern anders herum da stehen. Ich habe in Zeile 3 den ersten Schritt geschrieben, Zeile 2 den zweiten und Zeile 1 den letzten)",
+                    "id": "75",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Eine Klasse ist ein Bauplan f\u00fcr dessen Objekte. \u00dcber den Klassennamen wird das Objekt instanziiert. Innerhalb der runden Klammern kann man nun sofern im Konstruktor der Klasse angelegt, schon Attribute \u00fcbergeben. Die Klasse legt also die Eigenschaften eines Objektes fest.",
+                    "aspects": [
+                        {
+                            "text": "Eine Klasse ist ein Bauplan f\u00fcr dessen Objekte",
+                            "elements": [
+                                [
+                                    0,
+                                    46
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "\u00dcber den Klassennamen wird das Objekt instanziiert",
+                            "elements": [
+                                [
+                                    48,
+                                    98
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 1
+                        }
+                    ]
+                },
+                {
+                    "text": "Klasse ist der Bauplan f\u00fcr ein Objekt. Das Objekt ist eine Instanz. Die Klasse enth\u00e4lt die wichtigsten \"\"Oberbegriffe\"\" f\u00fcr ein Objekt. Damit kann man viele Klassen anlegen und diese in einer Main-Methode zusammenf\u00fcgen.",
+                    "id": "76",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Die Klasse ist der Bauplan f\u00fcr ein Objekt. Das Objekt ist eine Instanz. Die Klasse enth\u00e4lt die wichtigsten Oberbegriffe f\u00fcr ein Objekt. Damit kann man viele Klassen anlegen und diese in einer 'main' Methode zusammenf\u00fcgen.",
+                    "aspects": [
+                        {
+                            "text": "Die Klasse ist der Bauplan f\u00fcr ein Objekt",
+                            "elements": [
+                                [
+                                    0,
+                                    41
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Das Objekt ist eine Instanz",
+                            "elements": [
+                                [
+                                    43,
+                                    70
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 1
+                        }
+                    ]
+                },
+                {
+                    "text": "Die Klasse ist der Bauplan des Objektes. Sie enth\u00e4lt die Attribute/Eigenschaften des Objektes. Ein Beispiel in der realen Welt f\u00fcr eine Klasse w\u00e4re die DNA des Objektes Mensch.",
+                    "id": "77",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Die Klasse ist der Bauplan des Objektes. Sie enth\u00e4lt die Attribute und Eigenschaften des Objektes. Ein Beispiel in der realen Welt f\u00fcr eine Klasse w\u00e4re die DNA des Objektes Mensch.",
+                    "aspects": [
+                        {
+                            "text": "Die Klasse ist der Bauplan des Objektes",
+                            "elements": [
+                                [
+                                    0,
+                                    39
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Eine Klasse kann in mehreren Objekten sein, andersrum jedoch nicht.Verschiedene Klassen ergeben/definieren ein Objekt.",
+                    "id": "78",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Eine Klasse kann in mehreren Objekten sein, andersrum jedoch nicht. Verschiedene Klassen ergeben und definieren ein Objekt.",
+                    "aspects": []
+                },
+                {
+                    "text": "Klassen bilden eine Anleitung f\u00fcr Objekte. Ein Objekt ist eine Instanz einer Klasse. Eine Klasse beschreibt die Methoden die auf ein Objekt angewendet werden k\u00f6nnen.",
+                    "id": "79",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Klassen bilden eine Anleitung f\u00fcr Objekte. Ein Objekt ist eine Instanz einer Klasse. Eine Klasse beschreibt die Methoden, die auf ein Objekt angewendet werden k\u00f6nnen.",
+                    "aspects": [
+                        {
+                            "text": "Klassen bilden eine Anleitung f\u00fcr Objekte",
+                            "elements": [
+                                [
+                                    0,
+                                    41
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Ein Objekt ist eine Instanz einer Klasse.",
+                            "elements": [
+                                [
+                                    43,
+                                    84
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Die Klasse eines Objektes ist wie die DNA eines Menschen.",
+                    "id": "80",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Die Klasse eines Objektes ist wie die DNA eines Menschen.",
+                    "aspects": []
+                },
+                {
+                    "text": "Der Code einer Klasse legt die Eigenschaft der Objekte fest",
+                    "id": "81",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Der Code einer Klasse legt die Eigenschaft der Objekte fest.",
+                    "aspects": []
+                },
+                {
+                    "text": "Klassen sind der Bauplan von Objekten. In Klassen werden die Attribute von Objekten beschrieben",
+                    "id": "82",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Klassen sind der Bauplan von Objekten. In Klassen werden die Attribute von Objekten beschrieben.",
+                    "aspects": [
+                        {
+                            "text": "Klassen sind der Bauplan von Objekten",
+                            "elements": [
+                                [
+                                    0,
+                                    37
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Die Objekte sind Baupl\u00e4ne f\u00fcr das Programm. Die Klassen beinhalten diese Objekte und verwenden sie.",
+                    "id": "83",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Die Objekte sind Baupl\u00e4ne f\u00fcr das Programm. Die Klassen beinhalten diese Objekte und verwenden sie.",
+                    "aspects": []
+                },
+                {
+                    "text": "Die Klasse ist der \"\"Plan\"\" f\u00fcr das Projekt, dort steht was mit den erstellten Projekten \"\"gemacht\"\" wird. Das hei\u00dft Sie beinhalten die Objekte und verwenden sie. Die Objekte werden erzeugt, um f\u00fcr eine Art mehrere Eigenschaften zu speichern, die dann in der Klasse aufgerufen werden k\u00f6nnen.",
+                    "id": "84",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Die Klasse ist der Plan f\u00fcr das Projekt. Dort steht was mit den erstellten Projekten gemacht wird. Das hei\u00dft, sie beinhalten die Objekte und verwenden sie. Die Objekte werden erzeugt, um f\u00fcr eine Art mehrere Eigenschaften zu speichern, die dann in der Klasse aufgerufen werden k\u00f6nnen.",
+                    "aspects": []
+                },
+                {
+                    "text": "Objekte sind Baupl\u00e4ne f\u00fcr das Programm. Die Klassen sind deren Inhalte und werden von Objekten verwendet",
+                    "id": "85",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Objekte sind Baupl\u00e4ne f\u00fcr das Programm. Die Klassen sind deren Inhalte und werden von Objekten verwendet.",
+                    "aspects": []
+                },
+                {
+                    "text": "Klassen sind vordefinierte Objekte",
+                    "id": "86",
+                    "answerCategory": "missconception",
+                    "correctionOrComment": "Klassen sind vordefinierte Objekte.",
+                    "aspects": []
+                },
+                {
+                    "text": "Objekte haben den typ ihrer klasse alle Objekte haben einen Bauplan dieser Bauplan ist die klasse des objektes das objekt ist das Instanz einer klasse",
+                    "id": "87",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Objekte haben den Typ ihrer Klasse. Alle Objekte haben einen Bauplan. Dieser Bauplan ist die Klasse des Objektes. Das Objekt ist die Instanz einer Klasse.",
+                    "aspects": [
+                        {
+                            "text": "Alle Objekte haben einen Bauplan. Dieser Bauplan ist die Klasse des Objektes",
+                            "elements": [
+                                [
+                                    36,
+                                    112
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Das Objekt ist die Instanz einer Klasse",
+                            "elements": [
+                                [
+                                    114,
+                                    153
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Die Klasse ist das Bauplan f\u00fcr das Objekt. Objekt ist das instanz der Klasse . Klasse bestimmt Eigenschaften des Objekts aber sie ist nicht das Objekt.",
+                    "id": "88",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Die Klasse ist der Bauplan f\u00fcr das Objekt. Das Objekt ist die Instanz der Klasse. Eine Klasse bestimmt die Eigenschaften des Objekts, aber sie ist nicht das Objekt.",
+                    "aspects": [
+                        {
+                            "text": "Die Klasse ist der Bauplan f\u00fcr das Objekt",
+                            "elements": [
+                                [
+                                    0,
+                                    41
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Das Objekt ist die Instanz der Klasse",
+                            "elements": [
+                                [
+                                    43,
+                                    80
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Klasse ist ein Bauplan f\u00fcr Objekt Klasse definiert den Typ des Objektes Objekt ist ein Auspr\u00e4gung",
+                    "id": "89",
+                    "answerCategory": "binary_correct",
+                    "correctionOrComment": "Die Klasse ist ein Bauplan f\u00fcr das Objekt. Eine Klasse definiert den Typ des Objektes. Das Objekt ist ein Auspr\u00e4gung.",
+                    "aspects": [
+                        {
+                            "text": "Die Klasse ist ein Bauplan f\u00fcr das Objekt",
+                            "elements": [
+                                [
+                                    0,
+                                    41
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Das Objekt ist ein Auspr\u00e4gung",
+                            "elements": [
+                                [
+                                    87,
+                                    116
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Objekte werden von Klassen definiert. Eine Klasse beschreibt die Variablen, Eigenschaften .... eines Objekts. Objekte sind Instanzen von Klassen. Die klasse wird zu Verwendung von Objekten erstellt, daher sind Objekten Pl\u00e4tzchen.",
+                    "id": "90",
+                    "answerCategory": "correct",
+                    "correctionOrComment": "Objekte werden von Klassen definiert. Eine Klasse beschreibt die Variablen und Eigenschaften eines Objekts. Objekte sind Instanzen von Klassen. Die Klasse wird zur Verwendung von Objekten erstellt.",
+                    "aspects": [
+                        {
+                            "text": "Objekte werden von Klassen definiert. Eine Klasse beschreibt die Variablen und Eigenschaften eines Objekts",
+                            "elements": [
+                                [
+                                    0,
+                                    106
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Objekte sind Instanzen von Klassen",
+                            "elements": [
+                                [
+                                    108,
+                                    142
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Die Klasse ist der \"\"Bauplan\"\" f\u00fcr das Objekt, sie definiert u.a. die F\u00e4higkeiten des Objekts und regelt den Zugriff auf das Objekt",
+                    "id": "91",
+                    "answerCategory": "partially_correct",
+                    "correctionOrComment": "Die Klasse ist der Bauplan f\u00fcr das Objekt. Sie definiert unter anderem die F\u00e4higkeiten des Objekts und regelt den Zugriff auf das Objekt.",
+                    "aspects": [
+                        {
+                            "text": "Die Klasse ist der Bauplan f\u00fcr das Objekt",
+                            "elements": [
+                                [
+                                    0,
+                                    41
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "-",
+                    "id": "92",
+                    "answerCategory": "none",
+                    "correctionOrComment": "-",
+                    "aspects": []
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "title": "Swing Ablauf",
+            "text": "In einer Swing-Demo \u00e4ndert sich beim Klick auf einen Button der Text auf dem Button. Wie sieht der mehrschrittige Ablauf \"\"hinter den Kulissen\"\" aus?",
+            "type": "procedure",
+            "aspects": [
+                {
+                    "text": "Der Klick auf den Button erzeugt ein ActionEvent"
+                },
+                {
+                    "text": "Das ActionEvent wird von einem Listener aufgefangen"
+                },
+                {
+                    "text": "Der Listener ist beim Button registriert",
+                    "implied": true
+                },
+                {
+                    "text": "Der Listener \u00e4ndert den Text"
+                }
+            ],
+            "assignedWeights": {
+                "Klick": 3,
+                "auf": 3,
+                "Button": 3,
+                "erzeugen": 5,
+                "ActionEvent": 5,
+                "werden": 2,
+                "von": 2,
+                "Listener": 5,
+                "auffangen": 4,
+                "beim": 3,
+                "registrieren": 5,
+                "\u00e4ndern": 4,
+                "daraufhin": 2,
+                "Text": 3
+            },
+            "referenceAnswers": [
+                {
+                    "id": "ref1",
+                    "text": "Der Klick auf den Button erzeugt ein ActionEvent. Das ActionEvent wird von einem Listener aufgefangen, der beim Button registriert ist. Der Listener \u00e4ndert daraufhin den Text.",
+                    "aspects": [
+                        {
+                            "text": "Der Klick auf den Button erzeugt ein ActionEvent",
+                            "aIdx": 0,
+                            "elements": [
+                                [
+                                    0,
+                                    48
+                                ]
+                            ],
+                            "label": 0
+                        },
+                        {
+                            "text": "Das ActionEvent wird von einem Listener aufgefangen",
+                            "aIdx": 1,
+                            "elements": [
+                                [
+                                    50,
+                                    101
+                                ]
+                            ],
+                            "label": 0
+                        },
+                        {
+                            "text": "der beim Button registriert ist",
+                            "aIdx": 2,
+                            "elements": [
+                                [
+                                    103,
+                                    134
+                                ]
+                            ],
+                            "label": 0
+                        },
+                        {
+                            "text": "Der Listener \u00e4ndert daraufhin den Text",
+                            "aIdx": 3,
+                            "elements": [
+                                [
+                                    136,
+                                    176
+                                ]
+                            ],
+                            "label": 0
+                        }
+                    ]
+                }
+            ],
+            "studentAnswers": [
+                {
+                    "id": "4",
+                    "text": "Beim Klicken entsteht ein ActionEvent und man h\u00e4ngt einen Listrener dran an das Objekt. Danach Checkt der Listener ob er einen Event bekommen hat und erst danach f\u00fchrt er seinen Code aus.",
+                    "aspects": [
+                        {
+                            "text": "Beim Klicken entsteht ein ActionEvent",
+                            "elements": [
+                                [
+                                    0,
+                                    37
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Danach Checkt der Listener ob er einen Event bekommen",
+                            "elements": [
+                                [
+                                    88,
+                                    141
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 1
+                        },
+                        {
+                            "text": "man h\u00e4ngt einen Listrener dran an das Objekt",
+                            "elements": [
+                                [
+                                    42,
+                                    86
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 1
+                        },
+                        {
+                            "text": "erst danach f\u00fchrt er seinen Code aus",
+                            "elements": [
+                                [
+                                    150,
+                                    186
+                                ]
+                            ],
+                            "aIdx": 3,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Beim Klicken entsteht ein ActionEvent und man h\u00e4ngt einen Listrener dran an das Objekt. Danach Checkt der Listener ob er einen Event bekommen hat und erst danach f\u00fchrt er seinen Code aus."
+                },
+                {
+                    "id": "9",
+                    "text": "Ein Klick auf einen Button erzeugt ein ActionEvent und um auf Events zu reagieren, h\u00e4ngt man einen Listener an das Objekt, das Events erzeugen kann. Am Ende wenn der Listener ein Event gemeldet bekommt, f\u00fchrt er seinen Code aus.",
+                    "aspects": [
+                        {
+                            "text": "Ein Klick auf einen Button erzeugt ein ActionEvent",
+                            "elements": [
+                                [
+                                    0,
+                                    50
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Am Ende wenn der Listener ein Event gemeldet bekommt",
+                            "elements": [
+                                [
+                                    149,
+                                    201
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "um auf Events zu reagieren, h\u00e4ngt man einen Listener an das Objekt",
+                            "elements": [
+                                [
+                                    55,
+                                    121
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        },
+                        {
+                            "text": "f\u00fchrt er seinen Code aus",
+                            "elements": [
+                                [
+                                    203,
+                                    227
+                                ]
+                            ],
+                            "aIdx": 3,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Ein Klick auf einen Button erzeugt ein ActionEvent und um auf Events zu reagieren, h\u00e4ngt man einen Listener an das Objekt, das Events erzeugen kann. Am Ende wenn der Listener ein Event gemeldet bekommt, f\u00fchrt er seinen Code aus."
+                },
+                {
+                    "id": "16",
+                    "text": "wenn wir auf den Button klicken dann wird eine Action ausgel\u00f6st mit Actionlistener wird eine methode ausgef\u00fchrt es wird ausgef\u00fchrt was da drin programmiert wurde",
+                    "aspects": [
+                        {
+                            "text": "Wenn wir auf den Button klicken dann wird eine Action ausgel\u00f6st",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Mit ActionListener wird eine Methode ausgef\u00fchrt",
+                            "elements": [],
+                            "aIdx": 3,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Wenn wir auf den Button klicken dann wird eine Action ausgel\u00f6st. Mit ActionListener wird eine Methode ausgef\u00fchrt. Es wird ausgef\u00fchrt was da drin programmiert wurde"
+                },
+                {
+                    "id": "18",
+                    "text": "Button dr\u00fccken",
+                    "aspects": [],
+                    "correctionOrComment": "Button dr\u00fccken"
+                },
+                {
+                    "id": "20",
+                    "text": "der Klick erezeugt ein event, welches von einem ActionListener empfangen wird. dieser ActionListener ist mit dem Button verbunden und kann dann die methode zum \u00e4ndern des Buttons aufrufen ( zB seIcon())",
+                    "aspects": [
+                        {
+                            "text": "Der Klick erezeugt ein Event",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "welches von einem ActionListener empfangen wird",
+                            "elements": [
+                                [
+                                    30,
+                                    77
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "Dieser ActionListener ist mit dem Button verbunden ",
+                            "elements": [],
+                            "aIdx": 2,
+                            "label": 0
+                        },
+                        {
+                            "text": "Dieser ActionListener ;; kann dann die Methode zum \u00c4ndern des Buttons aufrufen",
+                            "elements": [],
+                            "aIdx": 3,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Der Klick erezeugt ein Event, welches von einem ActionListener empfangen wird. Dieser ActionListener ist mit dem Button verbunden und kann dann die Methode zum \u00c4ndern des Buttons aufrufen."
+                },
+                {
+                    "id": "21",
+                    "text": "-",
+                    "aspects": [],
+                    "correctionOrComment": "-"
+                },
+                {
+                    "id": "22",
+                    "text": "-ActionListener muss implementieren zum button -Methode ActionListener erstellen mit ActionPerformed und setText der ver\u00e4nderte Text",
+                    "aspects": [],
+                    "correctionOrComment": "-"
+                },
+                {
+                    "id": "23",
+                    "text": "Beim Klick auf einem Button wird ein Action Event ausgel\u00f6st, da\u00df den vorhanden Text der vorher ausgegeben wurde durch den neuen Text erstetzt wird ( im Button Fenster).",
+                    "aspects": [
+                        {
+                            "text": "Beim Klick auf einem Button wird ein ActionEvent ausgel\u00f6st",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "dass den vorhanden Text der vorher ausgegeben wurde durch den neuen Text erstetzt",
+                            "elements": [],
+                            "aIdx": 3,
+                            "label": 2
+                        }
+                    ],
+                    "correctionOrComment": "Beim Klick auf einem Button wird ein ActionEvent ausgel\u00f6st, dass den vorhanden Text der vorher ausgegeben wurde durch den neuen Text erstetzt."
+                },
+                {
+                    "id": "25",
+                    "text": "Das Button-Objekt besitzt eine Listener-Instanz. Diese horcht auf das Klicken in Form eines ActionEvents. Wird ein Klicken registriert, \u00e4ndert sich der Text.",
+                    "aspects": [
+                        {
+                            "text": "Diese horcht auf das Klicken in Form eines ActionEvents",
+                            "elements": [
+                                [
+                                    49,
+                                    104
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Diese horcht auf das Klicken in Form eines ActionEvents",
+                            "elements": [
+                                [
+                                    49,
+                                    104
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "Das Button-Objekt besitzt eine Listener-Instanz",
+                            "elements": [
+                                [
+                                    0,
+                                    47
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        },
+                        {
+                            "text": "Wird ein Klicken registriert, \u00e4ndert sich der Text",
+                            "elements": [
+                                [
+                                    106,
+                                    156
+                                ]
+                            ],
+                            "aIdx": 3,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Das Button-Objekt besitzt eine Listener-Instanz. Diese horcht auf das Klicken in Form eines ActionEvents. Wird ein Klicken registriert, \u00e4ndert sich der Text."
+                },
+                {
+                    "id": "26",
+                    "text": "Der User klickt den Button und l\u00f6st damit eine Action aus. Der Actionlistener wird durch den Klick aktiviert und f\u00fchrt somit eine Methode aus, die in seinem Rumpf steht, welche den Text auf dem Button aktualisiert und ausgibt.",
+                    "aspects": [
+                        {
+                            "text": "Der User klickt den Button und l\u00f6st damit eine Action aus",
+                            "elements": [
+                                [
+                                    0,
+                                    57
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Der ActionListener wird durch den Klick aktiviert ",
+                            "elements": [],
+                            "aIdx": 2,
+                            "label": 0
+                        },
+                        {
+                            "text": "Der ActionListener ;; f\u00fchrt somit eine Methode aus, die in seinem Rumpf steht, welche den Text auf dem Button aktualisiert",
+                            "elements": [
+                                [
+                                    113,
+                                    213
+                                ]
+                            ],
+                            "aIdx": 3,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Der User klickt den Button und l\u00f6st damit eine Action aus. Der ActionListener wird durch den Klick aktiviert und f\u00fchrt somit eine Methode aus, die in seinem Rumpf steht, welche den Text auf dem Button aktualisiert und ausgibt."
+                },
+                {
+                    "id": "27",
+                    "text": "Beim Klick auf den Button handelt es sich um ein sogenanntes Action-Event. Am entsprechenden Button h\u00e4ngt ein sogennater Listener/ ein Listener-Objekt, welches auf den Eintritt des Events \"\"Klick\"\" \"\"wartet\"\", diesen registriert und anschlie\u00dfend seinen zugeh\u00f6rigen Code (hier \u00e4ndere den Text auf dem Button) ausf\u00fchrt.",
+                    "aspects": [
+                        {
+                            "text": "Beim Klick auf den Button handelt es sich um ein sogenanntes ActionEvent",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "ein sogennater Listener, welcher auf den Eintritt des KlickEvents  wartet",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "Am entsprechenden Button h\u00e4ngt ein sogennater Listener",
+                            "elements": [
+                                [
+                                    75,
+                                    129
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        },
+                        {
+                            "text": "ein sogennater Listener, welcher ;; anschlie\u00dfend seinen zugeh\u00f6rigen Code, hier \u00e4ndere den Text auf dem Button, ausf\u00fchrt",
+                            "elements": [],
+                            "aIdx": 3,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Beim Klick auf den Button handelt es sich um ein sogenanntes ActionEvent. Am entsprechenden Button h\u00e4ngt ein sogennater Listener, welcher auf den Eintritt des KlickEvents  wartet, diesen registriert und anschlie\u00dfend seinen zugeh\u00f6rigen Code, hier \u00e4ndere den Text auf dem Button, ausf\u00fchrt."
+                },
+                {
+                    "id": "28",
+                    "text": "Bevor auf den Klick reagiert werden kann muss dieser zun\u00e4chst registriert und dann weitergegeben werden. Der listener erzeugt ein Action Event.",
+                    "aspects": [
+                        {
+                            "text": "Der Listener erzeugt ein Action Event",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 2
+                        },
+                        {
+                            "text": "Bevor auf den Klick reagiert werden kann muss dieser zun\u00e4chst registriert und dann weitergegeben werden",
+                            "elements": [
+                                [
+                                    0,
+                                    103
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 2
+                        }
+                    ],
+                    "correctionOrComment": "Bevor auf den Klick reagiert werden kann muss dieser zun\u00e4chst registriert und dann weitergegeben werden. Der Listener erzeugt ein Action Event."
+                },
+                {
+                    "id": "29",
+                    "text": "Auf dem Button wird eine ActionList zugeordent. Diese sagt was der Button ausf\u00fchren soll.",
+                    "aspects": [
+                        {
+                            "text": "Auf dem Button wird eine ActionList zugeordent",
+                            "elements": [
+                                [
+                                    0,
+                                    46
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 1
+                        },
+                        {
+                            "text": "Diese sagt was der Button ausf\u00fchren soll",
+                            "elements": [
+                                [
+                                    48,
+                                    88
+                                ]
+                            ],
+                            "aIdx": 3,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Auf dem Button wird eine ActionList zugeordent. Diese sagt was der Button ausf\u00fchren soll."
+                },
+                {
+                    "id": "32",
+                    "text": "1. Durch den Klick wird ein Event gestartet 2. Der Listener bemerkt dieses und leitet es weiter 3. Der Text \u00e4ndert sich",
+                    "aspects": [
+                        {
+                            "text": "Durch den Klick wird ein Event gestartet",
+                            "elements": [
+                                [
+                                    3,
+                                    43
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Der Listener bemerkt dieses",
+                            "elements": [
+                                [
+                                    47,
+                                    74
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "Der Listener ;; leitet es weiterr. Der Text \u00e4ndert sich",
+                            "elements": [
+                                [
+                                    47,
+                                    59
+                                ]
+                            ],
+                            "aIdx": 3,
+                            "label": 1
+                        }
+                    ],
+                    "correctionOrComment": "Durch den Klick wird ein Event gestartet. Der Listener bemerkt dieses und leitet es weiter. Der Text \u00e4ndert sich"
+                },
+                {
+                    "id": "33",
+                    "text": "Button erstellen, dann zu Frame hinzuf\u00fcgen, ein ActionListener muss zum Buttton hinzugef\u00fcgt werden und in der Methode hinschreiben was ver\u00e4ndert werden soll mit setText()",
+                    "aspects": [
+                        {
+                            "text": "ein ActionListener muss zum Buttton hinzugef\u00fcgt werden",
+                            "elements": [
+                                [
+                                    44,
+                                    98
+                                ]
+                            ],
+                            "aIdx": 2,
+                            "label": 0
+                        },
+                        {
+                            "text": "in der Methode hinschreiben was ver\u00e4ndert werden soll mit setText()",
+                            "elements": [
+                                [
+                                    103,
+                                    170
+                                ]
+                            ],
+                            "aIdx": 3,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Button erstellen, dann zu Frame hinzuf\u00fcgen, ein ActionListener muss zum Buttton hinzugef\u00fcgt werden und in der Methode hinschreiben was ver\u00e4ndert werden soll mit setText()"
+                },
+                {
+                    "id": "34",
+                    "text": "Mit dem klicken auf den Button wird ein Action Event in Gang gesetzt. Im Anschluss nimmt der ActionListener die Information auf.",
+                    "aspects": [
+                        {
+                            "text": "Mit dem klicken auf den Button wird ein ActionEvent in Gang gesetzt",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": " Im Anschluss nimmt der ActionListener die Information auf",
+                            "elements": [
+                                [
+                                    70,
+                                    127
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Mit dem klicken auf den Button wird ein ActionEvent in Gang gesetzt. Im Anschluss nimmt der ActionListener die Information auf."
+                },
+                {
+                    "id": "35",
+                    "text": "beim Klicken auf dem Button,lauft der actionListener ,dann der ActionListener gibt dieser text zur Performance.aber daf\u00fcr braucht Button settext.",
+                    "aspects": [
+                        {
+                            "text": "Beim Klicken auf dem Button, lauft der ActionListener",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 1
+                        },
+                        {
+                            "text": "Beim Klicken auf dem Button, lauft der ActionListener",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 1
+                        },
+                        {
+                            "text": "Der ActionListener gibt dieser dann Text zur Performance",
+                            "elements": [],
+                            "aIdx": 3,
+                            "label": 1
+                        }
+                    ],
+                    "correctionOrComment": "Beim Klicken auf dem Button, l\u00e4uft der ActionListener. Der ActionListener gibt dieser dann Text zur Performance. Aber daf\u00fcr braucht der Button setText."
+                },
+                {
+                    "id": "36",
+                    "text": "mit einem Klich wird eine Action ausgef\u00fchrt. Diese Action wird von einem listener vorgemerkt, der den Code ausf\u00fchrt und den Text \u00e4ndert.",
+                    "aspects": [
+                        {
+                            "text": "Mit einem Klick wird eine Action ausgef\u00fchrt",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Diese Action wird von einem Listener vorgemerkt",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "der den Code ausf\u00fchrt und den Text \u00e4ndert",
+                            "elements": [
+                                [
+                                    94,
+                                    135
+                                ]
+                            ],
+                            "aIdx": 3,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Mit einem Klick wird eine Action ausgef\u00fchrt. Diese Action wird von einem Listener vorgemerkt, der den Code ausf\u00fchrt und den Text \u00e4ndert."
+                },
+                {
+                    "id": "37",
+                    "text": "Durch den Klick wird ein Event ausgef\u00fchrt welches durch den \"\"ActionListener\"\" mit den Objekt \"\"Button\"\" Verbunden wird und dadurch wird die aufgerufene Methode mit den Button zugeordnet.",
+                    "aspects": [
+                        {
+                            "text": "Durch den Klick wird ein Event ausgef\u00fchrt",
+                            "elements": [
+                                [
+                                    0,
+                                    41
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "welches durch den ActionListener mit den Objekt Button verbunden wird",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "welches durch den ActionListener mit den Objekt Button verbunden wird",
+                            "elements": [],
+                            "aIdx": 2,
+                            "label": 1
+                        },
+                        {
+                            "text": "dadurch wird die aufgerufene Methode mit den Button zugeordnet",
+                            "elements": [
+                                [
+                                    124,
+                                    186
+                                ]
+                            ],
+                            "aIdx": 3,
+                            "label": 1
+                        }
+                    ],
+                    "correctionOrComment": "Durch den Klick wird ein Event ausgef\u00fchrt, welches durch den ActionListener mit den Objekt Button verbunden wird und dadurch wird die aufgerufene Methode mit den Button zugeordnet."
+                },
+                {
+                    "id": "38",
+                    "text": "BEIM kLICK AUF EINEM BUTTON WIRD EINE ACTIONEVENT ERZEUGT.",
+                    "aspects": [
+                        {
+                            "text": "Beim Klick auf einen Button wird ein ActionEvent erzeugt",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Beim Klick auf einen Button wird ein ActionEvent erzeugt."
+                },
+                {
+                    "id": "39",
+                    "text": "Beim Klick auf dem Button wird eine Methode aufgerufen, den Klick wahrnimmt und den Text auf dem Button \u00e4ndert",
+                    "aspects": [
+                        {
+                            "text": "Beim Klick auf dem Button wird eine Methode aufgerufen",
+                            "elements": [
+                                [
+                                    0,
+                                    54
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 1
+                        },
+                        {
+                            "text": "die den Klick wahrnimmt",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 1
+                        },
+                        {
+                            "text": "die den Text auf dem Button \u00e4ndert",
+                            "elements": [],
+                            "aIdx": 3,
+                            "label": 1
+                        }
+                    ],
+                    "correctionOrComment": "Beim Klick auf dem Button wird eine Methode aufgerufen, die den Klick wahrnimmt und den Text auf dem Button \u00e4ndert"
+                },
+                {
+                    "id": "40",
+                    "text": "Wenn man auf dem Button klickt wird ein ActionEvent, der dann den gegebenen Befehl ausgibt, ausgef\u00fchrt.",
+                    "aspects": [
+                        {
+                            "text": "Wenn man auf dem Button klickt wird ein ActionEvent ;; ausgef\u00fchrt",
+                            "elements": [
+                                [
+                                    0,
+                                    51
+                                ],
+                                [
+                                    92,
+                                    102
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "das dann den gegebenen Befehl ausgibt",
+                            "elements": [],
+                            "aIdx": 3,
+                            "label": 2
+                        }
+                    ],
+                    "correctionOrComment": "Wenn man auf dem Button klickt wird ein ActionEvent, das dann den gegebenen Befehl ausgibt, ausgef\u00fchrt."
+                },
+                {
+                    "id": "41",
+                    "text": "bei klick auf button wird action event ausgel\u00f6st, wen listener event gemeldet bekommt wird code ausgef\u00fchrt.",
+                    "aspects": [
+                        {
+                            "text": "vBeim Klick auf den Button wird ein ActionEvent ausgel\u00f6st",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Wenn der Listener ein Event gemeldet bekommt",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "wird der Code ausgef\u00fchrt",
+                            "elements": [],
+                            "aIdx": 3,
+                            "label": 1
+                        }
+                    ],
+                    "correctionOrComment": "Beim Klick auf den Button wird ein ActionEvent ausgel\u00f6st. Wenn der Listener ein Event gemeldet bekommt, wird der Code ausgef\u00fchrt."
+                },
+                {
+                    "id": "42",
+                    "text": "button erstellen button zu frame hinzuf\u00fcgen ActionListener zu button hinzuf\u00fcgen bei actionlistener methode sagen was ge\u00e4ndert werden soll hier: button.setText(Text der nach dem Klicken angezeigt werden soll) wenn man also auf den Button klickt wird der ActionListener \"\"wach\"\" und wei\u00df dass geklickt wurde und somit kann man in der methode sagen was nach dem klicken ver\u00e4ndert werden soll",
+                    "aspects": [
+                        {
+                            "text": "Wenn man also auf den Button klickt wird der ActionListener wach",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 1
+                        },
+                        {
+                            "text": "Wenn man also auf den Button klickt wird der ActionListener wach",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 1
+                        },
+                        {
+                            "text": "ActionListener zum Button hinzuf\u00fcgen",
+                            "elements": [],
+                            "aIdx": 2,
+                            "label": 0
+                        },
+                        {
+                            "text": "Der Actionlistener Methode sagen, was ge\u00e4ndert werden soll hier, setText mit dem Text der nach dem Klicken angezeigt werden soll",
+                            "elements": [],
+                            "aIdx": 3,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Button erstellen. Button zum Frame hinzuf\u00fcgen. ActionListener zum Button hinzuf\u00fcgen. Der Actionlistener Methode sagen, was ge\u00e4ndert werden soll hier, setText mit dem Text der nach dem Klicken angezeigt werden soll. Wenn man also auf den Button klickt wird der ActionListener wach und wei\u00df dass geklickt wurde und somit kann man in der Methode sagen was nach dem Klicken ver\u00e4ndert werden soll"
+                },
+                {
+                    "id": "43",
+                    "text": "um was zu \u00e4ndern muss die methode Actionevent eingesetzt werden das heisst wenn mann auf den button klickt soll eine aktion gef\u00fchrt werden zum beispiel mit dem klick nach dem man auf klcik drauf klickt wird im hintergrund eine aktion ausgef\u00fchrt und mit syso \"\"wurde geklickt\"\" ausgegeben . ich hoffe ich konnte es einigerma\u00dfen erkl\u00e4ren :)",
+                    "aspects": [
+                        {
+                            "text": "Um was zu \u00e4ndern muss die Methode ActionEvent eingesetzt werden",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 1
+                        }
+                    ],
+                    "correctionOrComment": "Um was zu \u00e4ndern muss die Methode ActionEvent eingesetzt werden. Das hei\u00dft, wenn man auf den Button klickt, soll eine Aktion ausgef\u00fchrt werden, zum Beispiel nach dem man auf Klick drauf klickt wird im Hintergrund eine Aktion ausgef\u00fchrt und mit syso 'wurde geklickt' ausgegeben. Ich hoffe ich konnte es einigerma\u00dfen erkl\u00e4ren :)"
+                },
+                {
+                    "id": "44",
+                    "text": "Beim dr\u00fccken des Buttons wird ein Befehl ausgef\u00fchrt, der den Text des Buttons ver\u00e4ndert. Dazu wird ein Befehl eingegeben, falls der Button gedr\u00fcckt wird, \u00e4ndere Button.Text",
+                    "aspects": [],
+                    "correctionOrComment": "Beim Dr\u00fccken des Buttons wird ein Befehl ausgef\u00fchrt, der den Text des Buttons ver\u00e4ndert. Dazu wird ein Befehl eingegeben, falls der Button gedr\u00fcckt wird, \u00e4ndere den Button Text"
+                },
+                {
+                    "id": "45",
+                    "text": "Buttonojekt besitzt ein listener objekt das den zustand \u00e4ndert.",
+                    "aspects": [
+                        {
+                            "text": "Das Button Objekt besitzt ein Listener Objekt ",
+                            "elements": [],
+                            "aIdx": 2,
+                            "label": 0
+                        },
+                        {
+                            "text": "das den Zustand \u00e4ndert",
+                            "elements": [],
+                            "aIdx": 3,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Das Button Objekt besitzt ein Listener Objekt, das den Zustand \u00e4ndert."
+                },
+                {
+                    "id": "46",
+                    "text": "Der ActionListener erkennt/h\u00f6rt den Klick des Users. Der ActionListener wird aufgerufen, indem sich die Methode actionPerformed befindet, der dann angibt was der ActionListener bei dem Klick zu machen hat, n\u00e4mlich die sogenannte setText() Funktion ausf\u00fchren. Diese \u00e4ndert den Text des Buttons.",
+                    "aspects": [
+                        {
+                            "text": "Der ActionListener erkennt den Klick des Users",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 1
+                        },
+                        {
+                            "text": "Der ActionListener erkennt den Klick des Users",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 1
+                        },
+                        {
+                            "text": "Der ActionListener wird aufgerufen, indem sich die Methode actionPerformed befindet, der dann angibt, was der ActionListener bei dem Klick zu machen hat, n\u00e4mlich die sogenannte setText() Funktion ausf\u00fchren. Diese \u00e4ndert den Text des Buttons",
+                            "elements": [],
+                            "aIdx": 3,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Der ActionListener erkennt den Klick des Users. Der ActionListener wird aufgerufen, indem sich die Methode actionPerformed befindet, der dann angibt, was der ActionListener bei dem Klick zu machen hat, n\u00e4mlich die sogenannte setText() Funktion ausf\u00fchren. Diese \u00e4ndert den Text des Buttons."
+                },
+                {
+                    "id": "48",
+                    "text": "-",
+                    "aspects": [],
+                    "correctionOrComment": "-"
+                },
+                {
+                    "id": "49",
+                    "text": "Durch den Mausklick bemerkt der Actionlistener im Code dieses Vorgehen. Da der Actionlistener mit einer Methode verbunden ist, wird wahrscheinlich in der Mehtode ein Code implementiert sein welcher den Text auf dem Button ver\u00e4ndert.",
+                    "aspects": [
+                        {
+                            "text": "Durch den Mausklick bemerkt der ActionListener im Code dieses Vorgehen",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 1
+                        },
+                        {
+                            "text": "Durch den Mausklick bemerkt der ActionListener im Code dieses Vorgehen",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 1
+                        },
+                        {
+                            "text": "Da der Actionlistener mit einer Methode verbunden ist, wird wahrscheinlich in der Mehtode ein Code implementiert sein welcher den Text auf dem Button ver\u00e4ndert",
+                            "elements": [
+                                [
+                                    72,
+                                    231
+                                ]
+                            ],
+                            "aIdx": 3,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Durch den Mausklick bemerkt der ActionListener im Code dieses Vorgehen. Da der Actionlistener mit einer Methode verbunden ist, wird wahrscheinlich in der Mehtode ein Code implementiert sein welcher den Text auf dem Button ver\u00e4ndert."
+                },
+                {
+                    "id": "50",
+                    "text": "Der implementierte Actionlistener registriert das Event des Mausklicks. Dadurch wird die Methode des Actionlisteners aufgerufen und sie f\u00fchrt Ihren Code aus. Der Code der Methode \u00e4ndert nun den Text auf dem Button.",
+                    "aspects": [
+                        {
+                            "text": "Der implementierte ActionListener registriert das Event des Mausklicks",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Der implementierte ActionListener registriert das Event des Mausklicks",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": " Dadurch wird die Methode des Actionlisteners aufgerufen und sie f\u00fchrt Ihren Code aus. Der Code der Methode \u00e4ndert nun den Text auf dem Button",
+                            "elements": [
+                                [
+                                    72,
+                                    213
+                                ]
+                            ],
+                            "aIdx": 3,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Der implementierte ActionListener registriert das Event des Mausklicks. Dadurch wird die Methode des Actionlisteners aufgerufen und sie f\u00fchrt Ihren Code aus. Der Code der Methode \u00e4ndert nun den Text auf dem Button."
+                },
+                {
+                    "id": "51",
+                    "text": "Auf den Button zu Klicken f\u00fchrt eine ActionListener aus.In dem wir eine code schreiben was ausgef\u00fcrht wird wenn wir Button zu klciken.",
+                    "aspects": [
+                        {
+                            "text": "Auf den Button zu Klicken f\u00fchrt eine ActionListener aus",
+                            "elements": [
+                                [
+                                    0,
+                                    55
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 1
+                        },
+                        {
+                            "text": "Auf den Button zu Klicken f\u00fchrt eine ActionListener aus",
+                            "elements": [
+                                [
+                                    0,
+                                    55
+                                ]
+                            ],
+                            "aIdx": 1,
+                            "label": 1
+                        },
+                        {
+                            "text": "In dem schreiben wir einen Code, der ausgef\u00fcrht wird, wenn wir den Button klicken",
+                            "elements": [],
+                            "aIdx": 3,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Auf den Button zu klicken f\u00fchrt eine ActionListener aus. In dem schreiben wir einen Code, der ausgef\u00fcrht wird, wenn wir den Button klicken."
+                },
+                {
+                    "id": "52",
+                    "text": "-",
+                    "aspects": [],
+                    "correctionOrComment": "-"
+                },
+                {
+                    "id": "53",
+                    "text": "lbl_text || btn_klick Wenn auf den btn_klick gedr\u00fcckt wird, springt der entsprechende ActionListener an (meist als anonyme Klasse umgesetzt, kann jedoch auch eine eigenst\u00e4ndige, von ActionListener abgeleitete Klasse sein). Darin wird ein ActionEvent ausgef\u00fchrt, das den Text im lbl_text ver\u00e4ndert.",
+                    "aspects": [
+                        {
+                            "text": "Darin wird ein ActionEvent ausgef\u00fchrt",
+                            "elements": [
+                                [
+                                    223,
+                                    260
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 2
+                        },
+                        {
+                            "text": "Wenn auf den Button gedr\u00fcckt wird, springt der entsprechende ActionListener an",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 1
+                        },
+                        {
+                            "text": "das den Text im Button ver\u00e4ndert",
+                            "elements": [],
+                            "aIdx": 3,
+                            "label": 2
+                        }
+                    ],
+                    "correctionOrComment": "Wenn auf den Button gedr\u00fcckt wird, springt der entsprechende ActionListener an (meist als anonyme Klasse umgesetzt, kann jedoch auch eine eigenst\u00e4ndige, von ActionListener abgeleitete Klasse sein). Darin wird ein ActionEvent ausgef\u00fchrt, das den Text im Button ver\u00e4ndert."
+                },
+                {
+                    "id": "54",
+                    "text": "-button fr\u00e4gt ab ob er gekickt wird -beim klicken bekommt der button den befehl den text hzu \u00e4ndern -der text wird ge\u00e4ndert",
+                    "aspects": [
+                        {
+                            "text": "Der Button fragt ab, ob er geklickt wird",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 1
+                        },
+                        {
+                            "text": "Beim klicken bekommt der Button den Befehl den Text zu \u00e4ndern. Der Text wird ge\u00e4ndert",
+                            "elements": [],
+                            "aIdx": 3,
+                            "label": 1
+                        }
+                    ],
+                    "correctionOrComment": "Der Button fragt ab, ob er geklickt wird. Beim klicken bekommt der Button den Befehl den Text zu \u00e4ndern. Der Text wird ge\u00e4ndert"
+                },
+                {
+                    "id": "55",
+                    "text": "Ein Listener \"\"lauscht\"\" auf Aktivit\u00e4ten des Nutzers und \"\"h\u00f6rt\"\" somit den Klick auf den Button. Dauraufhin wird der Actionlistener aufgerufen und die Methode actionPerformed, womit die Funktion .setText() den Text auf den Button \u00e4ndert.",
+                    "aspects": [
+                        {
+                            "text": "Dauraufhin wird der ActionListener aufgerufen",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 1
+                        },
+                        {
+                            "text": "Ein Listener lauscht auf Aktivit\u00e4ten des Nutzers und h\u00f6rt somit den Klick auf den Button",
+                            "elements": [],
+                            "aIdx": 2,
+                            "label": 1
+                        },
+                        {
+                            "text": "womit die Funktion setText den Text auf dem Button \u00e4ndert",
+                            "elements": [],
+                            "aIdx": 3,
+                            "label": 1
+                        }
+                    ],
+                    "correctionOrComment": "Ein Listener lauscht auf Aktivit\u00e4ten des Nutzers und h\u00f6rt somit den Klick auf den Button. Dauraufhin wird der ActionListener aufgerufen und die Methode actionPerformed, womit die Funktion setText den Text auf dem Button \u00e4ndert."
+                },
+                {
+                    "id": "56",
+                    "text": "es wird mit einer actionEvent erzeugt",
+                    "aspects": [
+                        {
+                            "text": "Es wird ein ActionEvent erzeugt",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Es wird ein ActionEvent erzeugt."
+                },
+                {
+                    "id": "58",
+                    "text": "-",
+                    "aspects": [],
+                    "correctionOrComment": "-"
+                },
+                {
+                    "id": "59",
+                    "text": "Der Klick erzeugt einen Event. Dieser Event wird vom ActionListener aufgegriffen der mit dem \"\"Button\"\"-Objekt verbunden ist, dann wird die jeweilige Methode aufgerufen, die dem Button zugewiesen wurde. zB. : setIcon()",
+                    "aspects": [
+                        {
+                            "text": "Der Klick erzeugt einen Event",
+                            "elements": [
+                                [
+                                    0,
+                                    29
+                                ]
+                            ],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": " Dieses Event wird vom ActionListener aufgegriffen",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": "er mit dem Button Objekt verbunden ist",
+                            "elements": [],
+                            "aIdx": 2,
+                            "label": 0
+                        },
+                        {
+                            "text": "Dann wird die jeweilige Methode aufgerufen, die dem Button zugewiesen wurde",
+                            "elements": [],
+                            "aIdx": 3,
+                            "label": 1
+                        }
+                    ],
+                    "correctionOrComment": "Der Klick erzeugt einen Event. Dieses Event wird vom ActionListener aufgegriffen, der mit dem Button Objekt verbunden ist. Dann wird die jeweilige Methode aufgerufen, die dem Button zugewiesen wurde."
+                },
+                {
+                    "id": "61",
+                    "text": "Beim Klick auf den Button wird ein event ausgel\u00f6st, dieses wird von ActionListener aufgenommen und die entsprechende methode ausgef\u00fchrt.",
+                    "aspects": [
+                        {
+                            "text": "Beim Klick auf den Button wird ein Event ausgel\u00f6st",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Dieses wird von ActionListener aufgenommen",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": " und die entsprechende Methode ausgef\u00fchrt",
+                            "elements": [],
+                            "aIdx": 3,
+                            "label": 1
+                        }
+                    ],
+                    "correctionOrComment": "Beim Klick auf den Button wird ein Event ausgel\u00f6st. Dieses wird von ActionListener aufgenommen und die entsprechende Methode ausgef\u00fchrt."
+                },
+                {
+                    "id": "62",
+                    "text": "Durch den Klick entsteht ein \"\"Action- Event\"\". Ein \"\"Listener\"\" reagiert auf dieses \"\"Event\"\" und f\u00fchrt eine Aktion durch. In diesem Fall wird der Schriftzug auf den Button ge\u00e4ndert.",
+                    "aspects": [
+                        {
+                            "text": "Durch den Klick entsteht ein ActionEvent",
+                            "elements": [],
+                            "aIdx": 0,
+                            "label": 0
+                        },
+                        {
+                            "text": "Ein Listener reagiert auf dieses Event",
+                            "elements": [],
+                            "aIdx": 1,
+                            "label": 0
+                        },
+                        {
+                            "text": " Ein Listener ;; \u00fchrt eine Aktion durch. In diesem Fall wird der Schriftzug auf den Button ge\u00e4ndert",
+                            "elements": [
+                                [
+                                    100,
+                                    182
+                                ]
+                            ],
+                            "aIdx": 3,
+                            "label": 0
+                        }
+                    ],
+                    "correctionOrComment": "Durch den Klick entsteht ein ActionEvent. Ein Listener reagiert auf dieses Event und f\u00fchrt eine Aktion durch. In diesem Fall wird der Schriftzug auf den Button ge\u00e4ndert."
+                }
+            ]
+        }
+    ]
+}

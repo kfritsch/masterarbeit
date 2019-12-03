@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test xmlns="urn:vips:test:v1.0" id="test-7230" type="practice"
+      start="2018-11-29T12:00:00+01:00"
+                end="2018-11-29T12:00:00+01:00"
+            >
+    <title>
+        Datentypen, Chars, Strings und Arrays    </title>
+    <description>
+            </description>
+        <exercises>
+                    <exercise id="exercise-50556" feedback="true">
+    <title>
+        Funktion von Datentypen    </title>
+    <description>
+        Was ist die Funktion von Datentypen?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Datentypen dienen zur unterschiedlichen semantischen Interpretation von binären Werten.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50557" feedback="true">
+    <title>
+        Datentyp Char    </title>
+    <description>
+        Was repräsentiert der Datentyp Char?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Der Datentyp Char repräsentiert einzelne Zeichen.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50558" feedback="true">
+    <title>
+        Definition Typecasting    </title>
+    <description>
+        Was versteht man unter Typecasting?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Darunter versteht man die Umwandlung des Datentyps eines bestimmten Wertes in einen anderen.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50559" feedback="true">
+    <title>
+        Addition von Chars    </title>
+    <description>
+        Warum ergibt die Operation ‘a’ + ‘b’ 195 und nicht “ab”?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Chars sind intern als 16 bit Binärzahlen repräsentiert. Bei einer Rechenoperation mit Chars werden diese als Integer interpretiert.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50560" feedback="true">
+    <title>
+        Addition von Strings    </title>
+    <description>
+        Warum ergibt die Operation “a” + “b” “ab” und nicht 195?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Strings sind intern als Zeichenketten gespeichert. Der ‘+’ Operator vollführt also eine Verkettung der einzelnen Ketten.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50561" feedback="true">
+    <title>
+        Wert von Objecten vs primitiven Datentypen    </title>
+    <description>
+        Was ist der konzeptuelle Unterschied zwischen dem Wert einer String Variablen und dem eines primitiven Datentyps?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Die Variable eines primitiven Datentyps speichert den Inhalt an sich. Die Variable eines Strings, also eines Objektes, hat als Wert eine Referenz auf den eigentlichen Inhalt im Speicher.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50562" feedback="true">
+    <title>
+        Funktion vom Vergleichsoperator `==`?    </title>
+    <description>
+        Was macht der Vergleichsoperator `==` ?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Er vergleicht den Wert von Variablen.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50563" feedback="true">
+    <title>
+        Vergleichen von Strings    </title>
+    <description>
+        Wie ist es möglich, dass inhaltsgleiche Strings vom Vergleichsoperator `==` als ungleich bewertet werden?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Beim Vergleichen von Strings mit dem Vergleichsoperator `==` werden die Referenzen verglichen und nicht die Zeichenketten an sich.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50564" feedback="true">
+    <title>
+        Wertzuweisung zwischen Strings    </title>
+    <description>
+        Was passiert bei der Wertzuweisung von einer String-Variablen zu einer Anderen?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Die Referenz wird kopiert. Danach zeigen beide String-Variablen auf dieselbe Zeichenkette.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50565" feedback="true">
+    <title>
+        Keyword `new`    </title>
+    <description>
+        Was passiert bei der Anweisung new String()?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Das Keyword `new` erzeugt einen neuen, leeren String im Speicher und gibt anschließend die Referenz auf diesen String zurück.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50566" feedback="true">
+    <title>
+        Datenstruktur Array    </title>
+    <description>
+        Was ist ein Array?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Ein Array ist eine Datenstruktur, die eine Sequenz von Variablen gleichen Typs enthält.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50567" feedback="true">
+    <title>
+        Array Zugriff    </title>
+    <description>
+        Wodurch wird gewährleistet, dass in einem Array auf einzelne Element zugegriffen werden kann? Wie erfolgt der Zugriff?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Die einzelnen Einträge sind durchnummeriert. Man kann durch die Angabe ihres Indices auf sie zugreifen.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+            </exercises>
+</test>

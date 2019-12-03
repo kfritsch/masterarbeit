@@ -97,7 +97,7 @@ class AspectsFeatureExtractor(object):
         meanCWW = np.mean([val for key,val in assignedWeights.items()])
         self.annWeights = {}
         for key,val in assignedWeights.items():
-            self.annWeights[key] = (val-meanCWW)+1
+            self.annWeights[key] = (val/5)
 
     def resetVocabulary(self):
         self.question["vocabulary"] = {}
@@ -156,7 +156,16 @@ class AspectsFeatureExtractor(object):
                         qAspectOverlap[token["slPos"] if "slPos" in token else "o"] += 1
                 self.rATSs[-1][-1]["qRefOverlap"] = qAspectOverlap
 
+    def predictAspectAssignment2(self, pupAns, pATS):
+        print("pred")
+        for aspect in pupAns["aspects"]:
+            aspect["tokens"] = pupAns["tokens"]#[]
+            aspect["tokenIds"] = [token["id"] for token in pupAns["tokens"]]#[]
+            aspect["unknownContentWords"] = 0
+        return
+
     def predictAspectAssignment(self, pupAns, pATS):
+        print("pred")
         for aspect in pupAns["aspects"]:
             aspect["tokens"] = []
             aspect["tokenIds"] = []
@@ -200,6 +209,7 @@ class AspectsFeatureExtractor(object):
         # input()
 
     def assignAspectsFromAnnotations(self, answer):
+        print("ann")
         for aspect in answer["aspects"]:
             aspect["tokens"] = []
             aspect["tokenIds"] = []
@@ -259,7 +269,7 @@ class AspectsFeatureExtractor(object):
                         token["head"] = token["lemmas"][0]
                         token["headId"] = token["id"]
 
-        answer["alignAnn"] = self.tokenAnnotator.getAlignmentAnnotation(answer["correctionOrComment"] if("correctionOrComment" in answer) else answer["text"])
+        # answer["alignAnn"] = self.tokenAnnotator.getAlignmentAnnotation(answer["correctionOrComment"] if("correctionOrComment" in answer) else answer["text"])
 
     def isContentWord(self, word):
         return ((word.isdigit() or len(word)>1) and not(word in self.stopwords)) or word in self.question["stopwordExceptions"]
@@ -271,7 +281,7 @@ class AspectsFeatureExtractor(object):
                 sortedAspects[aspect["aIdx"]].update(aspect)
         answer["aspects"] = sortedAspects
 
-    def extractAspectFeatures(self, pupAns, train, predDist, vocab=False, bins=6):
+    def extractAspectFeatures(self, pupAns, annMatch, predDist, vocab=False, bins=6):
         if(not("tokens" in pupAns)):
             self.annotateAnswer(pupAns)
         self.prepareAspects(pupAns)
@@ -299,11 +309,11 @@ class AspectsFeatureExtractor(object):
                 pupAns["aspects"][aIdx]["tokens"] = []
                 pupAns["aspects"][aIdx]["tokenIds"] = []
         else:
-            if(not("tokens" in pupAns["aspects"][0])):
-                if(train):
-                    self.assignAspectsFromAnnotations(pupAns)
-                else:
-                    self.predictAspectAssignment(pupAns, pATS)
+            # if(not("tokens" in pupAns["aspects"][0])):
+            if(annMatch):
+                self.assignAspectsFromAnnotations(pupAns)
+            else:
+                self.predictAspectAssignment(pupAns, pATS)
 
             pupAspectsTS = [self.getTokenSelections(aspect) for aspect in pupAns["aspects"]]
             refAspects, refAspectsTS = self.getReferenceAspects(pupAns, pupAspectsTS)
@@ -480,7 +490,7 @@ class AspectsFeatureExtractor(object):
         if(weights):
             if(not(self.annWeights)):
                 self.setAnnWeights(self.question["referenceAnswer"])
-            return sum(np.array([(simTup[1]>AspectsFeatureExtractor.SYN_THRES[simTup[3]]) * self.annWeights[simTup[refIdx]] for simTup in simWordsTuples if simTup[refIdx]]))/len(simWordsTuples)
+            return sum(np.array([(simTup[1]>AspectsFeatureExtractor.SYN_THRES[simTup[3]]) * self.annWeights[simTup[refIdx]] for simTup in simWordsTuples if simTup[refIdx] in self.annWeights]))/len(simWordsTuples)
         else:
             return sum(np.array([simTup[1]>AspectsFeatureExtractor.SYN_THRES[simTup[3]] for simTup in simWordsTuples]))/len(simWordsTuples)
 
@@ -497,7 +507,11 @@ class AspectsFeatureExtractor(object):
                         refHeadSemCat = self.question["vocabulary"][refHead]["semCat"]
                         pupHeadSemCat = self.question["vocabulary"][pupHead]["semCat"]
                         if(refHeadSemCat == pupHeadSemCat):
-                            scores.append(self.annWeights[refLemma] if(weights) else 1)
+                            if(weights):
+                                if(refLemma in self.annWeights):
+                                    scores.append(self.annWeights[refLemma])
+                            else:
+                                scores.append(1)
                             del pToken[pIdx]
                             break
         return sum(scores)/len(refToken)

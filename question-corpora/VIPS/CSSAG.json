@@ -16,6 +16,16 @@
           "text": "Die Signaturen der Methoden unterscheiden sich anhand unterschiedlicher Parameter"
         }
       ],
+      "assignedWeights": {
+        "Methode": 1,
+        "Klasse": 1,
+        "denselb":5,
+        "Signatur":5,
+        "unterscheiden":5,
+        "anhand":0,
+        "unterschiedlich":5,
+        "Parameter":5
+      },
       "referenceAnswers": [
         {
           "id": "ref1",
@@ -1329,6 +1339,22 @@
           "text": "Die Klasse muss eine Methode bereitstellen, die das Auslesen des Feldes 'wert' ermöglicht"
         }
       ],
+      "assignedWeights": {
+        "Feld": 1,
+        "'wert'": 1,
+        "müssen":2,
+        "Schutzattribute":2,
+        "private":5,
+        "deklarieren":3,
+        "werden":0,
+        "zusätzlich":2,
+        "Klasse":1,
+        "Methode":2,
+        "bereitstellen":1,
+        "Auslesen":1,
+        "ermöglichen":1,
+        "Auslesen":1
+      },
       "referenceAnswers": [
         {
           "id": "ref1",
@@ -2833,6 +2859,19 @@
           "text": "Schnittstellen können keine implementierten Methoden bereitstellen"
         }
       ],
+      "assignedWeights": {
+        "müssen":2,
+        "abstrakt":5,
+        "Klasse":2,
+        "verwenden":2,
+        "weil":3,
+        "Schnittstelle":0,
+        "kein":4,
+        "implementiert":4,
+        "Methode":3,
+        "bereitstellen":3,
+        "können":2
+      },
       "referenceAnswers": [
         {
           "id": "ref1",
@@ -4166,6 +4205,14 @@
           "text": "Ein Objekt ist eine konkrete Instanz einer Klasse"
         }
       ],
+      "assignedWeights": {
+        "Klasse":2,
+        "sein":2,
+        "Bauplan":5,
+        "Objekt":2,
+        "konkret":4,
+        "Instanz":5
+      },
       "referenceAnswers": [
         {
           "id": "ref1",
@@ -4869,6 +4916,19 @@
           "text": "Instanzvariable existiert einmal pro Objekt"
         }
       ],
+      "assignedWeights": {
+        "Klassenvariable":2,
+        "existieren":3,
+        "pro":5,
+        "einmal":5,
+        "Klasse":4,
+        "auch":0,
+        "ohne":3,
+        "konkret":4,
+        "Instanz":5,
+        "Instanzvariable":2,
+        "Objekt":4
+      },
       "referenceAnswers": [
         {
           "id": "ref1",
@@ -5587,6 +5647,22 @@
           "text": "Der Listener ändert den Text"
         }
       ],
+      "assignedWeights": {
+        "Klick":3,
+        "auf":3,
+        "Button":3,
+        "erzeugen":5,
+        "ActionEvent":5,
+        "werden":2,
+        "von":2,
+        "Listener":5,
+        "auffangen":4,
+        "beim":3,
+        "registrieren":5,
+        "ändern": 4,
+        "daraufhin": 2,
+        "Text":3
+      },
       "referenceAnswers": [
         {
           "id": "ref1",
@@ -7237,6 +7313,24 @@
           "text": "Sonst kann es zur Zerstörung von Werten und zu inkonsistenten Zuständen kommen"
         }
       ],
+      "assignedWeights": {
+        "müssen":4,
+        "vermeiden":5,
+        "verschieden":5,
+        "Threads":1,
+        "gleichzeitig":5,
+        "Daten":5,
+        "Objekte":2,
+        "zugreifen":4,
+        "weil":3,
+        "dadurch":3,
+        "Zerstörung":5,
+        "Werten": 4,
+        "inkonsistent": 4,
+        "Zustand":3,
+        "kommen": 2,
+        "können":3
+      },
       "referenceAnswers": [
         {
           "id": "ref1",
@@ -8244,7 +8338,9 @@
         },
         {
           "id": "66",
-          "text": "Man will Deadlocks vermeiden. Das ist ein Zustand wo das Programm gestartet wird aber sich nicht beenden kann."
+          "text": "Man will Deadlocks vermeiden. Das ist ein Zustand wo das Programm gestartet wird aber sich nicht beenden kann.",
+          "aspects": [],
+          "correctionOrComment": "Man will Deadlocks vermeiden. Das ist ein Zustand wo das Programm gestartet wird aber sich nicht beenden kann."
         }
       ]
     }

@@ -207,7 +207,7 @@ class FeatureExtractor(object):
         self.addPosDistFeatures(pupAns, refAns)
         if(len(pATS["tokenSet"]) > 0):
             self.addSentenceEmbeddingFeatures(pupAns, pATS["words"], rATS["words"])
-            self.addSulAlign(pupAns, refAns, pATS, rATS)
+            # self.addSulAlign(pupAns, refAns, pATS, rATS)
         if(len(pATS["contentToken"]) > 0):
             self.addContentSimilarityFeatures(pupAns, pATS, rATS, bins=bins)
             if(predDist):
@@ -301,10 +301,10 @@ class FeatureExtractor(object):
         pupAns["features"]["posSimHist"] = self.getPosTagSimHist(similarWordsRecall, rATS["contentPos"], bins=bins)
         pupAns["features"]["simHist"] = self.getSimHist(similarWordsRecall, bins=bins)
         pupAns["features"]["qRefAnsOverlap"] = self.getQRefAnsOverlap(similarWordsRecall)
-        if(hasattr(self, 'annWeights')):
-            pupAns["features"]["annWContentPrec"] = self.getContentScore(similarWordsPrecision, refIdx=2, weights=True)
-            pupAns["features"]["annWContentRec"] = self.getContentScore(similarWordsRecall, refIdx=0, weights=True)
-            pupAns["features"]["annWContentHeadRec"] = self.getContentHeadScore(similarWordsRecall, pATS["allContentToken"], rATS["allContentToken"], weights=True)
+        # if(hasattr(self, 'annWeights')):
+        #     pupAns["features"]["annWContentPrec"] = self.getContentScore(similarWordsPrecision, refIdx=2, weights=True)
+        #     pupAns["features"]["annWContentRec"] = self.getContentScore(similarWordsRecall, refIdx=0, weights=True)
+        #     pupAns["features"]["annWContentHeadRec"] = self.getContentHeadScore(similarWordsRecall, pATS["allContentToken"], rATS["allContentToken"], weights=True)
 
     def addPredDistBasedFeatures(self, answer, pATS, bins=6):
         if(not(self.vocabDistWeights)):

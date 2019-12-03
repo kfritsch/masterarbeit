@@ -54,21 +54,23 @@ export default class AnnotationSurvey extends React.Component {
         //   );
         // } else {
           this.version = "aspects";
-          var qIdx = this.questionData.findIndex(
-            (question) =>
-              !("aspects" in question.studentAnswers[question.studentAnswers.length - 1])
-          );
-          if (qIdx < 0) {
-            this.version = "done";
-            return;
-          }
-          annIdx = this.questionData[qIdx].studentAnswers.findIndex(
-            (annotation) => !("aspects" in annotation)
-          );
-          if (annIdx < 0) {
-            this.finish();
-            annIdx = this.questionData[qIdx].studentAnswers.length - 1;
-          }
+          var qIdx = 0
+          var annIdx = 0
+          // var qIdx = this.questionData.findIndex(
+          //   (question) =>
+          //     !("aspects" in question.studentAnswers[question.studentAnswers.length - 1])
+          // );
+          // if (qIdx < 0) {
+          //   this.version = "done";
+          //   return;
+          // }
+          // annIdx = this.questionData[qIdx].studentAnswers.findIndex(
+          //   (annotation) => !("aspects" in annotation)
+          // );
+          // if (annIdx < 0) {
+          //   this.finish();
+          //   annIdx = this.questionData[qIdx].studentAnswers.length - 1;
+          // }
         // }
 
         var currentAnnotation = this.getCurrentAnnotation(qIdx, annIdx);

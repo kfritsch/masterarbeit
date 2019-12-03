@@ -1,0 +1,1696 @@
+{
+  "questions": [
+    {
+      "text": "Was ist der konzeptuelle Unterschied zwischen dem Wert einer String Variablen und dem eines primitiven Datentyps?",
+      "id": "50717",
+      "title": "Wert von Objecten vs primitiven Datentypen",
+      "type": "comparison",
+      "aspects": [
+        {
+          "text": "Die Variable eines primitiven Datentyps speichert den Inhalt an sich"
+        },
+        {
+          "text": "Die Variable eines Strings hat als Wert eine Referenz auf den eigentlichen Inhalt im Speicher"
+        }
+      ],
+      "assignedWeights": {
+        "Variable": 1,
+        "primitiv": 2,
+        "Datentyp": 2,
+        "speichern": 4,
+        "Inhalt": 5,
+        "sich": 4,
+        "String": 3,
+        "haben": 2,
+        "als": 2,
+        "Wert": 4,
+        "Referenz": 5,
+        "auf": 4,
+        "eigentlich": 3,
+        "Speicher": 5
+      },
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Die Variable eines primitiven Datentyps speichert den Inhalt an sich. Die Variable eines Strings hat als Wert eine Referenz auf den eigentlichen Inhalt im Speicher.",
+          "aspects": [
+            {
+              "text": "Die Variable eines primitiven Datentyps speichert den Inhalt an sich",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  68
+                ]
+              ]
+            },
+            {
+              "text": "Die Variable eines Strings hat als Wert eine Referenz auf den eigentlichen Inhalt im Speicher",
+              "aIdx": 1,
+              "elements": [
+                [
+                  70,
+                  163
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "text": "Strings werden durch Referenzen gespeichert.",
+          "id": 8,
+          "correctionOrComment": "Strings werden durch Referenzen gespeichert.",
+          "answerCategory": "partially_correct",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Strings werden durch Referenzen gespeichert",
+              "elements": [
+                [
+                  0,
+                  43
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 1
+            }
+          ],
+          "userId": "ea674ab55536a8b603be44d13510e32c7aab02088bf48c2802e4febd"
+        }
+      ]
+    },
+    {
+      "text": "Was passiert bei der Anweisung new String()?",
+      "id": "50721",
+      "title": "Keyword 'new'",
+      "type": "procedure",
+      "aspects": [
+        {
+          "text": "Das Keyword 'new' erzeugt einen leeren String im Speicher"
+        },
+        {
+          "text": "Eine Referenz auf den erzeugten Sting wird zurückgegeben"
+        }
+      ],
+      "assignedWeights": {
+        "Keyword": 3,
+        "'new'": 1,
+        "erzeugen": 4,
+        "leer": 5,
+        "String": 3,
+        "Speicher": 5,
+        "geben": 4,
+        "anschließend": 3,
+        "Referenz": 5,
+        "zurück": 4
+      },
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Das Keyword 'new' erzeugt einen leeren String im Speicher und gibt anschließend die Referenz auf diesen String zurück.",
+          "aspects": [
+            {
+              "text": "Das Keyword 'new' erzeugt einen leeren String im Speicher",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  57
+                ]
+              ]
+            },
+            {
+              "text": "und gibt anschließend die Referenz auf diesen String zurück",
+              "aIdx": 1,
+              "elements": [
+                [
+                  58,
+                  117
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "text": "Es wird eine neue Referenz erstellt",
+          "id": 0,
+          "correctionOrComment": "Es wird eine neue Referenz erstellt",
+          "answerCategory": "partially_correct",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Es wird eine neue Referenz erstellt",
+              "elements": [
+                [
+                  0,
+                  35
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 6
+            }
+          ],
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Ein String wird neu in einer Referenz gespeichert.",
+          "id": 2,
+          "correctionOrComment": "Ein String wird neu in einer Referenz gespeichert.",
+          "answerCategory": "binary_correct",
+          "aspects": [
+            {
+              "text": "Ein String wird neu in einer Referenz gespeichert",
+              "elements": [
+                [
+                  0,
+                  49
+                ]
+              ],
+              "aIdx": 0,
+              "label": 2,
+              "error": true,
+              "errorLabel": 5
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "userId": "4cfc3a1811fe40afa401b25ef7fa0379f1f7c1930a04f8755d678474"
+        },
+        {
+          "text": "Es wird ein neuer String (Objekt) mit dem übergebenen Inhalt erzeugt.",
+          "id": 3,
+          "correctionOrComment": "Es wird ein neuer String (Objekt) mit dem übergebenen Inhalt erzeugt.",
+          "answerCategory": "partially_correct",
+          "aspects": [
+            {
+              "text": "Es wird ein neuer String (Objekt) mit dem übergebenen Inhalt erzeugt",
+              "elements": [
+                [
+                  0,
+                  68
+                ]
+              ],
+              "aIdx": 0,
+              "label": 1,
+              "error": true,
+              "errorLabel": 1
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "bei new String() wird ein neuer String erstellt, versehen mit der referenz und einer 0",
+          "id": 4,
+          "correctionOrComment": "Bei new String() wird ein neuer String erstellt, versehen mit der referenz und einer 0",
+          "answerCategory": "missconception",
+          "aspects": [
+            {
+              "text": "Bei new String() wird ein neuer String erstellt, versehen mit der referenz und einer 0",
+              "elements": [],
+              "aIdx": 0,
+              "label": 2,
+              "error": true,
+              "errorLabel": 1
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "userId": "8a217ea5f39d0f20db42ef9bcb667eacd060a40b50a18655172ec4b8"
+        },
+        {
+          "text": "Es wird ein inhaltsloser String erstellt, also nur eine Referenz für den String. Der Inhalt ist dann null.",
+          "id": 5,
+          "correctionOrComment": "Es wird ein inhaltsloser String erstellt, also nur eine Referenz für den String. Der Inhalt ist dann null.",
+          "answerCategory": "missconception",
+          "aspects": [
+            {
+              "text": "Der Inhalt ist dann null",
+              "elements": [
+                [
+                  81,
+                  105
+                ]
+              ],
+              "aIdx": 0,
+              "label": 2,
+              "error": true,
+              "errorLabel": 1
+            },
+            {
+              "text": "Es wird ein inhaltsloser String erstellt, also nur eine Referenz für den String",
+              "elements": [
+                [
+                  0,
+                  79
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Neues Objekt erstellt auf das referenziert wird",
+          "id": 27,
+          "correctionOrComment": "Es wird ein neues Objekt erstellt auf das referenziert wird",
+          "answerCategory": "partially_correct",
+          "aspects": [
+            {
+              "text": "Es wird ein neues Objekt erstellt",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "auf das referenziert wird",
+              "elements": [
+                [
+                  22,
+                  47
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 4
+            }
+          ],
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Es wird intern ein Pointer auf eine neue Instanz der string-class erstellt. In Java wird einfach ein neues Objekt erzeugt.",
+          "id": 32,
+          "correctionOrComment": "Es wird intern ein Pointer auf eine neue Instanz der String Klasse erstellt. In Java wird einfach ein neues Objekt erzeugt.",
+          "answerCategory": "binary_correct",
+          "aspects": [
+            {
+              "text": "Es wird ;; eine neue Instanz der String Klasse erstellt",
+              "elements": [
+                [
+                  0,
+                  7
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Es wird intern ein Pointer auf eine neue Instanz der String Klasse erstellt",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 4
+            }
+          ],
+          "userId": "9cbcb7142c0ba8e0acabe63fa0665db839f24ed7f11f2b8e2e8f47b6"
+        }
+      ]
+    },
+    {
+      "text": "Was ist ein Array?",
+      "id": "50722",
+      "title": "Datenstruktur Array",
+      "type": "definition",
+      "aspects": [
+        {
+          "text": "eine Datenstruktur fester Größe"
+        },
+        {
+          "text": "enhält eine Sequenz von Variablen"
+        },
+        {
+          "text": "alle Variablen müssen den gleichen Typ haben"
+        }
+      ],
+      "assignedWeights": {
+        "sein": 2,
+        "Datenstruktur": 4,
+        "fest": 5,
+        "Größe": 5,
+        "Sequenz": 4,
+        "Daten": 3,
+        "gleich": 5,
+        "Typ": 5,
+        "enthalten": 4
+      },
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Ein Array ist eine Datenstruktur fester Größe, die eine Sequenz von Daten gleichen Typs enthält.",
+          "aspects": [
+            {
+              "text": "Ein Array ist eine Datenstruktur fester Größe",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  45
+                ]
+              ]
+            },
+            {
+              "text": "die eine Sequenz von Variablen ;; enthält",
+              "aIdx": 1,
+              "elements": [
+                [
+                  47,
+                  73
+                ],
+                [
+                  88,
+                  95
+                ]
+              ]
+            },
+            {
+              "text": "die ;; Variablen gleichen Typs enthält",
+              "aIdx": 2,
+              "elements": [
+                [
+                  47,
+                  50
+                ],
+                [
+                  68,
+                  95
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "text": "ein array ist ein Feld in dem Daten gespeichert werden",
+          "id": 0,
+          "correctionOrComment": "Ein Array ist ein Feld in dem Daten gespeichert werden",
+          "answerCategory": "partially_correct",
+          "aspects": [
+            {
+              "text": "Ein Array ist ein Feld in dem Daten gespeichert werden",
+              "elements": [],
+              "aIdx": 0,
+              "label": 1,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 1
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 1
+            }
+          ],
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Ein Array dient zur Speicherung mehrerer Elemente eines bestimmten Datentyps. Seine Länge ist konstant und wird bei seiner Erstellung festgelegt. Arrays können auch andere Arrays enthalten, dabei spricht man von mehrdimensionalen Arrays.",
+          "id": 1,
+          "correctionOrComment": "Ein Array dient zur Speicherung mehrerer Elemente eines bestimmten Datentyps. Seine Länge ist konstant und wird bei seiner Erstellung festgelegt. Arrays können auch andere Arrays enthalten, dabei spricht man von mehrdimensionalen Arrays.",
+          "answerCategory": "partially_correct",
+          "aspects": [
+            {
+              "text": "Seine Länge ist konstant und wird bei seiner Erstellung festgelegt",
+              "elements": [
+                [
+                  78,
+                  144
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 2
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 1
+            },
+            {
+              "text": "Ein Array dient zur Speicherung mehrerer Elemente eines bestimmten Datentyps",
+              "elements": [
+                [
+                  0,
+                  76
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "userId": "8bbd52208353c14f154f1402cebf5829afb1708d06b5dc25064dff23"
+        },
+        {
+          "text": "Ein Array ist ein Datentyp, der zur Speicherung und Verwendung mehrerer Werte eines Typs dient.",
+          "id": 2,
+          "correctionOrComment": "Ein Array ist ein Datentyp, der zur Speicherung und Verwendung mehrerer Werte eines Typs dient.",
+          "answerCategory": "partially_correct",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "Ein Array ist ein Datentyp, der zur Speicherung und Verwendung mehrerer Werte eines Typs dient",
+              "elements": [
+                [
+                  0,
+                  94
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0,
+              "error": true,
+              "errorLabel": 2
+            }
+          ],
+          "userId": "4cfc3a1811fe40afa401b25ef7fa0379f1f7c1930a04f8755d678474"
+        },
+        {
+          "text": "In einem array können Werte gespeichert werden er kann auch mehrdemensional sein",
+          "id": 4,
+          "correctionOrComment": "In einem array können Werte gespeichert werden er kann auch mehrdemensional sein",
+          "answerCategory": "partially_correct",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "userId": "8a217ea5f39d0f20db42ef9bcb667eacd060a40b50a18655172ec4b8"
+        },
+        {
+          "text": "Ein Array ist ein Objekt, welches eine Reihe von Elementen beinhalten kann. Bei bestimmten Datentypen-Arrays können nur Elemente dieses Datentyps enthalten sein.",
+          "id": 5,
+          "correctionOrComment": "Ein Array ist ein Objekt, welches eine Reihe von Elementen beinhalten kann. Bei bestimmten Datentypen-Arrays können nur Elemente dieses Datentyps enthalten sein.",
+          "answerCategory": "partially_correct",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Ein Array ist ein Objekt, welches eine Reihe von Elementen beinhalten kann",
+              "elements": [
+                [
+                  0,
+                  74
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Bei bestimmten Datentypen-Arrays können nur Elemente dieses Datentyps enthalten sein",
+              "elements": [
+                [
+                  76,
+                  160
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "kann mehrdimensional sein. Speichert einzelne primitive Datentypen in einer Reihenfolge und versieht sie mit Indizes, leichter zugriff. feste größe.",
+          "id": 18,
+          "correctionOrComment": "Ein Array kann mehrdimensional sein, speichert einzelne primitive Datentypen in einer Reihenfolge und versieht sie mit Indizes, erlaubt leichten einen Zugriff und hat eine feste größe.",
+          "answerCategory": "partially_correct",
+          "aspects": [
+            {
+              "text": "Ein Array ;; hat eine feste größe ",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "Ein Array ;; speichert ;; Datentypen in einer Reihenfolge",
+              "elements": [
+                [
+                  56,
+                  87
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Ein Array ;; speichert einzelne primitive Datentypen",
+              "elements": [],
+              "aIdx": 2,
+              "label": 2,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Datentyp der eine Sequenz von Werten den gleichen Datentyps speichert",
+          "id": 20,
+          "correctionOrComment": "Datentyp der eine Sequenz von Werten des gleichen Datentyps speichert",
+          "answerCategory": "partially_correct",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Datentyp der eine Sequenz von Werten ;; speichert",
+              "elements": [
+                [
+                  0,
+                  36
+                ],
+                [
+                  60,
+                  69
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "Datentyp der eine Sequenz von Werten des gleichen Datentyps speichert",
+              "elements": [],
+              "aIdx": 2,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "userId": "8a1c55283fd2fc15f72ad8c88c9dcc447f528814a41bf2a7ab51950a"
+        },
+        {
+          "text": "Eine Datenstruktur zur Speicherung von gleichartigen Werten",
+          "id": 22,
+          "correctionOrComment": "Eine Datenstruktur zur Speicherung von gleichartigen Werten",
+          "answerCategory": "partially_correct",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Eine Datenstruktur zur Speicherung von gleichartigen Werten",
+              "elements": [
+                [
+                  0,
+                  59
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0,
+              "error": true,
+              "errorLabel": 4
+            }
+          ],
+          "userId": "6332531eeafc6e0ede272192be898f549950fb32b209d04f0a98306a"
+        }
+      ]
+    },
+    {
+      "text": "Beschreibe das Vorgehen bei der binären Suche.",
+      "id": "50731",
+      "title": "Binäre Suche",
+      "type": "procedure",
+      "aspects": [
+        {
+          "text": "Es wird immer nur das mittlere Element der Menge mit dem gesuchten Element verglichen"
+        },
+        {
+          "text": "Das Ergebnis des Vergleichs bestimmt die neue noch zu durchsuchende Menge"
+        }
+      ],
+      "assignedWeights": {
+        "werden": 3,
+        "immmer": 4,
+        "nur": 3,
+        "mittel": 5,
+        "Element": 5,
+        "Menge": 4,
+        "mit": 3,
+        "suchen": 3,
+        "vergleichen": 5,
+        "Ergebnis": 4,
+        "Vergleich": 4,
+        "bestimmen": 4,
+        "neu": 3,
+        "noch": 3,
+        "durchsuchen": 3
+      },
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Es wird immer nur das mittlere Element der Menge mit dem gesuchten Element verglichen. Das Ergebnis des Vergleichs bestimmt die neue noch zu durchsuchende Menge.",
+          "aspects": [
+            {
+              "text": "Es wird immer nur das mittlere Element der Menge mit dem gesuchten Element verglichen",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  85
+                ]
+              ]
+            },
+            {
+              "text": "Das Ergebnis des Vergleichs bestimmt die neue noch zu durchsuchende Menge",
+              "aIdx": 1,
+              "elements": [
+                [
+                  87,
+                  160
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "text": "Da das Array bei der binären Suche sortiert ist, wird dieses in zwei Hälften aufgeteilt und das Array so verkleinert, bis der gesuchte Wert gefunden ist. Hierbei kann natürlich auch der Anfang, das Ende oder die Mitte der gesuchte Wert sein.",
+          "id": 1,
+          "correctionOrComment": "Da das Array bei der binären Suche sortiert ist, wird dieses in zwei Hälften aufgeteilt und das Array so verkleinert, bis der gesuchte Wert gefunden ist. Hierbei kann natürlich auch der Anfang, das Ende oder die Mitte der gesuchte Wert sein.",
+          "answerCategory": "partially_correct",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 7
+            },
+            {
+              "text": "wird dieses in zwei Hälften aufgeteilt und das Array so verkleinert",
+              "elements": [
+                [
+                  49,
+                  116
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "userId": "4cfc3a1811fe40afa401b25ef7fa0379f1f7c1930a04f8755d678474"
+        },
+        {
+          "text": "Anders als bei der linearen Suche, wird hier das Intervall halbiert, sodass die Chance besteht das gesuchte Element schneller zu finden.",
+          "id": 2,
+          "correctionOrComment": "Anders als bei der linearen Suche, wird hier das Intervall halbiert, sodass die Chance besteht das gesuchte Element schneller zu finden.",
+          "answerCategory": "partially_correct",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 7
+            },
+            {
+              "text": "wird hier das Intervall halbiert",
+              "elements": [
+                [
+                  35,
+                  67
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1,
+              "error": true,
+              "errorLabel": 5
+            }
+          ],
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Ein vergleich Element wird ungefähr in der Mitte des Arrays bestimmt. Anschließend wird das gesuchte Element mit diesem verglichen und geguckt ob die Elemente gleich sind. Oder das gesuchte Element kleiner oder größer ist. Ist der gesuchte Wert größer wird Start auf vergleich + 1 gesetzt. Ist der gesuchte Wert kleiner wird Ende auf vergeleich - 1 gesetzt. Dies wird so lange wiederholt bis das gesuchte Element gefunden wurde oder Start > Ende.",
+          "id": 3,
+          "correctionOrComment": "Ein vergleich Element wird ungefähr in der Mitte des Arrays bestimmt. Anschließend wird das gesuchte Element mit diesem verglichen und geguckt ob die Elemente gleich sind. Oder das gesuchte Element kleiner oder größer ist. Ist der gesuchte Wert größer wird Start auf Vergleich + 1 gesetzt. Ist der gesuchte Wert kleiner wird Ende auf Vergleich - 1 gesetzt. Dies wird so lange wiederholt bis das gesuchte Element gefunden wurde oder Start > Ende.",
+          "answerCategory": "correct",
+          "aspects": [
+            {
+              "text": "Ein vergleich Element wird ungefähr in der Mitte des Arrays bestimmt. Anschließend wird das gesuchte Element mit diesem verglichen",
+              "elements": [
+                [
+                  0,
+                  130
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Ist der gesuchte Wert größer wird Start auf Vergleich + 1 gesetzt. Ist der gesuchte Wert kleiner wird Ende auf Vergleich - 1 gesetzt",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1,
+              "error": true,
+              "errorLabel": 7
+            }
+          ],
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Bei der Binären Suche betrachten wir drei Punkte im Array, Ende, Start und den Vergleichswert. Entspricht der vergleichswert dem gesuchten wird sein index ausgegeben. ist der vergleichswert größer wird er zum neuen Ende, wenn kleicher zum neuen start. so halbieren wir pro Runde die länge der zu durchlaufenden elemente",
+          "id": 4,
+          "correctionOrComment": "Bei der Binären Suche betrachten wir drei Punkte im Array, Ende, Start und den Vergleichswert. Entspricht der Vergleichswert dem gesuchten wird sein index ausgegeben. ist der Vergleichswert größer wird er zum neuen Ende, wenn kleiner zum neuen Start. So halbieren wir pro Runde die länge der zu durchlaufenden Elemente",
+          "answerCategory": "correct",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 7
+            },
+            {
+              "text": "So halbieren wir pro Runde die länge der zu durchlaufenden Elemente",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        }
+      ]
+    },
+    {
+      "text": "Was gehört zu der Signatur einer Operation in Java?",
+      "id": "50809",
+      "title": "Signatur in Java",
+      "type": "definition",
+      "aspects": [
+        {
+          "text": "der Name"
+        },
+        {
+          "text": "die Parameter",
+          "implied": true
+        },
+        {
+          "text": "die Parameterzahl und Reihenfolge der Typen"
+        }
+      ],
+      "assignedWeights": {
+        "Signatur": 1,
+        "gehören": 1,
+        "Name": 5,
+        "Parameter": 5,
+        "insbesondere": 0,
+        "Parameterzahl": 4,
+        "Reihenfolge": 5,
+        "Typ": 5
+      },
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Zur Signatur gehören der Name und die Parameter, insbesondere die Parameterzahl und Reihenfolge der Typen.",
+          "aspects": [
+            {
+              "text": "Zur Signatur gehören der Name",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  29
+                ]
+              ]
+            },
+            {
+              "text": "Zur Signatur gehören ;; die Parameter",
+              "aIdx": 1,
+              "elements": [
+                [
+                  0,
+                  20
+                ],
+                [
+                  34,
+                  47
+                ]
+              ],
+              "implied": true
+            },
+            {
+              "text": "Zur Signatur gehören ;; insbesondere die Parameterzahl und Reihenfolge der Typen",
+              "aIdx": 2,
+              "elements": [
+                [
+                  0,
+                  20
+                ],
+                [
+                  49,
+                  105
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "text": "Der Name der Operation, Anzahl und Typ ihrer Parameter.",
+          "id": 1,
+          "correctionOrComment": "Dazu gehören der Name der Operation und Anzahl und Typ ihrer Parameter.",
+          "answerCategory": "correct",
+          "aspects": [
+            {
+              "text": "Dazu gehören der Name der Operation",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 6
+            },
+            {
+              "text": "Dazu gehören ;; Anzahl und Typ ihrer Parameter",
+              "elements": [
+                [
+                  24,
+                  54
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0,
+              "error": true,
+              "errorLabel": 6
+            }
+          ],
+          "userId": "4cfc3a1811fe40afa401b25ef7fa0379f1f7c1930a04f8755d678474"
+        },
+        {
+          "text": "Der Name und die Übergabeparameter.",
+          "id": 3,
+          "correctionOrComment": "Der Name und die Übergabeparameter.",
+          "answerCategory": "partially_correct",
+          "aspects": [
+            {
+              "text": "Der Name",
+              "elements": [
+                [
+                  0,
+                  8
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "die Übergabeparameter",
+              "elements": [
+                [
+                  13,
+                  34
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 3
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Rückgabewert, Methodenname, Parameter",
+          "id": 4,
+          "correctionOrComment": "Rückgabewert, Methodenname, Parameter",
+          "answerCategory": "partially_correct",
+          "aspects": [
+            {
+              "text": "Methodenname",
+              "elements": [
+                [
+                  14,
+                  26
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 3
+            },
+            {
+              "text": "Parameter",
+              "elements": [
+                [
+                  28,
+                  37
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Public oder private, die übergebenen Argumente und zurückgegebener Datentyp oder void.",
+          "id": 5,
+          "correctionOrComment": "Public oder private, die übergebenen Argumente und zurückgegebener Datentyp oder void.",
+          "answerCategory": "partially_correct",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": " die übergebenen Argumente",
+              "elements": [
+                [
+                  21,
+                  46
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 4
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "userId": "7ba019a2553e1137a4bbb8d3c779a48e5ceb2ca3a162e6e0a945ef0f"
+        },
+        {
+          "text": "Die Rückgabe und Eingabe der Operation.",
+          "id": 9,
+          "correctionOrComment": "Die Rückgabe und Eingabe der Operation.",
+          "answerCategory": "missconception",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Die ;; Eingabe der Operation",
+              "elements": [
+                [
+                  0,
+                  3
+                ],
+                [
+                  17,
+                  38
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 4
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "userId": "31da1a042dc910775ed8b487afbdafd929a7afdeaadc660cb963bd26"
+        },
+        {
+          "text": "Der Rückgabetyp, der Operationsname und die übergebenen Parameter.",
+          "id": 10,
+          "correctionOrComment": "Der Rückgabetyp, der Operationsname und die übergebenen Parameter.",
+          "answerCategory": "partially_correct",
+          "aspects": [
+            {
+              "text": "der Operationsname",
+              "elements": [
+                [
+                  17,
+                  35
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 3
+            },
+            {
+              "text": "die übergebenen Parameter",
+              "elements": [
+                [
+                  40,
+                  65
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        }
+      ]
+    },
+    {
+      "text": "Warum sind Sortierverfahren die darauf beruhen Fehlstellungen von Nachbarn zu beheben im best-case besser als n*log(n)?",
+      "id": "50888",
+      "title": "BubbleSort",
+      "type": "reason",
+      "aspects": [
+        {
+          "text": "Bei einem sortierten Array gibt es keine Fehlstellungen"
+        },
+        {
+          "text": "Das Array muss nur einmal durchlaufen werden"
+        }
+      ],
+      "assignedWeights": {
+        "sortiert": 5,
+        "Array": 3,
+        "geben": 3,
+        "kein": 5,
+        "Fehlstellungen": 5,
+        "müssen": 2,
+        "nur": 3,
+        "einmal": 5,
+        "durchlaufen": 5,
+        "werden": 1
+      },
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Bei einem sortierten Array gibt es keine Fehlstellungen. Das Array muss deshalb nur einmal durchlaufen werden.",
+          "aspects": [
+            {
+              "text": "Bei einem sortierten Array gibt es keine Fehlstellungen",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  55
+                ]
+              ]
+            },
+            {
+              "text": "Das Array muss deshalb nur einmal durchlaufen werden",
+              "aIdx": 1,
+              "elements": [
+                [
+                  57,
+                  109
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "text": "Weil ein sortiertes Array nur genau n Vergleiche und somit eine Laufzeit von O(n) benötigt.",
+          "id": 1,
+          "aspects": [
+            {
+              "text": "ein sortiertes Array",
+              "elements": [
+                [
+                  5,
+                  25
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Weil ein sortiertes Array nur genau n Vergleiche ;; benötigt",
+              "elements": [
+                [
+                  0,
+                  48
+                ],
+                [
+                  82,
+                  90
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1,
+              "error": true,
+              "errorLabel": 1
+            }
+          ],
+          "correctionOrComment": "Weil ein sortiertes Array nur genau n Vergleiche und somit eine Laufzeit von O(n) benötigt.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Das array wird nur einmal durchgelaufen dh die Laufzeit ist n",
+          "id": 6,
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 1
+            },
+            {
+              "text": "Das Array wird nur einmal durchgelaufen",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Das Array wird nur einmal durchgelaufen dh die Laufzeit ist n",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Falls die Menge vorsortiert ist, wird dies durch ein einmaliges durchlaufen sofort festgestellt.",
+          "id": 8,
+          "aspects": [
+            {
+              "text": "Falls die Menge vorsortiert ist",
+              "elements": [
+                [
+                  0,
+                  31
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 4
+            },
+            {
+              "text": "wird dies durch ein einmaliges durchlaufen sofort festgestellt",
+              "elements": [
+                [
+                  33,
+                  95
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 4
+            }
+          ],
+          "correctionOrComment": "Falls die Menge vorsortiert ist, wird dies durch ein einmaliges durchlaufen sofort festgestellt.",
+          "userId": "31da1a042dc910775ed8b487afbdafd929a7afdeaadc660cb963bd26"
+        }
+      ]
+    },
+    {
+      "text": "Was ist die Idee von Heapsort?",
+      "id": "50889",
+      "title": "Idee HeapSort",
+      "type": "procedure",
+      "aspects": [
+        {
+          "text": "Die durch Vergleiche erlangten Informationen in einem Binärbaum zu speichern"
+        },
+        {
+          "text": "Alle Väter des Binärbaumes sind größer ist als seine Söhne"
+        },
+        {
+          "text": "Das größte Element befindet in der Wurzel",
+          "implied": true
+        },
+        {
+          "text": "Die Wurzel wird iterativ entfernt und der Baum wird wiederhergestellt"
+        }
+      ],
+      "assignedWeights": {
+        "Grundidee": 1,
+        "sein": 1,
+        "durch": 3,
+        "Vergleich": 5,
+        "erlangen": 2,
+        "Information": 5,
+        "Binärbaum": 4,
+        "speichern": 4,
+        "Element": 2,
+        "werden": 1,
+        "übertragen": 2,
+        "Baum": 3,
+        "Vater": 5,
+        "groß": 4,
+        "als": 4,
+        "Sohn": 5,
+        "befinden": 4,
+        "somit": 1,
+        "Wurzel": 5,
+        "iterativ": 5,
+        "entfernen": 5,
+        "wiederherstellen": 5
+      },
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Die Grundidee ist es die durch Vergleiche erlangten Informationen in einem Binärbaum zu speichern. Die Elemente werden so in den Baum übertragen, dass der Vater größer ist als seine Söhne. Das größte Element befindet sich somit in der Wurzel. Es wird iterativ entfernt und der Baum wird wiederhergestellt.",
+          "aspects": [
+            {
+              "text": "Die Grundidee ist es die durch Vergleiche erlangten Informationen in einem Binärbaum zu speichern",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  97
+                ]
+              ]
+            },
+            {
+              "text": "Die Elemente werden so in den Baum übertragen, dass der Vater größer ist als seine Söhne",
+              "aIdx": 1,
+              "elements": [
+                [
+                  99,
+                  187
+                ]
+              ]
+            },
+            {
+              "text": "Das größte Element befindet sich somit in der Wurzel",
+              "aIdx": 2,
+              "elements": [
+                [
+                  189,
+                  241
+                ]
+              ]
+            },
+            {
+              "text": "Es wird iterativ entfernt und der Baum wird wiederhergestellt",
+              "aIdx": 3,
+              "elements": [
+                [
+                  243,
+                  304
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "text": "In einem Binärbaum wird der Vater als größeres Element mit seinen kleineren Kindern dargestellt.",
+          "id": 3,
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 6
+            },
+            {
+              "text": "In einem Binärbaum wird der Vater als größeres Element",
+              "elements": [
+                [
+                  0,
+                  54
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0,
+              "error": true,
+              "errorLabel": 6
+            },
+            {
+              "aIdx": 3,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "In einem Binärbaum wird der Vater als größeres Element mit seinen kleineren Kindern dargestellt.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Alle Vergleiche werden genutzt. Die Beziehung des Vaters zu seinen Kindern ist stets, dass der Vater größer als seine Kinder ist. Das Maximum ist die Wurzel d.h. immer bekannt in einem Heap. Die Wurzel wird abgeschnitten und in ein Array gepackt, anschließend das letzte Blatt an den Platz der Wurzel gesetzt und der Baum wird zu einem Heap repariert, woraufhin das Maximum wieder bekannt ist und wieder abgeschnitten werden kann...",
+          "id": 7,
+          "aspects": [
+            {
+              "text": "Alle Vergleiche werden genutzt",
+              "elements": [
+                [
+                  0,
+                  30
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 4
+            },
+            {
+              "text": " Die Beziehung des Vaters zu seinen Kindern ist stets, dass der Vater größer als seine Kinder ist",
+              "elements": [
+                [
+                  32,
+                  128
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Das Maximum ist die Wurzel",
+              "elements": [
+                [
+                  130,
+                  156
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Die Wurzel wird abgeschnitten und in ein Array gepackt, anschließend das letzte Blatt an den Platz der Wurzel gesetzt und der Baum wird zu einem Heap repariert, woraufhin das Maximum wieder bekannt ist und wieder abgeschnitten werden kann",
+              "elements": [
+                [
+                  191,
+                  429
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Alle Vergleiche werden genutzt. Die Beziehung des Vaters zu seinen Kindern ist stets, dass der Vater größer als seine Kinder ist. Das Maximum ist die Wurzel d.h. immer bekannt in einem Heap. Die Wurzel wird abgeschnitten und in ein Array gepackt, anschließend das letzte Blatt an den Platz der Wurzel gesetzt und der Baum wird zu einem Heap repariert, woraufhin das Maximum wieder bekannt ist und wieder abgeschnitten werden kann...",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Die Menge wird als ein Heap betrachtet, bei dem der Vater immer größer als seine Kinder ist. Dann entspricht die Wurzel immer dem Maximum und dieses kann mehrmals herausgelesen werden.",
+          "id": 10,
+          "aspects": [
+            {
+              "text": "Die Menge wird als ein Heap betrachtet",
+              "elements": [
+                [
+                  0,
+                  38
+                ]
+              ],
+              "aIdx": 0,
+              "label": 1,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "bei dem der Vater immer größer als seine Kinder ist",
+              "elements": [
+                [
+                  40,
+                  91
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Dann entspricht die Wurzel immer dem Maximum",
+              "elements": [
+                [
+                  93,
+                  137
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "dieses kann mehrmals herausgelesen werden",
+              "elements": [
+                [
+                  142,
+                  183
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0,
+              "error": true,
+              "errorLabel": 4
+            }
+          ],
+          "correctionOrComment": "Die Menge wird als ein Heap betrachtet, bei dem der Vater immer größer als seine Kinder ist. Dann entspricht die Wurzel immer dem Maximum und dieses kann mehrmals herausgelesen werden.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Die Elemente werden so in einem Binärbaum arrangiert, dass eine Kante immer einen Vergleich zwischen zwei Elementen darstellt, bei welchem der Vater das größere Element ist. Die so gespeicherten Vergleichsinformationen verschnellern die Suche nach dem größten Element.",
+          "id": 23,
+          "aspects": [
+            {
+              "text": "Die Elemente werden so in einem Binärbaum arrangiert, dass eine Kante immer einen Vergleich zwischen zwei Elementen darstellt ;",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 4
+            },
+            {
+              "text": "bei welchem der Vater das größere Element is; Die so gespeicherten Vergleichsinformationen verschnellern die Suche nach dem größten Element",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 7
+            },
+            {
+              "aIdx": 3,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die Elemente werden so in einem Binärbaum arrangiert, dass eine Kante immer einen Vergleich zwischen zwei Elementen darstellt, bei welchem der Vater das größere Element ist. Die so gespeicherten Vergleichsinformationen verschnellern die Suche nach dem größten Element.",
+          "userId": "8416c38cc898f1ac7cc9d64e89dab1f70f5ddab002a5b2a1713f93f5"
+        }
+      ]
+    }
+  ]
+}

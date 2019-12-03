@@ -1,5 +1,5 @@
-# Germalemmatizer = GermaLemma(tiger_corpus="tiger/tiger_release_aug07.corrected.16012013.conll09")
-# Germalemmatizer.save_to_pickle("tiger/tiger_lemmas.pkl")
+# Germalemmatizer = GermaLemma(tiger_corpus="lib/tiger/tiger_release_aug07.corrected.16012013.conll09")
+# Germalemmatizer.save_to_pickle("lib/tiger/tiger_lemmas.pkl")
 from .customIWNLPLemmatizer import CustomIWNLPLemmatizer
 from .customGermaLemma import CustomGermaLemma
 from subprocess import check_output
@@ -239,7 +239,7 @@ class TokenAnnotator(object):
         with open(join(FILE_PATH,"infVocab.json"), "r") as f:
             self.infoVocab = json.load(f)
         # self.iwnlpLemmatizer = CustomIWNLPLemmatizer('lib/IWNLP.Lemmatizer_20170501.json')
-        self.germaLemmatizer = CustomGermaLemma(pickle=join(FILE_PATH,"tiger","tiger_lemmas.pkl"))
+        self.germaLemmatizer = CustomGermaLemma(pickle=join(FILE_PATH,"lib","tiger","tiger_lemmas.pkl"))
 
     def checkPos(self, word, pos):
         if(word in POS_CORRECTIONS and POS_CORRECTIONS[word]!=pos):

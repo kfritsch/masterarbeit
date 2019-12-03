@@ -60,7 +60,7 @@ def generateSemvalFeatureFiles(featureFile, annFile, testSet=False, vocabFile=No
                 if(useCorrectAsRef and answer["answerCategory"]=="correct"):
                     question["studentReferenceAnswers"].append(answer)
         featureExtrator.prepareReferenceAnswers(useCorrectAsRef=not(unseenQuestion) and useCorrectAsRef)
-
+        print("feat")
         for aIdx, answer in enumerate(question["studentAnswers"]):
             featureExtrator.extractFeatures(answer, predDist=not(unseenQuestion), vocab=True)
             # if(not("sulAlign" in answer["features"])):
@@ -72,16 +72,20 @@ def generateSemvalFeatureFiles(featureFile, annFile, testSet=False, vocabFile=No
     if(not(testSet)): saveTrainingVocab(vocabFile, questionData)
     if(not(isfile(annFile))): saveTokenAnnotation(annFile, questionData)
 
-def generateVipsFeatureFiles(qFile, featureFile, annFile, testSet=False, vocabFile=None, trainSize=None, useCorrectAsRef=False):
+def generateVipsFeatureFiles(featureFile, annFile, testSet=False, vocabFile=None, trainSize=None, useCorrectAsRef=False, annMatch=False):
     if(isfile(annFile)):
         with open(annFile, "r") as f:
             questionData = json.load(f)
     else:
-        with open(qFile, "r") as f:
-            questionsObj = json.load(f)
-            questionData = {}
-            for question in questionsObj["questions"]:
-                questionData[question["id"]] = question
+        questionData = {}
+        dataSplit = testSet if testSet else "train"
+        for dataSet in ["CSSAG", "VIPS"]:
+            qFile = join(VIPS_PATH, dataSet + "_" + dataSplit + ".json")
+            with open(qFile, "r") as f:
+                questionsObj = json.load(f)
+                for question in questionsObj["questions"]:
+                    question["dataset"] = dataSet
+                    questionData[question["id"]] = question
 
     if(testSet=="UA"):
         with open(vocabFile, "r") as f:
@@ -94,6 +98,7 @@ def generateVipsFeatureFiles(qFile, featureFile, annFile, testSet=False, vocabFi
                 question["studentReferenceAnswers"] = trainedVocab[question["id"]]["studentReferenceAnswers"]
 
     featureExtrator = AspectsFeatureExtractor(simMeasure="fasttext", lang="de")
+    annMatch = not(testSet) or annMatch
     for qIdx, qId in enumerate(questionData.keys()):
         question = questionData[qId]
         unseenQuestion = testSet == "UQ"
@@ -109,13 +114,37 @@ def generateVipsFeatureFiles(qFile, featureFile, annFile, testSet=False, vocabFi
                 if(useCorrectAsRef and len(answer["aspects"])==len(question["aspects"]) and all([aspect["label"] == 0 for aspect in answer["aspects"]])):
                     question["studentReferenceAnswers"].append(answer)
         featureExtrator.prepareReferenceAspects(useCorrectAsRef=not(unseenQuestion) and useCorrectAsRef)
-
         for aIdx, answer in enumerate(question["studentAnswers"]):
-            # featureExtrator.extractAspectFeatures(answer, train=not(testSet), predDist=not(unseenQuestion), vocab=True)
-            featureExtrator.extractAspectFeatures(answer, train=True, predDist=not(unseenQuestion), vocab=True)
-    saveFeatureJSON(questionData, featureFile, True)
+            featureExtrator.extractAspectFeatures(answer, annMatch=annMatch, predDist=not(unseenQuestion), vocab=True)
+    print("SAVING:   {}".format(featureFile))
+    # saveFeatureJSON(questionData, featureFile, True)
     if(not(testSet)): saveTrainingVocab(vocabFile, questionData)
-    if(not(isfile(annFile))): saveTokenAnnotation(annFile, questionData)
+
+    if(testSet):
+        if(annMatch):
+            annFile = join(VIPS_TOKENANN_PATH, "annotatedMatch" + testSet + ".json")
+        else:
+            annFile = join(VIPS_TOKENANN_PATH, "predictedMatch" + testSet + ".json")
+        saveTokenAnnotation(annFile, questionData)
+    # if(not(isfile(annFile))): saveTokenAnnotation(annFile, questionData)
+
+def getAnswerCategoryFromAspects(answer, question):
+    for aIdx,aspect in enumerate(question["aspects"]):
+        if("implied"  in aspect):
+            continue
+        foundCorrect = False
+        for studAspect in answer["aspects"]:
+            if(studAspect["aIdx"] == aIdx):
+                if(studAspect["label"]==0):
+                    foundCorrect = True
+                    break
+                else:
+                    break
+        if(not(foundCorrect)):
+            answer["answerCategory"] = "none"
+            return
+    answer["answerCategory"] = "correct"
+    return
 
 def getQuestionData(dataSet):
     dataPathes = SEMVAL_PATHES[dataSet]
@@ -151,9 +180,9 @@ def parseSemval(xmlPath):
     return  questionDict
 
 def saveTokenAnnotation(annFile, questionData):
-    questionKeys = ["id","title","text","type","aspects","qtype","stype","module","dataset"]
+    questionKeys = ["id","title","text","type","aspects","qtype","stype","module","dataset","assignedWeights"]
     generalAnswerKeys = ["id","text","correctionOrComment","answerCategory","tokens","alignAnn"]
-    aspectKeys = ["aIdx","text","elements","label"]
+    aspectKeys = ["aIdx","text","elements","label","tokenIds"]
     saveData = {}
     for qId in questionData.keys():
         question = questionData[qId]
@@ -211,13 +240,14 @@ def saveFeatureJSON(questionsAnnotation, featurePath, aspects=False):
     featureData = {}
     aspectKeys = ["features", "unknownContentWords", "refAnsId"]
     wholeKeys = ["features", "refAnsId"]
+    aspectLabelName = ["correct", "unprecise", "missconception", "missing"]
     for qId,question in questionsAnnotation.items():
         featureData[qId] = {}
         for aIdx, answer in enumerate(question["studentAnswers"]):
             if(aspects):
                 featureData[qId][answer["id"]] = []
                 for aspect in answer["aspects"]:
-                    featureEntry = {"label": aspect["label"] == 0, "category": aspect["label"]}
+                    featureEntry = {"label": aspect["label"] == 0, "category": aspectLabelName[aspect["label"]], "dataset": question["dataset"]}
                     for key in aspectKeys:
                         if(key in aspect): featureEntry[key] = aspect[key]
                     featureData[qId][answer["id"]].append(featureEntry)
@@ -422,7 +452,7 @@ def splitASMA(dataName):
 
 
 def extractSEMVALFeatureData():
-    for dataSet in ["train", "UA","UQ", "UD"]:
+    for dataSet in ["train","UA","UQ", "UD"]:
         featurePath = join(SEM_FEATURES_PATH, dataSet, "MRA.json")
         annPath = join(SEM_TOKENANN_PATH, dataSet + "_MRA.json")
         vocabPath = join(SEM_VOCAB_PATH, "MRA.json")
@@ -452,32 +482,34 @@ def extractSEMVALFeatureData():
 
 def extractVIPSFeatureData():
     for dataSet in ["train","UA","UQ"]:
-        qDataPath = join(VIPS_PATH, "CSSAG_" + dataSet + ".json")
-        featurePath = join(VIPS_FEATURES_PATH, dataSet, "CSSAG_ASP_ANN.json")
-        annPath = join(VIPS_TOKENANN_PATH, dataSet + "_CSSAG_ASP.json")
-        vocabPath = join(VIPS_VOCAB_PATH, "CSSAG_ASP_ANN.json")
+        featurePath = join(VIPS_FEATURES_PATH, dataSet, "CM_WA.json")
+        annPath = join(VIPS_TOKENANN_PATH, dataSet + "_MRA.json")
+        vocabPath = join(VIPS_VOCAB_PATH, "MTEST.json")
         testSet = False if(dataSet=="train") else dataSet
-        generateVipsFeatureFiles(qDataPath, featurePath, annPath, testSet, vocabPath)
+        generateVipsFeatureFiles(featurePath, annPath, testSet, vocabPath)
+        if(testSet):
+            featurePath = join(VIPS_FEATURES_PATH, dataSet, "MRA_AM.json")
+            generateVipsFeatureFiles(featurePath, annPath, testSet, vocabPath, None, False, True)
+
     # for trainSize in [5,10,15,20,25,30]:
     #     for dataSet in ["train", "UA"]:
-    #         featurePath = join(SEM_FEATURES_PATH, dataSet, "MRA{}.json".format(trainSize))
-    #         annPath = join(SEM_TOKENANN_PATH, dataSet + "_MRA.json")
-    #         vocabPath = join(SEM_VOCAB_PATH, "MRA{}.json".format(trainSize))
+    #         featurePath = join(VIPS_FEATURES_PATH, dataSet, "MRA{}.json".format(trainSize))
+    #         annPath = join(VIPS_TOKENANN_PATH, dataSet + "_MRA.json")
+    #         vocabPath = join(VIPS_VOCAB_PATH, "MRA{}.json".format(trainSize))
     #         testSet = False if(dataSet=="train") else dataSet
     #         generateVipsFeatureFiles(featurePath, annPath, testSet, vocabPath, trainSize)
 
-    for dataSet in ["train", "UA","UQ"]:
-        qDataPath = join(VIPS_PATH, "CSSAG_" + dataSet + ".json")
-        featurePath = join(VIPS_FEATURES_PATH, dataSet, "CSSAG_ASP_PRA_ANN.json")
-        annPath = join(VIPS_TOKENANN_PATH, dataSet + "_CSSAG_ASP.json")
-        vocabPath = join(VIPS_VOCAB_PATH, "CSSAG_ASP_PRA_ANN.json")
-        testSet = False if(dataSet=="train") else dataSet
-        generateVipsFeatureFiles(qDataPath, featurePath, annPath, testSet, vocabPath, None, True)
+    # for dataSet in ["train", "UA","UQ"]:
+    #     featurePath = join(VIPS_FEATURES_PATH, dataSet, "PRA.json")
+    #     annPath = join(VIPS_TOKENANN_PATH, dataSet + "_MRA.json")
+    #     vocabPath = join(VIPS_VOCAB_PATH, "PRA.json")
+    #     testSet = False if(dataSet=="train") else dataSet
+    #     generateVipsFeatureFiles(featurePath, annPath, testSet, vocabPath, None, True)
     # for trainSize in [5,10,15,20,25,30]:
     #     for dataSet in ["train", "UA"]:
-    #         featurePath = join(SEM_FEATURES_PATH, dataSet, "PRA{}.json".format(trainSize))
-    #         annPath = join(SEM_TOKENANN_PATH, dataSet + "_MRA.json")
-    #         vocabPath = join(SEM_VOCAB_PATH, "PRA{}.json".format(trainSize))
+    #         featurePath = join(VIPS_FEATURES_PATH, dataSet, "PRA{}.json".format(trainSize))
+    #         annPath = join(VIPS_TOKENANN_PATH, dataSet + "_MRA.json")
+    #         vocabPath = join(VIPS_VOCAB_PATH, "PRA{}.json".format(trainSize))
     #         testSet = False if(dataSet=="train") else dataSet
     #         generateVipsFeatureFiles(featurePath, annPath, testSet, vocabPath, trainSize, True)
 
@@ -538,10 +570,90 @@ def getASMAStats():
 
 
 
+def matchComparison():
+    for testSet in ["UA", "UQ"]:
+        annMatchPath = join(VIPS_TOKENANN_PATH,"annotatedMatch"+testSet+".json")
+        with open(annMatchPath, "r") as f:
+            annMatchData = json.load(f)
+        predMatchPath = join(VIPS_TOKENANN_PATH,"predictedMatch"+testSet+".json")
+        with open(predMatchPath, "r") as f:
+            predMatchData = json.load(f)
+
+        labelAbsLengths = {"ann": [[],[],[],[]], "pred": [[],[],[],[]]}
+        compStats = [{
+            "rec": [],
+            "miss": [],
+            "add": [],
+            "exactMatch": 0
+        },
+        {
+            "rec": [],
+            "miss": [],
+            "add": [],
+            "exactMatch": 0
+        },
+        {
+            "rec": [],
+            "miss": [],
+            "add": [],
+            "exactMatch": 0
+        },
+        {
+            "rec": [],
+            "miss": [],
+            "add": [],
+            "exactMatch": 0
+        }]
+        for qId, annQuestion in annMatchData.items():
+            predQuestion = predMatchData[qId]
+            for i in range(len(annQuestion["studentAnswers"])):
+                annAns = annQuestion["studentAnswers"][i]
+                predAns = predQuestion["studentAnswers"][i]
+                if(not(annAns["id"]==predAns["id"])):
+                    print("fail")
+                for j in range(len(annAns["aspects"])):
+                    annAsp = annAns["aspects"][j]
+                    labelAbsLengths["ann"][annAsp["label"]].append(len(annAsp["tokenIds"]))
+                    predAsp = predAns["aspects"][j]
+                    labelAbsLengths["pred"][predAsp["label"]].append(len(predAsp["tokenIds"]))
+                    matchCount = 0
+                    addCount = 0
+                    for tId in predAsp["tokenIds"]:
+                        if(tId in annAsp["tokenIds"]):
+                            matchCount += 1
+                        else:
+                            addCount += 1
+                    missCount = len(annAsp["tokenIds"]) - matchCount
+                    stats = compStats[predAsp["label"]]
+                    stats["miss"].append(missCount)
+                    stats["add"].append(addCount)
+                    if(missCount==0 and addCount==0):
+                        stats["exactMatch"] += 1
+                    if(len(annAsp["tokenIds"])==0):
+                        stats["rec"].append(1)
+                    else:
+                        stats["rec"].append(matchCount/len(annAsp["tokenIds"]))
+        res = np.zeros((5,7))
+        column = ["annLen", "predLen", "rec", "miss", "add", "exactMatch", "count"]
+        indices = ["correct", "imprecise", "misconception", "missing", "total"]
+        for i in range(4):
+            labelRes = [np.mean(labelAbsLengths[m][i]) for m in ["ann","pred"]]
+            labelRes += [np.mean(compStats[i][m]) for m in ["rec","miss","add"]]
+            labelRes.append(compStats[i]["exactMatch"])
+            labelRes.append(len(labelAbsLengths["ann"][i]))
+            res[i,:] = np.array(labelRes)
+        res[-1,-1] = sum(res[:,-1])
+        res[-1,:-1] = np.sum(np.multiply(res[:-1,:-1],(res[:-1,-1]/res[-1,-1]).reshape(4,1)),axis=0)
+        resFrame = pd.DataFrame(res, index=indices, columns=column)
+        print(resFrame)
+        resFile = join(VIPS_TOKENANN_PATH, "matchRes_" + testSet + ".csv")
+        resFrame.to_csv(resFile, float_format='%.1f')
+
 
 
 if __name__ == "__main__":
-    extractSEMVALFeatureData()
+    # extractSEMVALFeatureData()
+    # extractVIPSFeatureData()
     # getVipQStats()
     # splitASMA("VIPS")
     # splitASMA("CSSAG")
@@ -549,3 +661,4 @@ if __name__ == "__main__":
     # getVipQStats()
     # extractVIPSFeatureData()
     # getQuestionCSV()
+    matchComparison()

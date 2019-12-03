@@ -1,5 +1,5 @@
-# Germalemmatizer = GermaLemma(tiger_corpus="tiger/tiger_release_aug07.corrected.16012013.conll09")
-# Germalemmatizer.save_to_pickle("tiger/tiger_lemmas.pkl")
+# Germalemmatizer = GermaLemma(tiger_corpus="lib/tiger/tiger_release_aug07.corrected.16012013.conll09")
+# Germalemmatizer.save_to_pickle("lib/tiger/tiger_lemmas.pkl")
 from subprocess import check_output
 import spacy
 from .coreNlp import StanfordCoreNLP

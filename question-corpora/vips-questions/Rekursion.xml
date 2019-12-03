@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test xmlns="urn:vips:test:v1.0" id="test-7331" type="practice"
+      start="2018-12-05T12:00:00+01:00"
+                end="2018-12-05T12:00:00+01:00"
+            >
+    <title>
+        Rekursion    </title>
+    <description>
+            </description>
+        <exercises>
+                    <exercise id="exercise-51428" feedback="true">
+    <title>
+        Rekursive Probleme    </title>
+    <description>
+        Welche Rroblemtypen eignen sich dafür rekursiv gelöst zu werden.    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Probleme, die sich am besten lösen lassen, indem man das Problem in kleinere Teileprobleme aufteilt und die Ergebnisse zusammenfügt.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-51429" feedback="true">
+    <title>
+        Endlosschleife    </title>
+    <description>
+        public static void rekursiv(int i) {
+  rekursiv(i+1);
+}
+Was ist das Problem bei der obigen rekursiven Operation?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Die Operation besitzt keinen Rekursionsanfang und erzeugt somit eine Endlosschleife.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-51430" feedback="true">
+    <title>
+        Definition Rekursionsanfang    </title>
+    <description>
+        Was ist der Reursionsanfang?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Der Rekursionsanfang ist eine Bedingung, die die rekursiven Aufrufe beendet.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+            </exercises>
+</test>

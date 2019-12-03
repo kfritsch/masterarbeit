@@ -1,0 +1,3262 @@
+{
+  "questions": [
+    {
+      "text": "Was ist das Prinzip von 'call by value'?",
+      "id": "50817",
+      "title": "'Call by value'",
+      "type": "definition",
+      "aspects": [
+        {
+          "text": "bei der Parameter\u00fcbergabe wird die Kopie des Wertes einer Variablen \u00fcbergeben"
+        },
+        {
+          "text": "\u00c4nderungen dieses Wertes innerhalb der Funktion haben keinen Effekte auf den urspr\u00fcnglichen Wert"
+        }
+      ],
+      "assignedWeights": {
+        "'Call by value'": 1,
+        "bedeuten": 1,
+        "Parameter\u00fcbergabe": 5,
+        "Kopie": 5,
+        "Wert": 3,
+        "Variable": 2,
+        "\u00fcbergeben": 4,
+        "werden": 2,
+        "so": 3,
+        "haben": 2,
+        "\u00c4nderung": 5,
+        "innerhalb": 5,
+        "Funktion": 4,
+        "kein": 5,
+        "Effekt": 3,
+        "urspr\u00fcnglich": 5
+      },
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "'Call by value' bedeutet, dass bei der Parameter\u00fcbergabe die Kopie des Wertes einer Variablen \u00fcbergeben wird. So haben \u00c4nderungen dieses Wertes innerhalb der Funktion keinen Effekte auf den urspr\u00fcnglichen Wert.",
+          "aspects": [
+            {
+              "text": "'Call by value' bedeutet, dass bei der Parameter\u00fcbergabe die Kopie des Wertes einer Variablen \u00fcbergeben wird",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  108
+                ]
+              ]
+            },
+            {
+              "text": "So haben \u00c4nderungen dieses Wertes innerhalb der Funktion keinen Effekte auf den urspr\u00fcnglichen Wert",
+              "aIdx": 1,
+              "elements": [
+                [
+                  110,
+                  209
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "text": "die Variable wird \u00fcber ihren Wert definiert bsp Int, flow, long",
+          "id": 0,
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "die Variable wird \u00fcber ihren Wert definiert bsp Int, flow, long",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Das Prinzip von call by value ist, dass wenn die Variable abgerufen wird, mit dem Wert an sich gearbeitet wird.",
+          "id": 3,
+          "aspects": [
+            {
+              "text": "Das Prinzip von call by value ist, dass wenn die Variable abgerufen wird, mit dem Wert an sich gearbeitet wird",
+              "elements": [
+                [
+                  0,
+                  110
+                ]
+              ],
+              "aIdx": 0,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Das Prinzip von call by value ist, dass wenn die Variable abgerufen wird, mit dem Wert an sich gearbeitet wird.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Call by value bedeutet, dass eine Ver\u00e4nderung eines Parameters keine Auswirkungen auf die aufgerufene Variable hat.",
+          "id": 6,
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "Call by value bedeutet, dass eine Ver\u00e4nderung eines Parameters keine Auswirkungen auf die aufgerufene Variable hat",
+              "elements": [
+                [
+                  0,
+                  114
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Call by value bedeutet, dass eine Ver\u00e4nderung eines Parameters keine Auswirkungen auf die aufgerufene Variable hat.",
+          "userId": "0ce8152aa92136af039b687c01c7dccfcb271f3db2d0ddcb3cfdd3e6"
+        },
+        {
+          "text": "Beim Aufrufen einer Operation werden die Parameter kopiert, sodass diese innerhalb der Operation ver\u00e4ndert werden k\u00f6nnen, und au\u00dferhalb der Operation sich nicht ver\u00e4ndern.",
+          "id": 7,
+          "aspects": [
+            {
+              "text": "Beim Aufrufen einer Operation werden die Parameter kopiert",
+              "elements": [
+                [
+                  0,
+                  58
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "sodass diese innerhalb der Operation ver\u00e4ndert werden k\u00f6nnen, und au\u00dferhalb der Operation sich nicht ver\u00e4ndern",
+              "elements": [
+                [
+                  60,
+                  170
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Beim Aufrufen einer Operation werden die Parameter kopiert, sodass diese innerhalb der Operation ver\u00e4ndert werden k\u00f6nnen, und au\u00dferhalb der Operation sich nicht ver\u00e4ndern.",
+          "userId": "31da1a042dc910775ed8b487afbdafd929a7afdeaadc660cb963bd26"
+        },
+        {
+          "text": "Die Ver\u00e4nderung des Parameters hat keine Auswirkung auf die \u00fcbergegebene Variable des primitiven Datentyps.",
+          "id": 11,
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Die Ver\u00e4nderung des Parameters hat keine Auswirkung auf die \u00fcbergegebene Variable des primitiven Datentyps",
+              "elements": [
+                [
+                  0,
+                  106
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die Ver\u00e4nderung des Parameters hat keine Auswirkung auf die \u00fcbergegebene Variable des primitiven Datentyps.",
+          "userId": "408f0afbe2440a4383a1e75b7d5b0b4202c7f7131a9acf9bd70492f3"
+        },
+        {
+          "text": "Wenn wir einen einfachen Datentypen aufrufen, schauen wir direkt auf den Wert, eine \u00c4nderung dieses Wertes hat keinen Einfluss auf den Parameter",
+          "id": 17,
+          "aspects": [
+            {
+              "text": "nn wir einen einfachen Datentypen aufrufen, schauen wir direkt auf den Wert",
+              "elements": [
+                [
+                  2,
+                  77
+                ]
+              ],
+              "aIdx": 0,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "eine \u00c4nderung dieses Wertes hat keinen Einfluss auf den Parameter",
+              "elements": [
+                [
+                  79,
+                  144
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Wenn wir einen einfachen Datentypen aufrufen, schauen wir direkt auf den Wert, eine \u00c4nderung dieses Wertes hat keinen Einfluss auf den Parameter",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Das Prinzip von call by value ist, dass ein konkreter Wert \u00fcbergeben wird.",
+          "id": 21,
+          "aspects": [
+            {
+              "text": "Das Prinzip von call by value ist, dass ein konkreter Wert \u00fcbergeben wird",
+              "elements": [
+                [
+                  0,
+                  73
+                ]
+              ],
+              "aIdx": 0,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Das Prinzip von call by value ist, dass ein konkreter Wert \u00fcbergeben wird.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Der Wert wurde kopiert und \u00fcbergeben",
+          "id": 22,
+          "aspects": [
+            {
+              "text": "Der Wert wurde kopiert und \u00fcbergeben",
+              "elements": [
+                [
+                  0,
+                  36
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Der Wert wurde kopiert und \u00fcbergeben",
+          "userId": "b51d18b551043c1f145f22dbde6f8531faeaf68c54ed9dd79ce24d17"
+        },
+        {
+          "text": "es wird eine variable an eine methode \u00fcbergeben, jedoch nur der Wert dieser, somit hat die Methode keinen Einfluss auf die Variable direkt.",
+          "id": 25,
+          "aspects": [
+            {
+              "text": "Es wird eine Variable an eine Methode \u00fcbergeben, jedoch nur der Wert dieser",
+              "elements": [],
+              "aIdx": 0,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": " somit hat die Methode keinen Einfluss auf die Variable direkt",
+              "elements": [
+                [
+                  77,
+                  138
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Es wird eine Variable an eine Methode \u00fcbergeben, jedoch nur der Wert dieser, somit hat die Methode keinen Einfluss auf die Variable direkt.",
+          "userId": "525ab75c928c6fac98a0f62e4da5316b7247ccd704c967ef9142925c"
+        },
+        {
+          "text": "Es wird eine Kopie der Variable an die Operation \u00fcbergeben, so das der urspr\u00fcngliche Wert nicht ver\u00e4ndert wird.",
+          "id": 27,
+          "aspects": [
+            {
+              "text": "Es wird eine Kopie der Variable an die Operation \u00fcbergeben",
+              "elements": [
+                [
+                  0,
+                  58
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "so das der urspr\u00fcngliche Wert nicht ver\u00e4ndert wird",
+              "elements": [
+                [
+                  60,
+                  110
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Es wird eine Kopie der Variable an die Operation \u00fcbergeben, so das der urspr\u00fcngliche Wert nicht ver\u00e4ndert wird.",
+          "userId": "b8607e0369fbf3e33bc0e358f840915d8c085d1496097351913c0122"
+        },
+        {
+          "text": "es wird eine Kopie erzeugt, der Originalwert wird nicht ver\u00e4ndert, die Methode arbeitet mit der Kopie",
+          "id": 29,
+          "aspects": [
+            {
+              "text": "es wird eine Kopie erzeugt",
+              "elements": [
+                [
+                  0,
+                  26
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "der Originalwert wird nicht ver\u00e4ndert",
+              "elements": [
+                [
+                  28,
+                  65
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "es wird eine Kopie erzeugt, der Originalwert wird nicht ver\u00e4ndert, die Methode arbeitet mit der Kopie",
+          "userId": "525ab75c928c6fac98a0f62e4da5316b7247ccd704c967ef9142925c"
+        },
+        {
+          "text": "Nur der Wert wird kopiert und \u00fcbergeben, \u00c4nderungen haben keinen weiteren Einfluss",
+          "id": 30,
+          "aspects": [
+            {
+              "text": "Nur der Wert wird kopiert und \u00fcbergeben",
+              "elements": [
+                [
+                  0,
+                  39
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "\u00c4nderungen haben keinen weiteren Einfluss",
+              "elements": [
+                [
+                  41,
+                  82
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Nur der Wert wird kopiert und \u00fcbergeben, \u00c4nderungen haben keinen weiteren Einfluss",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Der Wert wird kopiert.",
+          "id": 31,
+          "aspects": [
+            {
+              "text": "Der Wert wird kopiert",
+              "elements": [
+                [
+                  0,
+                  21
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Der Wert wird kopiert.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        }
+      ]
+    },
+    {
+      "text": "Was ist das Prinzip von 'call by reference'?",
+      "id": "50818",
+      "title": "'Call by reference'",
+      "type": "definition",
+      "aspects": [
+        {
+          "text": "bei der Parameter\u00fcbergabe wird die Referenz auf den Wert \u00fcbergeben"
+        },
+        {
+          "text": "Ver\u00e4nderungen des Parameters innerhalb der Operation beeinflussen auch den Wert der beim Funktionsaufruf \u00fcbergebenen Variablen"
+        }
+      ],
+      "assignedWeights": {
+        "'Call by reference'": 1,
+        "bedeuten": 1,
+        "Parameter\u00fcbergabe": 5,
+        "Referenz": 5,
+        "auf": 3,
+        "Wert": 1,
+        "\u00fcbergeben": 2,
+        "werden": 2,
+        "so": 3,
+        "beeinflussen": 2,
+        "Ver\u00e4nderung": 3,
+        "Parameter": 5,
+        "innerhalb": 4,
+        "Operation": 5,
+        "auch": 4,
+        "Funktionsaufruf": 5,
+        "Variable": 2
+      },
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "'Call by reference' bedeutet, dass bei der Parameter\u00fcbergabe eine Referenz auf einen Wert \u00fcbergeben wird. So beeinflussen Ver\u00e4nderungen des Parameters innerhalb der Operation auch den Wert der beim Funktionsaufruf \u00fcbergebenen Variablen.",
+          "aspects": [
+            {
+              "text": "'Call by reference' bedeutet, dass bei der Parameter\u00fcbergabe eine Referenz auf einen Wert \u00fcbergeben wird",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  104
+                ]
+              ]
+            },
+            {
+              "text": "So beeinflussen Ver\u00e4nderungen des Parameters innerhalb der Operation auch den Wert der beim Funktionsaufruf \u00fcbergebenen Variablen",
+              "aIdx": 1,
+              "elements": [
+                [
+                  106,
+                  235
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "text": "bei der \u00fcbergabe werden referenzen \u00fcbergeben, sodass \u00e4nderungen auch die urspr\u00fcnglich variable betreffen",
+          "id": 0,
+          "aspects": [
+            {
+              "text": "Bei der \u00dcbergabe werden Referenzen \u00fcbergeben",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "sodass \u00c4nderungen auch die urspr\u00fcnglich Variable betreffen",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Bei der \u00dcbergabe werden Referenzen \u00fcbergeben, sodass \u00c4nderungen auch die urspr\u00fcnglich Variable betreffen",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Die Referenz auf den Wert wird als Parameter \u00fcbergeben. Somit kann der Wert \u00fcberall ver\u00e4ndert werden.",
+          "id": 2,
+          "aspects": [
+            {
+              "text": "Die Referenz auf den Wert wird als Parameter \u00fcbergeben",
+              "elements": [
+                [
+                  0,
+                  54
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Somit kann der Wert \u00fcberall ver\u00e4ndert werden",
+              "elements": [
+                [
+                  56,
+                  100
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die Referenz auf den Wert wird als Parameter \u00fcbergeben. Somit kann der Wert \u00fcberall ver\u00e4ndert werden.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Es wird die Referenz \u00fcbergeben, sodass \u00c4nderungen sich auf beide auswirken.",
+          "id": 3,
+          "aspects": [
+            {
+              "text": "Es wird die Referenz \u00fcbergeben",
+              "elements": [
+                [
+                  0,
+                  30
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "sodass \u00c4nderungen sich auf beide auswirken",
+              "elements": [
+                [
+                  32,
+                  74
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Es wird die Referenz \u00fcbergeben, sodass \u00c4nderungen sich auf beide auswirken.",
+          "userId": "7ba019a2553e1137a4bbb8d3c779a48e5ceb2ca3a162e6e0a945ef0f"
+        },
+        {
+          "text": "Das Prinzip von call by reference ist, dass bei der \u00dcbergabe von Werten die Referenz \u00fcbergeben wird, Ver\u00e4nderungen sich also auf den urspr\u00fcnglichen Wert auswirken.",
+          "id": 4,
+          "aspects": [
+            {
+              "text": "Das Prinzip von call by reference ist, dass bei der \u00dcbergabe von Werten die Referenz \u00fcbergeben wir",
+              "elements": [
+                [
+                  0,
+                  98
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "er\u00e4nderungen sich also auf den urspr\u00fcnglichen Wert auswirken",
+              "elements": [
+                [
+                  102,
+                  162
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Das Prinzip von call by reference ist, dass bei der \u00dcbergabe von Werten die Referenz \u00fcbergeben wird, Ver\u00e4nderungen sich also auf den urspr\u00fcnglichen Wert auswirken.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Das bei einem Parameter die Referenz \u00fcbergeben wird und eine \u00c4nderung dieser Referenz Auswirkungen auf die ursprungsvariable hat.",
+          "id": 8,
+          "aspects": [
+            {
+              "text": "Dass bei einem Parameter die Referenz \u00fcbergeben wird",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "eine \u00c4nderung dieser Referenz Auswirkungen auf die Ursprungsvariable hat",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Dass bei einem Parameter die Referenz \u00fcbergeben wird und eine \u00c4nderung dieser Referenz Auswirkungen auf die Ursprungsvariable hat.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Wenn ein Array als Parameter \u00fcbergeben wird, haben die \u00c4nderungen des Parameters auswirkung auf das Array.",
+          "id": 11,
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "haben die \u00c4nderungen des Parameters Auswirkung auf das Array",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Wenn ein Array als Parameter \u00fcbergeben wird, haben die \u00c4nderungen des Parameters Auswirkung auf das Array.",
+          "userId": "408f0afbe2440a4383a1e75b7d5b0b4202c7f7131a9acf9bd70492f3"
+        },
+        {
+          "text": "Die Referenz der Variablen wird \u00fcbergeben",
+          "id": 13,
+          "aspects": [
+            {
+              "text": "Die Referenz der Variablen wird \u00fcbergeben",
+              "elements": [
+                [
+                  0,
+                  41
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die Referenz der Variablen wird \u00fcbergeben",
+          "userId": "271f93f45e9b4067327ed5c8cd30a034730aaace4382803c3e1d6c2f"
+        },
+        {
+          "text": "Man \u00fcbergibt einen Pointer auf die Variable, die man dann beliebig \u00e4ndern kann.",
+          "id": 14,
+          "aspects": [
+            {
+              "text": "Man \u00fcbergibt einen Pointer auf die Variable",
+              "elements": [
+                [
+                  0,
+                  43
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Man \u00fcbergibt einen Pointer auf die Variable, die man dann beliebig \u00e4ndern kann.",
+          "userId": "9cbcb7142c0ba8e0acabe63fa0665db839f24ed7f11f2b8e2e8f47b6"
+        },
+        {
+          "text": "Call by reference bedeutet, dass die Referenz und nicht die eigentlichen Daten abgerufen werden. Bei der Parameter\u00fcbergabe einer Operation bedeutet das dann, dass die in der Referenz stehenden Daten im Laufe der Operation ver\u00e4ndert werden k\u00f6nnten.",
+          "id": 15,
+          "aspects": [
+            {
+              "text": "Call by reference bedeutet, dass die Referenz und nicht die eigentlichen Daten abgerufen werden",
+              "elements": [
+                [
+                  0,
+                  95
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Bei der Parameter\u00fcbergabe einer Operation bedeutet das dann, dass die in der Referenz stehenden Daten im Laufe der Operation ver\u00e4ndert werden k\u00f6nnten",
+              "elements": [
+                [
+                  97,
+                  246
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Call by reference bedeutet, dass die Referenz und nicht die eigentlichen Daten abgerufen werden. Bei der Parameter\u00fcbergabe einer Operation bedeutet das dann, dass die in der Referenz stehenden Daten im Laufe der Operation ver\u00e4ndert werden k\u00f6nnten.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Bei call by reference wird die Referenz auf einen Wert \u00fcbergeben, urspr\u00fcnglicher Wert\\/Objekt wird ver\u00e4ndert, es geht nicht nur um Inhalt",
+          "id": 16,
+          "aspects": [
+            {
+              "text": "Bei call by reference wird die Referenz auf einen Wert \u00fcbergeben",
+              "elements": [
+                [
+                  0,
+                  64
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "urspr\u00fcnglicher Wert\\ Objekt wird ver\u00e4ndert",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Bei call by reference wird die Referenz auf einen Wert \u00fcbergeben, urspr\u00fcnglicher Wert\\ Objekt wird ver\u00e4ndert, es geht nicht nur um Inhalt",
+          "userId": "53750c72b7bb26cb6ff7115e383ca150d5a632a909a7f79e2f5274a4"
+        },
+        {
+          "text": "Beim \u00dcbergeben einer Variable wird die Referenz kopiert.",
+          "id": 24,
+          "aspects": [
+            {
+              "text": "Beim \u00dcbergeben einer Variable wird die Referenz kopiert",
+              "elements": [
+                [
+                  0,
+                  55
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Beim \u00dcbergeben einer Variable wird die Referenz kopiert.",
+          "userId": "f09265efb456b0336079ad5b238daa1e38a11b1d71cc0e1a4e8edd56"
+        },
+        {
+          "text": "call bei refernce \u00fcbergibt die Referenz der variablen also die Adresse im Speicher wodurch eine methode auf diese zugreifen kann und diese \u00e4ndern kann.",
+          "id": 25,
+          "aspects": [
+            {
+              "text": "Call bei refernce \u00fcbergibt die Referenz der Variablen, also die Adresse im Speicher",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "wodurch eine Methode auf diese zugreifen kann und diese \u00e4ndern kann",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Call bei refernce \u00fcbergibt die Referenz der Variablen, also die Adresse im Speicher, wodurch eine Methode auf diese zugreifen kann und diese \u00e4ndern kann.",
+          "userId": "525ab75c928c6fac98a0f62e4da5316b7247ccd704c967ef9142925c"
+        },
+        {
+          "text": "Es wird der urspr\u00fcngliche Wert an die Operation \u00fcbergeben, sodass \u00c4nderungen innerhalb der Operation Auswirkungen auf den urspr\u00fcnglichen Wert haben.",
+          "id": 27,
+          "aspects": [
+            {
+              "text": "Es wird der urspr\u00fcngliche Wert an die Operation \u00fcbergeben",
+              "elements": [
+                [
+                  0,
+                  57
+                ]
+              ],
+              "aIdx": 0,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "sodass \u00c4nderungen innerhalb der Operation Auswirkungen auf den urspr\u00fcnglichen Wert haben",
+              "elements": [
+                [
+                  59,
+                  147
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Es wird der urspr\u00fcngliche Wert an die Operation \u00fcbergeben, sodass \u00c4nderungen innerhalb der Operation Auswirkungen auf den urspr\u00fcnglichen Wert haben.",
+          "userId": "b8607e0369fbf3e33bc0e358f840915d8c085d1496097351913c0122"
+        },
+        {
+          "text": "hier wird die Referenz auf eine Variable \u00fcbergeben und von der Operation auch der Originalwert ge\u00e4ndert",
+          "id": 28,
+          "aspects": [
+            {
+              "text": "Hier wird die Referenz auf eine Variable \u00fcbergeben ",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Hier wird ;; von der Operation auch der Originalwert ge\u00e4ndert",
+              "elements": [
+                [
+                  55,
+                  103
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Hier wird die Referenz auf eine Variable \u00fcbergeben und von der Operation auch der Originalwert ge\u00e4ndert",
+          "userId": "525ab75c928c6fac98a0f62e4da5316b7247ccd704c967ef9142925c"
+        },
+        {
+          "text": "Die Feferen wird \u00fcbergeben, Ver\u00e4nderungen bleiben auch au\u00dferhalb der Operation erhalten",
+          "id": 29,
+          "aspects": [
+            {
+              "text": "Die Referenz wird \u00fcbergeben",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Ver\u00e4nderungen bleiben auch au\u00dferhalb der Operation erhalten",
+              "elements": [
+                [
+                  28,
+                  87
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die Referenz wird \u00fcbergeben, Ver\u00e4nderungen bleiben auch au\u00dferhalb der Operation erhalten",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        }
+      ]
+    },
+    {
+      "text": "Wie werden Klassen in Java einem Paket zugeordnet?",
+      "id": "50820",
+      "title": "Paketzuordnung",
+      "type": "procedure",
+      "aspects": [
+        {
+          "text": "Die Dateien m\u00fcssen im selben Verzeichnis liegen"
+        },
+        {
+          "text": "Der Dateiinhalt muss mit der Anweisung 'package <Verzeichnispfad>' dem Paket hinzugef\u00fcgt werden"
+        }
+      ],
+      "assignedWeights": {
+        "Dateien": 5,
+        "Paket": 1,
+        "zugeh\u00f6rig": 1,
+        "Klasse": 1,
+        "m\u00fcssen": 4,
+        "im": 2,
+        "selben": 5,
+        "Verzeichnis": 5,
+        "liegen": 4,
+        "Anweisung": 4,
+        "'package <Verzeichnispfad>'": 5,
+        "hinzuf\u00fcgen": 2,
+        "werden": 0
+      },
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Die Dateien der zum Paket zugeh\u00f6rigen Klassen m\u00fcssen im selben Verzeichnis liegen und dem Paket mit der Anweisung 'package <Verzeichnispfad>' hinzugef\u00fcgt werden.",
+          "aspects": [
+            {
+              "text": "Die Dateien der zum Paket zugeh\u00f6rigen Klassen m\u00fcssen im selben Verzeichnis liegen",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  91
+                ]
+              ]
+            },
+            {
+              "text": "und dem Paket mit der Anweisung 'package <Verzeichnispfad>' hinzugef\u00fcgt werden",
+              "aIdx": 1,
+              "elements": [
+                [
+                  92,
+                  160
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "text": "Die Klassen werden in einem Ordner gespeichert.",
+          "id": 1,
+          "aspects": [
+            {
+              "text": "Die Klassen werden in einem Ordner gespeichert",
+              "elements": [
+                [
+                  0,
+                  46
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die Klassen werden in einem Ordner gespeichert.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Durch den Befehl package.",
+          "id": 2,
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Durch den Befehl package",
+              "elements": [
+                [
+                  0,
+                  24
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Durch den Befehl package.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Die Klasse muss in einem Verzeichnis sein, dass dem Paketnamen entspricht.",
+          "id": 5,
+          "aspects": [
+            {
+              "text": "Die Klasse muss in einem Verzeichnis sein",
+              "elements": [
+                [
+                  0,
+                  41
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "dass dem Paketnamen entspricht",
+              "elements": [
+                [
+                  43,
+                  73
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die Klasse muss in einem Verzeichnis sein, dass dem Paketnamen entspricht.",
+          "userId": "0ce8152aa92136af039b687c01c7dccfcb271f3db2d0ddcb3cfdd3e6"
+        },
+        {
+          "text": "Klassen in Java werden zu einem Paket durch ihren Ordner zugeordnet.",
+          "id": 6,
+          "aspects": [
+            {
+              "text": "Klassen in Java werden zu einem Paket durch ihren Ordner zugeordnet",
+              "elements": [
+                [
+                  0,
+                  67
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Klassen in Java werden zu einem Paket durch ihren Ordner zugeordnet.",
+          "userId": "31da1a042dc910775ed8b487afbdafd929a7afdeaadc660cb963bd26"
+        },
+        {
+          "text": "mit der Definition package am Anfang des Codes.",
+          "id": 8,
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "mit der Definition package am Anfang des Codes",
+              "elements": [
+                [
+                  0,
+                  46
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "mit der Definition package am Anfang des Codes.",
+          "userId": "408f0afbe2440a4383a1e75b7d5b0b4202c7f7131a9acf9bd70492f3"
+        },
+        {
+          "text": "Man packt diese in eine Datei, welche via package XY zu einem solchen zugeh\u00f6rig erkl\u00e4rt wurde.",
+          "id": 12,
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "welche via package XY zu einem solchen zugeh\u00f6rig erkl\u00e4rt wurde",
+              "elements": [
+                [
+                  31,
+                  93
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Man packt diese in eine Datei, welche via package XY zu einem solchen zugeh\u00f6rig erkl\u00e4rt wurde.",
+          "userId": "9cbcb7142c0ba8e0acabe63fa0665db839f24ed7f11f2b8e2e8f47b6"
+        },
+        {
+          "text": "Dadurch in welchem Ordner sie gespeichert sind. Klassen im gleichen Ordner bilden ein Paket.",
+          "id": 13,
+          "aspects": [
+            {
+              "text": "Dadurch in welchem Ordner sie gespeichert sind. Klassen im gleichen Ordner bilden ein Paket",
+              "elements": [
+                [
+                  0,
+                  91
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Dadurch in welchem Ordner sie gespeichert sind. Klassen im gleichen Ordner bilden ein Paket.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Um einen Klasse einem Paket zuzuordnen, muss die Klasse in einem Verzeichnis sein, das dem Paketnamen entspricht. In der Java Daten muss zu Beginn das Paket angegeben werden.",
+          "id": 18,
+          "aspects": [
+            {
+              "text": "Um einen Klasse einem Paket zuzuordnen, muss die Klasse in einem Verzeichnis sein, das dem Paketnamen entspricht",
+              "elements": [
+                [
+                  0,
+                  112
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "In der Java Daten muss zu Beginn das Paket angegeben werden",
+              "elements": [
+                [
+                  114,
+                  173
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Um einen Klasse einem Paket zuzuordnen, muss die Klasse in einem Verzeichnis sein, das dem Paketnamen entspricht. In der Java Daten muss zu Beginn das Paket angegeben werden.",
+          "userId": "b51d18b551043c1f145f22dbde6f8531faeaf68c54ed9dd79ce24d17"
+        }
+      ]
+    },
+    {
+      "text": "Welche Eigenschaften eines Heaps sind essentiell f\u00fcr das Sortieren?",
+      "id": "50890",
+      "title": "Eigenschaften eines Heaps",
+      "type": "procedure",
+      "aspects": [
+        {
+          "text": "Jeder Vater ist gr\u00f6\u00dfer als seine S\u00f6hne"
+        },
+        {
+          "text": "Der gr\u00f6\u00dfte Wert ist in der Wurzel",
+          "implied": true
+        },
+        {
+          "text": "maximale Tiefe von log(n)"
+        }
+      ],
+      "assignedWeights": {
+        "Heap": 1,
+        "sein": 1,
+        "jeder": 4,
+        "Vater": 5,
+        "gro\u00df": 4,
+        "als": 4,
+        "Sohn": 5,
+        "Wert": 4,
+        "Wurzel": 5,
+        "haben": 3,
+        "maximal": 4,
+        "Tiefe": 5,
+        "log(n)": 5
+      },
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "In einem Heap ist jeder Vater gr\u00f6\u00dfer als seine S\u00f6hne, der gr\u00f6\u00dfte Wert ist in der Wurzel und er hat maximale Tiefe von log(n).",
+          "aspects": [
+            {
+              "text": "In einem Heap ist jeder Vater gr\u00f6\u00dfer als seine S\u00f6hne",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  52
+                ]
+              ]
+            },
+            {
+              "text": "der gr\u00f6\u00dfte Wert ist in der Wurzel",
+              "aIdx": 1,
+              "elements": [
+                [
+                  54,
+                  87
+                ]
+              ]
+            },
+            {
+              "text": "er hat maximale Tiefe von log(n)",
+              "aIdx": 2,
+              "elements": [
+                [
+                  92,
+                  124
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "text": "Der Vater ist gr\u00f6\u00dfer als die Kinder",
+          "id": 0,
+          "aspects": [
+            {
+              "text": "Der Vater ist gr\u00f6\u00dfer als die Kinder",
+              "elements": [
+                [
+                  0,
+                  35
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Der Vater ist gr\u00f6\u00dfer als die Kinder",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Kinder sind kleiner als der Vater. Darstellung in einem Bin\u00e4rbaum. Wurzel ist das gr\u00f6\u00dfte Element.",
+          "id": 3,
+          "aspects": [
+            {
+              "text": "Kinder sind kleiner als der Vater",
+              "elements": [
+                [
+                  0,
+                  33
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "Wurzel ist das gr\u00f6\u00dfte Element",
+              "elements": [
+                [
+                  67,
+                  96
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "Darstellung in einem Bin\u00e4rbaum",
+              "elements": [
+                [
+                  35,
+                  65
+                ]
+              ],
+              "aIdx": 2,
+              "label": 1,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Kinder sind kleiner als der Vater. Darstellung in einem Bin\u00e4rbaum. Wurzel ist das gr\u00f6\u00dfte Element.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Die V\u00e4ter sind gr\u00f6\u00dfer als die Kinder",
+          "id": 4,
+          "aspects": [
+            {
+              "text": "Die V\u00e4ter sind gr\u00f6\u00dfer als die Kinder",
+              "elements": [
+                [
+                  0,
+                  36
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die V\u00e4ter sind gr\u00f6\u00dfer als die Kinder",
+          "userId": "7ba019a2553e1137a4bbb8d3c779a48e5ceb2ca3a162e6e0a945ef0f"
+        },
+        {
+          "text": "Der vater ist gr\u00f6\u00dfer als das kind un ddas maximum ist die wurzel also bekannt!",
+          "id": 6,
+          "aspects": [
+            {
+              "text": "Der Vater ist gr\u00f6\u00dfer als das Kind",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "das Maximum ist die Wurzel",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Der Vater ist gr\u00f6\u00dfer als das Kind und das Maximum ist die Wurzel also bekannt!",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Das gr\u00f6\u00dfte Element des Heaps steht in der Wurzel.",
+          "id": 8,
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Das gr\u00f6\u00dfte Element des Heaps steht in der Wurzel",
+              "elements": [
+                [
+                  0,
+                  48
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Das gr\u00f6\u00dfte Element des Heaps steht in der Wurzel.",
+          "userId": "31da1a042dc910775ed8b487afbdafd929a7afdeaadc660cb963bd26"
+        },
+        {
+          "text": "Der Vater ist immer gr\u00f6\u00dfer als seine Kinder, die Wurzel ist immer das Maximum.",
+          "id": 9,
+          "aspects": [
+            {
+              "text": "er Vater ist immer gr\u00f6\u00dfer als seine Kinder",
+              "elements": [
+                [
+                  1,
+                  43
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "die Wurzel ist immer das Maximum",
+              "elements": [
+                [
+                  45,
+                  77
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Der Vater ist immer gr\u00f6\u00dfer als seine Kinder, die Wurzel ist immer das Maximum.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Das linke Kind = 2i+1, das rechte Kind 2i+2, Vater (i-1)\\/2 ist gr\u00f6\u00dfer als Kinder",
+          "id": 12,
+          "aspects": [
+            {
+              "text": " Vater ist gr\u00f6\u00dfer als Kinder",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": " Vater ist gr\u00f6\u00dfer als Kinder",
+          "userId": "408f0afbe2440a4383a1e75b7d5b0b4202c7f7131a9acf9bd70492f3"
+        },
+        {
+          "text": "muss ein bin\u00e4rbaum mit tiefe log(n) sein und die V\u00e4ter gr\u00f6\u00dfer als ihre kinder.",
+          "id": 14,
+          "aspects": [
+            {
+              "text": " die V\u00e4ter gr\u00f6\u00dfer als ihre kinder",
+              "elements": [
+                [
+                  45,
+                  77
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Muss ein Bin\u00e4rbaum mit tiefe log(n) sein",
+              "elements": [],
+              "aIdx": 2,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Muss ein Bin\u00e4rbaum mit tiefe log(n) sein und die V\u00e4ter gr\u00f6\u00dfer als ihre kinder.",
+          "userId": "c1b8144ee1a30244a571c3d9b48b2c394a7489065d2565968f521645"
+        },
+        {
+          "text": "Die Wurzel ist das gr\u00f6\u00dfte Element. Die Kindsknoten bzw. Bl\u00e4tter sind kleiner als der Vater.",
+          "id": 15,
+          "aspects": [
+            {
+              "text": "Die Kindsknoten bzw. Bl\u00e4tter sind kleiner als der Vater",
+              "elements": [
+                [
+                  35,
+                  90
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "Die Wurzel ist das gr\u00f6\u00dfte Element",
+              "elements": [
+                [
+                  0,
+                  33
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die Wurzel ist das gr\u00f6\u00dfte Element. Die Kindsknoten bzw. Bl\u00e4tter sind kleiner als der Vater.",
+          "userId": "9cbcb7142c0ba8e0acabe63fa0665db839f24ed7f11f2b8e2e8f47b6"
+        },
+        {
+          "text": "Die Heapbedingung ist erf\u00fcllt, die Wurzel jedes Teilbaums ist gr\u00f6\u00dfer als die Kinder.",
+          "id": 19,
+          "aspects": [
+            {
+              "text": "die Wurzel jedes Teilbaums ist gr\u00f6\u00dfer als die Kinder",
+              "elements": [
+                [
+                  31,
+                  83
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "die Wurzel jedes Teilbaums ist gr\u00f6\u00dfer als die Kinder",
+              "elements": [
+                [
+                  31,
+                  83
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die Heapbedingung ist erf\u00fcllt, die Wurzel jedes Teilbaums ist gr\u00f6\u00dfer als die Kinder.",
+          "userId": "31da1a042dc910775ed8b487afbdafd929a7afdeaadc660cb963bd26"
+        },
+        {
+          "text": "Die Wurzel ist das Maximum",
+          "id": 21,
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Die Wurzel ist das Maximum",
+              "elements": [
+                [
+                  0,
+                  26
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die Wurzel ist das Maximum",
+          "userId": "b51d18b551043c1f145f22dbde6f8531faeaf68c54ed9dd79ce24d17"
+        },
+        {
+          "text": "Dass in der Wurzel immer das gr\u00f6\u00dfte Element steht",
+          "id": 22,
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Dass in der Wurzel immer das gr\u00f6\u00dfte Element steht",
+              "elements": [
+                [
+                  0,
+                  49
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Dass in der Wurzel immer das gr\u00f6\u00dfte Element steht",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Die Bedingung dass die Kinder immer kleiner sind als die Eltern",
+          "id": 23,
+          "aspects": [
+            {
+              "text": "Die Bedingung dass die Kinder immer kleiner sind als die Eltern",
+              "elements": [
+                [
+                  0,
+                  63
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die Bedingung dass die Kinder immer kleiner sind als die Eltern",
+          "userId": "525ab75c928c6fac98a0f62e4da5316b7247ccd704c967ef9142925c"
+        },
+        {
+          "text": "Vater gr\u00f6\u00dfer als Kinder",
+          "id": 24,
+          "aspects": [
+            {
+              "text": "Vater gr\u00f6\u00dfer als Kinder",
+              "elements": [
+                [
+                  0,
+                  23
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Vater gr\u00f6\u00dfer als Kinder",
+          "userId": "ae8820303e493738a211ebb2ae3a2f90b286f20f767609beb77522c0"
+        },
+        {
+          "text": "F\u00fcr jeden Knoten gilt dass seine Kinder kleiner sind als er selbst. Wenn Kinder da sind.",
+          "id": 27,
+          "aspects": [
+            {
+              "text": "F\u00fcr jeden Knoten gilt dass seine Kinder kleiner sind als er selbst",
+              "elements": [
+                [
+                  0,
+                  66
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "F\u00fcr jeden Knoten gilt dass seine Kinder kleiner sind als er selbst. Wenn Kinder da sind.",
+          "userId": "525ab75c928c6fac98a0f62e4da5316b7247ccd704c967ef9142925c"
+        },
+        {
+          "text": "Die Kanten stelllen einen Vergleich da, der Vater ist gr\u00f6\u00dfer als seine beiden Kinder",
+          "id": 28,
+          "aspects": [
+            {
+              "text": "der Vater ist gr\u00f6\u00dfer als seine beiden Kinder",
+              "elements": [
+                [
+                  40,
+                  84
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die Kanten stelllen einen Vergleich da, der Vater ist gr\u00f6\u00dfer als seine beiden Kinder",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        }
+      ]
+    },
+    {
+      "text": "Wie muss ein Bin\u00e4rbaum strukturiert sein um ihn in einer Laufzeit von n*log(n) in einen Heap transformiert werden zu k\u00f6nnen? Die Bin\u00e4rb\u00e4ume in den folgenden Aufgaben weisen stets diese Struktur auf.",
+      "id": "50891",
+      "title": "Struktur eines Heap",
+      "type": "procedure",
+      "aspects": [
+        {
+          "text": "Alle Ebenen des Baumes, bis auf die letzte, m\u00fcssen vollst\u00e4ndig bef\u00fcllt sein"
+        },
+        {
+          "text": "Auf der vorletzten Ebene darf maximal ein Teilbaum nicht voll besetzt sein."
+        }
+      ],
+      "assignedWeights": {
+        "alle": 4,
+        "Ebenen": 5,
+        "Baum": 3,
+        "m\u00fcssen": 3,
+        "bis": 2,
+        "auf": 2,
+        "letzte": 5,
+        "vollst\u00e4ndig": 5,
+        "be\u00fcllen": 4,
+        "sein": 2,
+        "vorletzte": 4,
+        "d\u00fcrfen": 3,
+        "maximal": 2,
+        "Teilbaum": 1,
+        "nicht": 3,
+        "voll": 4
+      },
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Alle Ebenen des Baumes, bis auf die letzte, m\u00fcssen vollst\u00e4ndig bef\u00fcllt sein. Auf der vorletzten Ebene darf maximal ein Teilbaum nicht voll besetzt sein.",
+          "aspects": [
+            {
+              "text": "Alle Ebenen des Baumes, bis auf die letzte, m\u00fcssen vollst\u00e4ndig bef\u00fcllt sein",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  75
+                ]
+              ]
+            },
+            {
+              "text": "Auf der vorletzten Ebene darf maximal ein Teilbaum nicht voll besetzt sein",
+              "aIdx": 1,
+              "elements": [
+                [
+                  77,
+                  151
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "text": "Alle Ebenen des Baumes, bis auf die letzte, m\u00fcssen vollst\u00e4ndig bef\u00fcllt sein. Die letzte Ebene muss vom linken Ende bis zum rechtesten Element vollst\u00e4ndig bef\u00fcllt sein.",
+          "id": 1,
+          "aspects": [
+            {
+              "text": "Alle Ebenen des Baumes, bis auf die letzte, m\u00fcssen vollst\u00e4ndig bef\u00fcllt sein",
+              "elements": [
+                [
+                  0,
+                  75
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Die letzte Ebene muss vom linken Ende bis zum rechtesten Element vollst\u00e4ndig bef\u00fcllt sein",
+              "elements": [
+                [
+                  77,
+                  166
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Alle Ebenen des Baumes, bis auf die letzte, m\u00fcssen vollst\u00e4ndig bef\u00fcllt sein. Die letzte Ebene muss vom linken Ende bis zum rechtesten Element vollst\u00e4ndig bef\u00fcllt sein.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Er muss eine Tiefe von maximal n*log(n) haben.",
+          "id": 4,
+          "aspects": [
+            {
+              "text": "Er muss eine Tiefe von maximal n*log(n) haben",
+              "elements": [
+                [
+                  0,
+                  45
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Er muss eine Tiefe von maximal n*log(n) haben.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "er muss die maximale tiefe log(n) haben. Alle m\u00f6glichen Positionen sind besetzt. geringst m\u00f6gliche tiefe. Jeder Vater hat zwangsl\u00e4ufig 2 kinder au\u00dfer der letzte.",
+          "id": 5,
+          "aspects": [
+            {
+              "text": "er muss die maximale tiefe log(n) haben",
+              "elements": [
+                [
+                  0,
+                  39
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Jeder Vater hat zwangsl\u00e4ufig 2 kinder au\u00dfer der letzte",
+              "elements": [
+                [
+                  106,
+                  160
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "er muss die maximale tiefe log(n) haben. Alle m\u00f6glichen Positionen sind besetzt. geringst m\u00f6gliche tiefe. Jeder Vater hat zwangsl\u00e4ufig 2 kinder au\u00dfer der letzte.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Die Ebenen m\u00fcssen soweit aufgef\u00fcllt werden, wie es m\u00f6glich ist.",
+          "id": 8,
+          "aspects": [
+            {
+              "text": "Die Ebenen m\u00fcssen soweit aufgef\u00fcllt werden, wie es m\u00f6glich ist",
+              "elements": [
+                [
+                  0,
+                  62
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die Ebenen m\u00fcssen soweit aufgef\u00fcllt werden, wie es m\u00f6glich ist.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "darf nur 2 kinder haben, muss tiefe log(n) haben",
+          "id": 10,
+          "aspects": [
+            {
+              "text": "muss tiefe log(n) haben",
+              "elements": [
+                [
+                  25,
+                  48
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "darf nur 2 kinder haben, muss tiefe log(n) haben",
+          "userId": "c1b8144ee1a30244a571c3d9b48b2c394a7489065d2565968f521645"
+        },
+        {
+          "text": "Wir f\u00fcllen die Knoten von oben nach unten und von links nach rechts auf, anschlie\u00dfend \u00fcberpr\u00fcfen wir jeden Knoten, ob er die Bedinngungen erf\u00fcllt",
+          "id": 14,
+          "aspects": [
+            {
+              "text": "Wir f\u00fcllen die Knoten von oben nach unten ",
+              "elements": [
+                [
+                  0,
+                  41
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "Wir f\u00fcllen die Knoten ;; von links nach rechts auf",
+              "elements": [
+                [
+                  0,
+                  21
+                ],
+                [
+                  46,
+                  71
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Wir f\u00fcllen die Knoten von oben nach unten und von links nach rechts auf, anschlie\u00dfend \u00fcberpr\u00fcfen wir jeden Knoten, ob er die Bedinngungen erf\u00fcllt",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Bis auf die letzte Ebene vollst\u00e4ndig gef\u00fcllt, diese soweit wie m\u00f6glich von links nach rechts gef\u00fcllt",
+          "id": 17,
+          "aspects": [
+            {
+              "text": "Bis auf die letzte Ebene vollst\u00e4ndig gef\u00fcllt",
+              "elements": [
+                [
+                  0,
+                  44
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "diese soweit wie m\u00f6glich von links nach rechts gef\u00fcllt",
+              "elements": [
+                [
+                  46,
+                  100
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Bis auf die letzte Ebene vollst\u00e4ndig gef\u00fcllt, diese soweit wie m\u00f6glich von links nach rechts gef\u00fcllt",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "alle Ebenen muss vollst\u00e4ndig gef\u00fcllt sein",
+          "id": 18,
+          "aspects": [
+            {
+              "text": "alle Ebenen muss vollst\u00e4ndig gef\u00fcllt sein",
+              "elements": [
+                [
+                  0,
+                  41
+                ]
+              ],
+              "aIdx": 0,
+              "label": 2,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "alle Ebenen muss vollst\u00e4ndig gef\u00fcllt sein",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        }
+      ]
+    },
+    {
+      "text": "Wie wird aus einem Bin\u00e4rbaum dessen beiden Teilb\u00e4ume selber Heaps sind ein Heap erstellt? Wieso ben\u00f6tigt diese Operation eine log(n) Schritte?",
+      "id": "50892",
+      "title": "Heap reparieren",
+      "type": "procedure",
+      "aspects": [
+        {
+          "text": "Das Element in der Wurzel tauscht immer wieder die Position mit dem gr\u00f6\u00dferen seiner Kinder bis der Heap wiederhergestellt ist"
+        },
+        {
+          "text": "Der Bin\u00e4rbaum besitzt maximal log(n) Ebenen"
+        }
+      ],
+      "assignedWeights": {
+        "Element": 4,
+        "in": 3,
+        "Wurzel": 5,
+        "tauschen": 5,
+        "immer": 4,
+        "wieder": 4,
+        "Position": 5,
+        "gro\u00df": 5,
+        "Kinder": 5,
+        "bis": 3,
+        "Heap": 1,
+        "wiederherstellen": 4,
+        "Bin\u00e4rbaum": 2,
+        "maximal": 2,
+        "besitzen": 3,
+        "log(n)": 5,
+        "Ebenen": 5
+      },
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Das Element in der Wurzel tauscht immer wieder die Position mit dem gr\u00f6\u00dferen seiner Kinder bis der Heap wiederhergestellt ist. Der Bin\u00e4rbaum besitzt maximal log(n) Ebenen.",
+          "aspects": [
+            {
+              "text": "Das Element in der Wurzel tauscht immer wieder die Position mit dem gr\u00f6\u00dferen seiner Kinder bis der Heap wiederhergestellt ist",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  125
+                ]
+              ]
+            },
+            {
+              "text": "Der Bin\u00e4rbaum besitzt maximal log(n) Ebenen",
+              "aIdx": 1,
+              "elements": [
+                [
+                  127,
+                  170
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "text": "das letzte (rechteste) Blatt wird die neue Wurzel und solange nach unten getauscht bis der heap wieder sortiert ist",
+          "id": 0,
+          "aspects": [
+            {
+              "text": "das letzte (rechteste) Blatt wird die neue Wurzel und solange nach unten getauscht bis der heap wieder sortiert ist",
+              "elements": [
+                [
+                  0,
+                  115
+                ]
+              ],
+              "aIdx": 0,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "das letzte (rechteste) Blatt wird die neue Wurzel und solange nach unten getauscht bis der heap wieder sortiert ist",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Das Letzte Blatt wird zur Wurzel und danach wird dieses mit dem jeweils gr\u00f6\u00dften Kind getauscht solange das Kinde gr\u00f6\u00dfer ist. Die Laufzeit ergibt sich daraus, dass die Tiefe des Baumes maximal log(n) ist.",
+          "id": 3,
+          "aspects": [
+            {
+              "text": "Das Letzte Blatt wird zur Wurzel und danach wird dieses mit dem jeweils gr\u00f6\u00dften Kind getauscht solange das Kinde gr\u00f6\u00dfer ist",
+              "elements": [
+                [
+                  0,
+                  123
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Die Laufzeit ergibt sich daraus, dass die Tiefe des Baumes maximal log(n) ist",
+              "elements": [
+                [
+                  125,
+                  202
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Das Letzte Blatt wird zur Wurzel und danach wird dieses mit dem jeweils gr\u00f6\u00dften Kind getauscht solange das Kinde gr\u00f6\u00dfer ist. Die Laufzeit ergibt sich daraus, dass die Tiefe des Baumes maximal log(n) ist.",
+          "userId": "7ba019a2553e1137a4bbb8d3c779a48e5ceb2ca3a162e6e0a945ef0f"
+        },
+        {
+          "text": "Heapify wird auf jeden Knoten der Teilb\u00e4ume angewandt. Weil man f\u00fcr jede Reparatur die Kanten entlang gehen muss, also dauert es die Tiefe des Baumes lang und die ist log(n).",
+          "id": 5,
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "also dauert es die Tiefe des Baumes lang und die ist log(n)",
+              "elements": [
+                [
+                  114,
+                  173
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Heapify wird auf jeden Knoten der Teilb\u00e4ume angewandt. Weil man f\u00fcr jede Reparatur die Kanten entlang gehen muss, also dauert es die Tiefe des Baumes lang und die ist log(n).",
+          "userId": "0ce8152aa92136af039b687c01c7dccfcb271f3db2d0ddcb3cfdd3e6"
+        },
+        {
+          "text": "Bei einem Bin\u00e4rbaum, dessen Teilb\u00e4ume selber Heaps sind muss nur die Wurzel kontrolliert werden, dass f\u00fcr diese die Bedingung gilt.",
+          "id": 6,
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Bei einem Bin\u00e4rbaum, dessen Teilb\u00e4ume selber Heaps sind muss nur die Wurzel kontrolliert werden, dass f\u00fcr diese die Bedingung gilt.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Weil log(n) ist die maximale Tiefe des Baumes. Die Wurzel (der Vater) wird mit beiden Kindern verglichen. Wenn kleiner, wird er mit dem gr\u00f6\u00dferen Kind vertauscht. und dann wieder mit den n\u00e4chsten Kindern usw. bis die Kinder Bl\u00e4tter sind.",
+          "id": 9,
+          "aspects": [
+            {
+              "text": "Die Wurzel (der Vater) wird mit beiden Kindern verglichen. Wenn kleiner, wird er mit dem gr\u00f6\u00dferen Kind vertauscht. und dann wieder mit den n\u00e4chsten Kindern usw.",
+              "elements": [
+                [
+                  47,
+                  207
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Weil log(n) ist die maximale Tiefe des Baume",
+              "elements": [
+                [
+                  0,
+                  44
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Weil log(n) ist die maximale Tiefe des Baumes. Die Wurzel (der Vater) wird mit beiden Kindern verglichen. Wenn kleiner, wird er mit dem gr\u00f6\u00dferen Kind vertauscht. und dann wieder mit den n\u00e4chsten Kindern usw. bis die Kinder Bl\u00e4tter sind.",
+          "userId": "408f0afbe2440a4383a1e75b7d5b0b4202c7f7131a9acf9bd70492f3"
+        },
+        {
+          "text": "Das gr\u00f6\u00dfte Kind des obersten Knotens (bsp die Wurzel) wird mit dem Koten getauscht",
+          "id": 10,
+          "aspects": [
+            {
+              "text": "Das gr\u00f6\u00dfte Kind des obersten Knotens (bsp die Wurzel) wird mit dem Koten getauscht",
+              "elements": [
+                [
+                  0,
+                  82
+                ]
+              ],
+              "aIdx": 0,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Das gr\u00f6\u00dfte Kind des obersten Knotens (bsp die Wurzel) wird mit dem Koten getauscht",
+          "userId": "9cbcb7142c0ba8e0acabe63fa0665db839f24ed7f11f2b8e2e8f47b6"
+        },
+        {
+          "text": "die wurzel wird durch heapify mit dem gr\u00f6\u00dferen kind vertauscht, dadurch muss der komplette heap nochmals \u00fcberpr\u00fcft werden nach fehlstellungen",
+          "id": 11,
+          "aspects": [
+            {
+              "text": "Die Wurzel wird durch heapify mit dem gr\u00f6\u00dferen Kind vertauscht",
+              "elements": [],
+              "aIdx": 0,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die Wurzel wird durch heapify mit dem gr\u00f6\u00dferen Kind vertauscht, dadurch muss der komplette Heap nochmals \u00fcberpr\u00fcft werden nach Fehlstellungen",
+          "userId": "c1b8144ee1a30244a571c3d9b48b2c394a7489065d2565968f521645"
+        },
+        {
+          "text": "Falls das gr\u00f6\u00dfere Kind gr\u00f6\u00dfer ist als der Vater werden diese getauscht. Das runtertauschen einer ung\u00fcltigen Wurzel ben\u00f6tigt h\u00f6chstens log(n) Schritte, weil es h\u00f6chstens f\u00fcr jede Ebene einmal gemacht werden muss und der Baum log(n) viele Ebenen hat.",
+          "id": 13,
+          "aspects": [
+            {
+              "text": "Falls das gr\u00f6\u00dfere Kind gr\u00f6\u00dfer ist als der Vater werden diese getauscht",
+              "elements": [
+                [
+                  0,
+                  70
+                ]
+              ],
+              "aIdx": 0,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "Das runtertauschen einer ung\u00fcltigen Wurzel ben\u00f6tigt h\u00f6chstens log(n) Schritte, weil es h\u00f6chstens f\u00fcr jede Ebene einmal gemacht werden muss und der Baum log(n) viele Ebenen hat",
+              "elements": [
+                [
+                  72,
+                  247
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Falls das gr\u00f6\u00dfere Kind gr\u00f6\u00dfer ist als der Vater werden diese getauscht. Das runtertauschen einer ung\u00fcltigen Wurzel ben\u00f6tigt h\u00f6chstens log(n) Schritte, weil es h\u00f6chstens f\u00fcr jede Ebene einmal gemacht werden muss und der Baum log(n) viele Ebenen hat.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Die Wurzel muss mit den Kindern verglichen werden und m\u00f6glicherweise, mit dem gr\u00f6\u00dferen getsucht werden. Dieser Schritt muss iterativ, logn mal passieren (entspricht der Tiefe des Tielbaums).",
+          "id": 15,
+          "aspects": [
+            {
+              "text": "Die Wurzel muss mit den Kindern verglichen werden und m\u00f6glicherweise, mit dem gr\u00f6\u00dferen getauscht werden. Dieser Schritt muss iterativ, logn mal passieren",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Dieser Schritt muss iterativ, log(n) mal passieren. Dies entspricht der Tiefe des Teilbaums",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die Wurzel muss mit den Kindern verglichen werden und m\u00f6glicherweise, mit dem gr\u00f6\u00dferen getauscht werden. Dieser Schritt muss iterativ, log(n) mal passieren. Dies entspricht der Tiefe des Teilbaums.",
+          "userId": "31da1a042dc910775ed8b487afbdafd929a7afdeaadc660cb963bd26"
+        },
+        {
+          "text": "Indem die Wurzel des Baumes die gr\u00f6\u00dften Kinder entlang nach unten wandert. Wenn oben einer der kleinsten Wert des ganzen Arrays stand, muss der Knoten die komplette Tiefe des Baumes nach unten wandern. Diese betr\u00e4gt log(n).",
+          "id": 16,
+          "aspects": [
+            {
+              "text": "Indem die Wurzel des Baumes die gr\u00f6\u00dften Kinder entlang nach unten wandert",
+              "elements": [
+                [
+                  0,
+                  73
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Wenn oben einer der kleinsten Wert des ganzen Arrays stand, muss der Knoten die komplette Tiefe des Baumes nach unten wandern. Diese betr\u00e4gt log(n)",
+              "elements": [
+                [
+                  75,
+                  222
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Indem die Wurzel des Baumes die gr\u00f6\u00dften Kinder entlang nach unten wandert. Wenn oben einer der kleinsten Wert des ganzen Arrays stand, muss der Knoten die komplette Tiefe des Baumes nach unten wandern. Diese betr\u00e4gt log(n).",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Wir wissen bereits, dass beide Teilb\u00e4ume ein Heap sind. Nun muss sichergestellt werden, dass die Wurzel unser Maximum ist. Ist dies nicht der Fall muss die Reparatur durchgef\u00fchrt werden und somit k\u00f6nnen wieder Fehler in den einzelnen Teilb\u00e4umen entstehen. Wir m\u00fcssen nach der \u00c4nderung der Wurzel f\u00fcr den ganzen Baum kontrollieren ob jeder Teilbaum noch ein Heap ist. Dies ben\u00f6tigt eine Zeit von log n",
+          "id": 17,
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Wir wissen bereits, dass beide Teilb\u00e4ume ein Heap sind. Nun muss sichergestellt werden, dass die Wurzel unser Maximum ist. Ist dies nicht der Fall muss die Reparatur durchgef\u00fchrt werden und somit k\u00f6nnen wieder Fehler in den einzelnen Teilb\u00e4umen entstehen. Wir m\u00fcssen nach der \u00c4nderung der Wurzel f\u00fcr den ganzen Baum kontrollieren ob jeder Teilbaum noch ein Heap ist. Dies ben\u00f6tigt eine Zeit von log n",
+          "userId": "b51d18b551043c1f145f22dbde6f8531faeaf68c54ed9dd79ce24d17"
+        },
+        {
+          "text": "Max. Log(n) ebenen Die Wurzel wandert runter bis sie gr\u00f6\u00dfer ist als ihre Kinder oder sie ein Blatt ist",
+          "id": 18,
+          "aspects": [
+            {
+              "text": "Die Wurzel wandert runter bis sie gr\u00f6\u00dfer ist als ihre Kinder oder sie ein Blatt ist",
+              "elements": [
+                [
+                  19,
+                  102
+                ]
+              ],
+              "aIdx": 0,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "Der Baum hat maximal log(n) Ebenen",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Der Baum hat maximal log(n) Ebenen. Die Wurzel wandert runter bis sie gr\u00f6\u00dfer ist als ihre Kinder oder sie ein Blatt ist",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Das Element an der Wurzel wird mit dem letzten Kind getauscht. Daf\u00fcr wird es immer wieder mit dem rechten Kind getauscht. D ein Baum log(n) Tiefe hat, ben\u00f6tigt die Operation log(n) Schritte.",
+          "id": 21,
+          "aspects": [
+            {
+              "text": "Daf\u00fcr wird es immer wieder mit dem rechten Kind getauscht",
+              "elements": [
+                [
+                  63,
+                  120
+                ]
+              ],
+              "aIdx": 0,
+              "label": 2,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "Da ein Baum log(n) Tiefe hat, ben\u00f6tigt die Operation log(n) Schritte",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Das Element an der Wurzel wird mit dem letzten Kind getauscht. Daf\u00fcr wird es immer wieder mit dem rechten Kind getauscht. Da ein Baum log(n) Tiefe hat, ben\u00f6tigt die Operation log(n) Schritte.",
+          "userId": "b8607e0369fbf3e33bc0e358f840915d8c085d1496097351913c0122"
+        }
+      ]
+    },
+    {
+      "text": "Was ist die Idee des rekursiven MergeSort Algorithmus?",
+      "id": "50895",
+      "title": "Idee MergeSort",
+      "type": "procedure",
+      "aspects": [
+        {
+          "text": "Die Problemgr\u00f6\u00dfe wird durch das halbieren der Menge immer wieder reduziert bis das Sortieren einer H\u00e4lften trivial ist"
+        },
+        {
+          "text": "Alle sortierten H\u00e4lften werden sortiert wieder zusammengef\u00fcgt"
+        }
+      ],
+      "assignedWeights": {
+        "Problemgr\u00f6\u00dfe": 4,
+        "werden": 3,
+        "durch": 3,
+        "halbieren": 5,
+        "Menge": 4,
+        "immer": 4,
+        "wieder": 4,
+        "reduzieren": 5,
+        "bis": 4,
+        "Sortieren": 4,
+        "H\u00e4lfte": 4,
+        "trivial": 4,
+        "sein": 2,
+        "alle": 3,
+        "sortiert": 4,
+        "dann": 3,
+        "zusammenf\u00fcgen": 5
+      },
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Die Problemgr\u00f6\u00dfe wird durch das halbieren der Menge immer wieder zu reduzieren bis das Sortieren der H\u00e4lften trivial ist. Alle sortierten H\u00e4lften werden dann sortiert wieder zusammengef\u00fcgt.",
+          "aspects": [
+            {
+              "text": "Die Problemgr\u00f6\u00dfe wird durch das halbieren der Menge immer wieder zu reduzieren bis das Sortieren der H\u00e4lften trivial ist",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  120
+                ]
+              ]
+            },
+            {
+              "text": "Alle sortierten H\u00e4lften werden dann sortiert wieder zusammengef\u00fcgt",
+              "aIdx": 1,
+              "elements": [
+                [
+                  122,
+                  188
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "text": "Das Intervall einer Menge wird halbiert und vergleicht, wenn es bis auf zwei bzw. ein Element immer weiter rekursiv halbiert wurde die Elemente und vertauscht sie, falls n\u00f6tig. Danach werden die Intervalle (Stapel) wieder zusammengemischt (eigentlich eher wieder aneinandergelegt).",
+          "id": 1,
+          "aspects": [
+            {
+              "text": "Das Intervall einer Menge wird halbiert und vergleicht, wenn es bis auf zwei bzw. ein Element immer weiter rekursiv halbiert wurde",
+              "elements": [
+                [
+                  0,
+                  130
+                ]
+              ],
+              "aIdx": 0,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "Danach werden die Intervalle (Stapel) wieder zusammengemischt",
+              "elements": [
+                [
+                  177,
+                  238
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Das Intervall einer Menge wird halbiert und vergleicht, wenn es bis auf zwei bzw. ein Element immer weiter rekursiv halbiert wurde die Elemente und vertauscht sie, falls n\u00f6tig. Danach werden die Intervalle (Stapel) wieder zusammengemischt (eigentlich eher wieder aneinandergelegt).",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Bei MergeSort werden die zu sortierenden Elemente immer wieder in der H\u00e4lfte geteilt, bis jeweils nur noch zwei Elemente \u00fcbrig sind. Diese werden sortiert und mit einem anderen sortierten Stapel vermischt (sodass es insgesamt sortiert ist, nicht irgendwie mischen).",
+          "id": 4,
+          "aspects": [
+            {
+              "text": "Bei MergeSort werden die zu sortierenden Elemente immer wieder in der H\u00e4lfte geteilt, bis jeweils nur noch zwei Elemente \u00fcbrig sind",
+              "elements": [
+                [
+                  0,
+                  131
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Diese werden sortiert und mit einem anderen sortierten Stapel vermischt, sodass es insgesamt sortiert ist, nicht irgendwie mischen",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Bei MergeSort werden die zu sortierenden Elemente immer wieder in der H\u00e4lfte geteilt, bis jeweils nur noch zwei Elemente \u00fcbrig sind. Diese werden sortiert und mit einem anderen sortierten Stapel vermischt, sodass es insgesamt sortiert ist, nicht irgendwie mischen.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Duvide and conquer. Ein Array wird so lange aufgeteilt bis es nur 1 element hat. Dann werden 2 sortierte teile des arrays in einem neu angelegten array gemischt dh sortiert und in das urspr\u00fcngliche array \u00fcbertragen.",
+          "id": 5,
+          "aspects": [
+            {
+              "text": "Ein Array wird so lange aufgeteilt bis es nur 1 element hat",
+              "elements": [
+                [
+                  20,
+                  79
+                ]
+              ],
+              "aIdx": 0,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "Dann werden 2 sortierte Teile des Arrays in einem neu angelegten Array gemischt dh sortiert und in das urspr\u00fcngliche Array \u00fcbertragen",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Divide and conquer. Ein Array wird so lange aufgeteilt bis es nur 1 element hat. Dann werden 2 sortierte Teile des Arrays in einem neu angelegten Array gemischt dh sortiert und in das urspr\u00fcngliche Array \u00fcbertragen.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Die gegebene Menge wird immer wieder aufgeteilt in zwei Mengen und rekursiv selbst weitergegeben. Hat man eine Menge von nur zwei Elementen sortiert man diese und gibt sie zur\u00fcck.",
+          "id": 6,
+          "aspects": [
+            {
+              "text": "Die gegebene Menge wird immer wieder aufgeteilt in zwei Mengen und rekursiv selbst weitergegeben. Hat man eine Menge von nur zwei Elementen",
+              "elements": [
+                [
+                  0,
+                  139
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Hat man eine Menge von nur zwei Elementen sortiert man diese und gibt sie zur\u00fcck",
+              "elements": [
+                [
+                  98,
+                  178
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die gegebene Menge wird immer wieder aufgeteilt in zwei Mengen und rekursiv selbst weitergegeben. Hat man eine Menge von nur zwei Elementen sortiert man diese und gibt sie zur\u00fcck.",
+          "userId": "31da1a042dc910775ed8b487afbdafd929a7afdeaadc660cb963bd26"
+        },
+        {
+          "text": "Das eine Menge immer wieder aufgeteilt wird bis nur noch <= 2 Elemente vorhanden sind, die einfach sortiert werden k\u00f6nnen. Somit wird die Menge in kleinere Probleme aufgeteilt und sobald diese kleinsten Probleme gel\u00f6st sind wieder zusammengef\u00fcgt.",
+          "id": 7,
+          "aspects": [
+            {
+              "text": "Das eine Menge immer wieder aufgeteilt wird bis nur noch <= 2 Elemente vorhanden sind, die einfach sortiert werden k\u00f6nnen",
+              "elements": [
+                [
+                  0,
+                  121
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Somit wird die Menge in kleinere Probleme aufgeteilt und sobald diese kleinsten Probleme gel\u00f6st sind wieder zusammengef\u00fcgt",
+              "elements": [
+                [
+                  123,
+                  245
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Das eine Menge immer wieder aufgeteilt wird bis nur noch <= 2 Elemente vorhanden sind, die einfach sortiert werden k\u00f6nnen. Somit wird die Menge in kleinere Probleme aufgeteilt und sobald diese kleinsten Probleme gel\u00f6st sind wieder zusammengef\u00fcgt.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Die Idee ist Divide and Conquer, dazu wird der zu sortierende Stapel immer wieder in zwei H\u00e4lften aufgeteilt und diese jeweils sortiert und sortiert wieder zusammengemischt.",
+          "id": 8,
+          "aspects": [
+            {
+              "text": "Die Idee ist Divide and Conquer, dazu wird der zu sortierende Stapel immer wieder in zwei H\u00e4lften aufgeteilt und diese jeweils sortiert",
+              "elements": [
+                [
+                  0,
+                  135
+                ]
+              ],
+              "aIdx": 0,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": " und sortiert wieder zusammengemischt",
+              "elements": [
+                [
+                  136,
+                  172
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die Idee ist Divide and Conquer, dazu wird der zu sortierende Stapel immer wieder in zwei H\u00e4lften aufgeteilt und diese jeweils sortiert und sortiert wieder zusammengemischt.",
+          "userId": "0ce8152aa92136af039b687c01c7dccfcb271f3db2d0ddcb3cfdd3e6"
+        },
+        {
+          "text": "MergeSort sortiert immer weiter geteilte Stapel erst, wenn diese h\u00f6chstens zwei Elemente besitzen. Dann werden die einzelnen Elemente zusammengemischt und so sortiert.",
+          "id": 10,
+          "aspects": [
+            {
+              "text": "MergeSort sortiert immer weiter geteilte Stapel erst, wenn diese h\u00f6chstens zwei Elemente besitzen",
+              "elements": [
+                [
+                  0,
+                  97
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": " Dann werden die einzelnen Elemente zusammengemischt und so sortiert",
+              "elements": [
+                [
+                  99,
+                  166
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "MergeSort sortiert immer weiter geteilte Stapel erst, wenn diese h\u00f6chstens zwei Elemente besitzen. Dann werden die einzelnen Elemente zusammengemischt und so sortiert.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Divide & Conquer. Die Menge wird auf zwei geteilt und rekursiv wieder und wieder, bis jede Teilmenge nur ein Element enth\u00e4lt und dann je nach Gr\u00f6\u00dfe wieder zusammen geklebt.",
+          "id": 12,
+          "aspects": [
+            {
+              "text": "Die Menge wird auf zwei geteilt und rekursiv wieder und wieder, bis jede Teilmenge nur ein Element enth\u00e4lt ",
+              "elements": [
+                [
+                  18,
+                  124
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "und dann je nach Gr\u00f6\u00dfe wieder zusammen geklebt",
+              "elements": [
+                [
+                  125,
+                  171
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Divide & Conquer. Die Menge wird auf zwei geteilt und rekursiv wieder und wieder, bis jede Teilmenge nur ein Element enth\u00e4lt und dann je nach Gr\u00f6\u00dfe wieder zusammen geklebt.",
+          "userId": "408f0afbe2440a4383a1e75b7d5b0b4202c7f7131a9acf9bd70492f3"
+        },
+        {
+          "text": "das array rekursiv in arrays der l\u00e4nge 2 oder 1 und diese zu sortieren und dann nach und nach die kurzen arrays mit anderen arrays zusammensortieren",
+          "id": 14,
+          "aspects": [
+            {
+              "text": "Das Array rekursiv in Arrays der L\u00e4nge 2 oder 1 teilen",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "diese Sortieren und dann nach und nach die kurzen Arrays mit anderen Arrays zusammensortiere",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Das Array rekursiv in Arrays der L\u00e4nge 2 oder 1 teilen und diese Sortieren und dann nach und nach die kurzen Arrays mit anderen Arrays zusammensortieren",
+          "userId": "c1b8144ee1a30244a571c3d9b48b2c394a7489065d2565968f521645"
+        },
+        {
+          "text": "Ein (Teil-)Array wird so oft halbiert bis es nurnoch aus zwei Elementen besteht, diese werden dann sortiert. Dieses Teilarray wird mit einem anderen gemergt also so zusammengef\u00fchrt, dass es immernoch sortiert ist. Das macht man dann so oft bis man wieder beim urspr\u00fcnglichen Array angekommen ist.",
+          "id": 17,
+          "aspects": [
+            {
+              "text": "Ein (Teil-)Array wird so oft halbiert bis es nurnoch aus zwei Elementen besteht",
+              "elements": [
+                [
+                  0,
+                  79
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "diese werden dann sortiert. Dieses Teilarray wird mit einem anderen gemergt also so zusammengef\u00fchrt, dass es immernoch sortiert ist. Das macht man dann so oft bis man wieder beim urspr\u00fcnglichen Array angekommen ist",
+              "elements": [
+                [
+                  81,
+                  295
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Ein (Teil-)Array wird so oft halbiert bis es nurnoch aus zwei Elementen besteht, diese werden dann sortiert. Dieses Teilarray wird mit einem anderen gemergt also so zusammengef\u00fchrt, dass es immernoch sortiert ist. Das macht man dann so oft bis man wieder beim urspr\u00fcnglichen Array angekommen ist.",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Der Datensatz mit n Elementen wird so h\u00e4ufig halbiert bis jeweils nur noch 1 Element da ist. dann wird er sortiert wieder zusammengef\u00fcgt",
+          "id": 20,
+          "aspects": [
+            {
+              "text": "Der Datensatz mit n Elementen wird so h\u00e4ufig halbiert bis jeweils nur noch 1 Element da ist",
+              "elements": [
+                [
+                  0,
+                  91
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "dann wird er sortiert wieder zusammengef\u00fcgt",
+              "elements": [
+                [
+                  93,
+                  136
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Der Datensatz mit n Elementen wird so h\u00e4ufig halbiert bis jeweils nur noch 1 Element da ist. dann wird er sortiert wieder zusammengef\u00fcgt",
+          "userId": "b51d18b551043c1f145f22dbde6f8531faeaf68c54ed9dd79ce24d17"
+        },
+        {
+          "text": "Der Datensatz wird so lange rekursiv aufgeteilt, bis er nur noch zwei Elemente miteinander vergleichen muss. Anschlie\u00dfend werden die Elemente wieder ebenenweise zusammengef\u00fcgt.",
+          "id": 25,
+          "aspects": [
+            {
+              "text": "Der Datensatz wird so lange rekursiv aufgeteilt, bis er nur noch zwei Elemente miteinander vergleichen muss",
+              "elements": [
+                [
+                  0,
+                  107
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 0
+            },
+            {
+              "text": "Anschlie\u00dfend werden die Elemente wieder ebenenweise zusammengef\u00fcgt",
+              "elements": [
+                [
+                  109,
+                  175
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Der Datensatz wird so lange rekursiv aufgeteilt, bis er nur noch zwei Elemente miteinander vergleichen muss. Anschlie\u00dfend werden die Elemente wieder ebenenweise zusammengef\u00fcgt.",
+          "userId": "b8607e0369fbf3e33bc0e358f840915d8c085d1496097351913c0122"
+        },
+        {
+          "text": "Die Menge wird rekursiv immer weiter geteilt, bis nur noch zwei Elemente vorhanden sind. Diese und die zur\u00fcckgegebenen Mengen werden dann entsprechend wieder sortiert.",
+          "id": 26,
+          "aspects": [
+            {
+              "text": "Die Menge wird rekursiv immer weiter geteilt, bis nur noch zwei Elemente vorhanden sind",
+              "elements": [
+                [
+                  0,
+                  87
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Diese und die zur\u00fcckgegebenen Mengen werden dann entsprechend wieder sortiert",
+              "elements": [
+                [
+                  89,
+                  166
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die Menge wird rekursiv immer weiter geteilt, bis nur noch zwei Elemente vorhanden sind. Diese und die zur\u00fcckgegebenen Mengen werden dann entsprechend wieder sortiert.",
+          "userId": "9cbcb7142c0ba8e0acabe63fa0665db839f24ed7f11f2b8e2e8f47b6"
+        },
+        {
+          "text": "Die zu sortierende Menge wird immer weiter aufgeteilt, bis nur noch zwei oder weniger Objekte \u00fcbrig sind, diese werden dann zur\u00fcckgebeben und mit den anderen zusammengef\u00fcgt",
+          "id": 27,
+          "aspects": [
+            {
+              "text": "ie zu sortierende Menge wird immer weiter aufgeteilt, bis nur noch zwei oder weniger Objekte \u00fcbrig sind",
+              "elements": [
+                [
+                  1,
+                  104
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "diese werden dann zur\u00fcckgebeben und mit den anderen zusammengef\u00fcgt",
+              "elements": [
+                [
+                  106,
+                  172
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Die zu sortierende Menge wird immer weiter aufgeteilt, bis nur noch zwei oder weniger Objekte \u00fcbrig sind, diese werden dann zur\u00fcckgebeben und mit den anderen zusammengef\u00fcgt",
+          "userId": "dfd5f9139a820075df69d7895015360b76d0360f3d4b77a845689614"
+        },
+        {
+          "text": "Wir brauchen nur einen Vergleich zu programmieren, da wir von Beginn an die zu sortierende Menge teilen und dann f\u00fcr beide H\u00e4lften das Sort aufrufen, m Sort dann wieder teilen und f\u00fcr beide H\u00e4lften Sort aufrufen. Das passiert so lange, bis die zu sortierende Menge nur noch 2 Elemente hat. die sind ganz leicht zu sortieren. Bein R\u00fcckkehren werden die beiden Mengen zusamengemischt und wieder zur\u00fcckgegeben.",
+          "id": 28,
+          "aspects": [
+            {
+              "text": "da wir von Beginn an die zu sortierende Menge teilen und dann f\u00fcr beide H\u00e4lften das Sort aufrufen ;; Das passiert so lange, bis die zu sortierende Menge nur noch 2 Elemente hat. die sind ganz leicht zu sortieren",
+              "elements": [
+                [
+                  51,
+                  148
+                ],
+                [
+                  213,
+                  323
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Bein R\u00fcckkehren werden die beiden Mengen zusamengemischt und wieder zur\u00fcckgegeben",
+              "elements": [
+                [
+                  325,
+                  406
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1,
+              "error": true,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Wir brauchen nur einen Vergleich zu programmieren, da wir von Beginn an die zu sortierende Menge teilen und dann f\u00fcr beide H\u00e4lften das Sort aufrufen, m Sort dann wieder teilen und f\u00fcr beide H\u00e4lften Sort aufrufen. Das passiert so lange, bis die zu sortierende Menge nur noch 2 Elemente hat. die sind ganz leicht zu sortieren. Bein R\u00fcckkehren werden die beiden Mengen zusamengemischt und wieder zur\u00fcckgegeben.",
+          "userId": "525ab75c928c6fac98a0f62e4da5316b7247ccd704c967ef9142925c"
+        }
+      ]
+    }
+  ]
+}

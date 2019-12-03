@@ -10,26 +10,6 @@ const ASPECT_LABELS = [
   { name: "contradiction", color: "#663b3b" }
 ];
 
-// const ERROR_LABELS = [
-//   { name: "no_label", color: "grey" },
-//   { name: "no_idea", color: "green" },
-//   { name: "rather_special", color: "orange" },
-//   { name: "too_special", color: "red" },
-//   { name: "rather_close", color: "purple" },
-//   { name: "too_close", color: "blue" }
-// ];
-
-const ERROR_LABELS = [
-  { name: "no_label", color: "grey" },
-  { name: "no_idea", color: "green" },
-  { name: "miss_voc", color: "black" },
-  { name: "miss_pre", color: "blue" },
-  { name: "too_special", color: "red" },
-  { name: "too_close", color: "pink" },
-    { name: "other", color: "brown" },
-        { name: "broad_voc", color: "purple" }
-]
-
 export default class AspectAnnotation extends React.Component {
   constructor(props) {
     super(props);
@@ -154,14 +134,6 @@ export default class AspectAnnotation extends React.Component {
     this.setState({ aspects });
   };
 
-  errorLabelChange = (e, obj) => {
-    var value = obj.value;
-    var aspectIdx = obj.adx;
-    var { aspects } = this.state;
-    aspects[aspectIdx]["errorLabel"] = value;
-    this.setState({ aspects });
-  };
-
   handleAreaChange = (e) => {
     this.setState({ correctionOrComment: e.target.value });
   };
@@ -253,7 +225,6 @@ export default class AspectAnnotation extends React.Component {
           key={annIndex}
           fluid
           style={{ marginTop: "1vh", marginBottom: "1vh" }}>
-          {annotationAspect.error && <Label icon="exclamation"/>}
           <input
             placeholder={annIndex + 1 + ". Aspekt"}
             name={annIndex}
@@ -268,7 +239,7 @@ export default class AspectAnnotation extends React.Component {
             adx={annIndex}
             selection
             placeholder="Select Match"
-            disabled={true}
+            disabled={empty}
             // defaultValue={annotationAspect.referenceAspects}
             value={aIdx}
             options={this.getDropdownOptions(this.matchingLabels)}
@@ -282,7 +253,7 @@ export default class AspectAnnotation extends React.Component {
             adx={annIndex}
             selection
             placeholder="Select Label"
-            disabled={true}
+            disabled={aIdx===undefined}
             defaultValue={0}
             value={annotationAspect.label}
             options={this.getDropdownOptions(ASPECT_LABELS)}
@@ -290,28 +261,14 @@ export default class AspectAnnotation extends React.Component {
             width={3}
             style={{ marginLeft: "0.5vh" }}
           />
-          <Dropdown
-            id={"errDrop_" + annIndex}
-            key={"errDrop_" + annIndex}
-            adx={annIndex}
-            selection
-            disabled = {!annotationAspect.error}
-            placeholder="Select Label"
-            defaultValue={0}
-            value={annotationAspect.errorLabel}
-            options={this.getDropdownOptions(ERROR_LABELS)}
-            onChange={this.errorLabelChange.bind(this)}
-            width={3}
-            style={{ marginLeft: "0.5vh" }}
-          />
-          {/* <Button
+          <Button
             disabled={!annotationAspect.text}
             value={annIndex}
             icon="delete"
             onClick={this.deleteMatch.bind(this)}
             width={1}
             style={{ marginLeft: "0.5vh" }}
-          /> */}
+          />
         </Input>
       );
     });

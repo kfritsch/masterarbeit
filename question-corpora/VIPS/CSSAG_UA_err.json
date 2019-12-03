@@ -1,0 +1,1517 @@
+{
+  "questions": [
+    {
+      "id": "3",
+      "title": "Überladene Methode",
+      "text": "Was ist eine überladene Methode?",
+      "type": "definition",
+      "aspects": [
+        {
+          "text": "Methoden einer Klasse"
+        },
+        {
+          "text": "mit demselben Namen"
+        },
+        {
+          "text": "Die Signaturen der Methoden unterscheiden sich anhand unterschiedlicher Parameter"
+        }
+      ],
+      "assignedWeights": {
+        "Methode": 1,
+        "Klasse": 1,
+        "denselb": 5,
+        "Signatur": 5,
+        "unterscheiden": 5,
+        "anhand": 0,
+        "unterschiedlich": 5,
+        "Parameter": 5
+      },
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Das sind Methoden einer Klasse mit denselben Namen. Ihre Signaturen unterscheiden sich anhand unterschiedlicher Parameter.",
+          "aspects": [
+            {
+              "text": "Das sind Methoden einer Klasse",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  30
+                ]
+              ],
+              "label": 0
+            },
+            {
+              "text": "Das sind Methoden ;; mit demselben Namen",
+              "aIdx": 1,
+              "elements": [
+                [
+                  0,
+                  17
+                ],
+                [
+                  31,
+                  50
+                ]
+              ],
+              "label": 0
+            },
+            {
+              "text": "Ihre Signaturen unterscheiden sich anhand unterschiedlicher Parameter",
+              "aIdx": 2,
+              "elements": [
+                [
+                  52,
+                  121
+                ]
+              ],
+              "label": 0
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "text": "Zwei Methoden mit dem selben namen bezeichnet man als Überladen. Deshalb müssen sie sich immer in der Signatur (Parameterliste, Typen) unterscheiden.",
+          "id": "10",
+          "answerCategory": "correct",
+          "correctionOrComment": "Zwei Methoden mit dem selben Namen bezeichnet man als überladen. Deshalb müssen sie sich immer in der Signatur (Parameterliste, Typen) unterscheiden.",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Zwei Methoden mit dem selben Namen bezeichnet man als überladen",
+              "elements": [
+                [
+                  0,
+                  63
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Deshalb müssen sie sich immer in der Signatur (Parameterliste, Typen) unterscheiden",
+              "elements": [
+                [
+                  65,
+                  148
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0,
+              "error": true,
+              "errorLabel": 1
+            }
+          ]
+        },
+        {
+          "text": "eine überladene Methode hat denselben Namen wie eine andere Methode, jedoch andere Parameter. Z.B. bei Konstruktoren: Klasse(){} Klasse(Obj o){} Klasse(Person p, int alter){} durch die Überladung kann sich der \"\"User\"\" aussuchen, welche Methode er nutzen will (z.B. Klasse k = new Klasse(); oder Klasse k2 = new Klasse(anton);",
+          "id": "17",
+          "answerCategory": "correct",
+          "correctionOrComment": "Eine überladene Methode hat denselben Namen wie eine andere Methode, jedoch andere Parameter. Durch die Überladung kann sich der 'User' aussuchen, welche Methode er nutzen will.",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Eine überladene Methode hat denselben Namen wie eine andere Methode",
+              "elements": [
+                [
+                  0,
+                  67
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 1
+            },
+            {
+              "text": "jedoch andere Parameter",
+              "elements": [
+                [
+                  69,
+                  92
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            }
+          ]
+        },
+        {
+          "text": "Eine überladene Methode ist eine Methode die sowohl in der Basisklasse als auch in der abgeleitenden Klasse initialisiert wird, dies bedeutet die Methode wird 2 x mit dem gleichen namen initialisiert kann aber einen anderen Inhalt besitzen. Man erkennt erst welche Methode man benutzt beim auslesen.",
+          "id": "21",
+          "answerCategory": "concept_mix-up",
+          "correctionOrComment": "Eine überladene Methode ist eine Methode, die sowohl in der Basisklasse als auch in der abgeleitenden Klasse initialisiert wird. Dies bedeutet, die Methode wird 2 mal mit dem gleichen Namen initialisiert, kann aber einen anderen Inhalt besitzen. Man erkennt erst beim Auslesen, welche Methode man benutzt.",
+          "aspects": [
+            {
+              "text": "Eine überladene Methode ist eine Methode, die sowohl in der Basisklasse als auch in der abgeleitenden Klasse initialisiert wird",
+              "elements": [
+                [
+                  0,
+                  127
+                ]
+              ],
+              "aIdx": 0,
+              "label": 2,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Dies bedeutet, die Methode wird 2 mal mit dem gleichen Namen initialisiert",
+              "elements": [
+                [
+                  129,
+                  203
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 1
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ]
+        },
+        {
+          "text": "Wenn zwei Methoden den selben Namen haben, aber unterschiedliche Parameter",
+          "id": "26",
+          "answerCategory": "correct",
+          "correctionOrComment": "Das ist, wenn zwei Methoden denselben Namen haben, aber unterschiedliche Parameter.",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Das ist, wenn zwei Methoden denselben Namen haben",
+              "elements": [
+                [
+                  0,
+                  49
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "zwei Methoden ;; haben, aber unterschiedliche Parameter",
+              "elements": [
+                [
+                  14,
+                  27
+                ],
+                [
+                  44,
+                  82
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0,
+              "error": true,
+              "errorLabel": 1
+            }
+          ]
+        },
+        {
+          "text": "Eine uberladene methode ist eine Methode, die den Name von eine bereits existierende methode trägt",
+          "id": "28",
+          "answerCategory": "partially_correct",
+          "correctionOrComment": "Eine überladene Methode ist eine Methode, die den Name von einer bereits existierenden Methode trägt.",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Eine überladene Methode ist eine Methode, die den Name von einer bereits existierenden Methode trägt",
+              "elements": [
+                [
+                  0,
+                  100
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 4
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ]
+        },
+        {
+          "text": "Ein Methode, die es mehrmals gibt.(Gleicher Name)",
+          "id": "32",
+          "answerCategory": "partially_correct",
+          "correctionOrComment": "Ein Methode, die es mehrmals gibt (gleicher Name).",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Ein Methode, die es mehrmals gibt (gleicher Name)",
+              "elements": [
+                [
+                  0,
+                  49
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 1
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ]
+        },
+        {
+          "text": "das die selbe Methode mehrfach in einer Klasse funktioniert, nur wenn die Parameterliste (Typen) sich unterscheiden.",
+          "id": "37",
+          "answerCategory": "binary_correct",
+          "correctionOrComment": "Es bedeutet, dass dieselbe Methode nur dann mehrfach in einer Klasse funktioniert, wenn die Parameterliste und -typen sich unterscheiden.",
+          "aspects": [
+            {
+              "text": "Es bedeutet, dass dieselbe Methode nur dann mehrfach in einer Klasse funktioniert",
+              "elements": [
+                [
+                  0,
+                  81
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 6
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "wenn die Parameterliste und -typen sich unterscheiden",
+              "elements": [
+                [
+                  83,
+                  136
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0,
+              "error": true,
+              "errorLabel": 1
+            }
+          ]
+        },
+        {
+          "text": "Das sind mehrere Methoden mit dem gleichen Namen der benutzt wird. Allerdings besitzen sie andere Ausgaben.",
+          "id": "42",
+          "answerCategory": "partially_correct",
+          "correctionOrComment": "Das sind mehrere Methoden mit dem gleichen Namen, der benutzt wird. Allerdings besitzen sie andere Ausgaben.",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Das sind mehrere Methoden mit dem gleichen Namen",
+              "elements": [
+                [
+                  0,
+                  48
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 1
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Klassenattribute schätzen",
+      "text": "Sie schreiben eine Klasse Beispielklasse mit einem Feld 'wert'. Wie erreichen Sie, dass 'wert' nur innerhalb von Beispielklasse schreibbar, aber von überall aus lesbar ist?",
+      "type": "procedure",
+      "aspects": [
+        {
+          "text": "Das Feld 'wert' muss mit dem Schutzattribute private deklariert werden"
+        },
+        {
+          "text": "Die Klasse muss eine Methode bereitstellen, die das Auslesen des Feldes 'wert' ermöglicht"
+        }
+      ],
+      "assignedWeights": {
+        "Feld": 1,
+        "'wert'": 1,
+        "müssen": 2,
+        "Schutzattribute": 2,
+        "private": 5,
+        "deklarieren": 3,
+        "werden": 0,
+        "zusätzlich": 2,
+        "Klasse": 1,
+        "Methode": 2,
+        "bereitstellen": 1,
+        "Auslesen": 1,
+        "ermöglichen": 1
+      },
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Das Feld 'wert' muss mit dem Schutzattribute private deklariert werden. Zusätzlich muss die Klasse eine Methode bereitstellen, die das Auslesen dieses Feldes ermöglicht.",
+          "aspects": [
+            {
+              "text": "Das Feld 'wert' muss mit dem Schutzattribute private deklariert werden",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  72
+                ]
+              ],
+              "label": 0
+            },
+            {
+              "text": "Zusätzlich muss die Klasse eine Methode bereitstellen, die das Auslesen dieses Feldes ermöglicht",
+              "aIdx": 1,
+              "elements": [
+                [
+                  74,
+                  170
+                ]
+              ],
+              "label": 0
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "text": "durch eine vererbung. mit extends können dann die anderen klassen die werte übernehmen",
+          "id": "7",
+          "answerCategory": "concept_mix-up",
+          "correctionOrComment": "Das geht durch eine Vererbung. Mit 'extends' können dann die anderen Klassen die Werte übernehmen.",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 2
+            }
+          ]
+        },
+        {
+          "text": "private Typ wert; (Variable als private deklarieren, um direkten Zugriff zu vermeiden) public getWert(){return wert;} (auslesen, von überall möglich) private void setWert(Typ wert){this.wert = wert;} (schreiben, nur innerhalb der eigenen Klasse möglich)",
+          "id": "12",
+          "answerCategory": "correct",
+          "correctionOrComment": "Man muss die Variable als 'private' deklarieren, um direkten Zugriff zu vermeiden. Ein 'public' Getter macht das  Auslesen, von überall möglich. Ein 'private'  'Setter' macht das Schreiben, nur innerhalb der eigenen Klasse möglich.",
+          "aspects": [
+            {
+              "text": "Man muss die Variable als 'private' deklarieren",
+              "elements": [
+                [
+                  0,
+                  47
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 3
+            },
+            {
+              "text": "Ein 'public' Getter macht das Auslesen, von überall möglich",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            }
+          ]
+        },
+        {
+          "text": "Durch das Atrribut private, schützt man Datenfelder davor das sie nur innerhalb ihrer Klasse schreibbar und sichtbar sind. Durch eine getter Methode können alle Klassen, die private geschriebene Variable lesen.",
+          "id": "16",
+          "answerCategory": "partially_correct",
+          "correctionOrComment": "Durch das Attribut 'private', schützt man Datenfelder davor, dass sie nur innerhalb ihrer Klasse schreibbar und sichtbar sind. Durch eine 'Getter' Methode können alle Klassen, die 'private' geschriebene Variable lesen.",
+          "aspects": [
+            {
+              "text": "Durch das Attribut 'private', schützt man Datenfelder",
+              "elements": [
+                [
+                  0,
+                  53
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 3
+            },
+            {
+              "text": "Durch eine 'Getter' Methode können alle Klassen, die 'private' geschriebene Variable lesen",
+              "elements": [
+                [
+                  127,
+                  217
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            }
+          ]
+        },
+        {
+          "text": "indem man den \"\"wert\"\" auf private setzt und ihn danach mit getter/setter aufruft. Dadurch kann man nur innerhalb der Beispielklasse den \"\"wert\"\" verändern.",
+          "id": "31",
+          "answerCategory": "partially_correct",
+          "correctionOrComment": "Das geht, indem man den Wert auf 'private' setzt und ihn danach mit 'Getter' und 'Setter' aufruft. Dadurch kann man nur innerhalb der Beispielklasse den Wert verändern.",
+          "aspects": [
+            {
+              "text": "Das geht, indem man den Wert auf 'private' setzt und ihn danach mit ;; 'Setter' aufruft",
+              "elements": [
+                [
+                  0,
+                  67
+                ],
+                [
+                  81,
+                  97
+                ]
+              ],
+              "aIdx": 0,
+              "label": 2,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Das geht, indem man ;; ihn danach mit 'Getter' ;; aufruft",
+              "elements": [
+                [
+                  0,
+                  19
+                ],
+                [
+                  53,
+                  76
+                ],
+                [
+                  90,
+                  97
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 3
+            }
+          ]
+        },
+        {
+          "text": "Indem man den dazugehörigen getter definiert aber nicht den setter, der das schreiben erlauben würde.",
+          "id": "36",
+          "answerCategory": "partially_correct",
+          "correctionOrComment": "Indem man den dazugehörigen 'Getter' definiert aber nicht den 'Setter', der das schreiben erlauben würde.",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Indem man den dazugehörigen 'Getter' definiert",
+              "elements": [
+                [
+                  0,
+                  46
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "text": "Erklären Sie den Zusammenhang zwischen Klassen und Objekten.",
+      "title": "Zusammenhang zwischen Klassen und Objekten",
+      "type": "comparison",
+      "aspects": [
+        {
+          "text": "Eine Klasse ist der Bauplan für ein Objekt"
+        },
+        {
+          "text": "Ein Objekt ist eine konkrete Instanz einer Klasse"
+        }
+      ],
+      "assignedWeights": {
+        "Klasse": 2,
+        "sein": 2,
+        "Bauplan": 5,
+        "Objekt": 2,
+        "konkret": 4,
+        "Instanz": 5
+      },
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Eine Klasse ist der Bauplan für ein Objekt. Ein Objekt ist eine konkrete Instanz einer Klasse.",
+          "aspects": [
+            {
+              "text": "Eine Klasse ist der Bauplan für ein Objekt",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  42
+                ]
+              ],
+              "label": 0
+            },
+            {
+              "text": "Ein Objekt ist eine konkrete Instanz einer Klasse",
+              "aIdx": 1,
+              "elements": [
+                [
+                  44,
+                  93
+                ]
+              ],
+              "label": 0
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "text": "Alle Objekte haben einen Bauplan und dieser Bauplan des Objektes ist die klasse. Objekte haben den Typ ihrer Klasse. Die Klasse eines Objekte ist wie bei uns Menschen die DNA. Die Klasse bestimmt Aussehen und Eigenschaften. Aber ist selber nicht das Objekt.",
+          "id": "61",
+          "answerCategory": "binary_correct",
+          "correctionOrComment": "Alle Objekte haben einen Bauplan und dieser Bauplan des Objektes ist die Klasse. Objekte haben den Typ ihrer Klasse. Die Klasse eines Objekte ist wie bei uns Menschen die DNA. Die Klasse bestimmt Aussehen und Eigenschaften, aber ist selber nicht das Objekt.",
+          "aspects": [
+            {
+              "text": "Alle Objekte haben einen Bauplan und dieser Bauplan des Objektes ist die Klasse",
+              "elements": [
+                [
+                  0,
+                  79
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Objekte haben den Typ ihrer Klasse",
+              "elements": [
+                [
+                  81,
+                  115
+                ]
+              ],
+              "aIdx": 1,
+              "label": 1,
+              "error": true,
+              "errorLabel": 5
+            }
+          ]
+        },
+        {
+          "text": "objekt ist zum bsp ein bauplan und der Bauplan wäre in dem fall eine Klasse. Klassen sind bestimmte themen berreiche bsp auch Autos und objekt wäre in dem fall ein",
+          "id": "63",
+          "answerCategory": "partially_correct",
+          "correctionOrComment": "Ein Objekt ist zum Beispiel ein Bauplan und der Bauplan wäre in dem Fall eine Klasse. Klassen sind bestimmte Themenbereiche.",
+          "aspects": [
+            {
+              "text": "Ein Objekt ist zum Beispiel ein Bauplan und der Bauplan wäre in dem Fall eine Klasse",
+              "elements": [
+                [
+                  0,
+                  84
+                ]
+              ],
+              "aIdx": 0,
+              "label": 2,
+              "error": true,
+              "errorLabel": 5
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ]
+        },
+        {
+          "text": "Die Klasse eines Objektes ist für das Objekt wie die DNA für den Menschen: Klasse bestimmt aussehen und Eigenschaften aber ist nicht selbst das Objekt. Objekte entstehen durch eine Art Bauplan. Der Bauplan ist die Klasse eines Objekts",
+          "id": "67",
+          "answerCategory": "partially_correct",
+          "correctionOrComment": "Die Klasse eines Objektes ist für das Objekt wie die DNA für den Menschen. Die Klasse bestimmt Aussehen und Eigenschaften aber ist nicht selbst das Objekt. Objekte entstehen durch eine Art Bauplan. Der Bauplan ist die Klasse eines Objekts.",
+          "aspects": [
+            {
+              "text": "Der Bauplan ist die Klasse eines Objekts",
+              "elements": [
+                [
+                  198,
+                  238
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 5
+            }
+          ]
+        },
+        {
+          "text": "Die Klasse des Objektes ist für das Objekt in etwa wie die DNA beim Menschen. Sie bestimmt Aussehen und Eigenschaften des Objekts, aber die Klasse ist nicht das Objekt selbst, von jeder Klasse kann auch ein Objekt erstellt werden.",
+          "id": "69",
+          "answerCategory": "partially_correct",
+          "correctionOrComment": "Die Klasse des Objektes ist für das Objekt in etwa wie die DNA beim Menschen. Sie bestimmt Aussehen und Eigenschaften des Objekts, aber die Klasse ist nicht das Objekt selbst. Von jeder Klasse kann auch ein Objekt erstellt werden.",
+          "aspects": [
+            {
+              "text": "Die Klasse des Objektes ist für das Objekt in etwa wie die DNA beim Menschen. Sie bestimmt Aussehen und Eigenschaften des Objekts",
+              "elements": [
+                [
+                  0,
+                  129
+                ]
+              ],
+              "aIdx": 0,
+              "label": 1,
+              "error": true,
+              "errorLabel": 5
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 5
+            }
+          ]
+        },
+        {
+          "text": "Die Klasse ist übergeordnet. zum beispiel ist ein objekt eine instanz 7 eine eigenschaft der klasse.",
+          "id": "73",
+          "answerCategory": "partially_correct",
+          "correctionOrComment": "Die Klasse ist übergeordnet. Ein Objekt ist zum Beispiel eine Instanz. 7 ist eine Eigenschaft der Klasse.",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": true,
+              "errorLabel": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "title": "Swing Ablauf",
+      "text": "In einer Swing-Demo ändert sich beim Klick auf einen Button der Text auf dem Button. Wie sieht der mehrschrittige Ablauf \"\"hinter den Kulissen\"\" aus?",
+      "type": "procedure",
+      "aspects": [
+        {
+          "text": "Der Klick auf den Button erzeugt ein ActionEvent"
+        },
+        {
+          "text": "Das ActionEvent wird von einem Listener aufgefangen"
+        },
+        {
+          "text": "Der Listener ist beim Button registriert",
+          "implied": true
+        },
+        {
+          "text": "Der Listener ändert den Text"
+        }
+      ],
+      "assignedWeights": {
+        "Klick": 3,
+        "auf": 3,
+        "Button": 3,
+        "erzeugen": 5,
+        "ActionEvent": 5,
+        "werden": 2,
+        "von": 2,
+        "Listener": 5,
+        "auffangen": 4,
+        "beim": 3,
+        "registrieren": 5,
+        "ändern": 4,
+        "daraufhin": 2,
+        "Text": 3
+      },
+      "referenceAnswers": [
+        {
+          "id": "ref1",
+          "text": "Der Klick auf den Button erzeugt ein ActionEvent. Das ActionEvent wird von einem Listener aufgefangen, der beim Button registriert ist. Der Listener ändert daraufhin den Text.",
+          "aspects": [
+            {
+              "text": "Der Klick auf den Button erzeugt ein ActionEvent",
+              "aIdx": 0,
+              "elements": [
+                [
+                  0,
+                  48
+                ]
+              ],
+              "label": 0
+            },
+            {
+              "text": "Das ActionEvent wird von einem Listener aufgefangen",
+              "aIdx": 1,
+              "elements": [
+                [
+                  50,
+                  101
+                ]
+              ],
+              "label": 0
+            },
+            {
+              "text": "der beim Button registriert ist",
+              "aIdx": 2,
+              "elements": [
+                [
+                  103,
+                  134
+                ]
+              ],
+              "label": 0
+            },
+            {
+              "text": "Der Listener ändert daraufhin den Text",
+              "aIdx": 3,
+              "elements": [
+                [
+                  136,
+                  176
+                ]
+              ],
+              "label": 0
+            }
+          ]
+        }
+      ],
+      "studentAnswers": [
+        {
+          "id": "2",
+          "text": "Es wird nach dem Klick auf einen Button ein ActionEvent ausgeführt, damit das Programm weißt es wurde geklickt und der ActionListener führt es dann aus.",
+          "aspects": [
+            {
+              "text": "Es wird nach dem Klick auf einen Button ein ActionEvent ausgeführt",
+              "elements": [
+                [
+                  0,
+                  66
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "der ActionListener führt es dann aus",
+              "elements": [
+                [
+                  115,
+                  151
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0,
+              "error": true,
+              "errorLabel": 3
+            }
+          ],
+          "correctionOrComment": "Es wird nach dem Klick auf einen Button ein ActionEvent ausgeführt, damit das Programm weißt, es wurde geklickt, und der ActionListener führt es dann aus."
+        },
+        {
+          "id": "6",
+          "text": "1.Durch den Klick wird ein Event erzeugt. 2.Klick wird vom ActionListener bemerkt, der mit dem Button verbunden ist. 3.Dann wird die jeweilige Methode dadurch aufgerufen.",
+          "aspects": [
+            {
+              "text": "Durch den Klick wird ein Event erzeugt",
+              "elements": [
+                [
+                  2,
+                  40
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Klick wird vom ActionListener bemerkt",
+              "elements": [
+                [
+                  44,
+                  81
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 3
+            },
+            {
+              "text": "ActionListener ;; der mit dem Button verbunden ist",
+              "elements": [
+                [
+                  59,
+                  73
+                ],
+                [
+                  83,
+                  115
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0,
+              "error": true,
+              "errorLabel": 3
+            },
+            {
+              "text": "Dann wird die jeweilige Methode dadurch aufgerufen",
+              "elements": [
+                [
+                  119,
+                  169
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0,
+              "error": true,
+              "errorLabel": 3
+            }
+          ],
+          "correctionOrComment": "1.Durch den Klick wird ein Event erzeugt. 2.Klick wird vom ActionListener bemerkt, der mit dem Button verbunden ist. 3.Dann wird die jeweilige Methode dadurch aufgerufen."
+        },
+        {
+          "id": "7",
+          "text": "Durch den Klick auf den Button wird eine Action ausgelöst. Diese Action wird von einem Listener \"\"bemerkt\"\" (umgesetzt) und dieser führt dann den Code aus, um den Text zu ändern.",
+          "aspects": [
+            {
+              "text": "Durch den Klick auf den Button wird eine Action ausgelöst",
+              "elements": [
+                [
+                  0,
+                  57
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Diese Action wird von einem Listener bemerkt",
+              "elements": [],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 3
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "dieser führt dann den Code aus, um den Text zu ändern",
+              "elements": [
+                [
+                  124,
+                  177
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Durch den Klick auf den Button wird eine Action ausgelöst. Diese Action wird von einem Listener bemerkt (umgesetzt) und dieser führt dann den Code aus, um den Text zu ändern."
+        },
+        {
+          "id": "8",
+          "text": "Man fügt dem Button einen ActionEvent ein der wiederrum einen ActionListener (Anonyme Klasse) erstellt und in ihn verändern wir das Text in dem Button mit einer setText() Methode.",
+          "aspects": [
+            {
+              "text": "Man fügt dem Button einen ActionEvent ein",
+              "elements": [
+                [
+                  0,
+                  41
+                ]
+              ],
+              "aIdx": 0,
+              "label": 2,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "der wiederrum einen ActionListener (Anonyme Klasse) erstellt ",
+              "elements": [
+                [
+                  42,
+                  102
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 6
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "in ihm verändern wir den Text in dem Button",
+              "elements": [],
+              "aIdx": 3,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Man fügt dem Button einen ActionEvent ein der wiederrum einen ActionListener (Anonyme Klasse) erstellt und in ihm verändern wir den Text in dem Button mit einer setText() Methode."
+        },
+        {
+          "id": "13",
+          "text": "Beim Klick entsteht eine Aktion und schickt ein Signal an Listener und dies liefert die erwünschte Code. Bsp. Ok oder Weiter",
+          "aspects": [
+            {
+              "text": "Beim Klick entsteht eine Aktion ",
+              "elements": [
+                [
+                  0,
+                  31
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 3
+            },
+            {
+              "text": "schickt ein Signal an Listener",
+              "elements": [
+                [
+                  36,
+                  66
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 4
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "dieser liefert den erwünschten Code",
+              "elements": [],
+              "aIdx": 3,
+              "label": 1,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Beim Klick entsteht eine Aktion und schickt ein Signal an Listener und dieser liefert den erwünschten Code. Bsp. Ok oder Weiter"
+        },
+        {
+          "id": "19",
+          "text": "Ein Listener wartet auf einen Aufruf(Klick) des Benutzers. Beim Aufruf wird ruft der Listener eine Methode auf und lässt diese ausführen.",
+          "aspects": [
+            {
+              "aIdx": 0,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Ein Listener wartet auf einen Aufruf(Klick) des Benutzers",
+              "elements": [
+                [
+                  0,
+                  57
+                ]
+              ],
+              "aIdx": 2,
+              "label": 1,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Beim Aufruf ruft der Listener eine Methode auf und lässt diese ausführen",
+              "elements": [],
+              "aIdx": 3,
+              "label": 0,
+              "error": true,
+              "errorLabel": 4
+            }
+          ],
+          "correctionOrComment": "Ein Listener wartet auf einen Aufruf(Klick) des Benutzers. Beim Aufruf ruft der Listener eine Methode auf und lässt diese ausführen."
+        },
+        {
+          "id": "24",
+          "text": "Jeder Klick erzeugt ein Event, um das Event zu verarbeiten braucht man einen Listener der dann den Code ausführt",
+          "aspects": [
+            {
+              "text": "Jeder Klick erzeugt ein Event",
+              "elements": [
+                [
+                  0,
+                  29
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": true,
+              "errorLabel": 3
+            },
+            {
+              "text": "um das Event zu verarbeiten braucht man einen Listener",
+              "elements": [
+                [
+                  31,
+                  85
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 4
+            },
+            {
+              "aIdx": 2,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "einen Listener, der dann den Code ausführt",
+              "elements": [],
+              "aIdx": 3,
+              "label": 0,
+              "error": true,
+              "errorLabel": 1
+            }
+          ],
+          "correctionOrComment": "Jeder Klick erzeugt ein Event, um das Event zu verarbeiten braucht man einen Listener der dann den Code ausführt"
+        },
+        {
+          "id": "30",
+          "text": "Beim Klick auf den Button wird ein ActionEvent erzeugt. Daraufhin hängt man einen Listener an um an weitere Events wie Mausklicks usw. aufmerksam zu machen. Der Listener fängt so weitere Events ab und erzeugt so den Code.",
+          "aspects": [
+            {
+              "text": "Beim Klick auf den Button wird ein ActionEvent erzeugt",
+              "elements": [
+                [
+                  0,
+                  54
+                ]
+              ],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Der Listener fängt so weitere Events ab",
+              "elements": [
+                [
+                  157,
+                  196
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 3
+            },
+            {
+              "text": "Daraufhin hängt man einen Listener an um an weitere Events wie Mausklicks usw. aufmerksam zu machen",
+              "elements": [
+                [
+                  56,
+                  155
+                ]
+              ],
+              "aIdx": 2,
+              "label": 1,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Der Listener ;; erzeugt so den Code",
+              "elements": [
+                [
+                  157,
+                  169
+                ],
+                [
+                  201,
+                  220
+                ]
+              ],
+              "aIdx": 3,
+              "label": 1,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Beim Klick auf den Button wird ein ActionEvent erzeugt. Daraufhin hängt man einen Listener an um an weitere Events wie Mausklicks usw. aufmerksam zu machen. Der Listener fängt so weitere Events ab und erzeugt so den Code."
+        },
+        {
+          "id": "31",
+          "text": "Dem Button wird ein ActionListener zugeordnet, wird nun auf den Button geklickt, so wird die Methode des ActionListeners ausgeführt und der Text ändert sich, sofern man dies so programmiert hat.",
+          "aspects": [
+            {
+              "text": "Wird nun auf den Button geklickt, so wird die Methode des ActionListeners ausgeführt ",
+              "elements": [],
+              "aIdx": 0,
+              "label": 1,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Wird nun auf den Button geklickt, so wird die Methode des ActionListeners ausgeführt ",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Dem Button wird ein ActionListener zugeordnet",
+              "elements": [
+                [
+                  0,
+                  45
+                ]
+              ],
+              "aIdx": 2,
+              "label": 0,
+              "error": true,
+              "errorLabel": 3
+            },
+            {
+              "text": "so wird die Methode des ActionListeners ausgeführt und der Text ändert sich, sofern man dies so programmiert hat",
+              "elements": [
+                [
+                  81,
+                  193
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Dem Button wird ein ActionListener zugeordnet. Wird nun auf den Button geklickt, so wird die Methode des ActionListeners ausgeführt und der Text ändert sich, sofern man dies so programmiert hat."
+        },
+        {
+          "id": "47",
+          "text": "auf dem Button ist ein Listener, der von einem Actionevent ein ActionPerformed auslöst",
+          "aspects": [
+            {
+              "text": "der von einem ActionEvent ein ActionPerformed auslöst",
+              "elements": [],
+              "aIdx": 0,
+              "label": 1,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "der von einem ActionEvent ein ActionPerformed auslöst",
+              "elements": [],
+              "aIdx": 1,
+              "label": 1,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Auf dem Button ist ein Listener",
+              "elements": [],
+              "aIdx": 2,
+              "label": 0,
+              "error": true,
+              "errorLabel": 1
+            },
+            {
+              "aIdx": 3,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Auf dem Button ist ein Listener, der von einem ActionEvent ein ActionPerformed auslöst"
+        },
+        {
+          "id": "57",
+          "text": "Dem Button wird ein Actionevent erstellt. Dieser wird beim anklicken einem Actionlistener der an dem Event dranhängt übergeben. Das heisst beim klicken weis der Actionlistener durch die Verbindung zum Event was für eine Action er ausführen soll. Dies könnte zum beispiel setIcon sein der durch klick das Bild ändert.",
+          "aspects": [
+            {
+              "text": "Mit dem Button wird ein ActionEvent erstellt ",
+              "elements": [],
+              "aIdx": 0,
+              "label": 1,
+              "error": true,
+              "errorLabel": 1
+            },
+            {
+              "text": "Dieses wird beim anklicken einem ActionListener ;; übergeben",
+              "elements": [
+                [
+                  117,
+                  126
+                ]
+              ],
+              "aIdx": 1,
+              "label": 0,
+              "error": true,
+              "errorLabel": 4
+            },
+            {
+              "text": "der an dem Event dranhängt",
+              "elements": [
+                [
+                  90,
+                  116
+                ]
+              ],
+              "aIdx": 2,
+              "label": 2,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Das heißt beim klicken weiß der ActionListener;; was für eine Action er ausführen soll",
+              "elements": [
+                [
+                  207,
+                  244
+                ]
+              ],
+              "aIdx": 3,
+              "label": 0,
+              "error": true,
+              "errorLabel": 4
+            }
+          ],
+          "correctionOrComment": "Mit dem Button wird ein ActionEvent erstellt. Dieses wird beim anklicken einem ActionListener, der an dem Event dranhängt, übergeben. Das heißt beim klicken weiß der ActionListener durch die Verbindung zum Event was für eine Action er ausführen soll. Dies könnte zum Beispiel setIcon sein, die durch den Klick das Bild ändert."
+        },
+        {
+          "id": "60",
+          "text": "Der Klick auf einen Button erzeugt ein Action-Event. Damit nach dem Klick irgendeine Reaktion ausgeführt wird, hängt man an das Objekt einen Listener an. Dieser Listener erzeugt dann das Event und der Code wird ausgeführt.",
+          "aspects": [
+            {
+              "text": "Der Klick auf einen Button erzeugt ein ActionEvent",
+              "elements": [],
+              "aIdx": 0,
+              "label": 0,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "aIdx": 1,
+              "text": "",
+              "elements": [],
+              "label": 3,
+              "error": false,
+              "errorLabel": 0
+            },
+            {
+              "text": "Der Klick auf einen Button erzeugt ein ActionEvent. Damit nach dem Klick irgendeine Reaktion ausgeführt wird, hängt man an das Objekt einen Listener an",
+              "elements": [],
+              "aIdx": 2,
+              "label": 0,
+              "error": true,
+              "errorLabel": 4
+            },
+            {
+              "text": "Dieser Listener erzeugt dann das Event und der Code wird ausgeführt",
+              "elements": [
+                [
+                  154,
+                  221
+                ]
+              ],
+              "aIdx": 3,
+              "label": 1,
+              "error": false,
+              "errorLabel": 0
+            }
+          ],
+          "correctionOrComment": "Der Klick auf einen Button erzeugt ein ActionEvent. Damit nach dem Klick irgendeine Reaktion ausgeführt wird, hängt man an das Objekt einen Listener an. Dieser Listener erzeugt dann das Event und der Code wird ausgeführt."
+        }
+      ]
+    }
+  ]
+}

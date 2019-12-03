@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test xmlns="urn:vips:test:v1.0" id="test-7230" type="practice"
+      start="2018-12-04T12:00:00+01:00"
+                end="2018-12-04T12:00:00+01:00"
+            >
+    <title>
+        Operationen    </title>
+    <description>
+            </description>
+        <exercises>
+                    <exercise id="exercise-50556" feedback="true">
+    <title>
+        Definition Operation    </title>
+    <description>
+        Was ist eine Operation?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Eine Operation ist eine gruppierung von Anweisungen zu einem Ausführungskontext.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50557" feedback="true">
+    <title>
+        Funktion von Operationen    </title>
+    <description>
+        Wozu dienen Operationen?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Operationen können an verschiedenen Stellen verwendet werden und ersparen somit Code. Sie dienen außerdem zur Strukturierung des Codes in semantisch zusammenhängende Teilabschnitte.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50558" feedback="true">
+    <title>
+        Signatur in Java    </title>
+    <description>
+        Was gehört zu der Signatur einer Operation in Java?   </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Zur Signatur einer Operation in Java gehören der Name und die Parameter, insbesondere die Parameterzahl und Reihenfolge der Typen.                 </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50559" feedback="true">
+    <title>
+        Funktion der Signatur    </title>
+    <description>
+        Wozu dient eine Signatur?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Die Signatur dient zur eindeutigen Identifikation einer Operation.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50560" feedback="true">
+    <title>
+        Definition Parameter    </title>
+    <description>
+        Was ist ein Parameter?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Ein Parameter ist eine lokale Variable eine Operation, die beim Aufruf von außen mit einem Wert versehen werden kann.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50561" feedback="true">
+    <title>
+        Definition lokale Variable     </title>
+    <description>
+        Was ist eine lokale Variable?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Eine lokale Variable ist eine Variable die nur in einem bestimmten Kontext (Scope) definiert ist.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50563" feedback="true">
+    <title>
+        Scope von Variablen    </title>
+    <description>
+        An welche Strukturellen Einheiten können Variable in Java gebunden werden?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Variable in Java können an Blöcke, Funktionen, Instanzen und Klassen gebunden werden.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50564" feedback="true">
+    <title>
+        Definition globale Variable    </title>
+    <description>
+        Was ist eine globale Variable?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Eine globale Variable ist eine auf welche von überall innerhalb eines zugegriffen werden kann.               </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50565" feedback="true">
+    <title>
+        Grund für lokale Variablen    </title>
+    <description>
+        Warum sind nicht einfach alle Variablen global?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Das binden von Variablen an bestimmte Ausführungskontexte spart Speicherplatz und erlaubt die unabhängige Wiederverwendung von Variablennamen in verschiedenen Kontexten.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+                    <exercise id="exercise-50566" feedback="true">
+    <title>
+        Werterhaltung zwischen Operationen    </title>
+    <description>
+        Wie kann man Werte zwischen Operationen erhalten?    </description>
+            <hint>
+            Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+        <items>
+        <item type="text-area">
+            <answers>
+                                <answer score="1">
+                    Werte können über Parameter und Rückgabewerte weitergegeben werden oder in einem größeren Kontext wie zum Beispiel einer Klasse oder global definiert werden.                </answer>
+            </answers>
+                                </item>
+    </items>
+</exercise>
+<exercise id="exercise-50566" feedback="true">
+<title>
+"Call by value"    </title>
+<description>
+Was ist das Prinzip von “call by value”?    </description>
+<hint>
+Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+<items>
+<item type="text-area">
+<answers>
+            <answer score="1">
+“Call by value” bedeutet, dass bei der Parameterübergabe die Kopie des Wertes einer Variablen übergeben wird, sodass Änderungen dieses Wertes innerhalb der Funktion keinen Effekte auf den ursprünglichen Wert hat.                </answer>
+</answers>
+            </item>
+</items>
+</exercise>
+<exercise id="exercise-50566" feedback="true">
+<title>
+"Call by reference"    </title>
+<description>
+Was ist das Prinzip von “call by reference”?    </description>
+<hint>
+Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+<items>
+<item type="text-area">
+<answers>
+            <answer score="1">
+“Call by reference” bedeutet, dass bei der Parameterübergabe die Referenz selber übergeben wird, sodass Änderungen der Referenz selber auch über die Operation hinaus bestehen bleiben.                </answer>
+</answers>
+            </item>
+</items>
+</exercise>
+<exercise id="exercise-50566" feedback="true">
+<title>
+Funktion von Paketen in Java    </title>
+<description>
+Wozu dienen Pakete in Java?    </description>
+<hint>
+Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+<items>
+<item type="text-area">
+<answers>
+            <answer score="1">
+Pakete können genutzt werden um Klassen semantisch zu gruppieren und gemeinsam verfügbar zu machen.                </answer>
+</answers>
+            </item>
+</items>
+</exercise>
+<exercise id="exercise-50566" feedback="true">
+<title>
+Paketzuordnung    </title>
+<description>
+Wie werden Klassen in Java einem Paket zugeordnet?    </description>
+<hint>
+Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+<items>
+<item type="text-area">
+<answers>
+            <answer score="1">
+Die Dateien der zum Paket zugehörigen Klassen müssen im selben Verzeichnis liegen und dem Paket mit der Anweisung &apos;package &lt;Verzeichnispfad&gt;&apos; hinzugefügt werden.                </answer>
+</answers>
+            </item>
+</items>
+</exercise>
+<exercise id="exercise-50566" feedback="true">
+<title>
+Sichtbarkeits Modifikatoren    </title>
+<description>
+Wozu dienen Modifikatoren public und private in Java?    </description>
+<hint>
+Bitte formulieren Sie ihre Antworten in vollständigen deutschen(!) Sätzen. Wenige kurze Sätze sollten in der Regel ausreichen.
+Nuzten Sie die Remarks Sektion um auf Unklarheiten in der Fragestellung einzugehen        </hint>
+<items>
+<item type="text-area">
+<answers>
+            <answer score="1">
+Die Modifikatoren regeln die Sichtbarkeit und Zugriffsberechtigungen von Feldern und Operationen von Klassen. Mit public deklarierte Felder sind von überall sichtbar wohingegen mit private deklarierte Felder nur innerhalb der eigenen Klasse verfügbar sind.                </answer>
+</answers>
+            </item>
+</items>
+</exercise>
+            </exercises>
+</test>
