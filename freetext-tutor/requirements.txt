@@ -6,7 +6,7 @@ itsdangerous==1.1.0
 Jinja2==2.10
 MarkupSafe==1.1.0
 six==1.11.0
-Werkzeug==0.14.1
+Werkzeug==0.15.3
 certifi==2018.10.15
 chardet==3.0.4
 cymem==2.0.2
